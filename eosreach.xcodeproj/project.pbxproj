@@ -43,6 +43,25 @@
 		3C5799DA2191D27E00B9A3D7 /* eosreachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5799D92191D27E00B9A3D7 /* eosreachTests.swift */; };
 		3C7F0DCC21947B3900E72DD1 /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7F0DCB21947B3900E72DD1 /* eosswift.framework */; };
 		3C7F0DCE21947B4D00E72DD1 /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7F0DCB21947B3900E72DD1 /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C7F0DD62194A0D400E72DD1 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD12194A0D400E72DD1 /* SearchResult.swift */; };
+		3C7F0DD72194A0D400E72DD1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD22194A0D400E72DD1 /* SearchViewModel.swift */; };
+		3C7F0DD82194A0D400E72DD1 /* SearchViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD32194A0D400E72DD1 /* SearchViewState.swift */; };
+		3C7F0DD92194A0D400E72DD1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD42194A0D400E72DD1 /* SearchViewController.swift */; };
+		3C7F0DDA2194A0D400E72DD1 /* SearchIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD52194A0D400E72DD1 /* SearchIntent.swift */; };
+		3C7F0DE72194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift */; };
+		3C7F0DE82194A17000E72DD1 /* RegisteredBlockProducersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DDE2194A17000E72DD1 /* RegisteredBlockProducersResult.swift */; };
+		3C7F0DE92194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DDF2194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift */; };
+		3C7F0DEA2194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE02194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift */; };
+		3C7F0DEB2194A17000E72DD1 /* RegisteredBlockProducersViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE12194A17000E72DD1 /* RegisteredBlockProducersViewState.swift */; };
+		3C7F0DEC2194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift */; };
+		3C7F0DED2194A17000E72DD1 /* RegisteredBlockProducersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE32194A17000E72DD1 /* RegisteredBlockProducersViewController.swift */; };
+		3C7F0DEE2194A17000E72DD1 /* RegisteredBlockProducersIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE42194A17000E72DD1 /* RegisteredBlockProducersIntent.swift */; };
+		3C7F0DEF2194A17000E72DD1 /* ActiveBlockProducersIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE52194A17000E72DD1 /* ActiveBlockProducersIntent.swift */; };
+		3C7F0DF02194A17000E72DD1 /* RegisteredBlockProducersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE62194A17000E72DD1 /* RegisteredBlockProducersViewModel.swift */; };
+		3C7F0DF72194A23900E72DD1 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DF22194A23900E72DD1 /* ExploreViewController.swift */; };
+		3C7F0DFC2194A58700E72DD1 /* ReachTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DFB2194A58700E72DD1 /* ReachTabBar.swift */; };
+		3C7F0DFE2194AC2A00E72DD1 /* ExploreStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C7F0DFD2194AC2A00E72DD1 /* ExploreStrings.strings */; };
+		3C7F0E022194B73200E72DD1 /* ReachTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0E012194B73200E72DD1 /* ReachTabsController.swift */; };
 		3C8C6D8D2192D4B600FC1A0D /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D8C2192D4B600FC1A0D /* Rx.swift */; };
 		3C8C6D902192D4CE00FC1A0D /* MxViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D8F2192D4CE00FC1A0D /* MxViewState.swift */; };
 		3C8C6D922192D4F400FC1A0D /* MxIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D912192D4F400FC1A0D /* MxIntent.swift */; };
@@ -139,6 +158,25 @@
 		3C5799D92191D27E00B9A3D7 /* eosreachTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eosreachTests.swift; sourceTree = "<group>"; };
 		3C5799DB2191D27E00B9A3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C7F0DCB21947B3900E72DD1 /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
+		3C7F0DD12194A0D400E72DD1 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		3C7F0DD22194A0D400E72DD1 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		3C7F0DD32194A0D400E72DD1 /* SearchViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewState.swift; sourceTree = "<group>"; };
+		3C7F0DD42194A0D400E72DD1 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3C7F0DD52194A0D400E72DD1 /* SearchIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchIntent.swift; sourceTree = "<group>"; };
+		3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersSearchViewModel.swift; sourceTree = "<group>"; };
+		3C7F0DDE2194A17000E72DD1 /* RegisteredBlockProducersResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersResult.swift; sourceTree = "<group>"; };
+		3C7F0DDF2194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersSearchViewState.swift; sourceTree = "<group>"; };
+		3C7F0DE02194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersSearchViewController.swift; sourceTree = "<group>"; };
+		3C7F0DE12194A17000E72DD1 /* RegisteredBlockProducersViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersViewState.swift; sourceTree = "<group>"; };
+		3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersSearchResult.swift; sourceTree = "<group>"; };
+		3C7F0DE32194A17000E72DD1 /* RegisteredBlockProducersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersViewController.swift; sourceTree = "<group>"; };
+		3C7F0DE42194A17000E72DD1 /* RegisteredBlockProducersIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersIntent.swift; sourceTree = "<group>"; };
+		3C7F0DE52194A17000E72DD1 /* ActiveBlockProducersIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersIntent.swift; sourceTree = "<group>"; };
+		3C7F0DE62194A17000E72DD1 /* RegisteredBlockProducersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersViewModel.swift; sourceTree = "<group>"; };
+		3C7F0DF22194A23900E72DD1 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		3C7F0DFB2194A58700E72DD1 /* ReachTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachTabBar.swift; sourceTree = "<group>"; };
+		3C7F0DFD2194AC2A00E72DD1 /* ExploreStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ExploreStrings.strings; sourceTree = "<group>"; };
+		3C7F0E012194B73200E72DD1 /* ReachTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachTabsController.swift; sourceTree = "<group>"; };
 		3C8C6D8C2192D4B600FC1A0D /* Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
 		3C8C6D8F2192D4CE00FC1A0D /* MxViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxViewState.swift; sourceTree = "<group>"; };
 		3C8C6D912192D4F400FC1A0D /* MxIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxIntent.swift; sourceTree = "<group>"; };
@@ -205,6 +243,8 @@
 				3C0EC81321933B6F00562A1B /* ReachActivityIndicator.swift */,
 				3C340FBC219353D20017BEF9 /* ReachToolbar.swift */,
 				3C340FDA219383210017BEF9 /* ReachTextField.swift */,
+				3C7F0DFB2194A58700E72DD1 /* ReachTabBar.swift */,
+				3C7F0E012194B73200E72DD1 /* ReachTabsController.swift */,
 			);
 			path = uikit;
 			sourceTree = "<group>";
@@ -326,6 +366,46 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		3C7F0DCF2194A07500E72DD1 /* explore */ = {
+			isa = PBXGroup;
+			children = (
+				3C7F0DD02194A0A900E72DD1 /* search */,
+				3C7F0DDB2194A10400E72DD1 /* blockproducers */,
+				3C7F0DF22194A23900E72DD1 /* ExploreViewController.swift */,
+				3C7F0DFD2194AC2A00E72DD1 /* ExploreStrings.strings */,
+			);
+			path = explore;
+			sourceTree = "<group>";
+		};
+		3C7F0DD02194A0A900E72DD1 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				3C7F0DD52194A0D400E72DD1 /* SearchIntent.swift */,
+				3C7F0DD12194A0D400E72DD1 /* SearchResult.swift */,
+				3C7F0DD22194A0D400E72DD1 /* SearchViewModel.swift */,
+				3C7F0DD32194A0D400E72DD1 /* SearchViewState.swift */,
+				3C7F0DD42194A0D400E72DD1 /* SearchViewController.swift */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		3C7F0DDB2194A10400E72DD1 /* blockproducers */ = {
+			isa = PBXGroup;
+			children = (
+				3C7F0DE52194A17000E72DD1 /* ActiveBlockProducersIntent.swift */,
+				3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift */,
+				3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift */,
+				3C7F0DDF2194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift */,
+				3C7F0DE02194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift */,
+				3C7F0DE42194A17000E72DD1 /* RegisteredBlockProducersIntent.swift */,
+				3C7F0DDE2194A17000E72DD1 /* RegisteredBlockProducersResult.swift */,
+				3C7F0DE62194A17000E72DD1 /* RegisteredBlockProducersViewModel.swift */,
+				3C7F0DE12194A17000E72DD1 /* RegisteredBlockProducersViewState.swift */,
+				3C7F0DE32194A17000E72DD1 /* RegisteredBlockProducersViewController.swift */,
+			);
+			path = blockproducers;
+			sourceTree = "<group>";
+		};
 		3C8C6D8B2192D47E00FC1A0D /* mxswift */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,8 +425,9 @@
 		3C8C6D9F2192D6AD00FC1A0D /* app */ = {
 			isa = PBXGroup;
 			children = (
-				3C340FC0219360C60017BEF9 /* settings */,
+				3C7F0DCF2194A07500E72DD1 /* explore */,
 				3C8C6DA02192D6B300FC1A0D /* welcome */,
+				3C340FC0219360C60017BEF9 /* settings */,
 				3C964C4121944367003663EF /* AppStrings.strings */,
 			);
 			path = app;
@@ -522,6 +603,7 @@
 				3C964C4221944367003663EF /* AppStrings.strings in Resources */,
 				3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */,
 				3C340FCC219368C30017BEF9 /* SettingsStrings.strings in Resources */,
+				3C7F0DFE2194AC2A00E72DD1 /* ExploreStrings.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +773,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7F0DF02194A17000E72DD1 /* RegisteredBlockProducersViewModel.swift in Sources */,
 				3C8C6D9E2192D5B000FC1A0D /* SegueBundle.swift in Sources */,
 				3C964C4F2194572A003663EF /* EosKeyManager.swift in Sources */,
 				3C8C6D922192D4F400FC1A0D /* MxIntent.swift in Sources */,
@@ -700,19 +783,28 @@
 				3C964C4A219444DB003663EF /* RsaEncryptionVerified.swift in Sources */,
 				3C0EC826219350DE00562A1B /* ImportKeyIntent.swift in Sources */,
 				3C0EC81E21933D4F00562A1B /* SplashViewState.swift in Sources */,
+				3C7F0DEE2194A17000E72DD1 /* RegisteredBlockProducersIntent.swift in Sources */,
 				3C964C3E2194422D003663EF /* AccountListSelection.swift in Sources */,
 				3C8C6D902192D4CE00FC1A0D /* MxViewState.swift in Sources */,
 				3C8C6D942192D50700FC1A0D /* MxResult.swift in Sources */,
 				3C964C48219444A2003663EF /* EosPriceValue.swift in Sources */,
 				3CAD34772192F7DB000F304A /* EntryViewController.swift in Sources */,
+				3C7F0DD92194A0D400E72DD1 /* SearchViewController.swift in Sources */,
 				3C0EC81421933B6F00562A1B /* ReachActivityIndicator.swift in Sources */,
+				3C7F0DE82194A17000E72DD1 /* RegisteredBlockProducersResult.swift in Sources */,
 				3C8C6DC62192D8F500FC1A0D /* EntryViewState.swift in Sources */,
+				3C7F0DFC2194A58700E72DD1 /* ReachTabBar.swift in Sources */,
 				3C0EC827219350DE00562A1B /* ImportKeyViewController.swift in Sources */,
 				3C0EC80C2192FAF900562A1B /* ReachButton.swift in Sources */,
 				3C964C462194441E003663EF /* EosPriceLastUpdated.swift in Sources */,
 				3CAD34752192F77C000F304A /* EntryViewModel.swift in Sources */,
+				3C7F0DDA2194A0D400E72DD1 /* SearchIntent.swift in Sources */,
+				3C7F0DD82194A0D400E72DD1 /* SearchViewState.swift in Sources */,
 				3C964C3621938C71003663EF /* EosEndpointViewState.swift in Sources */,
 				3C8C6DC42192D86F00FC1A0D /* EntryResult.swift in Sources */,
+				3C7F0DE92194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift in Sources */,
+				3C7F0DE72194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift in Sources */,
+				3C7F0DEA2194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift in Sources */,
 				3C8C6D9A2192D56000FC1A0D /* Logger.swift in Sources */,
 				3C340FCA2193612A0017BEF9 /* SettingsIntent.swift in Sources */,
 				3C340FC72193612A0017BEF9 /* SettingsViewModel.swift in Sources */,
@@ -720,12 +812,15 @@
 				3C964C4C2194469B003663EF /* PurgeUserDefaults.swift in Sources */,
 				3C0EC829219350DE00562A1B /* ImportKeyResult.swift in Sources */,
 				3C964C3921938C71003663EF /* EosEndpointViewModel.swift in Sources */,
+				3C7F0DEC2194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift in Sources */,
+				3C7F0E022194B73200E72DD1 /* ReachTabsController.swift in Sources */,
 				3C964C51219459D3003663EF /* EncryptedKeyPairData.swift in Sources */,
 				3C0EC8122193086800562A1B /* R.generated.swift in Sources */,
 				3C340FD72193801B0017BEF9 /* CurrencyPairingViewModel.swift in Sources */,
 				3C8C6D982192D54000FC1A0D /* MxViewController.swift in Sources */,
 				3C8C6DC22192D7B900FC1A0D /* EntryIntent.swift in Sources */,
 				3C340FC62193612A0017BEF9 /* SettingsViewController.swift in Sources */,
+				3C7F0DEF2194A17000E72DD1 /* ActiveBlockProducersIntent.swift in Sources */,
 				3C0EC81C21933D4F00562A1B /* SplashIntent.swift in Sources */,
 				3C340FBD219353D20017BEF9 /* ReachToolbar.swift in Sources */,
 				3C340FDB219383210017BEF9 /* ReachTextField.swift in Sources */,
@@ -733,18 +828,23 @@
 				3C0EC81B21933D4F00562A1B /* SplashViewModel.swift in Sources */,
 				3C340FD52193801B0017BEF9 /* CurrencyPairingResult.swift in Sources */,
 				3C0EC828219350DE00562A1B /* ImportKeyViewModel.swift in Sources */,
+				3C7F0DD72194A0D400E72DD1 /* SearchViewModel.swift in Sources */,
 				3C340FD82193801B0017BEF9 /* CurrencyPairingViewState.swift in Sources */,
 				3C0EC80A2192FAD300562A1B /* uitypes.swift in Sources */,
+				3C7F0DEB2194A17000E72DD1 /* RegisteredBlockProducersViewState.swift in Sources */,
 				3C340FD62193801B0017BEF9 /* CurrencyPairingIntent.swift in Sources */,
 				3C964C44219443D5003663EF /* EosPriceCurrencyPair.swift in Sources */,
 				3C5799C52191D27D00B9A3D7 /* AppDelegate.swift in Sources */,
 				3C8C6D9C2192D58E00FC1A0D /* Copy.swift in Sources */,
 				3C964C3721938C71003663EF /* EosEndpointViewController.swift in Sources */,
 				3C964C3521938C71003663EF /* EosEndpointIntent.swift in Sources */,
+				3C7F0DD62194A0D400E72DD1 /* SearchResult.swift in Sources */,
 				3C340FC92193612A0017BEF9 /* SettingsResult.swift in Sources */,
 				3C8C6D8D2192D4B600FC1A0D /* Rx.swift in Sources */,
 				3C340FC82193612A0017BEF9 /* SettingsViewState.swift in Sources */,
+				3C7F0DF72194A23900E72DD1 /* ExploreViewController.swift in Sources */,
 				3C0EC81D21933D4F00562A1B /* SplashViewController.swift in Sources */,
+				3C7F0DED2194A17000E72DD1 /* RegisteredBlockProducersViewController.swift in Sources */,
 				3C0EC81F21933D4F00562A1B /* SplashResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

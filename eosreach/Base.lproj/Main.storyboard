@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldj-Ns-Ajb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="537" y="-997"/>
+            <point key="canvasLocation" x="537" y="-674"/>
         </scene>
         <!--Eos Endpoint View Controller-->
         <scene sceneID="hGP-dy-Tu5">
@@ -364,7 +364,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHd-vN-Imy" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="16" y="529" width="343" height="30"/>
-                                <state key="normal" title="_create_accoutn"/>
+                                <state key="normal" title="_create_account"/>
                             </button>
                         </subviews>
                         <constraints>
@@ -385,6 +385,7 @@
                         <outlet property="exploreButton" destination="Qnb-j5-fmx" id="REe-9W-rGe"/>
                         <outlet property="importPrivateKeyButton" destination="ies-v4-gpP" id="fzY-nM-0TP"/>
                         <segue destination="uwo-3q-08m" kind="show" identifier="splashToImportPrivateKey" id="1Wt-0h-Agf"/>
+                        <segue destination="Spf-hF-xRr" kind="show" identifier="splashToExplore" id="dMo-xo-wz4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Jx-fj-esb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -463,6 +464,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5J-GG-vpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2081" y="27"/>
+        </scene>
+        <!--Explore View Controller-->
+        <scene sceneID="nuT-Hy-S2b">
+            <objects>
+                <viewController id="Spf-hF-xRr" customClass="ExploreViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V6r-7N-Ncf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqx-OB-R76" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="wxQ-zz-vt2"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGi-7D-yNa">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2d-Dw-k1T" customClass="ReachTabBar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="7pg-5d-0uS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dtP-xZ-5TK" firstAttribute="bottom" secondItem="gGi-7D-yNa" secondAttribute="bottom" id="5eV-23-LEF"/>
+                            <constraint firstItem="a2d-Dw-k1T" firstAttribute="top" secondItem="qqx-OB-R76" secondAttribute="bottom" id="8UO-Xp-OFD"/>
+                            <constraint firstItem="dtP-xZ-5TK" firstAttribute="trailing" secondItem="qqx-OB-R76" secondAttribute="trailing" id="EMu-yW-QMU"/>
+                            <constraint firstItem="qqx-OB-R76" firstAttribute="leading" secondItem="dtP-xZ-5TK" secondAttribute="leading" id="RHt-vD-5Kr"/>
+                            <constraint firstItem="dtP-xZ-5TK" firstAttribute="trailing" secondItem="gGi-7D-yNa" secondAttribute="trailing" id="abt-Rp-VsA"/>
+                            <constraint firstItem="qqx-OB-R76" firstAttribute="top" secondItem="dtP-xZ-5TK" secondAttribute="top" id="eaf-6f-RDL"/>
+                            <constraint firstItem="a2d-Dw-k1T" firstAttribute="leading" secondItem="dtP-xZ-5TK" secondAttribute="leading" id="exy-AO-1Ng"/>
+                            <constraint firstItem="gGi-7D-yNa" firstAttribute="top" secondItem="a2d-Dw-k1T" secondAttribute="bottom" id="jBA-tu-UyC"/>
+                            <constraint firstItem="dtP-xZ-5TK" firstAttribute="trailing" secondItem="a2d-Dw-k1T" secondAttribute="trailing" id="rlh-nz-gol"/>
+                            <constraint firstItem="gGi-7D-yNa" firstAttribute="leading" secondItem="dtP-xZ-5TK" secondAttribute="leading" id="xIm-OB-vJ6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dtP-xZ-5TK"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="gGi-7D-yNa" id="hJH-TL-bCs"/>
+                        <outlet property="tabBar" destination="a2d-Dw-k1T" id="qsz-Ao-4NX"/>
+                        <outlet property="toolbar" destination="qqx-OB-R76" id="U2Y-dH-oQ9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m56-GT-PW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2080.8000000000002" y="796.55172413793105"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="p7s-Kf-lrM">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="1n1-Hw-Qhx" customClass="SearchViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gML-gY-WDD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="colorSecondary"/>
+                        <viewLayoutGuide key="safeArea" id="bP6-Ma-BG9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51G-5F-se1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2828" y="797"/>
+        </scene>
+        <!--Registered Block Producers View Controller-->
+        <scene sceneID="HiQ-yd-EJP">
+            <objects>
+                <viewController storyboardIdentifier="RegisteredBlockProducersViewController" id="GJf-nr-Yhz" customClass="RegisteredBlockProducersViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IH7-vO-cQK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="colorAccent"/>
+                        <viewLayoutGuide key="safeArea" id="9nW-Xb-ozi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPb-la-Q13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3559" y="797"/>
         </scene>
     </scenes>
     <resources>

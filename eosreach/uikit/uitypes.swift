@@ -34,10 +34,18 @@ extension UIView {
 }
 
 extension UIViewController {
-
+    
     func showOKDialog(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: R.string.appStrings.app_dialog_ok(), style: .default, handler: nil))
         self.present(alert, animated: true)
+    }
+
+    func setToolbar(toolbar: ReachToolbar) {
+        toolbar.backMenuButton.addTarget(self, action: #selector(handleBackMenu(button:)), for: .touchUpInside)
+    }
+
+    @objc func handleBackMenu(button: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }

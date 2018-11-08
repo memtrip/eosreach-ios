@@ -42,7 +42,7 @@ class SplashViewController: MxViewController<SplashIntent, SplashResult, SplashV
         case .navigateToImportPrivateKey:
             performSegue(withIdentifier: R.segue.splashViewController.splashToImportPrivateKey, sender: self)
         case .navigateToExplore:
-            print("explore")
+            performSegue(withIdentifier: R.segue.splashViewController.splashToExplore, sender: self)
         }
     }
 

@@ -75,14 +75,6 @@ class MxViewController
     func getDestinationBundle() -> SegueBundle? {
         return self.destinationBundle
     }
-
-    func setToolbar(toolbar: ReachToolbar) {
-        toolbar.backMenuButton.addTarget(self, action: #selector(handleBackMenu(button:)), for: .touchUpInside)
-    }
-
-    @objc func handleBackMenu(button: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
 }
 
 protocol Mvi {
