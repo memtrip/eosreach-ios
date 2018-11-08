@@ -1,0 +1,20 @@
+{
+	"settings_currency_pairing_title" = "Change currency pair";
+	"settings_currency_pairing_placeholder" = "Currency code e.g; GBP, BTC";
+	"settings_currency_pairing_note" = "Enter a currency code e.g; GBP, EUR, BTC, ETH. The currency code you enter will be displayed alongside all EOS values in the app.";
+	"settings_currency_pairing_cta" = "Update Pair";
+	"settings_eos_endpoint_title" = "Change EOS endpoint";
+	"settings_eos_endpoint_current_label" = "Current EOS Endpoint";
+	"settings_eos_endpoint_placeholder" = "Enter a new endpoint URL";
+	"settings_eos_endpoint_block_producer_button" = "Choose Block Producer";
+	"settings_eos_endpoint_cta_button" = "Change Endpoint";
+	"settings_author_website" = "https://memtrip.com";
+	"settings_telegram_url" = "https://t.me/joinchat/JcIXl0x7wC9cRI5uF_EiQA";
+	"settings_title" = Settings;
+	"settings_navigation_currency_pair_button" = "Currency Pair";
+	"settings_navigation_eos_endpoint_button" = "Change EOS Endpoint";
+	"settings_navigation_private_keys_button" = "View Private Keys";
+	"settings_navigation_confirmed_transactions_button" = "View Confirmed Transactions";
+	"settings_navigation_join_us_on_telegram_button" = "Join Us On Telegram";
+	"settings_navigation_clear_data_and_logout_button" = "Clear Data And Logout";
+}

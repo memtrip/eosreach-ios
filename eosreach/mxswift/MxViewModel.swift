@@ -50,4 +50,8 @@ class MxViewModel<I: MxIntent, R: MxResult, VS: MxViewState> {
     func reducer(previousState: VS, result: R) -> VS {
         fatalError("reducer must be implemented in concrete implementations of MviViewModel")
     }
+
+    func just<T>(_ item: T) -> Observable<T> {
+        return Observable.just(item)
+    }
 }

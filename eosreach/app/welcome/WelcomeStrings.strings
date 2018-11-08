@@ -1,0 +1,6 @@
+{
+	"welcome_import_key_title" = "Import key";
+	"welcome_splash_create_account_button" = "Create Account";
+	"welcome_splash_import_private_key_button" = "Import Private Key";
+	"welcome_splash_import_explore_button" = Explore;
+}

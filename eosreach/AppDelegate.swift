@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window!.tintColor = R.color.colorAccent()
+        self.window!.backgroundColor = R.color.colorWindowBackground()
         return true
     }
 

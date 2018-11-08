@@ -16,6 +16,7 @@ class MxViewController
     }()
 
     override func viewDidLoad() {
+        view.backgroundColor = Res.color.colorWindowBackground()
         DispatchQueue.main.async {
             self.viewModel.states().observeOn(MainScheduler.instance).subscribe(onNext: { state in
                 Logger.log(value: "\(state)", trim: true)
@@ -73,6 +74,14 @@ class MxViewController
 
     func getDestinationBundle() -> SegueBundle? {
         return self.destinationBundle
+    }
+
+    func setToolbar(toolbar: ReachToolbar) {
+        toolbar.backMenuButton.addTarget(self, action: #selector(handleBackMenu(button:)), for: .touchUpInside)
+    }
+
+    @objc func handleBackMenu(button: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }
 

@@ -1,24 +1,433 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Settings View Controller-->
+        <scene sceneID="852-HC-cW8">
+            <objects>
+                <viewController id="se4-xM-JVq" customClass="SettingsViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fgc-c1-nNE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQj-hn-cjt" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="590.5" width="343" height="30"/>
+                                <state key="normal" title="memtrip"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The wheel put the giants out of business" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQE-Zn-vs6">
+                                <rect key="frame" x="16" y="636.5" width="343" height="14.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" name="colorSecondary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOf-ld-LnK" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="KOg-aO-j5e"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rh-Pc-Tbo" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="84" width="375" height="30"/>
+                                <state key="normal" title="_currency_pair"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDK-Zf-ZrQ" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="115" width="375" height="30"/>
+                                <state key="normal" title="_change_eos_endpoint"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNr-yW-vhS" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="146" width="375" height="30"/>
+                                <state key="normal" title="_view_private_keys"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlO-wi-oBO" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="177" width="375" height="30"/>
+                                <state key="normal" title="_confirmed_transactions"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaG-QX-qc5" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="208" width="375" height="30"/>
+                                <state key="normal" title="_join_us_on_telegram"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pk-rx-0Vu" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="238" width="375" height="30"/>
+                                <state key="normal" title="_clear_data_and_logout"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sag-eB-8Mm">
+                                <rect key="frame" x="0.0" y="114" width="375" height="1"/>
+                                <color key="backgroundColor" name="colorBorderTransparent"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="wEK-2q-bao"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfZ-W9-dlI">
+                                <rect key="frame" x="0.0" y="145" width="375" height="1"/>
+                                <color key="backgroundColor" name="colorBorderTransparent"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="cWw-Yt-vBe"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62Z-ad-SNg">
+                                <rect key="frame" x="0.0" y="176" width="375" height="1"/>
+                                <color key="backgroundColor" name="colorBorderTransparent"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="aY0-Uz-IbP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpw-f8-sAU">
+                                <rect key="frame" x="0.0" y="207" width="375" height="1"/>
+                                <color key="backgroundColor" name="colorBorderTransparent"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="9T5-FX-VqG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBH-fz-MAN">
+                                <rect key="frame" x="0.0" y="238" width="375" height="1"/>
+                                <color key="backgroundColor" name="colorBorderTransparent"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="gK1-lI-fWp"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74i-XY-nMJ">
+                                <rect key="frame" x="0.0" y="84" width="359" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="colorAccent"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="MlO-wi-oBO" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="0Yy-RS-vM3"/>
+                            <constraint firstItem="Gpw-f8-sAU" firstAttribute="top" secondItem="MlO-wi-oBO" secondAttribute="bottom" id="0l8-6g-Ae1"/>
+                            <constraint firstItem="TaG-QX-qc5" firstAttribute="top" secondItem="Gpw-f8-sAU" secondAttribute="bottom" id="2qv-QL-LOh"/>
+                            <constraint firstItem="1rh-Pc-Tbo" firstAttribute="top" secondItem="yOf-ld-LnK" secondAttribute="bottom" constant="16" id="5dz-DS-9wi"/>
+                            <constraint firstItem="rDK-Zf-ZrQ" firstAttribute="top" secondItem="Sag-eB-8Mm" secondAttribute="bottom" id="5oC-bN-Qo8"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="Sag-eB-8Mm" secondAttribute="trailing" id="7Rt-JB-dOi"/>
+                            <constraint firstItem="TaG-QX-qc5" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="7kC-5v-Rlt"/>
+                            <constraint firstItem="74i-XY-nMJ" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="8DF-3F-oTP"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="yOf-ld-LnK" secondAttribute="trailing" id="9c5-L5-Fbu"/>
+                            <constraint firstItem="74i-XY-nMJ" firstAttribute="top" secondItem="1rh-Pc-Tbo" secondAttribute="top" id="9gQ-Iu-wsy"/>
+                            <constraint firstItem="8Pk-rx-0Vu" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="DOn-vp-EUv"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="rDK-Zf-ZrQ" secondAttribute="trailing" id="EUh-Qw-Dn3"/>
+                            <constraint firstItem="dBH-fz-MAN" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="GVH-Cd-rEO"/>
+                            <constraint firstItem="rDK-Zf-ZrQ" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="IeI-ps-MtW"/>
+                            <constraint firstItem="tQE-Zn-vs6" firstAttribute="top" secondItem="tQj-hn-cjt" secondAttribute="bottom" constant="16" id="Iva-jc-fdm"/>
+                            <constraint firstItem="tQj-hn-cjt" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" constant="16" id="JJo-gA-7jz"/>
+                            <constraint firstItem="sfZ-W9-dlI" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="JtW-z9-wHi"/>
+                            <constraint firstItem="62Z-ad-SNg" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="LMc-H0-l2h"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="MlO-wi-oBO" secondAttribute="trailing" id="Mgk-sY-Zkx"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="74i-XY-nMJ" secondAttribute="trailing" constant="16" id="RS8-0v-fcv"/>
+                            <constraint firstItem="74i-XY-nMJ" firstAttribute="bottom" secondItem="1rh-Pc-Tbo" secondAttribute="bottom" id="T0T-1X-KwH"/>
+                            <constraint firstItem="dBH-fz-MAN" firstAttribute="top" secondItem="TaG-QX-qc5" secondAttribute="bottom" id="UxQ-iA-1Zl"/>
+                            <constraint firstItem="sfZ-W9-dlI" firstAttribute="top" secondItem="rDK-Zf-ZrQ" secondAttribute="bottom" id="Xs5-Se-2yJ"/>
+                            <constraint firstItem="62Z-ad-SNg" firstAttribute="top" secondItem="TNr-yW-vhS" secondAttribute="bottom" id="dNT-rj-Drk"/>
+                            <constraint firstItem="8Pk-rx-0Vu" firstAttribute="top" secondItem="TaG-QX-qc5" secondAttribute="bottom" id="fFk-zD-GeK"/>
+                            <constraint firstItem="Sag-eB-8Mm" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="fxM-dU-nPN"/>
+                            <constraint firstItem="tQE-Zn-vs6" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" constant="16" id="gv4-39-Rqh"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="tQE-Zn-vs6" secondAttribute="trailing" constant="16" id="hac-7E-hEr"/>
+                            <constraint firstItem="MlO-wi-oBO" firstAttribute="top" secondItem="62Z-ad-SNg" secondAttribute="bottom" id="jKY-fg-R5v"/>
+                            <constraint firstItem="1rh-Pc-Tbo" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="lJz-UX-0DD"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="bottom" secondItem="tQE-Zn-vs6" secondAttribute="bottom" constant="16" id="oeQ-Od-DGX"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="8Pk-rx-0Vu" secondAttribute="trailing" id="psi-Vw-PcA"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="TNr-yW-vhS" secondAttribute="trailing" id="qQ1-tK-5hX"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="sfZ-W9-dlI" secondAttribute="trailing" id="rN8-4O-sef"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="62Z-ad-SNg" secondAttribute="trailing" id="rfT-qV-Npb"/>
+                            <constraint firstItem="Sag-eB-8Mm" firstAttribute="top" secondItem="1rh-Pc-Tbo" secondAttribute="bottom" id="rh6-tf-QPk"/>
+                            <constraint firstItem="yOf-ld-LnK" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="u0b-qA-0VX"/>
+                            <constraint firstItem="yOf-ld-LnK" firstAttribute="top" secondItem="xse-Jp-Pro" secondAttribute="top" id="uWw-Rv-m2Q"/>
+                            <constraint firstItem="Gpw-f8-sAU" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="uXX-vO-lPG"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="Gpw-f8-sAU" secondAttribute="trailing" id="xL3-2B-4gf"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="tQj-hn-cjt" secondAttribute="trailing" constant="16" id="xYw-E1-AoA"/>
+                            <constraint firstItem="TNr-yW-vhS" firstAttribute="leading" secondItem="xse-Jp-Pro" secondAttribute="leading" id="xyT-Is-HXH"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="dBH-fz-MAN" secondAttribute="trailing" id="y4M-rh-5cq"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="TaG-QX-qc5" secondAttribute="trailing" id="yPI-fA-nnw"/>
+                            <constraint firstItem="xse-Jp-Pro" firstAttribute="trailing" secondItem="1rh-Pc-Tbo" secondAttribute="trailing" id="yxe-Xo-tnM"/>
+                            <constraint firstItem="TNr-yW-vhS" firstAttribute="top" secondItem="sfZ-W9-dlI" secondAttribute="bottom" id="zh4-o1-1qb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xse-Jp-Pro"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeEosEndpoint" destination="rDK-Zf-ZrQ" id="y6J-cq-nhK"/>
+                        <outlet property="clearDataAndLogout" destination="8Pk-rx-0Vu" id="3aQ-tq-CJU"/>
+                        <outlet property="confirmedTransactions" destination="MlO-wi-oBO" id="1J9-7E-gfB"/>
+                        <outlet property="currencyLabel" destination="74i-XY-nMJ" id="emT-WO-4AE"/>
+                        <outlet property="currencyPairButton" destination="1rh-Pc-Tbo" id="6MG-cg-8xh"/>
+                        <outlet property="joinUsOnTelegram" destination="TaG-QX-qc5" id="mUI-ff-kJh"/>
+                        <outlet property="memtripButton" destination="tQj-hn-cjt" id="C2b-c4-nnF"/>
+                        <outlet property="toolbar" destination="yOf-ld-LnK" id="5kE-gl-VWL"/>
+                        <outlet property="viewPrivateKeys" destination="TNr-yW-vhS" id="aPk-nO-3yQ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="settingsToEntry" id="cDM-mx-vQS"/>
+                        <segue destination="nRr-uf-Ks7" kind="show" identifier="settingsToCurrencyPairing" id="bMO-tT-PCK"/>
+                        <segue destination="BLF-jA-WCe" kind="show" identifier="settingsToEosEndpoint" id="X0C-WJ-xId"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldj-Ns-Ajb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537" y="-997"/>
+        </scene>
+        <!--Eos Endpoint View Controller-->
+        <scene sceneID="hGP-dy-Tu5">
+            <objects>
+                <viewController id="BLF-jA-WCe" customClass="EosEndpointViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wPZ-k0-VJU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ast-fT-FnB" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="HpI-Xy-O8R"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="endpoint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsJ-IT-XWE">
+                                <rect key="frame" x="16" y="101.5" width="343" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="colorSecondary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_current" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EZ-10-e0Y">
+                                <rect key="frame" x="16" y="84" width="343" height="13.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                <color key="textColor" name="typographyColorSecondary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOY-ZE-rZH" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="154.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3C-qE-ylI" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="200.5" width="170" height="30"/>
+                                <state key="normal" title="_choose_block_producer"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2v-RU-t3Q" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <state key="normal" title="_change_endpoint"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rsJ-IT-XWE" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" constant="16" id="1Q6-aL-Zxa"/>
+                            <constraint firstItem="d3C-qE-ylI" firstAttribute="top" secondItem="BOY-ZE-rZH" secondAttribute="bottom" constant="16" id="2pU-cV-kzo"/>
+                            <constraint firstItem="MKt-PO-Rct" firstAttribute="trailing" secondItem="1EZ-10-e0Y" secondAttribute="trailing" constant="16" id="35f-c7-VBK"/>
+                            <constraint firstItem="1EZ-10-e0Y" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" constant="16" id="7d6-HZ-xDR"/>
+                            <constraint firstItem="MKt-PO-Rct" firstAttribute="trailing" secondItem="R2v-RU-t3Q" secondAttribute="trailing" constant="16" id="G1q-ah-wPL"/>
+                            <constraint firstItem="Ast-fT-FnB" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" id="K22-6t-Jt9"/>
+                            <constraint firstItem="1EZ-10-e0Y" firstAttribute="top" secondItem="Ast-fT-FnB" secondAttribute="bottom" constant="16" id="MFK-6t-ib8"/>
+                            <constraint firstItem="MKt-PO-Rct" firstAttribute="trailing" secondItem="BOY-ZE-rZH" secondAttribute="trailing" constant="16" id="NkS-tR-318"/>
+                            <constraint firstItem="BOY-ZE-rZH" firstAttribute="top" secondItem="rsJ-IT-XWE" secondAttribute="bottom" constant="32" id="Ug5-b2-Bii"/>
+                            <constraint firstItem="Ast-fT-FnB" firstAttribute="top" secondItem="MKt-PO-Rct" secondAttribute="top" id="a9w-zR-dey"/>
+                            <constraint firstItem="MKt-PO-Rct" firstAttribute="bottom" secondItem="R2v-RU-t3Q" secondAttribute="bottom" constant="16" id="iPL-to-7Ic"/>
+                            <constraint firstItem="MKt-PO-Rct" firstAttribute="trailing" secondItem="Ast-fT-FnB" secondAttribute="trailing" id="iep-IK-EkQ"/>
+                            <constraint firstItem="BOY-ZE-rZH" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" constant="16" id="iuf-tW-8Ku"/>
+                            <constraint firstItem="d3C-qE-ylI" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" constant="16" id="nTR-ty-Qnr"/>
+                            <constraint firstItem="rsJ-IT-XWE" firstAttribute="top" secondItem="1EZ-10-e0Y" secondAttribute="bottom" constant="4" id="qQQ-7S-YP2"/>
+                            <constraint firstItem="R2v-RU-t3Q" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" constant="16" id="r60-xq-Esm"/>
+                            <constraint firstItem="MKt-PO-Rct" firstAttribute="trailing" secondItem="rsJ-IT-XWE" secondAttribute="trailing" constant="16" id="tRk-Ea-WPF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MKt-PO-Rct"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeEndpointButton" destination="R2v-RU-t3Q" id="DV6-uL-yYz"/>
+                        <outlet property="changeEndpointTextField" destination="BOY-ZE-rZH" id="teP-Pb-fer"/>
+                        <outlet property="chooseBlockProducerButton" destination="d3C-qE-ylI" id="oc7-VC-Lgg"/>
+                        <outlet property="currentEndpointLabel" destination="1EZ-10-e0Y" id="Aw9-V6-Jdg"/>
+                        <outlet property="currentEndpointUrl" destination="rsJ-IT-XWE" id="Yae-0Q-UHN"/>
+                        <outlet property="toolbar" destination="Ast-fT-FnB" id="IRe-Nd-bJ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P80-QB-jMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318" y="-674"/>
+        </scene>
+        <!--Currency Pairing View Controller-->
+        <scene sceneID="hWr-d4-pDW">
+            <objects>
+                <viewController id="nRr-uf-Ks7" customClass="CurrencyPairingViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sSe-Zt-Y9G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jnh-DR-1LS" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="lHR-Nr-dXs"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SP-Gd-rHf" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <state key="normal" title="_update_pair"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYp-dZ-lyv" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="100" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text here" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl4-q8-trB">
+                                <rect key="frame" x="16" y="146" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorSecondary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="D4W-l9-uBZ" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="626" width="375" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="OZ5-Fh-OaD" firstAttribute="trailing" secondItem="bl4-q8-trB" secondAttribute="trailing" constant="16" id="1sV-9F-oFe"/>
+                            <constraint firstItem="OZ5-Fh-OaD" firstAttribute="trailing" secondItem="D4W-l9-uBZ" secondAttribute="trailing" id="Hry-bx-lJF"/>
+                            <constraint firstItem="CYp-dZ-lyv" firstAttribute="top" secondItem="Jnh-DR-1LS" secondAttribute="bottom" constant="32" id="Ldq-rI-LUm"/>
+                            <constraint firstItem="OZ5-Fh-OaD" firstAttribute="trailing" secondItem="8SP-Gd-rHf" secondAttribute="trailing" constant="16" id="PH2-cF-wVu"/>
+                            <constraint firstItem="bl4-q8-trB" firstAttribute="leading" secondItem="OZ5-Fh-OaD" secondAttribute="leading" constant="16" id="QAB-po-5xX"/>
+                            <constraint firstItem="OZ5-Fh-OaD" firstAttribute="bottom" secondItem="8SP-Gd-rHf" secondAttribute="bottom" constant="16" id="SBA-Cb-54e"/>
+                            <constraint firstItem="Jnh-DR-1LS" firstAttribute="leading" secondItem="OZ5-Fh-OaD" secondAttribute="leading" id="V1I-AN-Sx4"/>
+                            <constraint firstItem="D4W-l9-uBZ" firstAttribute="centerY" secondItem="8SP-Gd-rHf" secondAttribute="centerY" id="dMV-uQ-j1I"/>
+                            <constraint firstItem="bl4-q8-trB" firstAttribute="top" secondItem="CYp-dZ-lyv" secondAttribute="bottom" constant="16" id="gOk-0E-Y3G"/>
+                            <constraint firstItem="D4W-l9-uBZ" firstAttribute="leading" secondItem="OZ5-Fh-OaD" secondAttribute="leading" id="lL0-zu-fO1"/>
+                            <constraint firstItem="8SP-Gd-rHf" firstAttribute="leading" secondItem="OZ5-Fh-OaD" secondAttribute="leading" constant="16" id="qE6-9A-cjL"/>
+                            <constraint firstItem="CYp-dZ-lyv" firstAttribute="leading" secondItem="OZ5-Fh-OaD" secondAttribute="leading" constant="16" id="sX5-dT-g0i"/>
+                            <constraint firstItem="OZ5-Fh-OaD" firstAttribute="trailing" secondItem="Jnh-DR-1LS" secondAttribute="trailing" id="sp7-LU-DDK"/>
+                            <constraint firstItem="OZ5-Fh-OaD" firstAttribute="trailing" secondItem="CYp-dZ-lyv" secondAttribute="trailing" constant="16" id="wcX-00-jWm"/>
+                            <constraint firstItem="Jnh-DR-1LS" firstAttribute="top" secondItem="OZ5-Fh-OaD" secondAttribute="top" id="xaE-Op-Ous"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OZ5-Fh-OaD"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="D4W-l9-uBZ" id="LAQ-1x-lbB"/>
+                        <outlet property="currencyPairTextField" destination="CYp-dZ-lyv" id="WsX-WE-CBY"/>
+                        <outlet property="noteLabel" destination="bl4-q8-trB" id="Q3A-gO-Izy"/>
+                        <outlet property="toolbar" destination="Jnh-DR-1LS" id="rwM-1l-cbT"/>
+                        <outlet property="updatePairButton" destination="8SP-Gd-rHf" id="sQx-Vx-LNE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2w-tO-JNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318" y="-1338"/>
+        </scene>
+        <!--EntryViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="EntryViewController" customClass="EntryViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HyF-fF-0Yh" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="HyF-fF-0Yh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0NH-t6-OFq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HyF-fF-0Yh" secondAttribute="bottom" constant="16" id="Hns-0Y-iQq"/>
+                            <constraint firstItem="HyF-fF-0Yh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="o7h-QI-pnC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HyF-fF-0Yh" secondAttribute="trailing" constant="16" id="ufq-p4-M1O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="HyF-fF-0Yh" id="ruc-z9-1AV"/>
+                        <segue destination="eGy-rE-FWZ" kind="show" identifier="entryToSplash" id="9Ts-tL-n4A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="537" y="27"/>
+        </scene>
+        <!--SplashViewController-->
+        <scene sceneID="pMN-1J-TBn">
+            <objects>
+                <viewController id="eGy-rE-FWZ" userLabel="SplashViewController" customClass="SplashViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gj1-3v-vOY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnb-j5-fmx" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <state key="normal" title="_explore"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ies-v4-gpP" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="575" width="343" height="30"/>
+                                <state key="normal" title="_import_private_key"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHd-vN-Imy" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="529" width="343" height="30"/>
+                                <state key="normal" title="_create_accoutn"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Qnb-j5-fmx" firstAttribute="leading" secondItem="T0L-8w-pfP" secondAttribute="leading" constant="16" id="3ch-6X-2MR"/>
+                            <constraint firstItem="ies-v4-gpP" firstAttribute="leading" secondItem="T0L-8w-pfP" secondAttribute="leading" constant="16" id="3rZ-Ov-uiw"/>
+                            <constraint firstItem="T0L-8w-pfP" firstAttribute="trailing" secondItem="yHd-vN-Imy" secondAttribute="trailing" constant="16" id="6o5-uI-9Bf"/>
+                            <constraint firstItem="T0L-8w-pfP" firstAttribute="trailing" secondItem="ies-v4-gpP" secondAttribute="trailing" constant="16" id="7Z5-qj-nnj"/>
+                            <constraint firstItem="Qnb-j5-fmx" firstAttribute="top" secondItem="ies-v4-gpP" secondAttribute="bottom" constant="16" id="IDZ-V2-y7n"/>
+                            <constraint firstItem="T0L-8w-pfP" firstAttribute="bottom" secondItem="Qnb-j5-fmx" secondAttribute="bottom" constant="16" id="Yy6-Fn-g0p"/>
+                            <constraint firstItem="T0L-8w-pfP" firstAttribute="trailing" secondItem="Qnb-j5-fmx" secondAttribute="trailing" constant="16" id="bKM-Qa-8u9"/>
+                            <constraint firstItem="ies-v4-gpP" firstAttribute="top" secondItem="yHd-vN-Imy" secondAttribute="bottom" constant="16" id="gtn-2Z-naI"/>
+                            <constraint firstItem="yHd-vN-Imy" firstAttribute="leading" secondItem="T0L-8w-pfP" secondAttribute="leading" constant="16" id="n7h-PX-uif"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T0L-8w-pfP"/>
+                    </view>
+                    <connections>
+                        <outlet property="createAccountButton" destination="yHd-vN-Imy" id="UtE-6B-Ls3"/>
+                        <outlet property="exploreButton" destination="Qnb-j5-fmx" id="REe-9W-rGe"/>
+                        <outlet property="importPrivateKeyButton" destination="ies-v4-gpP" id="fzY-nM-0TP"/>
+                        <segue destination="uwo-3q-08m" kind="show" identifier="splashToImportPrivateKey" id="1Wt-0h-Agf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Jx-fj-esb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318" y="27"/>
+        </scene>
+        <!--Import Key View Controller-->
+        <scene sceneID="2LL-MZ-a5c">
+            <objects>
+                <viewController id="uwo-3q-08m" customClass="ImportKeyViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ScW-uf-uec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAk-kH-fch" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="upT-EC-5U4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="DAk-kH-fch" firstAttribute="top" secondItem="I05-4P-HPG" secondAttribute="top" id="dkD-ep-xd7"/>
+                            <constraint firstItem="I05-4P-HPG" firstAttribute="trailing" secondItem="DAk-kH-fch" secondAttribute="trailing" id="jWp-cs-NwB"/>
+                            <constraint firstItem="DAk-kH-fch" firstAttribute="leading" secondItem="I05-4P-HPG" secondAttribute="leading" id="kDV-4J-iBS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I05-4P-HPG"/>
+                    </view>
+                    <connections>
+                        <outlet property="toolbar" destination="DAk-kH-fch" id="8hZ-w0-xpl"/>
+                        <segue destination="se4-xM-JVq" kind="show" identifier="importPrivateKeyToSettings" id="HUM-Qw-frB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5J-GG-vpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081" y="27"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="colorAccent">
+            <color red="1" green="0.45490196078431372" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorBorderTransparent">
+            <color red="1" green="1" blue="1" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorSecondary">
+            <color red="0.36862745098039218" green="0.9882352941176471" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="typographyColorSecondary">
+            <color red="0.90588235294117647" green="0.91764705882352937" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -1,0 +1,4 @@
+{
+	"app_endpoint_url" = "http://localhost:8888/";
+	"app_default_currency" = USD;
+}
