@@ -55,6 +55,7 @@ class ImportKeyViewController: MxViewController<ImportKeyIntent, ImportKeyResult
             importKeyButton.gone()
             activityIndicator.stop()
         case .onError(let error):
+            showOKDialog(title: R.string.appStrings.app_dialog_error_default_title(), message: error)
             importKeyButton.visible()
             activityIndicator.stop()
         case .navigateToGithubSource:

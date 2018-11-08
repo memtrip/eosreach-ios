@@ -8,4 +8,6 @@
 	"welcome_import_key_view_source_button" = "View Source On Github";
 	"welcome_import_key_cta_button" = Import;
 	"welcome_import_key_source_code_url" = "https://github.com/memtrip/eosreach-swift";
+	"welcome_import_key_error_invalid_key" = "Invalid private key format.";
+	"welcome_import_key_error_generic" = "Could not import private key, please check your connection and try again.";
 }

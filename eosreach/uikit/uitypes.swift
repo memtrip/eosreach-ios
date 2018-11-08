@@ -1,5 +1,7 @@
 import UIKit
 
+typealias Res = R
+
 extension UIImage {
     public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
         let rect = CGRect(origin: .zero, size: size)
@@ -31,4 +33,11 @@ extension UIView {
     }
 }
 
-typealias Res = R
+extension UIViewController {
+
+    func showOKDialog(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: R.string.appStrings.app_dialog_ok(), style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+}

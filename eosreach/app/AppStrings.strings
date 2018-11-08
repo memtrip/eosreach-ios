@@ -1,4 +1,6 @@
 {
 	"app_endpoint_url" = "http://localhost:8888/";
 	"app_default_currency" = USD;
+	"app_dialog_ok" = OK;
+	"app_dialog_error_default_title" = Sorry;
 }

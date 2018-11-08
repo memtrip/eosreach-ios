@@ -10,7 +10,6 @@
 		11C091BD424B940DCFF59F1E /* Pods_eosreach_eosreachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */; };
 		3C0EC80A2192FAD300562A1B /* uitypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8092192FAD300562A1B /* uitypes.swift */; };
 		3C0EC80C2192FAF900562A1B /* ReachButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC80B2192FAF900562A1B /* ReachButton.swift */; };
-		3C0EC80F219300D000562A1B /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8C6DA42192D6E300FC1A0D /* eosswift.framework */; };
 		3C0EC8122193086800562A1B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8112193086800562A1B /* R.generated.swift */; };
 		3C0EC81421933B6F00562A1B /* ReachActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC81321933B6F00562A1B /* ReachActivityIndicator.swift */; };
 		3C0EC81B21933D4F00562A1B /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC81621933D4F00562A1B /* SplashViewModel.swift */; };
@@ -42,6 +41,8 @@
 		3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
 		3C5799CF2191D27E00B9A3D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CD2191D27E00B9A3D7 /* LaunchScreen.storyboard */; };
 		3C5799DA2191D27E00B9A3D7 /* eosreachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5799D92191D27E00B9A3D7 /* eosreachTests.swift */; };
+		3C7F0DCC21947B3900E72DD1 /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7F0DCB21947B3900E72DD1 /* eosswift.framework */; };
+		3C7F0DCE21947B4D00E72DD1 /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7F0DCB21947B3900E72DD1 /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C8C6D8D2192D4B600FC1A0D /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D8C2192D4B600FC1A0D /* Rx.swift */; };
 		3C8C6D902192D4CE00FC1A0D /* MxViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D8F2192D4CE00FC1A0D /* MxViewState.swift */; };
 		3C8C6D922192D4F400FC1A0D /* MxIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D912192D4F400FC1A0D /* MxIntent.swift */; };
@@ -51,7 +52,6 @@
 		3C8C6D9A2192D56000FC1A0D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D992192D56000FC1A0D /* Logger.swift */; };
 		3C8C6D9C2192D58E00FC1A0D /* Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D9B2192D58E00FC1A0D /* Copy.swift */; };
 		3C8C6D9E2192D5B000FC1A0D /* SegueBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D9D2192D5B000FC1A0D /* SegueBundle.swift */; };
-		3C8C6DB42192D6EC00FC1A0D /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8C6DA42192D6E300FC1A0D /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C8C6DC22192D7B900FC1A0D /* EntryIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6DC12192D7B900FC1A0D /* EntryIntent.swift */; };
 		3C8C6DC42192D86F00FC1A0D /* EntryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6DC32192D86F00FC1A0D /* EntryResult.swift */; };
 		3C8C6DC62192D8F500FC1A0D /* EntryViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6DC52192D8F500FC1A0D /* EntryViewState.swift */; };
@@ -68,9 +68,11 @@
 		3C964C48219444A2003663EF /* EosPriceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C47219444A2003663EF /* EosPriceValue.swift */; };
 		3C964C4A219444DB003663EF /* RsaEncryptionVerified.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C49219444DB003663EF /* RsaEncryptionVerified.swift */; };
 		3C964C4C2194469B003663EF /* PurgeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C4B2194469B003663EF /* PurgeUserDefaults.swift */; };
+		3C964C4F2194572A003663EF /* EosKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C4E2194572A003663EF /* EosKeyManager.swift */; };
+		3C964C51219459D3003663EF /* EncryptedKeyPairData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C50219459D3003663EF /* EncryptedKeyPairData.swift */; };
 		3CAD34752192F77C000F304A /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD34742192F77C000F304A /* EntryViewModel.swift */; };
 		3CAD34772192F7DB000F304A /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD34762192F7DB000F304A /* EntryViewController.swift */; };
-		496E8F6B272756DCD11C08E3 /* Pods_eosreach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B747F913CEFFA4BFF47AA857 /* Pods_eosreach.framework */; };
+		F77F1265BDC47B2C95E19607 /* Pods_eosreach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B747F913CEFFA4BFF47AA857 /* Pods_eosreach.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,13 +86,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3C579A482192032700B9A3D7 /* Embed Frameworks */ = {
+		3C7F0DC62194792B00E72DD1 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3C8C6DB42192D6EC00FC1A0D /* eosswift.framework in Embed Frameworks */,
+				3C7F0DCE21947B4D00E72DD1 /* eosswift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +138,7 @@
 		3C5799D52191D27E00B9A3D7 /* eosreachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eosreachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5799D92191D27E00B9A3D7 /* eosreachTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eosreachTests.swift; sourceTree = "<group>"; };
 		3C5799DB2191D27E00B9A3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C7F0DCB21947B3900E72DD1 /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
 		3C8C6D8C2192D4B600FC1A0D /* Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
 		3C8C6D8F2192D4CE00FC1A0D /* MxViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxViewState.swift; sourceTree = "<group>"; };
 		3C8C6D912192D4F400FC1A0D /* MxIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxIntent.swift; sourceTree = "<group>"; };
@@ -145,7 +148,6 @@
 		3C8C6D992192D56000FC1A0D /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3C8C6D9B2192D58E00FC1A0D /* Copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copy.swift; sourceTree = "<group>"; };
 		3C8C6D9D2192D5B000FC1A0D /* SegueBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueBundle.swift; sourceTree = "<group>"; };
-		3C8C6DA42192D6E300FC1A0D /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = eosswift.framework; path = frameworks_temp/eosswift.framework; sourceTree = "<group>"; };
 		3C8C6DC12192D7B900FC1A0D /* EntryIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryIntent.swift; sourceTree = "<group>"; };
 		3C8C6DC32192D86F00FC1A0D /* EntryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryResult.swift; sourceTree = "<group>"; };
 		3C8C6DC52192D8F500FC1A0D /* EntryViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewState.swift; sourceTree = "<group>"; };
@@ -162,6 +164,9 @@
 		3C964C47219444A2003663EF /* EosPriceValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosPriceValue.swift; sourceTree = "<group>"; };
 		3C964C49219444DB003663EF /* RsaEncryptionVerified.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsaEncryptionVerified.swift; sourceTree = "<group>"; };
 		3C964C4B2194469B003663EF /* PurgeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurgeUserDefaults.swift; sourceTree = "<group>"; };
+		3C964C4E2194572A003663EF /* EosKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosKeyManager.swift; sourceTree = "<group>"; };
+		3C964C50219459D3003663EF /* EncryptedKeyPairData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedKeyPairData.swift; sourceTree = "<group>"; };
+		3C964C52219464EE003663EF /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = eosswift.framework; path = "/Users/samkirton/Documents/patterns/eosreach-swift/eosreach/eosswift.framework"; sourceTree = "<absolute>"; };
 		3CAD34742192F77C000F304A /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 		3CAD34762192F7DB000F304A /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		48ECDAAEF6BB465B8887CE03 /* Pods-eosreach-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,8 +181,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C0EC80F219300D000562A1B /* eosswift.framework in Frameworks */,
-				496E8F6B272756DCD11C08E3 /* Pods_eosreach.framework in Frameworks */,
+				3C7F0DCC21947B3900E72DD1 /* eosswift.framework in Frameworks */,
+				F77F1265BDC47B2C95E19607 /* Pods_eosreach.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,12 +238,12 @@
 			children = (
 				3C340FCF21937FDE0017BEF9 /* currencypairing */,
 				3C964C2F21938C33003663EF /* eosendpoint */,
-				3C340FCB219368C30017BEF9 /* SettingsStrings.strings */,
 				3C340FC52193612A0017BEF9 /* SettingsIntent.swift */,
 				3C340FC42193612A0017BEF9 /* SettingsResult.swift */,
 				3C340FC12193612A0017BEF9 /* SettingsViewController.swift */,
 				3C340FC22193612A0017BEF9 /* SettingsViewModel.swift */,
 				3C340FC32193612A0017BEF9 /* SettingsViewState.swift */,
+				3C340FCB219368C30017BEF9 /* SettingsStrings.strings */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				3C5799C22191D27D00B9A3D7 /* Products */,
 				3C5799E42191D39A00B9A3D7 /* Frameworks */,
 				4A8C8B683B63E7118BDE78A2 /* Pods */,
+				3C7F0DB62194665D00E72DD1 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -282,6 +288,7 @@
 				3C964C3A219441C8003663EF /* db */,
 				3C0EC8082192FA5700562A1B /* uikit */,
 				3C8C6D8B2192D47E00FC1A0D /* mxswift */,
+				3C964C4D219456A9003663EF /* wallet */,
 				3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */,
 				3C0EC8112193086800562A1B /* R.generated.swift */,
 				3C5799C82191D27D00B9A3D7 /* Main.storyboard */,
@@ -304,11 +311,19 @@
 		3C5799E42191D39A00B9A3D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C8C6DA42192D6E300FC1A0D /* eosswift.framework */,
+				3C7F0DCB21947B3900E72DD1 /* eosswift.framework */,
 				B747F913CEFFA4BFF47AA857 /* Pods_eosreach.framework */,
 				7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C7F0DB62194665D00E72DD1 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				3C964C52219464EE003663EF /* eosswift.framework */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		3C8C6D8B2192D47E00FC1A0D /* mxswift */ = {
@@ -340,7 +355,6 @@
 		3C8C6DA02192D6B300FC1A0D /* welcome */ = {
 			isa = PBXGroup;
 			children = (
-				3C340FBE219354E70017BEF9 /* WelcomeStrings.strings */,
 				3C0EC820219350A400562A1B /* importkey */,
 				3C0EC81521933D0100562A1B /* splash */,
 				3C8C6DC12192D7B900FC1A0D /* EntryIntent.swift */,
@@ -348,6 +362,7 @@
 				3C8C6DC52192D8F500FC1A0D /* EntryViewState.swift */,
 				3CAD34742192F77C000F304A /* EntryViewModel.swift */,
 				3CAD34762192F7DB000F304A /* EntryViewController.swift */,
+				3C340FBE219354E70017BEF9 /* WelcomeStrings.strings */,
 			);
 			path = welcome;
 			sourceTree = "<group>";
@@ -383,6 +398,7 @@
 				3C964C47219444A2003663EF /* EosPriceValue.swift */,
 				3C964C49219444DB003663EF /* RsaEncryptionVerified.swift */,
 				3C964C4B2194469B003663EF /* PurgeUserDefaults.swift */,
+				3C964C50219459D3003663EF /* EncryptedKeyPairData.swift */,
 			);
 			path = userDefaults;
 			sourceTree = "<group>";
@@ -392,6 +408,14 @@
 			children = (
 			);
 			path = realm;
+			sourceTree = "<group>";
+		};
+		3C964C4D219456A9003663EF /* wallet */ = {
+			isa = PBXGroup;
+			children = (
+				3C964C4E2194572A003663EF /* EosKeyManager.swift */,
+			);
+			path = wallet;
 			sourceTree = "<group>";
 		};
 		4A8C8B683B63E7118BDE78A2 /* Pods */ = {
@@ -417,8 +441,8 @@
 				3C5799BD2191D27D00B9A3D7 /* Sources */,
 				3C5799BE2191D27D00B9A3D7 /* Frameworks */,
 				3C5799BF2191D27D00B9A3D7 /* Resources */,
-				3C579A482192032700B9A3D7 /* Embed Frameworks */,
 				7987F6C0DAB8057748606720 /* [CP] Embed Pods Frameworks */,
+				3C7F0DC62194792B00E72DD1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -582,6 +606,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/EllipticCurveKeyPair/EllipticCurveKeyPair.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -599,6 +624,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EllipticCurveKeyPair.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -626,6 +652,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-eosreach/Pods-eosreach-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/EllipticCurveKeyPair/EllipticCurveKeyPair.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -641,6 +668,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EllipticCurveKeyPair.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -664,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C8C6D9E2192D5B000FC1A0D /* SegueBundle.swift in Sources */,
+				3C964C4F2194572A003663EF /* EosKeyManager.swift in Sources */,
 				3C8C6D922192D4F400FC1A0D /* MxIntent.swift in Sources */,
 				3C0EC82A219350DE00562A1B /* ImportKeyViewState.swift in Sources */,
 				3C964C3821938C71003663EF /* EosEndpointResult.swift in Sources */,
@@ -691,6 +720,7 @@
 				3C964C4C2194469B003663EF /* PurgeUserDefaults.swift in Sources */,
 				3C0EC829219350DE00562A1B /* ImportKeyResult.swift in Sources */,
 				3C964C3921938C71003663EF /* EosEndpointViewModel.swift in Sources */,
+				3C964C51219459D3003663EF /* EncryptedKeyPairData.swift in Sources */,
 				3C0EC8122193086800562A1B /* R.generated.swift in Sources */,
 				3C340FD72193801B0017BEF9 /* CurrencyPairingViewModel.swift in Sources */,
 				3C8C6D982192D54000FC1A0D /* MxViewController.swift in Sources */,

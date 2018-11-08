@@ -1,14 +1,17 @@
 import Foundation
 import RxSwift
+import eosswift
 
 class ImportKeyViewModel: MxViewModel<ImportKeyIntent, ImportKeyResult, ImportKeyViewState> {
+
+    let eosKeyManager = EosKeyManagerFactory.create()
 
     override func dispatcher(intent: ImportKeyIntent) -> Observable<ImportKeyResult> {
         switch intent {
         case .idle:
             return just(ImportKeyResult.idle)
         case .importKey(let privateKey):
-            return just(ImportKeyResult.onProgress)
+            return importKey(privateKey: privateKey)
         case .viewSource:
             return just(ImportKeyResult.navigateToGithubSource)
         case .navigateToSettings:
@@ -31,5 +34,17 @@ class ImportKeyViewModel: MxViewModel<ImportKeyIntent, ImportKeyResult, ImportKe
         case .navigateToSettings:
             return ImportKeyViewState.navigateToSettings
         }
+    }
+
+    private func importKey(privateKey: String) -> Observable<ImportKeyResult> {
+        return eosKeyManager.createEosPrivateKey(value: privateKey).flatMap { eosPrivateKey in
+            self.eosKeyManager.importPrivateKey(eosPrivateKey: eosPrivateKey).flatMap { publicKey in
+                Single.just(ImportKeyResult.onError(error: R.string.welcomeStrings.welcome_import_key_error_generic()))
+            }.catchErrorJustReturn(
+                ImportKeyResult.onError(error: R.string.welcomeStrings.welcome_import_key_error_generic())
+            )
+        }.catchErrorJustReturn(
+            ImportKeyResult.onError(error: R.string.welcomeStrings.welcome_import_key_error_invalid_key())
+        ).asObservable().startWith(ImportKeyResult.onProgress)
     }
 }
