@@ -17,10 +17,16 @@ extension UIImage {
 extension UIView {
 
     func visible() {
+        if (self is ReachActivityIndicator) {
+            fatalError("For instances of `ReachActivityIndicator`, use the start() extension")
+        }
         isHidden = false
     }
 
     func gone() {
+        if (self is ReachActivityIndicator) {
+            fatalError("For instances of `ReachActivityIndicator`, use the stop() extension")
+        }
         isHidden = true
     }
 }

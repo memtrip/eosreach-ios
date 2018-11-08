@@ -8,7 +8,7 @@ class CurrencyPairingViewModel: MxViewModel<CurrencyPairingIntent, CurrencyPairi
         case .idle:
             return just(CurrencyPairingResult.idle)
         case .currencyPair(let currencyPair):
-            fatalError()
+            return just(CurrencyPairingResult.onProgress)
         }
     }
 

@@ -6,15 +6,23 @@ import Material
 class ImportKeyViewController: MxViewController<ImportKeyIntent, ImportKeyResult, ImportKeyViewState, ImportKeyViewModel> {
 
     @IBOutlet weak var toolbar: ReachToolbar!
+    @IBOutlet weak var privateKeyTextField: ReachTextField!
+    @IBOutlet weak var privateKeyInstructionsLabel: UILabel!
+    @IBOutlet weak var viewSourceButton: ReachButton!
+    @IBOutlet weak var importKeyButton: ReachPrimaryButton!
+    @IBOutlet weak var activityIndicator: ReachActivityIndicator!
 
     var toolbarSettingsMenuItem = IconButton(image: Icon.cm.settings, tintColor: .white)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        toolbar.title = R.string.welcomeStrings.welcome_import_key_title()
         setToolbar(toolbar: toolbar)
-
+        toolbar.title = R.string.welcomeStrings.welcome_import_key_title()
         toolbar.addRightItem(iconButton: toolbarSettingsMenuItem)
+        privateKeyTextField.placeholder = R.string.welcomeStrings.welcome_import_key_private_key_placeholder()
+        privateKeyInstructionsLabel.text = R.string.welcomeStrings.welcome_import_key_instructions_label()
+        viewSourceButton.setTitle(R.string.welcomeStrings.welcome_import_key_view_source_button(), for: .normal)
+        importKeyButton.setTitle(R.string.welcomeStrings.welcome_import_key_cta_button(), for: .normal)
     }
 
     override func intents() -> Observable<ImportKeyIntent> {
@@ -22,6 +30,12 @@ class ImportKeyViewController: MxViewController<ImportKeyIntent, ImportKeyResult
             Observable.just(ImportKeyIntent.idle),
             toolbarSettingsMenuItem.rx.tap.map {
                 ImportKeyIntent.navigateToSettings
+            },
+            viewSourceButton.rx.tap.map {
+                ImportKeyIntent.viewSource
+            },
+            importKeyButton.rx.tap.map {
+                ImportKeyIntent.importKey(privateKey: self.privateKeyTextField.text!)
             }
         )
     }
@@ -35,13 +49,18 @@ class ImportKeyViewController: MxViewController<ImportKeyIntent, ImportKeyResult
         case .idle:
             break
         case .onProgress:
-            print("")
+            importKeyButton.gone()
+            activityIndicator.start()
         case .onSuccess:
-            print("")
+            importKeyButton.gone()
+            activityIndicator.stop()
         case .onError(let error):
-            print("")
+            importKeyButton.visible()
+            activityIndicator.stop()
         case .navigateToGithubSource:
-            print("")
+            if let url = URL(string: R.string.welcomeStrings.welcome_import_key_source_code_url()) {
+                UIApplication.shared.open(url, options: [:])
+            }
         case .navigateToSettings:
             performSegue(withIdentifier: R.segue.importKeyViewController.importPrivateKeyToSettings, sender: self)
         }

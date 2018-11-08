@@ -10,6 +10,7 @@ class EosEndpointViewController: MxViewController<EosEndpointIntent, EosEndpoint
     @IBOutlet weak var changeEndpointTextField: ReachTextField!
     @IBOutlet weak var chooseBlockProducerButton: ReachButton!
     @IBOutlet weak var changeEndpointButton: ReachPrimaryButton!
+    @IBOutlet weak var activityIndicator: ReachActivityIndicator!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,21 +39,28 @@ class EosEndpointViewController: MxViewController<EosEndpointIntent, EosEndpoint
     }
 
     override func render(state: EosEndpointViewState) {
-        switch state {
+        currentEndpointUrl.text = state.endpointUrl
+        switch state.view {
         case .idle:
-            print("")
+            break
         case .onProgress:
-            print("")
+            activityIndicator.start()
+            changeEndpointButton.gone()
         case .onError(let message):
-            print("")
+            activityIndicator.stop()
+            changeEndpointButton.visible()
         case .onSuccess:
-            print("")
+            activityIndicator.stop()
+            changeEndpointButton.visible()
         case .navigateToBlockProducerList:
             print("")
         }
     }
 
     override func provideViewModel() -> EosEndpointViewModel {
-        return EosEndpointViewModel(initialState: EosEndpointViewState.idle)
+        return EosEndpointViewModel(initialState: EosEndpointViewState(
+            endpointUrl: EosEndpoint().get(),
+            view: EosEndpointViewState.View.idle
+        ))
     }
 }

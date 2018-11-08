@@ -1,9 +1,20 @@
 import Foundation
 
-enum EosEndpointViewState: MxViewState {
-    case idle
-    case onProgress
-    case onError(message: String)
-    case onSuccess
-    case navigateToBlockProducerList
+
+struct EosEndpointViewState: MxViewState, Copy, Equatable {
+    var endpointUrl: String
+    var view: View
+
+    static func == (lhs: EosEndpointViewState, rhs: EosEndpointViewState) -> Bool {
+        return lhs.endpointUrl == rhs.endpointUrl
+            && lhs.view == rhs.view
+    }
+
+    enum View : Equatable {
+        case idle
+        case onProgress
+        case onError(message: String)
+        case onSuccess
+        case navigateToBlockProducerList
+    }
 }

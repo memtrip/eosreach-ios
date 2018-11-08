@@ -210,6 +210,9 @@
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_change_endpoint"/>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="nEt-vI-VxP" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="626" width="375" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="rsJ-IT-XWE" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" constant="16" id="1Q6-aL-Zxa"/>
@@ -221,18 +224,22 @@
                             <constraint firstItem="1EZ-10-e0Y" firstAttribute="top" secondItem="Ast-fT-FnB" secondAttribute="bottom" constant="16" id="MFK-6t-ib8"/>
                             <constraint firstItem="MKt-PO-Rct" firstAttribute="trailing" secondItem="BOY-ZE-rZH" secondAttribute="trailing" constant="16" id="NkS-tR-318"/>
                             <constraint firstItem="BOY-ZE-rZH" firstAttribute="top" secondItem="rsJ-IT-XWE" secondAttribute="bottom" constant="32" id="Ug5-b2-Bii"/>
+                            <constraint firstItem="nEt-vI-VxP" firstAttribute="centerY" secondItem="R2v-RU-t3Q" secondAttribute="centerY" id="Y0G-7d-sfC"/>
                             <constraint firstItem="Ast-fT-FnB" firstAttribute="top" secondItem="MKt-PO-Rct" secondAttribute="top" id="a9w-zR-dey"/>
+                            <constraint firstItem="nEt-vI-VxP" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" id="b9b-v2-MCW"/>
                             <constraint firstItem="MKt-PO-Rct" firstAttribute="bottom" secondItem="R2v-RU-t3Q" secondAttribute="bottom" constant="16" id="iPL-to-7Ic"/>
                             <constraint firstItem="MKt-PO-Rct" firstAttribute="trailing" secondItem="Ast-fT-FnB" secondAttribute="trailing" id="iep-IK-EkQ"/>
                             <constraint firstItem="BOY-ZE-rZH" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" constant="16" id="iuf-tW-8Ku"/>
                             <constraint firstItem="d3C-qE-ylI" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" constant="16" id="nTR-ty-Qnr"/>
                             <constraint firstItem="rsJ-IT-XWE" firstAttribute="top" secondItem="1EZ-10-e0Y" secondAttribute="bottom" constant="4" id="qQQ-7S-YP2"/>
                             <constraint firstItem="R2v-RU-t3Q" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" constant="16" id="r60-xq-Esm"/>
+                            <constraint firstItem="MKt-PO-Rct" firstAttribute="trailing" secondItem="nEt-vI-VxP" secondAttribute="trailing" id="rRS-f1-pcN"/>
                             <constraint firstItem="MKt-PO-Rct" firstAttribute="trailing" secondItem="rsJ-IT-XWE" secondAttribute="trailing" constant="16" id="tRk-Ea-WPF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MKt-PO-Rct"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="nEt-vI-VxP" id="RI2-DD-YO7"/>
                         <outlet property="changeEndpointButton" destination="R2v-RU-t3Q" id="DV6-uL-yYz"/>
                         <outlet property="changeEndpointTextField" destination="BOY-ZE-rZH" id="teP-Pb-fer"/>
                         <outlet property="chooseBlockProducerButton" destination="d3C-qE-ylI" id="oc7-VC-Lgg"/>
@@ -398,16 +405,58 @@
                                     <constraint firstAttribute="height" constant="48" id="upT-EC-5U4"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88y-b3-ou7" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="100" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_view_source" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZw-Jo-ped">
+                                <rect key="frame" x="16" y="146" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorSecondary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="els-6i-Neh" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="182.5" width="162" height="30"/>
+                                <state key="normal" title="_view_source_on_github"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxG-EI-U5e" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <state key="normal" title="_import_key"/>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ede-YS-IrT" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="626" width="375" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="88y-b3-ou7" firstAttribute="top" secondItem="DAk-kH-fch" secondAttribute="bottom" constant="32" id="1pU-AY-pQ5"/>
+                            <constraint firstItem="I05-4P-HPG" firstAttribute="trailing" secondItem="zxG-EI-U5e" secondAttribute="trailing" constant="16" id="Bec-6G-zhp"/>
+                            <constraint firstItem="els-6i-Neh" firstAttribute="leading" secondItem="I05-4P-HPG" secondAttribute="leading" constant="16" id="BrH-f6-W3g"/>
+                            <constraint firstItem="TZw-Jo-ped" firstAttribute="top" secondItem="88y-b3-ou7" secondAttribute="bottom" constant="16" id="MdX-mf-U95"/>
+                            <constraint firstItem="Ede-YS-IrT" firstAttribute="leading" secondItem="I05-4P-HPG" secondAttribute="leading" id="P42-ZD-wyY"/>
+                            <constraint firstItem="TZw-Jo-ped" firstAttribute="leading" secondItem="I05-4P-HPG" secondAttribute="leading" constant="16" id="QOy-rJ-vvL"/>
+                            <constraint firstItem="I05-4P-HPG" firstAttribute="trailing" secondItem="Ede-YS-IrT" secondAttribute="trailing" id="RLl-eE-QlU"/>
+                            <constraint firstItem="zxG-EI-U5e" firstAttribute="leading" secondItem="I05-4P-HPG" secondAttribute="leading" constant="16" id="SMg-T6-Kkm"/>
+                            <constraint firstItem="els-6i-Neh" firstAttribute="top" secondItem="TZw-Jo-ped" secondAttribute="bottom" constant="16" id="VvJ-YJ-t9I"/>
+                            <constraint firstItem="88y-b3-ou7" firstAttribute="leading" secondItem="I05-4P-HPG" secondAttribute="leading" constant="16" id="bS5-1x-yid"/>
                             <constraint firstItem="DAk-kH-fch" firstAttribute="top" secondItem="I05-4P-HPG" secondAttribute="top" id="dkD-ep-xd7"/>
+                            <constraint firstItem="I05-4P-HPG" firstAttribute="trailing" secondItem="88y-b3-ou7" secondAttribute="trailing" constant="16" id="eDA-qh-yud"/>
+                            <constraint firstItem="I05-4P-HPG" firstAttribute="bottom" secondItem="zxG-EI-U5e" secondAttribute="bottom" constant="16" id="gdy-hS-DyF"/>
+                            <constraint firstItem="Ede-YS-IrT" firstAttribute="centerY" secondItem="zxG-EI-U5e" secondAttribute="centerY" id="gi3-9Z-df0"/>
                             <constraint firstItem="I05-4P-HPG" firstAttribute="trailing" secondItem="DAk-kH-fch" secondAttribute="trailing" id="jWp-cs-NwB"/>
+                            <constraint firstItem="I05-4P-HPG" firstAttribute="trailing" secondItem="TZw-Jo-ped" secondAttribute="trailing" constant="16" id="k1Z-2W-m6l"/>
                             <constraint firstItem="DAk-kH-fch" firstAttribute="leading" secondItem="I05-4P-HPG" secondAttribute="leading" id="kDV-4J-iBS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I05-4P-HPG"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Ede-YS-IrT" id="fnb-lD-jEQ"/>
+                        <outlet property="importKeyButton" destination="zxG-EI-U5e" id="ZWZ-Db-8ps"/>
+                        <outlet property="privateKeyInstructionsLabel" destination="TZw-Jo-ped" id="MCO-hU-fyN"/>
+                        <outlet property="privateKeyTextField" destination="88y-b3-ou7" id="DRd-eY-jPE"/>
                         <outlet property="toolbar" destination="DAk-kH-fch" id="8hZ-w0-xpl"/>
+                        <outlet property="viewSourceButton" destination="els-6i-Neh" id="IpZ-Xa-D2T"/>
                         <segue destination="se4-xM-JVq" kind="show" identifier="importPrivateKeyToSettings" id="HUM-Qw-frB"/>
                     </connections>
                 </viewController>

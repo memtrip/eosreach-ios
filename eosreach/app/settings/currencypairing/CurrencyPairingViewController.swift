@@ -37,13 +37,13 @@ class CurrencyPairingViewController: MxViewController<CurrencyPairingIntent, Cur
         case .idle:
             break
         case .onProgress:
-            activityIndicator.visible()
+            activityIndicator.start()
             updatePairButton.gone()
         case .onError(let message):
-            activityIndicator.gone()
+            activityIndicator.stop()
             updatePairButton.visible()
         case .onSuccess:
-            activityIndicator.gone()
+            activityIndicator.stop()
             updatePairButton.visible()
         }
     }

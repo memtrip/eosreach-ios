@@ -1,6 +1,11 @@
 {
-	"welcome_import_key_title" = "Import key";
 	"welcome_splash_create_account_button" = "Create Account";
 	"welcome_splash_import_private_key_button" = "Import Private Key";
-	"welcome_splash_import_explore_button" = Explore;
+	"welcome_splash_explore_button" = Explore;
+	"welcome_import_key_title" = "Import key";
+	"welcome_import_key_private_key_placeholder" = "Private key";
+	"welcome_import_key_instructions_label" = "The private key you enter will be RSA encrypted, it will never leave this device. If you have trust issues (we don't blame you), build this app from source.";
+	"welcome_import_key_view_source_button" = "View Source On Github";
+	"welcome_import_key_cta_button" = Import;
+	"welcome_import_key_source_code_url" = "https://github.com/memtrip/eosreach-swift";
 }

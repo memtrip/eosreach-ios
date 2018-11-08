@@ -12,7 +12,7 @@ class SplashViewController: MxViewController<SplashIntent, SplashResult, SplashV
         super.viewDidLoad()
         createAccountButton.setTitle(R.string.welcomeStrings.welcome_splash_create_account_button(), for: .normal)
         importPrivateKeyButton.setTitle(R.string.welcomeStrings.welcome_splash_import_private_key_button(), for: .normal)
-        exploreButton.setTitle(R.string.welcomeStrings.welcome_splash_import_explore_button(), for: .normal)
+        exploreButton.setTitle(R.string.welcomeStrings.welcome_splash_explore_button(), for: .normal)
     }
 
     override func intents() -> Observable<SplashIntent> {

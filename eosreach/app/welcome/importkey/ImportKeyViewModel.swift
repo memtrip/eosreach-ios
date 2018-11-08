@@ -8,7 +8,7 @@ class ImportKeyViewModel: MxViewModel<ImportKeyIntent, ImportKeyResult, ImportKe
         case .idle:
             return just(ImportKeyResult.idle)
         case .importKey(let privateKey):
-            fatalError()
+            return just(ImportKeyResult.onProgress)
         case .viewSource:
             return just(ImportKeyResult.navigateToGithubSource)
         case .navigateToSettings:

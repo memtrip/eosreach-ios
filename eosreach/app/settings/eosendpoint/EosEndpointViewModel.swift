@@ -17,15 +17,23 @@ class EosEndpointViewModel: MxViewModel<EosEndpointIntent, EosEndpointResult, Eo
     override func reducer(previousState: EosEndpointViewState, result: EosEndpointResult) -> EosEndpointViewState {
         switch result {
         case .idle:
-            return EosEndpointViewState.idle
+            return previousState
         case .onProgress:
-            return EosEndpointViewState.onProgress
+            return previousState.copy(copy: { copy in
+                copy.view = EosEndpointViewState.View.onProgress
+            })
         case .onError(let message):
-            return EosEndpointViewState.onError(message: message)
+            return previousState.copy(copy: { copy in
+                copy.view = EosEndpointViewState.View.onError(message: message)
+            })
         case .onSuccess:
-            return EosEndpointViewState.onSuccess
+            return previousState.copy(copy: { copy in
+                copy.view = EosEndpointViewState.View.onSuccess
+            })
         case .navigateToBlockProducerList:
-            return EosEndpointViewState.navigateToBlockProducerList
+            return previousState.copy(copy: { copy in
+                copy.view = EosEndpointViewState.View.navigateToBlockProducerList
+            })
         }
     }
 }
