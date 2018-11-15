@@ -4,7 +4,7 @@ import eosswift
 
 class CustomTokensRequestImpl : CustomTokensRequest {
 
-    private let chainApi = ChainApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url())
+    private let chainApi = ChainApiModule.create()
 
     func getCustomTokens() -> Single<Result<TokenParent, CustomTokensError>> {
         return chainApi.getTableRows(body: GetTableRows(

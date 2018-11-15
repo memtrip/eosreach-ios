@@ -4,7 +4,7 @@ import eosswift
 
 class BlockProducerRequestImpl : BlockProducerRequest {
 
-    private let blockProducers = GetBlockProducers(chainApi: ChainApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url()))
+    private let blockProducers = GetBlockProducers(chainApi: ChainApiModule.create())
 
     func getBlockProducers(limit: Int) -> Single<Result<[BlockProducerDetails], BlockProducerError>> {
         return blockProducers.getProducers(limit: limit).map { blockProducers in

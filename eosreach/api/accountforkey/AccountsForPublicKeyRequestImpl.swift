@@ -4,8 +4,8 @@ import eosswift
 
 class AccountsForPublicKeyRequestImpl : AccountsForPublicKeyRequest {
 
-    let historyApi: HistoryApi = HistoryApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url())
-    let chainApi: ChainApi = ChainApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url())
+    let historyApi: HistoryApi = HistoryApiModule.create()
+    let chainApi: ChainApi = ChainApiModule.create()
 
     func getAccountsForKey(publicKey: String) -> Single<Result<AccountsForPublicKey, AccountForKeyError>> {
         return historyApi.getKeyAccounts(body: GetKeyAccounts(public_key: publicKey)).flatMap { response in

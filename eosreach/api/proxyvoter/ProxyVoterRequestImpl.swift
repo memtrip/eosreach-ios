@@ -4,7 +4,7 @@ import eosswift
 
 class ProxyVoterRequestImpl : ProxyVoterRequest {
 
-    let getRegProxyInfo = GetRegProxyInfo(chainApi: ChainApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url()))
+    let getRegProxyInfo = GetRegProxyInfo(chainApi: ChainApiModule.create())
 
     func getProxyVoters(nextAccount: String) -> Single<Result<[ProxyVoterDetails], ProxyVoterError>> {
         return getRegProxyInfo.getProxies(limit: 50, nextAccount: nextAccount).map { results in

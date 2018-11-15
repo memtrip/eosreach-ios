@@ -4,7 +4,7 @@ import eosswift
 
 class TransferRequestImpl : TransferRequest {
 
-    let transferChain = TransferChain(chainApi: ChainApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url()))
+    let transferChain = TransferChain(chainApi: ChainApiModule.create())
 
     func transfer(
         fromAccount: String,

@@ -4,7 +4,7 @@ import RxSwift
 
 class AccountBalanceRequestImpl : AccountBalanceRequest {
 
-    let chainApi: ChainApi = ChainApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url())
+    let chainApi: ChainApi = ChainApiModule.create()
     
     func getBalance(contractName: String, accountName: String, symbol: String, eosPrice: EosPrice) -> Single<Result<AccountBalanceList, BalanceError>> {
         return chainApi.getCurrencyBalance(body: GetCurrencyBalance(

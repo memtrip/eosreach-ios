@@ -4,7 +4,7 @@ import eosswift
 
 class GetBandwidthRequestImpl : GetBandwidthRequest {
 
-    let getDelegatedBandwidth = GetDelegatedBandwidth(chainApi: ChainApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url()))
+    let getDelegatedBandwidth = GetDelegatedBandwidth(chainApi: ChainApiModule.create())
 
     func getBandwidth(accountName: String) -> Single<Result<[DelegatedBandwidth], GetBandwidthError>> {
         return getDelegatedBandwidth.getBandwidth(accountName: accountName).map { results in

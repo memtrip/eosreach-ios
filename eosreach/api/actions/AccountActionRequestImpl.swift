@@ -4,7 +4,7 @@ import eosswift
 
 class AccountActionsRequestImpl : AccountActionsRequest {
 
-    let historyApi = HistoryApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url())
+    let historyApi = HistoryApiModule.create()
 
     func getActionsForAccountName(
         contractAccountBalance: ContractAccountBalance,

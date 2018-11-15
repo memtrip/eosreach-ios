@@ -4,7 +4,7 @@ import eosswift
 
 class EosAccountRequestImpl : EosAccountRequest {
 
-    let chainApi: ChainApi = ChainApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url())
+    let chainApi: ChainApi = ChainApiModule.create()
 
     func getAccount(accountName: String) -> Single<Result<EosAccount, AccountError>> {
 

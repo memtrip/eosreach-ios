@@ -4,11 +4,14 @@ import eosswift
 
 class BandwidthRequestImpl : BandwidthRequest {
 
-    let delegateBandwidthChain = DelegateBandwidthChain(
-        chainApi: ChainApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url()))
+    let delegateBandwidthChain: DelegateBandwidthChain
+    let unDelegateBandwidthChain: UnDelegateBandwidthChain
 
-    let unDelegateBandwidthChain = UnDelegateBandwidthChain(
-        chainApi: ChainApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url()))
+    init() {
+        let chainApi = ChainApiModule.create()
+        delegateBandwidthChain = DelegateBandwidthChain(chainApi: chainApi)
+        unDelegateBandwidthChain = UnDelegateBandwidthChain(chainApi: chainApi)
+    }
 
     func delegate(
         fromAccount: String,

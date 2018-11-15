@@ -8,7 +8,7 @@ class RamRequestImpl : RamRequest {
     private let sellRamChain: SellRamChain
 
     init() {
-        let chainApi = ChainApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url())
+        let chainApi = ChainApiModule.create()
         buyRamBytesChain = BuyRamBytesChain(chainApi: chainApi)
         sellRamChain = SellRamChain(chainApi: chainApi)
     }

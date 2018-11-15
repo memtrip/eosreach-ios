@@ -4,7 +4,7 @@ import eosswift
 
 class VoteRequestImpl : VoteRequest {
 
-    private let voteChain = VoteChain(chainApi: ChainApiFactory.create(rootUrl: R.string.appStrings.app_endpoint_url()))
+    private let voteChain = VoteChain(chainApi: ChainApiModule.create())
 
     func voteForProducer(
         voterAccountName: String,
