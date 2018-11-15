@@ -45,14 +45,13 @@ class EosAccountRequestImpl : EosAccountRequest {
                     eosAcconuntVote: self.eosCurrentVote(voterInfo: account.voter_info),
                     eosRefundRequest: self.eosRefundRequest(refundRequest: account.refund_request))
 
-                return Result<EosAccount, AccountError>(data: eosAccount, error: AccountError.failedRetrievingAccount(
-                    code: response.statusCode, body: ""))
+                return Result<EosAccount, AccountError>(data: eosAccount)
             } else {
-                return Result<EosAccount, AccountError>(data: nil, error: AccountError.failedRetrievingAccount(
+                return Result<EosAccount, AccountError>(error: AccountError.failedRetrievingAccount(
                     code: response.statusCode, body: ""))
             }
         }.catchError { error in
-            return Single.just(Result<EosAccount, AccountError>(data: nil, error: AccountError.genericError))
+            return Single.just(Result<EosAccount, AccountError>(error: AccountError.genericError))
         }
     }
 

@@ -19,9 +19,9 @@ class AccountBalanceRequestImpl : AccountBalanceRequest {
                             eosPrice: eosPrice
                         )
                     )
-                    return Result(data: accountBalanceList, error: nil)
+                    return Result(data: accountBalanceList)
                 } else {
-                    return Result(data: nil, error: BalanceError.failedRetrievingBalance(code: response.statusCode, body: ""))
+                    return Result(error: BalanceError.failedRetrievingBalance(code: response.statusCode, body: ""))
                 }
         }
     }

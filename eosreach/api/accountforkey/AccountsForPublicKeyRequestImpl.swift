@@ -12,8 +12,7 @@ class AccountsForPublicKeyRequestImpl : AccountsForPublicKeyRequest {
             if (response.success) {
                 return self.getBalance(publicKey: publicKey, accountNameList: response.body!.account_names)
             } else {
-                return Single.just(Result<AccountsForPublicKey, AccountForKeyError>(data: nil,
-                    error: AccountForKeyError.FailedRetrievingAccountList))
+                return Single.just(Result<AccountsForPublicKey, AccountForKeyError>(error: AccountForKeyError.FailedRetrievingAccountList))
             }
         }
     }
@@ -41,9 +40,9 @@ class AccountsForPublicKeyRequestImpl : AccountsForPublicKeyRequest {
                         }
                     }
             }.toArray().map { accountSystemBalanceList in
-                return Result<AccountsForPublicKey, AccountForKeyError>(
-                    data: AccountsForPublicKey(publicKey: publicKey, accounts: accountSystemBalanceList),
-                    error: nil)
+                return Result<AccountsForPublicKey, AccountForKeyError>(data: AccountsForPublicKey(
+                    publicKey: publicKey,
+                    accounts: accountSystemBalanceList))
             }.asSingle()
     }
 

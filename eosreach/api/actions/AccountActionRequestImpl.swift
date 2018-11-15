@@ -21,9 +21,9 @@ class AccountActionsRequestImpl : AccountActionsRequest {
                     contractAccountBalance: contractAccountBalance,
                     historicAccountActionParent: response.body!)
             } else {
-                return Result<AccountActionList, AccountActionsError>(data: nil, error: .generic)
+                return Result<AccountActionList, AccountActionsError>(error: .generic)
             }
-            }.catchErrorJustReturn(Result<AccountActionList, AccountActionsError>(data: nil, error: .generic))
+            }.catchErrorJustReturn(Result<AccountActionList, AccountActionsError>(error: .generic))
     }
 
     private func filterActionsForAccountName(
@@ -46,11 +46,10 @@ class AccountActionsRequestImpl : AccountActionsRequest {
                             action: historicAction)
                         }
                     )
-                ),
-                error: nil
+                )
             )
         } else {
-            return Result(data: AccountActionList(actions: []), error: nil)
+            return Result(data: AccountActionList(actions: []))
         }
     }
 
