@@ -55,6 +55,9 @@
 		3C592FA6219D623300D7C9B9 /* TransferRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FA5219D623300D7C9B9 /* TransferRequestImpl.swift */; };
 		3C592FC7219D66DC00D7C9B9 /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C592FC5219D66D500D7C9B9 /* eosswift.framework */; };
 		3C592FC8219D66DC00D7C9B9 /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C592FC5219D66D500D7C9B9 /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C592FCA219D6B0700D7C9B9 /* VoteReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FC9219D6B0700D7C9B9 /* VoteReceipt.swift */; };
+		3C592FCC219D6B1B00D7C9B9 /* VoteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FCB219D6B1B00D7C9B9 /* VoteRequest.swift */; };
+		3C592FCE219D6B8B00D7C9B9 /* VoteRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FCD219D6B8B00D7C9B9 /* VoteRequestImpl.swift */; };
 		3C7F0DD62194A0D400E72DD1 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD12194A0D400E72DD1 /* SearchResult.swift */; };
 		3C7F0DD72194A0D400E72DD1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD22194A0D400E72DD1 /* SearchViewModel.swift */; };
 		3C7F0DD82194A0D400E72DD1 /* SearchViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD32194A0D400E72DD1 /* SearchViewState.swift */; };
@@ -204,6 +207,9 @@
 		3C592FA3219D61CC00D7C9B9 /* TransferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRequest.swift; sourceTree = "<group>"; };
 		3C592FA5219D623300D7C9B9 /* TransferRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRequestImpl.swift; sourceTree = "<group>"; };
 		3C592FC5219D66D500D7C9B9 /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
+		3C592FC9219D6B0700D7C9B9 /* VoteReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteReceipt.swift; sourceTree = "<group>"; };
+		3C592FCB219D6B1B00D7C9B9 /* VoteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteRequest.swift; sourceTree = "<group>"; };
+		3C592FCD219D6B8B00D7C9B9 /* VoteRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteRequestImpl.swift; sourceTree = "<group>"; };
 		3C7F0DD12194A0D400E72DD1 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		3C7F0DD22194A0D400E72DD1 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		3C7F0DD32194A0D400E72DD1 /* SearchViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewState.swift; sourceTree = "<group>"; };
@@ -595,7 +601,6 @@
 				3C9BFB7F219B360600589936 /* proxyvoter */,
 				3C9BFB80219B360E00589936 /* ram */,
 				3C9BFB81219B361400589936 /* ramprice */,
-				3C9BFB82219B361C00589936 /* refund */,
 				3C9BFB83219B362300589936 /* transfer */,
 				3C9BFB84219B362B00589936 /* vote */,
 				3C9BFB91219B37E100589936 /* Result.swift */,
@@ -712,13 +717,6 @@
 			path = ramprice;
 			sourceTree = "<group>";
 		};
-		3C9BFB82219B361C00589936 /* refund */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = refund;
-			sourceTree = "<group>";
-		};
 		3C9BFB83219B362300589936 /* transfer */ = {
 			isa = PBXGroup;
 			children = (
@@ -732,6 +730,9 @@
 		3C9BFB84219B362B00589936 /* vote */ = {
 			isa = PBXGroup;
 			children = (
+				3C592FC9219D6B0700D7C9B9 /* VoteReceipt.swift */,
+				3C592FCB219D6B1B00D7C9B9 /* VoteRequest.swift */,
+				3C592FCD219D6B8B00D7C9B9 /* VoteRequestImpl.swift */,
 			);
 			path = vote;
 			sourceTree = "<group>";
@@ -1115,6 +1116,7 @@
 				3C9BFBC2219C21CD00589936 /* AccountActionList.swift in Sources */,
 				3CAD34752192F77C000F304A /* EntryViewModel.swift in Sources */,
 				3C7F0DDA2194A0D400E72DD1 /* SearchIntent.swift in Sources */,
+				3C592FCA219D6B0700D7C9B9 /* VoteReceipt.swift in Sources */,
 				3C7F0DD82194A0D400E72DD1 /* SearchViewState.swift in Sources */,
 				3C964C3621938C71003663EF /* EosEndpointViewState.swift in Sources */,
 				3C8C6DC42192D86F00FC1A0D /* EntryResult.swift in Sources */,
@@ -1133,6 +1135,7 @@
 				3C7F0DEC2194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift in Sources */,
 				3C7F0E022194B73200E72DD1 /* ReachTabsController.swift in Sources */,
 				3C592F9C219D60BE00D7C9B9 /* DelegatedBandwidth.swift in Sources */,
+				3C592FCE219D6B8B00D7C9B9 /* VoteRequestImpl.swift in Sources */,
 				3C964C51219459D3003663EF /* EncryptedKeyPairData.swift in Sources */,
 				3C0EC8122193086800562A1B /* R.generated.swift in Sources */,
 				3C340FD72193801B0017BEF9 /* CurrencyPairingViewModel.swift in Sources */,
@@ -1164,6 +1167,7 @@
 				3C964C44219443D5003663EF /* EosPriceCurrencyPair.swift in Sources */,
 				3C592F98219D605E00D7C9B9 /* BandwidthRequest.swift in Sources */,
 				3C5799C52191D27D00B9A3D7 /* AppDelegate.swift in Sources */,
+				3C592FCC219D6B1B00D7C9B9 /* VoteRequest.swift in Sources */,
 				3C8C6D9C2192D58E00FC1A0D /* Copy.swift in Sources */,
 				3C291BA5219D597900562448 /* CurrencySymbol.swift in Sources */,
 				3C964C3721938C71003663EF /* EosEndpointViewController.swift in Sources */,
