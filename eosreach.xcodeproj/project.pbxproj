@@ -132,6 +132,21 @@
 		3CC9A38D219DA8480002A25F /* BlockProducerRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */; };
 		3CC9A39C219DAD420002A25F /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC9A39A219DAD380002A25F /* eosswift.framework */; };
 		3CC9A39D219DAD420002A25F /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC9A39A219DAD380002A25F /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3CC9A39F219DAEFD0002A25F /* CustomTokensRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A39E219DAEFD0002A25F /* CustomTokensRequest.swift */; };
+		3CC9A3A1219DAF050002A25F /* CutomTokensRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A0219DAF050002A25F /* CutomTokensRequestImpl.swift */; };
+		3CC9A3A3219DAF0B0002A25F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A2219DAF0B0002A25F /* Token.swift */; };
+		3CC9A3A5219DAF110002A25F /* TokenParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A4219DAF110002A25F /* TokenParent.swift */; };
+		3CC9A3A7219DB23F0002A25F /* CreateAccountReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A6219DB23F0002A25F /* CreateAccountReceipt.swift */; };
+		3CC9A3A9219DB2640002A25F /* EosCreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A8219DB2640002A25F /* EosCreateAccountRequest.swift */; };
+		3CC9A3AB219DB2BA0002A25F /* EosCreateAccountRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3AA219DB2BA0002A25F /* EosCreateAccountRequestImpl.swift */; };
+		3CC9A3AD219DB2E90002A25F /* EosPriceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3AC219DB2E90002A25F /* EosPriceRequest.swift */; };
+		3CC9A3AF219DB4F00002A25F /* ProxyVoterDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3AE219DB4F00002A25F /* ProxyVoterDetails.swift */; };
+		3CC9A3B1219DB52F0002A25F /* ProxyVoterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3B0219DB52F0002A25F /* ProxyVoterRequest.swift */; };
+		3CC9A3B3219DB6310002A25F /* ProxyVoterRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3B2219DB6310002A25F /* ProxyVoterRequestImpl.swift */; };
+		3CC9A3B5219DB8290002A25F /* RamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3B4219DB8290002A25F /* RamRequest.swift */; };
+		3CC9A3B7219DB8890002A25F /* RamRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3B6219DB8890002A25F /* RamRequestImpl.swift */; };
+		3CC9A3B9219DBBFA0002A25F /* RamPriceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3B8219DBBFA0002A25F /* RamPriceRequest.swift */; };
+		3CC9A3BB219DBC210002A25F /* RamPriceRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3BA219DBC210002A25F /* RamPriceRequestImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,6 +303,21 @@
 		3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRequest.swift; sourceTree = "<group>"; };
 		3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRequestImpl.swift; sourceTree = "<group>"; };
 		3CC9A39A219DAD380002A25F /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
+		3CC9A39E219DAEFD0002A25F /* CustomTokensRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTokensRequest.swift; sourceTree = "<group>"; };
+		3CC9A3A0219DAF050002A25F /* CutomTokensRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomTokensRequestImpl.swift; sourceTree = "<group>"; };
+		3CC9A3A2219DAF0B0002A25F /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		3CC9A3A4219DAF110002A25F /* TokenParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenParent.swift; sourceTree = "<group>"; };
+		3CC9A3A6219DB23F0002A25F /* CreateAccountReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountReceipt.swift; sourceTree = "<group>"; };
+		3CC9A3A8219DB2640002A25F /* EosCreateAccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosCreateAccountRequest.swift; sourceTree = "<group>"; };
+		3CC9A3AA219DB2BA0002A25F /* EosCreateAccountRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosCreateAccountRequestImpl.swift; sourceTree = "<group>"; };
+		3CC9A3AC219DB2E90002A25F /* EosPriceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosPriceRequest.swift; sourceTree = "<group>"; };
+		3CC9A3AE219DB4F00002A25F /* ProxyVoterDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyVoterDetails.swift; sourceTree = "<group>"; };
+		3CC9A3B0219DB52F0002A25F /* ProxyVoterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyVoterRequest.swift; sourceTree = "<group>"; };
+		3CC9A3B2219DB6310002A25F /* ProxyVoterRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyVoterRequestImpl.swift; sourceTree = "<group>"; };
+		3CC9A3B4219DB8290002A25F /* RamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamRequest.swift; sourceTree = "<group>"; };
+		3CC9A3B6219DB8890002A25F /* RamRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamRequestImpl.swift; sourceTree = "<group>"; };
+		3CC9A3B8219DBBFA0002A25F /* RamPriceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamPriceRequest.swift; sourceTree = "<group>"; };
+		3CC9A3BA219DBC210002A25F /* RamPriceRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamPriceRequestImpl.swift; sourceTree = "<group>"; };
 		48ECDAAEF6BB465B8887CE03 /* Pods-eosreach-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreach_eosreachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52C445483AA480525DB9233 /* Pods-eosreach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.debug.xcconfig"; sourceTree = "<group>"; };
@@ -408,6 +438,7 @@
 				3C9BFB73219B306A00589936 /* api */,
 				3C8C6D9F2192D6AD00FC1A0D /* app */,
 				3C964C3A219441C8003663EF /* db */,
+				3C9BFBA2219B516400589936 /* formatter */,
 				3C0EC8082192FA5700562A1B /* uikit */,
 				3C8C6D8B2192D47E00FC1A0D /* mxswift */,
 				3C964C4D219456A9003663EF /* wallet */,
@@ -515,7 +546,6 @@
 				3C7F0DCF2194A07500E72DD1 /* explore */,
 				3C9BFBA0219B514F00589936 /* issue */,
 				3C9BFBA1219B515800589936 /* manage */,
-				3C9BFBA2219B516400589936 /* price */,
 				3C9BFBA3219B516E00589936 /* proxyvoter */,
 				3C340FC0219360C60017BEF9 /* settings */,
 				3C9BFBA4219B517A00589936 /* transaction */,
@@ -686,6 +716,10 @@
 		3C9BFB7C219B35E800589936 /* customtokens */ = {
 			isa = PBXGroup;
 			children = (
+				3CC9A39E219DAEFD0002A25F /* CustomTokensRequest.swift */,
+				3CC9A3A0219DAF050002A25F /* CutomTokensRequestImpl.swift */,
+				3CC9A3A2219DAF0B0002A25F /* Token.swift */,
+				3CC9A3A4219DAF110002A25F /* TokenParent.swift */,
 			);
 			path = customtokens;
 			sourceTree = "<group>";
@@ -693,6 +727,9 @@
 		3C9BFB7D219B35F500589936 /* eoscreateaccount */ = {
 			isa = PBXGroup;
 			children = (
+				3CC9A3A6219DB23F0002A25F /* CreateAccountReceipt.swift */,
+				3CC9A3A8219DB2640002A25F /* EosCreateAccountRequest.swift */,
+				3CC9A3AA219DB2BA0002A25F /* EosCreateAccountRequestImpl.swift */,
 			);
 			path = eoscreateaccount;
 			sourceTree = "<group>";
@@ -701,6 +738,7 @@
 			isa = PBXGroup;
 			children = (
 				3C9BFB8F219B36CC00589936 /* EosPrice.swift */,
+				3CC9A3AC219DB2E90002A25F /* EosPriceRequest.swift */,
 			);
 			path = eosprice;
 			sourceTree = "<group>";
@@ -708,6 +746,9 @@
 		3C9BFB7F219B360600589936 /* proxyvoter */ = {
 			isa = PBXGroup;
 			children = (
+				3CC9A3AE219DB4F00002A25F /* ProxyVoterDetails.swift */,
+				3CC9A3B0219DB52F0002A25F /* ProxyVoterRequest.swift */,
+				3CC9A3B2219DB6310002A25F /* ProxyVoterRequestImpl.swift */,
 			);
 			path = proxyvoter;
 			sourceTree = "<group>";
@@ -715,6 +756,8 @@
 		3C9BFB80219B360E00589936 /* ram */ = {
 			isa = PBXGroup;
 			children = (
+				3CC9A3B4219DB8290002A25F /* RamRequest.swift */,
+				3CC9A3B6219DB8890002A25F /* RamRequestImpl.swift */,
 			);
 			path = ram;
 			sourceTree = "<group>";
@@ -722,6 +765,8 @@
 		3C9BFB81219B361400589936 /* ramprice */ = {
 			isa = PBXGroup;
 			children = (
+				3CC9A3B8219DBBFA0002A25F /* RamPriceRequest.swift */,
+				3CC9A3BA219DBC210002A25F /* RamPriceRequestImpl.swift */,
 			);
 			path = ramprice;
 			sourceTree = "<group>";
@@ -774,14 +819,14 @@
 			path = manage;
 			sourceTree = "<group>";
 		};
-		3C9BFBA2219B516400589936 /* price */ = {
+		3C9BFBA2219B516400589936 /* formatter */ = {
 			isa = PBXGroup;
 			children = (
 				3C9BFBA6219B51A700589936 /* BalanceFormatter.swift */,
 				3C291BA2219D58B800562448 /* CurrencyPairFormatter.swift */,
 				3C291BA4219D597900562448 /* CurrencySymbol.swift */,
 			);
-			path = price;
+			path = formatter;
 			sourceTree = "<group>";
 		};
 		3C9BFBA3219B516E00589936 /* proxyvoter */ = {
@@ -1089,6 +1134,7 @@
 			files = (
 				3C7F0DF02194A17000E72DD1 /* RegisteredBlockProducersViewModel.swift in Sources */,
 				3C8C6D9E2192D5B000FC1A0D /* SegueBundle.swift in Sources */,
+				3CC9A3BB219DBC210002A25F /* RamPriceRequestImpl.swift in Sources */,
 				3C964C4F2194572A003663EF /* EosKeyManager.swift in Sources */,
 				3C9BFB90219B36CC00589936 /* EosPrice.swift in Sources */,
 				3C8C6D922192D4F400FC1A0D /* MxIntent.swift in Sources */,
@@ -1099,11 +1145,14 @@
 				3C964C4A219444DB003663EF /* RsaEncryptionVerified.swift in Sources */,
 				3C9BFB98219B3A1000589936 /* EosRefundRequest.swift in Sources */,
 				3C0EC826219350DE00562A1B /* ImportKeyIntent.swift in Sources */,
+				3CC9A3B1219DB52F0002A25F /* ProxyVoterRequest.swift in Sources */,
 				3C0EC81E21933D4F00562A1B /* SplashViewState.swift in Sources */,
 				3C9BFBBD219B5E2C00589936 /* AccountsForPublicKeyRequestImpl.swift in Sources */,
 				3C7F0DEE2194A17000E72DD1 /* RegisteredBlockProducersIntent.swift in Sources */,
 				3C9BFB9C219B3AAE00589936 /* EosAccountRequestImpl.swift in Sources */,
 				3C964C3E2194422D003663EF /* AccountListSelection.swift in Sources */,
+				3CC9A3A1219DAF050002A25F /* CutomTokensRequestImpl.swift in Sources */,
+				3CC9A3B3219DB6310002A25F /* ProxyVoterRequestImpl.swift in Sources */,
 				3C9BFBC4219C21D600589936 /* AccountActionRequest.swift in Sources */,
 				3C8C6D902192D4CE00FC1A0D /* MxViewState.swift in Sources */,
 				3C8C6D942192D50700FC1A0D /* MxResult.swift in Sources */,
@@ -1114,6 +1163,7 @@
 				3C7F0DD92194A0D400E72DD1 /* SearchViewController.swift in Sources */,
 				3C9BFB8C219B367B00589936 /* AccountBalanceRequest.swift in Sources */,
 				3C0EC81421933B6F00562A1B /* ReachActivityIndicator.swift in Sources */,
+				3CC9A3A5219DAF110002A25F /* TokenParent.swift in Sources */,
 				3C9BFBC8219C29B000589936 /* types.swift in Sources */,
 				3C7F0DE82194A17000E72DD1 /* RegisteredBlockProducersResult.swift in Sources */,
 				3C592F96219D5C5200D7C9B9 /* date_types.swift in Sources */,
@@ -1129,14 +1179,17 @@
 				3C7F0DD82194A0D400E72DD1 /* SearchViewState.swift in Sources */,
 				3C964C3621938C71003663EF /* EosEndpointViewState.swift in Sources */,
 				3C8C6DC42192D86F00FC1A0D /* EntryResult.swift in Sources */,
+				3CC9A3A3219DAF0B0002A25F /* Token.swift in Sources */,
 				3C7F0DE92194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift in Sources */,
 				3C7F0DE72194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift in Sources */,
 				3C592F9A219D60B400D7C9B9 /* BandwidthRequestImpl.swift in Sources */,
 				3C7F0DEA2194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift in Sources */,
 				3C8C6D9A2192D56000FC1A0D /* Logger.swift in Sources */,
+				3CC9A3B7219DB8890002A25F /* RamRequestImpl.swift in Sources */,
 				3C340FCA2193612A0017BEF9 /* SettingsIntent.swift in Sources */,
 				3C340FC72193612A0017BEF9 /* SettingsViewModel.swift in Sources */,
 				3C8C6D962192D52500FC1A0D /* MxViewModel.swift in Sources */,
+				3CC9A3AB219DB2BA0002A25F /* EosCreateAccountRequestImpl.swift in Sources */,
 				3C964C4C2194469B003663EF /* PurgeUserDefaults.swift in Sources */,
 				3C9BFB88219B365C00589936 /* AccountBalanceList.swift in Sources */,
 				3C0EC829219350DE00562A1B /* ImportKeyResult.swift in Sources */,
@@ -1152,6 +1205,7 @@
 				3C8C6DC22192D7B900FC1A0D /* EntryIntent.swift in Sources */,
 				3C340FC62193612A0017BEF9 /* SettingsViewController.swift in Sources */,
 				3C7F0DEF2194A17000E72DD1 /* ActiveBlockProducersIntent.swift in Sources */,
+				3CC9A3A7219DB23F0002A25F /* CreateAccountReceipt.swift in Sources */,
 				3C592F9E219D60C700D7C9B9 /* GetBandwidthRequest.swift in Sources */,
 				3C0EC81C21933D4F00562A1B /* SplashIntent.swift in Sources */,
 				3C340FBD219353D20017BEF9 /* ReachToolbar.swift in Sources */,
@@ -1162,6 +1216,7 @@
 				3C0EC81B21933D4F00562A1B /* SplashViewModel.swift in Sources */,
 				3C340FD52193801B0017BEF9 /* CurrencyPairingResult.swift in Sources */,
 				3C9BFB94219B39B900589936 /* EosAccountResource.swift in Sources */,
+				3CC9A3AF219DB4F00002A25F /* ProxyVoterDetails.swift in Sources */,
 				3C592FA0219D60D100D7C9B9 /* GetBandwidthRequestImpl.swift in Sources */,
 				3C0EC828219350DE00562A1B /* ImportKeyViewModel.swift in Sources */,
 				3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */,
@@ -1175,12 +1230,15 @@
 				3C0EC80A2192FAD300562A1B /* uitypes.swift in Sources */,
 				3C9BFBB9219B5DA500589936 /* AccountsForPublicKey.swift in Sources */,
 				3C7F0DEB2194A17000E72DD1 /* RegisteredBlockProducersViewState.swift in Sources */,
+				3CC9A39F219DAEFD0002A25F /* CustomTokensRequest.swift in Sources */,
 				3C340FD62193801B0017BEF9 /* CurrencyPairingIntent.swift in Sources */,
 				3C964C44219443D5003663EF /* EosPriceCurrencyPair.swift in Sources */,
 				3C592F98219D605E00D7C9B9 /* BandwidthRequest.swift in Sources */,
 				3C5799C52191D27D00B9A3D7 /* AppDelegate.swift in Sources */,
+				3CC9A3AD219DB2E90002A25F /* EosPriceRequest.swift in Sources */,
 				3C592FCC219D6B1B00D7C9B9 /* VoteRequest.swift in Sources */,
 				3C8C6D9C2192D58E00FC1A0D /* Copy.swift in Sources */,
+				3CC9A3B9219DBBFA0002A25F /* RamPriceRequest.swift in Sources */,
 				3C291BA5219D597900562448 /* CurrencySymbol.swift in Sources */,
 				3C964C3721938C71003663EF /* EosEndpointViewController.swift in Sources */,
 				3C964C3521938C71003663EF /* EosEndpointIntent.swift in Sources */,
@@ -1189,6 +1247,8 @@
 				3C8C6D8D2192D4B600FC1A0D /* Rx.swift in Sources */,
 				3C9BFB8E219B368700589936 /* AccountBalanceRequestImpl.swift in Sources */,
 				3C9BFBC6219C21E000589936 /* AccountActionRequestImpl.swift in Sources */,
+				3CC9A3A9219DB2640002A25F /* EosCreateAccountRequest.swift in Sources */,
+				3CC9A3B5219DB8290002A25F /* RamRequest.swift in Sources */,
 				3C340FC82193612A0017BEF9 /* SettingsViewState.swift in Sources */,
 				3C7F0DF72194A23900E72DD1 /* ExploreViewController.swift in Sources */,
 				3C9BFBB7219B5D7C00589936 /* AccountNameSystemBalance.swift in Sources */,
