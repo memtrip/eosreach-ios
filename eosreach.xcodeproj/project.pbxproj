@@ -53,8 +53,6 @@
 		3C592FA2219D61AD00D7C9B9 /* ActionReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FA1219D61AD00D7C9B9 /* ActionReceipt.swift */; };
 		3C592FA4219D61CC00D7C9B9 /* TransferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FA3219D61CC00D7C9B9 /* TransferRequest.swift */; };
 		3C592FA6219D623300D7C9B9 /* TransferRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FA5219D623300D7C9B9 /* TransferRequestImpl.swift */; };
-		3C592FC7219D66DC00D7C9B9 /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C592FC5219D66D500D7C9B9 /* eosswift.framework */; };
-		3C592FC8219D66DC00D7C9B9 /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C592FC5219D66D500D7C9B9 /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C592FCA219D6B0700D7C9B9 /* VoteReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FC9219D6B0700D7C9B9 /* VoteReceipt.swift */; };
 		3C592FCC219D6B1B00D7C9B9 /* VoteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FCB219D6B1B00D7C9B9 /* VoteRequest.swift */; };
 		3C592FCE219D6B8B00D7C9B9 /* VoteRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FCD219D6B8B00D7C9B9 /* VoteRequestImpl.swift */; };
@@ -129,6 +127,11 @@
 		3C9BFBC8219C29B000589936 /* types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBC7219C29B000589936 /* types.swift */; };
 		3CAD34752192F77C000F304A /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD34742192F77C000F304A /* EntryViewModel.swift */; };
 		3CAD34772192F7DB000F304A /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD34762192F7DB000F304A /* EntryViewController.swift */; };
+		3CC9A389219DA76C0002A25F /* BlockProducerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */; };
+		3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */; };
+		3CC9A38D219DA8480002A25F /* BlockProducerRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */; };
+		3CC9A39C219DAD420002A25F /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC9A39A219DAD380002A25F /* eosswift.framework */; };
+		3CC9A39D219DAD420002A25F /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC9A39A219DAD380002A25F /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,7 +151,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3C592FC8219D66DC00D7C9B9 /* eosswift.framework in Embed Frameworks */,
+				3CC9A39D219DAD420002A25F /* eosswift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +209,6 @@
 		3C592FA1219D61AD00D7C9B9 /* ActionReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionReceipt.swift; sourceTree = "<group>"; };
 		3C592FA3219D61CC00D7C9B9 /* TransferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRequest.swift; sourceTree = "<group>"; };
 		3C592FA5219D623300D7C9B9 /* TransferRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRequestImpl.swift; sourceTree = "<group>"; };
-		3C592FC5219D66D500D7C9B9 /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
 		3C592FC9219D6B0700D7C9B9 /* VoteReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteReceipt.swift; sourceTree = "<group>"; };
 		3C592FCB219D6B1B00D7C9B9 /* VoteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteRequest.swift; sourceTree = "<group>"; };
 		3C592FCD219D6B8B00D7C9B9 /* VoteRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteRequestImpl.swift; sourceTree = "<group>"; };
@@ -282,6 +284,10 @@
 		3C9BFBC7219C29B000589936 /* types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = types.swift; sourceTree = "<group>"; };
 		3CAD34742192F77C000F304A /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 		3CAD34762192F7DB000F304A /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerDetails.swift; sourceTree = "<group>"; };
+		3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRequest.swift; sourceTree = "<group>"; };
+		3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRequestImpl.swift; sourceTree = "<group>"; };
+		3CC9A39A219DAD380002A25F /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
 		48ECDAAEF6BB465B8887CE03 /* Pods-eosreach-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreach_eosreachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52C445483AA480525DB9233 /* Pods-eosreach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.debug.xcconfig"; sourceTree = "<group>"; };
@@ -294,7 +300,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C592FC7219D66DC00D7C9B9 /* eosswift.framework in Frameworks */,
+				3CC9A39C219DAD420002A25F /* eosswift.framework in Frameworks */,
 				3C291BA1219D572F00562448 /* Pods_eosreach.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,7 +435,7 @@
 		3C5799E42191D39A00B9A3D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C592FC5219D66D500D7C9B9 /* eosswift.framework */,
+				3CC9A39A219DAD380002A25F /* eosswift.framework */,
 				3C291BA0219D572F00562448 /* Pods_eosreach.framework */,
 				B747F913CEFFA4BFF47AA857 /* Pods_eosreach.framework */,
 				7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */,
@@ -670,6 +676,9 @@
 		3C9BFB7B219B35DF00589936 /* blockproducer */ = {
 			isa = PBXGroup;
 			children = (
+				3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */,
+				3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */,
+				3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */,
 			);
 			path = blockproducer;
 			sourceTree = "<group>";
@@ -1149,15 +1158,18 @@
 				3C9BFB92219B37E100589936 /* Result.swift in Sources */,
 				3C340FDB219383210017BEF9 /* ReachTextField.swift in Sources */,
 				3C340FD92193801B0017BEF9 /* CurrencyPairingViewController.swift in Sources */,
+				3CC9A389219DA76C0002A25F /* BlockProducerDetails.swift in Sources */,
 				3C0EC81B21933D4F00562A1B /* SplashViewModel.swift in Sources */,
 				3C340FD52193801B0017BEF9 /* CurrencyPairingResult.swift in Sources */,
 				3C9BFB94219B39B900589936 /* EosAccountResource.swift in Sources */,
 				3C592FA0219D60D100D7C9B9 /* GetBandwidthRequestImpl.swift in Sources */,
 				3C0EC828219350DE00562A1B /* ImportKeyViewModel.swift in Sources */,
+				3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */,
 				3C9BFB8A219B366700589936 /* ContractAccountBalance.swift in Sources */,
 				3C7F0DD72194A0D400E72DD1 /* SearchViewModel.swift in Sources */,
 				3C340FD82193801B0017BEF9 /* CurrencyPairingViewState.swift in Sources */,
 				3C9BFB76219B359F00589936 /* EosAccount.swift in Sources */,
+				3CC9A38D219DA8480002A25F /* BlockProducerRequestImpl.swift in Sources */,
 				3C592FA2219D61AD00D7C9B9 /* ActionReceipt.swift in Sources */,
 				3C592FA6219D623300D7C9B9 /* TransferRequestImpl.swift in Sources */,
 				3C0EC80A2192FAD300562A1B /* uitypes.swift in Sources */,
