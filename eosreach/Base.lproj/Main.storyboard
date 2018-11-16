@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -540,7 +540,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </activityIndicatorView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P1s-qI-QEP" customClass="RegisteredBlockProducersTableView" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-2P-2j5" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
@@ -552,7 +552,7 @@
                             <constraint firstItem="YKi-4J-dv2" firstAttribute="leading" secondItem="9nW-Xb-ozi" secondAttribute="leading" id="9Jj-sk-UYR"/>
                             <constraint firstItem="9nW-Xb-ozi" firstAttribute="bottom" secondItem="YKi-4J-dv2" secondAttribute="bottom" id="DaR-9d-H1g"/>
                             <constraint firstItem="P1s-qI-QEP" firstAttribute="leading" secondItem="9nW-Xb-ozi" secondAttribute="leading" id="GiY-B7-tBn"/>
-                            <constraint firstItem="P1s-qI-QEP" firstAttribute="top" secondItem="9nW-Xb-ozi" secondAttribute="top" id="cBJ-Ol-6QM"/>
+                            <constraint firstItem="P1s-qI-QEP" firstAttribute="top" secondItem="9nW-Xb-ozi" secondAttribute="top" constant="8" id="cBJ-Ol-6QM"/>
                             <constraint firstItem="9nW-Xb-ozi" firstAttribute="trailing" secondItem="lK9-2P-2j5" secondAttribute="trailing" id="fAp-ya-LFN"/>
                             <constraint firstItem="9nW-Xb-ozi" firstAttribute="trailing" secondItem="YKi-4J-dv2" secondAttribute="trailing" id="gY8-On-oLX"/>
                             <constraint firstItem="P1s-qI-QEP" firstAttribute="bottom" secondItem="9nW-Xb-ozi" secondAttribute="bottom" id="j0I-xT-XEG"/>

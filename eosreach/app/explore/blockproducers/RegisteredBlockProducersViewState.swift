@@ -7,7 +7,7 @@ enum RegisteredBlockProducersViewState: MxViewState {
     case onLoadMoreProgress
     case onError
     case onLoadMoreError
-    case onSuccess(registeredBlockProducers: [RegisteredBlockProducer])
+    case onSuccess(registeredBlockProducers: [RegisteredBlockProducer], more: Bool)
     case websiteSelected(url: String)
     case registeredBlockProducersSelected(accountName: String)
 }

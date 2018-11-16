@@ -1,9 +1,12 @@
 import Foundation
 import UIKit
+import RxCocoa
 
 class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDelegate, UITableViewDataSource {
 
     private var data = [T]()
+    
+    var atEnd = false
 
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -59,17 +62,32 @@ class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDe
         let cell = createCell(tableView: tableView, indexPath: indexPath)
 
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
-
+        
         return bindCell(
             cell: cell,
             item: data[indexPath.row]
         )
     }
-
+    
+    public var atBottom: ControlEvent<T> {
+        let source = rx.methodInvoked(#selector(UITableViewDelegate.tableView(_:willDisplay:forRowAt:))).filter { event in
+            let indexPath = event[2] as! IndexPath
+            return indexPath.row + 1 == self.data.count && !self.atEnd
+        }.map { a -> T in
+            let indexPath = a[2] as! IndexPath
+            return self.data[indexPath.row]
+        }
+        
+        return ControlEvent(events: source)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

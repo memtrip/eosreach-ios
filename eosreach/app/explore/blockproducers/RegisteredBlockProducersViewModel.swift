@@ -6,13 +6,34 @@ class RegisteredBlockProducersViewModel: MxViewModel<RegisteredBlockProducersInt
     private let registeredBlockProducerRequest = RegisteredBlockProducerRequestImpl()
 
     private func getRegisteredBlockProducers(nextAccount: String = "") -> Observable<RegisteredBlockProducersResult> {
-        return registeredBlockProducerRequest.getProducers(limit: 200, lowerLimit: nextAccount).map { result in
+        let limit = 200
+        return registeredBlockProducerRequest.getProducers(limit: limit, lowerLimit: nextAccount).map { result in
             if (result.success()) {
-                return RegisteredBlockProducersResult.onSuccess(registeredBlockProducers: result.data!)
+                if (result.data!.count < limit) {
+                    return RegisteredBlockProducersResult.onSuccess(registeredBlockProducers: result.data!, more: false)
+                } else {
+                    return RegisteredBlockProducersResult.onSuccess(registeredBlockProducers: result.data!, more: true)
+                }
             } else {
-                return RegisteredBlockProducersResult.onError
+                return self.onError(nextAccount: nextAccount)
             }
-        }.asObservable().startWith(RegisteredBlockProducersResult.onProgress)
+        }.asObservable().startWith(self.onProgress(nextAccount: nextAccount))
+    }
+    
+    private func onError(nextAccount: String) -> RegisteredBlockProducersResult {
+        if (nextAccount.count == 0) {
+            return RegisteredBlockProducersResult.onError
+        } else {
+            return RegisteredBlockProducersResult.onLoadMoreError
+        }
+    }
+    
+    private func onProgress(nextAccount: String) -> RegisteredBlockProducersResult {
+        if (nextAccount.count == 0) {
+            return RegisteredBlockProducersResult.onProgress
+        } else {
+            return RegisteredBlockProducersResult.onLoadMoreProgress
+        }
     }
 
     override func dispatcher(intent: RegisteredBlockProducersIntent) -> Observable<RegisteredBlockProducersResult> {
@@ -46,8 +67,8 @@ class RegisteredBlockProducersViewModel: MxViewModel<RegisteredBlockProducersInt
             return RegisteredBlockProducersViewState.onError
         case .onLoadMoreError:
             return RegisteredBlockProducersViewState.onLoadMoreError
-        case .onSuccess(let registeredBlockProducers):
-            return RegisteredBlockProducersViewState.onSuccess(registeredBlockProducers: registeredBlockProducers)
+        case .onSuccess(let registeredBlockProducers, let more):
+            return RegisteredBlockProducersViewState.onSuccess(registeredBlockProducers: registeredBlockProducers, more: more)
         case .websiteSelected(let url):
             return RegisteredBlockProducersViewState.websiteSelected(url: url)
         case .registeredBlockProducersSelected(let accountName):
