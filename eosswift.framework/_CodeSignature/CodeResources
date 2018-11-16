@@ -6,19 +6,19 @@
 	<dict>
 		<key>Headers/eosswift-Swift.h</key>
 		<data>
-		eyS6sFkzjsGbD+9jNN8lWqX9b5M=
+		Cuhdc73kFQWiXkY4HbKgWzVjugs=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hL8vUswNhQjQNgHe9CMUuI6gakY=
+		2Tw5M/6PYu1Cm+m3AjkdqL9uIhg=
 		</data>
 		<key>Modules/eosswift.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		ZDznEy3soUTP3Gm2vVUh/pdY5Ls=
+		Ch8C+LBMdIpNOBc+ifVN0kaZWLQ=
 		</data>
 		<key>Modules/eosswift.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		pXilFOhpfkC+PUIM2DpVwr1F3CA=
+		UuPJsyg8Eb9WDl4FBGVegiC2EPk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -31,21 +31,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GQwNkRHmEJf8p2VVGLrxTUKaGCAf8jT3bxXG4X9//iw=
+			PRp2j7HyLyXcEEVl0q1q8LR0m65qj9vrWiM2HAL+4lI=
 			</data>
 		</dict>
 		<key>Modules/eosswift.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bvLxrdHvYrOXSDDly1ma8dfN7IcAhvf72siGaAfiDbc=
+			tACfghDIr0p4pABN1qy0+qr3aX4Hui5PK7U9rmGBonA=
 			</data>
 		</dict>
 		<key>Modules/eosswift.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pW/1FUiVVoq4Mr5NpC4OHZtNI7QAZ/XzqBHT07wyGIw=
+			tPJrReHh1T9vwtndZGT6hPG1e2cM9FXKw3OIbBR7hbo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -58,7 +58,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -89,24 +89,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -142,13 +130,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>
