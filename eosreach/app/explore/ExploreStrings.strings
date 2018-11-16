@@ -2,4 +2,6 @@
 	"explore_title" = Explore;
 	"explore_tab_search" = "Search Accounts";
 	"explore_tab_blockproducers" = "Block Producers";
+	"explore_registered_block_producers_generic_error" = "Sorry, we could not fetch the list of block producers, please check your connection and try again.";
+	"explore_registered_block_producers_empty_error" = "We could not find any registered block producers, if this is unexpected behaviour, please change your api endpoint in settings.";
 }

@@ -130,8 +130,6 @@
 		3CC9A389219DA76C0002A25F /* BlockProducerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */; };
 		3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */; };
 		3CC9A38D219DA8480002A25F /* BlockProducerRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */; };
-		3CC9A39C219DAD420002A25F /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC9A39A219DAD380002A25F /* eosswift.framework */; };
-		3CC9A39D219DAD420002A25F /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC9A39A219DAD380002A25F /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3CC9A39F219DAEFD0002A25F /* CustomTokensRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A39E219DAEFD0002A25F /* CustomTokensRequest.swift */; };
 		3CC9A3A1219DAF050002A25F /* CutomTokensRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A0219DAF050002A25F /* CutomTokensRequestImpl.swift */; };
 		3CC9A3A3219DAF0B0002A25F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A2219DAF0B0002A25F /* Token.swift */; };
@@ -149,6 +147,17 @@
 		3CC9A3BB219DBC210002A25F /* RamPriceRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3BA219DBC210002A25F /* RamPriceRequestImpl.swift */; };
 		3CC9A3BD219DC06C0002A25F /* ChainApiModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3BC219DC06C0002A25F /* ChainApiModule.swift */; };
 		3CC9A3BF219DC0F90002A25F /* HistoryApiModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3BE219DC0F90002A25F /* HistoryApiModule.swift */; };
+		3CC9A3C1219DC4300002A25F /* RegisteredBlockProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C0219DC4300002A25F /* RegisteredBlockProducer.swift */; };
+		3CC9A3C3219DC4390002A25F /* RegisteredBlockProducerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C2219DC4390002A25F /* RegisteredBlockProducerRequest.swift */; };
+		3CC9A3C5219DC4420002A25F /* RegisteredBlockProducerRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C4219DC4420002A25F /* RegisteredBlockProducerRequestImpl.swift */; };
+		3CC9A3C8219DCEEB0002A25F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C7219DCEEB0002A25F /* ErrorView.swift */; };
+		3CC9A3CA219DCF900002A25F /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C9219DCF900002A25F /* ErrorView.xib */; };
+		3CC9A3CE219DDE240002A25F /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC9A3CB219DDE090002A25F /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3CC9A3D1219DED830002A25F /* SimpleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D0219DED830002A25F /* SimpleTableView.swift */; };
+		3CC9A3D3219DF14D0002A25F /* RegisteredBlockProducersTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D2219DF14D0002A25F /* RegisteredBlockProducersTableView.swift */; };
+		3CC9A3D5219DF1B00002A25F /* RegisteredBlockProducersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D4219DF1B00002A25F /* RegisteredBlockProducersCell.swift */; };
+		3CC9A3D7219DF2B90002A25F /* RegisteredBlockProducersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D6219DF2B90002A25F /* RegisteredBlockProducersCell.xib */; };
+		3CC9A3D9219DF6120002A25F /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D8219DF6120002A25F /* SimpleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,7 +177,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3CC9A39D219DAD420002A25F /* eosswift.framework in Embed Frameworks */,
+				3CC9A3CE219DDE240002A25F /* eosswift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +313,6 @@
 		3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerDetails.swift; sourceTree = "<group>"; };
 		3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRequest.swift; sourceTree = "<group>"; };
 		3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRequestImpl.swift; sourceTree = "<group>"; };
-		3CC9A39A219DAD380002A25F /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
 		3CC9A39E219DAEFD0002A25F /* CustomTokensRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTokensRequest.swift; sourceTree = "<group>"; };
 		3CC9A3A0219DAF050002A25F /* CutomTokensRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomTokensRequestImpl.swift; sourceTree = "<group>"; };
 		3CC9A3A2219DAF0B0002A25F /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -322,6 +330,17 @@
 		3CC9A3BA219DBC210002A25F /* RamPriceRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamPriceRequestImpl.swift; sourceTree = "<group>"; };
 		3CC9A3BC219DC06C0002A25F /* ChainApiModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainApiModule.swift; sourceTree = "<group>"; };
 		3CC9A3BE219DC0F90002A25F /* HistoryApiModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApiModule.swift; sourceTree = "<group>"; };
+		3CC9A3C0219DC4300002A25F /* RegisteredBlockProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducer.swift; sourceTree = "<group>"; };
+		3CC9A3C2219DC4390002A25F /* RegisteredBlockProducerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducerRequest.swift; sourceTree = "<group>"; };
+		3CC9A3C4219DC4420002A25F /* RegisteredBlockProducerRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducerRequestImpl.swift; sourceTree = "<group>"; };
+		3CC9A3C7219DCEEB0002A25F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		3CC9A3C9219DCF900002A25F /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		3CC9A3CB219DDE090002A25F /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
+		3CC9A3D0219DED830002A25F /* SimpleTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableView.swift; sourceTree = "<group>"; };
+		3CC9A3D2219DF14D0002A25F /* RegisteredBlockProducersTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersTableView.swift; sourceTree = "<group>"; };
+		3CC9A3D4219DF1B00002A25F /* RegisteredBlockProducersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersCell.swift; sourceTree = "<group>"; };
+		3CC9A3D6219DF2B90002A25F /* RegisteredBlockProducersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisteredBlockProducersCell.xib; sourceTree = "<group>"; };
+		3CC9A3D8219DF6120002A25F /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
 		48ECDAAEF6BB465B8887CE03 /* Pods-eosreach-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreach_eosreachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52C445483AA480525DB9233 /* Pods-eosreach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.debug.xcconfig"; sourceTree = "<group>"; };
@@ -334,7 +353,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC9A39C219DAD420002A25F /* eosswift.framework in Frameworks */,
 				3C291BA1219D572F00562448 /* Pods_eosreach.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +371,8 @@
 		3C0EC8082192FA5700562A1B /* uikit */ = {
 			isa = PBXGroup;
 			children = (
+				3CC9A3CF219DED760002A25F /* tableview */,
+				3CC9A3C6219DCEDC0002A25F /* error */,
 				3C0EC8092192FAD300562A1B /* uitypes.swift */,
 				3C0EC80B2192FAF900562A1B /* ReachButton.swift */,
 				3C0EC81321933B6F00562A1B /* ReachActivityIndicator.swift */,
@@ -470,7 +490,7 @@
 		3C5799E42191D39A00B9A3D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3CC9A39A219DAD380002A25F /* eosswift.framework */,
+				3CC9A3CB219DDE090002A25F /* eosswift.framework */,
 				3C291BA0219D572F00562448 /* Pods_eosreach.framework */,
 				B747F913CEFFA4BFF47AA857 /* Pods_eosreach.framework */,
 				7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */,
@@ -512,16 +532,14 @@
 		3C7F0DDB2194A10400E72DD1 /* blockproducers */ = {
 			isa = PBXGroup;
 			children = (
-				3C7F0DE52194A17000E72DD1 /* ActiveBlockProducersIntent.swift */,
-				3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift */,
-				3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift */,
-				3C7F0DDF2194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift */,
-				3C7F0DE02194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift */,
 				3C7F0DE42194A17000E72DD1 /* RegisteredBlockProducersIntent.swift */,
 				3C7F0DDE2194A17000E72DD1 /* RegisteredBlockProducersResult.swift */,
 				3C7F0DE62194A17000E72DD1 /* RegisteredBlockProducersViewModel.swift */,
 				3C7F0DE12194A17000E72DD1 /* RegisteredBlockProducersViewState.swift */,
 				3C7F0DE32194A17000E72DD1 /* RegisteredBlockProducersViewController.swift */,
+				3CC9A3D2219DF14D0002A25F /* RegisteredBlockProducersTableView.swift */,
+				3CC9A3D4219DF1B00002A25F /* RegisteredBlockProducersCell.swift */,
+				3CC9A3D6219DF2B90002A25F /* RegisteredBlockProducersCell.xib */,
 			);
 			path = blockproducers;
 			sourceTree = "<group>";
@@ -715,6 +733,9 @@
 				3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */,
 				3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */,
 				3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */,
+				3CC9A3C0219DC4300002A25F /* RegisteredBlockProducer.swift */,
+				3CC9A3C2219DC4390002A25F /* RegisteredBlockProducerRequest.swift */,
+				3CC9A3C4219DC4420002A25F /* RegisteredBlockProducerRequestImpl.swift */,
 			);
 			path = blockproducer;
 			sourceTree = "<group>";
@@ -807,6 +828,11 @@
 		3C9BFB9E219B511A00589936 /* blockproducer */ = {
 			isa = PBXGroup;
 			children = (
+				3C7F0DE52194A17000E72DD1 /* ActiveBlockProducersIntent.swift */,
+				3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift */,
+				3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift */,
+				3C7F0DDF2194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift */,
+				3C7F0DE02194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift */,
 			);
 			path = blockproducer;
 			sourceTree = "<group>";
@@ -862,6 +888,24 @@
 				3C9BFBBE219C21BC00589936 /* AccountAction.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		3CC9A3C6219DCEDC0002A25F /* error */ = {
+			isa = PBXGroup;
+			children = (
+				3CC9A3C7219DCEEB0002A25F /* ErrorView.swift */,
+				3CC9A3C9219DCF900002A25F /* ErrorView.xib */,
+			);
+			path = error;
+			sourceTree = "<group>";
+		};
+		3CC9A3CF219DED760002A25F /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				3CC9A3D0219DED830002A25F /* SimpleTableView.swift */,
+				3CC9A3D8219DF6120002A25F /* SimpleTableViewCell.swift */,
+			);
+			path = tableview;
 			sourceTree = "<group>";
 		};
 		4A8C8B683B63E7118BDE78A2 /* Pods */ = {
@@ -965,8 +1009,10 @@
 				3C340FBF219354E70017BEF9 /* WelcomeStrings.strings in Resources */,
 				3C5799CF2191D27E00B9A3D7 /* LaunchScreen.storyboard in Resources */,
 				3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */,
+				3CC9A3CA219DCF900002A25F /* ErrorView.xib in Resources */,
 				3C964C4221944367003663EF /* AppStrings.strings in Resources */,
 				3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */,
+				3CC9A3D7219DF2B90002A25F /* RegisteredBlockProducersCell.xib in Resources */,
 				3C340FCC219368C30017BEF9 /* SettingsStrings.strings in Resources */,
 				3C7F0DFE2194AC2A00E72DD1 /* ExploreStrings.strings in Resources */,
 			);
@@ -1144,6 +1190,7 @@
 				3C964C4F2194572A003663EF /* EosKeyManager.swift in Sources */,
 				3C9BFB90219B36CC00589936 /* EosPrice.swift in Sources */,
 				3C8C6D922192D4F400FC1A0D /* MxIntent.swift in Sources */,
+				3CC9A3D5219DF1B00002A25F /* RegisteredBlockProducersCell.swift in Sources */,
 				3C9BFBA7219B51A700589936 /* BalanceFormatter.swift in Sources */,
 				3C0EC82A219350DE00562A1B /* ImportKeyViewState.swift in Sources */,
 				3C964C3821938C71003663EF /* EosEndpointResult.swift in Sources */,
@@ -1167,6 +1214,7 @@
 				3C9BFBBB219B5DC900589936 /* AccountsForPublicKeyRequest.swift in Sources */,
 				3C9BFB86219B363C00589936 /* Balance.swift in Sources */,
 				3C7F0DD92194A0D400E72DD1 /* SearchViewController.swift in Sources */,
+				3CC9A3C3219DC4390002A25F /* RegisteredBlockProducerRequest.swift in Sources */,
 				3C9BFB8C219B367B00589936 /* AccountBalanceRequest.swift in Sources */,
 				3C0EC81421933B6F00562A1B /* ReachActivityIndicator.swift in Sources */,
 				3CC9A3A5219DAF110002A25F /* TokenParent.swift in Sources */,
@@ -1177,7 +1225,9 @@
 				3C7F0DFC2194A58700E72DD1 /* ReachTabBar.swift in Sources */,
 				3C0EC827219350DE00562A1B /* ImportKeyViewController.swift in Sources */,
 				3C0EC80C2192FAF900562A1B /* ReachButton.swift in Sources */,
+				3CC9A3D1219DED830002A25F /* SimpleTableView.swift in Sources */,
 				3C964C462194441E003663EF /* EosPriceLastUpdated.swift in Sources */,
+				3CC9A3C5219DC4420002A25F /* RegisteredBlockProducerRequestImpl.swift in Sources */,
 				3C9BFBC2219C21CD00589936 /* AccountActionList.swift in Sources */,
 				3CAD34752192F77C000F304A /* EntryViewModel.swift in Sources */,
 				3C7F0DDA2194A0D400E72DD1 /* SearchIntent.swift in Sources */,
@@ -1211,6 +1261,7 @@
 				3C8C6D982192D54000FC1A0D /* MxViewController.swift in Sources */,
 				3C8C6DC22192D7B900FC1A0D /* EntryIntent.swift in Sources */,
 				3C340FC62193612A0017BEF9 /* SettingsViewController.swift in Sources */,
+				3CC9A3C1219DC4300002A25F /* RegisteredBlockProducer.swift in Sources */,
 				3C7F0DEF2194A17000E72DD1 /* ActiveBlockProducersIntent.swift in Sources */,
 				3CC9A3A7219DB23F0002A25F /* CreateAccountReceipt.swift in Sources */,
 				3C592F9E219D60C700D7C9B9 /* GetBandwidthRequest.swift in Sources */,
@@ -1244,7 +1295,9 @@
 				3C5799C52191D27D00B9A3D7 /* AppDelegate.swift in Sources */,
 				3CC9A3AD219DB2E90002A25F /* EosPriceRequest.swift in Sources */,
 				3C592FCC219D6B1B00D7C9B9 /* VoteRequest.swift in Sources */,
+				3CC9A3D9219DF6120002A25F /* SimpleTableViewCell.swift in Sources */,
 				3C8C6D9C2192D58E00FC1A0D /* Copy.swift in Sources */,
+				3CC9A3D3219DF14D0002A25F /* RegisteredBlockProducersTableView.swift in Sources */,
 				3CC9A3BF219DC0F90002A25F /* HistoryApiModule.swift in Sources */,
 				3CC9A3B9219DBBFA0002A25F /* RamPriceRequest.swift in Sources */,
 				3C291BA5219D597900562448 /* CurrencySymbol.swift in Sources */,
@@ -1268,6 +1321,7 @@
 				3C9BFBBF219C21BC00589936 /* AccountAction.swift in Sources */,
 				3C7F0DED2194A17000E72DD1 /* RegisteredBlockProducersViewController.swift in Sources */,
 				3C0EC81F21933D4F00562A1B /* SplashResult.swift in Sources */,
+				3CC9A3C8219DCEEB0002A25F /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

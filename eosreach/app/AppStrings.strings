@@ -3,4 +3,6 @@
 	"app_default_currency" = USD;
 	"app_dialog_ok" = OK;
 	"app_dialog_error_default_title" = Sorry;
+	"app_error_view_title" = Sorry;
+	"app_error_view_cta" = Retry;
 }

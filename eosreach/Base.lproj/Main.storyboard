@@ -535,13 +535,43 @@
                     <view key="view" contentMode="scaleToFill" id="IH7-vO-cQK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="colorAccent"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YKi-4J-dv2" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </activityIndicatorView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P1s-qI-QEP" customClass="RegisteredBlockProducersTableView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-2P-2j5" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="lK9-2P-2j5" firstAttribute="top" secondItem="9nW-Xb-ozi" secondAttribute="top" id="2hw-kN-uSq"/>
+                            <constraint firstItem="YKi-4J-dv2" firstAttribute="leading" secondItem="9nW-Xb-ozi" secondAttribute="leading" id="9Jj-sk-UYR"/>
+                            <constraint firstItem="9nW-Xb-ozi" firstAttribute="bottom" secondItem="YKi-4J-dv2" secondAttribute="bottom" id="DaR-9d-H1g"/>
+                            <constraint firstItem="P1s-qI-QEP" firstAttribute="leading" secondItem="9nW-Xb-ozi" secondAttribute="leading" id="GiY-B7-tBn"/>
+                            <constraint firstItem="P1s-qI-QEP" firstAttribute="top" secondItem="9nW-Xb-ozi" secondAttribute="top" id="cBJ-Ol-6QM"/>
+                            <constraint firstItem="9nW-Xb-ozi" firstAttribute="trailing" secondItem="lK9-2P-2j5" secondAttribute="trailing" id="fAp-ya-LFN"/>
+                            <constraint firstItem="9nW-Xb-ozi" firstAttribute="trailing" secondItem="YKi-4J-dv2" secondAttribute="trailing" id="gY8-On-oLX"/>
+                            <constraint firstItem="P1s-qI-QEP" firstAttribute="bottom" secondItem="9nW-Xb-ozi" secondAttribute="bottom" id="j0I-xT-XEG"/>
+                            <constraint firstItem="YKi-4J-dv2" firstAttribute="top" secondItem="9nW-Xb-ozi" secondAttribute="top" id="nB9-B9-Xiw"/>
+                            <constraint firstItem="lK9-2P-2j5" firstAttribute="leading" secondItem="9nW-Xb-ozi" secondAttribute="leading" id="tVI-F2-fAI"/>
+                            <constraint firstItem="P1s-qI-QEP" firstAttribute="trailing" secondItem="9nW-Xb-ozi" secondAttribute="trailing" id="uFP-M8-uhF"/>
+                            <constraint firstItem="9nW-Xb-ozi" firstAttribute="bottom" secondItem="lK9-2P-2j5" secondAttribute="bottom" id="uHz-gj-J8b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9nW-Xb-ozi"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="YKi-4J-dv2" id="yb6-CJ-X66"/>
+                        <outlet property="errorView" destination="lK9-2P-2j5" id="HPz-Xg-gKe"/>
+                        <outlet property="tableView" destination="P1s-qI-QEP" id="Uob-dN-KFe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPb-la-Q13" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3559" y="797"/>
+            <point key="canvasLocation" x="3557.5999999999999" y="796.55172413793105"/>
         </scene>
     </scenes>
     <resources>

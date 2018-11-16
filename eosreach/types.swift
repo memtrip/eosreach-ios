@@ -15,3 +15,17 @@ extension Sequence {
         return list
     }
 }
+
+extension Int64 {
+
+    private static var numberFormatter: NumberFormatter = {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+
+        return numberFormatter
+    }()
+
+    var delimiter: String {
+        return Int64.numberFormatter.string(from: NSNumber(value: self)) ?? ""
+    }
+}

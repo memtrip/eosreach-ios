@@ -60,7 +60,7 @@ class SettingsViewController: MxViewController<SettingsIntent, SettingsResult, S
     override func render(state: SettingsViewState) {
         switch state {
         case .idle:
-            print("")
+            break
         case .populate(let exchangeRateCurrency):
             currencyLabel.text = exchangeRateCurrency
         case .navigateToCurrencyPairing:

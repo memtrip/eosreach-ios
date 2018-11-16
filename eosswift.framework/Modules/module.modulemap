@@ -1,0 +1,4 @@
+framework module eosswift {
+  header "eosswift-Swift.h"
+  requires objc
+}
