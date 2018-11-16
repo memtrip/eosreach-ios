@@ -12,14 +12,22 @@
 		3C0ADD65219EE3C50026649F /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0ADD62219EE3C10026649F /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C0ADD67219F216D0026649F /* ReachAccountCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD66219F216D0026649F /* ReachAccountCard.swift */; };
 		3C0ADD6A219F24380026649F /* ReachAccountCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0ADD69219F24380026649F /* ReachAccountCard.xib */; };
-		3C0ADD6D219F26830026649F /* AccountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD6C219F26830026649F /* AccountEntity.swift */; };
-		3C0ADD6F219F28300026649F /* CountAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD6E219F28300026649F /* CountAccounts.swift */; };
 		3C0ADD71219F28700026649F /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD70219F28700026649F /* Connection.swift */; };
-		3C0ADD73219F2AB30026649F /* InsertAccountsForPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD72219F2AB30026649F /* InsertAccountsForPublicKey.swift */; };
-		3C0ADD75219F34090026649F /* DeleteAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD74219F34090026649F /* DeleteAccounts.swift */; };
-		3C0ADD77219F346F0026649F /* GetAccountByName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD76219F346F0026649F /* GetAccountByName.swift */; };
-		3C0ADD79219F35250026649F /* GetAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD78219F35250026649F /* GetAccounts.swift */; };
-		3C0ADD7B219F36C80026649F /* GetAccountsNamesForPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7A219F36C80026649F /* GetAccountsNamesForPublicKey.swift */; };
+		3C0ADD7E219F378C0026649F /* BalanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7D219F378C0026649F /* BalanceEntity.swift */; };
+		3C0ADD86219F37B10026649F /* DeleteAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7F219F37B00026649F /* DeleteAccounts.swift */; };
+		3C0ADD87219F37B10026649F /* CountAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD80219F37B10026649F /* CountAccounts.swift */; };
+		3C0ADD88219F37B10026649F /* GetAccountByName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD81219F37B10026649F /* GetAccountByName.swift */; };
+		3C0ADD89219F37B10026649F /* AccountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD82219F37B10026649F /* AccountEntity.swift */; };
+		3C0ADD8A219F37B10026649F /* InsertAccountsForPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD83219F37B10026649F /* InsertAccountsForPublicKey.swift */; };
+		3C0ADD8B219F37B10026649F /* GetAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD84219F37B10026649F /* GetAccounts.swift */; };
+		3C0ADD8C219F37B10026649F /* GetAccountsNamesForPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD85219F37B10026649F /* GetAccountsNamesForPublicKey.swift */; };
+		3C0ADD8E219F37E60026649F /* DeleteBalances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD8D219F37E60026649F /* DeleteBalances.swift */; };
+		3C0ADD90219F38160026649F /* GetBalances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD8F219F38160026649F /* GetBalances.swift */; };
+		3C0ADD92219F38440026649F /* InsertBalances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD91219F38440026649F /* InsertBalances.swift */; };
+		3C0ADD95219F3A8B0026649F /* DeleteTransactionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD94219F3A8B0026649F /* DeleteTransactionLog.swift */; };
+		3C0ADD97219F3AAF0026649F /* TransactionLogEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD96219F3AAF0026649F /* TransactionLogEntity.swift */; };
+		3C0ADD99219F3AEB0026649F /* GetTransactionLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD98219F3AEB0026649F /* GetTransactionLogs.swift */; };
+		3C0ADD9B219F3B230026649F /* InsertTransactionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD9A219F3B230026649F /* InsertTransactionLog.swift */; };
 		3C0EC80A2192FAD300562A1B /* uitypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8092192FAD300562A1B /* uitypes.swift */; };
 		3C0EC80C2192FAF900562A1B /* ReachButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC80B2192FAF900562A1B /* ReachButton.swift */; };
 		3C0EC8122193086800562A1B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8112193086800562A1B /* R.generated.swift */; };
@@ -200,14 +208,22 @@
 		3C0ADD62219EE3C10026649F /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
 		3C0ADD66219F216D0026649F /* ReachAccountCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachAccountCard.swift; sourceTree = "<group>"; };
 		3C0ADD69219F24380026649F /* ReachAccountCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReachAccountCard.xib; sourceTree = "<group>"; };
-		3C0ADD6C219F26830026649F /* AccountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountEntity.swift; path = eosreach/db/realm/model/AccountEntity.swift; sourceTree = SOURCE_ROOT; };
-		3C0ADD6E219F28300026649F /* CountAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountAccounts.swift; path = eosreach/db/realm/model/CountAccounts.swift; sourceTree = SOURCE_ROOT; };
 		3C0ADD70219F28700026649F /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
-		3C0ADD72219F2AB30026649F /* InsertAccountsForPublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsertAccountsForPublicKey.swift; path = eosreach/db/realm/model/InsertAccountsForPublicKey.swift; sourceTree = SOURCE_ROOT; };
-		3C0ADD74219F34090026649F /* DeleteAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeleteAccounts.swift; path = eosreach/db/realm/model/DeleteAccounts.swift; sourceTree = SOURCE_ROOT; };
-		3C0ADD76219F346F0026649F /* GetAccountByName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetAccountByName.swift; path = eosreach/db/realm/model/GetAccountByName.swift; sourceTree = SOURCE_ROOT; };
-		3C0ADD78219F35250026649F /* GetAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetAccounts.swift; path = eosreach/db/realm/model/GetAccounts.swift; sourceTree = SOURCE_ROOT; };
-		3C0ADD7A219F36C80026649F /* GetAccountsNamesForPublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetAccountsNamesForPublicKey.swift; path = eosreach/db/realm/model/GetAccountsNamesForPublicKey.swift; sourceTree = SOURCE_ROOT; };
+		3C0ADD7D219F378C0026649F /* BalanceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceEntity.swift; sourceTree = "<group>"; };
+		3C0ADD7F219F37B00026649F /* DeleteAccounts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteAccounts.swift; sourceTree = "<group>"; };
+		3C0ADD80219F37B10026649F /* CountAccounts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountAccounts.swift; sourceTree = "<group>"; };
+		3C0ADD81219F37B10026649F /* GetAccountByName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAccountByName.swift; sourceTree = "<group>"; };
+		3C0ADD82219F37B10026649F /* AccountEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountEntity.swift; sourceTree = "<group>"; };
+		3C0ADD83219F37B10026649F /* InsertAccountsForPublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertAccountsForPublicKey.swift; sourceTree = "<group>"; };
+		3C0ADD84219F37B10026649F /* GetAccounts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAccounts.swift; sourceTree = "<group>"; };
+		3C0ADD85219F37B10026649F /* GetAccountsNamesForPublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAccountsNamesForPublicKey.swift; sourceTree = "<group>"; };
+		3C0ADD8D219F37E60026649F /* DeleteBalances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteBalances.swift; sourceTree = "<group>"; };
+		3C0ADD8F219F38160026649F /* GetBalances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBalances.swift; sourceTree = "<group>"; };
+		3C0ADD91219F38440026649F /* InsertBalances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertBalances.swift; sourceTree = "<group>"; };
+		3C0ADD94219F3A8B0026649F /* DeleteTransactionLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTransactionLog.swift; sourceTree = "<group>"; };
+		3C0ADD96219F3AAF0026649F /* TransactionLogEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionLogEntity.swift; sourceTree = "<group>"; };
+		3C0ADD98219F3AEB0026649F /* GetTransactionLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionLogs.swift; sourceTree = "<group>"; };
+		3C0ADD9A219F3B230026649F /* InsertTransactionLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTransactionLog.swift; sourceTree = "<group>"; };
 		3C0EC8092192FAD300562A1B /* uitypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uitypes.swift; sourceTree = "<group>"; };
 		3C0EC80B2192FAF900562A1B /* ReachButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachButton.swift; sourceTree = "<group>"; };
 		3C0EC8112193086800562A1B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -399,19 +415,40 @@
 			path = account;
 			sourceTree = "<group>";
 		};
-		3C0ADD6B219F26690026649F /* model */ = {
+		3C0ADD6B219F26690026649F /* account */ = {
 			isa = PBXGroup;
 			children = (
-				3C0ADD6C219F26830026649F /* AccountEntity.swift */,
-				3C0ADD6E219F28300026649F /* CountAccounts.swift */,
-				3C0ADD74219F34090026649F /* DeleteAccounts.swift */,
-				3C0ADD76219F346F0026649F /* GetAccountByName.swift */,
-				3C0ADD78219F35250026649F /* GetAccounts.swift */,
-				3C0ADD7A219F36C80026649F /* GetAccountsNamesForPublicKey.swift */,
-				3C0ADD72219F2AB30026649F /* InsertAccountsForPublicKey.swift */,
+				3C0ADD82219F37B10026649F /* AccountEntity.swift */,
+				3C0ADD80219F37B10026649F /* CountAccounts.swift */,
+				3C0ADD7F219F37B00026649F /* DeleteAccounts.swift */,
+				3C0ADD81219F37B10026649F /* GetAccountByName.swift */,
+				3C0ADD84219F37B10026649F /* GetAccounts.swift */,
+				3C0ADD85219F37B10026649F /* GetAccountsNamesForPublicKey.swift */,
+				3C0ADD83219F37B10026649F /* InsertAccountsForPublicKey.swift */,
 			);
-			name = model;
-			path = eosreach/db/realm/model;
+			path = account;
+			sourceTree = "<group>";
+		};
+		3C0ADD7C219F376D0026649F /* airdrop */ = {
+			isa = PBXGroup;
+			children = (
+				3C0ADD7D219F378C0026649F /* BalanceEntity.swift */,
+				3C0ADD8D219F37E60026649F /* DeleteBalances.swift */,
+				3C0ADD8F219F38160026649F /* GetBalances.swift */,
+				3C0ADD91219F38440026649F /* InsertBalances.swift */,
+			);
+			path = airdrop;
+			sourceTree = "<group>";
+		};
+		3C0ADD93219F3A740026649F /* transaction */ = {
+			isa = PBXGroup;
+			children = (
+				3C0ADD96219F3AAF0026649F /* TransactionLogEntity.swift */,
+				3C0ADD94219F3A8B0026649F /* DeleteTransactionLog.swift */,
+				3C0ADD98219F3AEB0026649F /* GetTransactionLogs.swift */,
+				3C0ADD9A219F3B230026649F /* InsertTransactionLog.swift */,
+			);
+			path = transaction;
 			sourceTree = "<group>";
 		};
 		3C0EC8082192FA5700562A1B /* uikit */ = {
@@ -679,7 +716,9 @@
 		3C964C3C219441D7003663EF /* realm */ = {
 			isa = PBXGroup;
 			children = (
-				3C0ADD6B219F26690026649F /* model */,
+				3C0ADD6B219F26690026649F /* account */,
+				3C0ADD7C219F376D0026649F /* airdrop */,
+				3C0ADD93219F3A740026649F /* transaction */,
 				3C0ADD70219F28700026649F /* Connection.swift */,
 			);
 			path = realm;
@@ -1234,13 +1273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C0ADD6F219F28300026649F /* CountAccounts.swift in Sources */,
+				3C0ADD95219F3A8B0026649F /* DeleteTransactionLog.swift in Sources */,
 				3C7F0DF02194A17000E72DD1 /* RegisteredBlockProducersViewModel.swift in Sources */,
 				3C8C6D9E2192D5B000FC1A0D /* SegueBundle.swift in Sources */,
 				3CC9A3BB219DBC210002A25F /* RamPriceRequestImpl.swift in Sources */,
 				3C964C4F2194572A003663EF /* EosKeyManager.swift in Sources */,
 				3C9BFB90219B36CC00589936 /* EosPrice.swift in Sources */,
+				3C0ADD88219F37B10026649F /* GetAccountByName.swift in Sources */,
 				3C8C6D922192D4F400FC1A0D /* MxIntent.swift in Sources */,
+				3C0ADD90219F38160026649F /* GetBalances.swift in Sources */,
 				3CC9A3D5219DF1B00002A25F /* RegisteredBlockProducersCell.swift in Sources */,
 				3C9BFBA7219B51A700589936 /* BalanceFormatter.swift in Sources */,
 				3C0EC82A219350DE00562A1B /* ImportKeyViewState.swift in Sources */,
@@ -1251,6 +1292,7 @@
 				3C0EC826219350DE00562A1B /* ImportKeyIntent.swift in Sources */,
 				3CC9A3B1219DB52F0002A25F /* ProxyVoterRequest.swift in Sources */,
 				3C0EC81E21933D4F00562A1B /* SplashViewState.swift in Sources */,
+				3C0ADD8B219F37B10026649F /* GetAccounts.swift in Sources */,
 				3C9BFBBD219B5E2C00589936 /* AccountsForPublicKeyRequestImpl.swift in Sources */,
 				3C7F0DEE2194A17000E72DD1 /* RegisteredBlockProducersIntent.swift in Sources */,
 				3C9BFB9C219B3AAE00589936 /* EosAccountRequestImpl.swift in Sources */,
@@ -1258,18 +1300,19 @@
 				3CC9A3A1219DAF050002A25F /* CutomTokensRequestImpl.swift in Sources */,
 				3CC9A3B3219DB6310002A25F /* ProxyVoterRequestImpl.swift in Sources */,
 				3C9BFBC4219C21D600589936 /* AccountActionRequest.swift in Sources */,
-				3C0ADD7B219F36C80026649F /* GetAccountsNamesForPublicKey.swift in Sources */,
 				3C8C6D902192D4CE00FC1A0D /* MxViewState.swift in Sources */,
 				3C8C6D942192D50700FC1A0D /* MxResult.swift in Sources */,
 				3C964C48219444A2003663EF /* EosPriceValue.swift in Sources */,
+				3C0ADD99219F3AEB0026649F /* GetTransactionLogs.swift in Sources */,
 				3CAD34772192F7DB000F304A /* EntryViewController.swift in Sources */,
+				3C0ADD92219F38440026649F /* InsertBalances.swift in Sources */,
 				3C9BFBBB219B5DC900589936 /* AccountsForPublicKeyRequest.swift in Sources */,
 				3C9BFB86219B363C00589936 /* Balance.swift in Sources */,
+				3C0ADD89219F37B10026649F /* AccountEntity.swift in Sources */,
 				3C7F0DD92194A0D400E72DD1 /* SearchViewController.swift in Sources */,
 				3CC9A3C3219DC4390002A25F /* RegisteredBlockProducerRequest.swift in Sources */,
 				3C9BFB8C219B367B00589936 /* AccountBalanceRequest.swift in Sources */,
 				3C0EC81421933B6F00562A1B /* ReachActivityIndicator.swift in Sources */,
-				3C0ADD75219F34090026649F /* DeleteAccounts.swift in Sources */,
 				3CC9A3A5219DAF110002A25F /* TokenParent.swift in Sources */,
 				3C9BFBC8219C29B000589936 /* types.swift in Sources */,
 				3C7F0DE82194A17000E72DD1 /* RegisteredBlockProducersResult.swift in Sources */,
@@ -1288,6 +1331,8 @@
 				3CC9A3BD219DC06C0002A25F /* ChainApiModule.swift in Sources */,
 				3C7F0DD82194A0D400E72DD1 /* SearchViewState.swift in Sources */,
 				3C964C3621938C71003663EF /* EosEndpointViewState.swift in Sources */,
+				3C0ADD9B219F3B230026649F /* InsertTransactionLog.swift in Sources */,
+				3C0ADD8E219F37E60026649F /* DeleteBalances.swift in Sources */,
 				3C8C6DC42192D86F00FC1A0D /* EntryResult.swift in Sources */,
 				3CC9A3A3219DAF0B0002A25F /* Token.swift in Sources */,
 				3C7F0DE92194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift in Sources */,
@@ -1297,6 +1342,7 @@
 				3C8C6D9A2192D56000FC1A0D /* Logger.swift in Sources */,
 				3CC9A3B7219DB8890002A25F /* RamRequestImpl.swift in Sources */,
 				3C340FCA2193612A0017BEF9 /* SettingsIntent.swift in Sources */,
+				3C0ADD8A219F37B10026649F /* InsertAccountsForPublicKey.swift in Sources */,
 				3C340FC72193612A0017BEF9 /* SettingsViewModel.swift in Sources */,
 				3C8C6D962192D52500FC1A0D /* MxViewModel.swift in Sources */,
 				3CC9A3AB219DB2BA0002A25F /* EosCreateAccountRequestImpl.swift in Sources */,
@@ -1309,9 +1355,8 @@
 				3C592F9C219D60BE00D7C9B9 /* DelegatedBandwidth.swift in Sources */,
 				3C592FCE219D6B8B00D7C9B9 /* VoteRequestImpl.swift in Sources */,
 				3C964C51219459D3003663EF /* EncryptedKeyPairData.swift in Sources */,
-				3C0ADD73219F2AB30026649F /* InsertAccountsForPublicKey.swift in Sources */,
-				3C0ADD77219F346F0026649F /* GetAccountByName.swift in Sources */,
 				3C0EC8122193086800562A1B /* R.generated.swift in Sources */,
+				3C0ADD86219F37B10026649F /* DeleteAccounts.swift in Sources */,
 				3C340FD72193801B0017BEF9 /* CurrencyPairingViewModel.swift in Sources */,
 				3C8C6D982192D54000FC1A0D /* MxViewController.swift in Sources */,
 				3C8C6DC22192D7B900FC1A0D /* EntryIntent.swift in Sources */,
@@ -1319,8 +1364,8 @@
 				3CC9A3C1219DC4300002A25F /* RegisteredBlockProducer.swift in Sources */,
 				3C7F0DEF2194A17000E72DD1 /* ActiveBlockProducersIntent.swift in Sources */,
 				3CC9A3A7219DB23F0002A25F /* CreateAccountReceipt.swift in Sources */,
-				3C0ADD6D219F26830026649F /* AccountEntity.swift in Sources */,
 				3C592F9E219D60C700D7C9B9 /* GetBandwidthRequest.swift in Sources */,
+				3C0ADD8C219F37B10026649F /* GetAccountsNamesForPublicKey.swift in Sources */,
 				3C0ADD71219F28700026649F /* Connection.swift in Sources */,
 				3C0EC81C21933D4F00562A1B /* SplashIntent.swift in Sources */,
 				3C340FBD219353D20017BEF9 /* ReachToolbar.swift in Sources */,
@@ -1333,7 +1378,6 @@
 				3C9BFB94219B39B900589936 /* EosAccountResource.swift in Sources */,
 				3CC9A3AF219DB4F00002A25F /* ProxyVoterDetails.swift in Sources */,
 				3C592FA0219D60D100D7C9B9 /* GetBandwidthRequestImpl.swift in Sources */,
-				3C0ADD79219F35250026649F /* GetAccounts.swift in Sources */,
 				3C0EC828219350DE00562A1B /* ImportKeyViewModel.swift in Sources */,
 				3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */,
 				3C9BFB8A219B366700589936 /* ContractAccountBalance.swift in Sources */,
@@ -1344,6 +1388,7 @@
 				3C592FA2219D61AD00D7C9B9 /* ActionReceipt.swift in Sources */,
 				3C592FA6219D623300D7C9B9 /* TransferRequestImpl.swift in Sources */,
 				3C0EC80A2192FAD300562A1B /* uitypes.swift in Sources */,
+				3C0ADD87219F37B10026649F /* CountAccounts.swift in Sources */,
 				3C9BFBB9219B5DA500589936 /* AccountsForPublicKey.swift in Sources */,
 				3C7F0DEB2194A17000E72DD1 /* RegisteredBlockProducersViewState.swift in Sources */,
 				3CC9A39F219DAEFD0002A25F /* CustomTokensRequest.swift in Sources */,
@@ -1363,6 +1408,7 @@
 				3C964C3521938C71003663EF /* EosEndpointIntent.swift in Sources */,
 				3C7F0DD62194A0D400E72DD1 /* SearchResult.swift in Sources */,
 				3C340FC92193612A0017BEF9 /* SettingsResult.swift in Sources */,
+				3C0ADD7E219F378C0026649F /* BalanceEntity.swift in Sources */,
 				3C8C6D8D2192D4B600FC1A0D /* Rx.swift in Sources */,
 				3C9BFB8E219B368700589936 /* AccountBalanceRequestImpl.swift in Sources */,
 				3C9BFBC6219C21E000589936 /* AccountActionRequestImpl.swift in Sources */,
@@ -1371,6 +1417,7 @@
 				3C340FC82193612A0017BEF9 /* SettingsViewState.swift in Sources */,
 				3C7F0DF72194A23900E72DD1 /* ExploreViewController.swift in Sources */,
 				3C9BFBB7219B5D7C00589936 /* AccountNameSystemBalance.swift in Sources */,
+				3C0ADD97219F3AAF0026649F /* TransactionLogEntity.swift in Sources */,
 				3C9BFB96219B39E700589936 /* EosAccountVote.swift in Sources */,
 				3C9BFB9A219B3A4000589936 /* EosAccountRequest.swift in Sources */,
 				3C592FA4219D61CC00D7C9B9 /* TransferRequest.swift in Sources */,
