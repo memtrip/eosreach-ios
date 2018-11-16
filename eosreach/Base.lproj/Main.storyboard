@@ -520,9 +520,32 @@
                     <view key="view" contentMode="scaleToFill" id="gML-gY-WDD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="colorSecondary"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tM6-tU-nIZ" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="52" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCR-XF-cHE">
+                                <rect key="frame" x="16" y="98" width="343" height="553"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rCR-XF-cHE" firstAttribute="leading" secondItem="bP6-Ma-BG9" secondAttribute="leading" constant="16" id="6Fb-zq-0la"/>
+                            <constraint firstItem="bP6-Ma-BG9" firstAttribute="trailing" secondItem="rCR-XF-cHE" secondAttribute="trailing" constant="16" id="Ufe-EI-IAQ"/>
+                            <constraint firstItem="bP6-Ma-BG9" firstAttribute="bottom" secondItem="rCR-XF-cHE" secondAttribute="bottom" constant="16" id="Zsn-AP-crh"/>
+                            <constraint firstItem="tM6-tU-nIZ" firstAttribute="leading" secondItem="bP6-Ma-BG9" secondAttribute="leading" constant="16" id="haw-XB-eE2"/>
+                            <constraint firstItem="rCR-XF-cHE" firstAttribute="top" secondItem="tM6-tU-nIZ" secondAttribute="bottom" constant="16" id="n2D-bu-2rn"/>
+                            <constraint firstItem="tM6-tU-nIZ" firstAttribute="top" secondItem="bP6-Ma-BG9" secondAttribute="top" constant="32" id="q3h-yw-wak"/>
+                            <constraint firstItem="bP6-Ma-BG9" firstAttribute="trailing" secondItem="tM6-tU-nIZ" secondAttribute="trailing" constant="16" id="vLN-5t-SB2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bP6-Ma-BG9"/>
                     </view>
+                    <connections>
+                        <outlet property="searchResultContainer" destination="rCR-XF-cHE" id="QMb-SB-9xS"/>
+                        <outlet property="searchTextField" destination="tM6-tU-nIZ" id="hJJ-2K-pHV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51G-5F-se1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

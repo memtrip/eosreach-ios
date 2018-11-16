@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReachAccountCard" customModule="eosreach" customModuleProvider="target">
+            <connections>
+                <outlet property="accountNameLabel" destination="aSv-ll-Mrg" id="jSI-Xa-Yru"/>
+                <outlet property="balanceLabel" destination="h2X-9U-P0c" id="m39-PS-wa2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="XtE-wc-u5U">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_account_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSv-ll-Mrg">
+                    <rect key="frame" x="8" y="28" width="359" height="20.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_value_EOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2X-9U-P0c">
+                    <rect key="frame" x="8" y="52.5" width="359" height="21"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="h2X-9U-P0c" firstAttribute="leading" secondItem="ngg-EQ-zFk" secondAttribute="leading" constant="8" id="4Uh-K3-GKG"/>
+                <constraint firstItem="aSv-ll-Mrg" firstAttribute="leading" secondItem="ngg-EQ-zFk" secondAttribute="leading" constant="8" id="9Lg-xL-Tgx"/>
+                <constraint firstItem="ngg-EQ-zFk" firstAttribute="trailing" secondItem="h2X-9U-P0c" secondAttribute="trailing" constant="8" id="ABJ-DB-QYo"/>
+                <constraint firstItem="ngg-EQ-zFk" firstAttribute="trailing" secondItem="aSv-ll-Mrg" secondAttribute="trailing" constant="8" id="lm1-tv-I4D"/>
+                <constraint firstItem="h2X-9U-P0c" firstAttribute="top" secondItem="aSv-ll-Mrg" secondAttribute="bottom" constant="4" id="nzY-V1-YGN"/>
+                <constraint firstItem="aSv-ll-Mrg" firstAttribute="top" secondItem="ngg-EQ-zFk" secondAttribute="top" constant="8" id="zu9-AV-lr6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ngg-EQ-zFk"/>
+            <point key="canvasLocation" x="44" y="-170.46476761619192"/>
+        </view>
+    </objects>
+</document>

@@ -4,8 +4,12 @@ import RxCocoa
 
 class SearchViewController: MxViewController<SearchIntent, SearchResult, SearchViewState, SearchViewModel> {
 
+    @IBOutlet weak var searchTextField: ReachTextField!
+    @IBOutlet weak var searchResultContainer: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchTextField.placeholder = R.string.exploreStrings.explore_search_textfield_placeholder()
     }
 
     override func intents() -> Observable<SearchIntent> {
@@ -21,6 +25,14 @@ class SearchViewController: MxViewController<SearchIntent, SearchResult, SearchV
     override func render(state: SearchViewState) {
         switch state {
         case .idle:
+            print("")
+        case .onProgress:
+            print("")
+        case .onError:
+            print("")
+        case .onSuccess(let accountEntity):
+            print("")
+        case .viewAccount(let accountEntity):
             print("")
         }
     }
