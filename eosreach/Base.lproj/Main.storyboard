@@ -465,6 +465,105 @@
             </objects>
             <point key="canvasLocation" x="2081" y="27"/>
         </scene>
+        <!--Account View Controller-->
+        <scene sceneID="0Fa-b9-98g">
+            <objects>
+                <viewController id="tgP-tV-kRI" customClass="AccountViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JLS-cK-D3e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2KH-gd-coI" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="f3E-or-JZw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ill-09-nMU" customClass="ReachTabBar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="yBh-sk-BGf"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zer-Db-mUB">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="C4I-xg-RyO" firstAttribute="trailing" secondItem="ill-09-nMU" secondAttribute="trailing" id="B5X-cF-EU9"/>
+                            <constraint firstItem="2KH-gd-coI" firstAttribute="leading" secondItem="C4I-xg-RyO" secondAttribute="leading" id="JoU-UB-W4v"/>
+                            <constraint firstItem="zer-Db-mUB" firstAttribute="leading" secondItem="C4I-xg-RyO" secondAttribute="leading" id="Ke6-0h-OaK"/>
+                            <constraint firstItem="ill-09-nMU" firstAttribute="top" secondItem="2KH-gd-coI" secondAttribute="bottom" id="Ota-xo-Uc4"/>
+                            <constraint firstItem="C4I-xg-RyO" firstAttribute="trailing" secondItem="2KH-gd-coI" secondAttribute="trailing" id="XKY-0k-pvd"/>
+                            <constraint firstItem="ill-09-nMU" firstAttribute="leading" secondItem="C4I-xg-RyO" secondAttribute="leading" id="cpI-YH-vuj"/>
+                            <constraint firstItem="C4I-xg-RyO" firstAttribute="bottom" secondItem="zer-Db-mUB" secondAttribute="bottom" id="iVb-g7-mTG"/>
+                            <constraint firstItem="zer-Db-mUB" firstAttribute="top" secondItem="ill-09-nMU" secondAttribute="bottom" id="jk4-fE-b8x"/>
+                            <constraint firstItem="C4I-xg-RyO" firstAttribute="trailing" secondItem="zer-Db-mUB" secondAttribute="trailing" id="mWu-GD-sYg"/>
+                            <constraint firstItem="2KH-gd-coI" firstAttribute="top" secondItem="C4I-xg-RyO" secondAttribute="top" id="n5W-tE-YmI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C4I-xg-RyO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYJ-Y0-oSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2827" y="30"/>
+        </scene>
+        <!--Account Navigation View Controller-->
+        <scene sceneID="sB3-HA-gOg">
+            <objects>
+                <viewController id="P56-Nh-vru" customClass="AccountNavigationViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FwL-oc-Twl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hNm-hZ-1iA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hK-9K-FBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3564" y="27"/>
+        </scene>
+        <!--Balance View Controller-->
+        <scene sceneID="XFg-vg-gCX">
+            <objects>
+                <viewController id="uXY-1i-MwV" customClass="BalanceViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5td-dn-cjt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Z6X-rF-aZm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HR9-Cn-vUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4294" y="27"/>
+        </scene>
+        <!--Resources View Controller-->
+        <scene sceneID="20f-A4-huH">
+            <objects>
+                <viewController id="776-wQ-BcW" customClass="ResourcesViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="54E-mb-Q3c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dQ6-ui-eju"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1pS-Ix-Sve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5010" y="29"/>
+        </scene>
+        <!--Vote View Controller-->
+        <scene sceneID="HFr-qF-Gi9">
+            <objects>
+                <viewController id="BFH-di-g9c" customClass="VoteViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dya-vh-iOi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hJs-VR-7qO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNT-MW-f7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5695" y="27"/>
+        </scene>
         <!--Explore View Controller-->
         <scene sceneID="nuT-Hy-S2b">
             <objects>
@@ -511,7 +610,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m56-GT-PW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2080.8000000000002" y="796.55172413793105"/>
+            <point key="canvasLocation" x="2087" y="1295"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="p7s-Kf-lrM">
@@ -560,11 +659,12 @@
                         <outlet property="activityIndicator" destination="cc8-Rz-5d9" id="gXb-B3-WT7"/>
                         <outlet property="errorView" destination="J0R-Oe-E1L" id="s3A-lM-GKn"/>
                         <outlet property="searchTextField" destination="tM6-tU-nIZ" id="hJJ-2K-pHV"/>
+                        <segue destination="tgP-tV-kRI" kind="show" identifier="searchToAccount" id="tiU-62-5pJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51G-5F-se1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828" y="797"/>
+            <point key="canvasLocation" x="2834" y="1295"/>
         </scene>
         <!--Registered Block Producers View Controller-->
         <scene sceneID="HiQ-yd-EJP">
@@ -605,11 +705,12 @@
                         <outlet property="activityIndicator" destination="YKi-4J-dv2" id="yb6-CJ-X66"/>
                         <outlet property="errorView" destination="lK9-2P-2j5" id="HPz-Xg-gKe"/>
                         <outlet property="tableView" destination="P1s-qI-QEP" id="Uob-dN-KFe"/>
+                        <segue destination="tgP-tV-kRI" kind="show" identifier="registeredBlockProducersToAccount" id="tfG-Pv-tX3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPb-la-Q13" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3557.5999999999999" y="796.55172413793105"/>
+            <point key="canvasLocation" x="3564" y="1295"/>
         </scene>
     </scenes>
     <resources>
@@ -626,4 +727,7 @@
             <color red="0.90588235294117647" green="0.91764705882352937" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tfG-Pv-tX3"/>
+    </inferredMetricsTieBreakers>
 </document>
