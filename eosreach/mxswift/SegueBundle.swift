@@ -1,11 +1,14 @@
 import Foundation
 
 struct SegueBundle {
-    var identifier: String
-    var dictionary: [String: Any?]
+    let identifier: String
+    let model: BundleModel
 }
 
 protocol BundleSender {
     func setDestinationBundle(bundle: SegueBundle)
     func getDestinationBundle() -> SegueBundle?
+}
+
+protocol BundleModel {
 }

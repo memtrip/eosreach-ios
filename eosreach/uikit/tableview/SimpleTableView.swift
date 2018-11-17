@@ -69,7 +69,7 @@ class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDe
         )
     }
     
-    public var atBottom: ControlEvent<T> {
+    var atBottom: ControlEvent<T> {
         let source = rx.methodInvoked(#selector(UITableViewDelegate.tableView(_:willDisplay:forRowAt:))).filter { event in
             let indexPath = event[2] as! IndexPath
             return indexPath.row + 1 == self.data.count && !self.atEnd
@@ -81,7 +81,19 @@ class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDe
         return ControlEvent(events: source)
     }
     
+    var selected: ControlEvent<T> {
+        let source = rx.methodInvoked(#selector(UITableViewDelegate.tableView(_:didSelectRowAt:))).map { event -> T in
+            let indexPath = event[1] as! IndexPath
+            return self.data[indexPath.row]
+        }
+        
+        return ControlEvent(events: source)
+    }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

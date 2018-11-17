@@ -12,4 +12,8 @@ class EosPriceLastUpdated {
     func get() -> Double {
         return defaults.double(forKey: key)
     }
+    
+    func clear() {
+        defaults.removeObject(forKey: key)
+    }
 }

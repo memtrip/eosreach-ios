@@ -1,5 +1,6 @@
 {
 	"app_endpoint_url" = "http://eos.greymass.com/";
+	"app_reach_endpoint_url" = "https://eosreach.memtrip.com/";
 	"app_default_currency" = USD;
 	"app_dialog_ok" = OK;
 	"app_dialog_error_default_title" = Sorry;

@@ -1,5 +1,5 @@
 import Foundation
 
-struct AccountBundle {
+struct AccountBundle: BundleModel {
     let accountName: String
 }

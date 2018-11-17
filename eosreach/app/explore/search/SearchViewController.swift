@@ -29,6 +29,9 @@ class SearchViewController: MxViewController<SearchIntent, SearchResult, SearchV
                 .map { terms in SearchIntent.searchValueChanged(searchValue: terms!) },
             errorView.retryClick().map {
                 return SearchIntent.searchValueChanged(searchValue: self.searchTextField.text!)
+            },
+            dataTableView().selected.map { accountCardModel in
+                return SearchIntent.viewAccount(accountCardModel: accountCardModel)
             }
         )
     }
@@ -55,10 +58,7 @@ class SearchViewController: MxViewController<SearchIntent, SearchResult, SearchV
             dataTableView().clear()
             dataTableView().populate(data: [accountCardModel])
         case .viewAccount(let accountCardModel):
-            setDestinationBundle(bundle: SegueBundle(identifier: R.segue.searchViewController.searchToAccount.identifier, dictionary: [
-                "accountName": accountCardModel.accountName,
-                "balance": accountCardModel.balance
-            ]))
+            setDestinationBundle(bundle: SegueBundle(identifier: R.segue.searchViewController.searchToAccount.identifier, model: AccountBundle(accountName: accountCardModel.accountName)))
             performSegue(withIdentifier: R.segue.searchViewController.searchToAccount, sender: self)
         }
     }

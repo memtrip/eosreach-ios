@@ -4,14 +4,17 @@ import RxCocoa
 
 class AccountViewController: MxViewController<AccountIntent, AccountResult, AccountViewState, AccountViewModel> {
 
+    private lazy var accountBundle = {
+        return self.getDestinationBundle()!.model as! AccountBundle
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func intents() -> Observable<AccountIntent> {
         return Observable.merge(
-            Observable.just(AccountIntent.idle),
-            Observable.just(AccountIntent.idle)
+            Observable.just(AccountIntent.start(accountBundle: accountBundle(), page: AccountPage.balances))
         )
     }
 

@@ -1,6 +1,7 @@
 import Foundation
 
 enum AccountResult: MxResult {
+    case idle
     case balanceTabIdle
     case resourceTabIdle
     case voteTabIdle
