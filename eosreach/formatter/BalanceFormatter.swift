@@ -35,6 +35,6 @@ class BalanceFormatter {
     }
 
     static func formatBalanceDigits(amount: Double) -> String {
-        return String(format: "%.4", amount)
+        return String(format: "%.4f", amount)
     }
 }

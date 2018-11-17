@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="hra-w4-R5A" customClass="AccountCardCell" customModule="eosreach" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hra-w4-R5A" id="qIf-sS-t5j">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrk-0j-hSS" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="359" height="61.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_account_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVR-mC-xrj">
+                                <rect key="frame" x="8" y="8" width="123" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.0000 EOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-Jc-dsd">
+                                <rect key="frame" x="8" y="32.5" width="351" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="4v1-Jc-dsd" firstAttribute="leading" secondItem="xrk-0j-hSS" secondAttribute="leading" constant="8" id="0R4-8r-mv2"/>
+                            <constraint firstItem="sVR-mC-xrj" firstAttribute="top" secondItem="xrk-0j-hSS" secondAttribute="top" constant="8" id="8s7-B3-u9i"/>
+                            <constraint firstItem="4v1-Jc-dsd" firstAttribute="top" secondItem="sVR-mC-xrj" secondAttribute="bottom" constant="4" id="977-2n-gdA"/>
+                            <constraint firstAttribute="trailing" secondItem="4v1-Jc-dsd" secondAttribute="trailing" id="Pdd-sM-g8f"/>
+                            <constraint firstAttribute="bottom" secondItem="4v1-Jc-dsd" secondAttribute="bottom" constant="8" id="bal-BS-szJ"/>
+                            <constraint firstItem="sVR-mC-xrj" firstAttribute="leading" secondItem="xrk-0j-hSS" secondAttribute="leading" constant="8" id="wXs-rm-aeW"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUd-Ys-Nv3">
+                        <rect key="frame" x="0.0" y="77.5" width="375" height="52"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="FUd-Ys-Nv3" secondAttribute="bottom" id="7yh-ax-EDW"/>
+                    <constraint firstItem="xrk-0j-hSS" firstAttribute="top" secondItem="qIf-sS-t5j" secondAttribute="top" constant="8" id="93v-ub-58N"/>
+                    <constraint firstItem="xrk-0j-hSS" firstAttribute="leading" secondItem="qIf-sS-t5j" secondAttribute="leading" constant="8" id="KJx-t1-ET8"/>
+                    <constraint firstItem="FUd-Ys-Nv3" firstAttribute="leading" secondItem="qIf-sS-t5j" secondAttribute="leading" id="V1q-hB-RAR"/>
+                    <constraint firstAttribute="trailing" secondItem="FUd-Ys-Nv3" secondAttribute="trailing" id="cLd-Bn-wfB"/>
+                    <constraint firstAttribute="trailing" secondItem="xrk-0j-hSS" secondAttribute="trailing" constant="8" id="jk5-Vi-fT4"/>
+                    <constraint firstItem="FUd-Ys-Nv3" firstAttribute="top" secondItem="xrk-0j-hSS" secondAttribute="bottom" constant="8" id="w8o-jp-jKG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="accountBalanceLabel" destination="4v1-Jc-dsd" id="zIj-Ig-CJ8"/>
+                <outlet property="accountNameLabel" destination="sVR-mC-xrj" id="ZFC-Ak-PUh"/>
+            </connections>
+            <point key="canvasLocation" x="-101.59999999999999" y="146.62668665667167"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="typographyColorPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

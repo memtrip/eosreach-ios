@@ -8,7 +8,7 @@ class RegisteredBlockProducersTableView : SimpleTableView<RegisteredBlockProduce
     }
 
     override func cellId() -> String {
-        return "RegisteredBlockProducersTableView"
+        return "RegisteredBlockProducersCell"
     }
 
     override func createCell(tableView: UITableView, indexPath: IndexPath) -> RegisteredBlockProducersCell {

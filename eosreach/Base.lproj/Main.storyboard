@@ -522,28 +522,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tM6-tU-nIZ" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="16" y="52" width="343" height="30"/>
+                                <rect key="frame" x="8" y="52" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCR-XF-cHE">
-                                <rect key="frame" x="16" y="98" width="343" height="553"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0R-Oe-E1L" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                             </view>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-3v-1pz" customClass="AccountCardTableView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-Rz-5d9" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="169" y="114" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="rCR-XF-cHE" firstAttribute="leading" secondItem="bP6-Ma-BG9" secondAttribute="leading" constant="16" id="6Fb-zq-0la"/>
-                            <constraint firstItem="bP6-Ma-BG9" firstAttribute="trailing" secondItem="rCR-XF-cHE" secondAttribute="trailing" constant="16" id="Ufe-EI-IAQ"/>
-                            <constraint firstItem="bP6-Ma-BG9" firstAttribute="bottom" secondItem="rCR-XF-cHE" secondAttribute="bottom" constant="16" id="Zsn-AP-crh"/>
-                            <constraint firstItem="tM6-tU-nIZ" firstAttribute="leading" secondItem="bP6-Ma-BG9" secondAttribute="leading" constant="16" id="haw-XB-eE2"/>
-                            <constraint firstItem="rCR-XF-cHE" firstAttribute="top" secondItem="tM6-tU-nIZ" secondAttribute="bottom" constant="16" id="n2D-bu-2rn"/>
+                            <constraint firstItem="cc8-Rz-5d9" firstAttribute="top" secondItem="tM6-tU-nIZ" secondAttribute="bottom" constant="32" id="4B8-VZ-KJz"/>
+                            <constraint firstItem="bP6-Ma-BG9" firstAttribute="bottom" secondItem="J0R-Oe-E1L" secondAttribute="bottom" id="CfK-8n-m2H"/>
+                            <constraint firstItem="J0R-Oe-E1L" firstAttribute="top" secondItem="tM6-tU-nIZ" secondAttribute="bottom" constant="8" id="Uux-3I-mAD"/>
+                            <constraint firstItem="bP6-Ma-BG9" firstAttribute="trailing" secondItem="J0R-Oe-E1L" secondAttribute="trailing" id="UvT-Le-6kI"/>
+                            <constraint firstItem="J0R-Oe-E1L" firstAttribute="leading" secondItem="bP6-Ma-BG9" secondAttribute="leading" id="cKa-W1-2G4"/>
+                            <constraint firstItem="cc8-Rz-5d9" firstAttribute="centerX" secondItem="iAE-3v-1pz" secondAttribute="centerX" id="dmd-Xb-HI4"/>
+                            <constraint firstItem="iAE-3v-1pz" firstAttribute="top" secondItem="tM6-tU-nIZ" secondAttribute="bottom" constant="8" id="evg-s5-Cjb"/>
+                            <constraint firstItem="tM6-tU-nIZ" firstAttribute="leading" secondItem="bP6-Ma-BG9" secondAttribute="leading" constant="8" id="haw-XB-eE2"/>
+                            <constraint firstItem="iAE-3v-1pz" firstAttribute="leading" secondItem="bP6-Ma-BG9" secondAttribute="leading" id="jsK-qd-Lvf"/>
                             <constraint firstItem="tM6-tU-nIZ" firstAttribute="top" secondItem="bP6-Ma-BG9" secondAttribute="top" constant="32" id="q3h-yw-wak"/>
-                            <constraint firstItem="bP6-Ma-BG9" firstAttribute="trailing" secondItem="tM6-tU-nIZ" secondAttribute="trailing" constant="16" id="vLN-5t-SB2"/>
+                            <constraint firstItem="bP6-Ma-BG9" firstAttribute="trailing" secondItem="iAE-3v-1pz" secondAttribute="trailing" id="sTJ-B8-lfE"/>
+                            <constraint firstItem="bP6-Ma-BG9" firstAttribute="bottom" secondItem="iAE-3v-1pz" secondAttribute="bottom" id="v5k-9R-huw"/>
+                            <constraint firstItem="bP6-Ma-BG9" firstAttribute="trailing" secondItem="tM6-tU-nIZ" secondAttribute="trailing" constant="8" id="vLN-5t-SB2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bP6-Ma-BG9"/>
                     </view>
                     <connections>
-                        <outlet property="searchResultContainer" destination="rCR-XF-cHE" id="QMb-SB-9xS"/>
+                        <outlet property="accountCardTableView" destination="iAE-3v-1pz" id="4CR-Wu-Ljg"/>
+                        <outlet property="activityIndicator" destination="cc8-Rz-5d9" id="gXb-B3-WT7"/>
+                        <outlet property="errorView" destination="J0R-Oe-E1L" id="s3A-lM-GKn"/>
                         <outlet property="searchTextField" destination="tM6-tU-nIZ" id="hJJ-2K-pHV"/>
                     </connections>
                 </viewController>
