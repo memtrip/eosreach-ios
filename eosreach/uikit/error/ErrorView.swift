@@ -36,7 +36,7 @@ class ErrorView : UIView {
     }
     
     func populate(title: String, body: String) {
-        titleLabel.text = body
+        titleLabel.text = title
         bodyLabel.text = body
     }
 

@@ -23,6 +23,9 @@ class RegisteredBlockProducersViewController
             },
             dataTableView().atBottom.map { data in
                 return RegisteredBlockProducersIntent.loadMore(lastAccountName: data.owner)
+            },
+            dataTableView().selected.map { blockProducer in
+                return RegisteredBlockProducersIntent.registeredBlockProducersSelected(accountName: blockProducer.owner)
             }
         )
     }
@@ -63,7 +66,8 @@ class RegisteredBlockProducersViewController
                 UIApplication.shared.open(url, options: [:])
             }
         case .registeredBlockProducersSelected(let accountName):
-            break // todo
+            setDestinationBundle(bundle: SegueBundle(identifier: R.segue.registeredBlockProducersViewController.registeredBlockProducersToAccount.identifier, model: AccountBundle(accountName: accountName)))
+            performSegue(withIdentifier: R.segue.registeredBlockProducersViewController.registeredBlockProducersToAccount, sender: self)
         }
     }
 
