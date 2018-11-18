@@ -18,5 +18,6 @@ extension ReachActivityIndicator {
 
     func stop() {
         isHidden = true
+        stopAnimating()
     }
 }

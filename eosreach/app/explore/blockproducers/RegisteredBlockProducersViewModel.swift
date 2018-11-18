@@ -5,37 +5,6 @@ class RegisteredBlockProducersViewModel: MxViewModel<RegisteredBlockProducersInt
 
     private let registeredBlockProducerRequest = RegisteredBlockProducerRequestImpl()
 
-    private func getRegisteredBlockProducers(nextAccount: String = "") -> Observable<RegisteredBlockProducersResult> {
-        let limit = 200
-        return registeredBlockProducerRequest.getProducers(limit: limit, lowerLimit: nextAccount).map { result in
-            if (result.success()) {
-                if (result.data!.count < limit) {
-                    return RegisteredBlockProducersResult.onSuccess(registeredBlockProducers: result.data!, more: false)
-                } else {
-                    return RegisteredBlockProducersResult.onSuccess(registeredBlockProducers: result.data!, more: true)
-                }
-            } else {
-                return self.onError(nextAccount: nextAccount)
-            }
-        }.asObservable().startWith(self.onProgress(nextAccount: nextAccount))
-    }
-    
-    private func onError(nextAccount: String) -> RegisteredBlockProducersResult {
-        if (nextAccount.count == 0) {
-            return RegisteredBlockProducersResult.onError
-        } else {
-            return RegisteredBlockProducersResult.onLoadMoreError
-        }
-    }
-    
-    private func onProgress(nextAccount: String) -> RegisteredBlockProducersResult {
-        if (nextAccount.count == 0) {
-            return RegisteredBlockProducersResult.onProgress
-        } else {
-            return RegisteredBlockProducersResult.onLoadMoreProgress
-        }
-    }
-
     override func dispatcher(intent: RegisteredBlockProducersIntent) -> Observable<RegisteredBlockProducersResult> {
         switch intent {
         case .idle:
@@ -73,6 +42,37 @@ class RegisteredBlockProducersViewModel: MxViewModel<RegisteredBlockProducersInt
             return RegisteredBlockProducersViewState.websiteSelected(url: url)
         case .registeredBlockProducersSelected(let accountName):
             return RegisteredBlockProducersViewState.registeredBlockProducersSelected(accountName: accountName)
+        }
+    }
+    
+    private func getRegisteredBlockProducers(nextAccount: String = "") -> Observable<RegisteredBlockProducersResult> {
+        let limit = 200
+        return registeredBlockProducerRequest.getProducers(limit: limit, lowerLimit: nextAccount).map { result in
+            if (result.success()) {
+                if (result.data!.count < limit) {
+                    return RegisteredBlockProducersResult.onSuccess(registeredBlockProducers: result.data!, more: false)
+                } else {
+                    return RegisteredBlockProducersResult.onSuccess(registeredBlockProducers: result.data!, more: true)
+                }
+            } else {
+                return self.onError(nextAccount: nextAccount)
+            }
+            }.asObservable().startWith(self.onProgress(nextAccount: nextAccount))
+    }
+    
+    private func onError(nextAccount: String) -> RegisteredBlockProducersResult {
+        if (nextAccount.count == 0) {
+            return RegisteredBlockProducersResult.onError
+        } else {
+            return RegisteredBlockProducersResult.onLoadMoreError
+        }
+    }
+    
+    private func onProgress(nextAccount: String) -> RegisteredBlockProducersResult {
+        if (nextAccount.count == 0) {
+            return RegisteredBlockProducersResult.onProgress
+        } else {
+            return RegisteredBlockProducersResult.onLoadMoreProgress
         }
     }
 }

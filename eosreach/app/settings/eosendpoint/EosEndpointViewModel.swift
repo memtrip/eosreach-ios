@@ -17,7 +17,9 @@ class EosEndpointViewModel: MxViewModel<EosEndpointIntent, EosEndpointResult, Eo
     override func reducer(previousState: EosEndpointViewState, result: EosEndpointResult) -> EosEndpointViewState {
         switch result {
         case .idle:
-            return previousState
+            return previousState.copy(copy: { copy in
+                copy.view = EosEndpointViewState.View.idle
+            })
         case .onProgress:
             return previousState.copy(copy: { copy in
                 copy.view = EosEndpointViewState.View.onProgress

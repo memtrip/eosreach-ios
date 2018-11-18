@@ -5,28 +5,6 @@ class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewSta
 
     private let accountUseCase = AccountUseCase()
     
-    private func getAccount(accountName: String) -> Observable<AccountResult> {
-        return accountUseCase.getAccountDetails(
-            contractName: "eosio.token",
-            accountName: accountName
-        ).map { accountView in
-            if (accountView.success()) {
-                return AccountResult.onSuccess(accountView: accountView)
-            } else {
-                return self.onError(error: accountView.error!)
-            }
-        }.asObservable().startWith(AccountResult.onProgress(accountName: accountName))
-    }
-    
-    private func onError(error: AccountViewError) -> AccountResult {
-        switch error {
-        case .fetchingAccount:
-            return AccountResult.onErrorFetchingAccount
-        case .fetchingBalances:
-            return AccountResult.onErrorFetchingBalances
-        }
-    }
-    
     override func dispatcher(intent: AccountIntent) -> Observable<AccountResult> {
         switch intent {
         case .idle:
@@ -53,7 +31,9 @@ class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewSta
     override func reducer(previousState: AccountViewState, result: AccountResult) -> AccountViewState {
         switch result {
         case .idle:
-            return previousState
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.idle
+            })
         case .balanceTabIdle:
             return previousState.copy(copy: { copy in
                 copy.view = AccountViewState.View.idle
@@ -93,6 +73,28 @@ class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewSta
             return previousState.copy(copy: { copy in
                 copy.view = AccountViewState.View.onErrorFetchingBalances
             })
+        }
+    }
+    
+    private func getAccount(accountName: String) -> Observable<AccountResult> {
+        return accountUseCase.getAccountDetails(
+            contractName: "eosio.token",
+            accountName: accountName
+        ).map { accountView in
+            if (accountView.success()) {
+                return AccountResult.onSuccess(accountView: accountView)
+            } else {
+                return self.onError(error: accountView.error!)
+            }
+        }.asObservable().startWith(AccountResult.onProgress(accountName: accountName))
+    }
+    
+    private func onError(error: AccountViewError) -> AccountResult {
+        switch error {
+        case .fetchingAccount:
+            return AccountResult.onErrorFetchingAccount
+        case .fetchingBalances:
+            return AccountResult.onErrorFetchingBalances
         }
     }
 }

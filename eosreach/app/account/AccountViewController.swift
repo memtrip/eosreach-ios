@@ -42,6 +42,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setToolbar(toolbar: toolbar)
         balanceTabItem.title = R.string.accountStrings.account_tab_balance()
         resourcesTabItem.title = R.string.accountStrings.account_tab_resources()
         voteTabItem.title = R.string.accountStrings.account_tab_vote()
@@ -52,7 +53,10 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
 
     override func intents() -> Observable<AccountIntent> {
         return Observable.merge(
-            Observable.just(AccountIntent.start(accountBundle: accountBundle, page: AccountPage.balances))
+            Observable.just(AccountIntent.start(accountBundle: accountBundle, page: AccountPage.balances)),
+            errorView.retryClick().map {
+                return AccountIntent.retry(accountBundle: self.accountBundle)
+            }
         )
     }
 
@@ -92,6 +96,8 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         toolbar.title = accountView.eosAccount!.accountName
         activityIndicator.stop()
         balancesContainer.visible()
+        tabBar.visible()
+        containerView.visible()
         
         switch page {
         case .balances:
@@ -174,7 +180,6 @@ class AccountRenderer {
             break
         case .onProgress:
             layout.showProgress()
-            break
         case .onSuccess:
             let balances = state.accountView!.balances!.balances
             let eosPrice = state.accountView!.eosPrice!
@@ -192,13 +197,10 @@ class AccountRenderer {
             } else {
                 self.layout.showPriceUnavailable()
             }
-            break
         case .onErrorFetchingAccount:
             layout.showGetAccountError()
-            break
         case .onErrorFetchingBalances:
             layout.showGetBalancesError()
-            break
         }
     }
 }

@@ -4,7 +4,7 @@ import RxCocoa
 
 class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDelegate, UITableViewDataSource {
 
-    private var data = [T]()
+    var data = [T]()
     
     var atEnd = false
 

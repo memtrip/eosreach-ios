@@ -16,6 +16,8 @@ class EosPriceUseCase {
         } else {
             return eosPriceRequest.getPrice(currencyCode: eosPriceCurrencyPair.get()).map { response in
                 if (response.success()) {
+                    self.eosPriceLastUpdated.put(value: Date().timeIntervalSince1970)
+                    self.eosPriceValue.put(value: Float(response.data!.value))
                     return EosPrice(value: Double(self.eosPriceValue.get()), currency: self.eosPriceCurrencyPair.get())
                 } else {
                     return EosPrice.unavailable()
@@ -38,6 +40,6 @@ class EosPriceUseCase {
     }
     
     private func expired(lastUpdated: Double) -> Bool {
-        return lastUpdated > (Date().timeIntervalSince1970 - TEN_MINUTES)
+        return lastUpdated == 0 || lastUpdated > (Date().timeIntervalSince1970 - TEN_MINUTES)
     }
 }

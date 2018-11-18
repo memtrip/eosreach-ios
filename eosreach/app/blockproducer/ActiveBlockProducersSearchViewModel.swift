@@ -13,7 +13,7 @@ class ActiveBlockProducersViewModel: MxViewModel<ActiveBlockProducersIntent, Act
     override func reducer(previousState: ActiveBlockProducersViewState, result: ActiveBlockProducersResult) -> ActiveBlockProducersViewState {
         switch result {
         case .idle:
-            return previousState
+            return ActiveBlockProducersViewState.idle
         }
     }
 }

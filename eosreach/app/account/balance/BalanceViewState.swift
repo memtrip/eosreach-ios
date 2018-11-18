@@ -1,8 +1,8 @@
 import Foundation
 
-struct BalanceViewState: MxViewState {
-    let view: View
-    let accountBalances: AccountBalanceList = AccountBalanceList(balances: [])
+struct BalanceViewState: MxViewState, Copy {
+    var view: View
+    var accountBalances: AccountBalanceList = AccountBalanceList(balances: [])
     
     enum View {
         case idle

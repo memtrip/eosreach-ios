@@ -39,6 +39,6 @@ class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, Bala
     }
 
     override func provideViewModel() -> BalanceViewModel {
-        return BalanceViewModel(initialState: BalanceViewState(view: BalanceViewState.View.idle))
+        return BalanceViewModel(initialState: BalanceViewState(view: BalanceViewState.View.idle, accountBalances: AccountBalanceList(balances: [])))
     }
 }
