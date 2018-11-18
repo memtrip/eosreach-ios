@@ -14,3 +14,9 @@ extension Scope {
 
 extension NSObject: Scope {
 }
+
+extension Array {
+    func isNotEmpty() -> Bool {
+        return self.count > 0
+    }
+}

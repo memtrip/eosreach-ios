@@ -42,13 +42,13 @@ class RegisteredBlockProducersViewController
         case .empty:
             activityIndicator.stop()
             errorView.visible()
-            errorView.popuate(body: R.string.exploreStrings.explore_registered_block_producers_empty_error())
+            errorView.populate(body: R.string.exploreStrings.explore_registered_block_producers_empty_error())
         case .onLoadMoreProgress:
             break // todo
         case .onError:
             activityIndicator.stop()
             errorView.visible()
-            errorView.popuate(body: R.string.exploreStrings.explore_registered_block_producers_generic_error())
+            errorView.populate(body: R.string.exploreStrings.explore_registered_block_producers_generic_error())
         case .onLoadMoreError:
             break // todo
         case .onSuccess(let registeredBlockProducers, let more):

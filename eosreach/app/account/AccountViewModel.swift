@@ -3,23 +3,28 @@ import RxSwift
 
 class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewState> {
 
-    /*
-     is AccountIntent.Init -> getAccount(intent.accountBundle.accountName)
-     .startWith(AccountRenderAction.OnProgressWithStartingTab(
-     intent.accountBundle.accountName,
-     intent.page))
-     is AccountIntent.Retry -> getAccount(intent.accountBundle.accountName)
-     .startWith(AccountRenderAction.OnProgress(
-     intent.accountBundle.accountName))
-     is AccountIntent.Refresh -> getAccount(intent.accountBundle.accountName)
-     .startWith(AccountRenderAction.OnProgress(
-     intent.accountBundle.accountName))
-     AccountIntent.BalanceTabIdle -> Observable.just(AccountRenderAction.BalanceTabIdle)
-     AccountIntent.ResourceTabIdle -> Observable.just(AccountRenderAction.ResourceTabIdle)
-     AccountIntent.VoteTabIdle -> Observable.just(AccountRenderAction.VoteTabIdle)
-    */
+    private let accountUseCase = AccountUseCase()
+    
     private func getAccount(accountName: String) -> Observable<AccountResult> {
-        fatalError()
+        return accountUseCase.getAccountDetails(
+            contractName: "eosio.token",
+            accountName: accountName
+        ).map { accountView in
+            if (accountView.success()) {
+                return AccountResult.onSuccess(accountView: accountView)
+            } else {
+                return self.onError(error: accountView.error!)
+            }
+        }.asObservable().startWith(AccountResult.onProgress(accountName: accountName))
+    }
+    
+    private func onError(error: AccountViewError) -> AccountResult {
+        switch error {
+        case .fetchingAccount:
+            return AccountResult.onErrorFetchingAccount
+        case .fetchingBalances:
+            return AccountResult.onErrorFetchingBalances
+        }
     }
     
     override func dispatcher(intent: AccountIntent) -> Observable<AccountResult> {
@@ -50,21 +55,44 @@ class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewSta
         case .idle:
             return previousState
         case .balanceTabIdle:
-            fatalError()
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.idle
+                copy.page = AccountPage.balances
+            })
         case .resourceTabIdle:
-            fatalError()
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.idle
+                copy.page = AccountPage.resources
+            })
         case .voteTabIdle:
-            fatalError()
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.idle
+                copy.page = AccountPage.vote
+            })
         case .onProgress(let accountName):
-            fatalError()
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.onProgress
+                copy.accountName = accountName
+            })
         case .onProgressWithStartingTab(let accountName, let page):
-            fatalError()
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.onProgress
+                copy.accountName = accountName
+                copy.page = page
+            })
         case .onSuccess(let accountView):
-            fatalError()
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.onSuccess
+                copy.accountView = accountView
+            })
         case .onErrorFetchingAccount:
-            fatalError()
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.onErrorFetchingAccount
+            })
         case .onErrorFetchingBalances:
-            fatalError()
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.onErrorFetchingBalances
+            })
         }
     }
 }

@@ -51,7 +51,7 @@ class SearchViewController: MxViewController<SearchIntent, SearchResult, SearchV
         case .onError:
             activityIndicator.stop()
             errorView.visible()
-            errorView.popuate(body: R.string.exploreStrings.explore_search_error_body())
+            errorView.populate(body: R.string.exploreStrings.explore_search_error_body())
         case .onSuccess(let accountCardModel):
             activityIndicator.stop()
             dataTableView().visible()

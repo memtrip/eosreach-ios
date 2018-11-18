@@ -6,6 +6,22 @@ struct ContractAccountBalance {
     let balance: Balance
     let exchangeRate: EosPrice
     let unavailable: Bool
+    
+    init(contractName: String, accountName: String, balance: Balance, exchangeRate: EosPrice) {
+        self.contractName = contractName
+        self.accountName = accountName
+        self.balance = balance
+        self.exchangeRate = exchangeRate
+        self.unavailable = false
+    }
+    
+    init(contractName: String, accountName: String, balance: Balance, exchangeRate: EosPrice, unavailable: Bool) {
+        self.contractName = contractName
+        self.accountName = accountName
+        self.balance = balance
+        self.exchangeRate = exchangeRate
+        self.unavailable = unavailable
+    }
 
     static func unavailable() -> ContractAccountBalance {
         return ContractAccountBalance(

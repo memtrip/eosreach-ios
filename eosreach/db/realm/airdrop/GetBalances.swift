@@ -4,13 +4,14 @@ import RealmSwift
 
 class GetBalances {
     
-    func select() -> Single<[BalanceEntity]> {
+    func select(accountName: String) -> Single<[BalanceEntity]> {
         return Single.create { single in
             do {
                 let realm = try Realm()
                 try realm.write {
                     let results = realm
                         .objects(BalanceEntity.self)
+                        .filter("accountName = %@", accountName)
                     single(.success(Array(results)))
                 }
             } catch {

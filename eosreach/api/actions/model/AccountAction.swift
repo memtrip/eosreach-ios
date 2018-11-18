@@ -46,7 +46,7 @@ struct AccountAction {
 
     static func parseCurrencyPair(balance: Balance, contractAccountBalance: ContractAccountBalance) -> String {
         if (!contractAccountBalance.exchangeRate.unavailable) {
-            return CurrencyPairFormatter.formatAmountCurrencyPairValue(cryptoAmount: balance.amount, eosPrice: contractAccountBalance.exchangeRate)
+            return CurrencyPairFormatter.formatAmountCurrencyPairValue(amount: balance.amount, eosPrice: contractAccountBalance.exchangeRate)
         } else {
             return "-"
         }

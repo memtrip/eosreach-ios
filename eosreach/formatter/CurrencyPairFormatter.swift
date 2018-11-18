@@ -2,11 +2,11 @@ import Foundation
 
 struct CurrencyPairFormatter {
 
-    static func formatAmountCurrencyPairValue(cryptoAmount: Double, eosPrice: EosPrice) -> String {
+    static func formatAmountCurrencyPairValue(amount: Double, eosPrice: EosPrice) -> String {
         if (eosPrice.unavailable) {
             return ""
         } else {
-            let fiatPrice = cryptoAmount * eosPrice.value
+            let fiatPrice = amount * eosPrice.value
             return formatCurrencyPairValue(price: fiatPrice, currencyCode: eosPrice.currency)
         }
     }

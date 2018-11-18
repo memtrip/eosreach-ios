@@ -1,20 +1,20 @@
 import Foundation
 
-struct AccountViewState: MxViewState {
-    let view: View
-    let accountName: String? = nil
-    let accountView: AccountView? = nil
+struct AccountViewState: MxViewState, Copy {
+    var view: View
+    var accountName: String? = nil
+    var accountView: AccountView? = nil
+    var page: AccountPage = AccountPage.balances
+    
+    init(view: View) {
+        self.view = view
+    }
     
     enum View {
         case idle
-        case populate(exchangeRateCurrency: String)
-        case navigateToCurrencyPairing
-        case navigateToEosEndpoint
-        case navigateToPrivateKeys
-        case navigateToViewConfirmedTransactions
-        case navigateToTelegram
-        case confirmClearData
-        case navigateToEntry
-        case navigateToAuthor
+        case onProgress
+        case onSuccess
+        case onErrorFetchingAccount
+        case onErrorFetchingBalances
     }
 }

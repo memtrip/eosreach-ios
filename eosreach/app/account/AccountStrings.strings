@@ -1,3 +1,11 @@
 {
-	"account_title" = "";
+	"account_tab_balance" = Balance;
+	"account_tab_resources" = Resources;
+	"account_tab_vote" = Vote;
+	"account_available_balance_unavailable_value" = "-";
+	"account_available_balance_unavailable_label" = unavailable;
+	"account_error_get_account_title" = "Failed to fetch account";
+	"account_error_get_account_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
+	"account_error_get_balances_title" = "Failed to fetch account balances";
+	"account_error_get_balances_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
 }
