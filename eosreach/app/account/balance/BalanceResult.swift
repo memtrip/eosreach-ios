@@ -3,7 +3,7 @@ import Foundation
 enum BalanceResult: MxResult {
     case idle
     case populate(accountBalances: AccountBalanceList)
-    case onAirdropError(message: String)
+    case onAirdropError
     case onAirdropSuccess
     case onAirdropProgress
     case navigateToCreateAccount
