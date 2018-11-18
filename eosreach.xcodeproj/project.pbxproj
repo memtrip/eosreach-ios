@@ -63,6 +63,9 @@
 		3C340FD82193801B0017BEF9 /* CurrencyPairingViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FD32193801B0017BEF9 /* CurrencyPairingViewState.swift */; };
 		3C340FD92193801B0017BEF9 /* CurrencyPairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FD42193801B0017BEF9 /* CurrencyPairingViewController.swift */; };
 		3C340FDB219383210017BEF9 /* ReachTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FDA219383210017BEF9 /* ReachTextField.swift */; };
+		3C4406A921A1ED9B003BBFA9 /* BalanceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4406A821A1ED9B003BBFA9 /* BalanceTableView.swift */; };
+		3C4406AB21A1EDBC003BBFA9 /* BalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4406AA21A1EDBC003BBFA9 /* BalanceCell.swift */; };
+		3C4406AD21A1EED2003BBFA9 /* BalanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4406AC21A1EED2003BBFA9 /* BalanceCell.xib */; };
 		3C5799C52191D27D00B9A3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */; };
 		3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799C82191D27D00B9A3D7 /* Main.storyboard */; };
 		3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
@@ -295,6 +298,9 @@
 		3C340FD32193801B0017BEF9 /* CurrencyPairingViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyPairingViewState.swift; sourceTree = "<group>"; };
 		3C340FD42193801B0017BEF9 /* CurrencyPairingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyPairingViewController.swift; sourceTree = "<group>"; };
 		3C340FDA219383210017BEF9 /* ReachTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachTextField.swift; sourceTree = "<group>"; };
+		3C4406A821A1ED9B003BBFA9 /* BalanceTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableView.swift; sourceTree = "<group>"; };
+		3C4406AA21A1EDBC003BBFA9 /* BalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCell.swift; sourceTree = "<group>"; };
+		3C4406AC21A1EED2003BBFA9 /* BalanceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceCell.xib; sourceTree = "<group>"; };
 		3C5799C12191D27D00B9A3D7 /* eosreach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eosreach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5799C92191D27D00B9A3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -679,6 +685,9 @@
 				3C6DF77821A08B5100ADA892 /* BalanceViewController.swift */,
 				3C6DF77921A08B5100ADA892 /* BalanceViewModel.swift */,
 				3C6DF77721A08B5100ADA892 /* BalanceViewState.swift */,
+				3C4406A821A1ED9B003BBFA9 /* BalanceTableView.swift */,
+				3C4406AA21A1EDBC003BBFA9 /* BalanceCell.swift */,
+				3C4406AC21A1EED2003BBFA9 /* BalanceCell.xib */,
 			);
 			path = balance;
 			sourceTree = "<group>";
@@ -1254,6 +1263,7 @@
 				3C6DF76E21A082AC00ADA892 /* AccountStrings.strings in Resources */,
 				3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */,
 				3CC9A3CA219DCF900002A25F /* ErrorView.xib in Resources */,
+				3C4406AD21A1EED2003BBFA9 /* BalanceCell.xib in Resources */,
 				3C964C4221944367003663EF /* AppStrings.strings in Resources */,
 				3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */,
 				3CC9A3D7219DF2B90002A25F /* RegisteredBlockProducersCell.xib in Resources */,
@@ -1516,6 +1526,7 @@
 				3C340FCA2193612A0017BEF9 /* SettingsIntent.swift in Sources */,
 				3C0ADD8A219F37B10026649F /* InsertAccountsForPublicKey.swift in Sources */,
 				3C340FC72193612A0017BEF9 /* SettingsViewModel.swift in Sources */,
+				3C4406A921A1ED9B003BBFA9 /* BalanceTableView.swift in Sources */,
 				3C8C6D962192D52500FC1A0D /* MxViewModel.swift in Sources */,
 				3CC9A3AB219DB2BA0002A25F /* EosCreateAccountRequestImpl.swift in Sources */,
 				3C964C4C2194469B003663EF /* PurgeUserDefaults.swift in Sources */,
@@ -1585,6 +1596,7 @@
 				3C8C6D9C2192D58E00FC1A0D /* Copy.swift in Sources */,
 				3C6DF78821A08D8700ADA892 /* VoteViewController.swift in Sources */,
 				3CC9A3D3219DF14D0002A25F /* RegisteredBlockProducersTableView.swift in Sources */,
+				3C4406AB21A1EDBC003BBFA9 /* BalanceCell.swift in Sources */,
 				3CC9A3BF219DC0F90002A25F /* HistoryApiModule.swift in Sources */,
 				3CC9A3B9219DBBFA0002A25F /* RamPriceRequest.swift in Sources */,
 				3C14FA4421A0A31A00B8255F /* EosPriceRequestImpl.swift in Sources */,

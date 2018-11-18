@@ -6,6 +6,5 @@ enum BalanceResult: MxResult {
     case onAirdropError
     case onAirdropSuccess
     case onAirdropProgress
-    case navigateToCreateAccount
     case navigateToActions(contractAccountBalance: ContractAccountBalance)
 }

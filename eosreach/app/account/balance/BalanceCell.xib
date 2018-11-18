@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="tB0-ei-feJ" customClass="BalanceCell" customModule="eosreach" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tB0-ei-feJ" id="goX-I0-nfR">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJW-rJ-mLj" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="359" height="61.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_account_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Av-ha-pDg" userLabel="Symbol">
+                                <rect key="frame" x="8" y="8" width="351" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.0000 EOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thS-T0-KeI" userLabel="Amount">
+                                <rect key="frame" x="8" y="32.5" width="351" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="thS-T0-KeI" firstAttribute="top" secondItem="3Av-ha-pDg" secondAttribute="bottom" constant="4" id="7Es-w4-gkS"/>
+                            <constraint firstItem="3Av-ha-pDg" firstAttribute="top" secondItem="hJW-rJ-mLj" secondAttribute="top" constant="8" id="IaE-3a-vdd"/>
+                            <constraint firstItem="3Av-ha-pDg" firstAttribute="leading" secondItem="hJW-rJ-mLj" secondAttribute="leading" constant="8" id="LYY-r5-P37"/>
+                            <constraint firstAttribute="bottom" secondItem="thS-T0-KeI" secondAttribute="bottom" constant="8" id="itC-Wf-ad9"/>
+                            <constraint firstAttribute="trailing" secondItem="thS-T0-KeI" secondAttribute="trailing" id="jFf-nR-hLf"/>
+                            <constraint firstItem="thS-T0-KeI" firstAttribute="leading" secondItem="hJW-rJ-mLj" secondAttribute="leading" constant="8" id="osb-1N-w1d"/>
+                            <constraint firstAttribute="trailing" secondItem="3Av-ha-pDg" secondAttribute="trailing" id="sT4-CF-OtW"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCP-lq-xmb">
+                        <rect key="frame" x="0.0" y="77.5" width="375" height="52"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MCP-lq-xmb" firstAttribute="top" secondItem="hJW-rJ-mLj" secondAttribute="bottom" constant="8" id="IvT-Lj-Tme"/>
+                    <constraint firstAttribute="trailing" secondItem="MCP-lq-xmb" secondAttribute="trailing" id="avE-IC-dJ9"/>
+                    <constraint firstItem="hJW-rJ-mLj" firstAttribute="top" secondItem="goX-I0-nfR" secondAttribute="top" constant="8" id="drB-fn-M2F"/>
+                    <constraint firstAttribute="bottom" secondItem="MCP-lq-xmb" secondAttribute="bottom" id="fuB-kR-dX8"/>
+                    <constraint firstAttribute="trailing" secondItem="hJW-rJ-mLj" secondAttribute="trailing" constant="8" id="srX-3V-D1x"/>
+                    <constraint firstItem="MCP-lq-xmb" firstAttribute="leading" secondItem="goX-I0-nfR" secondAttribute="leading" id="vH6-hY-mKc"/>
+                    <constraint firstItem="hJW-rJ-mLj" firstAttribute="leading" secondItem="goX-I0-nfR" secondAttribute="leading" constant="8" id="yoM-Sz-HNd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="amount" destination="thS-T0-KeI" id="EU8-n5-M4T"/>
+                <outlet property="symbol" destination="3Av-ha-pDg" id="iIU-OI-8M9"/>
+            </connections>
+            <point key="canvasLocation" x="214" y="146"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="typographyColorPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

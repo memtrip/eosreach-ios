@@ -2,8 +2,19 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, BalanceViewState, BalanceViewModel> {
+class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, BalanceViewState, BalanceViewModel>, DataTableView {
 
+    typealias tableViewType = BalanceTableView
+
+    @IBOutlet weak var scanForAirdrops: ReachButton!
+    @IBOutlet weak var tokens: UILabel!
+    @IBOutlet weak var noBalances: UILabel!
+    @IBOutlet weak var balancesTableView: UITableView!
+    
+    func dataTableView() -> BalanceTableView {
+        return balancesTableView as! BalanceTableView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,16 +33,14 @@ class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, Bala
     override func render(state: BalanceViewState) {
         switch state.view {
         case .idle:
-            print("")
+            break
         case .populate:
-            print("")
+            dataTableView().populate(data: state.accountBalances.balances)
         case .onAirdropError:
             print("")
         case .onAirdropProgress:
             print("")
         case .onAirdropSuccess:
-            print("")
-        case .navigateToCreateAccount:
             print("")
         case .navigateToActions(let contractAccountBalance):
             print("")

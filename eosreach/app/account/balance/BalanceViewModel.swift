@@ -16,8 +16,6 @@ class BalanceViewModel: MxViewModel<BalanceIntent, BalanceResult, BalanceViewSta
             return just(BalanceResult.populate(accountBalances: accountBalances))
         case .scanForAirdropTokens(let accountName):
             return scanForAirdropTokens(accountName: accountName)
-        case .navigateToCreateAccount:
-            return just(BalanceResult.navigateToCreateAccount)
         case .navigateToActions(let balance):
             return just(BalanceResult.navigateToActions(contractAccountBalance: balance))
         }
@@ -45,10 +43,6 @@ class BalanceViewModel: MxViewModel<BalanceIntent, BalanceResult, BalanceViewSta
         case .onAirdropProgress:
             return previousState.copy(copy: { copy in
                 copy.view = BalanceViewState.View.onAirdropProgress
-            })
-        case .navigateToCreateAccount:
-            return previousState.copy(copy: { copy in
-                copy.view = BalanceViewState.View.navigateToCreateAccount
             })
         case .navigateToActions(let contractAccountBalance):
             return previousState.copy(copy: { copy in

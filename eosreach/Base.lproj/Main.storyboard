@@ -582,12 +582,56 @@
                     <view key="view" contentMode="scaleToFill" id="5td-dn-cjt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-MK-JoW" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="8" y="36" width="359" height="30"/>
+                                <state key="normal" title="_scan_for_airdrops"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_tokens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-Lj-Z87">
+                                <rect key="frame" x="8" y="82" width="359" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_no_balances" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USE-GT-gJB">
+                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ThX-Aa-b2Q" customClass="BalanceTableView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Z6X-rF-aZm" firstAttribute="trailing" secondItem="J6F-MK-JoW" secondAttribute="trailing" constant="8" id="0lf-NI-Orp"/>
+                            <constraint firstItem="ThX-Aa-b2Q" firstAttribute="leading" secondItem="Z6X-rF-aZm" secondAttribute="leading" id="9Qg-oP-0RN"/>
+                            <constraint firstItem="Z6X-rF-aZm" firstAttribute="bottom" secondItem="USE-GT-gJB" secondAttribute="bottom" constant="16" id="JfN-nG-Bby"/>
+                            <constraint firstItem="Z6X-rF-aZm" firstAttribute="trailing" secondItem="3NG-Lj-Z87" secondAttribute="trailing" constant="8" id="Js9-6m-y14"/>
+                            <constraint firstItem="3NG-Lj-Z87" firstAttribute="top" secondItem="J6F-MK-JoW" secondAttribute="bottom" constant="16" id="TGf-xG-bJh"/>
+                            <constraint firstItem="J6F-MK-JoW" firstAttribute="top" secondItem="Z6X-rF-aZm" secondAttribute="top" constant="16" id="XAu-zu-RxW"/>
+                            <constraint firstItem="J6F-MK-JoW" firstAttribute="leading" secondItem="Z6X-rF-aZm" secondAttribute="leading" constant="8" id="XCN-oN-fJt"/>
+                            <constraint firstItem="ThX-Aa-b2Q" firstAttribute="top" secondItem="3NG-Lj-Z87" secondAttribute="bottom" constant="8" id="YJ5-oR-Rpx"/>
+                            <constraint firstItem="Z6X-rF-aZm" firstAttribute="bottom" secondItem="ThX-Aa-b2Q" secondAttribute="bottom" id="fi5-QT-W1X"/>
+                            <constraint firstItem="Z6X-rF-aZm" firstAttribute="trailing" secondItem="USE-GT-gJB" secondAttribute="trailing" constant="16" id="jdS-MA-t2b"/>
+                            <constraint firstItem="Z6X-rF-aZm" firstAttribute="trailing" secondItem="ThX-Aa-b2Q" secondAttribute="trailing" id="ttP-5y-PKi"/>
+                            <constraint firstItem="3NG-Lj-Z87" firstAttribute="leading" secondItem="Z6X-rF-aZm" secondAttribute="leading" constant="8" id="uIM-aR-moK"/>
+                            <constraint firstItem="USE-GT-gJB" firstAttribute="leading" secondItem="Z6X-rF-aZm" secondAttribute="leading" constant="16" id="vFb-x8-b8X"/>
+                            <constraint firstItem="USE-GT-gJB" firstAttribute="top" secondItem="Z6X-rF-aZm" secondAttribute="top" constant="16" id="zxR-5t-WIh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Z6X-rF-aZm"/>
                     </view>
+                    <connections>
+                        <outlet property="balancesTableView" destination="ThX-Aa-b2Q" id="6x6-Ku-5Xt"/>
+                        <outlet property="noBalances" destination="USE-GT-gJB" id="JWd-yq-RNI"/>
+                        <outlet property="scanForAirdrops" destination="J6F-MK-JoW" id="ram-oe-8Dp"/>
+                        <outlet property="tokens" destination="3NG-Lj-Z87" id="NPD-qd-Fmt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HR9-Cn-vUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4294" y="27"/>
+            <point key="canvasLocation" x="4293.6000000000004" y="26.53673163418291"/>
         </scene>
         <!--Resources View Controller-->
         <scene sceneID="20f-A4-huH">
