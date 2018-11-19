@@ -645,7 +645,7 @@
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="AIq-zK-4GD">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="458"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="266"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_manage_resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTz-Lt-Jsq">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="24"/>
@@ -676,13 +676,22 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n76-2W-To4" userLabel="RAM graph" customClass="ResourceGraphView" customModule="eosreach" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="74" width="359" height="128"/>
+                                                <rect key="frame" x="0.0" y="74" width="359" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="9xp-ad-IGy"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2P-Ed-1X9" userLabel="CPU graph" customClass="ResourceGraphView" customModule="eosreach" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="202" width="359" height="128"/>
+                                                <rect key="frame" x="0.0" y="138" width="359" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="IYy-fa-C9U"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zO-NL-4fd" userLabel="NET graph" customClass="ResourceGraphView" customModule="eosreach" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="330" width="359" height="128"/>
+                                                <rect key="frame" x="0.0" y="202" width="359" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="djt-mm-LT7"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -706,6 +715,7 @@
                     </view>
                     <connections>
                         <outlet property="bandwidthButton" destination="l9o-EB-uTw" id="dXK-cc-pMs"/>
+                        <outlet property="buttonContainer" destination="PJU-VV-zAW" id="0Ez-H9-xxr"/>
                         <outlet property="cpuResourceGraph" destination="n2P-Ed-1X9" id="Nn6-A6-Mbi"/>
                         <outlet property="manageResources" destination="BTz-Lt-Jsq" id="Dwg-Lh-XXG"/>
                         <outlet property="netResourceGraph" destination="7zO-NL-4fd" id="wMI-35-Xyb"/>

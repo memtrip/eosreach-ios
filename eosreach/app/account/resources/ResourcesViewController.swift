@@ -1,10 +1,12 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import eosswift
 
 class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult, ResourcesViewState, ResourcesViewModel>, ResourcesViewLayout {
     
     @IBOutlet weak var manageResources: UILabel!
+    @IBOutlet weak var buttonContainer: UIView!
     @IBOutlet weak var bandwidthButton: ReachButton!
     @IBOutlet weak var ramButton: ReachButton!
     @IBOutlet weak var ramResourceGraph: ResourceGraphView!
@@ -25,22 +27,37 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
         ramButton.setTitle(R.string.accountStrings.account_resources_ram_button(), for: .normal)
         
         if (readOnly) {
-            manageResources.gone()
-            bandwidthButton.gone()
-            ramButton.gone()
+            manageResources.removeFromSuperview()
+            buttonContainer.removeFromSuperview()
         }
     }
 
     override func intents() -> Observable<ResourcesIntent> {
         return Observable.merge(
             Observable.just(ResourcesIntent.start(eosAccount: eosAccount!)),
-            bandwidthButton.rx.tap.map {
+            unwrapBandwidthButton(),
+            unwrapRamButton()
+        )
+    }
+    
+    private func unwrapBandwidthButton() -> Observable<ResourcesIntent> {
+        if (readOnly) {
+            return Observable.empty()
+        } else {
+            return bandwidthButton.rx.tap.map {
                 return ResourcesIntent.navigateToManageBandwidth
-            },
-            ramButton.rx.tap.map {
+            }
+        }
+    }
+    
+    private func unwrapRamButton() -> Observable<ResourcesIntent> {
+        if (readOnly) {
+            return Observable.empty()
+        } else {
+            return ramButton.rx.tap.map {
                 return ResourcesIntent.navigateToManageRam
             }
-        )
+        }
     }
 
     override func idleIntent() -> ResourcesIntent {
@@ -122,26 +139,27 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
     }
     
     func populate(eosAccount: EosAccount) {
+        
         renderResourceGraphView(
             resourceGraphView: ramResourceGraph,
             titleLabel: R.string.accountStrings.account_resources_ram_graph_title(),
-            usageLabel: "",
+            usageLabel: "\(Pretty.ram(value: resourceRemaining(resource: eosAccount.ramResource))) / \(Pretty.ram(value: eosAccount.ramResource.available))",
             resource: eosAccount.ramResource,
-            graphColor: R.color.colorAccent()!)
+            graphColor: R.color.resourcesRamColor()!)
         
         renderResourceGraphView(
             resourceGraphView: cpuResourceGraph,
             titleLabel: R.string.accountStrings.account_resources_cpu_graph_title(),
-            usageLabel: "",
+            usageLabel: "\(Pretty.cpu(value: resourceRemaining(resource: eosAccount.cpuResource))) / \(Pretty.cpu(value: eosAccount.cpuResource.available))",
             resource: eosAccount.cpuResource,
-            graphColor: R.color.colorAccent()!)
+            graphColor: R.color.resourcesCpuColor()!)
         
         renderResourceGraphView(
             resourceGraphView: netResourceGraph,
             titleLabel: R.string.accountStrings.account_resources_net_graph_title(),
-            usageLabel: "",
+            usageLabel: "\(Pretty.net(value: resourceRemaining(resource: eosAccount.netResource))) / \(Pretty.net(value: eosAccount.netResource.available))",
             resource: eosAccount.netResource,
-            graphColor: R.color.colorAccent()!)
+            graphColor: R.color.resourcesNetColor()!)
     }
     
     private func renderResourceGraphView(
@@ -169,7 +187,7 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
         } else if (resource.available == resource.used) {
             return 0
         } else {
-            let remaining = Float(resource.available) - Float(resource.used)
+            let remaining = Float(resource.available - resource.used)
             return (remaining * 100) / Float(resource.available)
         }
     }
