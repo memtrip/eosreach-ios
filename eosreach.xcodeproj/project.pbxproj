@@ -216,6 +216,8 @@
 		3CC9A3D5219DF1B00002A25F /* RegisteredBlockProducersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D4219DF1B00002A25F /* RegisteredBlockProducersCell.swift */; };
 		3CC9A3D7219DF2B90002A25F /* RegisteredBlockProducersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D6219DF2B90002A25F /* RegisteredBlockProducersCell.xib */; };
 		3CC9A3D9219DF6120002A25F /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D8219DF6120002A25F /* SimpleTableViewCell.swift */; };
+		3CCE9C2421A2B11F0050910D /* AccountRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */; };
+		3CCE9C2621A2B1350050910D /* AccountViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -455,6 +457,8 @@
 		3CC9A3D4219DF1B00002A25F /* RegisteredBlockProducersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersCell.swift; sourceTree = "<group>"; };
 		3CC9A3D6219DF2B90002A25F /* RegisteredBlockProducersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisteredBlockProducersCell.xib; sourceTree = "<group>"; };
 		3CC9A3D8219DF6120002A25F /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
+		3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRenderer.swift; sourceTree = "<group>"; };
+		3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewLayout.swift; sourceTree = "<group>"; };
 		48ECDAAEF6BB465B8887CE03 /* Pods-eosreach-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreach_eosreachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52C445483AA480525DB9233 /* Pods-eosreach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1072,6 +1076,8 @@
 				3C6DF77421A0840C00ADA892 /* AccountView.swift */,
 				3C14FA3E21A0A1C600B8255F /* AccountUseCase.swift */,
 				3C6DF76821A082AC00ADA892 /* AccountStrings.strings */,
+				3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */,
+				3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */,
 			);
 			path = account;
 			sourceTree = "<group>";
@@ -1490,6 +1496,7 @@
 				3C9BFB8C219B367B00589936 /* AccountBalanceRequest.swift in Sources */,
 				3C0EC81421933B6F00562A1B /* ReachActivityIndicator.swift in Sources */,
 				3CC9A3A5219DAF110002A25F /* TokenParent.swift in Sources */,
+				3CCE9C2621A2B1350050910D /* AccountViewLayout.swift in Sources */,
 				3C9BFBC8219C29B000589936 /* types.swift in Sources */,
 				3C7F0DE82194A17000E72DD1 /* RegisteredBlockProducersResult.swift in Sources */,
 				3C592F96219D5C5200D7C9B9 /* date_types.swift in Sources */,
@@ -1532,6 +1539,7 @@
 				3C964C4C2194469B003663EF /* PurgeUserDefaults.swift in Sources */,
 				3C9BFB88219B365C00589936 /* AccountBalanceList.swift in Sources */,
 				3C0EC829219350DE00562A1B /* ImportKeyResult.swift in Sources */,
+				3CCE9C2421A2B11F0050910D /* AccountRenderer.swift in Sources */,
 				3C964C3921938C71003663EF /* EosEndpointViewModel.swift in Sources */,
 				3C14FA3F21A0A1C600B8255F /* AccountUseCase.swift in Sources */,
 				3C7F0DEC2194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift in Sources */,

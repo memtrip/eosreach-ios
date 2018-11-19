@@ -8,4 +8,6 @@
 	"account_error_get_account_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
 	"account_error_get_balances_title" = "Failed to fetch account balances";
 	"account_error_get_balances_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
+	"account_balance_tokens_title" = Tokens;
+	"account_balance_scan_for_airdrops_button" = "Scan For Airdrop Tokens";
 }

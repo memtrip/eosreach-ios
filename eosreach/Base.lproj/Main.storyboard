@@ -600,7 +600,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ThX-Aa-b2Q" customClass="BalanceTableView" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="106" width="375" height="561"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -612,7 +612,7 @@
                             <constraint firstItem="3NG-Lj-Z87" firstAttribute="top" secondItem="J6F-MK-JoW" secondAttribute="bottom" constant="16" id="TGf-xG-bJh"/>
                             <constraint firstItem="J6F-MK-JoW" firstAttribute="top" secondItem="Z6X-rF-aZm" secondAttribute="top" constant="16" id="XAu-zu-RxW"/>
                             <constraint firstItem="J6F-MK-JoW" firstAttribute="leading" secondItem="Z6X-rF-aZm" secondAttribute="leading" constant="8" id="XCN-oN-fJt"/>
-                            <constraint firstItem="ThX-Aa-b2Q" firstAttribute="top" secondItem="3NG-Lj-Z87" secondAttribute="bottom" constant="8" id="YJ5-oR-Rpx"/>
+                            <constraint firstItem="ThX-Aa-b2Q" firstAttribute="top" secondItem="3NG-Lj-Z87" secondAttribute="bottom" id="YJ5-oR-Rpx"/>
                             <constraint firstItem="Z6X-rF-aZm" firstAttribute="bottom" secondItem="ThX-Aa-b2Q" secondAttribute="bottom" id="fi5-QT-W1X"/>
                             <constraint firstItem="Z6X-rF-aZm" firstAttribute="trailing" secondItem="USE-GT-gJB" secondAttribute="trailing" constant="16" id="jdS-MA-t2b"/>
                             <constraint firstItem="Z6X-rF-aZm" firstAttribute="trailing" secondItem="ThX-Aa-b2Q" secondAttribute="trailing" id="ttP-5y-PKi"/>

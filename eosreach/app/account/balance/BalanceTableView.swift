@@ -4,7 +4,7 @@ import UIKit
 class BalanceTableView : SimpleTableView<ContractAccountBalance, BalanceCell> {
     
     override func cellNib() -> UINib {
-        return UINib(resource: R.nib.accountCardCell)
+        return UINib(resource: R.nib.balanceCell)
     }
     
     override func cellId() -> String {

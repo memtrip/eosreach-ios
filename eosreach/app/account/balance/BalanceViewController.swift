@@ -11,18 +11,28 @@ class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, Bala
     @IBOutlet weak var noBalances: UILabel!
     @IBOutlet weak var balancesTableView: UITableView!
     
+    var accountName: String?
+    var accountBalanceList: AccountBalanceList?
+    
     func dataTableView() -> BalanceTableView {
         return balancesTableView as! BalanceTableView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scanForAirdrops.setTitle(R.string.accountStrings.account_balance_scan_for_airdrops_button(), for: .normal)
+        tokens.text = R.string.accountStrings.account_balance_tokens_title()
     }
 
     override func intents() -> Observable<BalanceIntent> {
         return Observable.merge(
-            Observable.just(BalanceIntent.idle),
-            Observable.just(BalanceIntent.idle)
+            Observable.just(BalanceIntent.start(accountBalances: accountBalanceList!)),
+            scanForAirdrops.rx.tap.map {
+                return BalanceIntent.scanForAirdropTokens(accountName: self.accountName!)
+            },
+            self.dataTableView().selected.map { contractAccountBalance in
+                return BalanceIntent.navigateToActions(balance: contractAccountBalance)
+            }
         )
     }
 

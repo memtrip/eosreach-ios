@@ -23,7 +23,6 @@ class CustomTokensRequestImpl : CustomTokensRequest {
             if (response.success) {
                 return Result(data: TokenParent(tokens: response.body!.rows.map { token in
                     return Token(
-                        uuid: token["uuid"]!.jsonValue as! Double,
                         owner: token["owner"]!.jsonValue as! String,
                         customtoken: token["customtoken"]!.jsonValue as! String,
                         customasset: token["customasset"]!.jsonValue as! String
