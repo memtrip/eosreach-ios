@@ -6,4 +6,5 @@
 	"app_dialog_error_default_title" = Sorry;
 	"app_error_view_title" = Sorry;
 	"app_error_view_cta" = Retry;
+	"app_block_producer_name" = memtripblock;
 }

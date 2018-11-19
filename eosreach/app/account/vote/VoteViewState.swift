@@ -11,5 +11,6 @@ enum VoteViewState: MxViewState {
     case navigateToViewProxyVote(accountName: String)
     case onVoteForUsProgress
     case onVoteForUsSuccess
-    case onVoteForUsError(message: String, log: String)
+    case onVoteForUsError(log: String)
+    case onVoteForUsGenericError
 }

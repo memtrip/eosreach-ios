@@ -13,4 +13,7 @@
 	"account_resources_title" = "Manage Resources";
 	"account_resources_bandwidth_button" = Bandwidth;
 	"account_resources_ram_button" = Ram;
+	"account_vote_cast_vote_title" = "Cast Vote";
+	"account_vote_producer_button" = Producer;
+	"account_vote_proxy_button" = Proxy;
 }

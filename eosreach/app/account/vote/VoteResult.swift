@@ -10,6 +10,7 @@ enum VoteResult: MxResult {
     case navigateToViewProducer(accountName: String)
     case navigateToViewProxyVote(accountName: String)
     case onVoteForUsProgress
-    case onVoteForUsError(message: String, log: String)
+    case onVoteForUsError(log: String)
+    case onVoteForUsGenericError
     case onVoteForUsSuccess
 }

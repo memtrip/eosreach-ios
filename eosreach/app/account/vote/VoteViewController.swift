@@ -4,14 +4,26 @@ import RxCocoa
 
 class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState, VoteViewModel> {
 
+    @IBOutlet weak var castVoteTitleLabel: UILabel!
+    @IBOutlet weak var producerButton: ReachButton!
+    @IBOutlet weak var proxyButton: ReachButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        castVoteTitleLabel.text = R.string.accountStrings.account_vote_cast_vote_title()
+        producerButton.setTitle(R.string.accountStrings.account_vote_producer_button(), for: .normal)
+        proxyButton.setTitle(R.string.accountStrings.account_vote_proxy_button(), for: .normal)
     }
 
     override func intents() -> Observable<VoteIntent> {
         return Observable.merge(
             Observable.just(VoteIntent.idle),
-            Observable.just(VoteIntent.idle)
+            producerButton.rx.tap.map {
+                return VoteIntent.navigateToCastProducerVote
+            },
+            proxyButton.rx.tap.map {
+                return VoteIntent.navigateToCastProxyVote
+            }
         )
     }
 
@@ -22,7 +34,7 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
     override func render(state: VoteViewState) {
         switch state {
         case .idle:
-            print("")
+            break
         case .populateProxyVote(let proxyAccountName):
             print("")
         case .populateProducerVotes(let eosAccountVote):
@@ -41,7 +53,9 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
             print("")
         case .onVoteForUsSuccess:
             print("")
-        case .onVoteForUsError(let message, let log):
+        case .onVoteForUsError(let log):
+            print("")
+        case .onVoteForUsGenericError:
             print("")
         }
     }

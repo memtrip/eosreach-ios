@@ -1081,9 +1081,9 @@
 				3C6DF77221A0833600ADA892 /* AccountBundle.swift */,
 				3C6DF77421A0840C00ADA892 /* AccountView.swift */,
 				3C14FA3E21A0A1C600B8255F /* AccountUseCase.swift */,
-				3C6DF76821A082AC00ADA892 /* AccountStrings.strings */,
 				3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */,
 				3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */,
+				3C6DF76821A082AC00ADA892 /* AccountStrings.strings */,
 			);
 			path = account;
 			sourceTree = "<group>";
