@@ -4,8 +4,18 @@ import RxCocoa
 
 class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult, ResourcesViewState, ResourcesViewModel> {
 
+    @IBOutlet weak var manageResources: UILabel!
+    @IBOutlet weak var bandwidthButton: ReachButton!
+    @IBOutlet weak var ramButton: ReachButton!
+    @IBOutlet weak var ramResourceGraph: ResourceGraphView!
+    @IBOutlet weak var cpuResourceGraph: ResourceGraphView!
+    @IBOutlet weak var netResourceGraph: ResourceGraphView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        manageResources.text = R.string.accountStrings.account_resources_title()
+        bandwidthButton.setTitle(R.string.accountStrings.account_resources_bandwidth_button(), for: .normal)
+        ramButton.setTitle(R.string.accountStrings.account_resources_ram_button(), for: .normal)
     }
 
     override func intents() -> Observable<ResourcesIntent> {

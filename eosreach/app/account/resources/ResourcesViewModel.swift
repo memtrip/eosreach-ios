@@ -6,40 +6,32 @@ class ResourcesViewModel: MxViewModel<ResourcesIntent, ResourcesResult, Resource
     override func dispatcher(intent: ResourcesIntent) -> Observable<ResourcesResult> {
         switch intent {
         case .idle:
-            fatalError()
+            return just(ResourcesResult.idle)
         case .start(let eosAccount, let contractAccountBalance):
-            fatalError()
+            return just(ResourcesResult.populate(
+                eosAccount: eosAccount,
+                contractAccountBalance: contractAccountBalance))
         case .navigateToManageBandwidth:
-            fatalError()
+            return just(ResourcesResult.navigateToManageBandwidth)
         case .navigateToManageBandwidthWithAccountName(let accountName):
-            fatalError()
+            return just(ResourcesResult.navigateToManageBandwidthWithAccountName)
         case .navigateToManageRam:
-            fatalError()
-        case .requestRefund(let accountName):
-            fatalError()
+            return just(ResourcesResult.navigateToManageRam)
         }
     }
 
     override func reducer(previousState: ResourcesViewState, result: ResourcesResult) -> ResourcesViewState {
         switch result {
         case .idle:
-            fatalError()
+            return ResourcesViewState.idle
         case .populate(let eosAccount, let contractAccountBalance):
-            fatalError()
+            return ResourcesViewState.populate(eosAccount: eosAccount, contractAccountBalance: contractAccountBalance)
         case .navigateToManageBandwidth:
-            fatalError()
+            return ResourcesViewState.navigateToManageBandwidth
         case .navigateToManageBandwidthWithAccountName:
-            fatalError()
+            return ResourcesViewState.navigateToManageBandwidthWithAccountName
         case .navigateToManageRam:
-            fatalError()
-        case .refundProgress:
-            fatalError()
-        case .refundSuccess:
-            fatalError()
-        case .refundFailed:
-            fatalError()
-        case .refundFailedWithLog(let log):
-            fatalError()
+            return ResourcesViewState.navigateToManageRam
         }
     }
 }

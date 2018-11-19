@@ -6,5 +6,4 @@ enum ResourcesIntent: MxIntent {
     case navigateToManageBandwidth
     case navigateToManageBandwidthWithAccountName(accountName: String)
     case navigateToManageRam
-    case requestRefund(accountName: String)
 }

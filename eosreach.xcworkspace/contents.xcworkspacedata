@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ResourceGraphView.xib">
+   </FileRef>
+   <FileRef
       location = "group:eosreach.xcodeproj">
    </FileRef>
    <FileRef

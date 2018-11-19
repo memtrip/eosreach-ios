@@ -640,8 +640,84 @@
                     <view key="view" contentMode="scaleToFill" id="54E-mb-Q3c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIO-oK-VUt">
+                                <rect key="frame" x="8" y="28" width="359" height="631"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="AIq-zK-4GD">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="454"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_manage_resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTz-Lt-Jsq">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" name="typographyColorPrimary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJU-VV-zAW">
+                                                <rect key="frame" x="0.0" y="24" width="359" height="46"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQe-aP-fSF" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                                        <rect key="frame" x="183.5" y="8" width="175.5" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="mBi-80-qLB"/>
+                                                        </constraints>
+                                                        <state key="normal" title="_ram"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9o-EB-uTw" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="8" width="175.5" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="dvK-ef-UAj"/>
+                                                        </constraints>
+                                                        <state key="normal" title="_bandwidth"/>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="l9o-EB-uTw" firstAttribute="width" secondItem="fQe-aP-fSF" secondAttribute="width" id="7wO-r8-NZm"/>
+                                                    <constraint firstItem="fQe-aP-fSF" firstAttribute="leading" secondItem="l9o-EB-uTw" secondAttribute="trailing" constant="8" id="CGW-Ty-AYA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fQe-aP-fSF" secondAttribute="trailing" id="Ii5-Wm-gbM"/>
+                                                    <constraint firstItem="fQe-aP-fSF" firstAttribute="centerY" secondItem="PJU-VV-zAW" secondAttribute="centerY" id="UIa-f9-wLS"/>
+                                                    <constraint firstItem="l9o-EB-uTw" firstAttribute="centerY" secondItem="PJU-VV-zAW" secondAttribute="centerY" id="d0l-YR-OzB"/>
+                                                    <constraint firstAttribute="height" constant="46" id="wUw-Ep-2kl"/>
+                                                    <constraint firstItem="l9o-EB-uTw" firstAttribute="leading" secondItem="PJU-VV-zAW" secondAttribute="leading" id="yKu-du-QZo"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n76-2W-To4" userLabel="RAM graph" customClass="ResourceGraphView" customModule="eosreach" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="70" width="359" height="128"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2P-Ed-1X9" userLabel="CPU graph" customClass="ResourceGraphView" customModule="eosreach" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="198" width="359" height="128"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zO-NL-4fd" userLabel="NET graph" customClass="ResourceGraphView" customModule="eosreach" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="326" width="359" height="128"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AIq-zK-4GD" firstAttribute="leading" secondItem="vIO-oK-VUt" secondAttribute="leading" id="9LO-a9-tZs"/>
+                                    <constraint firstAttribute="width" secondItem="AIq-zK-4GD" secondAttribute="width" id="Im1-db-tUh"/>
+                                    <constraint firstAttribute="bottom" secondItem="AIq-zK-4GD" secondAttribute="bottom" id="rUr-kA-rmY"/>
+                                    <constraint firstItem="AIq-zK-4GD" firstAttribute="top" secondItem="vIO-oK-VUt" secondAttribute="top" id="rmJ-y6-JTB"/>
+                                    <constraint firstAttribute="trailing" secondItem="AIq-zK-4GD" secondAttribute="trailing" id="vQR-mo-Kzh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="vIO-oK-VUt" firstAttribute="top" secondItem="dQ6-ui-eju" secondAttribute="top" constant="8" id="0bq-bL-dbO"/>
+                            <constraint firstItem="vIO-oK-VUt" firstAttribute="leading" secondItem="dQ6-ui-eju" secondAttribute="leading" constant="8" id="4aH-bx-yj2"/>
+                            <constraint firstItem="vIO-oK-VUt" firstAttribute="trailing" secondItem="dQ6-ui-eju" secondAttribute="trailing" constant="-8" id="Btu-t3-oOy"/>
+                            <constraint firstItem="vIO-oK-VUt" firstAttribute="bottom" secondItem="dQ6-ui-eju" secondAttribute="bottom" constant="-8" id="z21-n0-DQI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dQ6-ui-eju"/>
                     </view>
+                    <connections>
+                        <outlet property="bandwidthButton" destination="l9o-EB-uTw" id="dXK-cc-pMs"/>
+                        <outlet property="cpuResourceGraph" destination="n2P-Ed-1X9" id="Nn6-A6-Mbi"/>
+                        <outlet property="manageResources" destination="BTz-Lt-Jsq" id="Dwg-Lh-XXG"/>
+                        <outlet property="netResourceGraph" destination="7zO-NL-4fd" id="wMI-35-Xyb"/>
+                        <outlet property="ramButton" destination="fQe-aP-fSF" id="B2N-j0-Mb3"/>
+                        <outlet property="ramResourceGraph" destination="n76-2W-To4" id="wUa-cI-fB7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pS-Ix-Sve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

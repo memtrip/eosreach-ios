@@ -218,6 +218,8 @@
 		3CC9A3D9219DF6120002A25F /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D8219DF6120002A25F /* SimpleTableViewCell.swift */; };
 		3CCE9C2421A2B11F0050910D /* AccountRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */; };
 		3CCE9C2621A2B1350050910D /* AccountViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */; };
+		3CCE9C2C21A2C3810050910D /* ResourceGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */; };
+		3CCE9C2E21A2C38E0050910D /* ResourceGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2D21A2C38E0050910D /* ResourceGraphView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -459,6 +461,8 @@
 		3CC9A3D8219DF6120002A25F /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
 		3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRenderer.swift; sourceTree = "<group>"; };
 		3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewLayout.swift; sourceTree = "<group>"; };
+		3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceGraphView.swift; sourceTree = "<group>"; };
+		3CCE9C2D21A2C38E0050910D /* ResourceGraphView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourceGraphView.xib; sourceTree = "<group>"; };
 		48ECDAAEF6BB465B8887CE03 /* Pods-eosreach-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreach_eosreachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52C445483AA480525DB9233 /* Pods-eosreach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.debug.xcconfig"; sourceTree = "<group>"; };
@@ -716,6 +720,8 @@
 				3C6DF78A21A090F300ADA892 /* ResourcesViewController.swift */,
 				3C6DF78C21A090F300ADA892 /* ResourcesViewModel.swift */,
 				3C6DF78B21A090F300ADA892 /* ResourcesViewState.swift */,
+				3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */,
+				3CCE9C2D21A2C38E0050910D /* ResourceGraphView.xib */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -1275,6 +1281,7 @@
 				3CC9A3D7219DF2B90002A25F /* RegisteredBlockProducersCell.xib in Resources */,
 				3C340FCC219368C30017BEF9 /* SettingsStrings.strings in Resources */,
 				3C7F0DFE2194AC2A00E72DD1 /* ExploreStrings.strings in Resources */,
+				3CCE9C2E21A2C38E0050910D /* ResourceGraphView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1543,6 +1550,7 @@
 				3C964C3921938C71003663EF /* EosEndpointViewModel.swift in Sources */,
 				3C14FA3F21A0A1C600B8255F /* AccountUseCase.swift in Sources */,
 				3C7F0DEC2194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift in Sources */,
+				3CCE9C2C21A2C3810050910D /* ResourceGraphView.swift in Sources */,
 				3C7F0E022194B73200E72DD1 /* ReachTabsController.swift in Sources */,
 				3C592F9C219D60BE00D7C9B9 /* DelegatedBandwidth.swift in Sources */,
 				3C592FCE219D6B8B00D7C9B9 /* VoteRequestImpl.swift in Sources */,

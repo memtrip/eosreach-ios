@@ -10,4 +10,7 @@
 	"account_error_get_balances_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
 	"account_balance_tokens_title" = Tokens;
 	"account_balance_scan_for_airdrops_button" = "Scan For Airdrop Tokens";
+	"account_resources_title" = "Manage Resources";
+	"account_resources_bandwidth_button" = Bandwidth;
+	"account_resources_ram_button" = Ram;
 }
