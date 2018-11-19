@@ -22,4 +22,5 @@
 	"account_vote_producer_title" = "Voting for";
 	"account_vote_proxy_title" = "Proxy voter is";
 	"account_vote_read_only_no_vote" = "This account has not participated in voting.";
+	"account_actions_transfer_button" = Transfer;
 }
