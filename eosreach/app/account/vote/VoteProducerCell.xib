@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="woX-9s-kCO" customClass="VoteProducerCell" customModule="eosreach" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="woX-9s-kCO" id="bZT-YR-FuL">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJR-2Y-qTn" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="359" height="36.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_account_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6c-Pt-MUF" userLabel="Producer name">
+                                <rect key="frame" x="8" y="8" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="L6c-Pt-MUF" firstAttribute="leading" secondItem="KJR-2Y-qTn" secondAttribute="leading" constant="8" id="6rr-VV-Jmz"/>
+                            <constraint firstAttribute="bottom" secondItem="L6c-Pt-MUF" secondAttribute="bottom" constant="8" id="ecb-08-otC"/>
+                            <constraint firstAttribute="trailing" secondItem="L6c-Pt-MUF" secondAttribute="trailing" constant="8" id="qkQ-NQ-WY0"/>
+                            <constraint firstItem="L6c-Pt-MUF" firstAttribute="top" secondItem="KJR-2Y-qTn" secondAttribute="top" constant="8" id="rfR-Dr-PfD"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3t-10-QFc">
+                        <rect key="frame" x="0.0" y="52.5" width="375" height="77"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="KJR-2Y-qTn" secondAttribute="trailing" constant="8" id="9WF-vF-0oX"/>
+                    <constraint firstAttribute="trailing" secondItem="c3t-10-QFc" secondAttribute="trailing" id="UCS-mU-nhG"/>
+                    <constraint firstItem="c3t-10-QFc" firstAttribute="leading" secondItem="bZT-YR-FuL" secondAttribute="leading" id="Ui3-eE-NJO"/>
+                    <constraint firstItem="c3t-10-QFc" firstAttribute="top" secondItem="KJR-2Y-qTn" secondAttribute="bottom" constant="8" id="k1f-De-1jD"/>
+                    <constraint firstAttribute="bottom" secondItem="c3t-10-QFc" secondAttribute="bottom" id="mpJ-Ct-MBa"/>
+                    <constraint firstItem="KJR-2Y-qTn" firstAttribute="leading" secondItem="bZT-YR-FuL" secondAttribute="leading" constant="8" id="rds-Uv-gFY"/>
+                    <constraint firstItem="KJR-2Y-qTn" firstAttribute="top" secondItem="bZT-YR-FuL" secondAttribute="top" constant="8" id="tgE-j6-41l"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="producerNameLabel" destination="L6c-Pt-MUF" id="vym-gY-vVd"/>
+            </connections>
+            <point key="canvasLocation" x="214" y="146"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="typographyColorPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

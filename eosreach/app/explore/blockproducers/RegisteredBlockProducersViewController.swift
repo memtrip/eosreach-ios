@@ -66,7 +66,13 @@ class RegisteredBlockProducersViewController
                 UIApplication.shared.open(url, options: [:])
             }
         case .registeredBlockProducersSelected(let accountName):
-            setDestinationBundle(bundle: SegueBundle(identifier: R.segue.registeredBlockProducersViewController.registeredBlockProducersToAccount.identifier, model: AccountBundle(accountName: accountName)))
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.registeredBlockProducersViewController.registeredBlockProducersToAccount.identifier,
+                model: AccountBundle(
+                    accountName: accountName,
+                    readOnly: true
+                )
+            ))
             performSegue(withIdentifier: R.segue.registeredBlockProducersViewController.registeredBlockProducersToAccount, sender: self)
         }
     }

@@ -739,15 +739,40 @@
                                 <rect key="frame" x="191.5" y="60" width="175.5" height="30"/>
                                 <state key="normal" title="_proxy"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_vote_" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeC-v6-POE" userLabel="_vote">
+                                <rect key="frame" x="8" y="106" width="359" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="woz-Ku-Fzt" customClass="VoteProducerTableView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="126.5" width="375" height="540.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lc0-EU-Bc9" customClass="VoteProducerTableView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="126.5" width="375" height="540.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="hJs-VR-7qO" firstAttribute="trailing" secondItem="uvq-Xh-6PP" secondAttribute="trailing" constant="8" id="3x1-G5-Wal"/>
+                            <constraint firstItem="LeC-v6-POE" firstAttribute="top" secondItem="uvq-Xh-6PP" secondAttribute="bottom" constant="16" id="80Z-zV-Ob8"/>
                             <constraint firstItem="rS0-1h-WGs" firstAttribute="top" secondItem="j0d-0k-Nmj" secondAttribute="bottom" constant="8" id="Biy-VA-5gp"/>
+                            <constraint firstItem="hJs-VR-7qO" firstAttribute="trailing" secondItem="LeC-v6-POE" secondAttribute="trailing" constant="8" id="Bnh-V2-xQ3"/>
+                            <constraint firstItem="hJs-VR-7qO" firstAttribute="bottom" secondItem="lc0-EU-Bc9" secondAttribute="bottom" id="DIi-Zi-xX0"/>
+                            <constraint firstItem="LeC-v6-POE" firstAttribute="leading" secondItem="hJs-VR-7qO" secondAttribute="leading" constant="8" id="Mzk-w0-yXP"/>
+                            <constraint firstItem="lc0-EU-Bc9" firstAttribute="leading" secondItem="hJs-VR-7qO" secondAttribute="leading" id="N8b-y8-31F"/>
+                            <constraint firstItem="hJs-VR-7qO" firstAttribute="trailing" secondItem="lc0-EU-Bc9" secondAttribute="trailing" id="Sir-vu-9zD"/>
                             <constraint firstItem="rS0-1h-WGs" firstAttribute="leading" secondItem="hJs-VR-7qO" secondAttribute="leading" constant="8" id="cP3-6L-ncW"/>
                             <constraint firstItem="hJs-VR-7qO" firstAttribute="trailing" secondItem="j0d-0k-Nmj" secondAttribute="trailing" constant="8" id="cpD-gG-Lh3"/>
+                            <constraint firstItem="woz-Ku-Fzt" firstAttribute="top" secondItem="LeC-v6-POE" secondAttribute="bottom" id="h2o-6q-87k"/>
                             <constraint firstItem="j0d-0k-Nmj" firstAttribute="leading" secondItem="hJs-VR-7qO" secondAttribute="leading" constant="8" id="hc0-Bq-Tg8"/>
                             <constraint firstItem="uvq-Xh-6PP" firstAttribute="leading" secondItem="rS0-1h-WGs" secondAttribute="trailing" constant="8" id="lRD-2b-E7T"/>
+                            <constraint firstItem="hJs-VR-7qO" firstAttribute="bottom" secondItem="woz-Ku-Fzt" secondAttribute="bottom" id="lwj-xG-FQZ"/>
                             <constraint firstItem="rS0-1h-WGs" firstAttribute="width" secondItem="uvq-Xh-6PP" secondAttribute="width" id="m53-ym-gmL"/>
+                            <constraint firstItem="lc0-EU-Bc9" firstAttribute="top" secondItem="LeC-v6-POE" secondAttribute="bottom" id="mT9-td-F97"/>
+                            <constraint firstItem="hJs-VR-7qO" firstAttribute="trailing" secondItem="woz-Ku-Fzt" secondAttribute="trailing" id="nHH-Dz-iIz"/>
+                            <constraint firstItem="woz-Ku-Fzt" firstAttribute="leading" secondItem="hJs-VR-7qO" secondAttribute="leading" id="omJ-2B-ktC"/>
                             <constraint firstItem="uvq-Xh-6PP" firstAttribute="top" secondItem="j0d-0k-Nmj" secondAttribute="bottom" constant="8" id="xtc-33-Qel"/>
                             <constraint firstItem="j0d-0k-Nmj" firstAttribute="top" secondItem="hJs-VR-7qO" secondAttribute="top" constant="8" id="zol-ZR-nW5"/>
                         </constraints>
@@ -756,7 +781,11 @@
                     <connections>
                         <outlet property="castVoteTitleLabel" destination="j0d-0k-Nmj" id="1Vm-Dy-g52"/>
                         <outlet property="producerButton" destination="rS0-1h-WGs" id="Zvy-HQ-jh8"/>
+                        <outlet property="producersTableView" destination="woz-Ku-Fzt" id="SPm-b4-07a"/>
                         <outlet property="proxyButton" destination="uvq-Xh-6PP" id="ZPc-jh-pVt"/>
+                        <outlet property="proxyTableView" destination="lc0-EU-Bc9" id="61D-cV-drA"/>
+                        <outlet property="voteLabel" destination="LeC-v6-POE" id="aHu-pB-WN9"/>
+                        <outlet property="voteTopConstraint" destination="80Z-zV-Ob8" id="K5a-Wf-pHU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNT-MW-f7E" userLabel="First Responder" sceneMemberID="firstResponder"/>

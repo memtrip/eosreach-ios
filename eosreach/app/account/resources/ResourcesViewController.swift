@@ -11,11 +11,19 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
     @IBOutlet weak var cpuResourceGraph: ResourceGraphView!
     @IBOutlet weak var netResourceGraph: ResourceGraphView!
     
+    var readOnly = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         manageResources.text = R.string.accountStrings.account_resources_title()
         bandwidthButton.setTitle(R.string.accountStrings.account_resources_bandwidth_button(), for: .normal)
         ramButton.setTitle(R.string.accountStrings.account_resources_ram_button(), for: .normal)
+        
+        if (readOnly) {
+            manageResources.gone()
+            bandwidthButton.gone()
+            ramButton.gone()
+        }
     }
 
     override func intents() -> Observable<ResourcesIntent> {

@@ -16,4 +16,7 @@
 	"account_vote_cast_vote_title" = "Cast Vote";
 	"account_vote_producer_button" = Producer;
 	"account_vote_proxy_button" = Proxy;
+	"account_vote_producer_title" = "Voting for";
+	"account_vote_proxy_title" = "Proxy voter is";
+	"account_vote_read_only_no_vote" = "This account has not participated in voting.";
 }

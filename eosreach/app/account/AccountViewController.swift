@@ -4,7 +4,7 @@ import RxCocoa
 import Material
 
 class AccountViewController: MxViewController<AccountIntent, AccountResult, AccountViewState, AccountViewModel>, TabBarDelegate, AccountViewLayout {
-
+    
     @IBOutlet weak var toolbar: ReachToolbar!
     @IBOutlet weak var balancesContainer: UIView!
     @IBOutlet weak var availableBalanceValueLabel: UILabel!
@@ -14,11 +14,10 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     @IBOutlet weak var activityIndicator: ReachActivityIndicator!
     @IBOutlet weak var errorView: ErrorView!
     
-    let balanceTabItem = TabItem()
-    let resourcesTabItem = TabItem()
-    let voteTabItem = TabItem()
-    
-    var loaded = false
+    private let balanceTabItem = TabItem()
+    private let resourcesTabItem = TabItem()
+    private let voteTabItem = TabItem()
+    private var loaded = false
     
     private lazy var balanceViewController: BalanceViewController = {
         return R.storyboard.main.balanceViewController()!
@@ -101,6 +100,11 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         
         balanceViewController.accountName = accountView.eosAccount!.accountName
         balanceViewController.accountBalanceList = accountView.balances!
+        
+        voteViewController.eosAccountVote = accountView.eosAccount!.eosAcconuntVote
+        voteViewController.readOnly = self.accountBundle.readOnly
+        
+        resourcesViewController.readOnly = self.accountBundle.readOnly
         
         switch page {
         case .balances:

@@ -7,17 +7,39 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
     @IBOutlet weak var castVoteTitleLabel: UILabel!
     @IBOutlet weak var producerButton: ReachButton!
     @IBOutlet weak var proxyButton: ReachButton!
+    @IBOutlet weak var voteLabel: UILabel!
+    @IBOutlet weak var producersTableView: UITableView!
+    @IBOutlet weak var proxyTableView: UITableView!
+    @IBOutlet weak var voteTopConstraint: NSLayoutConstraint!
+    
+    func voteProducerTableView() -> VoteProducerTableView {
+        return producersTableView as! VoteProducerTableView
+    }
+    
+    func voteProxyTableView() -> VoteProducerTableView {
+        return proxyTableView as! VoteProducerTableView
+    }
+    
+    var eosAccountVote: EosAccountVote?
+    var readOnly = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         castVoteTitleLabel.text = R.string.accountStrings.account_vote_cast_vote_title()
         producerButton.setTitle(R.string.accountStrings.account_vote_producer_button(), for: .normal)
         proxyButton.setTitle(R.string.accountStrings.account_vote_proxy_button(), for: .normal)
+        
+        if (readOnly) {
+            castVoteTitleLabel.goneCollapsed()
+            producerButton.goneCollapsed()
+            proxyButton.goneCollapsed()
+            voteTopConstraint.constant = 0
+        }
     }
 
     override func intents() -> Observable<VoteIntent> {
         return Observable.merge(
-            Observable.just(VoteIntent.idle),
+            Observable.just(VoteIntent.start(eosAccountVote: eosAccountVote)),
             producerButton.rx.tap.map {
                 return VoteIntent.navigateToCastProducerVote
             },
@@ -36,11 +58,19 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
         case .idle:
             break
         case .populateProxyVote(let proxyAccountName):
-            print("")
+            voteProxyTableView().visible()
+            voteProxyTableView().populate(data: [proxyAccountName])
+            voteLabel.text = R.string.accountStrings.account_vote_proxy_title()
         case .populateProducerVotes(let eosAccountVote):
-            print("")
+            voteProducerTableView().visible()
+            voteProducerTableView().populate(data: eosAccountVote.producers)
+            voteLabel.text = R.string.accountStrings.account_vote_producer_title()
         case .noVoteCast:
-            print("")
+            if (readOnly) {
+                voteLabel.text = R.string.accountStrings.account_vote_read_only_no_vote()
+            } else {
+                print("")
+            }
         case .navigateToCastProducerVote:
             print("")
         case .navigateToCastProxyVote:

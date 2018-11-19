@@ -31,6 +31,19 @@ extension UIView {
         }
         isHidden = true
     }
+    
+    func goneCollapsed() {
+        isHidden = true
+        addConstraint(NSLayoutConstraint(
+            item: self,
+            attribute: NSLayoutConstraint.Attribute.height,
+            relatedBy: NSLayoutConstraint.Relation.equal,
+            toItem: nil,
+            attribute: NSLayoutConstraint.Attribute.height,
+            multiplier: 1,
+            constant: 0
+        ))
+    }
 }
 
 extension UIViewController {

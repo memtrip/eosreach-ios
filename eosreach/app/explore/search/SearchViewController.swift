@@ -58,7 +58,12 @@ class SearchViewController: MxViewController<SearchIntent, SearchResult, SearchV
             dataTableView().clear()
             dataTableView().populate(data: [accountCardModel])
         case .viewAccount(let accountCardModel):
-            setDestinationBundle(bundle: SegueBundle(identifier: R.segue.searchViewController.searchToAccount.identifier, model: AccountBundle(accountName: accountCardModel.accountName)))
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.searchViewController.searchToAccount.identifier,
+                model: AccountBundle(
+                    accountName: accountCardModel.accountName,
+                    readOnly: true)
+            ))
             performSegue(withIdentifier: R.segue.searchViewController.searchToAccount, sender: self)
         }
     }
