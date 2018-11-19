@@ -13,23 +13,33 @@ class ActionsViewController: MxViewController<ActionsIntent, ActionsResult, Acti
     @IBOutlet weak var errorView: ErrorView!
     @IBOutlet weak var noResults: UILabel!
     
+    private lazy var actionsBundle = {
+        return self.getDestinationBundle()!.model as! ActionsBundle
+    }()
+    
     func dataTableView() -> ActionsTableView {
         return actionsTableView as! ActionsTableView
     }
     
-    var contractAccountBalance: ContractAccountBalance?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        toolBar.title = contractAccountBalance?.accountName
+        toolBar.title = actionsBundle.contractAccountBalance.accountName
+        setToolbar(toolbar: toolBar)
         transferButton.setTitle(R.string.accountStrings.account_actions_transfer_button(), for: .normal)
+        
+        if (self.actionsBundle.readOnly) {
+            transferButton.goneCollapsed()
+        }
     }
 
     override func intents() -> Observable<ActionsIntent> {
         return Observable.merge(
-            Observable.just(ActionsIntent.idle),
+            Observable.just(ActionsIntent.start(contractAccountBalance: self.actionsBundle.contractAccountBalance)),
+            errorView.retryClick().map {
+                return ActionsIntent.retry(contractAccountBalance: self.actionsBundle.contractAccountBalance)
+            },
             transferButton.rx.tap.map {
-                ActionsIntent.navigateToTransfer(contractAccountBalance: self.contractAccountBalance!)
+                ActionsIntent.navigateToTransfer(contractAccountBalance: self.actionsBundle.contractAccountBalance)
             },
             self.dataTableView().selected.map { accountAction in
                 return ActionsIntent.navigateToViewAction(accountAction: accountAction)
@@ -50,6 +60,7 @@ class ActionsViewController: MxViewController<ActionsIntent, ActionsResult, Acti
             errorView.gone()
         case .onSuccess(let accountActionList):
             activityIndicator.stop()
+            dataTableView().visible()
             dataTableView().populate(data: accountActionList.actions)
         case .noResults:
             activityIndicator.stop()
@@ -57,6 +68,9 @@ class ActionsViewController: MxViewController<ActionsIntent, ActionsResult, Acti
         case .onError:
             activityIndicator.stop()
             errorView.visible()
+            errorView.populate(
+                title: R.string.accountStrings.account_actions_generic_error_title(),
+                body: R.string.accountStrings.account_actions_generic_error_body())
         case .onLoadMoreProgress:
             break // todo
         case .onLoadMoreSuccess(let accountActionList):

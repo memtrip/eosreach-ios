@@ -23,4 +23,6 @@
 	"account_vote_proxy_title" = "Proxy voter is";
 	"account_vote_read_only_no_vote" = "This account has not participated in voting.";
 	"account_actions_transfer_button" = Transfer;
+	"account_actions_generic_error_title" = "Failed to fetch actions";
+	"account_actions_generic_error_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
 }

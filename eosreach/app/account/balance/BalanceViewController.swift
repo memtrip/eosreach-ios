@@ -51,9 +51,16 @@ class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, Bala
         case .onAirdropProgress:
             print("")
         case .onAirdropSuccess:
-            print("")
+            dataTableView().visible()
+            dataTableView().clear()
+            dataTableView().populate(data: state.accountBalances.balances)
         case .navigateToActions(let contractAccountBalance):
-            print("")
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.balanceViewController.balanceToActions.identifier,
+                model: ActionsBundle(
+                    contractAccountBalance: contractAccountBalance, readOnly: true)
+            ))
+            performSegue(withIdentifier: R.segue.balanceViewController.balanceToActions, sender: self)
         }
     }
 

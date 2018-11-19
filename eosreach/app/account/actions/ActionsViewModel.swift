@@ -6,7 +6,7 @@ class ActionsViewModel: MxViewModel<ActionsIntent, ActionsResult, ActionsViewSta
     
     private let accountActionsRequest = AccountActionsRequestImpl()
     
-    private let ITEM_OFFSET = -1000
+    private let ITEM_OFFSET = -500
     private let RECURSIVE_LIMIT = 10
     
     override func dispatcher(intent: ActionsIntent) -> Observable<ActionsResult> {

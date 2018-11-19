@@ -627,6 +627,7 @@
                         <outlet property="noBalances" destination="USE-GT-gJB" id="JWd-yq-RNI"/>
                         <outlet property="scanForAirdrops" destination="J6F-MK-JoW" id="ram-oe-8Dp"/>
                         <outlet property="tokens" destination="3NG-Lj-Z87" id="NPD-qd-Fmt"/>
+                        <segue destination="8P7-QF-IgG" kind="show" identifier="balanceToActions" id="7bG-fc-PT2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HR9-Cn-vUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -649,7 +650,6 @@
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNw-QZ-N2f" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="114" width="375" height="553"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PEY-G5-7zb" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="169" y="368" width="37" height="37"/>
@@ -703,7 +703,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXo-Nr-pVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4294" y="714"/>
+            <point key="canvasLocation" x="4294" y="725"/>
         </scene>
         <!--Resources View Controller-->
         <scene sceneID="20f-A4-huH">
