@@ -2,7 +2,7 @@ import Foundation
 
 enum ResourcesResult: MxResult {
     case idle
-    case populate(eosAccount: EosAccount, contractAccountBalance: ContractAccountBalance)
+    case populate(eosAccount: EosAccount)
     case navigateToManageBandwidth
     case navigateToManageBandwidthWithAccountName
     case navigateToManageRam

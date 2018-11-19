@@ -7,10 +7,8 @@ class ResourcesViewModel: MxViewModel<ResourcesIntent, ResourcesResult, Resource
         switch intent {
         case .idle:
             return just(ResourcesResult.idle)
-        case .start(let eosAccount, let contractAccountBalance):
-            return just(ResourcesResult.populate(
-                eosAccount: eosAccount,
-                contractAccountBalance: contractAccountBalance))
+        case .start(let eosAccount):
+            return just(ResourcesResult.populate(eosAccount: eosAccount))
         case .navigateToManageBandwidth:
             return just(ResourcesResult.navigateToManageBandwidth)
         case .navigateToManageBandwidthWithAccountName(let accountName):
@@ -24,8 +22,8 @@ class ResourcesViewModel: MxViewModel<ResourcesIntent, ResourcesResult, Resource
         switch result {
         case .idle:
             return ResourcesViewState.idle
-        case .populate(let eosAccount, let contractAccountBalance):
-            return ResourcesViewState.populate(eosAccount: eosAccount, contractAccountBalance: contractAccountBalance)
+        case .populate(let eosAccount):
+            return ResourcesViewState.populate(eosAccount: eosAccount)
         case .navigateToManageBandwidth:
             return ResourcesViewState.navigateToManageBandwidth
         case .navigateToManageBandwidthWithAccountName:

@@ -69,7 +69,7 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
             if (readOnly) {
                 voteLabel.text = R.string.accountStrings.account_vote_read_only_no_vote()
             } else {
-                print("")
+                fatalError("not implemented")
             }
         case .navigateToCastProducerVote:
             print("")

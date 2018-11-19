@@ -13,6 +13,9 @@
 	"account_resources_title" = "Manage Resources";
 	"account_resources_bandwidth_button" = Bandwidth;
 	"account_resources_ram_button" = Ram;
+	"account_resources_ram_graph_title" = RAM;
+	"account_resources_cpu_graph_title" = CPU;
+	"account_resources_net_graph_title" = NET;
 	"account_vote_cast_vote_title" = "Cast Vote";
 	"account_vote_producer_button" = Producer;
 	"account_vote_proxy_button" = Proxy;

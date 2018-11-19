@@ -49,6 +49,8 @@
 		3C1F1F7121A306680075BD71 /* VoteProducerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */; };
 		3C1F1F7521A306800075BD71 /* VoteProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */; };
 		3C1F1F7721A306A10075BD71 /* VoteProducerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */; };
+		3C1F1F7921A31CBB0075BD71 /* ResourcesRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7821A31CBB0075BD71 /* ResourcesRenderer.swift */; };
+		3C1F1F7B21A31CCF0075BD71 /* ResourcesViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7A21A31CCF0075BD71 /* ResourcesViewLayout.swift */; };
 		3C291BA1219D572F00562448 /* Pods_eosreach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C291BA0219D572F00562448 /* Pods_eosreach.framework */; };
 		3C291BA3219D58B800562448 /* CurrencyPairFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291BA2219D58B800562448 /* CurrencyPairFormatter.swift */; };
 		3C291BA5219D597900562448 /* CurrencySymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291BA4219D597900562448 /* CurrencySymbol.swift */; };
@@ -291,6 +293,8 @@
 		3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerTableView.swift; sourceTree = "<group>"; };
 		3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteProducerCell.xib; sourceTree = "<group>"; };
 		3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerCell.swift; sourceTree = "<group>"; };
+		3C1F1F7821A31CBB0075BD71 /* ResourcesRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesRenderer.swift; sourceTree = "<group>"; };
+		3C1F1F7A21A31CCF0075BD71 /* ResourcesViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewLayout.swift; sourceTree = "<group>"; };
 		3C291BA0219D572F00562448 /* Pods_eosreach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_eosreach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C291BA2219D58B800562448 /* CurrencyPairFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairFormatter.swift; sourceTree = "<group>"; };
 		3C291BA4219D597900562448 /* CurrencySymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbol.swift; sourceTree = "<group>"; };
@@ -726,6 +730,8 @@
 				3C6DF78A21A090F300ADA892 /* ResourcesViewController.swift */,
 				3C6DF78C21A090F300ADA892 /* ResourcesViewModel.swift */,
 				3C6DF78B21A090F300ADA892 /* ResourcesViewState.swift */,
+				3C1F1F7821A31CBB0075BD71 /* ResourcesRenderer.swift */,
+				3C1F1F7A21A31CCF0075BD71 /* ResourcesViewLayout.swift */,
 				3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */,
 				3CCE9C2D21A2C38E0050910D /* ResourceGraphView.xib */,
 			);
@@ -1538,6 +1544,7 @@
 				3C0ADD9B219F3B230026649F /* InsertTransactionLog.swift in Sources */,
 				3C0ADD8E219F37E60026649F /* DeleteBalances.swift in Sources */,
 				3C8C6DC42192D86F00FC1A0D /* EntryResult.swift in Sources */,
+				3C1F1F7B21A31CCF0075BD71 /* ResourcesViewLayout.swift in Sources */,
 				3CC9A3A3219DAF0B0002A25F /* Token.swift in Sources */,
 				3C6DF79021A090F300ADA892 /* ResourcesViewState.swift in Sources */,
 				3C7F0DE92194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift in Sources */,
@@ -1555,6 +1562,7 @@
 				3CC9A3AB219DB2BA0002A25F /* EosCreateAccountRequestImpl.swift in Sources */,
 				3C964C4C2194469B003663EF /* PurgeUserDefaults.swift in Sources */,
 				3C9BFB88219B365C00589936 /* AccountBalanceList.swift in Sources */,
+				3C1F1F7921A31CBB0075BD71 /* ResourcesRenderer.swift in Sources */,
 				3C0EC829219350DE00562A1B /* ImportKeyResult.swift in Sources */,
 				3CCE9C2421A2B11F0050910D /* AccountRenderer.swift in Sources */,
 				3C964C3921938C71003663EF /* EosEndpointViewModel.swift in Sources */,

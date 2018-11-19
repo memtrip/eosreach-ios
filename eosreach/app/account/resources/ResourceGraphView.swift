@@ -9,19 +9,21 @@ class ResourceGraphView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        viewInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        viewInit()
     }
     
-    private func viewInit() {
-        
-    }
-    
-    func populate() {
-        
+    func populate(
+        titleLabelValue: String,
+        usageLabelValue: String,
+        percentage: Float,
+        graphColor: UIColor
+    ) {
+        titleLabel.text = titleLabelValue
+        usageLabel.text = usageLabelValue
+        progressView.progress = percentage
+        progressView.progressTintColor = graphColor
     }
 }

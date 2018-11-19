@@ -104,6 +104,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         voteViewController.eosAccountVote = accountView.eosAccount!.eosAcconuntVote
         voteViewController.readOnly = self.accountBundle.readOnly
         
+        resourcesViewController.eosAccount = accountView.eosAccount!
         resourcesViewController.readOnly = self.accountBundle.readOnly
         
         switch page {
