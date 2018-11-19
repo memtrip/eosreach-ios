@@ -3,12 +3,14 @@ import RxSwift
 
 class CurrencyPairingViewModel: MxViewModel<CurrencyPairingIntent, CurrencyPairingResult, CurrencyPairingViewState> {
 
+    private let eosPriceUseCase = EosPriceUseCase()
+    
     override func dispatcher(intent: CurrencyPairingIntent) -> Observable<CurrencyPairingResult> {
         switch intent {
         case .idle:
             return just(CurrencyPairingResult.idle)
         case .currencyPair(let currencyPair):
-            return just(CurrencyPairingResult.onProgress)
+            return checkCurrencyPair(currencyCode: currencyPair)
         }
     }
 
@@ -22,6 +24,22 @@ class CurrencyPairingViewModel: MxViewModel<CurrencyPairingIntent, CurrencyPairi
             return CurrencyPairingViewState.onError(message: message)
         case .onSuccess:
             return CurrencyPairingViewState.onSuccess
+        }
+    }
+    
+    private func checkCurrencyPair(currencyCode: String) -> Observable<CurrencyPairingResult> {
+        if (currencyCode.isEmpty || currencyCode.count < 3) {
+            return just(CurrencyPairingResult.onError(message: R.string.settingsStrings.settings_currency_pairing_error_too_short()))
+        } else {
+            return eosPriceUseCase.refreshPrice(currencyCode: currencyCode).map { eosPrice in
+                if (eosPrice.unavailable) {
+                    return CurrencyPairingResult.onError(message: R.string.settingsStrings.settings_currency_pairing_error_generic(currencyCode))
+                } else {
+                    return CurrencyPairingResult.onSuccess
+                }
+            }.catchErrorJustReturn(CurrencyPairingResult.onError(
+                message: R.string.settingsStrings.settings_currency_pairing_error_generic(currencyCode)))
+                .asObservable().startWith(CurrencyPairingResult.onProgress)
         }
     }
 }

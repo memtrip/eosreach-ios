@@ -42,6 +42,9 @@ class CurrencyPairingViewController: MxViewController<CurrencyPairingIntent, Cur
         case .onError(let message):
             activityIndicator.stop()
             updatePairButton.visible()
+            showOKDialog(
+                title: R.string.appStrings.app_dialog_error_default_title(),
+                message: message)
         case .onSuccess:
             activityIndicator.stop()
             updatePairButton.visible()

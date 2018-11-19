@@ -3,10 +3,12 @@ import RxSwift
 
 class SettingsViewModel: MxViewModel<SettingsIntent, SettingsResult, SettingsViewState> {
 
+    private let eosPriceCurrencyPair = EosPriceCurrencyPair()
+    
     override func dispatcher(intent: SettingsIntent) -> Observable<SettingsResult> {
         switch intent {
         case .start:
-            return just(SettingsResult.populate(exchangeRateCurrency: "USD"))
+            return just(SettingsResult.populate(exchangeRateCurrency: eosPriceCurrencyPair.get()))
         case .idle:
             return just(SettingsResult.idle)
         case .navigateToCurrencyPairing:
