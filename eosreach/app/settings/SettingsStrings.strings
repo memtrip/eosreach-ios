@@ -19,4 +19,9 @@
 	"settings_navigation_clear_data_and_logout_button" = "Clear Data And Logout";
 	"settings_currency_pairing_error_too_short" = "Please enter a valid currency code e.g; GBP, BTC";
 	"settings_currency_pairing_error_generic" = "Failed to pair EOS with %@";
+	"settings_eos_endpoint_error_invalid_url" = "Please enter a valid URL.";
+	"settings_eos_endpoint_error_nothing_changed" = "Your endpoint URL is already set to: %@";
+	"settings_eos_endpoint_generic" = "The endpoint URL could not be reached, please check your connection and try again.";
+	"settings_eos_endpoint_success_body" = "The EOS endpoint has been updated";
+	"settings_eos_endpoint_success_title" = Success;
 }

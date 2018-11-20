@@ -14,11 +14,12 @@ class InsertBalances {
             return balanceEntity
         }
         
-        return clearAndInsertBalances(accountName: accountName, balanceEntities: balanceEntities)
+        return deleteByAccountName(accountName: accountName)
+            .andThen(insertBalances(balanceEntities: balanceEntities))
             .andThen(Single.just(balanceEntities))
     }
     
-    private func clearAndInsertBalances(accountName: String, balanceEntities: [BalanceEntity]) -> Completable {
+    private func deleteByAccountName(accountName: String) -> Completable {
         return Completable.create { completable in
             do {
                 let realm = try Realm()
@@ -27,6 +28,20 @@ class InsertBalances {
                         .objects(BalanceEntity.self)
                         .filter("accountName = %@", accountName)
                     realm.delete(results)
+                    completable(.completed)
+                }
+            } catch {
+                completable(.error(error))
+            }
+            return Disposables.create()
+        }
+    }
+    
+    private func insertBalances(balanceEntities: [BalanceEntity]) -> Completable {
+        return Completable.create { completable in
+            do {
+                let realm = try Realm()
+                try realm.write {
                     realm.add(balanceEntities)
                     completable(.completed)
                 }

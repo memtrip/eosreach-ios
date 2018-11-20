@@ -46,14 +46,32 @@ class EosEndpointViewController: MxViewController<EosEndpointIntent, EosEndpoint
         case .onProgress:
             activityIndicator.start()
             changeEndpointButton.gone()
-        case .onError(let message):
-            activityIndicator.stop()
-            changeEndpointButton.visible()
         case .onSuccess:
             activityIndicator.stop()
             changeEndpointButton.visible()
+            showOKDialog(
+                title: R.string.settingsStrings.settings_eos_endpoint_success_title(),
+                message: R.string.settingsStrings.settings_eos_endpoint_success_body())
         case .navigateToBlockProducerList:
             print("")
+        case .onErrorInvalidUrl:
+            activityIndicator.stop()
+            changeEndpointButton.visible()
+            showOKDialog(
+                title: R.string.appStrings.app_error_view_title(),
+                message: R.string.settingsStrings.settings_eos_endpoint_error_invalid_url())
+        case .onErrorNothingChanged:
+            activityIndicator.stop()
+            changeEndpointButton.visible()
+            showOKDialog(
+                title: R.string.appStrings.app_error_view_title(),
+                message: R.string.settingsStrings.settings_eos_endpoint_error_nothing_changed(state.endpointUrl))
+        case .onErrorGeneric:
+            activityIndicator.stop()
+            changeEndpointButton.visible()
+            showOKDialog(
+                title: R.string.appStrings.app_error_view_title(),
+                message: R.string.settingsStrings.settings_eos_endpoint_generic())
         }
     }
 

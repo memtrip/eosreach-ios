@@ -13,7 +13,9 @@ struct EosEndpointViewState: MxViewState, Copy, Equatable {
     enum View : Equatable {
         case idle
         case onProgress
-        case onError(message: String)
+        case onErrorInvalidUrl
+        case onErrorNothingChanged
+        case onErrorGeneric
         case onSuccess
         case navigateToBlockProducerList
     }
