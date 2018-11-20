@@ -106,7 +106,7 @@
 		3C592FCC219D6B1B00D7C9B9 /* VoteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FCB219D6B1B00D7C9B9 /* VoteRequest.swift */; };
 		3C592FCE219D6B8B00D7C9B9 /* VoteRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FCD219D6B8B00D7C9B9 /* VoteRequestImpl.swift */; };
 		3C6DF75921A05C7E00ADA892 /* AccountCardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75821A05C7E00ADA892 /* AccountCardTableView.swift */; };
-		3C6DF75B21A05CF600ADA892 /* AccountCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75A21A05CF600ADA892 /* AccountCardModel.swift */; };
+		3C6DF75B21A05CF600ADA892 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75A21A05CF600ADA892 /* AccountModel.swift */; };
 		3C6DF75D21A05DCA00ADA892 /* AccountCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75C21A05DCA00ADA892 /* AccountCardCell.swift */; };
 		3C6DF76A21A082AC00ADA892 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF76421A082AC00ADA892 /* AccountViewController.swift */; };
 		3C6DF76B21A082AC00ADA892 /* AccountViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF76521A082AC00ADA892 /* AccountViewState.swift */; };
@@ -371,7 +371,7 @@
 		3C592FCB219D6B1B00D7C9B9 /* VoteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteRequest.swift; sourceTree = "<group>"; };
 		3C592FCD219D6B8B00D7C9B9 /* VoteRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteRequestImpl.swift; sourceTree = "<group>"; };
 		3C6DF75821A05C7E00ADA892 /* AccountCardTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardTableView.swift; sourceTree = "<group>"; };
-		3C6DF75A21A05CF600ADA892 /* AccountCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardModel.swift; sourceTree = "<group>"; };
+		3C6DF75A21A05CF600ADA892 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		3C6DF75C21A05DCA00ADA892 /* AccountCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardCell.swift; sourceTree = "<group>"; };
 		3C6DF76421A082AC00ADA892 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		3C6DF76521A082AC00ADA892 /* AccountViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewState.swift; sourceTree = "<group>"; };
@@ -538,7 +538,7 @@
 		3C0ADD68219F218B0026649F /* account */ = {
 			isa = PBXGroup;
 			children = (
-				3C6DF75A21A05CF600ADA892 /* AccountCardModel.swift */,
+				3C6DF75A21A05CF600ADA892 /* AccountModel.swift */,
 				3C6DF75C21A05DCA00ADA892 /* AccountCardCell.swift */,
 				3C0ADD69219F24380026649F /* AccountCardCell.xib */,
 				3C6DF75821A05C7E00ADA892 /* AccountCardTableView.swift */,
@@ -1662,7 +1662,7 @@
 				3C1A971F21A3D02600C30A75 /* ActiveBlockProducersTableView.swift in Sources */,
 				3C9BFB94219B39B900589936 /* EosAccountResource.swift in Sources */,
 				3CC9A3AF219DB4F00002A25F /* ProxyVoterDetails.swift in Sources */,
-				3C6DF75B21A05CF600ADA892 /* AccountCardModel.swift in Sources */,
+				3C6DF75B21A05CF600ADA892 /* AccountModel.swift in Sources */,
 				3C592FA0219D60D100D7C9B9 /* GetBandwidthRequestImpl.swift in Sources */,
 				3C6DF77D21A08B5100ADA892 /* BalanceViewController.swift in Sources */,
 				3C1F1F9421A359090075BD71 /* ActionsViewState.swift in Sources */,

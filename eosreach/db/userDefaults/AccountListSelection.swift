@@ -16,4 +16,8 @@ class AccountListSelection {
             return ""
         }
     }
+    
+    func clear() {
+        defaults.removeObject(forKey: key)
+    }
 }

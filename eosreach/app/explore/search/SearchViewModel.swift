@@ -11,8 +11,8 @@ class SearchViewModel: MxViewModel<SearchIntent, SearchResult, SearchViewState> 
             return just(SearchResult.idle)
         case .searchValueChanged(let searchValue):
             return searchValueChange(value: searchValue)
-        case .viewAccount(let accountCardModel):
-            return just(SearchResult.viewAccount(accountCardModel: accountCardModel))
+        case .viewAccount(let accountModel):
+            return just(SearchResult.viewAccount(accountModel: accountModel))
         }
     }
 
@@ -24,10 +24,10 @@ class SearchViewModel: MxViewModel<SearchIntent, SearchResult, SearchViewState> 
             return SearchViewState.onProgress
         case .onError:
             return SearchViewState.onError
-        case .onSuccess(let accountCardModel):
-            return SearchViewState.onSuccess(accountCardModel: accountCardModel)
-        case .viewAccount(let accountCardModel):
-            return SearchViewState.viewAccount(accountCardModel: accountCardModel)
+        case .onSuccess(let accountModel):
+            return SearchViewState.onSuccess(accountModel: accountModel)
+        case .viewAccount(let accountModel):
+            return SearchViewState.viewAccount(accountModel: accountModel)
         }
     }
     
@@ -36,7 +36,7 @@ class SearchViewModel: MxViewModel<SearchIntent, SearchResult, SearchViewState> 
             return eosAccountRequest.getAccount(accountName: value).map { result in
                 if (result.success()) {
                     let eosAccount = result.data
-                    return SearchResult.onSuccess(accountCardModel: AccountCardModel(
+                    return SearchResult.onSuccess(accountModel: AccountModel(
                         accountName: eosAccount!.accountName,
                         balance: eosAccount!.balance))
                 } else {

@@ -1,6 +1,6 @@
 import Foundation
 
-struct AccountCardModel {
+struct AccountModel {
     let accountName: String
     let balance: Balance
 }

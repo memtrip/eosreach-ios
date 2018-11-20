@@ -52,16 +52,16 @@ class SearchViewController: MxViewController<SearchIntent, SearchResult, SearchV
             activityIndicator.stop()
             errorView.visible()
             errorView.populate(body: R.string.exploreStrings.explore_search_error_body())
-        case .onSuccess(let accountCardModel):
+        case .onSuccess(let accountModel):
             activityIndicator.stop()
             dataTableView().visible()
             dataTableView().clear()
-            dataTableView().populate(data: [accountCardModel])
-        case .viewAccount(let accountCardModel):
+            dataTableView().populate(data: [accountModel])
+        case .viewAccount(let accountModel):
             setDestinationBundle(bundle: SegueBundle(
                 identifier: R.segue.searchViewController.searchToAccount.identifier,
                 model: AccountBundle(
-                    accountName: accountCardModel.accountName,
+                    accountName: accountModel.accountName,
                     readOnly: true)
             ))
             performSegue(withIdentifier: R.segue.searchViewController.searchToAccount, sender: self)

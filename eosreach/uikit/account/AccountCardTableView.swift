@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class AccountCardTableView : SimpleTableView<AccountCardModel, AccountCardCell> {
+class AccountCardTableView : SimpleTableView<AccountModel, AccountCardCell> {
     
     override func cellNib() -> UINib {
         return UINib(resource: R.nib.accountCardCell)
