@@ -4,10 +4,10 @@ import RealmSwift
 
 class InsertAccountsForPublicKey {
     
-    func insertAccounts(publicKey: String, accounts: [AccountNameSystemBalance]) -> Single<[AccountEntity]> {
+    func insertAccounts(publicKey: String, accounts: [AccountNameSystemBalance]) -> Single<AccountsForPublicKey> {
         return Single.create { single in
             
-            let accountEntities = accounts.map { accountNameSystemBalance -> AccountEntity in
+            let accountEntities: [AccountEntity] = accounts.map { accountNameSystemBalance -> AccountEntity in
                 let accountEntity = AccountEntity()
                 accountEntity.publicKey = publicKey
                 accountEntity.accountName = accountNameSystemBalance.accountName
@@ -28,8 +28,10 @@ class InsertAccountsForPublicKey {
                     realm.delete(results)
                     realm.add(accountEntities)
                 }
-                
-                single(.success(accountEntities))
+                single(.success(AccountsForPublicKey(
+                    publicKey: publicKey,
+                    accounts: accounts
+                )))
             } catch {
                 single(.error(error))
             }

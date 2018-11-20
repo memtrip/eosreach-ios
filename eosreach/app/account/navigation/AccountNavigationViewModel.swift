@@ -3,6 +3,10 @@ import RxSwift
 
 class AccountNavigationViewModel: MxViewModel<AccountNavigationIntent, AccountNavigationResult, AccountNavigationViewState> {
 
+    private let getAccounts = GetAccounts()
+    private let accountListSelection = AccountListSelection()
+    private let accountListUseCase = AccountNavigationUseCase()
+    
     override func dispatcher(intent: AccountNavigationIntent) -> Observable<AccountNavigationResult> {
         switch intent {
         case .idle:

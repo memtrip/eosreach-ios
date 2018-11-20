@@ -52,6 +52,7 @@
 		3C1A972D21A41EFD00C30A75 /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1A972C21A41EFD00C30A75 /* eosswift.framework */; };
 		3C1A972F21A41F0700C30A75 /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1A972C21A41EFD00C30A75 /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C1A973121A4755D00C30A75 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A973021A4755D00C30A75 /* BalanceModel.swift */; };
+		3C1A973521A4844200C30A75 /* AccountNavigationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A973421A4844200C30A75 /* AccountNavigationUseCase.swift */; };
 		3C1F1F7121A306680075BD71 /* VoteProducerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */; };
 		3C1F1F7521A306800075BD71 /* VoteProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */; };
 		3C1F1F7721A306A10075BD71 /* VoteProducerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */; };
@@ -312,6 +313,7 @@
 		3C1A972621A3DABD00C30A75 /* BlockProducerStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = BlockProducerStrings.strings; sourceTree = "<group>"; };
 		3C1A972C21A41EFD00C30A75 /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
 		3C1A973021A4755D00C30A75 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
+		3C1A973421A4844200C30A75 /* AccountNavigationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNavigationUseCase.swift; sourceTree = "<group>"; };
 		3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerTableView.swift; sourceTree = "<group>"; };
 		3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteProducerCell.xib; sourceTree = "<group>"; };
 		3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerCell.swift; sourceTree = "<group>"; };
@@ -761,6 +763,7 @@
 				3C6DF79421A0934600ADA892 /* AccountNavigationViewController.swift */,
 				3C6DF79521A0934600ADA892 /* AccountNavigationViewModel.swift */,
 				3C6DF79721A0934600ADA892 /* AccountNavigationViewState.swift */,
+				3C1A973421A4844200C30A75 /* AccountNavigationUseCase.swift */,
 			);
 			path = navigation;
 			sourceTree = "<group>";
@@ -1537,6 +1540,7 @@
 				3C0EC82A219350DE00562A1B /* ImportKeyViewState.swift in Sources */,
 				3C964C3821938C71003663EF /* EosEndpointResult.swift in Sources */,
 				3C964C4021944305003663EF /* EosEndpoint.swift in Sources */,
+				3C1A973521A4844200C30A75 /* AccountNavigationUseCase.swift in Sources */,
 				3C964C4A219444DB003663EF /* RsaEncryptionVerified.swift in Sources */,
 				3C6DF79C21A0934600ADA892 /* AccountNavigationViewState.swift in Sources */,
 				3C6DF78721A08D8700ADA892 /* VoteResult.swift in Sources */,
