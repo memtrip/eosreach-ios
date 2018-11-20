@@ -8,12 +8,12 @@ class DeleteBalances {
         return Completable.create { completable in
             do {
                 let realm = try Realm()
+                let results = realm
+                    .objects(BalanceEntity.self)
                 try realm.write {
-                    let results = realm
-                        .objects(BalanceEntity.self)
                     realm.delete(results)
-                    completable(.completed)
                 }
+                completable(.completed)
             } catch {
                 completable(.error(error))
             }

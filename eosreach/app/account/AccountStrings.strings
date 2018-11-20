@@ -9,7 +9,11 @@
 	"account_error_get_balances_title" = "Failed to fetch account balances";
 	"account_error_get_balances_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
 	"account_balance_tokens_title" = Tokens;
+	"account_balance_no_balance" = "This account does not have a balance yet.";
 	"account_balance_scan_for_airdrops_button" = "Scan For Airdrop Tokens";
+	"account_balance_airdrops_generic_error" = "We could not fetch airdrops, please check your internet and try again. If this problem persists, try changing the EOS endpoint URL.";
+	"account_balance_airdrops_empty_error" = "We could not find any airdrops associated with this account, the token must be pushed to the customtokens contract for it to be considered valid by this app.";
+	"account_balance_airdrops_customtoken_empty_error" = "We could not find any airdrops on this network, try changing the EOS endpoint URL.";
 	"account_resources_title" = "Manage Resources";
 	"account_resources_bandwidth_button" = Bandwidth;
 	"account_resources_ram_button" = Ram;

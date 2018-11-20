@@ -8,11 +8,9 @@ class GetAccounts {
         return Single.create { single in
             do {
                 let realm = try Realm()
-                try realm.write {
-                    let results = realm
-                        .objects(AccountEntity.self)
-                    single(.success(Array(results)))
-                }
+                let results = realm
+                    .objects(AccountEntity.self)
+                single(.success(Array(results)))
             } catch {
                 single(.error(error))
             }

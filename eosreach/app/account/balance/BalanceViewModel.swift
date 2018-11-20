@@ -13,7 +13,7 @@ class BalanceViewModel: MxViewModel<BalanceIntent, BalanceResult, BalanceViewSta
         case .idle:
             return just(BalanceResult.idle)
         case .start(let accountBalances):
-            return just(BalanceResult.populate(accountBalances: accountBalances))
+            return just(showBalances(accountBalanceList: accountBalances))
         case .scanForAirdropTokens(let accountName):
             return scanForAirdropTokens(accountName: accountName)
         case .navigateToActions(let balance):
@@ -48,6 +48,26 @@ class BalanceViewModel: MxViewModel<BalanceIntent, BalanceResult, BalanceViewSta
             return previousState.copy(copy: { copy in
                 copy.view = BalanceViewState.View.navigateToActions(contractAccountBalance: contractAccountBalance)
             })
+        case .onAirdropEmpty:
+            return previousState.copy(copy: { copy in
+                copy.view = BalanceViewState.View.onAirdropEmpty
+            })
+        case .onAirdropCustomTokenTableEmpty:
+            return previousState.copy(copy: { copy in
+                copy.view = BalanceViewState.View.onAirdropCustomTokenTableEmpty
+            })
+        case .emptyBalances:
+            return previousState.copy(copy: { copy in
+                copy.view = BalanceViewState.View.emptyBalances
+            })
+        }
+    }
+    
+    private func showBalances(accountBalanceList: AccountBalanceList) -> BalanceResult {
+        if (accountBalanceList.balances.isEmpty) {
+            return BalanceResult.emptyBalances
+        } else {
+            return BalanceResult.populate(accountBalances: accountBalanceList)
         }
     }
     
@@ -87,13 +107,18 @@ class BalanceViewModel: MxViewModel<BalanceIntent, BalanceResult, BalanceViewSta
                         if (results.isNotEmpty()) {
                             return self.insertAirdrops(accountName: accountName, balances: results)
                         } else {
-                            return Single.just(BalanceResult.onAirdropError)
+                            return Single.just(BalanceResult.onAirdropEmpty)
                         }
                 }
             } else {
-                return Single.just(BalanceResult.onAirdropError)
+                switch tokenResponse.error! {
+                case .genericError:
+                    return Single.just(BalanceResult.onAirdropError)
+                case .noAirDrops:
+                    return Single.just(BalanceResult.onAirdropCustomTokenTableEmpty)
+                }
             }
-            }.asObservable().startWith(BalanceResult.onAirdropProgress)
+        }.catchErrorJustReturn(BalanceResult.onAirdropError).asObservable().startWith(BalanceResult.onAirdropProgress)
     }
     
     private func insertAirdrops(accountName: String, balances: [ContractAccountBalance]) -> Single<BalanceResult> {

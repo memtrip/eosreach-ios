@@ -10,6 +10,7 @@ class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, Bala
     @IBOutlet weak var tokens: UILabel!
     @IBOutlet weak var noBalances: UILabel!
     @IBOutlet weak var balancesTableView: UITableView!
+    @IBOutlet weak var activityIndicator: ReachActivityIndicator!
     
     var accountName: String?
     var accountBalanceList: AccountBalanceList?
@@ -22,6 +23,7 @@ class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, Bala
         super.viewDidLoad()
         scanForAirdrops.setTitle(R.string.accountStrings.account_balance_scan_for_airdrops_button(), for: .normal)
         tokens.text = R.string.accountStrings.account_balance_tokens_title()
+        noBalances.text = R.string.accountStrings.account_balance_no_balance()
     }
 
     override func intents() -> Observable<BalanceIntent> {
@@ -44,12 +46,21 @@ class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, Bala
         switch state.view {
         case .idle:
             break
+        case .emptyBalances:
+            activityIndicator.stop()
+            dataTableView().gone()
+            noBalances.visible()
         case .populate:
             dataTableView().populate(data: state.accountBalances.balances)
         case .onAirdropError:
-            print("")
+            activityIndicator.stop()
+            dataTableView().visible()
+            showOKDialog(
+                title: R.string.appStrings.app_error_view_title(),
+                message: R.string.accountStrings.account_balance_airdrops_generic_error())
         case .onAirdropProgress:
-            print("")
+            dataTableView().gone()
+            activityIndicator.start()
         case .onAirdropSuccess:
             dataTableView().visible()
             dataTableView().clear()
@@ -61,6 +72,20 @@ class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, Bala
                     contractAccountBalance: contractAccountBalance, readOnly: true)
             ))
             performSegue(withIdentifier: R.segue.balanceViewController.balanceToActions, sender: self)
+        case .onAirdropEmpty:
+            activityIndicator.stop()
+            dataTableView().visible()
+            showOKDialog(
+                title: R.string.appStrings.app_error_view_title(),
+                message: R.string.accountStrings.account_balance_airdrops_empty_error())
+            break
+        case .onAirdropCustomTokenTableEmpty:
+            activityIndicator.stop()
+            dataTableView().visible()
+            showOKDialog(
+                title: R.string.appStrings.app_error_view_title(),
+                message: R.string.accountStrings.account_balance_airdrops_customtoken_empty_error())
+            break
         }
     }
 

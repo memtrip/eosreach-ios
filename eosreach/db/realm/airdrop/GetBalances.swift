@@ -8,12 +8,10 @@ class GetBalances {
         return Single.create { single in
             do {
                 let realm = try Realm()
-                try realm.write {
-                    let results = realm
-                        .objects(BalanceEntity.self)
-                        .filter("accountName = %@", accountName)
-                    single(.success(Array(results)))
-                }
+                let results = realm
+                    .objects(BalanceEntity.self)
+                    .filter("accountName = %@", accountName)
+                single(.success(Array(results)))
             } catch {
                 single(.error(error))
             }

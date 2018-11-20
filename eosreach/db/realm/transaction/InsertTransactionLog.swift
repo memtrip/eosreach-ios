@@ -10,8 +10,8 @@ class InsertTransactionLog {
                 let realm = try Realm()
                 try realm.write {
                     realm.add(transactionLogEntities)
-                    completable(.completed)
                 }
+                completable(.completed)
             } catch {
                 completable(.error(error))
             }

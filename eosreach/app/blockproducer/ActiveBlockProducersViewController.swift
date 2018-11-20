@@ -60,7 +60,9 @@ class ActiveBlockProducersViewController
         case .blockProducerSelected(let blockProducer):
             if let delegate = self.delegate {
                 delegate.onResult(blockProducerDetails: blockProducer)
-                self.close()
+                DispatchQueue.main.async {
+                    self.close()
+                }
             }
         case .blockProducerInformationSelected(let blockProducer):
             print("")

@@ -8,12 +8,12 @@ class DeleteTransactionLog {
         return Completable.create { completable in
             do {
                 let realm = try Realm()
+                let results = realm
+                    .objects(TransactionLogEntity.self)
                 try realm.write {
-                    let results = realm
-                        .objects(TransactionLogEntity.self)
                     realm.delete(results)
-                    completable(.completed)
                 }
+                completable(.completed)
             } catch {
                 completable(.error(error))
             }
