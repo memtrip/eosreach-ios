@@ -59,6 +59,10 @@ extension UIViewController {
     }
 
     @objc func handleBackMenu(button: UIButton) {
+        self.close()
+    }
+    
+    func close() {
         dismiss(animated: true, completion: nil)
     }
 }

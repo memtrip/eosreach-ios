@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class EosEndpointViewController: MxViewController<EosEndpointIntent, EosEndpointResult, EosEndpointViewState, EosEndpointViewModel> {
+class EosEndpointViewController: MxViewController<EosEndpointIntent, EosEndpointResult, EosEndpointViewState, EosEndpointViewModel>, ActiveBlockProducersDelegate {
 
     @IBOutlet weak var toolbar: ReachToolbar!
     @IBOutlet weak var currentEndpointLabel: UILabel!
@@ -25,7 +25,7 @@ class EosEndpointViewController: MxViewController<EosEndpointIntent, EosEndpoint
     override func intents() -> Observable<EosEndpointIntent> {
         return Observable.merge(
             Observable.just(EosEndpointIntent.idle),
-            changeEndpointButton.rx.tap.map {
+            chooseBlockProducerButton.rx.tap.map {
                 EosEndpointIntent.navigateToBlockProducerList
             },
             changeEndpointButton.rx.tap.map {
@@ -53,7 +53,7 @@ class EosEndpointViewController: MxViewController<EosEndpointIntent, EosEndpoint
                 title: R.string.settingsStrings.settings_eos_endpoint_success_title(),
                 message: R.string.settingsStrings.settings_eos_endpoint_success_body())
         case .navigateToBlockProducerList:
-            print("")
+            performSegue(withIdentifier: R.segue.eosEndpointViewController.endpointToActiveBlockProducers, sender: self)
         case .onErrorInvalidUrl:
             activityIndicator.stop()
             changeEndpointButton.visible()
@@ -73,6 +73,15 @@ class EosEndpointViewController: MxViewController<EosEndpointIntent, EosEndpoint
                 title: R.string.appStrings.app_error_view_title(),
                 message: R.string.settingsStrings.settings_eos_endpoint_generic())
         }
+    }
+    
+    func onResult(blockProducerDetails: BlockProducerDetails) {
+        changeEndpointTextField.text = blockProducerDetails.apiUrl
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        (segue.destination as! ActiveBlockProducersViewController).delegate = self
+        super.prepare(for: segue, sender: sender)
     }
 
     override func provideViewModel() -> EosEndpointViewModel {

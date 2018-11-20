@@ -1,0 +1,5 @@
+{
+	"active_block_producer_title" = "Active Block Producers";
+	"active_block_producer_error_title" = "Failed to fetch block producers";
+	"active_block_producer_error_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
+}

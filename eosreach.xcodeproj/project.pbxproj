@@ -45,6 +45,10 @@
 		3C14FA4421A0A31A00B8255F /* EosPriceRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA4321A0A31A00B8255F /* EosPriceRequestImpl.swift */; };
 		3C14FA4621A0A3AD00B8255F /* EosPriceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA4521A0A3AD00B8255F /* EosPriceApi.swift */; };
 		3C1A971D21A3C5F100C30A75 /* EosEndpointUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A971C21A3C5F100C30A75 /* EosEndpointUseCase.swift */; };
+		3C1A971F21A3D02600C30A75 /* ActiveBlockProducersTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A971E21A3D02600C30A75 /* ActiveBlockProducersTableView.swift */; };
+		3C1A972121A3D03100C30A75 /* ActiveBlockProducersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A972021A3D03100C30A75 /* ActiveBlockProducersCell.swift */; };
+		3C1A972521A3D13E00C30A75 /* ActiveBlockProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A972421A3D13E00C30A75 /* ActiveBlockProducerCell.xib */; };
+		3C1A972721A3DABD00C30A75 /* BlockProducerStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A972621A3DABD00C30A75 /* BlockProducerStrings.strings */; };
 		3C1F1F7121A306680075BD71 /* VoteProducerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */; };
 		3C1F1F7521A306800075BD71 /* VoteProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */; };
 		3C1F1F7721A306A10075BD71 /* VoteProducerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */; };
@@ -136,12 +140,12 @@
 		3C7F0DD82194A0D400E72DD1 /* SearchViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD32194A0D400E72DD1 /* SearchViewState.swift */; };
 		3C7F0DD92194A0D400E72DD1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD42194A0D400E72DD1 /* SearchViewController.swift */; };
 		3C7F0DDA2194A0D400E72DD1 /* SearchIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD52194A0D400E72DD1 /* SearchIntent.swift */; };
-		3C7F0DE72194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift */; };
+		3C7F0DE72194A17000E72DD1 /* ActiveBlockProducersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersViewModel.swift */; };
 		3C7F0DE82194A17000E72DD1 /* RegisteredBlockProducersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DDE2194A17000E72DD1 /* RegisteredBlockProducersResult.swift */; };
-		3C7F0DE92194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DDF2194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift */; };
-		3C7F0DEA2194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE02194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift */; };
+		3C7F0DE92194A17000E72DD1 /* ActiveBlockProducersViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DDF2194A17000E72DD1 /* ActiveBlockProducersViewState.swift */; };
+		3C7F0DEA2194A17000E72DD1 /* ActiveBlockProducersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE02194A17000E72DD1 /* ActiveBlockProducersViewController.swift */; };
 		3C7F0DEB2194A17000E72DD1 /* RegisteredBlockProducersViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE12194A17000E72DD1 /* RegisteredBlockProducersViewState.swift */; };
-		3C7F0DEC2194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift */; };
+		3C7F0DEC2194A17000E72DD1 /* ActiveBlockProducersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersResult.swift */; };
 		3C7F0DED2194A17000E72DD1 /* RegisteredBlockProducersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE32194A17000E72DD1 /* RegisteredBlockProducersViewController.swift */; };
 		3C7F0DEE2194A17000E72DD1 /* RegisteredBlockProducersIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE42194A17000E72DD1 /* RegisteredBlockProducersIntent.swift */; };
 		3C7F0DEF2194A17000E72DD1 /* ActiveBlockProducersIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE52194A17000E72DD1 /* ActiveBlockProducersIntent.swift */; };
@@ -301,6 +305,10 @@
 		3C14FA4321A0A31A00B8255F /* EosPriceRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosPriceRequestImpl.swift; sourceTree = "<group>"; };
 		3C14FA4521A0A3AD00B8255F /* EosPriceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosPriceApi.swift; sourceTree = "<group>"; };
 		3C1A971C21A3C5F100C30A75 /* EosEndpointUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosEndpointUseCase.swift; sourceTree = "<group>"; };
+		3C1A971E21A3D02600C30A75 /* ActiveBlockProducersTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersTableView.swift; sourceTree = "<group>"; };
+		3C1A972021A3D03100C30A75 /* ActiveBlockProducersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersCell.swift; sourceTree = "<group>"; };
+		3C1A972421A3D13E00C30A75 /* ActiveBlockProducerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActiveBlockProducerCell.xib; sourceTree = "<group>"; };
+		3C1A972621A3DABD00C30A75 /* BlockProducerStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = BlockProducerStrings.strings; sourceTree = "<group>"; };
 		3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerTableView.swift; sourceTree = "<group>"; };
 		3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteProducerCell.xib; sourceTree = "<group>"; };
 		3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerCell.swift; sourceTree = "<group>"; };
@@ -395,12 +403,12 @@
 		3C7F0DD32194A0D400E72DD1 /* SearchViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewState.swift; sourceTree = "<group>"; };
 		3C7F0DD42194A0D400E72DD1 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3C7F0DD52194A0D400E72DD1 /* SearchIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchIntent.swift; sourceTree = "<group>"; };
-		3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersSearchViewModel.swift; sourceTree = "<group>"; };
+		3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersViewModel.swift; sourceTree = "<group>"; };
 		3C7F0DDE2194A17000E72DD1 /* RegisteredBlockProducersResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersResult.swift; sourceTree = "<group>"; };
-		3C7F0DDF2194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersSearchViewState.swift; sourceTree = "<group>"; };
-		3C7F0DE02194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersSearchViewController.swift; sourceTree = "<group>"; };
+		3C7F0DDF2194A17000E72DD1 /* ActiveBlockProducersViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersViewState.swift; sourceTree = "<group>"; };
+		3C7F0DE02194A17000E72DD1 /* ActiveBlockProducersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersViewController.swift; sourceTree = "<group>"; };
 		3C7F0DE12194A17000E72DD1 /* RegisteredBlockProducersViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersViewState.swift; sourceTree = "<group>"; };
-		3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersSearchResult.swift; sourceTree = "<group>"; };
+		3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersResult.swift; sourceTree = "<group>"; };
 		3C7F0DE32194A17000E72DD1 /* RegisteredBlockProducersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersViewController.swift; sourceTree = "<group>"; };
 		3C7F0DE42194A17000E72DD1 /* RegisteredBlockProducersIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersIntent.swift; sourceTree = "<group>"; };
 		3C7F0DE52194A17000E72DD1 /* ActiveBlockProducersIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersIntent.swift; sourceTree = "<group>"; };
@@ -1140,10 +1148,14 @@
 			isa = PBXGroup;
 			children = (
 				3C7F0DE52194A17000E72DD1 /* ActiveBlockProducersIntent.swift */,
-				3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift */,
-				3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift */,
-				3C7F0DDF2194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift */,
-				3C7F0DE02194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift */,
+				3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersResult.swift */,
+				3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersViewModel.swift */,
+				3C7F0DDF2194A17000E72DD1 /* ActiveBlockProducersViewState.swift */,
+				3C7F0DE02194A17000E72DD1 /* ActiveBlockProducersViewController.swift */,
+				3C1A971E21A3D02600C30A75 /* ActiveBlockProducersTableView.swift */,
+				3C1A972021A3D03100C30A75 /* ActiveBlockProducersCell.swift */,
+				3C1A972421A3D13E00C30A75 /* ActiveBlockProducerCell.xib */,
+				3C1A972621A3DABD00C30A75 /* BlockProducerStrings.strings */,
 			);
 			path = blockproducer;
 			sourceTree = "<group>";
@@ -1324,10 +1336,12 @@
 				3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */,
 				3CC9A3CA219DCF900002A25F /* ErrorView.xib in Resources */,
 				3C1F1F9A21A35B090075BD71 /* ActionsCell.xib in Resources */,
+				3C1A972521A3D13E00C30A75 /* ActiveBlockProducerCell.xib in Resources */,
 				3C4406AD21A1EED2003BBFA9 /* BalanceCell.xib in Resources */,
 				3C964C4221944367003663EF /* AppStrings.strings in Resources */,
 				3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */,
 				3CC9A3D7219DF2B90002A25F /* RegisteredBlockProducersCell.xib in Resources */,
+				3C1A972721A3DABD00C30A75 /* BlockProducerStrings.strings in Resources */,
 				3C340FCC219368C30017BEF9 /* SettingsStrings.strings in Resources */,
 				3C7F0DFE2194AC2A00E72DD1 /* ExploreStrings.strings in Resources */,
 				3CCE9C2E21A2C38E0050910D /* ResourceGraphView.xib in Resources */,
@@ -1584,11 +1598,11 @@
 				3C1F1F7B21A31CCF0075BD71 /* ResourcesViewLayout.swift in Sources */,
 				3CC9A3A3219DAF0B0002A25F /* Token.swift in Sources */,
 				3C6DF79021A090F300ADA892 /* ResourcesViewState.swift in Sources */,
-				3C7F0DE92194A17000E72DD1 /* ActiveBlockProducersSearchViewState.swift in Sources */,
+				3C7F0DE92194A17000E72DD1 /* ActiveBlockProducersViewState.swift in Sources */,
 				3C1F1F9021A359090075BD71 /* ActionsViewController.swift in Sources */,
-				3C7F0DE72194A17000E72DD1 /* ActiveBlockProducersSearchViewModel.swift in Sources */,
+				3C7F0DE72194A17000E72DD1 /* ActiveBlockProducersViewModel.swift in Sources */,
 				3C592F9A219D60B400D7C9B9 /* BandwidthRequestImpl.swift in Sources */,
-				3C7F0DEA2194A17000E72DD1 /* ActiveBlockProducersSearchViewController.swift in Sources */,
+				3C7F0DEA2194A17000E72DD1 /* ActiveBlockProducersViewController.swift in Sources */,
 				3C6DF79A21A0934600ADA892 /* AccountNavigationViewModel.swift in Sources */,
 				3C1F1F9C21A36FCA0075BD71 /* ActionsBundle.swift in Sources */,
 				3C8C6D9A2192D56000FC1A0D /* Logger.swift in Sources */,
@@ -1606,7 +1620,7 @@
 				3CCE9C2421A2B11F0050910D /* AccountRenderer.swift in Sources */,
 				3C964C3921938C71003663EF /* EosEndpointViewModel.swift in Sources */,
 				3C14FA3F21A0A1C600B8255F /* AccountUseCase.swift in Sources */,
-				3C7F0DEC2194A17000E72DD1 /* ActiveBlockProducersSearchResult.swift in Sources */,
+				3C7F0DEC2194A17000E72DD1 /* ActiveBlockProducersResult.swift in Sources */,
 				3CCE9C2C21A2C3810050910D /* ResourceGraphView.swift in Sources */,
 				3C7F0E022194B73200E72DD1 /* ReachTabsController.swift in Sources */,
 				3C592F9C219D60BE00D7C9B9 /* DelegatedBandwidth.swift in Sources */,
@@ -1634,6 +1648,7 @@
 				3CC9A389219DA76C0002A25F /* BlockProducerDetails.swift in Sources */,
 				3C0EC81B21933D4F00562A1B /* SplashViewModel.swift in Sources */,
 				3C340FD52193801B0017BEF9 /* CurrencyPairingResult.swift in Sources */,
+				3C1A971F21A3D02600C30A75 /* ActiveBlockProducersTableView.swift in Sources */,
 				3C9BFB94219B39B900589936 /* EosAccountResource.swift in Sources */,
 				3CC9A3AF219DB4F00002A25F /* ProxyVoterDetails.swift in Sources */,
 				3C6DF75B21A05CF600ADA892 /* AccountCardModel.swift in Sources */,
@@ -1688,6 +1703,7 @@
 				3C340FC92193612A0017BEF9 /* SettingsResult.swift in Sources */,
 				3C0ADD7E219F378C0026649F /* BalanceEntity.swift in Sources */,
 				3C8C6D8D2192D4B600FC1A0D /* Rx.swift in Sources */,
+				3C1A972121A3D03100C30A75 /* ActiveBlockProducersCell.swift in Sources */,
 				3C9BFB8E219B368700589936 /* AccountBalanceRequestImpl.swift in Sources */,
 				3C6DF76F21A082AC00ADA892 /* AccountViewModel.swift in Sources */,
 				3C9BFBC6219C21E000589936 /* AccountActionRequestImpl.swift in Sources */,

@@ -230,6 +230,7 @@
                             <constraint firstItem="MKt-PO-Rct" firstAttribute="bottom" secondItem="R2v-RU-t3Q" secondAttribute="bottom" constant="16" id="iPL-to-7Ic"/>
                             <constraint firstItem="MKt-PO-Rct" firstAttribute="trailing" secondItem="Ast-fT-FnB" secondAttribute="trailing" id="iep-IK-EkQ"/>
                             <constraint firstItem="BOY-ZE-rZH" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" constant="16" id="iuf-tW-8Ku"/>
+                            <constraint firstItem="MKt-PO-Rct" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d3C-qE-ylI" secondAttribute="trailing" symbolic="YES" id="m6e-qP-V0Z"/>
                             <constraint firstItem="d3C-qE-ylI" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" constant="16" id="nTR-ty-Qnr"/>
                             <constraint firstItem="rsJ-IT-XWE" firstAttribute="top" secondItem="1EZ-10-e0Y" secondAttribute="bottom" constant="4" id="qQQ-7S-YP2"/>
                             <constraint firstItem="R2v-RU-t3Q" firstAttribute="leading" secondItem="MKt-PO-Rct" secondAttribute="leading" constant="16" id="r60-xq-Esm"/>
@@ -246,11 +247,68 @@
                         <outlet property="currentEndpointLabel" destination="1EZ-10-e0Y" id="Aw9-V6-Jdg"/>
                         <outlet property="currentEndpointUrl" destination="rsJ-IT-XWE" id="Yae-0Q-UHN"/>
                         <outlet property="toolbar" destination="Ast-fT-FnB" id="IRe-Nd-bJ1"/>
+                        <segue destination="KeL-6I-ll1" kind="show" identifier="endpointToActiveBlockProducers" id="ctq-NB-9iI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P80-QB-jMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1318" y="-674"/>
+        </scene>
+        <!--Active Block Producers View Controller-->
+        <scene sceneID="0HL-Vy-l2p">
+            <objects>
+                <viewController id="KeL-6I-ll1" customClass="ActiveBlockProducersViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="es8-2N-u6L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Trn-Mv-Lv0" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                            </activityIndicatorView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFw-Pt-kCe" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-dH-Ocn" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="VT0-0Q-l5K"/>
+                                </constraints>
+                            </view>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KQC-wm-XDg" customClass="ActiveBlockProducersTableView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="EP7-dH-Ocn" firstAttribute="top" secondItem="Pnn-4d-r0C" secondAttribute="top" id="0Fg-bZ-Jtc"/>
+                            <constraint firstItem="Pnn-4d-r0C" firstAttribute="trailing" secondItem="PFw-Pt-kCe" secondAttribute="trailing" id="4ah-O6-MwQ"/>
+                            <constraint firstItem="Trn-Mv-Lv0" firstAttribute="top" secondItem="EP7-dH-Ocn" secondAttribute="bottom" id="5rf-UI-zyq"/>
+                            <constraint firstItem="PFw-Pt-kCe" firstAttribute="leading" secondItem="Pnn-4d-r0C" secondAttribute="leading" id="Fst-hr-DZs"/>
+                            <constraint firstItem="Pnn-4d-r0C" firstAttribute="bottom" secondItem="KQC-wm-XDg" secondAttribute="bottom" id="Hcj-dq-u41"/>
+                            <constraint firstItem="Pnn-4d-r0C" firstAttribute="bottom" secondItem="PFw-Pt-kCe" secondAttribute="bottom" id="Wey-uv-Kw7"/>
+                            <constraint firstItem="Pnn-4d-r0C" firstAttribute="trailing" secondItem="KQC-wm-XDg" secondAttribute="trailing" id="cX8-ev-ZCb"/>
+                            <constraint firstItem="PFw-Pt-kCe" firstAttribute="top" secondItem="EP7-dH-Ocn" secondAttribute="bottom" id="csC-Sm-Ab0"/>
+                            <constraint firstItem="Pnn-4d-r0C" firstAttribute="trailing" secondItem="Trn-Mv-Lv0" secondAttribute="trailing" id="eXC-IW-sUZ"/>
+                            <constraint firstItem="EP7-dH-Ocn" firstAttribute="leading" secondItem="Pnn-4d-r0C" secondAttribute="leading" id="f1k-Q3-kJb"/>
+                            <constraint firstItem="KQC-wm-XDg" firstAttribute="top" secondItem="EP7-dH-Ocn" secondAttribute="bottom" id="isE-5S-dbi"/>
+                            <constraint firstItem="Pnn-4d-r0C" firstAttribute="trailing" secondItem="EP7-dH-Ocn" secondAttribute="trailing" id="nX4-Sc-NZ7"/>
+                            <constraint firstItem="Trn-Mv-Lv0" firstAttribute="leading" secondItem="Pnn-4d-r0C" secondAttribute="leading" id="nyl-aU-fUt"/>
+                            <constraint firstItem="KQC-wm-XDg" firstAttribute="leading" secondItem="Pnn-4d-r0C" secondAttribute="leading" id="u8v-AI-HUI"/>
+                            <constraint firstItem="Pnn-4d-r0C" firstAttribute="bottom" secondItem="Trn-Mv-Lv0" secondAttribute="bottom" id="zpF-NX-OjL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pnn-4d-r0C"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Trn-Mv-Lv0" id="pa1-FS-Sr0"/>
+                        <outlet property="errorView" destination="PFw-Pt-kCe" id="AoN-XU-3KT"/>
+                        <outlet property="tableView" destination="KQC-wm-XDg" id="igM-hg-ZQv"/>
+                        <outlet property="toolBar" destination="EP7-dH-Ocn" id="5XI-UO-mQ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SXX-H7-vea" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081" y="-674"/>
         </scene>
         <!--Currency Pairing View Controller-->
         <scene sceneID="hWr-d4-pDW">
@@ -703,7 +761,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXo-Nr-pVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4294" y="725"/>
+            <point key="canvasLocation" x="4294" y="795"/>
         </scene>
         <!--Resources View Controller-->
         <scene sceneID="20f-A4-huH">
@@ -920,7 +978,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m56-GT-PW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2087" y="1295"/>
+            <point key="canvasLocation" x="2081" y="795"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="p7s-Kf-lrM">
@@ -974,7 +1032,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51G-5F-se1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2833" y="1379"/>
+            <point key="canvasLocation" x="2826" y="795"/>
         </scene>
         <!--Registered Block Producers View Controller-->
         <scene sceneID="HiQ-yd-EJP">
@@ -1020,7 +1078,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPb-la-Q13" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3564" y="1379"/>
+            <point key="canvasLocation" x="3564" y="795"/>
         </scene>
     </scenes>
     <resources>
