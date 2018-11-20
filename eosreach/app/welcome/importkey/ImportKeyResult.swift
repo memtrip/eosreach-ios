@@ -4,7 +4,9 @@ enum ImportKeyResult: MxResult {
     case idle
     case onProgress
     case onSuccess
-    case onError(error: String)
+    case genericError
+    case invalidKey
+    case noAccounts
     case navigateToGithubSource
     case navigateToSettings
 }

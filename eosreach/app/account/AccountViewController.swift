@@ -14,6 +14,8 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     @IBOutlet weak var activityIndicator: ReachActivityIndicator!
     @IBOutlet weak var errorView: ErrorView!
     
+    private let navigationMenuItem = IconButton(image: Icon.cm.menu, tintColor: .white)
+    private let navigationExploreItem = IconButton(image: Icon.cm.search, tintColor: .white)
     private let balanceTabItem = TabItem()
     private let resourcesTabItem = TabItem()
     private let voteTabItem = TabItem()
@@ -41,13 +43,21 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setToolbar(toolbar: toolbar)
+        
         balanceTabItem.title = R.string.accountStrings.account_tab_balance()
         resourcesTabItem.title = R.string.accountStrings.account_tab_resources()
         voteTabItem.title = R.string.accountStrings.account_tab_vote()
         tabBar.tabItems = [balanceTabItem,resourcesTabItem,voteTabItem]
         tabBar.setup()
         tabBar.delegate = self
+        
+        if (accountBundle.readOnly) {
+            setToolbar(toolbar: toolbar)
+        } else {
+            toolbar.leftViews.removeAll()
+            toolbar.leftViews.append(navigationMenuItem)
+            toolbar.rightViews.append(navigationExploreItem)
+        }
     }
 
     override func intents() -> Observable<AccountIntent> {
@@ -55,6 +65,12 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
             Observable.just(AccountIntent.start(accountBundle: accountBundle, page: AccountPage.balances)),
             errorView.retryClick().map {
                 return AccountIntent.retry(accountBundle: self.accountBundle)
+            },
+            navigationMenuItem.rx.tap.map {
+                AccountIntent.openNavigation
+            },
+            navigationExploreItem.rx.tap.map {
+                AccountIntent.navigateToExplore
             }
         )
     }
@@ -154,5 +170,13 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         errorView.populate(
             title: R.string.accountStrings.account_error_get_balances_title(),
             body: R.string.accountStrings.account_error_get_balances_body())
+    }
+    
+    func openNavigation() {
+        // TODO:
+    }
+    
+    func navigateToExplore() {
+        performSegue(withIdentifier: R.segue.accountViewController.accountToExplore, sender: self)
     }
 }

@@ -49,14 +49,14 @@
 		3C1A972121A3D03100C30A75 /* ActiveBlockProducersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A972021A3D03100C30A75 /* ActiveBlockProducersCell.swift */; };
 		3C1A972521A3D13E00C30A75 /* ActiveBlockProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A972421A3D13E00C30A75 /* ActiveBlockProducerCell.xib */; };
 		3C1A972721A3DABD00C30A75 /* BlockProducerStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A972621A3DABD00C30A75 /* BlockProducerStrings.strings */; };
+		3C1A972D21A41EFD00C30A75 /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1A972C21A41EFD00C30A75 /* eosswift.framework */; };
+		3C1A972F21A41F0700C30A75 /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1A972C21A41EFD00C30A75 /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C1F1F7121A306680075BD71 /* VoteProducerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */; };
 		3C1F1F7521A306800075BD71 /* VoteProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */; };
 		3C1F1F7721A306A10075BD71 /* VoteProducerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */; };
 		3C1F1F7921A31CBB0075BD71 /* ResourcesRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7821A31CBB0075BD71 /* ResourcesRenderer.swift */; };
 		3C1F1F7B21A31CCF0075BD71 /* ResourcesViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7A21A31CCF0075BD71 /* ResourcesViewLayout.swift */; };
 		3C1F1F7D21A332020075BD71 /* ReachProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7C21A332020075BD71 /* ReachProgressBar.swift */; };
-		3C1F1F8821A350450075BD71 /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1F1F8721A350450075BD71 /* eosswift.framework */; };
-		3C1F1F8A21A3506B0075BD71 /* eosswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1F1F8721A350450075BD71 /* eosswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C1F1F9021A359090075BD71 /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8B21A359080075BD71 /* ActionsViewController.swift */; };
 		3C1F1F9121A359090075BD71 /* ActionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8C21A359080075BD71 /* ActionsViewModel.swift */; };
 		3C1F1F9221A359090075BD71 /* ActionsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8D21A359080075BD71 /* ActionsIntent.swift */; };
@@ -259,7 +259,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3C1F1F8A21A3506B0075BD71 /* eosswift.framework in Embed Frameworks */,
+				3C1A972F21A41F0700C30A75 /* eosswift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,13 +309,13 @@
 		3C1A972021A3D03100C30A75 /* ActiveBlockProducersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersCell.swift; sourceTree = "<group>"; };
 		3C1A972421A3D13E00C30A75 /* ActiveBlockProducerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActiveBlockProducerCell.xib; sourceTree = "<group>"; };
 		3C1A972621A3DABD00C30A75 /* BlockProducerStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = BlockProducerStrings.strings; sourceTree = "<group>"; };
+		3C1A972C21A41EFD00C30A75 /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
 		3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerTableView.swift; sourceTree = "<group>"; };
 		3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteProducerCell.xib; sourceTree = "<group>"; };
 		3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerCell.swift; sourceTree = "<group>"; };
 		3C1F1F7821A31CBB0075BD71 /* ResourcesRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesRenderer.swift; sourceTree = "<group>"; };
 		3C1F1F7A21A31CCF0075BD71 /* ResourcesViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewLayout.swift; sourceTree = "<group>"; };
 		3C1F1F7C21A332020075BD71 /* ReachProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachProgressBar.swift; sourceTree = "<group>"; };
-		3C1F1F8721A350450075BD71 /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
 		3C1F1F8B21A359080075BD71 /* ActionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
 		3C1F1F8C21A359080075BD71 /* ActionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsViewModel.swift; sourceTree = "<group>"; };
 		3C1F1F8D21A359080075BD71 /* ActionsIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsIntent.swift; sourceTree = "<group>"; };
@@ -515,7 +515,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C1F1F8821A350450075BD71 /* eosswift.framework in Frameworks */,
+				3C1A972D21A41EFD00C30A75 /* eosswift.framework in Frameworks */,
 				3C291BA1219D572F00562448 /* Pods_eosreach.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,7 +711,7 @@
 		3C5799E42191D39A00B9A3D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C1F1F8721A350450075BD71 /* eosswift.framework */,
+				3C1A972C21A41EFD00C30A75 /* eosswift.framework */,
 				3C291BA0219D572F00562448 /* Pods_eosreach.framework */,
 				B747F913CEFFA4BFF47AA857 /* Pods_eosreach.framework */,
 				7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */,

@@ -1,4 +1,5 @@
 {
+	"welcome_entry_error_body" = "We could not recover your local account data, your app database has been corrupted, please clear the app data.";
 	"welcome_splash_create_account_button" = "Create Account";
 	"welcome_splash_import_private_key_button" = "Import Private Key";
 	"welcome_splash_explore_button" = Explore;
@@ -10,4 +11,5 @@
 	"welcome_import_key_source_code_url" = "https://github.com/memtrip/eosreach-swift";
 	"welcome_import_key_error_invalid_key" = "Invalid private key format.";
 	"welcome_import_key_error_generic" = "Could not import private key, please check your connection and try again.";
+	"welcome_import_key_error_no_accounts" = "We did not find any accounts associated with this private key, the Create Account option is the easiest way to get started. If this is unexpected, try changing the EOS endpoint in settings.";
 }

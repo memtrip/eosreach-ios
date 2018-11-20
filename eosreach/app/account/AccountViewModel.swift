@@ -25,6 +25,10 @@ class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewSta
             return just(AccountResult.resourceTabIdle)
         case .voteTabIdle:
             return just(AccountResult.voteTabIdle)
+        case .openNavigation:
+            return just(AccountResult.openNavigation)
+        case .navigateToExplore:
+            return just(AccountResult.navigateToExplore)
         }
     }
 
@@ -72,6 +76,14 @@ class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewSta
         case .onErrorFetchingBalances:
             return previousState.copy(copy: { copy in
                 copy.view = AccountViewState.View.onErrorFetchingBalances
+            })
+        case .openNavigation:
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.openNavigation
+            })
+        case .navigateToExplore:
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.navigateToExplore
             })
         }
     }

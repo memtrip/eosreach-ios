@@ -4,7 +4,9 @@ import eosswift
 
 class ImportKeyViewModel: MxViewModel<ImportKeyIntent, ImportKeyResult, ImportKeyViewState> {
 
-    let eosKeyManager = EosKeyManagerFactory.create()
+    private let eosKeyManager = EosKeyManagerFactory.create()
+    private let accountsForPublicKeyRequest = AccountsForPublicKeyRequestImpl()
+    private let insertAccountsForPublicKey = InsertAccountsForPublicKey()
 
     override func dispatcher(intent: ImportKeyIntent) -> Observable<ImportKeyResult> {
         switch intent {
@@ -27,24 +29,43 @@ class ImportKeyViewModel: MxViewModel<ImportKeyIntent, ImportKeyResult, ImportKe
             return ImportKeyViewState.onProgress
         case .onSuccess:
             return ImportKeyViewState.onSuccess
-        case .onError(let error):
-            return ImportKeyViewState.onError(error: error)
         case .navigateToGithubSource:
             return ImportKeyViewState.navigateToGithubSource
         case .navigateToSettings:
             return ImportKeyViewState.navigateToSettings
+        case .genericError:
+            return ImportKeyViewState.genericError
+        case .noAccounts:
+            return ImportKeyViewState.noAccounts
+        case .invalidKey:
+            return ImportKeyViewState.invalidKey
         }
     }
 
     private func importKey(privateKey: String) -> Observable<ImportKeyResult> {
         return eosKeyManager.createEosPrivateKey(value: privateKey).flatMap { eosPrivateKey in
-            self.eosKeyManager.importPrivateKey(eosPrivateKey: eosPrivateKey).flatMap { publicKey in
-                Single.just(ImportKeyResult.onError(error: R.string.welcomeStrings.welcome_import_key_error_generic()))
-            }.catchErrorJustReturn(
-                ImportKeyResult.onError(error: R.string.welcomeStrings.welcome_import_key_error_generic())
-            )
+            return self.eosKeyManager.importPrivateKey(eosPrivateKey: eosPrivateKey).flatMap { publicKey in
+                return self.accountsForPublicKeyRequest.getAccountsForKey(publicKey: publicKey).flatMap { result in
+                    if (result.success()) {
+                        let publicKey = result.data!.publicKey
+                        let accounts = result.data!.accounts
+                        if (accounts.isEmpty) {
+                            return Single.just(ImportKeyResult.noAccounts)
+                        } else {
+                            return self.insertAccountsForPublicKey.insertAccounts(
+                                publicKey: publicKey,
+                                accounts: accounts
+                            ).map { _ in
+                                return ImportKeyResult.onSuccess
+                            }
+                        }
+                    } else {
+                        return Single.just(ImportKeyResult.genericError)
+                    }
+                }
+            }.catchErrorJustReturn(ImportKeyResult.genericError)
         }.catchErrorJustReturn(
-            ImportKeyResult.onError(error: R.string.welcomeStrings.welcome_import_key_error_invalid_key())
+            ImportKeyResult.invalidKey
         ).asObservable().startWith(ImportKeyResult.onProgress)
     }
 }

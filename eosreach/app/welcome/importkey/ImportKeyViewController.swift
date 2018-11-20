@@ -34,7 +34,10 @@ class ImportKeyViewController: MxViewController<ImportKeyIntent, ImportKeyResult
             viewSourceButton.rx.tap.map {
                 ImportKeyIntent.viewSource
             },
-            importKeyButton.rx.tap.map {
+            Observable.merge(
+                importKeyButton.rx.tap.asObservable(),
+                privateKeyTextField.rx.controlEvent(.editingDidEndOnExit).asObservable()
+            ).map {
                 ImportKeyIntent.importKey(privateKey: self.privateKeyTextField.text!)
             }
         )
@@ -54,8 +57,17 @@ class ImportKeyViewController: MxViewController<ImportKeyIntent, ImportKeyResult
         case .onSuccess:
             importKeyButton.gone()
             activityIndicator.stop()
-        case .onError(let error):
-            showOKDialog(title: R.string.appStrings.app_dialog_error_default_title(), message: error)
+            performSegue(withIdentifier: R.segue.importKeyViewController.importKeyToEntry, sender: self)
+        case .genericError:
+            showOKDialog(message: R.string.welcomeStrings.welcome_import_key_error_generic())
+            importKeyButton.visible()
+            activityIndicator.stop()
+        case .noAccounts:
+            showOKDialog(message: R.string.welcomeStrings.welcome_import_key_error_no_accounts())
+            importKeyButton.visible()
+            activityIndicator.stop()
+        case .invalidKey:
+            showOKDialog(message: R.string.welcomeStrings.welcome_import_key_error_invalid_key())
             importKeyButton.visible()
             activityIndicator.stop()
         case .navigateToGithubSource:

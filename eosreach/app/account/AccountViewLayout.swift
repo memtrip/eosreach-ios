@@ -8,4 +8,6 @@ protocol AccountViewLayout {
     func showProgress()
     func showGetAccountError()
     func showGetBalancesError()
+    func openNavigation()
+    func navigateToExplore()
 }

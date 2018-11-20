@@ -47,8 +47,10 @@ class ExploreViewController: UIViewController, TabBarDelegate {
 
     @objc func tabBar(tabBar: TabBar, willSelect tabItem: TabItem) {
         if (tabItem == searchTabItem) {
+            self.view.endEditing(true)
             replaceChildViewController(viewController: searchViewController)
         } else if (tabItem == blockProducersTabItem) {
+            self.view.endEditing(true)
             replaceChildViewController(viewController: registeredBlockProducersViewController)
         }
     }

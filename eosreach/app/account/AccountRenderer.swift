@@ -42,6 +42,10 @@ class AccountRenderer {
             layout.showGetAccountError()
         case .onErrorFetchingBalances:
             layout.showGetBalancesError()
+        case .openNavigation:
+            layout.openNavigation()
+        case .navigateToExplore:
+            layout.navigateToExplore()
         }
     }
 }

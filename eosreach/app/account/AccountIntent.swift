@@ -8,4 +8,6 @@ enum AccountIntent: MxIntent {
     case voteTabIdle
     case retry(accountBundle: AccountBundle)
     case refresh(accountBundle: AccountBundle)
+    case openNavigation
+    case navigateToExplore
 }

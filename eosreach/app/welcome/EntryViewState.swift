@@ -6,5 +6,5 @@ enum EntryViewState: MxViewState {
     case onError
     case onRsaEncryptionFailed
     case navigateToSplash
-    case navigateToAccount(account: String)
+    case navigateToAccount(accountName: String)
 }

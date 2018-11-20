@@ -10,4 +10,6 @@ enum AccountResult: MxResult {
     case onSuccess(accountView: AccountView)
     case onErrorFetchingAccount
     case onErrorFetchingBalances
+    case openNavigation
+    case navigateToExplore
 }

@@ -48,6 +48,12 @@ extension UIView {
 
 extension UIViewController {
     
+    func showOKDialog(message: String) {
+        self.showOKDialog(
+            title: R.string.appStrings.app_error_view_title(),
+            message: message)
+    }
+    
     func showOKDialog(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: R.string.appStrings.app_dialog_ok(), style: .default, handler: nil))

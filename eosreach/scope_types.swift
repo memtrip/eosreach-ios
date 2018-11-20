@@ -20,3 +20,9 @@ extension Array {
         return self.count > 0
     }
 }
+
+extension String {
+    func isNotEmpty() -> Bool {
+        return self.count > 0
+    }
+}

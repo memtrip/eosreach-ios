@@ -16,5 +16,7 @@ struct AccountViewState: MxViewState, Copy {
         case onSuccess
         case onErrorFetchingAccount
         case onErrorFetchingBalances
+        case openNavigation
+        case navigateToExplore
     }
 }

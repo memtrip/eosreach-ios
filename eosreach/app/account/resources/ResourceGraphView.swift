@@ -33,7 +33,7 @@ class ResourceGraphView: UIView {
     ) {
         titleLabel.text = titleLabelValue
         usageLabel.text = usageLabelValue
-        progressView.setProgress(percentage, animated: true)
+        progressView.setProgress(percentage, animated: false)
         progressView.progressTintColor = graphColor
     }
 }
