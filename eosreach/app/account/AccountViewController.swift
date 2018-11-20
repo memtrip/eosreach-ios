@@ -173,7 +173,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     }
     
     func openNavigation() {
-        // TODO:
+        performSegue(withIdentifier: R.segue.accountViewController.accountToNavigationDrawer, sender: self)
     }
     
     func navigateToExplore() {
