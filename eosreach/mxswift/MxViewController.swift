@@ -18,9 +18,9 @@ class MxViewController
     override func viewDidLoad() {
         view.backgroundColor = Res.color.colorWindowBackground()
         DispatchQueue.main.async {
-            self.viewModel.states().observeOn(MainScheduler.instance).subscribe(onNext: { state in
+            self.viewModel.states().observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] state in
                 Logger.log(value: "\(state)", trim: true)
-                self.render(state: state)
+                self?.render(state: state)
             }).disposed(by: self.disposeBag)
 
             self.viewModel.processIntents(intents: self.intents())

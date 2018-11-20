@@ -9,6 +9,7 @@ target 'eosreach' do
   pod 'Material', '~> 2.16'
   pod 'RealmSwift'
   pod 'EllipticCurveKeyPair', '2.0-beta1'
+  pod 'SideMenu'
 
   target 'eosreachTests' do
     pod 'RxBlocking', '~> 4.0'

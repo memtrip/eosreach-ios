@@ -36,9 +36,10 @@ class BalanceViewModel: MxViewModel<BalanceIntent, BalanceResult, BalanceViewSta
             return previousState.copy(copy: { copy in
                 copy.view = BalanceViewState.View.onAirdropError
             })
-        case .onAirdropSuccess:
+        case .onAirdropSuccess(let balances):
             return previousState.copy(copy: { copy in
                 copy.view = BalanceViewState.View.onAirdropSuccess
+                copy.accountBalances = AccountBalanceList(balances: balances)
             })
         case .onAirdropProgress:
             return previousState.copy(copy: { copy in
@@ -99,16 +100,16 @@ class BalanceViewModel: MxViewModel<BalanceIntent, BalanceResult, BalanceViewSta
                             throw GetBalancesError.innerBalanceFailed
                         }
                     }
-                    }.toArray().asSingle().flatMap { contractAccountBalances in
-                        let results = contractAccountBalances.filter { balance in
-                            return balance.accountName != "unavailable" && balance.contractName != "unavailable"
-                        }
-                        
-                        if (results.isNotEmpty()) {
-                            return self.insertAirdrops(accountName: accountName, balances: results)
-                        } else {
-                            return Single.just(BalanceResult.onAirdropEmpty)
-                        }
+                }.toArray().asSingle().flatMap { contractAccountBalances in
+                    let results = contractAccountBalances.filter { balance in
+                        return balance.accountName != "unavailable" && balance.contractName != "unavailable"
+                    }
+                    
+                    if (results.isNotEmpty()) {
+                        return self.insertAirdrops(accountName: accountName, balances: results)
+                    } else {
+                        return Single.just(BalanceResult.onAirdropEmpty)
+                    }
                 }
             } else {
                 switch tokenResponse.error! {
@@ -123,7 +124,7 @@ class BalanceViewModel: MxViewModel<BalanceIntent, BalanceResult, BalanceViewSta
     
     private func insertAirdrops(accountName: String, balances: [ContractAccountBalance]) -> Single<BalanceResult> {
         return insertBalances.replace(accountName: accountName, contractAccountBalances: balances).map { _ in
-            return BalanceResult.onAirdropSuccess
+            return BalanceResult.onAirdropSuccess(balances: balances)
         }
     }
     

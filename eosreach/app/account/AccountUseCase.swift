@@ -25,11 +25,12 @@ class AccountUseCase {
         return eosAccountRequest.getAccount(accountName: accountName).flatMap { response in
             if (response.success()) {
                 let eosAccount = response.data!
-                return self.getBalances(eosAccount: eosAccount, primaryEosPrice: eosPrice, primaryBalance: self.createBalanceEntity(
-                    accountName: accountName,
-                    contractName: contractName,
-                    symbol: eosAccount.balance.symbol
-                ))
+                return self.getBalances(eosAccount: eosAccount, primaryEosPrice: eosPrice, primaryBalance: BalanceModel(
+                        accountName: accountName,
+                        contractName: contractName,
+                        symbol: eosAccount.balance.symbol
+                    )
+                )
             } else {
                 return Single.just(AccountView(error: AccountViewError.fetchingAccount))
             }
@@ -48,17 +49,17 @@ class AccountUseCase {
         return balanceEntity
     }
     
-    private func getBalances(eosAccount: EosAccount, primaryEosPrice: EosPrice, primaryBalance: BalanceEntity) -> Single<AccountView> {
-        return getBalances.select(accountName: eosAccount.accountName).flatMap { balanceEntities in
-            var balances = Array<BalanceEntity>()
+    private func getBalances(eosAccount: EosAccount, primaryEosPrice: EosPrice, primaryBalance: BalanceModel) -> Single<AccountView> {
+        return getBalances.select(accountName: eosAccount.accountName).flatMap { balanceModels in
+            var balances = Array<BalanceModel>()
             balances.append(primaryBalance)
-            balances.append(contentsOf: balanceEntities)
-            return Observable.from(balances).concatMap { balanceEntity in
+            balances.append(contentsOf: balanceModels)
+            return Observable.from(balances).concatMap { balanceModel in
                 Observable.zip(
-                    Observable.just(balanceEntity),
+                    Observable.just(balanceModel),
                     self.chainApi.getCurrencyBalance(body: GetCurrencyBalance(
-                        code: balanceEntity.contractName,
-                        account: balanceEntity.accountName,
+                        code: balanceModel.contractName,
+                        account: balanceModel.accountName,
                         symbol: nil
                     )).asObservable()) { (_, response) -> ContractAccountBalance in
                         if (response.success) {
@@ -66,8 +67,8 @@ class AccountUseCase {
                             if (balanceList.isNotEmpty()) {
                                 let balance = BalanceFormatter.deserialize(balance: balanceList[0])
                                 return ContractAccountBalance(
-                                    contractName: balanceEntity.contractName,
-                                    accountName: balanceEntity.accountName,
+                                    contractName: balanceModel.contractName,
+                                    accountName: balanceModel.accountName,
                                     balance: balance,
                                     exchangeRate: self.parsePrice(
                                         eosAccount: eosAccount,
