@@ -640,44 +640,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1K-kQ-OR2" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="30"/>
                                 <state key="normal" title="_import key"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8Z-Tx-JuN" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="95" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="51" width="375" height="30"/>
                                 <state key="normal" title="_create_new_account"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZz-zQ-cxh" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="126" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="82" width="375" height="30"/>
                                 <state key="normal" title="_settings"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2h-ri-BlB">
-                                <rect key="frame" x="16" y="172" width="343" height="1"/>
+                                <rect key="frame" x="16" y="128" width="343" height="1"/>
                                 <color key="backgroundColor" name="colorBorderTransparent"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="BLo-yv-I6W"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_accounts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDg-4D-ydh">
-                                <rect key="frame" x="16" y="188" width="88.5" height="30"/>
+                                <rect key="frame" x="16" y="144" width="88.5" height="30"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JST-l5-Hcs" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="270.5" y="189" width="88.5" height="30"/>
+                                <rect key="frame" x="270.5" y="145" width="88.5" height="30"/>
                                 <state key="normal" title="_refresh"/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-KR-3bJ" customClass="AccountCardTableView" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="218" width="375" height="449"/>
+                                <rect key="frame" x="8" y="182" width="359" height="477"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WLj-pu-16Z" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="169" y="424" width="37" height="37"/>
+                                <rect key="frame" x="169" y="402" width="37" height="37"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcQ-6Y-dLR" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="218" width="375" height="449"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcQ-6Y-dLR" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="174" width="375" height="493"/>
                             </view>
                         </subviews>
                         <constraints>
@@ -693,17 +692,17 @@
                             <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="eZz-zQ-cxh" secondAttribute="trailing" id="LiY-G9-zhm"/>
                             <constraint firstItem="YcQ-6Y-dLR" firstAttribute="top" secondItem="NDg-4D-ydh" secondAttribute="bottom" id="Mp4-sT-Ted"/>
                             <constraint firstItem="K2h-ri-BlB" firstAttribute="top" secondItem="eZz-zQ-cxh" secondAttribute="bottom" constant="16" id="Nsk-5r-fEe"/>
-                            <constraint firstItem="KBD-p8-KUL" firstAttribute="bottom" secondItem="bGT-KR-3bJ" secondAttribute="bottom" id="RUs-2B-DNg"/>
+                            <constraint firstItem="KBD-p8-KUL" firstAttribute="bottom" secondItem="bGT-KR-3bJ" secondAttribute="bottom" constant="8" id="RUs-2B-DNg"/>
                             <constraint firstItem="JST-l5-Hcs" firstAttribute="top" secondItem="K2h-ri-BlB" secondAttribute="bottom" constant="16" id="TpE-pG-a2Q"/>
-                            <constraint firstItem="bGT-KR-3bJ" firstAttribute="top" secondItem="NDg-4D-ydh" secondAttribute="bottom" id="U0F-ZQ-rd4"/>
+                            <constraint firstItem="bGT-KR-3bJ" firstAttribute="top" secondItem="NDg-4D-ydh" secondAttribute="bottom" constant="8" id="U0F-ZQ-rd4"/>
                             <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="y1K-kQ-OR2" secondAttribute="trailing" id="UoN-W1-Q8Z"/>
                             <constraint firstItem="WLj-pu-16Z" firstAttribute="centerX" secondItem="bGT-KR-3bJ" secondAttribute="centerX" id="dsJ-cp-ShC"/>
                             <constraint firstItem="e8Z-Tx-JuN" firstAttribute="leading" secondItem="KBD-p8-KUL" secondAttribute="leading" id="e7Y-SW-gAZ"/>
                             <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="JST-l5-Hcs" secondAttribute="trailing" constant="16" id="fTC-Pr-lbs"/>
                             <constraint firstItem="KBD-p8-KUL" firstAttribute="bottom" secondItem="YcQ-6Y-dLR" secondAttribute="bottom" id="jsI-Br-xE4"/>
-                            <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="bGT-KR-3bJ" secondAttribute="trailing" id="jtV-aX-llg"/>
+                            <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="bGT-KR-3bJ" secondAttribute="trailing" constant="8" id="jtV-aX-llg"/>
                             <constraint firstItem="e8Z-Tx-JuN" firstAttribute="top" secondItem="y1K-kQ-OR2" secondAttribute="bottom" constant="1" id="lEg-aL-7hK"/>
-                            <constraint firstItem="bGT-KR-3bJ" firstAttribute="leading" secondItem="KBD-p8-KUL" secondAttribute="leading" id="lZS-87-wMd"/>
+                            <constraint firstItem="bGT-KR-3bJ" firstAttribute="leading" secondItem="KBD-p8-KUL" secondAttribute="leading" constant="8" id="lZS-87-wMd"/>
                             <constraint firstItem="y1K-kQ-OR2" firstAttribute="top" secondItem="KBD-p8-KUL" secondAttribute="top" id="r8w-0Y-hol"/>
                             <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="YcQ-6Y-dLR" secondAttribute="trailing" id="tef-qR-mHa"/>
                             <constraint firstItem="K2h-ri-BlB" firstAttribute="leading" secondItem="KBD-p8-KUL" secondAttribute="leading" constant="16" id="tvy-ag-MVu"/>
@@ -722,6 +721,10 @@
                         <outlet property="refreshButton" destination="JST-l5-Hcs" id="elk-kH-DPC"/>
                         <outlet property="settingsButton" destination="eZz-zQ-cxh" id="The-hS-Khi"/>
                         <outlet property="tableView" destination="bGT-KR-3bJ" id="MGB-BN-p7X"/>
+                        <segue destination="tgP-tV-kRI" kind="presentation" identifier="accountNavigationToAccount" id="Qst-AN-K4Q"/>
+                        <segue destination="SZE-Lt-A3B" kind="show" identifier="accountNavigationToCreateAccount" id="mYL-qo-J6S"/>
+                        <segue destination="uwo-3q-08m" kind="show" identifier="accountNavigationToImportKey" id="BBt-nM-2Gp"/>
+                        <segue destination="se4-xM-JVq" kind="show" identifier="accountNavigationToSettings" id="0RD-4q-186"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L37-YD-Gdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -731,9 +734,8 @@
         <!--Side Menu Navigation Controller-->
         <scene sceneID="QIG-XO-2q9">
             <objects>
-                <navigationController id="efP-ab-HRb" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="efP-ab-HRb" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y2C-va-mqZ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <userDefinedRuntimeAttributes>
@@ -881,7 +883,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXo-Nr-pVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4294" y="795"/>
+            <point key="canvasLocation" x="4964" y="795"/>
         </scene>
         <!--Resources View Controller-->
         <scene sceneID="20f-A4-huH">
@@ -1050,7 +1052,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNT-MW-f7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6604" y="29"/>
+            <point key="canvasLocation" x="6402" y="29"/>
         </scene>
         <!--Explore View Controller-->
         <scene sceneID="nuT-Hy-S2b">
@@ -1099,6 +1101,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m56-GT-PW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2081" y="795"/>
+        </scene>
+        <!--Create Account View Controller-->
+        <scene sceneID="ACI-63-gvH">
+            <objects>
+                <viewController id="SZE-Lt-A3B" customClass="CreateAccountViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ODy-7Z-AJf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bgc-OJ-nQ2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xK-rF-Fz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2077" y="1487"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="p7s-Kf-lrM">
@@ -1220,7 +1236,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rvY-Mg-arL"/>
-        <segue reference="BHx-VC-kzC"/>
-        <segue reference="cDM-mx-vQS"/>
+        <segue reference="Qst-AN-K4Q"/>
+        <segue reference="BBt-nM-2Gp"/>
+        <segue reference="EMU-T5-0SR"/>
+        <segue reference="0RD-4q-186"/>
     </inferredMetricsTieBreakers>
 </document>

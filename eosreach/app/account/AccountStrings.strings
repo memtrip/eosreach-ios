@@ -29,4 +29,13 @@
 	"account_actions_transfer_button" = Transfer;
 	"account_actions_generic_error_title" = "Failed to fetch actions";
 	"account_actions_generic_error_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
+	"accounts_navigation_error_title" = "Failed to fetch accounts";
+	"accounts_navigation_error_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
+	"accounts_navigation_no_accounts_error_title" = "No accounts";
+	"accounts_navigation_no_accounts_error_body" = "We could not find any accounts associated with your public keys, this is odd behaviour, pleaese change your blockchain endpoint in Settings";
+	"account_navigation_import_key_button" = "Import Key";
+	"account_navigation_create_account_button" = "Create Account";
+	"account_navigation_settings_button" = Settings;
+	"account_navigation_accounts_title" = Accounts;
+	"account_navigation_refresh_button" = Refresh;
 }

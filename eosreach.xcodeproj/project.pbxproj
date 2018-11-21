@@ -242,6 +242,11 @@
 		3CCE9C2621A2B1350050910D /* AccountViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */; };
 		3CCE9C2C21A2C3810050910D /* ResourceGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */; };
 		3CCE9C2E21A2C38E0050910D /* ResourceGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2D21A2C38E0050910D /* ResourceGraphView.xib */; };
+		3CEF33B921A507E700716AA2 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B421A507E700716AA2 /* CreateAccountViewController.swift */; };
+		3CEF33BA21A507E700716AA2 /* CreateAccountViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B521A507E700716AA2 /* CreateAccountViewState.swift */; };
+		3CEF33BB21A507E700716AA2 /* CreateAccountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B621A507E700716AA2 /* CreateAccountIntent.swift */; };
+		3CEF33BC21A507E700716AA2 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B721A507E700716AA2 /* CreateAccountViewModel.swift */; };
+		3CEF33BD21A507E700716AA2 /* CreateAccountResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B821A507E700716AA2 /* CreateAccountResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -507,6 +512,11 @@
 		3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewLayout.swift; sourceTree = "<group>"; };
 		3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceGraphView.swift; sourceTree = "<group>"; };
 		3CCE9C2D21A2C38E0050910D /* ResourceGraphView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourceGraphView.xib; sourceTree = "<group>"; };
+		3CEF33B421A507E700716AA2 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		3CEF33B521A507E700716AA2 /* CreateAccountViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewState.swift; sourceTree = "<group>"; };
+		3CEF33B621A507E700716AA2 /* CreateAccountIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountIntent.swift; sourceTree = "<group>"; };
+		3CEF33B721A507E700716AA2 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		3CEF33B821A507E700716AA2 /* CreateAccountResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountResult.swift; sourceTree = "<group>"; };
 		48ECDAAEF6BB465B8887CE03 /* Pods-eosreach-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreach_eosreachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52C445483AA480525DB9233 /* Pods-eosreach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.debug.xcconfig"; sourceTree = "<group>"; };
@@ -882,6 +892,7 @@
 		3C8C6DA02192D6B300FC1A0D /* welcome */ = {
 			isa = PBXGroup;
 			children = (
+				3CEF33B321A5079400716AA2 /* createaccount */,
 				3C0EC820219350A400562A1B /* importkey */,
 				3C0EC81521933D0100562A1B /* splash */,
 				3C8C6DC12192D7B900FC1A0D /* EntryIntent.swift */,
@@ -1237,6 +1248,18 @@
 			path = tableview;
 			sourceTree = "<group>";
 		};
+		3CEF33B321A5079400716AA2 /* createaccount */ = {
+			isa = PBXGroup;
+			children = (
+				3CEF33B621A507E700716AA2 /* CreateAccountIntent.swift */,
+				3CEF33B821A507E700716AA2 /* CreateAccountResult.swift */,
+				3CEF33B421A507E700716AA2 /* CreateAccountViewController.swift */,
+				3CEF33B721A507E700716AA2 /* CreateAccountViewModel.swift */,
+				3CEF33B521A507E700716AA2 /* CreateAccountViewState.swift */,
+			);
+			path = createaccount;
+			sourceTree = "<group>";
+		};
 		4A8C8B683B63E7118BDE78A2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1555,6 +1578,7 @@
 				3C7F0DEE2194A17000E72DD1 /* RegisteredBlockProducersIntent.swift in Sources */,
 				3C9BFB9C219B3AAE00589936 /* EosAccountRequestImpl.swift in Sources */,
 				3C964C3E2194422D003663EF /* AccountListSelection.swift in Sources */,
+				3CEF33B921A507E700716AA2 /* CreateAccountViewController.swift in Sources */,
 				3C14FA4621A0A3AD00B8255F /* EosPriceApi.swift in Sources */,
 				3CC9A3A1219DAF050002A25F /* CutomTokensRequestImpl.swift in Sources */,
 				3CC9A3B3219DB6310002A25F /* ProxyVoterRequestImpl.swift in Sources */,
@@ -1562,6 +1586,7 @@
 				3C6DF77B21A08B5100ADA892 /* BalanceIntent.swift in Sources */,
 				3C9BFBC4219C21D600589936 /* AccountActionRequest.swift in Sources */,
 				3C8C6D902192D4CE00FC1A0D /* MxViewState.swift in Sources */,
+				3CEF33BD21A507E700716AA2 /* CreateAccountResult.swift in Sources */,
 				3C8C6D942192D50700FC1A0D /* MxResult.swift in Sources */,
 				3C964C48219444A2003663EF /* EosPriceValue.swift in Sources */,
 				3C0ADD99219F3AEB0026649F /* GetTransactionLogs.swift in Sources */,
@@ -1571,6 +1596,7 @@
 				3C9BFB86219B363C00589936 /* Balance.swift in Sources */,
 				3C6DF78921A08D8700ADA892 /* VoteViewState.swift in Sources */,
 				3C6DF78521A08D8700ADA892 /* VoteIntent.swift in Sources */,
+				3CEF33BB21A507E700716AA2 /* CreateAccountIntent.swift in Sources */,
 				3C6DF75D21A05DCA00ADA892 /* AccountCardCell.swift in Sources */,
 				3C1F1F9321A359090075BD71 /* ActionsResult.swift in Sources */,
 				3C0ADD89219F37B10026649F /* AccountEntity.swift in Sources */,
@@ -1722,6 +1748,7 @@
 				3CC9A3A9219DB2640002A25F /* EosCreateAccountRequest.swift in Sources */,
 				3CC9A3B5219DB8290002A25F /* RamRequest.swift in Sources */,
 				3C340FC82193612A0017BEF9 /* SettingsViewState.swift in Sources */,
+				3CEF33BC21A507E700716AA2 /* CreateAccountViewModel.swift in Sources */,
 				3C7F0DF72194A23900E72DD1 /* ExploreViewController.swift in Sources */,
 				3C9BFBB7219B5D7C00589936 /* AccountNameSystemBalance.swift in Sources */,
 				3C6DF76C21A082AC00ADA892 /* AccountResult.swift in Sources */,
@@ -1735,6 +1762,7 @@
 				3C0EC81D21933D4F00562A1B /* SplashViewController.swift in Sources */,
 				3C9BFBBF219C21BC00589936 /* AccountAction.swift in Sources */,
 				3C7F0DED2194A17000E72DD1 /* RegisteredBlockProducersViewController.swift in Sources */,
+				3CEF33BA21A507E700716AA2 /* CreateAccountViewState.swift in Sources */,
 				3C6DF78F21A090F300ADA892 /* ResourcesViewController.swift in Sources */,
 				3C0EC81F21933D4F00562A1B /* SplashResult.swift in Sources */,
 				3CC9A3C8219DCEEB0002A25F /* ErrorView.swift in Sources */,
