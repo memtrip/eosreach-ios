@@ -14,6 +14,7 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
         exploreProxyAccountsButton.setTitle(R.string.voteStrings.cast_proxy_vote_explore_accounts_button(), for: .normal)
         proxyVoteAccountTextField.placeholder = R.string.voteStrings.cast_proxy_vote_placeholder()
         voteButton.setTitle(R.string.voteStrings.cast_proxy_vote_button(), for: .normal)
+        let _ = proxyVoteAccountTextField.becomeFirstResponder()
     }
 
     override func intents() -> Observable<CastProxyVoteIntent> {

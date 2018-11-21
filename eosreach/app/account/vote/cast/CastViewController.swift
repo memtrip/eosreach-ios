@@ -40,6 +40,7 @@ class CastViewController: UIViewController, TabBarDelegate {
         case .producers:
             replaceChildViewController(viewController: producersViewController)
         case .proxy:
+            tabBar.select(at: 1) // select proxy tab
             replaceChildViewController(viewController: proxyViewController)
         }
     }
@@ -59,7 +60,6 @@ class CastViewController: UIViewController, TabBarDelegate {
             replaceChildViewController(viewController: producersViewController)
         } else if (tabItem == proxyTabItem) {
             self.view.endEditing(true)
-            tabBar.select(at: 1) // select the proxy tab
             replaceChildViewController(viewController: proxyViewController)
         }
     }
