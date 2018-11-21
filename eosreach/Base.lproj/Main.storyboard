@@ -1249,6 +1249,9 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pY9-sl-ITc" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="88" y="72.5" width="271" height="30"/>
                                 <state key="normal" title="_add_from_list"/>
+                                <connections>
+                                    <segue destination="KeL-6I-ll1" kind="show" identifier="castProducersVoteToActiveBlockProducers" id="uYP-iu-Ijf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAU-Rz-t8J" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
@@ -1763,6 +1766,7 @@
         <segue reference="1bl-ap-rcg"/>
         <segue reference="1Wt-0h-Agf"/>
         <segue reference="EMU-T5-0SR"/>
+        <segue reference="uYP-iu-Ijf"/>
         <segue reference="kx6-Ea-lKC"/>
     </inferredMetricsTieBreakers>
 </document>

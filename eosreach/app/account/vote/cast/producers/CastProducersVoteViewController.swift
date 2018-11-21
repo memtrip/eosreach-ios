@@ -48,6 +48,22 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
         switch state {
         case .idle:
             break
+        case .onProgress:
+            print("")
+        case .addExistingProducers(let producers):
+            print("")
+        case .addProducerField(let nextPosition):
+            print("")
+        case .removeProducerField(let position):
+            print("")
+        case .insertProducerField(let nextPosition, let producerName):
+            print("")
+        case .onGenericError:
+            print("")
+        case .onSuccess:
+            print("")
+        case .viewLog(let log):
+            print("")
         }
     }
 
