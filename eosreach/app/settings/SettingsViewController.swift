@@ -49,6 +49,9 @@ class SettingsViewController: MxViewController<SettingsIntent, SettingsResult, S
             },
             memtripButton.rx.tap.map {
                 SettingsIntent.navigateToAuthor
+            },
+            self.rx.methodInvoked(#selector(SettingsViewController.clearData)).map { _ in
+                SettingsIntent.confirmClearDataAndLogout
             }
         )
     }
@@ -76,7 +79,15 @@ class SettingsViewController: MxViewController<SettingsIntent, SettingsResult, S
                 UIApplication.shared.open(url, options: [:])
             }
         case .confirmClearData:
-            print("")
+            let alert = UIAlertController(
+                title: R.string.settingsStrings.settings_clear_data_warning_dialog_title(),
+                message: R.string.settingsStrings.settings_clear_data_warning_dialog_body(),
+                preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: R.string.appStrings.app_dialog_ok(), style: .default, handler: { (option) in
+                self.clearData()
+            }))
+            alert.addAction(UIAlertAction(title: R.string.appStrings.app_dialog_cancel(), style: .default, handler: nil))
+            self.present(alert, animated: true)
         case .navigateToEntry:
             performSegue(withIdentifier: R.segue.settingsViewController.settingsToEntry, sender: self)
         case .navigateToAuthor:
@@ -88,5 +99,8 @@ class SettingsViewController: MxViewController<SettingsIntent, SettingsResult, S
 
     override func provideViewModel() -> SettingsViewModel {
         return SettingsViewModel(initialState: SettingsViewState.idle)
+    }
+    
+    @objc dynamic func clearData() {
     }
 }

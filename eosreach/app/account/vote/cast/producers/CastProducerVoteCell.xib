@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="0he-a2-n3h" customClass="CastProducerVoteCell" customModule="eosreach" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0he-a2-n3h" id="WUV-fH-f8g">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32A-fV-Vat" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="359" height="37"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ybr-0X-YMS">
+                                <rect key="frame" x="8" y="10" width="280" height="17"/>
+                                <color key="textColor" name="colorAccent"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tap-4a-wVP">
+                                <rect key="frame" x="296" y="2" width="55" height="30"/>
+                                <state key="normal" title="Remove">
+                                    <color key="titleColor" name="typographyColorPrimary"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Tap-4a-wVP" firstAttribute="top" secondItem="32A-fV-Vat" secondAttribute="top" constant="2" id="4dX-Z0-PVB"/>
+                            <constraint firstItem="ybr-0X-YMS" firstAttribute="leading" secondItem="32A-fV-Vat" secondAttribute="leading" constant="8" id="Czb-YD-7yP"/>
+                            <constraint firstItem="ybr-0X-YMS" firstAttribute="centerY" secondItem="32A-fV-Vat" secondAttribute="centerY" id="HZp-jp-uav"/>
+                            <constraint firstAttribute="trailing" secondItem="Tap-4a-wVP" secondAttribute="trailing" constant="8" id="R9T-bo-TYn"/>
+                            <constraint firstItem="Tap-4a-wVP" firstAttribute="leading" secondItem="ybr-0X-YMS" secondAttribute="trailing" constant="8" id="Z6U-Ka-zyt"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGE-ta-TY9">
+                        <rect key="frame" x="0.0" y="53" width="375" height="76.5"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="hGE-ta-TY9" secondAttribute="bottom" id="0c5-cN-fZk"/>
+                    <constraint firstAttribute="trailing" secondItem="32A-fV-Vat" secondAttribute="trailing" constant="8" id="36w-Ge-DkS"/>
+                    <constraint firstItem="hGE-ta-TY9" firstAttribute="top" secondItem="32A-fV-Vat" secondAttribute="bottom" constant="8" id="HWi-M7-yxw"/>
+                    <constraint firstItem="32A-fV-Vat" firstAttribute="leading" secondItem="WUV-fH-f8g" secondAttribute="leading" constant="8" id="JX6-U9-Bsh"/>
+                    <constraint firstItem="hGE-ta-TY9" firstAttribute="leading" secondItem="WUV-fH-f8g" secondAttribute="leading" id="NRn-jh-riB"/>
+                    <constraint firstItem="hGE-ta-TY9" firstAttribute="top" secondItem="WUV-fH-f8g" secondAttribute="top" constant="53" id="THj-oK-eqt"/>
+                    <constraint firstItem="32A-fV-Vat" firstAttribute="top" secondItem="WUV-fH-f8g" secondAttribute="top" constant="8" id="fkT-co-rdd"/>
+                    <constraint firstAttribute="trailing" secondItem="hGE-ta-TY9" secondAttribute="trailing" id="pye-R8-XGh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="removeButton" destination="Tap-4a-wVP" id="YnQ-m1-oke"/>
+                <outlet property="textField" destination="ybr-0X-YMS" id="J08-XC-4r7"/>
+            </connections>
+            <point key="canvasLocation" x="213.59999999999999" y="145.72713643178412"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="colorAccent">
+            <color red="1" green="0.45490196078431372" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="typographyColorPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

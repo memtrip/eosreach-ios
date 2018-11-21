@@ -56,13 +56,13 @@ class EosKeyManagerImpl: EosKeyManager {
                 single(.error(error))
             }
             return Disposables.create()
-        }
+        }.subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background)).observeOn(MainScheduler.instance)
     }
 
     private func getEncryptedPrivateKey(eosPublicKey: String) throws -> EOSPrivateKey {
         let encrypted = self.encryptedKeyPairData.getItem(key: eosPublicKey)
         let decrypted = try KeyPair.manager.decrypt(encrypted, hash: .sha256)
-        return try EOSPrivateKey(base58: String(data: decrypted, encoding: .utf8)!)
+        return EOSPrivateKey(ecKeyPrivateKey: ECPrivateKey(privKeyData: decrypted))
     }
 
     func publicKeyExists(eosPublicKey: String) -> Bool {

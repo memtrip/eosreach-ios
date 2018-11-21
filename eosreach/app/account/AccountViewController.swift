@@ -4,7 +4,7 @@ import RxCocoa
 import Material
 import SideMenu
 
-class AccountViewController: MxViewController<AccountIntent, AccountResult, AccountViewState, AccountViewModel>, TabBarDelegate, AccountViewLayout, AccountNavigationDelegate {
+class AccountViewController: MxViewController<AccountIntent, AccountResult, AccountViewState, AccountViewModel>, TabBarDelegate, AccountViewLayout, AccountNavigationDelegate, AccountDelegate {
 
     @IBOutlet weak var toolbar: ReachToolbar!
     @IBOutlet weak var balancesContainer: UIView!
@@ -73,20 +73,23 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
             navigationExploreItem.rx.tap.map {
                 AccountIntent.navigateToExplore
             },
-            self.rx.methodInvoked(#selector(AccountViewController.importKeyNavigationSelected)).map { selected in
+            self.rx.methodInvoked(#selector(AccountViewController.importKeyNavigationSelected)).map { _ in
                 return AccountIntent.navigateToImportKey
             },
-            self.rx.methodInvoked(#selector(AccountViewController.createAccountNavigationSelected)).map { selected in
+            self.rx.methodInvoked(#selector(AccountViewController.createAccountNavigationSelected)).map { _ in
                 return AccountIntent.navigateToCreateAccount
             },
-            self.rx.methodInvoked(#selector(AccountViewController.settingsNavigationSelected)).map { selected in
+            self.rx.methodInvoked(#selector(AccountViewController.settingsNavigationSelected)).map { _ in
                 return AccountIntent.navigateToSettings
             },
             self.rx.methodInvoked(#selector(AccountViewController.accountsNavigationSelected(accountName:))).map { accountNameInArgs in
-               return AccountIntent.retry(accountBundle: AccountBundle(
+                self.loaded = false
+                return AccountIntent.refresh(accountBundle: AccountBundle(
                     accountName: accountNameInArgs[0] as! String,
-                    readOnly: false
-               ))
+                    readOnly: false))
+            },
+            self.rx.methodInvoked(#selector(AccountViewController.refreshAccount)).map { _ in
+                return AccountIntent.refresh(accountBundle: self.accountBundle)
             }
         )
     }
@@ -131,6 +134,12 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     }
     
     //
+    // MARK :- AccountDelegate
+    //
+    @objc dynamic func refreshAccount() {
+    }
+    
+    //
     // MARK :- AccountNavigationDelegate
     //
     @objc dynamic func importKeyNavigationSelected() {
@@ -151,17 +160,18 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     func populate(accountView: AccountView, page: AccountPage) {
         loaded = true
         toolbar.title = accountView.eosAccount!.accountName
+        tabBar.select(at: 0)
         activityIndicator.stop()
         balancesContainer.visible()
         tabBar.visible()
         containerView.visible()
         
-        
         balanceViewController.accountName = accountView.eosAccount!.accountName
         balanceViewController.accountBalanceList = accountView.balances!
         
-        voteViewController.eosAccountVote = accountView.eosAccount!.eosAcconuntVote
+        voteViewController.eosAccount = accountView.eosAccount
         voteViewController.readOnly = self.accountBundle.readOnly
+        voteViewController.accountDelegate = self
         
         resourcesViewController.eosAccount = accountView.eosAccount!
         resourcesViewController.readOnly = self.accountBundle.readOnly
@@ -191,7 +201,10 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     
     func showProgress() {
         activityIndicator.start()
+        containerView.gone()
         errorView.gone()
+        balancesContainer.gone()
+        tabBar.gone()
     }
     
     func showGetAccountError() {

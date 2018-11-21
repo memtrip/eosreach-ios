@@ -986,6 +986,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rg-S4-urg">
+                                <rect key="frame" x="7" y="142.5" width="361" height="517.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_producer_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcl-w1-psp">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <color key="textColor" name="colorSecondary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAv-be-vXp" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="48" width="361" height="30"/>
+                                        <state key="normal" title="_give_us_your_vote"/>
+                                    </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hso-5S-3UT" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="170.5" y="53" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NAv-be-vXp" firstAttribute="top" secondItem="xcl-w1-psp" secondAttribute="bottom" constant="24" id="2bc-94-bN9"/>
+                                    <constraint firstItem="xcl-w1-psp" firstAttribute="top" secondItem="3rg-S4-urg" secondAttribute="top" id="7Dy-UU-tbX"/>
+                                    <constraint firstItem="xcl-w1-psp" firstAttribute="leading" secondItem="3rg-S4-urg" secondAttribute="leading" id="7TA-Dh-ujq"/>
+                                    <constraint firstItem="hso-5S-3UT" firstAttribute="centerY" secondItem="NAv-be-vXp" secondAttribute="centerY" id="8fE-ot-htR"/>
+                                    <constraint firstItem="hso-5S-3UT" firstAttribute="centerX" secondItem="NAv-be-vXp" secondAttribute="centerX" id="M42-RX-N30"/>
+                                    <constraint firstItem="NAv-be-vXp" firstAttribute="leading" secondItem="3rg-S4-urg" secondAttribute="leading" id="dEg-KO-SEs"/>
+                                    <constraint firstAttribute="trailing" secondItem="xcl-w1-psp" secondAttribute="trailing" id="faU-Fu-vbk"/>
+                                    <constraint firstAttribute="trailing" secondItem="NAv-be-vXp" secondAttribute="trailing" id="g9W-PM-weO"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_cast_vote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0d-0k-Nmj">
                                 <rect key="frame" x="8" y="28" width="359" height="24"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
@@ -1016,8 +1044,11 @@
                             </tableView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="hJs-VR-7qO" firstAttribute="bottom" secondItem="3rg-S4-urg" secondAttribute="bottom" constant="7" id="2fg-OZ-8z7"/>
+                            <constraint firstItem="3rg-S4-urg" firstAttribute="top" secondItem="LeC-v6-POE" secondAttribute="bottom" constant="16" id="3wO-gV-whv"/>
                             <constraint firstItem="hJs-VR-7qO" firstAttribute="trailing" secondItem="uvq-Xh-6PP" secondAttribute="trailing" constant="8" id="3x1-G5-Wal"/>
                             <constraint firstItem="LeC-v6-POE" firstAttribute="top" secondItem="uvq-Xh-6PP" secondAttribute="bottom" constant="16" id="80Z-zV-Ob8"/>
+                            <constraint firstItem="hJs-VR-7qO" firstAttribute="trailing" secondItem="3rg-S4-urg" secondAttribute="trailing" constant="7" id="8w3-VI-FTs"/>
                             <constraint firstItem="rS0-1h-WGs" firstAttribute="top" secondItem="j0d-0k-Nmj" secondAttribute="bottom" constant="8" id="Biy-VA-5gp"/>
                             <constraint firstItem="hJs-VR-7qO" firstAttribute="trailing" secondItem="LeC-v6-POE" secondAttribute="trailing" constant="8" id="Bnh-V2-xQ3"/>
                             <constraint firstItem="hJs-VR-7qO" firstAttribute="bottom" secondItem="lc0-EU-Bc9" secondAttribute="bottom" id="DIi-Zi-xX0"/>
@@ -1026,6 +1057,7 @@
                             <constraint firstItem="hJs-VR-7qO" firstAttribute="trailing" secondItem="lc0-EU-Bc9" secondAttribute="trailing" id="Sir-vu-9zD"/>
                             <constraint firstItem="rS0-1h-WGs" firstAttribute="leading" secondItem="hJs-VR-7qO" secondAttribute="leading" constant="8" id="cP3-6L-ncW"/>
                             <constraint firstItem="hJs-VR-7qO" firstAttribute="trailing" secondItem="j0d-0k-Nmj" secondAttribute="trailing" constant="8" id="cpD-gG-Lh3"/>
+                            <constraint firstItem="3rg-S4-urg" firstAttribute="leading" secondItem="hJs-VR-7qO" secondAttribute="leading" constant="7" id="gFq-9V-hWo"/>
                             <constraint firstItem="woz-Ku-Fzt" firstAttribute="top" secondItem="LeC-v6-POE" secondAttribute="bottom" id="h2o-6q-87k"/>
                             <constraint firstItem="j0d-0k-Nmj" firstAttribute="leading" secondItem="hJs-VR-7qO" secondAttribute="leading" constant="8" id="hc0-Bq-Tg8"/>
                             <constraint firstItem="uvq-Xh-6PP" firstAttribute="leading" secondItem="rS0-1h-WGs" secondAttribute="trailing" constant="8" id="lRD-2b-E7T"/>
@@ -1040,8 +1072,12 @@
                         <viewLayoutGuide key="safeArea" id="hJs-VR-7qO"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="hso-5S-3UT" id="P6N-5N-Rph"/>
                         <outlet property="castVoteTitleLabel" destination="j0d-0k-Nmj" id="1Vm-Dy-g52"/>
+                        <outlet property="noVoteButton" destination="NAv-be-vXp" id="My9-3g-fOC"/>
+                        <outlet property="noVoteContainer" destination="3rg-S4-urg" id="VJa-WE-Fva"/>
                         <outlet property="producerButton" destination="rS0-1h-WGs" id="Zvy-HQ-jh8"/>
+                        <outlet property="producerNameLabel" destination="xcl-w1-psp" id="jwv-MR-qm9"/>
                         <outlet property="producersTableView" destination="woz-Ku-Fzt" id="SPm-b4-07a"/>
                         <outlet property="proxyButton" destination="uvq-Xh-6PP" id="ZPc-jh-pVt"/>
                         <outlet property="proxyTableView" destination="lc0-EU-Bc9" id="61D-cV-drA"/>
@@ -1221,13 +1257,20 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="FCC-hN-vOF" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="177.5" y="626" width="20" height="20"/>
                             </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2hf-mb-jm0" customClass="CastProducerVoteTableView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="8" y="110.5" width="359" height="494.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Xjx-sw-AQm" firstAttribute="trailing" secondItem="78h-YI-OhI" secondAttribute="trailing" constant="16" id="2CU-QT-b0b"/>
+                            <constraint firstItem="2hf-mb-jm0" firstAttribute="leading" secondItem="Xjx-sw-AQm" secondAttribute="leading" constant="8" id="6Ux-jK-y5V"/>
                             <constraint firstItem="FCC-hN-vOF" firstAttribute="centerX" secondItem="aAU-Rz-t8J" secondAttribute="centerX" id="6eE-ne-M8K"/>
                             <constraint firstItem="78h-YI-OhI" firstAttribute="top" secondItem="Xjx-sw-AQm" secondAttribute="top" constant="16" id="CIP-lu-nY0"/>
                             <constraint firstItem="pY9-sl-ITc" firstAttribute="top" secondItem="78h-YI-OhI" secondAttribute="bottom" constant="16" id="CoZ-m1-yfy"/>
+                            <constraint firstItem="aAU-Rz-t8J" firstAttribute="top" secondItem="2hf-mb-jm0" secondAttribute="bottom" constant="16" id="EcL-e3-euI"/>
                             <constraint firstItem="78h-YI-OhI" firstAttribute="leading" secondItem="Xjx-sw-AQm" secondAttribute="leading" constant="16" id="Gyc-mc-cId"/>
+                            <constraint firstItem="Xjx-sw-AQm" firstAttribute="trailing" secondItem="2hf-mb-jm0" secondAttribute="trailing" constant="8" id="I49-Lk-9DH"/>
                             <constraint firstItem="7st-Fa-bUO" firstAttribute="top" secondItem="78h-YI-OhI" secondAttribute="bottom" constant="16" id="OVP-YO-xp4"/>
                             <constraint firstItem="7st-Fa-bUO" firstAttribute="leading" secondItem="Xjx-sw-AQm" secondAttribute="leading" constant="16" id="Qch-Hj-jTp"/>
                             <constraint firstItem="pY9-sl-ITc" firstAttribute="leading" secondItem="7st-Fa-bUO" secondAttribute="trailing" constant="8" id="Qli-ks-B2H"/>
@@ -1236,6 +1279,7 @@
                             <constraint firstItem="Xjx-sw-AQm" firstAttribute="trailing" secondItem="pY9-sl-ITc" secondAttribute="trailing" constant="16" id="VXX-td-gJn"/>
                             <constraint firstItem="FCC-hN-vOF" firstAttribute="centerY" secondItem="aAU-Rz-t8J" secondAttribute="centerY" id="b2O-1a-f0y"/>
                             <constraint firstItem="aAU-Rz-t8J" firstAttribute="leading" secondItem="Xjx-sw-AQm" secondAttribute="leading" constant="16" id="rMP-Vs-JNx"/>
+                            <constraint firstItem="2hf-mb-jm0" firstAttribute="top" secondItem="pY9-sl-ITc" secondAttribute="bottom" constant="8" id="wJN-zL-14U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xjx-sw-AQm"/>
                     </view>
@@ -1244,6 +1288,7 @@
                         <outlet property="addButton" destination="7st-Fa-bUO" id="zvK-sm-bx9"/>
                         <outlet property="addFromListButton" destination="pY9-sl-ITc" id="0Oy-rg-yFl"/>
                         <outlet property="producersInstruction" destination="78h-YI-OhI" id="Yo4-QW-gSo"/>
+                        <outlet property="tableView" destination="2hf-mb-jm0" id="bUL-Pm-XsT"/>
                         <outlet property="voteButton" destination="aAU-Rz-t8J" id="MD1-5y-BIU"/>
                     </connections>
                 </viewController>
@@ -1327,7 +1372,6 @@
                             </activityIndicatorView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBc-nA-WEl" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <constraints>
@@ -1419,7 +1463,7 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MAu-wC-TgO" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usm-Mi-LJ6" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usm-Mi-LJ6" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="16" y="84" width="343" height="567"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1LU-0J-OAd" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">

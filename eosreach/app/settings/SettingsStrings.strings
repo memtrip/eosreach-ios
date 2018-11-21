@@ -24,4 +24,6 @@
 	"settings_eos_endpoint_generic" = "The endpoint URL could not be reached, please check your connection and try again.";
 	"settings_eos_endpoint_success_body" = "The EOS endpoint has been updated";
 	"settings_eos_endpoint_success_title" = Success;
+	"settings_clear_data_warning_dialog_title" = "Are you sure?";
+	"settings_clear_data_warning_dialog_body" = "Clearing data will also remove your encrypted private key, are you sure you want to continue?";
 }

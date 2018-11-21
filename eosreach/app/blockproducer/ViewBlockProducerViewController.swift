@@ -40,19 +40,24 @@ class ViewBlockProducerViewController
                 blockProducerDetails: viewBlockProducerBundle.blockProducerDetails
             )),
             ownerAccountButton.rx.tap.map {
-                return ViewBlockProducerIntent.navigateToOwnerAccount(owner: self.blockProducerDetails!.owner)
+                ViewBlockProducerIntent.navigateToOwnerAccount(owner: self.blockProducerDetails!.owner)
             },
             codeOfConductButton.rx.tap.map {
-                return ViewBlockProducerIntent.navigateToUrl(url: self.blockProducerDetails!.codeOfConductUrl)
+                ViewBlockProducerIntent.navigateToUrl(url: self.blockProducerDetails!.codeOfConductUrl)
             },
             ownershipDisclosureButton.rx.tap.map {
-                return ViewBlockProducerIntent.navigateToUrl(url: self.blockProducerDetails!.ownershipDisclosureUrl)
+                ViewBlockProducerIntent.navigateToUrl(url: self.blockProducerDetails!.ownershipDisclosureUrl)
             },
             websiteButton.rx.tap.map {
-                return ViewBlockProducerIntent.navigateToUrl(url: self.blockProducerDetails!.website)
+                ViewBlockProducerIntent.navigateToUrl(url: self.blockProducerDetails!.website)
             },
             emailButton.rx.tap.map {
-                return ViewBlockProducerIntent.sendEmail(email: self.blockProducerDetails!.email)
+                ViewBlockProducerIntent.sendEmail(email: self.blockProducerDetails!.email)
+            },
+            errorView.retryClick().map {
+                ViewBlockProducerIntent.start(
+                    accountName: self.viewBlockProducerBundle.accountName,
+                    blockProducerDetails: self.viewBlockProducerBundle.blockProducerDetails)
             }
         )
     }
@@ -70,6 +75,7 @@ class ViewBlockProducerViewController
             errorView.gone()
         case .onError:
             activityIndicator.stop()
+            errorView.visible()
             errorView.populate(body: R.string.blockProducerStrings.view_block_producer_error_body())
         case .empty:
             activityIndicator.stop()

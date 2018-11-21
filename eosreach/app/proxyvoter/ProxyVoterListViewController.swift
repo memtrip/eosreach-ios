@@ -32,10 +32,13 @@ class ProxyVoterListViewController
         return Observable.merge(
             Observable.just(ProxyVoterListIntent.start),
             dataTableView().selected.map { proxyVoterDetails in
-                return ProxyVoterListIntent.proxyVoterSelected(proxyVoterDetails: proxyVoterDetails)
+                ProxyVoterListIntent.proxyVoterSelected(proxyVoterDetails: proxyVoterDetails)
             },
             dataTableView().atBottom.map { proxyVoterDetails in
-                return ProxyVoterListIntent.loadMoreProxyVoters(lastAccount: proxyVoterDetails.owner)
+                ProxyVoterListIntent.loadMoreProxyVoters(lastAccount: proxyVoterDetails.owner)
+            },
+            errorView.retryClick().map {
+                ProxyVoterListIntent.retry
             }
         )
     }

@@ -13,8 +13,8 @@ class VoteViewModel: MxViewModel<VoteIntent, VoteResult, VoteViewState> {
             return just(VoteResult.idle)
         case .start(let eosAccountVote):
             return just(populate(eosAccountVote: eosAccountVote))
-        case .voteForUs(let eosAccount):
-            fatalError()
+        case .voteForUs(let accountName):
+            return voteForUs(accountName: accountName)
         case .navigateToCastProducerVote:
             return just(VoteResult.navigateToCastProducerVote)
         case .navigateToCastProxyVote:
@@ -69,10 +69,10 @@ class VoteViewModel: MxViewModel<VoteIntent, VoteResult, VoteViewState> {
         }
     }
     
-    private func voteForUs(eosAccount: EosAccount) -> Observable<VoteResult> {
-        return getAccoutByName.select(accountName: eosAccount.accountName).flatMap { accountEntity in
+    private func voteForUs(accountName: String) -> Observable<VoteResult> {
+        return getAccoutByName.select(accountName: accountName).flatMap { accountEntity in
             return self.eosKeyManagerImpl.getPrivateKey(eosPublicKey: accountEntity.publicKey).flatMap { privateKey in
-                return self.voteRequest.voteForProducer(voterAccountName: eosAccount.accountName, producers: [R.string.appStrings.app_block_producer_name()], authorizingPrivateKey: privateKey).map { result in
+                return self.voteRequest.voteForProducer(voterAccountName: accountName, producers: [R.string.appStrings.app_block_producer_name()], authorizingPrivateKey: privateKey).map { result in
                     if (result.success()) {
                         return VoteResult.onVoteForUsSuccess
                     } else {

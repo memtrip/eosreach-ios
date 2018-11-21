@@ -11,6 +11,10 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
     @IBOutlet weak var producersTableView: UITableView!
     @IBOutlet weak var proxyTableView: UITableView!
     @IBOutlet weak var voteTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var noVoteContainer: UIView!
+    @IBOutlet weak var producerNameLabel: UILabel!
+    @IBOutlet weak var noVoteButton: ReachPrimaryButton!
+    @IBOutlet weak var activityIndicator: ReachActivityIndicator!
     
     func voteProducerTableView() -> VoteProducerTableView {
         return producersTableView as! VoteProducerTableView
@@ -20,7 +24,8 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
         return proxyTableView as! VoteProducerTableView
     }
     
-    var eosAccountVote: EosAccountVote?
+    var eosAccount: EosAccount?
+    var accountDelegate: AccountDelegate?
     var readOnly = false
     
     override func viewDidLoad() {
@@ -28,6 +33,8 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
         castVoteTitleLabel.text = R.string.voteStrings.vote_cast_vote_title()
         producerButton.setTitle(R.string.voteStrings.vote_producer_button(), for: .normal)
         proxyButton.setTitle(R.string.voteStrings.vote_proxy_button(), for: .normal)
+        producerNameLabel.text = R.string.voteStrings.vote_no_vote_producer_label()
+        noVoteButton.setTitle(R.string.voteStrings.vote_no_vote_give_us_your_vote_button(), for: .normal)
         
         if (readOnly) {
             castVoteTitleLabel.goneCollapsed()
@@ -39,18 +46,21 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
 
     override func intents() -> Observable<VoteIntent> {
         return Observable.merge(
-            Observable.just(VoteIntent.start(eosAccountVote: eosAccountVote)),
+            Observable.just(VoteIntent.start(eosAccountVote: eosAccount!.eosAcconuntVote!)),
             producerButton.rx.tap.map {
-                return VoteIntent.navigateToCastProducerVote
+                VoteIntent.navigateToCastProducerVote
             },
             proxyButton.rx.tap.map {
-                return VoteIntent.navigateToCastProxyVote
+                VoteIntent.navigateToCastProxyVote
             },
             voteProxyTableView().selected.map { proxyAccountName in
-                return VoteIntent.navigateToViewProxy(accountName: proxyAccountName)
+                VoteIntent.navigateToViewProxy(accountName: proxyAccountName)
             },
             voteProducerTableView().selected.map { producerAccountName in
-                return VoteIntent.navigateToViewProducer(accountName: producerAccountName)
+                VoteIntent.navigateToViewProducer(accountName: producerAccountName)
+            },
+            noVoteButton.rx.tap.map {
+                VoteIntent.voteForUs(accountName: self.eosAccount!.accountName)
             }
         )
     }
@@ -73,9 +83,10 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
             voteLabel.text = R.string.voteStrings.vote_producer_title()
         case .noVoteCast:
             if (readOnly) {
-                voteLabel.text = R.string.voteStrings.vote_read_only_no_vote()
+                voteLabel.text = R.string.voteStrings.vote_read_only_no_vote_label()
             } else {
-                fatalError("not implemented")
+                voteLabel.text = R.string.voteStrings.vote_no_vote_instruction_label()
+                noVoteContainer.visible()
             }
         case .navigateToCastProducerVote:
             performSegue(withIdentifier: R.segue.voteViewController.voteToCastProducer, sender: self)
@@ -94,13 +105,19 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
             ))
             performSegue(withIdentifier: R.segue.voteViewController.voteToViewProxyVoterDetails, sender: self)
         case .onVoteForUsProgress:
-            print("")
+            activityIndicator.start()
+            noVoteButton.gone()
         case .onVoteForUsSuccess:
-            print("")
+            if let accountDelegate = self.accountDelegate {
+                accountDelegate.refreshAccount()
+            }
         case .onVoteForUsError(let log):
-            print("")
+            activityIndicator.stop()
+            noVoteButton.visible()
         case .onVoteForUsGenericError:
-            print("")
+            activityIndicator.stop()
+            noVoteButton.visible()
+            showOKDialog(message: R.string.voteStrings.vote_no_vote_error_body())
         }
     }
 
@@ -109,9 +126,10 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         if (segue.identifier == R.segue.voteViewController.voteToCastProducer.identifier) {
             (segue.destination as! CastViewController).castBundle = CastBundle(castTab: CastTab.producers)
-        } else {
+        } else if (segue.identifier == R.segue.voteViewController.voteToCastProxy.identifier) {
             (segue.destination as! CastViewController).castBundle = CastBundle(castTab: CastTab.proxy)
         }
     }

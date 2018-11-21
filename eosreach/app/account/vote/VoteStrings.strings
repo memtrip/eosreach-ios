@@ -4,7 +4,11 @@
 	"vote_proxy_button" = Proxy;
 	"vote_producer_title" = "Voting for";
 	"vote_proxy_title" = "Proxy voter is";
-	"vote_read_only_no_vote" = "This account has not participated in voting.";
+	"vote_read_only_no_vote_label" = "This account has not participated in voting.";
+	"vote_no_vote_instruction_label" = "It looks like you haven't voted for a block producer yet. Please vote for us, and help build the future of EOS on mobile.";
+	"vote_no_vote_producer_label" = memtripblock;
+	"vote_no_vote_give_us_your_vote_button" = "Give Us Your Vote";
+	"vote_no_vote_error_body" = "Could not process the vote, please check your internet connection and try again";
 	"cast_title" = "Cast Vote";
 	"cast_producers_vote_tab" = Producers;
 	"cast_proxy_vote_tab" = Proxy;

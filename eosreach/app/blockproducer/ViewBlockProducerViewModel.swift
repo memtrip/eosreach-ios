@@ -11,6 +11,8 @@ class ViewBlockProducerViewModel: MxViewModel<ViewBlockProducerIntent, ViewBlock
             return just(ViewBlockProducerResult.idle)
         case .start(let accountName, let blockProducerDetails):
             return start(accountName: accountName, blockProducerDetails: blockProducerDetails)
+        case .retry(let accountName, let blockProducerDetails):
+            return start(accountName: accountName, blockProducerDetails: blockProducerDetails)
         case .navigateToUrl(let url):
             return just(validUrl(url: url))
         case .sendEmail(let email):
