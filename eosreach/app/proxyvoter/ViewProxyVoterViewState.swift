@@ -7,4 +7,5 @@ enum ViewProxyVoterViewState: MxViewState {
     case populate(proxyVoterDetails: ProxyVoterDetails)
     case onInvalidUrl(url: String)
     case navigateToUrl(url: String)
+    case viewAccount(accountName: String)
 }

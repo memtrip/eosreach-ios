@@ -5,4 +5,5 @@ enum ViewProxyVoterIntent: MxIntent {
     case start(viewProxyVoterBundle: ViewProxyVoterBundle)
     case retry(viewProxyVoterBundle: ViewProxyVoterBundle)
     case navigateToUrl(url: String)
+    case viewAccount(accountName: String)
 }

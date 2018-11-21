@@ -15,6 +15,8 @@ class ViewProxyVoterViewModel: MxViewModel<ViewProxyVoterIntent, ViewProxyVoterR
             return start(viewProxyVoterBundle: viewProxyVoterBundle)
         case .navigateToUrl(let url):
             return just(validUrl(url: url))
+        case .viewAccount(let accountName):
+            return just(ViewProxyVoterResult.viewAccount(accountName: accountName))
         }
     }
 
@@ -32,6 +34,8 @@ class ViewProxyVoterViewModel: MxViewModel<ViewProxyVoterIntent, ViewProxyVoterR
             return ViewProxyVoterViewState.onInvalidUrl(url: url)
         case .navigateToUrl(let url):
             return ViewProxyVoterViewState.navigateToUrl(url: url)
+        case .viewAccount(let accountName):
+            return ViewProxyVoterViewState.viewAccount(accountName: accountName)
         }
     }
     

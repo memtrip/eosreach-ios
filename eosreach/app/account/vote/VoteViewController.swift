@@ -88,7 +88,11 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
             ))
             performSegue(withIdentifier: R.segue.voteViewController.voteToViewBlockProducerDetails, sender: self)
         case .navigateToViewProxyVote(let accountName):
-            print("")
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.voteViewController.voteToViewProxyVoterDetails.identifier,
+                model: ViewProxyVoterBundle(accountName: accountName, proxyVoterDetails: nil)
+            ))
+            performSegue(withIdentifier: R.segue.voteViewController.voteToViewProxyVoterDetails, sender: self)
         case .onVoteForUsProgress:
             print("")
         case .onVoteForUsSuccess:
