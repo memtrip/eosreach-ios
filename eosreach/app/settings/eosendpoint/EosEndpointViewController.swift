@@ -28,7 +28,10 @@ class EosEndpointViewController: MxViewController<EosEndpointIntent, EosEndpoint
             chooseBlockProducerButton.rx.tap.map {
                 EosEndpointIntent.navigateToBlockProducerList
             },
-            changeEndpointButton.rx.tap.map {
+            Observable.merge(
+                changeEndpointButton.rx.tap.asObservable(),
+                changeEndpointTextField.rx.controlEvent(.editingDidEndOnExit).asObservable()
+            ).map {
                 EosEndpointIntent.changeEndpoint(endpoint: self.changeEndpointTextField.text!)
             }
         )

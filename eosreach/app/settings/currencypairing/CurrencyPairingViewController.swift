@@ -22,7 +22,10 @@ class CurrencyPairingViewController: MxViewController<CurrencyPairingIntent, Cur
     override func intents() -> Observable<CurrencyPairingIntent> {
         return Observable.merge(
             Observable.just(CurrencyPairingIntent.idle),
-            updatePairButton.rx.tap.map {
+            Observable.merge(
+                updatePairButton.rx.tap.asObservable(),
+                currencyPairTextField.rx.controlEvent(.editingDidEndOnExit).asObservable()
+            ).map {
                 CurrencyPairingIntent.currencyPair(currencyPair: self.currencyPairTextField.text!)
             }
         )
