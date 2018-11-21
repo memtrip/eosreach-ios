@@ -1049,6 +1049,8 @@
                         <outlet property="voteTopConstraint" destination="80Z-zV-Ob8" id="K5a-Wf-pHU"/>
                         <segue destination="aZW-vt-og8" kind="show" identifier="voteToViewBlockProducerDetails" id="8th-cq-vMG"/>
                         <segue destination="6oY-0J-ULN" kind="show" identifier="voteToViewProxyVoterDetails" id="Yir-oe-XsA"/>
+                        <segue destination="iGC-qm-93n" kind="show" identifier="voteToCastProducer" id="lgc-pI-cDL"/>
+                        <segue destination="iGC-qm-93n" kind="show" identifier="voteToCastProxy" id="Eks-sF-JJe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNT-MW-f7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1186,6 +1188,168 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="El3-7y-2HS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6386" y="795"/>
+        </scene>
+        <!--Cast Producers Vote View Controller-->
+        <scene sceneID="QXB-Qb-aA6">
+            <objects>
+                <viewController storyboardIdentifier="castProducersVoteViewController" id="5DF-D9-eY9" customClass="CastProducersVoteViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fA1-fi-hHC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_producers_instruction" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78h-YI-OhI">
+                                <rect key="frame" x="16" y="36" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7st-Fa-bUO" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="72.5" width="64" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="INK-NN-ykh"/>
+                                </constraints>
+                                <state key="normal" title="_add"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pY9-sl-ITc" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="88" y="72.5" width="271" height="30"/>
+                                <state key="normal" title="_add_from_list"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAU-Rz-t8J" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <state key="normal" title="_vote"/>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="FCC-hN-vOF" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="177.5" y="626" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Xjx-sw-AQm" firstAttribute="trailing" secondItem="78h-YI-OhI" secondAttribute="trailing" constant="16" id="2CU-QT-b0b"/>
+                            <constraint firstItem="FCC-hN-vOF" firstAttribute="centerX" secondItem="aAU-Rz-t8J" secondAttribute="centerX" id="6eE-ne-M8K"/>
+                            <constraint firstItem="78h-YI-OhI" firstAttribute="top" secondItem="Xjx-sw-AQm" secondAttribute="top" constant="16" id="CIP-lu-nY0"/>
+                            <constraint firstItem="pY9-sl-ITc" firstAttribute="top" secondItem="78h-YI-OhI" secondAttribute="bottom" constant="16" id="CoZ-m1-yfy"/>
+                            <constraint firstItem="78h-YI-OhI" firstAttribute="leading" secondItem="Xjx-sw-AQm" secondAttribute="leading" constant="16" id="Gyc-mc-cId"/>
+                            <constraint firstItem="7st-Fa-bUO" firstAttribute="top" secondItem="78h-YI-OhI" secondAttribute="bottom" constant="16" id="OVP-YO-xp4"/>
+                            <constraint firstItem="7st-Fa-bUO" firstAttribute="leading" secondItem="Xjx-sw-AQm" secondAttribute="leading" constant="16" id="Qch-Hj-jTp"/>
+                            <constraint firstItem="pY9-sl-ITc" firstAttribute="leading" secondItem="7st-Fa-bUO" secondAttribute="trailing" constant="8" id="Qli-ks-B2H"/>
+                            <constraint firstItem="Xjx-sw-AQm" firstAttribute="bottom" secondItem="aAU-Rz-t8J" secondAttribute="bottom" constant="16" id="SKl-So-dhL"/>
+                            <constraint firstItem="Xjx-sw-AQm" firstAttribute="trailing" secondItem="aAU-Rz-t8J" secondAttribute="trailing" constant="16" id="Sm9-dh-hHL"/>
+                            <constraint firstItem="Xjx-sw-AQm" firstAttribute="trailing" secondItem="pY9-sl-ITc" secondAttribute="trailing" constant="16" id="VXX-td-gJn"/>
+                            <constraint firstItem="FCC-hN-vOF" firstAttribute="centerY" secondItem="aAU-Rz-t8J" secondAttribute="centerY" id="b2O-1a-f0y"/>
+                            <constraint firstItem="aAU-Rz-t8J" firstAttribute="leading" secondItem="Xjx-sw-AQm" secondAttribute="leading" constant="16" id="rMP-Vs-JNx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xjx-sw-AQm"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="FCC-hN-vOF" id="wKX-Ga-tIz"/>
+                        <outlet property="addButton" destination="7st-Fa-bUO" id="zvK-sm-bx9"/>
+                        <outlet property="addFromListButton" destination="pY9-sl-ITc" id="0Oy-rg-yFl"/>
+                        <outlet property="producersInstruction" destination="78h-YI-OhI" id="Yo4-QW-gSo"/>
+                        <outlet property="voteButton" destination="aAU-Rz-t8J" id="MD1-5y-BIU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cw-kQ-Pix" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7124" y="1496"/>
+        </scene>
+        <!--Cast Proxy Vote View Controller-->
+        <scene sceneID="IMo-of-gLP">
+            <objects>
+                <viewController storyboardIdentifier="castProxyVoteViewController" id="SwQ-1Q-Jey" customClass="CastProxyVoteViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nKr-J1-ddt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ii3-WY-lDN" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="36" width="343" height="30"/>
+                                <state key="normal" title="_explore_proxy_accounts"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQP-d0-zZj" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="98" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-Nm-dJN" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <state key="normal" title="_vote"/>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="crB-zx-quz" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="177.5" y="626" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ii3-WY-lDN" firstAttribute="leading" secondItem="ofo-aB-5gU" secondAttribute="leading" constant="16" id="6dg-xg-dTh"/>
+                            <constraint firstItem="ofo-aB-5gU" firstAttribute="trailing" secondItem="gL9-Nm-dJN" secondAttribute="trailing" constant="16" id="H9T-tL-MTi"/>
+                            <constraint firstItem="XQP-d0-zZj" firstAttribute="top" secondItem="ii3-WY-lDN" secondAttribute="bottom" constant="32" id="NDg-Pg-rMo"/>
+                            <constraint firstItem="XQP-d0-zZj" firstAttribute="leading" secondItem="ofo-aB-5gU" secondAttribute="leading" constant="16" id="R8a-E5-42k"/>
+                            <constraint firstItem="ii3-WY-lDN" firstAttribute="top" secondItem="ofo-aB-5gU" secondAttribute="top" constant="16" id="Vf9-73-8TV"/>
+                            <constraint firstItem="ofo-aB-5gU" firstAttribute="trailing" secondItem="ii3-WY-lDN" secondAttribute="trailing" constant="16" id="XEv-I8-3Ba"/>
+                            <constraint firstItem="crB-zx-quz" firstAttribute="centerY" secondItem="gL9-Nm-dJN" secondAttribute="centerY" id="cso-A5-Tiu"/>
+                            <constraint firstItem="ofo-aB-5gU" firstAttribute="bottom" secondItem="gL9-Nm-dJN" secondAttribute="bottom" constant="16" id="eCd-CQ-9sP"/>
+                            <constraint firstItem="crB-zx-quz" firstAttribute="centerX" secondItem="gL9-Nm-dJN" secondAttribute="centerX" id="grr-Ov-HYj"/>
+                            <constraint firstItem="gL9-Nm-dJN" firstAttribute="leading" secondItem="ofo-aB-5gU" secondAttribute="leading" constant="16" id="ijc-dU-RMS"/>
+                            <constraint firstItem="ofo-aB-5gU" firstAttribute="trailing" secondItem="XQP-d0-zZj" secondAttribute="trailing" constant="16" id="x6N-bx-xnU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ofo-aB-5gU"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="crB-zx-quz" id="o4C-3e-7MC"/>
+                        <outlet property="exploreProxyAccountsButton" destination="ii3-WY-lDN" id="5an-vO-fH7"/>
+                        <outlet property="proxyVoteAccountTextField" destination="XQP-d0-zZj" id="EdS-u3-aJy"/>
+                        <outlet property="voteButton" destination="gL9-Nm-dJN" id="Tyv-kf-vfJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eu1-EB-mwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7852" y="1496"/>
+        </scene>
+        <!--Cast View Controller-->
+        <scene sceneID="O3h-Hx-FBL">
+            <objects>
+                <viewController id="iGC-qm-93n" customClass="CastViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IE4-Bv-Vbm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6j-9O-USY" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="51e-sn-6hP"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P80-mD-q93">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFL-Gh-hqf" customClass="ReachTabBar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="vvz-Z5-KqA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="qFL-Gh-hqf" firstAttribute="top" secondItem="U6j-9O-USY" secondAttribute="bottom" id="3DI-Ip-lAg"/>
+                            <constraint firstItem="P80-mD-q93" firstAttribute="top" secondItem="qFL-Gh-hqf" secondAttribute="bottom" id="3JE-Xf-wo6"/>
+                            <constraint firstItem="ita-Cx-Cjp" firstAttribute="trailing" secondItem="qFL-Gh-hqf" secondAttribute="trailing" id="87E-Za-lMK"/>
+                            <constraint firstItem="P80-mD-q93" firstAttribute="leading" secondItem="ita-Cx-Cjp" secondAttribute="leading" id="88C-m0-QfX"/>
+                            <constraint firstItem="qFL-Gh-hqf" firstAttribute="leading" secondItem="ita-Cx-Cjp" secondAttribute="leading" id="F4H-Mx-DqD"/>
+                            <constraint firstItem="U6j-9O-USY" firstAttribute="leading" secondItem="ita-Cx-Cjp" secondAttribute="leading" id="LOV-g1-1sA"/>
+                            <constraint firstItem="ita-Cx-Cjp" firstAttribute="trailing" secondItem="P80-mD-q93" secondAttribute="trailing" id="Rxt-39-kOl"/>
+                            <constraint firstItem="ita-Cx-Cjp" firstAttribute="bottom" secondItem="P80-mD-q93" secondAttribute="bottom" id="gqp-KF-cob"/>
+                            <constraint firstItem="ita-Cx-Cjp" firstAttribute="trailing" secondItem="U6j-9O-USY" secondAttribute="trailing" id="h6r-Qp-SUy"/>
+                            <constraint firstItem="U6j-9O-USY" firstAttribute="top" secondItem="ita-Cx-Cjp" secondAttribute="top" id="wnP-lQ-kHP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ita-Cx-Cjp"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="P80-mD-q93" id="Huh-5i-81b"/>
+                        <outlet property="tabBar" destination="qFL-Gh-hqf" id="EMU-MG-gwk"/>
+                        <outlet property="toolBar" destination="U6j-9O-USY" id="ygn-Od-h4S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1GS-VZ-OVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6385" y="1497"/>
         </scene>
         <!--View Proxy Voter View Controller-->
         <scene sceneID="fjO-IG-2JF">
@@ -1493,9 +1657,10 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rvY-Mg-arL"/>
+        <segue reference="dMo-xo-wz4"/>
+        <segue reference="Eks-sF-JJe"/>
         <segue reference="1bl-ap-rcg"/>
-        <segue reference="nIH-HN-fGl"/>
+        <segue reference="1Wt-0h-Agf"/>
         <segue reference="EMU-T5-0SR"/>
         <segue reference="kx6-Ea-lKC"/>
     </inferredMetricsTieBreakers>

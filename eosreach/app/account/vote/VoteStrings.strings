@@ -1,0 +1,18 @@
+{
+	"vote_cast_vote_title" = "Cast Vote";
+	"vote_producer_button" = Producer;
+	"vote_proxy_button" = Proxy;
+	"vote_producer_title" = "Voting for";
+	"vote_proxy_title" = "Proxy voter is";
+	"vote_read_only_no_vote" = "This account has not participated in voting.";
+	"cast_title" = "Cast Vote";
+	"cast_producers_vote_tab" = Producers;
+	"cast_proxy_vote_tab" = Proxy;
+	"cast_proxy_vote_explore_accounts_button" = "Explore Proxy Accounts";
+	"cast_proxy_vote_placeholder" = "Proxy vote account name";
+	"cast_proxy_vote_button" = Vote;
+	"cast_producers_add_button" = Add;
+	"cast_producers_add_from_list_button" = "Add From List";
+	"cast_producers_instructions_label" = "Vote for up to 30 Block Producer candidates.";
+	"cast_producers_vote_button" = Vote;
+}

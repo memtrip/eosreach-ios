@@ -25,9 +25,9 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        castVoteTitleLabel.text = R.string.accountStrings.account_vote_cast_vote_title()
-        producerButton.setTitle(R.string.accountStrings.account_vote_producer_button(), for: .normal)
-        proxyButton.setTitle(R.string.accountStrings.account_vote_proxy_button(), for: .normal)
+        castVoteTitleLabel.text = R.string.voteStrings.vote_cast_vote_title()
+        producerButton.setTitle(R.string.voteStrings.vote_producer_button(), for: .normal)
+        proxyButton.setTitle(R.string.voteStrings.vote_proxy_button(), for: .normal)
         
         if (readOnly) {
             castVoteTitleLabel.goneCollapsed()
@@ -66,21 +66,21 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
         case .populateProxyVote(let proxyAccountName):
             voteProxyTableView().visible()
             voteProxyTableView().populate(data: [proxyAccountName])
-            voteLabel.text = R.string.accountStrings.account_vote_proxy_title()
+            voteLabel.text = R.string.voteStrings.vote_proxy_title()
         case .populateProducerVotes(let eosAccountVote):
             voteProducerTableView().visible()
             voteProducerTableView().populate(data: eosAccountVote.producers)
-            voteLabel.text = R.string.accountStrings.account_vote_producer_title()
+            voteLabel.text = R.string.voteStrings.vote_producer_title()
         case .noVoteCast:
             if (readOnly) {
-                voteLabel.text = R.string.accountStrings.account_vote_read_only_no_vote()
+                voteLabel.text = R.string.voteStrings.vote_read_only_no_vote()
             } else {
                 fatalError("not implemented")
             }
         case .navigateToCastProducerVote:
-            print("")
+            performSegue(withIdentifier: R.segue.voteViewController.voteToCastProducer, sender: self)
         case .navigateToCastProxyVote:
-            print("")
+            performSegue(withIdentifier: R.segue.voteViewController.voteToCastProxy, sender: self)
         case .navigateToViewProducer(let accountName):
             setDestinationBundle(bundle: SegueBundle(
                 identifier: R.segue.voteViewController.voteToViewBlockProducerDetails.identifier,
@@ -106,5 +106,13 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
 
     override func provideViewModel() -> VoteViewModel {
         return VoteViewModel(initialState: VoteViewState.idle)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == R.segue.voteViewController.voteToCastProducer.identifier) {
+            (segue.destination as! CastViewController).castBundle = CastBundle(castTab: CastTab.producers)
+        } else {
+            (segue.destination as! CastViewController).castBundle = CastBundle(castTab: CastTab.proxy)
+        }
     }
 }
