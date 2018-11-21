@@ -249,6 +249,13 @@
 		3CEF33BD21A507E700716AA2 /* CreateAccountResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B821A507E700716AA2 /* CreateAccountResult.swift */; };
 		3CEF33BF21A513CB00716AA2 /* AccountNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33BE21A513CB00716AA2 /* AccountNavigationDelegate.swift */; };
 		3CEF33C121A513DF00716AA2 /* AccountNavigationSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C021A513DF00716AA2 /* AccountNavigationSelected.swift */; };
+		3CEF33C721A52A1900716AA2 /* ViewBlockProducerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C221A52A1800716AA2 /* ViewBlockProducerViewController.swift */; };
+		3CEF33C821A52A1900716AA2 /* ViewBlockProducerViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C321A52A1800716AA2 /* ViewBlockProducerViewState.swift */; };
+		3CEF33C921A52A1900716AA2 /* ViewBlockProducerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C421A52A1800716AA2 /* ViewBlockProducerResult.swift */; };
+		3CEF33CA21A52A1900716AA2 /* ViewBlockProducerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C521A52A1900716AA2 /* ViewBlockProducerViewModel.swift */; };
+		3CEF33CB21A52A1900716AA2 /* ViewBlockProducerIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C621A52A1900716AA2 /* ViewBlockProducerIntent.swift */; };
+		3CEF33CD21A52EE900716AA2 /* ReachBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33CC21A52EE900716AA2 /* ReachBorderView.swift */; };
+		3CEF33CF21A53E7E00716AA2 /* ViewBlockProducerBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33CE21A53E7E00716AA2 /* ViewBlockProducerBundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -521,6 +528,13 @@
 		3CEF33B821A507E700716AA2 /* CreateAccountResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountResult.swift; sourceTree = "<group>"; };
 		3CEF33BE21A513CB00716AA2 /* AccountNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNavigationDelegate.swift; sourceTree = "<group>"; };
 		3CEF33C021A513DF00716AA2 /* AccountNavigationSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNavigationSelected.swift; sourceTree = "<group>"; };
+		3CEF33C221A52A1800716AA2 /* ViewBlockProducerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBlockProducerViewController.swift; sourceTree = "<group>"; };
+		3CEF33C321A52A1800716AA2 /* ViewBlockProducerViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBlockProducerViewState.swift; sourceTree = "<group>"; };
+		3CEF33C421A52A1800716AA2 /* ViewBlockProducerResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBlockProducerResult.swift; sourceTree = "<group>"; };
+		3CEF33C521A52A1900716AA2 /* ViewBlockProducerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBlockProducerViewModel.swift; sourceTree = "<group>"; };
+		3CEF33C621A52A1900716AA2 /* ViewBlockProducerIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBlockProducerIntent.swift; sourceTree = "<group>"; };
+		3CEF33CC21A52EE900716AA2 /* ReachBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachBorderView.swift; sourceTree = "<group>"; };
+		3CEF33CE21A53E7E00716AA2 /* ViewBlockProducerBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBlockProducerBundle.swift; sourceTree = "<group>"; };
 		48ECDAAEF6BB465B8887CE03 /* Pods-eosreach-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreach_eosreachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52C445483AA480525DB9233 /* Pods-eosreach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.debug.xcconfig"; sourceTree = "<group>"; };
@@ -611,6 +625,7 @@
 				3C7F0DFB2194A58700E72DD1 /* ReachTabBar.swift */,
 				3C7F0E012194B73200E72DD1 /* ReachTabsController.swift */,
 				3C1F1F7C21A332020075BD71 /* ReachProgressBar.swift */,
+				3CEF33CC21A52EE900716AA2 /* ReachBorderView.swift */,
 			);
 			path = uikit;
 			sourceTree = "<group>";
@@ -1170,6 +1185,12 @@
 		3C9BFB9E219B511A00589936 /* blockproducer */ = {
 			isa = PBXGroup;
 			children = (
+				3CEF33C621A52A1900716AA2 /* ViewBlockProducerIntent.swift */,
+				3CEF33C421A52A1800716AA2 /* ViewBlockProducerResult.swift */,
+				3CEF33C221A52A1800716AA2 /* ViewBlockProducerViewController.swift */,
+				3CEF33C521A52A1900716AA2 /* ViewBlockProducerViewModel.swift */,
+				3CEF33C321A52A1800716AA2 /* ViewBlockProducerViewState.swift */,
+				3CEF33CE21A53E7E00716AA2 /* ViewBlockProducerBundle.swift */,
 				3C7F0DE52194A17000E72DD1 /* ActiveBlockProducersIntent.swift */,
 				3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersResult.swift */,
 				3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersViewModel.swift */,
@@ -1575,6 +1596,7 @@
 				3C6DF78721A08D8700ADA892 /* VoteResult.swift in Sources */,
 				3C9BFB98219B3A1000589936 /* EosRefundRequest.swift in Sources */,
 				3C0EC826219350DE00562A1B /* ImportKeyIntent.swift in Sources */,
+				3CEF33CF21A53E7E00716AA2 /* ViewBlockProducerBundle.swift in Sources */,
 				3CC9A3B1219DB52F0002A25F /* ProxyVoterRequest.swift in Sources */,
 				3C6DF77C21A08B5100ADA892 /* BalanceViewState.swift in Sources */,
 				3C0EC81E21933D4F00562A1B /* SplashViewState.swift in Sources */,
@@ -1608,6 +1630,7 @@
 				3C0ADD89219F37B10026649F /* AccountEntity.swift in Sources */,
 				3C7F0DD92194A0D400E72DD1 /* SearchViewController.swift in Sources */,
 				3C6DF79221A090F300ADA892 /* ResourcesIntent.swift in Sources */,
+				3CEF33CB21A52A1900716AA2 /* ViewBlockProducerIntent.swift in Sources */,
 				3CC9A3C3219DC4390002A25F /* RegisteredBlockProducerRequest.swift in Sources */,
 				3C9BFB8C219B367B00589936 /* AccountBalanceRequest.swift in Sources */,
 				3C0EC81421933B6F00562A1B /* ReachActivityIndicator.swift in Sources */,
@@ -1684,6 +1707,7 @@
 				3C0ADD71219F28700026649F /* Connection.swift in Sources */,
 				3C0EC81C21933D4F00562A1B /* SplashIntent.swift in Sources */,
 				3C6DF77121A0830600ADA892 /* AccountPage.swift in Sources */,
+				3CEF33CA21A52A1900716AA2 /* ViewBlockProducerViewModel.swift in Sources */,
 				3C340FBD219353D20017BEF9 /* ReachToolbar.swift in Sources */,
 				3C9BFB92219B37E100589936 /* Result.swift in Sources */,
 				3C340FDB219383210017BEF9 /* ReachTextField.swift in Sources */,
@@ -1698,6 +1722,7 @@
 				3C6DF75B21A05CF600ADA892 /* AccountModel.swift in Sources */,
 				3C592FA0219D60D100D7C9B9 /* GetBandwidthRequestImpl.swift in Sources */,
 				3C6DF77D21A08B5100ADA892 /* BalanceViewController.swift in Sources */,
+				3CEF33C921A52A1900716AA2 /* ViewBlockProducerResult.swift in Sources */,
 				3C1F1F9421A359090075BD71 /* ActionsViewState.swift in Sources */,
 				3C1F1F9121A359090075BD71 /* ActionsViewModel.swift in Sources */,
 				3C1F1F7121A306680075BD71 /* VoteProducerTableView.swift in Sources */,
@@ -1738,6 +1763,8 @@
 				3CC9A3BF219DC0F90002A25F /* HistoryApiModule.swift in Sources */,
 				3CC9A3B9219DBBFA0002A25F /* RamPriceRequest.swift in Sources */,
 				3C14FA4421A0A31A00B8255F /* EosPriceRequestImpl.swift in Sources */,
+				3CEF33C821A52A1900716AA2 /* ViewBlockProducerViewState.swift in Sources */,
+				3CEF33CD21A52EE900716AA2 /* ReachBorderView.swift in Sources */,
 				3C6DF77321A0833600ADA892 /* AccountBundle.swift in Sources */,
 				3C291BA5219D597900562448 /* CurrencySymbol.swift in Sources */,
 				3C1F1F7721A306A10075BD71 /* VoteProducerCell.swift in Sources */,
@@ -1765,6 +1792,7 @@
 				3C9BFB9A219B3A4000589936 /* EosAccountRequest.swift in Sources */,
 				3C592FA4219D61CC00D7C9B9 /* TransferRequest.swift in Sources */,
 				3C6DF77F21A08B5100ADA892 /* BalanceResult.swift in Sources */,
+				3CEF33C721A52A1900716AA2 /* ViewBlockProducerViewController.swift in Sources */,
 				3C6DF76A21A082AC00ADA892 /* AccountViewController.swift in Sources */,
 				3C291BA3219D58B800562448 /* CurrencyPairFormatter.swift in Sources */,
 				3C0EC81D21933D4F00562A1B /* SplashViewController.swift in Sources */,

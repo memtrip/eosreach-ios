@@ -1047,11 +1047,154 @@
                         <outlet property="proxyTableView" destination="lc0-EU-Bc9" id="61D-cV-drA"/>
                         <outlet property="voteLabel" destination="LeC-v6-POE" id="aHu-pB-WN9"/>
                         <outlet property="voteTopConstraint" destination="80Z-zV-Ob8" id="K5a-Wf-pHU"/>
+                        <segue destination="aZW-vt-og8" kind="show" identifier="voteToViewBlockProducer" id="8th-cq-vMG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNT-MW-f7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6402" y="29"/>
+            <point key="canvasLocation" x="6386" y="30"/>
+        </scene>
+        <!--View Block Producer View Controller-->
+        <scene sceneID="uut-zm-SZh">
+            <objects>
+                <viewController id="aZW-vt-og8" customClass="ViewBlockProducerViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YMZ-Nn-5he">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXH-7X-vfb" customClass="ReachBorderView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="8" y="84" width="359" height="228"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i0H-W5-OVK">
+                                        <rect key="frame" x="8" y="8" width="76" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="76" id="Jle-Tq-Vtm"/>
+                                            <constraint firstAttribute="width" secondItem="i0H-W5-OVK" secondAttribute="height" multiplier="1:1" id="eI7-VC-rTT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_block_producer_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4B-gP-Q2g">
+                                        <rect key="frame" x="92" y="12" width="259" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <color key="textColor" name="typographyColorPrimary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwE-wH-Cir">
+                                        <rect key="frame" x="92" y="36" width="259" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="0VE-Xh-xO0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <state key="normal" title="_website">
+                                            <color key="titleColor" name="colorSecondary"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pw-IE-mpB">
+                                        <rect key="frame" x="92" y="60" width="259" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="1rJ-zT-XYI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <state key="normal" title="_email">
+                                            <color key="titleColor" name="colorSecondary"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZV-8g-I7P" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="92" y="100" width="259" height="30"/>
+                                        <state key="normal" title="_view_owner_account"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuX-jV-trJ" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="92" y="138" width="259" height="30"/>
+                                        <state key="normal" title="_code_of_conduct"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eml-s1-OJ0" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="92" y="176" width="259" height="30"/>
+                                        <state key="normal" title="_ownership_disclosure"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KwE-wH-Cir" firstAttribute="leading" secondItem="i0H-W5-OVK" secondAttribute="trailing" constant="8" id="11N-ff-2nd"/>
+                                    <constraint firstItem="KuX-jV-trJ" firstAttribute="top" secondItem="aZV-8g-I7P" secondAttribute="bottom" constant="8" id="20r-IF-v5K"/>
+                                    <constraint firstItem="i0H-W5-OVK" firstAttribute="top" secondItem="tXH-7X-vfb" secondAttribute="top" constant="8" id="3q2-fz-udw"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Pw-IE-mpB" secondAttribute="trailing" constant="8" id="8Mi-0K-K5S"/>
+                                    <constraint firstItem="KwE-wH-Cir" firstAttribute="top" secondItem="v4B-gP-Q2g" secondAttribute="bottom" id="Av5-B0-vPc"/>
+                                    <constraint firstItem="eml-s1-OJ0" firstAttribute="leading" secondItem="i0H-W5-OVK" secondAttribute="trailing" constant="8" id="AwR-Gp-N2q"/>
+                                    <constraint firstItem="v4B-gP-Q2g" firstAttribute="leading" secondItem="i0H-W5-OVK" secondAttribute="trailing" constant="8" id="EcK-oT-YBp"/>
+                                    <constraint firstAttribute="trailing" secondItem="KuX-jV-trJ" secondAttribute="trailing" constant="8" id="G6O-jA-GiK"/>
+                                    <constraint firstAttribute="trailing" secondItem="KwE-wH-Cir" secondAttribute="trailing" constant="8" id="IP8-EV-ROm"/>
+                                    <constraint firstItem="KuX-jV-trJ" firstAttribute="leading" secondItem="i0H-W5-OVK" secondAttribute="trailing" constant="8" id="IdE-3h-kjc"/>
+                                    <constraint firstAttribute="trailing" secondItem="eml-s1-OJ0" secondAttribute="trailing" constant="8" id="MwF-hz-3y8"/>
+                                    <constraint firstItem="5Pw-IE-mpB" firstAttribute="top" secondItem="KwE-wH-Cir" secondAttribute="bottom" id="OkV-v8-iVz"/>
+                                    <constraint firstItem="aZV-8g-I7P" firstAttribute="top" secondItem="5Pw-IE-mpB" secondAttribute="bottom" constant="16" id="RWg-JH-5ow"/>
+                                    <constraint firstItem="i0H-W5-OVK" firstAttribute="leading" secondItem="tXH-7X-vfb" secondAttribute="leading" constant="8" id="bVS-e5-iqk"/>
+                                    <constraint firstItem="v4B-gP-Q2g" firstAttribute="top" secondItem="tXH-7X-vfb" secondAttribute="top" constant="12" id="eQS-g9-yP9"/>
+                                    <constraint firstAttribute="trailing" secondItem="v4B-gP-Q2g" secondAttribute="trailing" constant="8" id="mzv-V7-QWs"/>
+                                    <constraint firstItem="5Pw-IE-mpB" firstAttribute="leading" secondItem="i0H-W5-OVK" secondAttribute="trailing" constant="8" id="syB-4G-PXT"/>
+                                    <constraint firstAttribute="trailing" secondItem="aZV-8g-I7P" secondAttribute="trailing" constant="8" id="uRC-AO-HfO"/>
+                                    <constraint firstItem="eml-s1-OJ0" firstAttribute="top" secondItem="KuX-jV-trJ" secondAttribute="bottom" constant="8" id="vFc-98-VN5"/>
+                                    <constraint firstItem="aZV-8g-I7P" firstAttribute="leading" secondItem="i0H-W5-OVK" secondAttribute="trailing" constant="8" id="vgF-4n-hBW"/>
+                                    <constraint firstAttribute="height" constant="228" id="x9c-Cz-nmL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0So-Cu-Hea" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="dyx-dm-lpX"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_no_producers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oS-ND-opr">
+                                <rect key="frame" x="16" y="84" width="343" height="567"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xkm-C5-AMd" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="84" width="343" height="567"/>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ire-r6-w75" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ATx-65-5Sq" firstAttribute="trailing" secondItem="0So-Cu-Hea" secondAttribute="trailing" id="3FX-Gn-cVv"/>
+                            <constraint firstItem="ATx-65-5Sq" firstAttribute="bottom" secondItem="1oS-ND-opr" secondAttribute="bottom" constant="16" id="9rG-jX-AEw"/>
+                            <constraint firstItem="ATx-65-5Sq" firstAttribute="trailing" secondItem="tXH-7X-vfb" secondAttribute="trailing" constant="8" id="C5o-z9-itG"/>
+                            <constraint firstItem="ATx-65-5Sq" firstAttribute="trailing" secondItem="Ire-r6-w75" secondAttribute="trailing" id="DJU-OU-IpA"/>
+                            <constraint firstItem="0So-Cu-Hea" firstAttribute="top" secondItem="ATx-65-5Sq" secondAttribute="top" id="NoK-ho-sI3"/>
+                            <constraint firstItem="Ire-r6-w75" firstAttribute="top" secondItem="ATx-65-5Sq" secondAttribute="top" id="Qtr-pV-lda"/>
+                            <constraint firstItem="ATx-65-5Sq" firstAttribute="bottom" secondItem="Xkm-C5-AMd" secondAttribute="bottom" constant="16" id="cVc-hn-GMS"/>
+                            <constraint firstItem="tXH-7X-vfb" firstAttribute="leading" secondItem="ATx-65-5Sq" secondAttribute="leading" constant="8" id="dtx-LC-uTr"/>
+                            <constraint firstItem="tXH-7X-vfb" firstAttribute="top" secondItem="0So-Cu-Hea" secondAttribute="bottom" constant="16" id="fN5-g5-U9b"/>
+                            <constraint firstItem="ATx-65-5Sq" firstAttribute="bottom" secondItem="Ire-r6-w75" secondAttribute="bottom" id="jTX-3X-UdP"/>
+                            <constraint firstItem="Xkm-C5-AMd" firstAttribute="leading" secondItem="ATx-65-5Sq" secondAttribute="leading" constant="16" id="jpY-bZ-qSf"/>
+                            <constraint firstItem="Ire-r6-w75" firstAttribute="leading" secondItem="ATx-65-5Sq" secondAttribute="leading" id="lYw-WN-ROL"/>
+                            <constraint firstItem="0So-Cu-Hea" firstAttribute="leading" secondItem="ATx-65-5Sq" secondAttribute="leading" id="n5Y-kj-hkC"/>
+                            <constraint firstItem="Xkm-C5-AMd" firstAttribute="top" secondItem="0So-Cu-Hea" secondAttribute="bottom" constant="16" id="qNk-J6-iyC"/>
+                            <constraint firstItem="ATx-65-5Sq" firstAttribute="trailing" secondItem="Xkm-C5-AMd" secondAttribute="trailing" constant="16" id="rVR-YL-hG9"/>
+                            <constraint firstItem="ATx-65-5Sq" firstAttribute="trailing" secondItem="1oS-ND-opr" secondAttribute="trailing" constant="16" id="wvG-nB-nha"/>
+                            <constraint firstItem="1oS-ND-opr" firstAttribute="top" secondItem="0So-Cu-Hea" secondAttribute="bottom" constant="16" id="xTt-h4-2w8"/>
+                            <constraint firstItem="1oS-ND-opr" firstAttribute="leading" secondItem="ATx-65-5Sq" secondAttribute="leading" constant="16" id="xmQ-ce-GPQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ATx-65-5Sq"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Ire-r6-w75" id="XWg-zU-QHY"/>
+                        <outlet property="blockProducerContainer" destination="tXH-7X-vfb" id="xGg-HH-EbF"/>
+                        <outlet property="blockProducerImage" destination="i0H-W5-OVK" id="2AD-Vv-UE7"/>
+                        <outlet property="blockProducerNameLabel" destination="v4B-gP-Q2g" id="Hr6-Ix-tKc"/>
+                        <outlet property="codeOfConductButton" destination="KuX-jV-trJ" id="6N5-pd-Oms"/>
+                        <outlet property="emailButton" destination="5Pw-IE-mpB" id="lGb-z5-cJy"/>
+                        <outlet property="errorView" destination="Xkm-C5-AMd" id="vuY-F7-Bap"/>
+                        <outlet property="noProducers" destination="1oS-ND-opr" id="Zwl-ds-qsi"/>
+                        <outlet property="ownerAccountButton" destination="aZV-8g-I7P" id="aaR-YM-nFd"/>
+                        <outlet property="ownershipDisclosureButton" destination="eml-s1-OJ0" id="x89-gf-iVE"/>
+                        <outlet property="toolBar" destination="0So-Cu-Hea" id="cnP-Uw-s0C"/>
+                        <outlet property="websiteButton" destination="KwE-wH-Cir" id="2P7-1o-MKI"/>
+                        <segue destination="tgP-tV-kRI" kind="show" identifier="viewProducerToAccount" id="agL-0e-eci"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="El3-7y-2HS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6386" y="795"/>
         </scene>
         <!--Explore View Controller-->
         <scene sceneID="nuT-Hy-S2b">
@@ -1251,7 +1394,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rvY-Mg-arL"/>
-        <segue reference="tiU-62-5pJ"/>
+        <segue reference="agL-0e-eci"/>
         <segue reference="nIH-HN-fGl"/>
         <segue reference="EMU-T5-0SR"/>
         <segue reference="kx6-Ea-lKC"/>

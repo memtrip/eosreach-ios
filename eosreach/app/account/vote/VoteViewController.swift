@@ -45,6 +45,12 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
             },
             proxyButton.rx.tap.map {
                 return VoteIntent.navigateToCastProxyVote
+            },
+            voteProxyTableView().selected.map { proxyAccountName in
+                return VoteIntent.navigateToViewProxy(accountName: proxyAccountName)
+            },
+            voteProducerTableView().selected.map { producerAccountName in
+                return VoteIntent.navigateToViewProducer(accountName: producerAccountName)
             }
         )
     }
@@ -76,7 +82,11 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
         case .navigateToCastProxyVote:
             print("")
         case .navigateToViewProducer(let accountName):
-            print("")
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.voteViewController.voteToViewBlockProducer.identifier,
+                model: ViewBlockProducerBundle(accountName: accountName, blockProducerDetails: nil)
+            ))
+            performSegue(withIdentifier: R.segue.voteViewController.voteToViewBlockProducer, sender: self)
         case .navigateToViewProxyVote(let accountName):
             print("")
         case .onVoteForUsProgress:
