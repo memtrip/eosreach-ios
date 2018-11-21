@@ -8,14 +8,12 @@ class ViewBlockProducerViewController
     @IBOutlet weak var blockProducerImage: UIImageView!
     
     @IBOutlet weak var toolBar: ReachToolbar!
-    @IBOutlet weak var blockProducerNameLabel: UILabel!
-
     
     @IBOutlet weak var ownerAccountButton: ReachPrimaryButton!
     @IBOutlet weak var codeOfConductButton: ReachButton!
     @IBOutlet weak var ownershipDisclosureButton: ReachButton!
     @IBOutlet weak var activityIndicator: ReachActivityIndicator!
-    @IBOutlet weak var blockProducerContainer: ReachBorderView!
+    @IBOutlet weak var blockProducerContainer: UIView!
     @IBOutlet weak var noProducers: UILabel!
     @IBOutlet weak var errorView: ErrorView!
     @IBOutlet weak var websiteButton: UIButton!
@@ -88,7 +86,6 @@ class ViewBlockProducerViewController
             activityIndicator.stop()
             blockProducerContainer.visible()
             toolBar.title = blockProducerDetails.candidateName
-            blockProducerNameLabel.text = blockProducerDetails.candidateName
             websiteButton.setTitle(blockProducerDetails.website, for: .normal)
             emailButton.setTitle(blockProducerDetails.email, for: .normal)
             // TODO: populate image

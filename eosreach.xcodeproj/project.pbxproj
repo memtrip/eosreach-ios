@@ -238,6 +238,12 @@
 		3CC9A3D5219DF1B00002A25F /* RegisteredBlockProducersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D4219DF1B00002A25F /* RegisteredBlockProducersCell.swift */; };
 		3CC9A3D7219DF2B90002A25F /* RegisteredBlockProducersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D6219DF2B90002A25F /* RegisteredBlockProducersCell.xib */; };
 		3CC9A3D9219DF6120002A25F /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D8219DF6120002A25F /* SimpleTableViewCell.swift */; };
+		3CC9E6F121A56AAE0050BA57 /* ViewProxyVoterBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6EB21A56AAE0050BA57 /* ViewProxyVoterBundle.swift */; };
+		3CC9E6F221A56AAE0050BA57 /* ViewProxyVoterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6EC21A56AAE0050BA57 /* ViewProxyVoterViewState.swift */; };
+		3CC9E6F321A56AAE0050BA57 /* ViewProxyVoterIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6ED21A56AAE0050BA57 /* ViewProxyVoterIntent.swift */; };
+		3CC9E6F421A56AAE0050BA57 /* ViewProxyVoterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6EE21A56AAE0050BA57 /* ViewProxyVoterViewController.swift */; };
+		3CC9E6F521A56AAE0050BA57 /* ViewProxyVoterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6EF21A56AAE0050BA57 /* ViewProxyVoterResult.swift */; };
+		3CC9E6F621A56AAE0050BA57 /* ViewProxyVoterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6F021A56AAE0050BA57 /* ViewProxyVoterViewModel.swift */; };
 		3CCE9C2421A2B11F0050910D /* AccountRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */; };
 		3CCE9C2621A2B1350050910D /* AccountViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */; };
 		3CCE9C2C21A2C3810050910D /* ResourceGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */; };
@@ -517,6 +523,12 @@
 		3CC9A3D4219DF1B00002A25F /* RegisteredBlockProducersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredBlockProducersCell.swift; sourceTree = "<group>"; };
 		3CC9A3D6219DF2B90002A25F /* RegisteredBlockProducersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisteredBlockProducersCell.xib; sourceTree = "<group>"; };
 		3CC9A3D8219DF6120002A25F /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
+		3CC9E6EB21A56AAE0050BA57 /* ViewProxyVoterBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProxyVoterBundle.swift; sourceTree = "<group>"; };
+		3CC9E6EC21A56AAE0050BA57 /* ViewProxyVoterViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProxyVoterViewState.swift; sourceTree = "<group>"; };
+		3CC9E6ED21A56AAE0050BA57 /* ViewProxyVoterIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProxyVoterIntent.swift; sourceTree = "<group>"; };
+		3CC9E6EE21A56AAE0050BA57 /* ViewProxyVoterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProxyVoterViewController.swift; sourceTree = "<group>"; };
+		3CC9E6EF21A56AAE0050BA57 /* ViewProxyVoterResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProxyVoterResult.swift; sourceTree = "<group>"; };
+		3CC9E6F021A56AAE0050BA57 /* ViewProxyVoterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProxyVoterViewModel.swift; sourceTree = "<group>"; };
 		3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRenderer.swift; sourceTree = "<group>"; };
 		3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewLayout.swift; sourceTree = "<group>"; };
 		3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceGraphView.swift; sourceTree = "<group>"; };
@@ -1231,6 +1243,12 @@
 		3C9BFBA3219B516E00589936 /* proxyvoter */ = {
 			isa = PBXGroup;
 			children = (
+				3CC9E6EB21A56AAE0050BA57 /* ViewProxyVoterBundle.swift */,
+				3CC9E6ED21A56AAE0050BA57 /* ViewProxyVoterIntent.swift */,
+				3CC9E6EF21A56AAE0050BA57 /* ViewProxyVoterResult.swift */,
+				3CC9E6EE21A56AAE0050BA57 /* ViewProxyVoterViewController.swift */,
+				3CC9E6F021A56AAE0050BA57 /* ViewProxyVoterViewModel.swift */,
+				3CC9E6EC21A56AAE0050BA57 /* ViewProxyVoterViewState.swift */,
 			);
 			path = proxyvoter;
 			sourceTree = "<group>";
@@ -1578,6 +1596,7 @@
 				3C0ADD95219F3A8B0026649F /* DeleteTransactionLog.swift in Sources */,
 				3C7F0DF02194A17000E72DD1 /* RegisteredBlockProducersViewModel.swift in Sources */,
 				3C8C6D9E2192D5B000FC1A0D /* SegueBundle.swift in Sources */,
+				3CC9E6F421A56AAE0050BA57 /* ViewProxyVoterViewController.swift in Sources */,
 				3CC9A3BB219DBC210002A25F /* RamPriceRequestImpl.swift in Sources */,
 				3C964C4F2194572A003663EF /* EosKeyManager.swift in Sources */,
 				3C9BFB90219B36CC00589936 /* EosPrice.swift in Sources */,
@@ -1586,6 +1605,7 @@
 				3C6DF77521A0840C00ADA892 /* AccountView.swift in Sources */,
 				3C0ADD90219F38160026649F /* GetBalances.swift in Sources */,
 				3CC9A3D5219DF1B00002A25F /* RegisteredBlockProducersCell.swift in Sources */,
+				3CC9E6F221A56AAE0050BA57 /* ViewProxyVoterViewState.swift in Sources */,
 				3C9BFBA7219B51A700589936 /* BalanceFormatter.swift in Sources */,
 				3C0EC82A219350DE00562A1B /* ImportKeyViewState.swift in Sources */,
 				3C964C3821938C71003663EF /* EosEndpointResult.swift in Sources */,
@@ -1630,6 +1650,7 @@
 				3C0ADD89219F37B10026649F /* AccountEntity.swift in Sources */,
 				3C7F0DD92194A0D400E72DD1 /* SearchViewController.swift in Sources */,
 				3C6DF79221A090F300ADA892 /* ResourcesIntent.swift in Sources */,
+				3CC9E6F521A56AAE0050BA57 /* ViewProxyVoterResult.swift in Sources */,
 				3CEF33CB21A52A1900716AA2 /* ViewBlockProducerIntent.swift in Sources */,
 				3CC9A3C3219DC4390002A25F /* RegisteredBlockProducerRequest.swift in Sources */,
 				3C9BFB8C219B367B00589936 /* AccountBalanceRequest.swift in Sources */,
@@ -1688,6 +1709,7 @@
 				3C964C3921938C71003663EF /* EosEndpointViewModel.swift in Sources */,
 				3C14FA3F21A0A1C600B8255F /* AccountUseCase.swift in Sources */,
 				3C7F0DEC2194A17000E72DD1 /* ActiveBlockProducersResult.swift in Sources */,
+				3CC9E6F321A56AAE0050BA57 /* ViewProxyVoterIntent.swift in Sources */,
 				3CCE9C2C21A2C3810050910D /* ResourceGraphView.swift in Sources */,
 				3C7F0E022194B73200E72DD1 /* ReachTabsController.swift in Sources */,
 				3C592F9C219D60BE00D7C9B9 /* DelegatedBandwidth.swift in Sources */,
@@ -1771,12 +1793,14 @@
 				3C964C3721938C71003663EF /* EosEndpointViewController.swift in Sources */,
 				3CEF33BF21A513CB00716AA2 /* AccountNavigationDelegate.swift in Sources */,
 				3C1A971D21A3C5F100C30A75 /* EosEndpointUseCase.swift in Sources */,
+				3CC9E6F121A56AAE0050BA57 /* ViewProxyVoterBundle.swift in Sources */,
 				3C964C3521938C71003663EF /* EosEndpointIntent.swift in Sources */,
 				3C7F0DD62194A0D400E72DD1 /* SearchResult.swift in Sources */,
 				3C340FC92193612A0017BEF9 /* SettingsResult.swift in Sources */,
 				3C0ADD7E219F378C0026649F /* BalanceEntity.swift in Sources */,
 				3C8C6D8D2192D4B600FC1A0D /* Rx.swift in Sources */,
 				3C1A972121A3D03100C30A75 /* ActiveBlockProducersCell.swift in Sources */,
+				3CC9E6F621A56AAE0050BA57 /* ViewProxyVoterViewModel.swift in Sources */,
 				3C9BFB8E219B368700589936 /* AccountBalanceRequestImpl.swift in Sources */,
 				3C6DF76F21A082AC00ADA892 /* AccountViewModel.swift in Sources */,
 				3C9BFBC6219C21E000589936 /* AccountActionRequestImpl.swift in Sources */,
