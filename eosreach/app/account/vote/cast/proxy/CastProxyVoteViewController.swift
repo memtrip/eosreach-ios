@@ -9,6 +9,8 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
     @IBOutlet weak var activityIndicator: ReachActivityIndicator!
     @IBOutlet weak var voteButton: ReachButton!
     
+    var accountName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         exploreProxyAccountsButton.setTitle(R.string.voteStrings.cast_proxy_vote_explore_accounts_button(), for: .normal)
@@ -21,7 +23,15 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
         return Observable.merge(
             Observable.just(CastProxyVoteIntent.idle),
             exploreProxyAccountsButton.rx.tap.map {
-                return CastProxyVoteIntent.navigateToExploreProxies()
+                CastProxyVoteIntent.navigateToExploreProxies()
+            },
+            Observable.merge(
+                voteButton.rx.tap.asObservable(),
+                proxyVoteAccountTextField.rx.controlEvent(.editingDidEndOnExit).asObservable()
+            ).map {
+                CastProxyVoteIntent.vote(
+                    voterAccountName: self.accountName!,
+                    proxyAccountName: self.proxyVoteAccountTextField.text!)
             }
         )
     }
@@ -35,15 +45,16 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
         case .idle:
             break
         case .onProgress:
-            print("")
+            activityIndicator.start()
+            voteButton.gone()
         case .onGenericError:
-            print("")
-        case .onLogError(let log):
-            print("")
+            activityIndicator.stop()
+            voteButton.visible()
         case .onSuccess:
-            print("")
+            close()
         case .viewLog(let log):
-            print("")
+            activityIndicator.stop()
+            voteButton.visible()
         case .navigateToExploreProxies:
             performSegue(withIdentifier: R.segue.castProxyVoteViewController.castProxyVoteToProxyVoterList, sender: self)
         }

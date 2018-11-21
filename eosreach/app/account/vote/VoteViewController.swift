@@ -128,9 +128,11 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         if (segue.identifier == R.segue.voteViewController.voteToCastProducer.identifier) {
-            (segue.destination as! CastViewController).castBundle = CastBundle(castTab: CastTab.producers)
+            (segue.destination as! CastViewController).castBundle = CastBundle(
+                accountName: eosAccount!.accountName, castTab: CastTab.producers)
         } else if (segue.identifier == R.segue.voteViewController.voteToCastProxy.identifier) {
-            (segue.destination as! CastViewController).castBundle = CastBundle(castTab: CastTab.proxy)
+            (segue.destination as! CastViewController).castBundle = CastBundle(
+                accountName: eosAccount!.accountName, castTab: CastTab.proxy)
         }
     }
 }

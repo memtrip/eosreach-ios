@@ -17,6 +17,8 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
     @IBOutlet weak var producersInstruction: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    var accountName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addFromListButton.setTitle(R.string.voteStrings.cast_producers_add_from_list_button(), for: .normal)

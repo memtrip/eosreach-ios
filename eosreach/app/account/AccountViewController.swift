@@ -22,17 +22,9 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     private let voteTabItem = TabItem()
     private var loaded = false
     
-    private lazy var balanceViewController: BalanceViewController = {
-        return R.storyboard.main.balanceViewController()!
-    }()
-    
-    private lazy var resourcesViewController: ResourcesViewController = {
-        return R.storyboard.main.resourcesViewController()!
-    }()
-    
-    private lazy var voteViewController: VoteViewController = {
-        return R.storyboard.main.voteViewController()!
-    }()
+    private var balanceViewController: BalanceViewController?
+    private var resourcesViewController: ResourcesViewController?
+    private var voteViewController: VoteViewController?
     
     private lazy var accountBundle = {
         return self.getDestinationBundle()!.model as! AccountBundle
@@ -117,11 +109,11 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     
     @objc func tabBar(tabBar: TabBar, willSelect tabItem: TabItem) {
         if (tabItem == balanceTabItem) {
-            replaceChildViewController(viewController: balanceViewController)
+            replaceChildViewController(viewController: balanceViewController!)
         } else if (tabItem == resourcesTabItem) {
-            replaceChildViewController(viewController: resourcesViewController)
+            replaceChildViewController(viewController: resourcesViewController!)
         } else if (tabItem == voteTabItem) {
-            replaceChildViewController(viewController: voteViewController)
+            replaceChildViewController(viewController: voteViewController!)
         }
     }
     
@@ -166,23 +158,26 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         tabBar.visible()
         containerView.visible()
         
-        balanceViewController.accountName = accountView.eosAccount!.accountName
-        balanceViewController.accountBalanceList = accountView.balances!
+        balanceViewController = R.storyboard.main.balanceViewController()
+        balanceViewController!.accountName = accountView.eosAccount!.accountName
+        balanceViewController!.accountBalanceList = accountView.balances!
         
-        voteViewController.eosAccount = accountView.eosAccount
-        voteViewController.readOnly = self.accountBundle.readOnly
-        voteViewController.accountDelegate = self
+        voteViewController = R.storyboard.main.voteViewController()
+        voteViewController!.eosAccount = accountView.eosAccount
+        voteViewController!.readOnly = self.accountBundle.readOnly
+        voteViewController!.accountDelegate = self
         
-        resourcesViewController.eosAccount = accountView.eosAccount!
-        resourcesViewController.readOnly = self.accountBundle.readOnly
+        resourcesViewController = R.storyboard.main.resourcesViewController()
+        resourcesViewController!.eosAccount = accountView.eosAccount!
+        resourcesViewController!.readOnly = self.accountBundle.readOnly
         
         switch page {
         case .balances:
-            replaceChildViewController(viewController: balanceViewController)
+            replaceChildViewController(viewController: balanceViewController!)
         case .resources:
-            replaceChildViewController(viewController: resourcesViewController)
+            replaceChildViewController(viewController: resourcesViewController!)
         case .vote:
-            replaceChildViewController(viewController: voteViewController)
+            replaceChildViewController(viewController: voteViewController!)
         }
     }
     

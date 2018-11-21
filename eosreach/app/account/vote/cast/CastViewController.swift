@@ -36,6 +36,9 @@ class CastViewController: UIViewController, TabBarDelegate {
         
         view.backgroundColor = Res.color.colorWindowBackground()
         
+        producersViewController.accountName = castBundle!.accountName
+        proxyViewController.accountName = castBundle!.accountName
+        
         switch castBundle!.castTab {
         case .producers:
             replaceChildViewController(viewController: producersViewController)
