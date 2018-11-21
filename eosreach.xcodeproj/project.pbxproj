@@ -247,6 +247,8 @@
 		3CEF33BB21A507E700716AA2 /* CreateAccountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B621A507E700716AA2 /* CreateAccountIntent.swift */; };
 		3CEF33BC21A507E700716AA2 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B721A507E700716AA2 /* CreateAccountViewModel.swift */; };
 		3CEF33BD21A507E700716AA2 /* CreateAccountResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B821A507E700716AA2 /* CreateAccountResult.swift */; };
+		3CEF33BF21A513CB00716AA2 /* AccountNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33BE21A513CB00716AA2 /* AccountNavigationDelegate.swift */; };
+		3CEF33C121A513DF00716AA2 /* AccountNavigationSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C021A513DF00716AA2 /* AccountNavigationSelected.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -517,6 +519,8 @@
 		3CEF33B621A507E700716AA2 /* CreateAccountIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountIntent.swift; sourceTree = "<group>"; };
 		3CEF33B721A507E700716AA2 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		3CEF33B821A507E700716AA2 /* CreateAccountResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountResult.swift; sourceTree = "<group>"; };
+		3CEF33BE21A513CB00716AA2 /* AccountNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNavigationDelegate.swift; sourceTree = "<group>"; };
+		3CEF33C021A513DF00716AA2 /* AccountNavigationSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNavigationSelected.swift; sourceTree = "<group>"; };
 		48ECDAAEF6BB465B8887CE03 /* Pods-eosreach-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreach_eosreachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52C445483AA480525DB9233 /* Pods-eosreach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.debug.xcconfig"; sourceTree = "<group>"; };
@@ -774,6 +778,8 @@
 				3C6DF79521A0934600ADA892 /* AccountNavigationViewModel.swift */,
 				3C6DF79721A0934600ADA892 /* AccountNavigationViewState.swift */,
 				3C1A973421A4844200C30A75 /* AccountNavigationUseCase.swift */,
+				3CEF33BE21A513CB00716AA2 /* AccountNavigationDelegate.swift */,
+				3CEF33C021A513DF00716AA2 /* AccountNavigationSelected.swift */,
 			);
 			path = navigation;
 			sourceTree = "<group>";
@@ -1632,6 +1638,7 @@
 				3C0ADD9B219F3B230026649F /* InsertTransactionLog.swift in Sources */,
 				3C0ADD8E219F37E60026649F /* DeleteBalances.swift in Sources */,
 				3C8C6DC42192D86F00FC1A0D /* EntryResult.swift in Sources */,
+				3CEF33C121A513DF00716AA2 /* AccountNavigationSelected.swift in Sources */,
 				3C1F1F7B21A31CCF0075BD71 /* ResourcesViewLayout.swift in Sources */,
 				3CC9A3A3219DAF0B0002A25F /* Token.swift in Sources */,
 				3C6DF79021A090F300ADA892 /* ResourcesViewState.swift in Sources */,
@@ -1735,6 +1742,7 @@
 				3C291BA5219D597900562448 /* CurrencySymbol.swift in Sources */,
 				3C1F1F7721A306A10075BD71 /* VoteProducerCell.swift in Sources */,
 				3C964C3721938C71003663EF /* EosEndpointViewController.swift in Sources */,
+				3CEF33BF21A513CB00716AA2 /* AccountNavigationDelegate.swift in Sources */,
 				3C1A971D21A3C5F100C30A75 /* EosEndpointUseCase.swift in Sources */,
 				3C964C3521938C71003663EF /* EosEndpointIntent.swift in Sources */,
 				3C7F0DD62194A0D400E72DD1 /* SearchResult.swift in Sources */,

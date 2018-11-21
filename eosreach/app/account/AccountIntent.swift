@@ -10,4 +10,7 @@ enum AccountIntent: MxIntent {
     case refresh(accountBundle: AccountBundle)
     case openNavigation
     case navigateToExplore
+    case navigateToImportKey
+    case navigateToCreateAccount
+    case navigateToSettings
 }

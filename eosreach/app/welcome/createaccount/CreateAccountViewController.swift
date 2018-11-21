@@ -4,8 +4,12 @@ import RxCocoa
 
 class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateAccountResult, CreateAccountViewState, CreateAccountViewModel> {
 
+    @IBOutlet weak var toolBar: ReachToolbar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        toolBar.title = R.string.welcomeStrings.welcome_create_account_title()
+        setToolbar(toolbar: toolBar)
     }
 
     override func intents() -> Observable<CreateAccountIntent> {

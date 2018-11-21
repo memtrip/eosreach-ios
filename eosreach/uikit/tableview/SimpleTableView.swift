@@ -5,8 +5,8 @@ import RxCocoa
 class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDelegate, UITableViewDataSource {
 
     var data = [T]()
-    
     var atEnd = false
+    var cellBackgroundColor: UIColor?
 
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -62,6 +62,10 @@ class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDe
         let cell = createCell(tableView: tableView, indexPath: indexPath)
 
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
+        
+        if let color = cellBackgroundColor {
+            cell.contentView.backgroundColor = color
+        }
         
         return bindCell(
             cell: cell,

@@ -2,9 +2,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Material
+import SideMenu
 
-class AccountViewController: MxViewController<AccountIntent, AccountResult, AccountViewState, AccountViewModel>, TabBarDelegate, AccountViewLayout {
-    
+class AccountViewController: MxViewController<AccountIntent, AccountResult, AccountViewState, AccountViewModel>, TabBarDelegate, AccountViewLayout, AccountNavigationDelegate {
+
     @IBOutlet weak var toolbar: ReachToolbar!
     @IBOutlet weak var balancesContainer: UIView!
     @IBOutlet weak var availableBalanceValueLabel: UILabel!
@@ -71,6 +72,21 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
             },
             navigationExploreItem.rx.tap.map {
                 AccountIntent.navigateToExplore
+            },
+            self.rx.methodInvoked(#selector(AccountViewController.importKeyNavigationSelected)).map { selected in
+                return AccountIntent.navigateToImportKey
+            },
+            self.rx.methodInvoked(#selector(AccountViewController.createAccountNavigationSelected)).map { selected in
+                return AccountIntent.navigateToCreateAccount
+            },
+            self.rx.methodInvoked(#selector(AccountViewController.settingsNavigationSelected)).map { selected in
+                return AccountIntent.navigateToSettings
+            },
+            self.rx.methodInvoked(#selector(AccountViewController.accountsNavigationSelected(accountName:))).map { accountNameInArgs in
+               return AccountIntent.retry(accountBundle: AccountBundle(
+                    accountName: accountNameInArgs[0] as! String,
+                    readOnly: false
+               ))
             }
         )
     }
@@ -106,6 +122,32 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.destination is UISideMenuNavigationController) {
+            let sideMenuNavigationController = (segue.destination as! UISideMenuNavigationController)
+            (sideMenuNavigationController.topViewController as! AccountNavigationViewController).delegate = self
+            super.prepare(for: segue, sender: sender)
+        }
+    }
+    
+    //
+    // MARK :- AccountNavigationDelegate
+    //
+    @objc dynamic func importKeyNavigationSelected() {
+    }
+    
+    @objc dynamic func createAccountNavigationSelected() {
+    }
+    
+    @objc dynamic func settingsNavigationSelected() {
+    }
+    
+    @objc dynamic func accountsNavigationSelected(accountName: String) {
+    }
+    
+    //
+    // MARK :- AccountViewLayout
+    //
     func populate(accountView: AccountView, page: AccountPage) {
         loaded = true
         toolbar.title = accountView.eosAccount!.accountName
@@ -113,6 +155,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         balancesContainer.visible()
         tabBar.visible()
         containerView.visible()
+        
         
         balanceViewController.accountName = accountView.eosAccount!.accountName
         balanceViewController.accountBalanceList = accountView.balances!
@@ -178,5 +221,17 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     
     func navigateToExplore() {
         performSegue(withIdentifier: R.segue.accountViewController.accountToExplore, sender: self)
+    }
+    
+    func navigateToImportKey() {
+        performSegue(withIdentifier: R.segue.accountViewController.accountToImportKey, sender: self)
+    }
+    
+    func navigateToCreateAccount() {
+        performSegue(withIdentifier: R.segue.accountViewController.accountToCreateAccount, sender: self)
+    }
+    
+    func navigateToSettings() {
+        performSegue(withIdentifier: R.segue.accountViewController.accountToSettings, sender: self)
     }
 }

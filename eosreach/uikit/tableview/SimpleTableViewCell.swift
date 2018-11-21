@@ -13,7 +13,7 @@ class SimpleTableViewCell<T> : UITableViewCell {
         initView()
     }
     
-    private func initView() {
+    func initView() {
         contentView.backgroundColor = R.color.colorWindowBackground()
     }
     

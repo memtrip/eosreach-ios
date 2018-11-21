@@ -10,4 +10,7 @@ protocol AccountViewLayout {
     func showGetBalancesError()
     func openNavigation()
     func navigateToExplore()
+    func navigateToImportKey()
+    func navigateToCreateAccount()
+    func navigateToSettings()
 }

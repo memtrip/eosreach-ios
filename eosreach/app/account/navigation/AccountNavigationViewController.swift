@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SideMenu
 
 class AccountNavigationViewController: MxViewController<AccountNavigationIntent, AccountNavigationResult, AccountNavigationViewState, AccountNavigationViewModel>, DataTableView {
     
@@ -19,6 +20,8 @@ class AccountNavigationViewController: MxViewController<AccountNavigationIntent,
     @IBOutlet weak var activityIndicator: ReachActivityIndicator!
     @IBOutlet weak var errorView: ErrorView!
     
+    var delegate: AccountNavigationDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         importKeyButton.setTitle(R.string.accountStrings.account_navigation_import_key_button(), for: .normal)
@@ -26,6 +29,9 @@ class AccountNavigationViewController: MxViewController<AccountNavigationIntent,
         settingsButton.setTitle(R.string.accountStrings.account_navigation_settings_button(), for: .normal)
         accountsTitleLabel.text = R.string.accountStrings.account_navigation_accounts_title()
         refreshButton.setTitle(R.string.accountStrings.account_navigation_refresh_button(), for: .normal)
+        tableView.backgroundColor = R.color.colorNavigationWindowBackground()
+        dataTableView().cellBackgroundColor = R.color.colorNavigationWindowBackground()
+        self.view.backgroundColor = R.color.colorNavigationWindowBackground()
     }
 
     override func intents() -> Observable<AccountNavigationIntent> {
@@ -38,7 +44,7 @@ class AccountNavigationViewController: MxViewController<AccountNavigationIntent,
                 return AccountNavigationIntent.navigateToCreateAccount
             },
             settingsButton.rx.tap.map {
-                return AccountNavigationIntent.navigateToCreateAccount
+                return AccountNavigationIntent.navigateToSettings
             },
             refreshButton.rx.tap.map {
                 return AccountNavigationIntent.refreshAccounts
@@ -77,20 +83,14 @@ class AccountNavigationViewController: MxViewController<AccountNavigationIntent,
                 title: R.string.accountStrings.accounts_navigation_no_accounts_error_title(),
                 body: R.string.accountStrings.accounts_navigation_no_accounts_error_body())
         case .navigateToAccount(let accountName):
-            setDestinationBundle(bundle: SegueBundle(
-                identifier: R.segue.accountNavigationViewController.accountNavigationToAccount.identifier,
-                model: AccountBundle(
-                    accountName: accountName,
-                    readOnly: false
-                )
-            ))
-            performSegue(withIdentifier: R.segue.accountNavigationViewController.accountNavigationToAccount, sender: self)
+            delegate?.accountsNavigationSelected(accountName: accountName)
+            close()
         case .navigateToImportKey:
-            performSegue(withIdentifier: R.segue.accountNavigationViewController.accountNavigationToImportKey, sender: self)
+            delegate?.importKeyNavigationSelected()
         case .navigateToCreateAccount:
-            performSegue(withIdentifier: R.segue.accountNavigationViewController.accountNavigationToCreateAccount, sender: self)
+            delegate?.createAccountNavigationSelected()
         case .navigateToSettings:
-            performSegue(withIdentifier: R.segue.accountNavigationViewController.accountNavigationToSettings, sender: self)
+            delegate?.settingsNavigationSelected()
         }
     }
 

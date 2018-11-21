@@ -69,7 +69,7 @@ class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, Bala
             setDestinationBundle(bundle: SegueBundle(
                 identifier: R.segue.balanceViewController.balanceToActions.identifier,
                 model: ActionsBundle(
-                    contractAccountBalance: contractAccountBalance, readOnly: true)
+                    contractAccountBalance: contractAccountBalance, readOnly: false)
             ))
             performSegue(withIdentifier: R.segue.balanceViewController.balanceToActions, sender: self)
         case .onAirdropEmpty:

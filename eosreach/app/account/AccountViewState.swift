@@ -18,5 +18,8 @@ struct AccountViewState: MxViewState, Copy {
         case onErrorFetchingBalances
         case openNavigation
         case navigateToExplore
+        case navigateToImportKey
+        case navigateToCreateAccount
+        case navigateToSettings
     }
 }

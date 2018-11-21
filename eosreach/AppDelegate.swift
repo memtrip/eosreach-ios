@@ -1,12 +1,5 @@
-//
-//  AppDelegate.swift
-//  eosreach
-//
-//  Created by Samuel Kirton on 06/11/2018.
-//  Copyright © 2018 memtrip. All rights reserved.
-//
-
 import UIKit
+import SideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.tintColor = R.color.colorAccent()
         self.window!.backgroundColor = R.color.colorWindowBackground()
         application.statusBarStyle = .lightContent
+        SideMenuManager.default.menuPresentMode = .menuSlideIn
         return true
     }
 

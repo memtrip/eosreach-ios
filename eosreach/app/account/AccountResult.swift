@@ -12,4 +12,7 @@ enum AccountResult: MxResult {
     case onErrorFetchingBalances
     case openNavigation
     case navigateToExplore
+    case navigateToImportKey
+    case navigateToCreateAccount
+    case navigateToSettings
 }

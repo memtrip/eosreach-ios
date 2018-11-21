@@ -46,6 +46,12 @@ class AccountRenderer {
             layout.openNavigation()
         case .navigateToExplore:
             layout.navigateToExplore()
+        case .navigateToImportKey:
+            layout.navigateToImportKey()
+        case .navigateToCreateAccount:
+            layout.navigateToCreateAccount()
+        case .navigateToSettings:
+            layout.navigateToSettings()
         }
     }
 }

@@ -29,6 +29,12 @@ class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewSta
             return just(AccountResult.openNavigation)
         case .navigateToExplore:
             return just(AccountResult.navigateToExplore)
+        case .navigateToImportKey:
+            return just(AccountResult.navigateToImportKey)
+        case .navigateToCreateAccount:
+            return just(AccountResult.navigateToCreateAccount)
+        case .navigateToSettings:
+            return just(AccountResult.navigateToSettings)
         }
     }
 
@@ -84,6 +90,18 @@ class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewSta
         case .navigateToExplore:
             return previousState.copy(copy: { copy in
                 copy.view = AccountViewState.View.navigateToExplore
+            })
+        case .navigateToImportKey:
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.navigateToImportKey
+            })
+        case .navigateToCreateAccount:
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.navigateToCreateAccount
+            })
+        case .navigateToSettings:
+            return previousState.copy(copy: { copy in
+                copy.view = AccountViewState.View.navigateToSettings
             })
         }
     }

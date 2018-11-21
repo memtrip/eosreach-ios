@@ -625,6 +625,9 @@
                         <outlet property="toolbar" destination="2KH-gd-coI" id="66E-lJ-mZ5"/>
                         <segue destination="Spf-hF-xRr" kind="show" identifier="accountToExplore" id="rvY-Mg-arL"/>
                         <segue destination="efP-ab-HRb" kind="presentation" identifier="accountToNavigationDrawer" id="mTf-Yd-bGZ"/>
+                        <segue destination="SZE-Lt-A3B" kind="show" identifier="accountToCreateAccount" id="G0s-Vg-eJt"/>
+                        <segue destination="se4-xM-JVq" kind="show" identifier="accountToSettings" id="kx6-Ea-lKC"/>
+                        <segue destination="uwo-3q-08m" kind="show" identifier="accountToImportKey" id="nIH-HN-fGl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYJ-Y0-oSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -721,10 +724,6 @@
                         <outlet property="refreshButton" destination="JST-l5-Hcs" id="elk-kH-DPC"/>
                         <outlet property="settingsButton" destination="eZz-zQ-cxh" id="The-hS-Khi"/>
                         <outlet property="tableView" destination="bGT-KR-3bJ" id="MGB-BN-p7X"/>
-                        <segue destination="tgP-tV-kRI" kind="presentation" identifier="accountNavigationToAccount" id="Qst-AN-K4Q"/>
-                        <segue destination="SZE-Lt-A3B" kind="show" identifier="accountNavigationToCreateAccount" id="mYL-qo-J6S"/>
-                        <segue destination="uwo-3q-08m" kind="show" identifier="accountNavigationToImportKey" id="BBt-nM-2Gp"/>
-                        <segue destination="se4-xM-JVq" kind="show" identifier="accountNavigationToSettings" id="0RD-4q-186"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L37-YD-Gdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1109,8 +1108,24 @@
                     <view key="view" contentMode="scaleToFill" id="ODy-7Z-AJf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAQ-4J-74O" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Owi-uH-O7p"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="bgc-OJ-nQ2" firstAttribute="trailing" secondItem="AAQ-4J-74O" secondAttribute="trailing" id="4Yg-Qi-thR"/>
+                            <constraint firstItem="AAQ-4J-74O" firstAttribute="leading" secondItem="bgc-OJ-nQ2" secondAttribute="leading" id="WU7-pA-gDn"/>
+                            <constraint firstItem="AAQ-4J-74O" firstAttribute="top" secondItem="bgc-OJ-nQ2" secondAttribute="top" id="q9R-i6-Mjd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bgc-OJ-nQ2"/>
                     </view>
+                    <connections>
+                        <outlet property="toolBar" destination="AAQ-4J-74O" id="tfe-xs-Thi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xK-rF-Fz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1236,9 +1251,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rvY-Mg-arL"/>
-        <segue reference="Qst-AN-K4Q"/>
-        <segue reference="BBt-nM-2Gp"/>
+        <segue reference="tiU-62-5pJ"/>
+        <segue reference="nIH-HN-fGl"/>
         <segue reference="EMU-T5-0SR"/>
-        <segue reference="0RD-4q-186"/>
+        <segue reference="kx6-Ea-lKC"/>
     </inferredMetricsTieBreakers>
 </document>
