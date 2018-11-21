@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastProxyVoteResult, CastProxyVoteViewState, CastProxyVoteViewModel> {
+class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastProxyVoteResult, CastProxyVoteViewState, CastProxyVoteViewModel>, ProxyVoterListDelegate {
 
     @IBOutlet weak var exploreProxyAccountsButton: ReachButton!
     @IBOutlet weak var proxyVoteAccountTextField: ReachTextField!
@@ -19,7 +19,10 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
 
     override func intents() -> Observable<CastProxyVoteIntent> {
         return Observable.merge(
-            Observable.just(CastProxyVoteIntent.idle)
+            Observable.just(CastProxyVoteIntent.idle),
+            exploreProxyAccountsButton.rx.tap.map {
+                return CastProxyVoteIntent.navigateToExploreProxies()
+            }
         )
     }
 
@@ -31,10 +34,33 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
         switch state {
         case .idle:
             break
+        case .onProgress:
+            print("")
+        case .onGenericError:
+            print("")
+        case .onLogError(let log):
+            print("")
+        case .onSuccess:
+            print("")
+        case .viewLog(let log):
+            print("")
+        case .navigateToExploreProxies:
+            performSegue(withIdentifier: R.segue.castProxyVoteViewController.castProxyVoteToProxyVoterList, sender: self)
         }
     }
 
     override func provideViewModel() -> CastProxyVoteViewModel {
         return CastProxyVoteViewModel(initialState: CastProxyVoteViewState.idle)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == R.segue.castProxyVoteViewController.castProxyVoteToProxyVoterList.identifier) {
+            (segue.destination as! ProxyVoterListViewController).delegate = self
+        }
+        super.prepare(for: segue, sender: sender)
+    }
+    
+    func onResult(proxyVoterDetails: ProxyVoterDetails) {
+        proxyVoteAccountTextField.text = proxyVoterDetails.owner
     }
 }

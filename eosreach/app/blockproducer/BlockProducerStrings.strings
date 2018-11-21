@@ -8,9 +8,4 @@
 	"view_block_producer_code_of_conduct" = "Code of conduct";
 	"view_block_producer_empty" = "We only display block producer information that has been pushed to the producerjson smart contract.";
 	"view_block_producer_invalid_url" = "The url [%@] is invalid.";
-	"view_proxy_voter_website_button" = Website;
-	"view_proxy_voter_account_button" = "View account";
-	"view_proxy_voter_invalid_url" = "The url [%@] is invalid.";
-	"view_proxy_voter_error_title" = "Failed to fetch vote proxies";
-	"view_proxy_voter_error_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
 }

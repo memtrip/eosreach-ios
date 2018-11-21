@@ -24,8 +24,8 @@ class ViewProxyVoterViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         setToolbar(toolbar: toolBar)
-        websiteButton.setTitle(R.string.blockProducerStrings.view_proxy_voter_website_button(), for: .normal)
-        viewAccountButton.setTitle(R.string.blockProducerStrings.view_proxy_voter_account_button(), for: .normal)
+        websiteButton.setTitle(R.string.proxyStrings.view_proxy_voter_website_button(), for: .normal)
+        viewAccountButton.setTitle(R.string.proxyStrings.view_proxy_voter_account_button(), for: .normal)
     }
 
     override func intents() -> Observable<ViewProxyVoterIntent> {
@@ -58,8 +58,8 @@ class ViewProxyVoterViewController
             activityIndicator.stop()
             errorView.visible()
             errorView.populate(
-                title: R.string.blockProducerStrings.view_proxy_voter_error_title(),
-                body: R.string.blockProducerStrings.view_proxy_voter_error_body())
+                title: R.string.proxyStrings.view_proxy_voter_error_title(),
+                body: R.string.proxyStrings.view_proxy_voter_error_body())
         case .populate(let proxyVoterDetails):
             self.proxyVoterDetails = proxyVoterDetails
             activityIndicator.stop()
@@ -68,7 +68,7 @@ class ViewProxyVoterViewController
             summaryTextView.text = proxyVoterDetails.philosophy
             toolBar.title = proxyVoterDetails.name
         case .onInvalidUrl(let url):
-            showOKDialog(message: R.string.blockProducerStrings.view_proxy_voter_invalid_url(url))
+            showOKDialog(message: R.string.proxyStrings.view_proxy_voter_invalid_url(url))
         case .navigateToUrl(let url):
             if let url = URL(string: url) {
                 UIApplication.shared.open(url, options: [:])

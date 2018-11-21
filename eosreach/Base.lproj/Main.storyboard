@@ -1297,11 +1297,68 @@
                         <outlet property="exploreProxyAccountsButton" destination="ii3-WY-lDN" id="5an-vO-fH7"/>
                         <outlet property="proxyVoteAccountTextField" destination="XQP-d0-zZj" id="EdS-u3-aJy"/>
                         <outlet property="voteButton" destination="gL9-Nm-dJN" id="Tyv-kf-vfJ"/>
+                        <segue destination="rPb-Ty-ems" kind="show" identifier="castProxyVoteToProxyVoterList" id="mMh-Tz-Zbo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eu1-EB-mwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7852" y="1496"/>
+        </scene>
+        <!--Proxy Voter List View Controller-->
+        <scene sceneID="8zn-GO-dAM">
+            <objects>
+                <viewController id="rPb-Ty-ems" customClass="ProxyVoterListViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hND-K9-gmL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2MF-DB-g4n" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="uXb-Vx-Tzb"/>
+                                </constraints>
+                            </view>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bUy-g6-QrK" customClass="ProxyVoterListTableView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-hK-xhk" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                            </activityIndicatorView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBc-nA-WEl" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="xBc-nA-WEl" firstAttribute="leading" secondItem="6sO-FM-aN2" secondAttribute="leading" id="2st-2m-bMV"/>
+                            <constraint firstItem="xBc-nA-WEl" firstAttribute="top" secondItem="2MF-DB-g4n" secondAttribute="bottom" id="3gc-sg-Aaf"/>
+                            <constraint firstItem="6sO-FM-aN2" firstAttribute="bottom" secondItem="xBc-nA-WEl" secondAttribute="bottom" id="HXF-Ki-Bqg"/>
+                            <constraint firstItem="6sO-FM-aN2" firstAttribute="bottom" secondItem="bUy-g6-QrK" secondAttribute="bottom" id="JWI-lR-Lwf"/>
+                            <constraint firstItem="XNI-hK-xhk" firstAttribute="leading" secondItem="6sO-FM-aN2" secondAttribute="leading" id="JZT-85-MKb"/>
+                            <constraint firstItem="6sO-FM-aN2" firstAttribute="trailing" secondItem="2MF-DB-g4n" secondAttribute="trailing" id="NJH-sH-9Lk"/>
+                            <constraint firstItem="6sO-FM-aN2" firstAttribute="trailing" secondItem="XNI-hK-xhk" secondAttribute="trailing" id="SAc-0O-rI0"/>
+                            <constraint firstItem="XNI-hK-xhk" firstAttribute="top" secondItem="2MF-DB-g4n" secondAttribute="bottom" id="TC9-AQ-ZDG"/>
+                            <constraint firstItem="6sO-FM-aN2" firstAttribute="trailing" secondItem="xBc-nA-WEl" secondAttribute="trailing" id="TKI-bJ-Lrz"/>
+                            <constraint firstItem="2MF-DB-g4n" firstAttribute="top" secondItem="6sO-FM-aN2" secondAttribute="top" id="Yul-gX-n7J"/>
+                            <constraint firstItem="bUy-g6-QrK" firstAttribute="leading" secondItem="6sO-FM-aN2" secondAttribute="leading" id="bvK-RS-Mos"/>
+                            <constraint firstItem="6sO-FM-aN2" firstAttribute="bottom" secondItem="XNI-hK-xhk" secondAttribute="bottom" id="fXo-cZ-dlb"/>
+                            <constraint firstItem="2MF-DB-g4n" firstAttribute="leading" secondItem="6sO-FM-aN2" secondAttribute="leading" id="qCU-uH-zjd"/>
+                            <constraint firstItem="6sO-FM-aN2" firstAttribute="trailing" secondItem="bUy-g6-QrK" secondAttribute="trailing" id="qlV-H4-1F8"/>
+                            <constraint firstItem="bUy-g6-QrK" firstAttribute="top" secondItem="2MF-DB-g4n" secondAttribute="bottom" id="y3p-Xi-vZo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6sO-FM-aN2"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="XNI-hK-xhk" id="Xw0-z0-fDy"/>
+                        <outlet property="errorView" destination="xBc-nA-WEl" id="jK0-nM-JiA"/>
+                        <outlet property="proxyVoterList" destination="bUy-g6-QrK" id="R3q-fw-ToP"/>
+                        <outlet property="toolBar" destination="2MF-DB-g4n" id="IgN-Aj-y20"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFE-gu-f1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7852" y="2211"/>
         </scene>
         <!--Cast View Controller-->
         <scene sceneID="O3h-Hx-FBL">

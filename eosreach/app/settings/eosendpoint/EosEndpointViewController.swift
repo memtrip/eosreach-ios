@@ -83,7 +83,9 @@ class EosEndpointViewController: MxViewController<EosEndpointIntent, EosEndpoint
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        (segue.destination as! ActiveBlockProducersViewController).delegate = self
+        if (segue.identifier == R.segue.eosEndpointViewController.endpointToActiveBlockProducers.identifier) {
+            (segue.destination as! ActiveBlockProducersViewController).delegate = self
+        }
         super.prepare(for: segue, sender: sender)
     }
 
