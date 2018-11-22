@@ -5,6 +5,15 @@ import RxCocoa
 class DelegateBandwidthViewController
 : MxViewController<DelegateBandwidthIntent, DelegateBandwidthResult, DelegateBandwidthViewState, DelegateBandwidthViewModel> {
     
+    var manageBandwidthBundle: ManageBandwidthBundle?
+    
+    @IBOutlet weak var targetAccountTextField: ReachTextField!
+    @IBOutlet weak var netAmountTextField: ReachTextField!
+    @IBOutlet weak var cpuAmountTextField: UITextField!
+    @IBOutlet weak var transferSwitch: UISwitch!
+    @IBOutlet weak var activityIndicator: ReachActivityIndicator!
+    @IBOutlet weak var delegateButton: ReachPrimaryButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -71,7 +71,7 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
         case .populate(let eosAccount):
             resourcesRenderer.render(eosAccount: eosAccount)
         case .navigateToManageBandwidth:
-            print("")
+            performSegue(withIdentifier: R.segue.resourcesViewController.resourcesToManageBandwidth, sender: self)
         case .navigateToManageBandwidthWithAccountName:
             print("")
         case .navigateToManageRam:
@@ -189,6 +189,14 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
         } else {
             let remaining = resourceRemaining(resource: resource)
             return (remaining * 100) / Float(resource.available)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == R.segue.resourcesViewController.resourcesToManageBandwidth.identifier) {
+            (segue.destination as! ManageBandwidthViewController).manageBandwidthBundle = ManageBandwidthBundle(
+                accountName: eosAccount!.accountName
+            )
         }
     }
 }

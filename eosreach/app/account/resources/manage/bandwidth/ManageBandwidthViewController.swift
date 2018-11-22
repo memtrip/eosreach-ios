@@ -8,20 +8,28 @@ class ManageBandwidthViewController: UIViewController, TabBarDelegate {
     @IBOutlet weak var tabBar: ReachTabBar!
     @IBOutlet weak var containerView: UIView!
     
-    let delegateTabItem = TabItem()
-    let undelegatedTabItem = TabItem()
-    let allocatedTabItem = TabItem()
+    var manageBandwidthBundle: ManageBandwidthBundle?
+    
+    private let delegateTabItem = TabItem()
+    private let undelegatedTabItem = TabItem()
+    private let allocatedTabItem = TabItem()
     
     private lazy var delegateBandwidthViewController: DelegateBandwidthViewController = {
-        return R.storyboard.main.delegatedBandwidthViewController()!
+        let delegateBandwidthViewController = R.storyboard.main.delegatedBandwidthViewController()!
+        delegateBandwidthViewController.manageBandwidthBundle = self.manageBandwidthBundle!
+        return delegateBandwidthViewController
     }()
     
     private lazy var undelegateBandwidthViewController: UndelegateBandwidthViewController = {
-        return R.storyboard.main.undelegatedBandwidthViewController()!
+        let undelegateBandwidthViewController = R.storyboard.main.undelegatedBandwidthViewController()!
+        undelegateBandwidthViewController.manageBandwidthBundle = self.manageBandwidthBundle!
+        return undelegateBandwidthViewController
     }()
     
     private lazy var allocatedBandwidthViewController: AllocatedBandwidthViewController = {
-        return R.storyboard.main.allocatedBandwidthViewController()!
+        let allocatedBandwidthViewController = R.storyboard.main.allocatedBandwidthViewController()!
+        allocatedBandwidthViewController.manageBandwidthBundle = manageBandwidthBundle!
+        return allocatedBandwidthViewController
     }()
     
     override func viewDidLoad() {

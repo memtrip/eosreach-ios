@@ -5,6 +5,8 @@ import RxCocoa
 class AllocatedBandwidthViewController
 : MxViewController<AllocatedBandwidthIntent, AllocatedBandwidthResult, AllocatedBandwidthViewState, AllocatedBandwidthViewModel> {
     
+    var manageBandwidthBundle: ManageBandwidthBundle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

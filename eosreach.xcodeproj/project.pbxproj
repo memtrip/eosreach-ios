@@ -173,6 +173,7 @@
 		3C8BD25121A6C3B300ACFA70 /* UndelegateBandwidthViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24C21A6C3B300ACFA70 /* UndelegateBandwidthViewState.swift */; };
 		3C8BD25221A6C3B300ACFA70 /* UndelegateBandwidthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24D21A6C3B300ACFA70 /* UndelegateBandwidthResult.swift */; };
 		3C8BD25321A6C3B300ACFA70 /* UndelegateBandwidthIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24E21A6C3B300ACFA70 /* UndelegateBandwidthIntent.swift */; };
+		3C8BD25521A6C72700ACFA70 /* ManageBandwidthBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD25421A6C72700ACFA70 /* ManageBandwidthBundle.swift */; };
 		3C8C6D8D2192D4B600FC1A0D /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D8C2192D4B600FC1A0D /* Rx.swift */; };
 		3C8C6D902192D4CE00FC1A0D /* MxViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D8F2192D4CE00FC1A0D /* MxViewState.swift */; };
 		3C8C6D922192D4F400FC1A0D /* MxIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D912192D4F400FC1A0D /* MxIntent.swift */; };
@@ -502,6 +503,7 @@
 		3C8BD24C21A6C3B300ACFA70 /* UndelegateBandwidthViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndelegateBandwidthViewState.swift; sourceTree = "<group>"; };
 		3C8BD24D21A6C3B300ACFA70 /* UndelegateBandwidthResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndelegateBandwidthResult.swift; sourceTree = "<group>"; };
 		3C8BD24E21A6C3B300ACFA70 /* UndelegateBandwidthIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndelegateBandwidthIntent.swift; sourceTree = "<group>"; };
+		3C8BD25421A6C72700ACFA70 /* ManageBandwidthBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBandwidthBundle.swift; sourceTree = "<group>"; };
 		3C8C6D8C2192D4B600FC1A0D /* Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
 		3C8C6D8F2192D4CE00FC1A0D /* MxViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxViewState.swift; sourceTree = "<group>"; };
 		3C8C6D912192D4F400FC1A0D /* MxIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxIntent.swift; sourceTree = "<group>"; };
@@ -1006,6 +1008,7 @@
 				3C8BD23821A6C22900ACFA70 /* AllocatedBandwidthViewModel.swift */,
 				3C8BD23621A6C22900ACFA70 /* AllocatedBandwidthViewState.swift */,
 				3C8BD23221A6C01300ACFA70 /* ManageBandwidthViewController.swift */,
+				3C8BD25421A6C72700ACFA70 /* ManageBandwidthBundle.swift */,
 				3C8BD23421A6C16F00ACFA70 /* BandwidthStrings.strings */,
 			);
 			path = bandwidth;
@@ -1882,6 +1885,7 @@
 				3C7F0DD82194A0D400E72DD1 /* SearchViewState.swift in Sources */,
 				3C8BD23F21A6C22900ACFA70 /* AllocatedBandwidthViewController.swift in Sources */,
 				3C6DF77E21A08B5100ADA892 /* BalanceViewModel.swift in Sources */,
+				3C8BD25521A6C72700ACFA70 /* ManageBandwidthBundle.swift in Sources */,
 				3C964C3621938C71003663EF /* EosEndpointViewState.swift in Sources */,
 				3C14FA4221A0A2A900B8255F /* EosPriceUseCase.swift in Sources */,
 				3CC9E72021A5BE980050BA57 /* ProxyVoterListIntent.swift in Sources */,
