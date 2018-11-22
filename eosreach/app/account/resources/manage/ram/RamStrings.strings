@@ -1,0 +1,13 @@
+{
+	"manage_ram_title" = "Manage RAM";
+	"manage_ram_price_label" = "RAM Price per KB";
+	"manage_ram_buy_tab" = Buy;
+	"manage_ram_sell_tab" = Sell;
+	"manage_ram_amount_placeholder" = "Enter ram amount in k/b (estimated cost: %@ EOS)";
+	"buy_ram_button" = Buy;
+	"sell_ram_button" = Sell;
+	"confirm_ram_title" = "Confirm Buy Ram";
+	"confirm_ram_kb_label" = "k/b";
+	"confirm_ram_price_label" = Price;
+	"confirm_ram_instruction_label" = "The price of RAM is determined by the market. We checked the market price for you on the previous screen, but it is possible for the price to fluctuate within a small time period.";
+}

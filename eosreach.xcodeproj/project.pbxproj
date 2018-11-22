@@ -28,6 +28,7 @@
 		3C0700A721A72643008F63D2 /* TransactionReceiptResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A321A72643008F63D2 /* TransactionReceiptResult.swift */; };
 		3C0700A921A72DCF008F63D2 /* TransactionReceiptDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A821A72DCF008F63D2 /* TransactionReceiptDelegate.swift */; };
 		3C0700AB21A7333C008F63D2 /* AllocatedBandwidthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700AA21A7333C008F63D2 /* AllocatedBandwidthDelegate.swift */; };
+		3C0700AD21A74862008F63D2 /* RamStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C0700AC21A74862008F63D2 /* RamStrings.strings */; };
 		3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0ADD69219F24380026649F /* AccountCardCell.xib */; };
 		3C0ADD71219F28700026649F /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD70219F28700026649F /* Connection.swift */; };
 		3C0ADD7E219F378C0026649F /* BalanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7D219F378C0026649F /* BalanceEntity.swift */; };
@@ -378,6 +379,7 @@
 		3C0700A321A72643008F63D2 /* TransactionReceiptResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionReceiptResult.swift; sourceTree = "<group>"; };
 		3C0700A821A72DCF008F63D2 /* TransactionReceiptDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionReceiptDelegate.swift; sourceTree = "<group>"; };
 		3C0700AA21A7333C008F63D2 /* AllocatedBandwidthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocatedBandwidthDelegate.swift; sourceTree = "<group>"; };
+		3C0700AC21A74862008F63D2 /* RamStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = RamStrings.strings; sourceTree = "<group>"; };
 		3C0ADD69219F24380026649F /* AccountCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCardCell.xib; sourceTree = "<group>"; };
 		3C0ADD70219F28700026649F /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		3C0ADD7D219F378C0026649F /* BalanceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceEntity.swift; sourceTree = "<group>"; };
@@ -1074,6 +1076,7 @@
 		3C8BD23121A6BF8B00ACFA70 /* ram */ = {
 			isa = PBXGroup;
 			children = (
+				3C0700AC21A74862008F63D2 /* RamStrings.strings */,
 			);
 			path = ram;
 			sourceTree = "<group>";
@@ -1661,6 +1664,7 @@
 				3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */,
 				3C8BD25B21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib in Resources */,
 				3CC9E72F21A5D03E0050BA57 /* CastProducerVoteCell.xib in Resources */,
+				3C0700AD21A74862008F63D2 /* RamStrings.strings in Resources */,
 				3C6DF76E21A082AC00ADA892 /* AccountStrings.strings in Resources */,
 				3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */,
 				3CC9A3CA219DCF900002A25F /* ErrorView.xib in Resources */,
