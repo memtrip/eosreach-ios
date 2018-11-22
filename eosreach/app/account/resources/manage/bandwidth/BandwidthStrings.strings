@@ -3,4 +3,17 @@
 	"manage_bandwidth_delegate_tab" = Delegate;
 	"manage_bandwidth_undelegate_tab" = Undelegate;
 	"manage_bandwidth_allocated_tab" = Allocated;
+	"allocated_bandwidth_cell_cpu_label" = CPU;
+	"allocated_bandwidth_cell_net_label" = NET;
+	"allocated_bandwidth_error_body" = "Could not fetch delegated bandwidth.";
+	"allocated_bandwidth_no_results" = "You have not delegated any bandwidth.";
+	"delegate_bandwidth_target_account_label" = "Target account";
+	"delegate_bandwidth_target_account_placeholder" = "Enter account name";
+	"delegate_bandwidth_net_amount_label" = "Net amount (balance: %@)";
+	"delegate_bandwidth_net_amount_placeholder" = "Enter the amount in EOS";
+	"delegate_bandwidth_cpu_amount_label" = "Cpu amount (balance: %@)";
+	"delegate_bandwidth_cpu_amount_placeholder" = "Enter the amount in EOS";
+	"delegate_bandwidth_transfer_label" = "Delegate funds permanently";
+	"delegate_bandwidth_button" = Delegate;
+	"undelegate_bandwidth_button" = Undelegate;
 }

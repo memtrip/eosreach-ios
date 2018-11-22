@@ -174,6 +174,9 @@
 		3C8BD25221A6C3B300ACFA70 /* UndelegateBandwidthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24D21A6C3B300ACFA70 /* UndelegateBandwidthResult.swift */; };
 		3C8BD25321A6C3B300ACFA70 /* UndelegateBandwidthIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24E21A6C3B300ACFA70 /* UndelegateBandwidthIntent.swift */; };
 		3C8BD25521A6C72700ACFA70 /* ManageBandwidthBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD25421A6C72700ACFA70 /* ManageBandwidthBundle.swift */; };
+		3C8BD25721A6CED900ACFA70 /* AllocatedBandwidthTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD25621A6CED900ACFA70 /* AllocatedBandwidthTableView.swift */; };
+		3C8BD25921A6CEE600ACFA70 /* AllocatedBandwidthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD25821A6CEE600ACFA70 /* AllocatedBandwidthCell.swift */; };
+		3C8BD25B21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BD25A21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib */; };
 		3C8C6D8D2192D4B600FC1A0D /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D8C2192D4B600FC1A0D /* Rx.swift */; };
 		3C8C6D902192D4CE00FC1A0D /* MxViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D8F2192D4CE00FC1A0D /* MxViewState.swift */; };
 		3C8C6D922192D4F400FC1A0D /* MxIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D912192D4F400FC1A0D /* MxIntent.swift */; };
@@ -504,6 +507,9 @@
 		3C8BD24D21A6C3B300ACFA70 /* UndelegateBandwidthResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndelegateBandwidthResult.swift; sourceTree = "<group>"; };
 		3C8BD24E21A6C3B300ACFA70 /* UndelegateBandwidthIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndelegateBandwidthIntent.swift; sourceTree = "<group>"; };
 		3C8BD25421A6C72700ACFA70 /* ManageBandwidthBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBandwidthBundle.swift; sourceTree = "<group>"; };
+		3C8BD25621A6CED900ACFA70 /* AllocatedBandwidthTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocatedBandwidthTableView.swift; sourceTree = "<group>"; };
+		3C8BD25821A6CEE600ACFA70 /* AllocatedBandwidthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocatedBandwidthCell.swift; sourceTree = "<group>"; };
+		3C8BD25A21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllocatedBandwidthCell.xib; sourceTree = "<group>"; };
 		3C8C6D8C2192D4B600FC1A0D /* Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
 		3C8C6D8F2192D4CE00FC1A0D /* MxViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxViewState.swift; sourceTree = "<group>"; };
 		3C8C6D912192D4F400FC1A0D /* MxIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxIntent.swift; sourceTree = "<group>"; };
@@ -1007,6 +1013,9 @@
 				3C8BD23A21A6C22900ACFA70 /* AllocatedBandwidthViewController.swift */,
 				3C8BD23821A6C22900ACFA70 /* AllocatedBandwidthViewModel.swift */,
 				3C8BD23621A6C22900ACFA70 /* AllocatedBandwidthViewState.swift */,
+				3C8BD25621A6CED900ACFA70 /* AllocatedBandwidthTableView.swift */,
+				3C8BD25821A6CEE600ACFA70 /* AllocatedBandwidthCell.swift */,
+				3C8BD25A21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib */,
 				3C8BD23221A6C01300ACFA70 /* ManageBandwidthViewController.swift */,
 				3C8BD25421A6C72700ACFA70 /* ManageBandwidthBundle.swift */,
 				3C8BD23421A6C16F00ACFA70 /* BandwidthStrings.strings */,
@@ -1590,6 +1599,7 @@
 				3CC9E6FB21A5A35D0050BA57 /* VoteStrings.strings in Resources */,
 				3C5799CF2191D27E00B9A3D7 /* LaunchScreen.storyboard in Resources */,
 				3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */,
+				3C8BD25B21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib in Resources */,
 				3CC9E72F21A5D03E0050BA57 /* CastProducerVoteCell.xib in Resources */,
 				3C6DF76E21A082AC00ADA892 /* AccountStrings.strings in Resources */,
 				3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */,
@@ -1984,6 +1994,7 @@
 				3C0EC80A2192FAD300562A1B /* uitypes.swift in Sources */,
 				3CC9E72321A5BFFF0050BA57 /* ProxyVoterListTableView.swift in Sources */,
 				3CC9E70621A5A4110050BA57 /* CastProxyVoteViewState.swift in Sources */,
+				3C8BD25721A6CED900ACFA70 /* AllocatedBandwidthTableView.swift in Sources */,
 				3C0ADD87219F37B10026649F /* CountAccounts.swift in Sources */,
 				3C6DF79921A0934600ADA892 /* AccountNavigationViewController.swift in Sources */,
 				3C9BFBB9219B5DA500589936 /* AccountsForPublicKey.swift in Sources */,
@@ -2038,6 +2049,7 @@
 				3C7F0DF72194A23900E72DD1 /* ExploreViewController.swift in Sources */,
 				3C9BFBB7219B5D7C00589936 /* AccountNameSystemBalance.swift in Sources */,
 				3C6DF76C21A082AC00ADA892 /* AccountResult.swift in Sources */,
+				3C8BD25921A6CEE600ACFA70 /* AllocatedBandwidthCell.swift in Sources */,
 				3C0ADD97219F3AAF0026649F /* TransactionLogEntity.swift in Sources */,
 				3C9BFB96219B39E700589936 /* EosAccountVote.swift in Sources */,
 				3C9BFB9A219B3A4000589936 /* EosAccountRequest.swift in Sources */,
