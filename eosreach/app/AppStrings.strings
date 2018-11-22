@@ -8,4 +8,8 @@
 	"app_error_view_title" = Sorry;
 	"app_error_view_cta" = Retry;
 	"app_block_producer_name" = memtripblock;
+	"app_dialog_view_log_title" = "Transaction Log";
+	"app_dialog_view_log_body" = "An error occurred while processing this transaction, see the log for more information.";
+	"app_dialog_view_log_positive_button" = "View Log";
+	"app_dialog_view_log_negative_button" = Cancel;
 }

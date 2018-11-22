@@ -21,10 +21,12 @@ class ConfirmBandwidthViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setToolbar(toolbar: toolBar)
         toolBar.title = R.string.bandwidthStrings.confirm_delegate_title()
         toLabel.text = R.string.bandwidthStrings.confirm_delegate_to_label()
         netLabel.text = R.string.bandwidthStrings.confirm_delegate_net_label()
         cpuLabel.text = R.string.bandwidthStrings.confirm_delegate_cpu_label()
+        confirmButton.setTitle(R.string.bandwidthStrings.confirm_delegate_button(), for: .normal)
     }
 
     override func intents() -> Observable<ConfirmBandwidthIntent> {
@@ -50,9 +52,9 @@ class ConfirmBandwidthViewController
             cpuValue.text = BalanceFormatter.formatEosBalance(balance: bandwidthFormBundle.cpuAmount)
             switch bandwidthFormBundle.type {
             case .delegate:
-                confirmButton.setTitle(R.string.bandwidthStrings.confirm_delegate_button(), for: .normal)
+                toolBar.title = R.string.bandwidthStrings.confirm_delegate_title()
             case .undelegate:
-                confirmButton.setTitle(R.string.bandwidthStrings.confirm_undelegate_title(), for: .normal)
+                toolBar.title = R.string.bandwidthStrings.confirm_undelegate_title()
             }
         case .onProgress:
             activityIndicator.start()
@@ -64,7 +66,11 @@ class ConfirmBandwidthViewController
         case .withLog(let log):
             activityIndicator.stop()
             confirmButton.visible()
-            print("")
+            showViewLog(viewLogHandler: { _ in
+                let transactionLogViewController = TransactionLogViewController(nib: R.nib.transactionLogViewController)
+                transactionLogViewController.errorLog = log
+                self.present(transactionLogViewController, animated: true, completion: nil)
+            })
         case .navigateToTransactionConfirmed(let transactionId):
             print("")
         }

@@ -59,6 +59,16 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: R.string.appStrings.app_dialog_ok(), style: .default, handler: nil))
         self.present(alert, animated: true)
     }
+    
+    func showViewLog(viewLogHandler: @escaping ((UIAlertAction) -> Void)) {
+        let alert = UIAlertController(
+            title: R.string.appStrings.app_dialog_view_log_title(),
+            message: R.string.appStrings.app_dialog_view_log_body(),
+            preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: R.string.appStrings.app_dialog_view_log_positive_button(), style: .default, handler: viewLogHandler))
+        alert.addAction(UIAlertAction(title: R.string.appStrings.app_dialog_view_log_negative_button(), style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
 
     func setToolbar(toolbar: ReachToolbar) {
         toolbar.backMenuButton.addTarget(self, action: #selector(handleBackMenu(button:)), for: .touchUpInside)
