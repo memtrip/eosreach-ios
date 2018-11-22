@@ -7,6 +7,10 @@ class AllocatedBandwidthViewController
     
     var manageBandwidthBundle: ManageBandwidthBundle?
     
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: ReachActivityIndicator!
+    @IBOutlet weak var errorView: ErrorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -7,6 +7,12 @@ class UndelegateBandwidthViewController
     
     var manageBandwidthBundle: ManageBandwidthBundle?
     
+    @IBOutlet weak var targetAccountTextField: ReachTextField!
+    @IBOutlet weak var netAmountTextField: UITextField!
+    @IBOutlet weak var cpuAmountTextField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var undelegateButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
