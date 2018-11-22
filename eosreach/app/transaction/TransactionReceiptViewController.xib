@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionReceiptViewController" customModule="eosreach" customModuleProvider="target">
+            <connections>
+                <outlet property="doneButton" destination="vFX-pD-ePw" id="jin-3L-2dJ"/>
+                <outlet property="transactionReceiptInstructionLabel" destination="D77-Ya-JcU" id="7ma-Py-2PN"/>
+                <outlet property="transactionReceiptTitle" destination="K4W-zi-paL" id="U6Q-qb-yej"/>
+                <outlet property="view" destination="iN0-l3-epB" id="fZg-tv-AHV"/>
+                <outlet property="viewBlockExplorerButton" destination="F7C-re-e7a" id="ASN-AR-44t"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_transaction_committed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4W-zi-paL">
+                    <rect key="frame" x="16" y="36" width="343" height="24"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                    <color key="textColor" name="typographyColorPrimary"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_transaction_instructions" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D77-Ya-JcU">
+                    <rect key="frame" x="16" y="68" width="343" height="20.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <color key="textColor" name="typographyColorPrimary"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7C-re-e7a" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                    <rect key="frame" x="16" y="621" width="343" height="30"/>
+                    <state key="normal" title="_view_block_explorer"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFX-pD-ePw" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                    <rect key="frame" x="16" y="583" width="343" height="30"/>
+                    <state key="normal" title="_done"/>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="K4W-zi-paL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="4nk-u4-Nxu"/>
+                <constraint firstItem="vFX-pD-ePw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="5dm-zj-L1n"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vFX-pD-ePw" secondAttribute="trailing" constant="16" id="MAu-fz-5D9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="F7C-re-e7a" secondAttribute="trailing" constant="16" id="QQV-yY-VPB"/>
+                <constraint firstItem="D77-Ya-JcU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="cia-0s-zFu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="D77-Ya-JcU" secondAttribute="trailing" constant="16" id="eV8-Wx-V16"/>
+                <constraint firstItem="F7C-re-e7a" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="kb2-fo-4Yg"/>
+                <constraint firstItem="D77-Ya-JcU" firstAttribute="top" secondItem="K4W-zi-paL" secondAttribute="bottom" constant="8" id="l5o-NY-MEJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="F7C-re-e7a" secondAttribute="bottom" constant="16" id="ob3-or-7J9"/>
+                <constraint firstItem="F7C-re-e7a" firstAttribute="top" secondItem="vFX-pD-ePw" secondAttribute="bottom" constant="8" id="riP-r2-odg"/>
+                <constraint firstItem="K4W-zi-paL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="uoM-3D-ZTW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="K4W-zi-paL" secondAttribute="trailing" constant="16" id="vaB-rQ-6Tw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="typographyColorPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

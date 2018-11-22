@@ -3,7 +3,7 @@ import RxSwift
 import RxCocoa
 
 class ConfirmBandwidthViewController
-: MxViewController<ConfirmBandwidthIntent, ConfirmBandwidthResult, ConfirmBandwidthViewState, ConfirmBandwidthViewModel> {
+: MxViewController<ConfirmBandwidthIntent, ConfirmBandwidthResult, ConfirmBandwidthViewState, ConfirmBandwidthViewModel>, TransactionReceiptDelegate {
     
     @IBOutlet weak var toolBar: ReachToolbar!
     @IBOutlet weak var toLabel: UILabel!
@@ -78,12 +78,30 @@ class ConfirmBandwidthViewController
                 transactionLogViewController.errorLog = log
                 self.present(transactionLogViewController, animated: true, completion: nil)
             })
-        case .navigateToTransactionConfirmed(let transactionId):
-            print("")
+        case .navigateToTransactionConfirmed(let actionReceipt):
+            let transactionReceiptViewController = TransactionReceiptViewController(nib: R.nib.transactionReceiptViewController)
+            transactionReceiptViewController.transactionReceiptBundle = TransactionReceiptBundle(
+                actionReceipt: actionReceipt,
+                contractAccountBalance: bandwidthFormBundle.contractAccountBalance,
+                transactionReceiptRoute: TransactionReceiptRoute.account_resources)
+            transactionReceiptViewController.delegate = self
+            self.present(transactionReceiptViewController, animated: true, completion: nil)
         }
     }
 
     override func provideViewModel() -> ConfirmBandwidthViewModel {
         return ConfirmBandwidthViewModel(initialState: ConfirmBandwidthViewState.idle)
+    }
+    
+    func transactionConfirmed() {
+        setDestinationBundle(bundle: SegueBundle(
+            identifier: R.segue.confirmBandwidthViewController.confirmBandwidthToAccounts.identifier,
+            model: AccountBundle(
+                accountName: bandwidthFormBundle.contractAccountBalance.accountName,
+                readOnly: false,
+                accountPage: AccountPage.resources
+            )
+        ))
+        performSegue(withIdentifier: R.segue.confirmBandwidthViewController.confirmBandwidthToAccounts, sender: self)
     }
 }

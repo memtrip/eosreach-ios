@@ -70,7 +70,8 @@ class RegisteredBlockProducersViewController
                 identifier: R.segue.registeredBlockProducersViewController.registeredBlockProducersToAccount.identifier,
                 model: AccountBundle(
                     accountName: accountName,
-                    readOnly: true
+                    readOnly: true,
+                    accountPage: AccountPage.balances
                 )
             ))
             performSegue(withIdentifier: R.segue.registeredBlockProducersViewController.registeredBlockProducersToAccount, sender: self)

@@ -2,7 +2,7 @@ import Foundation
 
 enum AccountIntent: MxIntent {
     case idle
-    case start(accountBundle: AccountBundle, page: AccountPage)
+    case start(accountBundle: AccountBundle)
     case balanceTabIdle
     case resourceTabIdle
     case voteTabIdle

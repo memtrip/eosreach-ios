@@ -62,7 +62,8 @@ class SearchViewController: MxViewController<SearchIntent, SearchResult, SearchV
                 identifier: R.segue.searchViewController.searchToAccount.identifier,
                 model: AccountBundle(
                     accountName: accountModel.accountName,
-                    readOnly: true)
+                    readOnly: true,
+                    accountPage: AccountPage.balances)
             ))
             performSegue(withIdentifier: R.segue.searchViewController.searchToAccount, sender: self)
         }

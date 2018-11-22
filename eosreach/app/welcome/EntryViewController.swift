@@ -44,7 +44,8 @@ class EntryViewController: MxViewController<EntryIntent, EntryResult, EntryViewS
                 identifier: R.segue.entryViewController.entryToAccount.identifier,
                 model: AccountBundle(
                     accountName: accountName,
-                    readOnly: false
+                    readOnly: false,
+                    accountPage: AccountPage.balances
                 )
             ))
             performSegue(withIdentifier: R.segue.entryViewController.entryToAccount, sender: self)

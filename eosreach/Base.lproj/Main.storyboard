@@ -1243,6 +1243,7 @@
                         <outlet property="netValue" destination="m7b-Va-vRj" id="Noc-ma-joD"/>
                         <outlet property="toLabel" destination="kAQ-5h-Aw2" id="gfR-v4-iOR"/>
                         <outlet property="toolBar" destination="BWK-Gy-Mhh" id="bIV-I3-ihk"/>
+                        <segue destination="tgP-tV-kRI" kind="show" identifier="confirmBandwidthToAccounts" id="p9U-mn-UT8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2sB-HG-sEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2186,7 +2187,7 @@
         <segue reference="dMo-xo-wz4"/>
         <segue reference="Eks-sF-JJe"/>
         <segue reference="2pO-q1-hHi"/>
-        <segue reference="1bl-ap-rcg"/>
+        <segue reference="p9U-mn-UT8"/>
         <segue reference="1Wt-0h-Agf"/>
         <segue reference="EMU-T5-0SR"/>
         <segue reference="uYP-iu-Ijf"/>

@@ -9,10 +9,10 @@ class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewSta
         switch intent {
         case .idle:
             return just(AccountResult.idle)
-        case .start(let accountBundle, let page):
+        case .start(let accountBundle):
             return getAccount(accountName: accountBundle.accountName)
                 .startWith(AccountResult.onProgressWithStartingTab(
-                    accountName: accountBundle.accountName, page: page))
+                    accountName: accountBundle.accountName, page: accountBundle.accountPage))
         case .retry(let accountBundle):
             return getAccount(accountName: accountBundle.accountName)
                 .startWith(AccountResult.onProgress(accountName: accountBundle.accountName))

@@ -18,6 +18,15 @@
 		3C07009321A71A7D008F63D2 /* TransactionLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07009221A71A7C008F63D2 /* TransactionLogViewController.swift */; };
 		3C07009521A71AA5008F63D2 /* TransactionLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C07009421A71AA5008F63D2 /* TransactionLogViewController.xib */; };
 		3C07009721A71BC8008F63D2 /* TransactionStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C07009621A71BC8008F63D2 /* TransactionStrings.strings */; };
+		3C07009921A7220A008F63D2 /* TransactionReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07009821A7220A008F63D2 /* TransactionReceiptViewController.swift */; };
+		3C07009B21A72217008F63D2 /* TransactionReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C07009A21A72217008F63D2 /* TransactionReceiptViewController.xib */; };
+		3C07009D21A72264008F63D2 /* TransactionReceiptBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07009C21A72264008F63D2 /* TransactionReceiptBundle.swift */; };
+		3C07009F21A724BC008F63D2 /* TransactionReceiptRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07009E21A724BC008F63D2 /* TransactionReceiptRoute.swift */; };
+		3C0700A421A72643008F63D2 /* TransactionReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A021A72643008F63D2 /* TransactionReceiptViewModel.swift */; };
+		3C0700A521A72643008F63D2 /* TransactionReceiptIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A121A72643008F63D2 /* TransactionReceiptIntent.swift */; };
+		3C0700A621A72643008F63D2 /* TransactionReceiptViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A221A72643008F63D2 /* TransactionReceiptViewState.swift */; };
+		3C0700A721A72643008F63D2 /* TransactionReceiptResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A321A72643008F63D2 /* TransactionReceiptResult.swift */; };
+		3C0700A921A72DCF008F63D2 /* TransactionReceiptDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A821A72DCF008F63D2 /* TransactionReceiptDelegate.swift */; };
 		3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0ADD69219F24380026649F /* AccountCardCell.xib */; };
 		3C0ADD71219F28700026649F /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD70219F28700026649F /* Connection.swift */; };
 		3C0ADD7E219F378C0026649F /* BalanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7D219F378C0026649F /* BalanceEntity.swift */; };
@@ -358,6 +367,15 @@
 		3C07009221A71A7C008F63D2 /* TransactionLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionLogViewController.swift; sourceTree = "<group>"; };
 		3C07009421A71AA5008F63D2 /* TransactionLogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionLogViewController.xib; sourceTree = "<group>"; };
 		3C07009621A71BC8008F63D2 /* TransactionStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TransactionStrings.strings; sourceTree = "<group>"; };
+		3C07009821A7220A008F63D2 /* TransactionReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionReceiptViewController.swift; sourceTree = "<group>"; };
+		3C07009A21A72217008F63D2 /* TransactionReceiptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionReceiptViewController.xib; sourceTree = "<group>"; };
+		3C07009C21A72264008F63D2 /* TransactionReceiptBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionReceiptBundle.swift; sourceTree = "<group>"; };
+		3C07009E21A724BC008F63D2 /* TransactionReceiptRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionReceiptRoute.swift; sourceTree = "<group>"; };
+		3C0700A021A72643008F63D2 /* TransactionReceiptViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionReceiptViewModel.swift; sourceTree = "<group>"; };
+		3C0700A121A72643008F63D2 /* TransactionReceiptIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionReceiptIntent.swift; sourceTree = "<group>"; };
+		3C0700A221A72643008F63D2 /* TransactionReceiptViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionReceiptViewState.swift; sourceTree = "<group>"; };
+		3C0700A321A72643008F63D2 /* TransactionReceiptResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionReceiptResult.swift; sourceTree = "<group>"; };
+		3C0700A821A72DCF008F63D2 /* TransactionReceiptDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionReceiptDelegate.swift; sourceTree = "<group>"; };
 		3C0ADD69219F24380026649F /* AccountCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCardCell.xib; sourceTree = "<group>"; };
 		3C0ADD70219F28700026649F /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		3C0ADD7D219F378C0026649F /* BalanceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceEntity.swift; sourceTree = "<group>"; };
@@ -1438,6 +1456,15 @@
 			children = (
 				3C07009221A71A7C008F63D2 /* TransactionLogViewController.swift */,
 				3C07009421A71AA5008F63D2 /* TransactionLogViewController.xib */,
+				3C0700A121A72643008F63D2 /* TransactionReceiptIntent.swift */,
+				3C0700A321A72643008F63D2 /* TransactionReceiptResult.swift */,
+				3C0700A021A72643008F63D2 /* TransactionReceiptViewModel.swift */,
+				3C0700A221A72643008F63D2 /* TransactionReceiptViewState.swift */,
+				3C07009821A7220A008F63D2 /* TransactionReceiptViewController.swift */,
+				3C07009A21A72217008F63D2 /* TransactionReceiptViewController.xib */,
+				3C0700A821A72DCF008F63D2 /* TransactionReceiptDelegate.swift */,
+				3C07009C21A72264008F63D2 /* TransactionReceiptBundle.swift */,
+				3C07009E21A724BC008F63D2 /* TransactionReceiptRoute.swift */,
 				3C07009621A71BC8008F63D2 /* TransactionStrings.strings */,
 			);
 			path = transaction;
@@ -1637,6 +1664,7 @@
 				3C1F1F9A21A35B090075BD71 /* ActionsCell.xib in Resources */,
 				3C8BD23521A6C16F00ACFA70 /* BandwidthStrings.strings in Resources */,
 				3C07009521A71AA5008F63D2 /* TransactionLogViewController.xib in Resources */,
+				3C07009B21A72217008F63D2 /* TransactionReceiptViewController.xib in Resources */,
 				3C1A972521A3D13E00C30A75 /* ActiveBlockProducerCell.xib in Resources */,
 				3C4406AD21A1EED2003BBFA9 /* BalanceCell.xib in Resources */,
 				3CC9E72721A5C1010050BA57 /* ProxyVoterListCell.xib in Resources */,
@@ -1863,6 +1891,7 @@
 				3C9BFBBD219B5E2C00589936 /* AccountsForPublicKeyRequestImpl.swift in Sources */,
 				3C1F1F9221A359090075BD71 /* ActionsIntent.swift in Sources */,
 				3C7F0DEE2194A17000E72DD1 /* RegisteredBlockProducersIntent.swift in Sources */,
+				3C07009D21A72264008F63D2 /* TransactionReceiptBundle.swift in Sources */,
 				3C9BFB9C219B3AAE00589936 /* EosAccountRequestImpl.swift in Sources */,
 				3C964C3E2194422D003663EF /* AccountListSelection.swift in Sources */,
 				3CC9E70421A5A4110050BA57 /* CastProxyVoteIntent.swift in Sources */,
@@ -1883,6 +1912,7 @@
 				3CAD34772192F7DB000F304A /* EntryViewController.swift in Sources */,
 				3C0ADD92219F38440026649F /* InsertBalances.swift in Sources */,
 				3CC9E71F21A5BE980050BA57 /* ProxyVoterListViewController.swift in Sources */,
+				3C0700A521A72643008F63D2 /* TransactionReceiptIntent.swift in Sources */,
 				3C9BFBBB219B5DC900589936 /* AccountsForPublicKeyRequest.swift in Sources */,
 				3C9BFB86219B363C00589936 /* Balance.swift in Sources */,
 				3C6DF78921A08D8700ADA892 /* VoteViewState.swift in Sources */,
@@ -1907,6 +1937,7 @@
 				3CCE9C2621A2B1350050910D /* AccountViewLayout.swift in Sources */,
 				3C07008721A6FA49008F63D2 /* ReachSwitch.swift in Sources */,
 				3C9BFBC8219C29B000589936 /* types.swift in Sources */,
+				3C0700A721A72643008F63D2 /* TransactionReceiptResult.swift in Sources */,
 				3C7F0DE82194A17000E72DD1 /* RegisteredBlockProducersResult.swift in Sources */,
 				3C592F96219D5C5200D7C9B9 /* date_types.swift in Sources */,
 				3C07008521A6EDF2008F63D2 /* BandwidthFormBundle.swift in Sources */,
@@ -1951,6 +1982,7 @@
 				3C6DF79A21A0934600ADA892 /* AccountNavigationViewModel.swift in Sources */,
 				3C1F1F9C21A36FCA0075BD71 /* ActionsBundle.swift in Sources */,
 				3CC9E71321A5A9BE0050BA57 /* CastBundle.swift in Sources */,
+				3C07009921A7220A008F63D2 /* TransactionReceiptViewController.swift in Sources */,
 				3C8C6D9A2192D56000FC1A0D /* Logger.swift in Sources */,
 				3CC9A3B7219DB8890002A25F /* RamRequestImpl.swift in Sources */,
 				3C340FCA2193612A0017BEF9 /* SettingsIntent.swift in Sources */,
@@ -1984,6 +2016,7 @@
 				3C340FC62193612A0017BEF9 /* SettingsViewController.swift in Sources */,
 				3CC9A3C1219DC4300002A25F /* RegisteredBlockProducer.swift in Sources */,
 				3C7F0DEF2194A17000E72DD1 /* ActiveBlockProducersIntent.swift in Sources */,
+				3C0700A421A72643008F63D2 /* TransactionReceiptViewModel.swift in Sources */,
 				3CC9A3A7219DB23F0002A25F /* CreateAccountReceipt.swift in Sources */,
 				3C592F9E219D60C700D7C9B9 /* GetBandwidthRequest.swift in Sources */,
 				3C0ADD8C219F37B10026649F /* GetAccountsNamesForPublicKey.swift in Sources */,
@@ -1998,11 +2031,13 @@
 				3C340FD92193801B0017BEF9 /* CurrencyPairingViewController.swift in Sources */,
 				3CC9A389219DA76C0002A25F /* BlockProducerDetails.swift in Sources */,
 				3C0EC81B21933D4F00562A1B /* SplashViewModel.swift in Sources */,
+				3C0700A621A72643008F63D2 /* TransactionReceiptViewState.swift in Sources */,
 				3C340FD52193801B0017BEF9 /* CurrencyPairingResult.swift in Sources */,
 				3C1A971F21A3D02600C30A75 /* ActiveBlockProducersTableView.swift in Sources */,
 				3CC9E71E21A5BE980050BA57 /* ProxyVoterListResult.swift in Sources */,
 				3CC9E70E21A5A4180050BA57 /* CastProducersVoteViewModel.swift in Sources */,
 				3C9BFB94219B39B900589936 /* EosAccountResource.swift in Sources */,
+				3C07009F21A724BC008F63D2 /* TransactionReceiptRoute.swift in Sources */,
 				3CC9A3AF219DB4F00002A25F /* ProxyVoterDetails.swift in Sources */,
 				3C6DF75B21A05CF600ADA892 /* AccountModel.swift in Sources */,
 				3C592FA0219D60D100D7C9B9 /* GetBandwidthRequestImpl.swift in Sources */,
@@ -2089,6 +2124,7 @@
 				3C7F0DF72194A23900E72DD1 /* ExploreViewController.swift in Sources */,
 				3C9BFBB7219B5D7C00589936 /* AccountNameSystemBalance.swift in Sources */,
 				3C6DF76C21A082AC00ADA892 /* AccountResult.swift in Sources */,
+				3C0700A921A72DCF008F63D2 /* TransactionReceiptDelegate.swift in Sources */,
 				3C8BD25921A6CEE600ACFA70 /* AllocatedBandwidthCell.swift in Sources */,
 				3C0ADD97219F3AAF0026649F /* TransactionLogEntity.swift in Sources */,
 				3C9BFB96219B39E700589936 /* EosAccountVote.swift in Sources */,

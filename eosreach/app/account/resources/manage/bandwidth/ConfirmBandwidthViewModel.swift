@@ -31,8 +31,8 @@ class ConfirmBandwidthViewModel: MxViewModel<ConfirmBandwidthIntent, ConfirmBand
             return ConfirmBandwidthViewState.onError
         case .withLog(let log):
             return ConfirmBandwidthViewState.withLog(log: log)
-        case .navigateToTransactionConfirmed(let transactionId):
-            return ConfirmBandwidthViewState.navigateToTransactionConfirmed(transactionId: transactionId)
+        case .navigateToTransactionConfirmed(let actionReceipt):
+            return ConfirmBandwidthViewState.navigateToTransactionConfirmed(actionReceipt: actionReceipt)
         }
     }
     
@@ -78,7 +78,7 @@ class ConfirmBandwidthViewModel: MxViewModel<ConfirmBandwidthIntent, ConfirmBand
             transactionExpiry: Date.defaultTransactionExpiry()
         ).map { response in
             if (response.success()) {
-                return ConfirmBandwidthResult.navigateToTransactionConfirmed(transactionId: response.data!.transactionId)
+                return ConfirmBandwidthResult.navigateToTransactionConfirmed(actionReceipt: response.data!)
             } else {
                 switch response.error! {
                 case .transactionError(let body):
@@ -106,7 +106,7 @@ class ConfirmBandwidthViewModel: MxViewModel<ConfirmBandwidthIntent, ConfirmBand
             transactionExpiry: Date.defaultTransactionExpiry()
         ).map { response in
             if (response.success()) {
-                return ConfirmBandwidthResult.navigateToTransactionConfirmed(transactionId: response.data!.transactionId)
+                return ConfirmBandwidthResult.navigateToTransactionConfirmed(actionReceipt: response.data!)
             } else {
                 switch response.error! {
                 case .transactionError(let body):

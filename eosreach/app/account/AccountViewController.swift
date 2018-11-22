@@ -55,7 +55,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
 
     override func intents() -> Observable<AccountIntent> {
         return Observable.merge(
-            Observable.just(AccountIntent.start(accountBundle: accountBundle, page: AccountPage.balances)),
+            Observable.just(AccountIntent.start(accountBundle: accountBundle)),
             errorView.retryClick().map {
                 return AccountIntent.retry(accountBundle: self.accountBundle)
             },
@@ -78,7 +78,8 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
                 self.loaded = false
                 return AccountIntent.refresh(accountBundle: AccountBundle(
                     accountName: accountNameInArgs[0] as! String,
-                    readOnly: false))
+                    readOnly: false,
+                    accountPage: AccountPage.balances))
             },
             self.rx.methodInvoked(#selector(AccountViewController.refreshAccount)).map { _ in
                 return AccountIntent.refresh(accountBundle: self.accountBundle)

@@ -1,3 +1,8 @@
 {
 	"transaction_view_log_title" = "Transaction Log";
+	"transaction_receipt_title" = "Transaction Committed";
+	"transaction_receipt_body" = "Your transaction has been committed to the EOS network, a record of this, and all other transactions performed on this device can be found in the transaction log of the settings section.";
+	"transaction_receipt_done_button" = Done;
+	"transaction_receipt_view_in_block_explorer_button" = "View In Block Explorer";
+	"transaction_receipt_block_explorer_url" = "https://eosflare.io/tx/%@";
 }

@@ -104,7 +104,8 @@ class ViewBlockProducerViewController
                 identifier: R.segue.viewBlockProducerViewController.viewProducerToAccount.identifier,
                 model: AccountBundle(
                     accountName: owner,
-                    readOnly: true
+                    readOnly: true,
+                    accountPage: AccountPage.balances
                 )
             ))
             performSegue(withIdentifier: R.segue.viewBlockProducerViewController.viewProducerToAccount, sender: self)

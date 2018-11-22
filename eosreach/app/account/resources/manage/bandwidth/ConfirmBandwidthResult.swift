@@ -6,5 +6,5 @@ enum ConfirmBandwidthResult: MxResult {
     case onProgress
     case onError
     case withLog(log: String)
-    case navigateToTransactionConfirmed(transactionId: String)
+    case navigateToTransactionConfirmed(actionReceipt: ActionReceipt)
 }

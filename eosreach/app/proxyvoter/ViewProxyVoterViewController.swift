@@ -78,7 +78,8 @@ class ViewProxyVoterViewController
                 identifier: R.segue.viewProxyVoterViewController.viewProxyVoterToAccount.identifier,
                 model: AccountBundle(
                     accountName: accountName,
-                    readOnly: true
+                    readOnly: true,
+                    accountPage: AccountPage.vote
                 )
             ))
             performSegue(withIdentifier: R.segue.viewProxyVoterViewController.viewProxyVoterToAccount, sender: self)
