@@ -8,6 +8,7 @@ class AllocatedBandwidthViewController
     typealias tableViewType = AllocatedBandwidthTableView
     
     var manageBandwidthBundle: ManageBandwidthBundle?
+    var delegate: AllocatedBandwidthDelegate?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: ReachActivityIndicator!
@@ -58,7 +59,7 @@ class AllocatedBandwidthViewController
             activityIndicator.gone()
             noResultsLabel.visible()
         case .navigateToUndelegateBandwidth(let delegatedBandwidth):
-            print("")
+            delegate!.selected(delegatedBandwidth: delegatedBandwidth)
         }
     }
 

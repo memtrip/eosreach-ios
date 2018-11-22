@@ -2,7 +2,7 @@ import Foundation
 import RxCocoa
 import Material
 
-class ManageBandwidthViewController: UIViewController, TabBarDelegate {
+class ManageBandwidthViewController: UIViewController, TabBarDelegate, AllocatedBandwidthDelegate {
     
     @IBOutlet weak var toolbar: ReachToolbar!
     @IBOutlet weak var tabBar: ReachTabBar!
@@ -21,14 +21,13 @@ class ManageBandwidthViewController: UIViewController, TabBarDelegate {
     }()
     
     private lazy var undelegateBandwidthViewController: UndelegateBandwidthViewController = {
-        let undelegateBandwidthViewController = R.storyboard.main.undelegatedBandwidthViewController()!
-        undelegateBandwidthViewController.manageBandwidthBundle = self.manageBandwidthBundle!
-        return undelegateBandwidthViewController
+        return createUndelegateBandwidthViewController()
     }()
     
     private lazy var allocatedBandwidthViewController: AllocatedBandwidthViewController = {
         let allocatedBandwidthViewController = R.storyboard.main.allocatedBandwidthViewController()!
         allocatedBandwidthViewController.manageBandwidthBundle = manageBandwidthBundle!
+        allocatedBandwidthViewController.delegate = self
         return allocatedBandwidthViewController
     }()
     
@@ -69,5 +68,18 @@ class ManageBandwidthViewController: UIViewController, TabBarDelegate {
             self.view.endEditing(true)
             replaceChildViewController(viewController: allocatedBandwidthViewController)
         }
+    }
+    
+    func selected(delegatedBandwidth: DelegatedBandwidth) {
+        tabBar.animate(to: undelegatedTabItem, completion: nil)
+        let prepopulatedUndelegatedBandwidthViewController = createUndelegateBandwidthViewController()
+        prepopulatedUndelegatedBandwidthViewController.prepopulated = delegatedBandwidth
+        replaceChildViewController(viewController: prepopulatedUndelegatedBandwidthViewController)
+    }
+    
+    private func createUndelegateBandwidthViewController() -> UndelegateBandwidthViewController {
+        let undelegateBandwidthViewController = R.storyboard.main.undelegatedBandwidthViewController()!
+        undelegateBandwidthViewController.manageBandwidthBundle = self.manageBandwidthBundle!
+        return undelegateBandwidthViewController
     }
 }

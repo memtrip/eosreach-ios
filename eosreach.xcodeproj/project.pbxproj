@@ -27,6 +27,7 @@
 		3C0700A621A72643008F63D2 /* TransactionReceiptViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A221A72643008F63D2 /* TransactionReceiptViewState.swift */; };
 		3C0700A721A72643008F63D2 /* TransactionReceiptResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A321A72643008F63D2 /* TransactionReceiptResult.swift */; };
 		3C0700A921A72DCF008F63D2 /* TransactionReceiptDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A821A72DCF008F63D2 /* TransactionReceiptDelegate.swift */; };
+		3C0700AB21A7333C008F63D2 /* AllocatedBandwidthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700AA21A7333C008F63D2 /* AllocatedBandwidthDelegate.swift */; };
 		3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0ADD69219F24380026649F /* AccountCardCell.xib */; };
 		3C0ADD71219F28700026649F /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD70219F28700026649F /* Connection.swift */; };
 		3C0ADD7E219F378C0026649F /* BalanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7D219F378C0026649F /* BalanceEntity.swift */; };
@@ -376,6 +377,7 @@
 		3C0700A221A72643008F63D2 /* TransactionReceiptViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionReceiptViewState.swift; sourceTree = "<group>"; };
 		3C0700A321A72643008F63D2 /* TransactionReceiptResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionReceiptResult.swift; sourceTree = "<group>"; };
 		3C0700A821A72DCF008F63D2 /* TransactionReceiptDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionReceiptDelegate.swift; sourceTree = "<group>"; };
+		3C0700AA21A7333C008F63D2 /* AllocatedBandwidthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocatedBandwidthDelegate.swift; sourceTree = "<group>"; };
 		3C0ADD69219F24380026649F /* AccountCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCardCell.xib; sourceTree = "<group>"; };
 		3C0ADD70219F28700026649F /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		3C0ADD7D219F378C0026649F /* BalanceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceEntity.swift; sourceTree = "<group>"; };
@@ -1052,6 +1054,7 @@
 				3C8BD24421A6C2FA00ACFA70 /* DelegateBandwidthViewController.swift */,
 				3C8BD24221A6C2FA00ACFA70 /* DelegateBandwidthViewModel.swift */,
 				3C8BD24321A6C2FA00ACFA70 /* DelegateBandwidthViewState.swift */,
+				3C0700AA21A7333C008F63D2 /* AllocatedBandwidthDelegate.swift */,
 				3C8BD23921A6C22900ACFA70 /* AllocatedBandwidthIntent.swift */,
 				3C8BD23721A6C22900ACFA70 /* AllocatedBandwidthResult.swift */,
 				3C8BD23A21A6C22900ACFA70 /* AllocatedBandwidthViewController.swift */,
@@ -1888,6 +1891,7 @@
 				3C8BD23C21A6C22900ACFA70 /* AllocatedBandwidthResult.swift in Sources */,
 				3CC9E72521A5C00E0050BA57 /* ProxyVoterListCell.swift in Sources */,
 				3C0ADD8B219F37B10026649F /* GetAccounts.swift in Sources */,
+				3C0700AB21A7333C008F63D2 /* AllocatedBandwidthDelegate.swift in Sources */,
 				3C9BFBBD219B5E2C00589936 /* AccountsForPublicKeyRequestImpl.swift in Sources */,
 				3C1F1F9221A359090075BD71 /* ActionsIntent.swift in Sources */,
 				3C7F0DEE2194A17000E72DD1 /* RegisteredBlockProducersIntent.swift in Sources */,
