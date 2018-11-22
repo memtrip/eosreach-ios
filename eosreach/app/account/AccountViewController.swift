@@ -158,6 +158,8 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         tabBar.visible()
         containerView.visible()
         
+        let contractAccountBalance = createContractAccountBalance(accountView: accountView)
+        
         balanceViewController = R.storyboard.main.balanceViewController()
         balanceViewController!.accountName = accountView.eosAccount!.accountName
         balanceViewController!.accountBalanceList = accountView.balances!
@@ -169,6 +171,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         
         resourcesViewController = R.storyboard.main.resourcesViewController()
         resourcesViewController!.eosAccount = accountView.eosAccount!
+        resourcesViewController!.contractAccountBalance = contractAccountBalance
         resourcesViewController!.readOnly = self.accountBundle.readOnly
         
         switch page {
@@ -241,5 +244,17 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     
     func navigateToSettings() {
         performSegue(withIdentifier: R.segue.accountViewController.accountToSettings, sender: self)
+    }
+    
+    private func createContractAccountBalance(accountView: AccountView) -> ContractAccountBalance {
+        if let accountBalanceList = accountView.balances {
+            if (accountBalanceList.balances.isNotEmpty()) {
+                return accountBalanceList.balances[0]
+            } else {
+                return ContractAccountBalance.unavailable()
+            }
+        } else {
+            return ContractAccountBalance.unavailable()
+        }
     }
 }

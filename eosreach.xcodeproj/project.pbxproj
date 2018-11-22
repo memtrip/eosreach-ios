@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		11C091BD424B940DCFF59F1E /* Pods_eosreach_eosreachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */; };
+		3C07008521A6EDF2008F63D2 /* BandwidthFormBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008421A6EDF2008F63D2 /* BandwidthFormBundle.swift */; };
+		3C07008721A6FA49008F63D2 /* ReachSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008621A6FA49008F63D2 /* ReachSwitch.swift */; };
 		3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0ADD69219F24380026649F /* AccountCardCell.xib */; };
 		3C0ADD71219F28700026649F /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD70219F28700026649F /* Connection.swift */; };
 		3C0ADD7E219F378C0026649F /* BalanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7D219F378C0026649F /* BalanceEntity.swift */; };
@@ -338,6 +340,8 @@
 
 /* Begin PBXFileReference section */
 		09BD5052D50873672358AF8D /* Pods-eosreach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.release.xcconfig"; sourceTree = "<group>"; };
+		3C07008421A6EDF2008F63D2 /* BandwidthFormBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandwidthFormBundle.swift; sourceTree = "<group>"; };
+		3C07008621A6FA49008F63D2 /* ReachSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachSwitch.swift; sourceTree = "<group>"; };
 		3C0ADD69219F24380026649F /* AccountCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCardCell.xib; sourceTree = "<group>"; };
 		3C0ADD70219F28700026649F /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		3C0ADD7D219F378C0026649F /* BalanceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceEntity.swift; sourceTree = "<group>"; };
@@ -734,6 +738,7 @@
 				3C7F0E012194B73200E72DD1 /* ReachTabsController.swift */,
 				3C1F1F7C21A332020075BD71 /* ReachProgressBar.swift */,
 				3CEF33CC21A52EE900716AA2 /* ReachBorderView.swift */,
+				3C07008621A6FA49008F63D2 /* ReachSwitch.swift */,
 			);
 			path = uikit;
 			sourceTree = "<group>";
@@ -1019,6 +1024,7 @@
 				3C8BD23221A6C01300ACFA70 /* ManageBandwidthViewController.swift */,
 				3C8BD25421A6C72700ACFA70 /* ManageBandwidthBundle.swift */,
 				3C8BD23421A6C16F00ACFA70 /* BandwidthStrings.strings */,
+				3C07008421A6EDF2008F63D2 /* BandwidthFormBundle.swift */,
 			);
 			path = bandwidth;
 			sourceTree = "<group>";
@@ -1871,9 +1877,11 @@
 				3C0EC81421933B6F00562A1B /* ReachActivityIndicator.swift in Sources */,
 				3CC9A3A5219DAF110002A25F /* TokenParent.swift in Sources */,
 				3CCE9C2621A2B1350050910D /* AccountViewLayout.swift in Sources */,
+				3C07008721A6FA49008F63D2 /* ReachSwitch.swift in Sources */,
 				3C9BFBC8219C29B000589936 /* types.swift in Sources */,
 				3C7F0DE82194A17000E72DD1 /* RegisteredBlockProducersResult.swift in Sources */,
 				3C592F96219D5C5200D7C9B9 /* date_types.swift in Sources */,
+				3C07008521A6EDF2008F63D2 /* BandwidthFormBundle.swift in Sources */,
 				3C8C6DC62192D8F500FC1A0D /* EntryViewState.swift in Sources */,
 				3C7F0DFC2194A58700E72DD1 /* ReachTabBar.swift in Sources */,
 				3C0EC827219350DE00562A1B /* ImportKeyViewController.swift in Sources */,

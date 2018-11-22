@@ -941,62 +941,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-aK-Oxh" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="16" y="36" width="343" height="30"/>
+                                <rect key="frame" x="16" y="176" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ql9-Id-TMZ" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="16" y="82" width="343" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srB-pA-4CE" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="114" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srB-pA-4CE">
-                                <rect key="frame" x="16" y="128" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKC-Kf-JbC">
-                                <rect key="frame" x="16" y="174" width="345" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKC-Kf-JbC" customClass="ReachSwitch" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="222" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffh-iM-c2O" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_delegate"/>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mEP-6Q-KjE" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="177.5" y="626" width="20" height="20"/>
-                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_switch_placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYn-UK-9cF">
+                                <rect key="frame" x="81" y="227" width="278" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ql9-Id-TMZ" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="52" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="srB-pA-4CE" firstAttribute="leading" secondItem="27P-KZ-iel" secondAttribute="leading" constant="16" id="1dQ-zj-NjV"/>
-                            <constraint firstItem="BPe-aK-Oxh" firstAttribute="top" secondItem="27P-KZ-iel" secondAttribute="top" constant="16" id="4fs-h5-thI"/>
                             <constraint firstItem="27P-KZ-iel" firstAttribute="trailing" secondItem="ql9-Id-TMZ" secondAttribute="trailing" constant="16" id="732-iq-APo"/>
                             <constraint firstItem="27P-KZ-iel" firstAttribute="trailing" secondItem="srB-pA-4CE" secondAttribute="trailing" constant="16" id="7U6-2K-2DT"/>
                             <constraint firstItem="BKC-Kf-JbC" firstAttribute="leading" secondItem="27P-KZ-iel" secondAttribute="leading" constant="16" id="8gD-y4-fN5"/>
                             <constraint firstItem="27P-KZ-iel" firstAttribute="trailing" secondItem="ffh-iM-c2O" secondAttribute="trailing" constant="16" id="D8m-fs-5Mz"/>
+                            <constraint firstItem="BPe-aK-Oxh" firstAttribute="top" secondItem="srB-pA-4CE" secondAttribute="bottom" constant="32" id="EFa-Le-3c3"/>
                             <constraint firstItem="ffh-iM-c2O" firstAttribute="leading" secondItem="27P-KZ-iel" secondAttribute="leading" constant="16" id="Eda-Os-WEc"/>
-                            <constraint firstItem="mEP-6Q-KjE" firstAttribute="centerY" secondItem="ffh-iM-c2O" secondAttribute="centerY" id="ICi-hy-1tv"/>
-                            <constraint firstItem="srB-pA-4CE" firstAttribute="top" secondItem="ql9-Id-TMZ" secondAttribute="bottom" constant="16" id="ItQ-Al-og4"/>
-                            <constraint firstItem="mEP-6Q-KjE" firstAttribute="centerX" secondItem="ffh-iM-c2O" secondAttribute="centerX" id="Lf7-LK-ppi"/>
-                            <constraint firstItem="27P-KZ-iel" firstAttribute="trailing" secondItem="BKC-Kf-JbC" secondAttribute="trailing" constant="16" id="Lqr-Cr-wp9"/>
+                            <constraint firstItem="srB-pA-4CE" firstAttribute="top" secondItem="ql9-Id-TMZ" secondAttribute="bottom" constant="32" id="ItQ-Al-og4"/>
+                            <constraint firstItem="27P-KZ-iel" firstAttribute="trailing" secondItem="sYn-UK-9cF" secondAttribute="trailing" constant="16" id="MJw-uQ-GgT"/>
                             <constraint firstItem="BPe-aK-Oxh" firstAttribute="leading" secondItem="27P-KZ-iel" secondAttribute="leading" constant="16" id="RqJ-g1-wBP"/>
-                            <constraint firstItem="ql9-Id-TMZ" firstAttribute="top" secondItem="BPe-aK-Oxh" secondAttribute="bottom" constant="16" id="Tkb-6A-u4W"/>
+                            <constraint firstItem="ql9-Id-TMZ" firstAttribute="top" secondItem="27P-KZ-iel" secondAttribute="top" constant="32" id="Wvq-La-cGv"/>
                             <constraint firstItem="27P-KZ-iel" firstAttribute="bottom" secondItem="ffh-iM-c2O" secondAttribute="bottom" constant="16" id="Ynd-It-We7"/>
-                            <constraint firstItem="BKC-Kf-JbC" firstAttribute="top" secondItem="srB-pA-4CE" secondAttribute="bottom" constant="16" id="kIS-cs-4ng"/>
+                            <constraint firstItem="sYn-UK-9cF" firstAttribute="leading" secondItem="BKC-Kf-JbC" secondAttribute="trailing" constant="16" id="a6J-n7-dbB"/>
+                            <constraint firstItem="sYn-UK-9cF" firstAttribute="centerY" secondItem="BKC-Kf-JbC" secondAttribute="centerY" id="aLj-OQ-hNI"/>
+                            <constraint firstItem="BKC-Kf-JbC" firstAttribute="top" secondItem="BPe-aK-Oxh" secondAttribute="bottom" constant="16" id="baJ-nf-veV"/>
                             <constraint firstItem="ql9-Id-TMZ" firstAttribute="leading" secondItem="27P-KZ-iel" secondAttribute="leading" constant="16" id="uIC-TD-QaW"/>
                             <constraint firstItem="27P-KZ-iel" firstAttribute="trailing" secondItem="BPe-aK-Oxh" secondAttribute="trailing" constant="16" id="wWL-rB-NZI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="27P-KZ-iel"/>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="mEP-6Q-KjE" id="0qf-wW-x7n"/>
                         <outlet property="cpuAmountTextField" destination="srB-pA-4CE" id="5N2-Uf-Umc"/>
                         <outlet property="delegateButton" destination="ffh-iM-c2O" id="EUi-bx-tQT"/>
                         <outlet property="netAmountTextField" destination="ql9-Id-TMZ" id="pCb-LN-040"/>
                         <outlet property="targetAccountTextField" destination="BPe-aK-Oxh" id="GAj-bX-Rxc"/>
                         <outlet property="transferSwitch" destination="BKC-Kf-JbC" id="fEi-Wr-7Wb"/>
+                        <outlet property="transferSwitchLabel" destination="sYn-UK-9cF" id="VuU-6O-DGl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Dq-oJ-T1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1011,52 +1014,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WZA-lX-sYC" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="52" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-B5-B3U" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="114" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxD-xe-LIv" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="16" y="36" width="343" height="30"/>
+                                <rect key="frame" x="16" y="176" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WZA-lX-sYC">
-                                <rect key="frame" x="16" y="82" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-B5-B3U">
-                                <rect key="frame" x="16" y="128" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2h-xk-b2W">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2h-xk-b2W" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_undelegate"/>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Uw8-Az-Sy1">
-                                <rect key="frame" x="177.5" y="626" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="bxD-xe-LIv" firstAttribute="top" secondItem="hjb-Ii-MEj" secondAttribute="top" constant="16" id="1qj-9U-P6T"/>
-                            <constraint firstItem="fdb-B5-B3U" firstAttribute="top" secondItem="WZA-lX-sYC" secondAttribute="bottom" constant="16" id="7Og-vl-Biw"/>
+                            <constraint firstItem="fdb-B5-B3U" firstAttribute="top" secondItem="WZA-lX-sYC" secondAttribute="bottom" constant="32" id="7Og-vl-Biw"/>
                             <constraint firstItem="hjb-Ii-MEj" firstAttribute="trailing" secondItem="WZA-lX-sYC" secondAttribute="trailing" constant="16" id="FBh-sT-8uv"/>
                             <constraint firstItem="hjb-Ii-MEj" firstAttribute="trailing" secondItem="bxD-xe-LIv" secondAttribute="trailing" constant="16" id="GpR-BT-hSo"/>
-                            <constraint firstItem="Uw8-Az-Sy1" firstAttribute="centerX" secondItem="W2h-xk-b2W" secondAttribute="centerX" id="PT1-b4-fdu"/>
+                            <constraint firstItem="WZA-lX-sYC" firstAttribute="top" secondItem="hjb-Ii-MEj" secondAttribute="top" constant="32" id="JEp-AY-vdH"/>
                             <constraint firstItem="hjb-Ii-MEj" firstAttribute="bottom" secondItem="W2h-xk-b2W" secondAttribute="bottom" constant="16" id="TZf-gW-3Hw"/>
                             <constraint firstItem="WZA-lX-sYC" firstAttribute="leading" secondItem="hjb-Ii-MEj" secondAttribute="leading" constant="16" id="XI5-pK-Kfs"/>
+                            <constraint firstItem="bxD-xe-LIv" firstAttribute="top" secondItem="fdb-B5-B3U" secondAttribute="bottom" constant="32" id="Xyk-kg-Tn0"/>
                             <constraint firstItem="bxD-xe-LIv" firstAttribute="leading" secondItem="hjb-Ii-MEj" secondAttribute="leading" constant="16" id="ZQs-Y7-R2D"/>
                             <constraint firstItem="hjb-Ii-MEj" firstAttribute="trailing" secondItem="W2h-xk-b2W" secondAttribute="trailing" constant="16" id="d1n-0K-V2K"/>
-                            <constraint firstItem="WZA-lX-sYC" firstAttribute="top" secondItem="bxD-xe-LIv" secondAttribute="bottom" constant="16" id="gTe-05-oc4"/>
                             <constraint firstItem="fdb-B5-B3U" firstAttribute="leading" secondItem="hjb-Ii-MEj" secondAttribute="leading" constant="16" id="s2A-r2-51R"/>
                             <constraint firstItem="W2h-xk-b2W" firstAttribute="leading" secondItem="hjb-Ii-MEj" secondAttribute="leading" constant="16" id="sD1-1X-lva"/>
-                            <constraint firstItem="Uw8-Az-Sy1" firstAttribute="centerY" secondItem="W2h-xk-b2W" secondAttribute="centerY" id="vwb-zA-zD7"/>
                             <constraint firstItem="hjb-Ii-MEj" firstAttribute="trailing" secondItem="fdb-B5-B3U" secondAttribute="trailing" constant="16" id="wFQ-3d-cfc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hjb-Ii-MEj"/>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="Uw8-Az-Sy1" id="lkz-2Q-PcT"/>
                         <outlet property="cpuAmountTextField" destination="fdb-B5-B3U" id="abk-fQ-QHj"/>
                         <outlet property="netAmountTextField" destination="WZA-lX-sYC" id="oka-6r-qWl"/>
                         <outlet property="targetAccountTextField" destination="bxD-xe-LIv" id="dsR-Vx-TNW"/>

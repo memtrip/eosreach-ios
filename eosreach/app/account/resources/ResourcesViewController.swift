@@ -15,6 +15,7 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
     
     var readOnly = false
     var eosAccount: EosAccount?
+    var contractAccountBalance: ContractAccountBalance?
     
     private lazy var resourcesRenderer: ResourcesRenderer = {
         return ResourcesRenderer(layout: self)
@@ -195,8 +196,7 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == R.segue.resourcesViewController.resourcesToManageBandwidth.identifier) {
             (segue.destination as! ManageBandwidthViewController).manageBandwidthBundle = ManageBandwidthBundle(
-                accountName: eosAccount!.accountName
-            )
+                accountName: eosAccount!.accountName, contractAccountBalance: contractAccountBalance!)
         }
     }
 }
