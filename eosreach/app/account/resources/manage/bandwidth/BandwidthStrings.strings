@@ -1,0 +1,6 @@
+{
+	"manage_bandwidth_title" = "Manage Bandwidth";
+	"manage_bandwidth_delegate_tab" = Delegate;
+	"manage_bandwidth_undelegate_tab" = Undelegate;
+	"manage_bandwidth_allocated_tab" = Allocated;
+}

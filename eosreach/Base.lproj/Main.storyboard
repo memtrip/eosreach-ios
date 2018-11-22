@@ -884,6 +884,65 @@
             </objects>
             <point key="canvasLocation" x="4964" y="795"/>
         </scene>
+        <!--Manage Bandwidth View Controller-->
+        <scene sceneID="VaG-Zd-81H">
+            <objects>
+                <viewController id="6Ma-8z-zbj" customClass="ManageBandwidthViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="slk-hz-TQf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wK5-gQ-05i"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsl-Sb-Rn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5678" y="-674"/>
+        </scene>
+        <!--Delegate Bandwidth View Controller-->
+        <scene sceneID="dVH-Jh-ywi">
+            <objects>
+                <viewController storyboardIdentifier="delegatedBandwidthViewController" id="DxX-Q4-9ut" customClass="DelegateBandwidthViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OZf-C8-UGJ" customClass="DelegatedBandwidthViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="27P-KZ-iel"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Dq-oJ-T1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6399" y="-672"/>
+        </scene>
+        <!--Undelegate Bandwidth View Controller-->
+        <scene sceneID="hBX-hc-C8f">
+            <objects>
+                <viewController storyboardIdentifier="undelegatedBandwidthViewController" id="WGH-W9-7ex" customClass="UndelegateBandwidthViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ftS-gq-nuV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hjb-Ii-MEj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UrM-8u-HQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7113" y="-674"/>
+        </scene>
+        <!--Allocated Bandwidth View Controller-->
+        <scene sceneID="oGm-be-cZQ">
+            <objects>
+                <viewController storyboardIdentifier="allocatedBandwidthViewController" id="YmX-GN-Rf1" customClass="AllocatedBandwidthViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="re4-cu-4b6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KqM-Xh-Rou"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qkc-3S-q9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7837" y="-672"/>
+        </scene>
         <!--Resources View Controller-->
         <scene sceneID="20f-A4-huH">
             <objects>
@@ -972,6 +1031,7 @@
                         <outlet property="netResourceGraph" destination="7zO-NL-4fd" id="wMI-35-Xyb"/>
                         <outlet property="ramButton" destination="fQe-aP-fSF" id="B2N-j0-Mb3"/>
                         <outlet property="ramResourceGraph" destination="n76-2W-To4" id="wUa-cI-fB7"/>
+                        <segue destination="6Ma-8z-zbj" kind="show" id="c9J-cM-x7a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pS-Ix-Sve" userLabel="First Responder" sceneMemberID="firstResponder"/>
