@@ -52,8 +52,11 @@ class AccountUseCase {
     private func getBalances(eosAccount: EosAccount, primaryEosPrice: EosPrice, primaryBalance: BalanceModel) -> Single<AccountView> {
         return getBalances.select(accountName: eosAccount.accountName).flatMap { balanceModels in
             var balances = Array<BalanceModel>()
-            balances.append(primaryBalance)
-            balances.append(contentsOf: balanceModels)
+            if (balanceModels.count == 0) {
+                balances.append(primaryBalance)
+            } else {
+                balances.append(contentsOf: balanceModels)
+            }
             return Observable.from(balances).concatMap { balanceModel in
                 Observable.zip(
                     Observable.just(balanceModel),
