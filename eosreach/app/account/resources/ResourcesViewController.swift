@@ -143,21 +143,21 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
         renderResourceGraphView(
             resourceGraphView: ramResourceGraph,
             titleLabel: R.string.accountStrings.account_resources_ram_graph_title(),
-            usageLabel: "\(Pretty.ram(value: resourceRemaining(resource: eosAccount.ramResource))) / \(Pretty.ram(value: eosAccount.ramResource.available))",
+            usageLabel: "\(Pretty.ram(value: resourceRemaining(resource: eosAccount.ramResource))) / \(Pretty.ram(value: Float(eosAccount.ramResource.available)))",
             resource: eosAccount.ramResource,
             graphColor: R.color.resourcesRamColor()!)
         
         renderResourceGraphView(
             resourceGraphView: cpuResourceGraph,
             titleLabel: R.string.accountStrings.account_resources_cpu_graph_title(),
-            usageLabel: "\(Pretty.cpu(value: resourceRemaining(resource: eosAccount.cpuResource))) / \(Pretty.cpu(value: eosAccount.cpuResource.available))",
+            usageLabel: "\(Pretty.cpu(value: resourceRemaining(resource: eosAccount.cpuResource))) / \(Pretty.cpu(value: Float(eosAccount.cpuResource.available)))",
             resource: eosAccount.cpuResource,
             graphColor: R.color.resourcesCpuColor()!)
         
         renderResourceGraphView(
             resourceGraphView: netResourceGraph,
             titleLabel: R.string.accountStrings.account_resources_net_graph_title(),
-            usageLabel: "\(Pretty.net(value: resourceRemaining(resource: eosAccount.netResource))) / \(Pretty.net(value: eosAccount.netResource.available))",
+            usageLabel: "\(Pretty.net(value: resourceRemaining(resource: eosAccount.netResource))) / \(Pretty.net(value: Float(eosAccount.netResource.available)))",
             resource: eosAccount.netResource,
             graphColor: R.color.resourcesNetColor()!)
     }
@@ -177,17 +177,17 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
         )
     }
     
-    private func resourceRemaining(resource: EosAccountResource) -> Int64 {
-        return resource.available - resource.used
+    private func resourceRemaining(resource: EosAccountResource) -> Float {
+        return Float(resource.available) - Float(resource.used)
     }
     
     private func resourcePercentage(resource: EosAccountResource) -> Float {
         if (resource.used <= 0) {
-            return 100
+            return 1
         } else if (resource.available == resource.used) {
             return 0
         } else {
-            let remaining = Float(resource.available - resource.used)
+            let remaining = resourceRemaining(resource: resource)
             return (remaining * 100) / Float(resource.available)
         }
     }

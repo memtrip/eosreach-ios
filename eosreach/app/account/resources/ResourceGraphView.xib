@@ -30,11 +30,12 @@
                     <color key="textColor" name="typographyColorPrimary"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ls7-bS-XfQ" customClass="ReachProgressBar" customModule="eosreach" customModuleProvider="target">
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ls7-bS-XfQ" customClass="ReachProgressBar" customModule="eosreach" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44.5" width="375" height="6"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="6" id="a9n-Yd-0X7"/>
                     </constraints>
+                    <color key="trackTintColor" name="colorBorderTransparent"/>
                 </progressView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_usage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aM-n6-F3W">
                     <rect key="frame" x="0.0" y="54.5" width="375" height="13.5"/>
@@ -59,6 +60,9 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="colorBorderTransparent">
+            <color red="1" green="1" blue="1" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="typographyColorPrimary">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

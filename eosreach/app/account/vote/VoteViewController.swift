@@ -84,6 +84,7 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
         case .noVoteCast:
             if (readOnly) {
                 voteLabel.text = R.string.voteStrings.vote_read_only_no_vote_label()
+                noVoteContainer.gone()
             } else {
                 voteLabel.text = R.string.voteStrings.vote_no_vote_instruction_label()
                 noVoteContainer.visible()

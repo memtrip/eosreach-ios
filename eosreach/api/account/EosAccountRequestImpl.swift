@@ -86,8 +86,8 @@ class EosAccountRequestImpl : EosAccountRequest {
         let stakedNetBalanceAmount = stakedNetBalance != nil ? stakedNetBalance!.amount : 0.0
         if (totalResources != nil) {
             let totalCpuBalance = BalanceFormatter.deserialize(balance: totalResources!.net_weight)
-            let delegateBalance = totalCpuBalance.amount - stakedNetBalanceAmount
-            return BalanceFormatter.create(amount: delegateBalance, symbol: totalCpuBalance.symbol)
+            let delegatedBalance = totalCpuBalance.amount - stakedNetBalanceAmount
+            return BalanceFormatter.create(amount: delegatedBalance, symbol: totalCpuBalance.symbol)
         } else {
             return nil
         }
