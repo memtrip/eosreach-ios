@@ -18,7 +18,9 @@ class DelegateBandwidthViewModel: MxViewModel<DelegateBandwidthIntent, DelegateB
                 cpuAmount: BalanceFormatter.create(
                     amount: cpuAmount,
                     symbol: contractAccountBalance.balance.symbol),
-                transfer: transfer
+                transfer: transfer,
+                contractAccountBalance: contractAccountBalance,
+                type: BandwidthFormBundle.CommitType.delegate
             )))
         }
     }

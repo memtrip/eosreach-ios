@@ -5,12 +5,12 @@ import eosswift
 class BandwidthRequestImpl : BandwidthRequest {
 
     let delegateBandwidthChain: DelegateBandwidthChain
-    let unDelegateBandwidthChain: UnDelegateBandwidthChain
+    let undelegateBandwidthChain: UnDelegateBandwidthChain
 
     init() {
         let chainApi = ChainApiModule.create()
         delegateBandwidthChain = DelegateBandwidthChain(chainApi: chainApi)
-        unDelegateBandwidthChain = UnDelegateBandwidthChain(chainApi: chainApi)
+        undelegateBandwidthChain = UnDelegateBandwidthChain(chainApi: chainApi)
     }
 
     func delegate(
@@ -43,5 +43,34 @@ class BandwidthRequestImpl : BandwidthRequest {
                 return Result(error: BandwidthError.transactionError(body: response.errorBody!))
             }
         }
+    }
+    
+    func undelegate(
+        fromAccount: String,
+        toAccount: String,
+        netAmount: String,
+        cpuAmount: String,
+        authorizingPrivateKey: EOSPrivateKey,
+        transactionExpiry: Date
+    ) -> Single<Result<ActionReceipt, BandwidthError>> {
+        return undelegateBandwidthChain.undelegateBandwidth(
+            args: UnDelegateBandwidthChain.Args(
+                from: fromAccount,
+                receiver: toAccount,
+                netQuantity: netAmount,
+                cpuQuantity: cpuAmount),
+            transactionContext: TransactionContext(
+                authorizingAccountName: fromAccount,
+                authorizingPrivateKey: authorizingPrivateKey,
+                expirationDate: transactionExpiry)
+        ).map { response in
+            if (response.success) {
+                return Result(data: ActionReceipt(
+                    transactionId: response.body!.transaction_id,
+                    authorizingAccountName: fromAccount))
+            } else {
+                return Result(error: BandwidthError.transactionError(body: response.errorBody!))
+            }
+        }.catchErrorJustReturn(Result(error: BandwidthError.genericError))
     }
 }

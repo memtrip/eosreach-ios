@@ -1000,11 +1000,12 @@
                         <outlet property="targetAccountTextField" destination="BPe-aK-Oxh" id="GAj-bX-Rxc"/>
                         <outlet property="transferSwitch" destination="BKC-Kf-JbC" id="fEi-Wr-7Wb"/>
                         <outlet property="transferSwitchLabel" destination="sYn-UK-9cF" id="VuU-6O-DGl"/>
+                        <segue destination="SFb-1f-Us3" kind="show" identifier="delegateBandwidthToConfirmBandwidth" id="2pO-q1-hHi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Dq-oJ-T1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6399" y="-672"/>
+            <point key="canvasLocation" x="7124" y="-672"/>
         </scene>
         <!--Undelegate Bandwidth View Controller-->
         <scene sceneID="hBX-hc-C8f">
@@ -1058,11 +1059,26 @@
                         <outlet property="netAmountTextField" destination="WZA-lX-sYC" id="oka-6r-qWl"/>
                         <outlet property="targetAccountTextField" destination="bxD-xe-LIv" id="dsR-Vx-TNW"/>
                         <outlet property="undelegateButton" destination="W2h-xk-b2W" id="UPe-R7-HTg"/>
+                        <segue destination="SFb-1f-Us3" kind="show" identifier="undelegateBandwidthToConfirmBandwidth" id="EYu-xR-n4I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UrM-8u-HQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7112.8000000000002" y="-674.21289355322347"/>
+            <point key="canvasLocation" x="7826" y="-674"/>
+        </scene>
+        <!--Confirm Bandwidth View Controller-->
+        <scene sceneID="dRD-or-dB5">
+            <objects>
+                <viewController id="SFb-1f-Us3" customClass="ConfirmBandwidthViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HEu-38-bl7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zGs-as-Nvq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sB-HG-sEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8526" y="-672"/>
         </scene>
         <!--Allocated Bandwidth View Controller-->
         <scene sceneID="oGm-be-cZQ">
@@ -1118,7 +1134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qkc-3S-q9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7837" y="-672"/>
+            <point key="canvasLocation" x="6385" y="-674"/>
         </scene>
         <!--Resources View Controller-->
         <scene sceneID="20f-A4-huH">
@@ -2000,6 +2016,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="dMo-xo-wz4"/>
         <segue reference="Eks-sF-JJe"/>
+        <segue reference="2pO-q1-hHi"/>
         <segue reference="1bl-ap-rcg"/>
         <segue reference="1Wt-0h-Agf"/>
         <segue reference="EMU-T5-0SR"/>

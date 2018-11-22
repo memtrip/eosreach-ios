@@ -13,6 +13,15 @@ protocol BandwidthRequest {
         authorizingPrivateKey: EOSPrivateKey,
         transactionExpiry: Date
     ) -> Single<Result<ActionReceipt, BandwidthError>>
+    
+    func undelegate(
+        fromAccount: String,
+        toAccount: String,
+        netAmount: String,
+        cpuAmount: String,
+        authorizingPrivateKey: EOSPrivateKey,
+        transactionExpiry: Date
+    ) -> Single<Result<ActionReceipt, BandwidthError>>
 }
 
 enum BandwidthError : ApiError {

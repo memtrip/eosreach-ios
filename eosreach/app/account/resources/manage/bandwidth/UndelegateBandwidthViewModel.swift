@@ -18,7 +18,9 @@ class UndelegateBandwidthViewModel: MxViewModel<UndelegateBandwidthIntent, Undel
                 cpuAmount: BalanceFormatter.create(
                     amount: cpuAmount,
                     symbol: contractAccountBalance.balance.symbol),
-                transfer: false
+                transfer: false,
+                contractAccountBalance: contractAccountBalance,
+                type: BandwidthFormBundle.CommitType.undelegate
             )))
         }
     }

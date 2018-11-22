@@ -49,7 +49,11 @@ class UndelegateBandwidthViewController
             netAmountTextField.placeholder = R.string.bandwidthStrings.delegate_bandwidth_net_amount_label(
             BalanceFormatter.formatEosBalance(balance: manageBandwidthBundle.contractAccountBalance.balance))
         case .navigateToConfirm(let bandwidthFormBundle):
-            print("")
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.undelegateBandwidthViewController.undelegateBandwidthToConfirmBandwidth.identifier,
+                model: bandwidthFormBundle
+            ))
+            performSegue(withIdentifier: R.segue.undelegateBandwidthViewController.undelegateBandwidthToConfirmBandwidth, sender: self)
         }
     }
 

@@ -10,6 +10,11 @@
 		11C091BD424B940DCFF59F1E /* Pods_eosreach_eosreachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */; };
 		3C07008521A6EDF2008F63D2 /* BandwidthFormBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008421A6EDF2008F63D2 /* BandwidthFormBundle.swift */; };
 		3C07008721A6FA49008F63D2 /* ReachSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008621A6FA49008F63D2 /* ReachSwitch.swift */; };
+		3C07008D21A6FC79008F63D2 /* ConfirmBandwidthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008821A6FC78008F63D2 /* ConfirmBandwidthViewController.swift */; };
+		3C07008E21A6FC79008F63D2 /* ConfirmBandwidthIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008921A6FC78008F63D2 /* ConfirmBandwidthIntent.swift */; };
+		3C07008F21A6FC79008F63D2 /* ConfirmBandwidthViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008A21A6FC78008F63D2 /* ConfirmBandwidthViewState.swift */; };
+		3C07009021A6FC79008F63D2 /* ConfirmBandwidthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008B21A6FC78008F63D2 /* ConfirmBandwidthViewModel.swift */; };
+		3C07009121A6FC79008F63D2 /* ConfirmBandwidthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008C21A6FC78008F63D2 /* ConfirmBandwidthResult.swift */; };
 		3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0ADD69219F24380026649F /* AccountCardCell.xib */; };
 		3C0ADD71219F28700026649F /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD70219F28700026649F /* Connection.swift */; };
 		3C0ADD7E219F378C0026649F /* BalanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7D219F378C0026649F /* BalanceEntity.swift */; };
@@ -342,6 +347,11 @@
 		09BD5052D50873672358AF8D /* Pods-eosreach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.release.xcconfig"; sourceTree = "<group>"; };
 		3C07008421A6EDF2008F63D2 /* BandwidthFormBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandwidthFormBundle.swift; sourceTree = "<group>"; };
 		3C07008621A6FA49008F63D2 /* ReachSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachSwitch.swift; sourceTree = "<group>"; };
+		3C07008821A6FC78008F63D2 /* ConfirmBandwidthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmBandwidthViewController.swift; sourceTree = "<group>"; };
+		3C07008921A6FC78008F63D2 /* ConfirmBandwidthIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmBandwidthIntent.swift; sourceTree = "<group>"; };
+		3C07008A21A6FC78008F63D2 /* ConfirmBandwidthViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmBandwidthViewState.swift; sourceTree = "<group>"; };
+		3C07008B21A6FC78008F63D2 /* ConfirmBandwidthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmBandwidthViewModel.swift; sourceTree = "<group>"; };
+		3C07008C21A6FC78008F63D2 /* ConfirmBandwidthResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmBandwidthResult.swift; sourceTree = "<group>"; };
 		3C0ADD69219F24380026649F /* AccountCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCardCell.xib; sourceTree = "<group>"; };
 		3C0ADD70219F28700026649F /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		3C0ADD7D219F378C0026649F /* BalanceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceEntity.swift; sourceTree = "<group>"; };
@@ -1003,6 +1013,11 @@
 		3C8BD23021A6BF8500ACFA70 /* bandwidth */ = {
 			isa = PBXGroup;
 			children = (
+				3C07008921A6FC78008F63D2 /* ConfirmBandwidthIntent.swift */,
+				3C07008C21A6FC78008F63D2 /* ConfirmBandwidthResult.swift */,
+				3C07008821A6FC78008F63D2 /* ConfirmBandwidthViewController.swift */,
+				3C07008B21A6FC78008F63D2 /* ConfirmBandwidthViewModel.swift */,
+				3C07008A21A6FC78008F63D2 /* ConfirmBandwidthViewState.swift */,
 				3C8BD24E21A6C3B300ACFA70 /* UndelegateBandwidthIntent.swift */,
 				3C8BD24D21A6C3B300ACFA70 /* UndelegateBandwidthResult.swift */,
 				3C8BD24B21A6C3B300ACFA70 /* UndelegateBandwidthViewController.swift */,
@@ -1820,6 +1835,7 @@
 				3C964C4021944305003663EF /* EosEndpoint.swift in Sources */,
 				3C1A973521A4844200C30A75 /* AccountNavigationUseCase.swift in Sources */,
 				3C8BD25121A6C3B300ACFA70 /* UndelegateBandwidthViewState.swift in Sources */,
+				3C07009121A6FC79008F63D2 /* ConfirmBandwidthResult.swift in Sources */,
 				3C964C4A219444DB003663EF /* RsaEncryptionVerified.swift in Sources */,
 				3C6DF79C21A0934600ADA892 /* AccountNavigationViewState.swift in Sources */,
 				3CC9E70521A5A4110050BA57 /* CastProxyVoteViewModel.swift in Sources */,
@@ -1860,6 +1876,7 @@
 				3C9BFB86219B363C00589936 /* Balance.swift in Sources */,
 				3C6DF78921A08D8700ADA892 /* VoteViewState.swift in Sources */,
 				3C6DF78521A08D8700ADA892 /* VoteIntent.swift in Sources */,
+				3C07008D21A6FC79008F63D2 /* ConfirmBandwidthViewController.swift in Sources */,
 				3C8BD25321A6C3B300ACFA70 /* UndelegateBandwidthIntent.swift in Sources */,
 				3CEF33BB21A507E700716AA2 /* CreateAccountIntent.swift in Sources */,
 				3C8BD24521A6C2FB00ACFA70 /* DelegateBandwidthResult.swift in Sources */,
@@ -1948,6 +1965,7 @@
 				3C592FCE219D6B8B00D7C9B9 /* VoteRequestImpl.swift in Sources */,
 				3C964C51219459D3003663EF /* EncryptedKeyPairData.swift in Sources */,
 				3C0EC8122193086800562A1B /* R.generated.swift in Sources */,
+				3C07009021A6FC79008F63D2 /* ConfirmBandwidthViewModel.swift in Sources */,
 				3C0ADD86219F37B10026649F /* DeleteAccounts.swift in Sources */,
 				3C340FD72193801B0017BEF9 /* CurrencyPairingViewModel.swift in Sources */,
 				3C8C6D982192D54000FC1A0D /* MxViewController.swift in Sources */,
@@ -1977,6 +1995,7 @@
 				3CC9A3AF219DB4F00002A25F /* ProxyVoterDetails.swift in Sources */,
 				3C6DF75B21A05CF600ADA892 /* AccountModel.swift in Sources */,
 				3C592FA0219D60D100D7C9B9 /* GetBandwidthRequestImpl.swift in Sources */,
+				3C07008E21A6FC79008F63D2 /* ConfirmBandwidthIntent.swift in Sources */,
 				3C6DF77D21A08B5100ADA892 /* BalanceViewController.swift in Sources */,
 				3C8BD24F21A6C3B300ACFA70 /* UndelegateBandwidthViewModel.swift in Sources */,
 				3CEF33C921A52A1900716AA2 /* ViewBlockProducerResult.swift in Sources */,
@@ -1996,6 +2015,7 @@
 				3C340FD82193801B0017BEF9 /* CurrencyPairingViewState.swift in Sources */,
 				3C1F1F7D21A332020075BD71 /* ReachProgressBar.swift in Sources */,
 				3C9BFB76219B359F00589936 /* EosAccount.swift in Sources */,
+				3C07008F21A6FC79008F63D2 /* ConfirmBandwidthViewState.swift in Sources */,
 				3CC9A38D219DA8480002A25F /* BlockProducerRequestImpl.swift in Sources */,
 				3C592FA2219D61AD00D7C9B9 /* ActionReceipt.swift in Sources */,
 				3C592FA6219D623300D7C9B9 /* TransferRequestImpl.swift in Sources */,
