@@ -1038,8 +1038,8 @@
 				3C8BD25A21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib */,
 				3C8BD23221A6C01300ACFA70 /* ManageBandwidthViewController.swift */,
 				3C8BD25421A6C72700ACFA70 /* ManageBandwidthBundle.swift */,
-				3C8BD23421A6C16F00ACFA70 /* BandwidthStrings.strings */,
 				3C07008421A6EDF2008F63D2 /* BandwidthFormBundle.swift */,
+				3C8BD23421A6C16F00ACFA70 /* BandwidthStrings.strings */,
 			);
 			path = bandwidth;
 			sourceTree = "<group>";

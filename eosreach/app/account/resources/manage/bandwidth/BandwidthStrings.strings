@@ -16,4 +16,11 @@
 	"delegate_bandwidth_transfer_label" = "Delegate funds permanently";
 	"delegate_bandwidth_button" = Delegate;
 	"undelegate_bandwidth_button" = Undelegate;
+	"confirm_delegate_title" = "Delegate Bandwidth";
+	"confirm_undelegate_title" = "Undelegate Bandwidth";
+	"confirm_delegate_to_label" = To;
+	"confirm_delegate_net_label" = Net;
+	"confirm_delegate_cpu_label" = Cpu;
+	"confirm_delegate_button" = Confirm;
+	"confirm_delegate_error_body" = "Failed to push transaction, please check your internet connection and try again.";
 }
