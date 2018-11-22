@@ -14,6 +14,8 @@ class ConfirmBandwidthViewController
     @IBOutlet weak var cpuLabel: UILabel!
     @IBOutlet weak var cpuValue: UILabel!
     @IBOutlet weak var confirmButton: ReachPrimaryButton!
+    @IBOutlet weak var delegateFundsPermanently: UILabel!
+    @IBOutlet weak var delegateFundsPermanentlySpacer: UIView!
     
     private lazy var bandwidthFormBundle = {
         return self.getDestinationBundle()!.model as! BandwidthFormBundle
@@ -27,6 +29,7 @@ class ConfirmBandwidthViewController
         netLabel.text = R.string.bandwidthStrings.confirm_delegate_net_label()
         cpuLabel.text = R.string.bandwidthStrings.confirm_delegate_cpu_label()
         confirmButton.setTitle(R.string.bandwidthStrings.confirm_delegate_button(), for: .normal)
+        delegateFundsPermanently.text = R.string.bandwidthStrings.confirm_delegate_transfer_funds()
     }
 
     override func intents() -> Observable<ConfirmBandwidthIntent> {
@@ -55,6 +58,10 @@ class ConfirmBandwidthViewController
                 toolBar.title = R.string.bandwidthStrings.confirm_delegate_title()
             case .undelegate:
                 toolBar.title = R.string.bandwidthStrings.confirm_undelegate_title()
+            }
+            if (bandwidthFormBundle.transfer) {
+                delegateFundsPermanently.visible()
+                delegateFundsPermanentlySpacer.visible()
             }
         case .onProgress:
             activityIndicator.start()

@@ -23,4 +23,5 @@
 	"confirm_delegate_cpu_label" = Cpu;
 	"confirm_delegate_button" = Confirm;
 	"confirm_delegate_error_body" = "Failed to push transaction, please check your internet connection and try again.";
+	"confirm_delegate_transfer_funds" = "Delegate funds permanently";
 }

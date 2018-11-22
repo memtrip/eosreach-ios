@@ -1185,6 +1185,27 @@
                                             <constraint firstAttribute="trailing" secondItem="fZI-nE-G2f" secondAttribute="trailing" constant="16" id="yOl-ce-pMA"/>
                                         </constraints>
                                     </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwn-Zj-JA0" userLabel="Spacer">
+                                        <rect key="frame" x="0.0" y="146" width="343" height="1"/>
+                                        <color key="backgroundColor" name="colorBorderTransparent"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="bGr-DC-2ES"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                <color key="value" name="colorBorderTransparent"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_delegate funds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCa-mh-XdV">
+                                        <rect key="frame" x="0.0" y="146" width="343" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="9om-xo-fO9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7A-DD-V9b" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
@@ -1216,6 +1237,8 @@
                         <outlet property="confirmButton" destination="b7A-DD-V9b" id="dyL-2i-OKj"/>
                         <outlet property="cpuLabel" destination="ftw-VA-qrn" id="Rlc-9t-gnc"/>
                         <outlet property="cpuValue" destination="fZI-nE-G2f" id="NlF-1K-ycR"/>
+                        <outlet property="delegateFundsPermanently" destination="WCa-mh-XdV" id="hVw-RO-AyV"/>
+                        <outlet property="delegateFundsPermanentlySpacer" destination="Gwn-Zj-JA0" id="U21-K9-bGC"/>
                         <outlet property="netLabel" destination="EQp-16-MVS" id="7dT-6T-xSK"/>
                         <outlet property="netValue" destination="m7b-Va-vRj" id="Noc-ma-joD"/>
                         <outlet property="toLabel" destination="kAQ-5h-Aw2" id="gfR-v4-iOR"/>
