@@ -50,12 +50,21 @@ class CastProxyVoteViewModel: MxViewModel<CastProxyVoteIntent, CastProxyVoteResu
                         // TODO: transaction log
                         return CastProxyVoteResult.onSuccess
                     } else {
-                        return CastProxyVoteResult.onGenericError
+                        return self.voteError(voteError: result.error!)
                     }
                 }
             }
         }.asObservable()
             .catchErrorJustReturn(CastProxyVoteResult.onGenericError)
             .startWith(CastProxyVoteResult.onProgress)
+    }
+    
+    private func voteError(voteError: VoteError) -> CastProxyVoteResult {
+        switch voteError {
+        case .withLog(let body):
+            return CastProxyVoteResult.viewLog(log: body)
+        case .generic:
+            return CastProxyVoteResult.onGenericError
+        }
     }
 }

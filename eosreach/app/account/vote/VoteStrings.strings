@@ -8,13 +8,14 @@
 	"vote_no_vote_instruction_label" = "It looks like you haven't voted for a block producer yet. Please vote for us, and help build the future of EOS on mobile.";
 	"vote_no_vote_producer_label" = memtripblock;
 	"vote_no_vote_give_us_your_vote_button" = "Give Us Your Vote";
-	"vote_no_vote_error_body" = "Could not process the vote, please check your internet connection and try again";
+	"vote_no_vote_error_body" = "Could not process the vote, please check your internet connection and try again.";
 	"cast_title" = "Cast Vote";
 	"cast_producers_vote_tab" = Producers;
 	"cast_proxy_vote_tab" = Proxy;
 	"cast_proxy_vote_explore_accounts_button" = "Explore Proxy Accounts";
 	"cast_proxy_vote_placeholder" = "Proxy vote account name";
 	"cast_proxy_vote_button" = Vote;
+	"cast_proxy_vote_error_body" = "Could not process the vote, please check your internet connection and try again.";
 	"cast_producers_add_button" = Add;
 	"cast_producers_add_from_list_button" = "Add From List";
 	"cast_producers_instructions_label" = "Vote for up to 30 Block Producer candidates.";

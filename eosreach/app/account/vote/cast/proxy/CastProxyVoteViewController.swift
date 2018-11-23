@@ -50,6 +50,7 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
         case .onGenericError:
             activityIndicator.stop()
             voteButton.visible()
+            showOKDialog(message: R.string.voteStrings.cast_proxy_vote_error_body())
         case .onSuccess:
             setDestinationBundle(bundle: SegueBundle(
                 identifier: R.segue.castProxyVoteViewController.castProxyVoteToAccount.identifier,
@@ -61,9 +62,11 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
             ))
             performSegue(withIdentifier: R.segue.castProxyVoteViewController.castProxyVoteToAccount, sender: self)
         case .viewLog(let log):
-            activityIndicator.stop()
-            voteButton.visible()
-            self.showTransactionLog(log: log)
+            showViewLog(viewLogHandler: { (_) in
+                self.activityIndicator.stop()
+                self.voteButton.visible()
+                self.showTransactionLog(log: log)
+            })
         case .navigateToExploreProxies:
             performSegue(withIdentifier: R.segue.castProxyVoteViewController.castProxyVoteToProxyVoterList, sender: self)
         }
