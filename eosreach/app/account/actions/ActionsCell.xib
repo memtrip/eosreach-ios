@@ -20,56 +20,56 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUk-wd-OR2" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
-                        <rect key="frame" x="8" y="8" width="359" height="50"/>
+                        <rect key="frame" x="8" y="8" width="359" height="64"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8xr-yy-gZ2">
-                                <rect key="frame" x="0.0" y="7" width="36" height="36"/>
+                                <rect key="frame" x="0.0" y="14" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8xr-yy-gZ2" secondAttribute="height" multiplier="1:1" id="DKV-NL-Q2h"/>
                                     <constraint firstAttribute="height" constant="36" id="b4u-y8-1Jo"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="memtripissue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-NP-Uzr" userLabel="account_name">
-                                <rect key="frame" x="44" y="4" width="109" height="21"/>
+                                <rect key="frame" x="52" y="12" width="109" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun 11 Nov 17:34:32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVk-9V-ggc" userLabel="date">
-                                <rect key="frame" x="44" y="27" width="115" height="15"/>
+                                <rect key="frame" x="52" y="37" width="115" height="15"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                <color key="textColor" name="typographyColorPrimary"/>
+                                <color key="textColor" name="typographyColorSecondary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.2345 EOS" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ur7-u2-j71" userLabel="balance">
-                                <rect key="frame" x="236" y="4" width="115" height="21"/>
+                                <rect key="frame" x="228" y="12" width="115" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVo-Vw-3nz" userLabel="fiat">
-                                <rect key="frame" x="322" y="27" width="29" height="15"/>
+                                <rect key="frame" x="314" y="37" width="29" height="15"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                <color key="textColor" name="typographyColorPrimary"/>
+                                <color key="textColor" name="typographyColorSecondary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="aTE-NP-Uzr" firstAttribute="leading" secondItem="8xr-yy-gZ2" secondAttribute="trailing" constant="8" id="5Hf-dp-xzw"/>
+                            <constraint firstItem="aTE-NP-Uzr" firstAttribute="leading" secondItem="8xr-yy-gZ2" secondAttribute="trailing" constant="16" id="5Hf-dp-xzw"/>
                             <constraint firstItem="8xr-yy-gZ2" firstAttribute="centerY" secondItem="YUk-wd-OR2" secondAttribute="centerY" id="6zN-ID-5R6"/>
-                            <constraint firstItem="aTE-NP-Uzr" firstAttribute="top" secondItem="YUk-wd-OR2" secondAttribute="top" constant="4" id="A5H-xa-PjQ"/>
-                            <constraint firstItem="Ur7-u2-j71" firstAttribute="top" secondItem="YUk-wd-OR2" secondAttribute="top" constant="4" id="AFO-85-693"/>
-                            <constraint firstAttribute="bottom" secondItem="KVk-9V-ggc" secondAttribute="bottom" constant="8" id="GE6-9f-SOB"/>
-                            <constraint firstAttribute="trailing" secondItem="Ur7-u2-j71" secondAttribute="trailing" constant="8" id="HBr-NF-TwS"/>
-                            <constraint firstAttribute="trailing" secondItem="eVo-Vw-3nz" secondAttribute="trailing" constant="8" id="JdT-m7-uQh"/>
-                            <constraint firstItem="eVo-Vw-3nz" firstAttribute="top" secondItem="Ur7-u2-j71" secondAttribute="bottom" constant="2" id="Lec-DZ-odY"/>
+                            <constraint firstItem="aTE-NP-Uzr" firstAttribute="top" secondItem="YUk-wd-OR2" secondAttribute="top" constant="12" id="A5H-xa-PjQ"/>
+                            <constraint firstItem="Ur7-u2-j71" firstAttribute="top" secondItem="YUk-wd-OR2" secondAttribute="top" constant="12" id="AFO-85-693"/>
+                            <constraint firstAttribute="bottom" secondItem="KVk-9V-ggc" secondAttribute="bottom" constant="12" id="GE6-9f-SOB"/>
+                            <constraint firstAttribute="trailing" secondItem="Ur7-u2-j71" secondAttribute="trailing" constant="16" id="HBr-NF-TwS"/>
+                            <constraint firstAttribute="trailing" secondItem="eVo-Vw-3nz" secondAttribute="trailing" constant="16" id="JdT-m7-uQh"/>
+                            <constraint firstItem="eVo-Vw-3nz" firstAttribute="top" secondItem="Ur7-u2-j71" secondAttribute="bottom" constant="4" id="Lec-DZ-odY"/>
                             <constraint firstItem="8xr-yy-gZ2" firstAttribute="leading" secondItem="YUk-wd-OR2" secondAttribute="leading" id="TAD-Tf-vzD"/>
-                            <constraint firstItem="KVk-9V-ggc" firstAttribute="top" secondItem="aTE-NP-Uzr" secondAttribute="bottom" constant="2" id="Uop-Lk-YTL"/>
-                            <constraint firstItem="KVk-9V-ggc" firstAttribute="leading" secondItem="8xr-yy-gZ2" secondAttribute="trailing" constant="8" id="y2e-Z7-BNR"/>
+                            <constraint firstItem="KVk-9V-ggc" firstAttribute="top" secondItem="aTE-NP-Uzr" secondAttribute="bottom" constant="4" id="Uop-Lk-YTL"/>
+                            <constraint firstItem="KVk-9V-ggc" firstAttribute="leading" secondItem="8xr-yy-gZ2" secondAttribute="trailing" constant="16" id="y2e-Z7-BNR"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwF-lJ-wCz">
-                        <rect key="frame" x="0.0" y="66" width="375" height="63.5"/>
+                        <rect key="frame" x="0.0" y="80" width="375" height="49.5"/>
                     </view>
                 </subviews>
                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -96,6 +96,9 @@
     <resources>
         <namedColor name="typographyColorPrimary">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="typographyColorSecondary">
+            <color red="0.90588235294117647" green="0.91764705882352937" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

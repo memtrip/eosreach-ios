@@ -20,7 +20,7 @@ class ActionsCell : SimpleTableViewCell<AccountAction> {
     override func populate(item: AccountAction) {
         accountNameLabel.text = item.transferInteractingAccountName
         balanceLabel.text = BalanceFormatter.formatEosBalance(balance: item.quantity)
-        dateLabel.text = item.currencyPairValue
+        dateLabel.text = item.formattedDate
         fiatLabel.text = item.currencyPairValue
         
         if (item.transferIncoming) {

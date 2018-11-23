@@ -822,16 +822,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_no_results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ym-tD-OoR">
-                                <rect key="frame" x="16" y="376" width="343" height="21"/>
+                                <rect key="frame" x="16" y="380" width="343" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNw-QZ-N2f" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <rect key="frame" x="16" y="114" width="343" height="537"/>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PEY-G5-7zb" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="169" y="368" width="37" height="37"/>
+                                <rect key="frame" x="169" y="372" width="37" height="37"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YiC-DU-dcJ" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
@@ -840,11 +840,11 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKr-WJ-GIK" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="8" y="76" width="359" height="30"/>
+                                <rect key="frame" x="16" y="76" width="343" height="30"/>
                                 <state key="normal" title="_transfer"/>
                             </button>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L14-9D-piY" customClass="ActionsTableView" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="106" width="375" height="561"/>
+                                <rect key="frame" x="8" y="122" width="359" height="537"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -853,21 +853,21 @@
                             <constraint firstItem="PEY-G5-7zb" firstAttribute="centerY" secondItem="L14-9D-piY" secondAttribute="centerY" id="B16-u1-7Cn"/>
                             <constraint firstItem="kti-v9-Gb1" firstAttribute="trailing" secondItem="YiC-DU-dcJ" secondAttribute="trailing" id="DTY-wP-Nvo"/>
                             <constraint firstItem="9Ym-tD-OoR" firstAttribute="leading" secondItem="kti-v9-Gb1" secondAttribute="leading" constant="16" id="Epd-A5-Eaz"/>
-                            <constraint firstItem="kti-v9-Gb1" firstAttribute="trailing" secondItem="EKr-WJ-GIK" secondAttribute="trailing" constant="8" id="G36-8Z-mmA"/>
+                            <constraint firstItem="kti-v9-Gb1" firstAttribute="trailing" secondItem="EKr-WJ-GIK" secondAttribute="trailing" constant="16" id="G36-8Z-mmA"/>
                             <constraint firstItem="kti-v9-Gb1" firstAttribute="trailing" secondItem="9Ym-tD-OoR" secondAttribute="trailing" constant="16" id="KS0-WF-fT5"/>
                             <constraint firstItem="EKr-WJ-GIK" firstAttribute="top" secondItem="YiC-DU-dcJ" secondAttribute="bottom" constant="8" id="LWG-v7-Qeu"/>
-                            <constraint firstItem="kti-v9-Gb1" firstAttribute="trailing" secondItem="cNw-QZ-N2f" secondAttribute="trailing" id="MQg-JW-g4s"/>
+                            <constraint firstItem="kti-v9-Gb1" firstAttribute="trailing" secondItem="cNw-QZ-N2f" secondAttribute="trailing" constant="16" id="MQg-JW-g4s"/>
                             <constraint firstItem="YiC-DU-dcJ" firstAttribute="top" secondItem="kti-v9-Gb1" secondAttribute="top" id="ZJ7-YH-7wA"/>
                             <constraint firstItem="9Ym-tD-OoR" firstAttribute="centerY" secondItem="L14-9D-piY" secondAttribute="centerY" id="ZW8-69-M37"/>
-                            <constraint firstItem="kti-v9-Gb1" firstAttribute="trailing" secondItem="L14-9D-piY" secondAttribute="trailing" id="fUQ-dg-zja"/>
-                            <constraint firstItem="L14-9D-piY" firstAttribute="top" secondItem="EKr-WJ-GIK" secondAttribute="bottom" id="gGM-kQ-dhJ"/>
+                            <constraint firstItem="kti-v9-Gb1" firstAttribute="trailing" secondItem="L14-9D-piY" secondAttribute="trailing" constant="8" id="fUQ-dg-zja"/>
+                            <constraint firstItem="L14-9D-piY" firstAttribute="top" secondItem="EKr-WJ-GIK" secondAttribute="bottom" constant="16" id="gGM-kQ-dhJ"/>
                             <constraint firstItem="PEY-G5-7zb" firstAttribute="centerX" secondItem="L14-9D-piY" secondAttribute="centerX" id="lFa-5z-iZe"/>
-                            <constraint firstItem="kti-v9-Gb1" firstAttribute="bottom" secondItem="L14-9D-piY" secondAttribute="bottom" id="ojc-SS-FqZ"/>
-                            <constraint firstItem="kti-v9-Gb1" firstAttribute="bottom" secondItem="cNw-QZ-N2f" secondAttribute="bottom" id="rCv-5F-pp0"/>
+                            <constraint firstItem="kti-v9-Gb1" firstAttribute="bottom" secondItem="L14-9D-piY" secondAttribute="bottom" constant="8" id="ojc-SS-FqZ"/>
+                            <constraint firstItem="kti-v9-Gb1" firstAttribute="bottom" secondItem="cNw-QZ-N2f" secondAttribute="bottom" constant="16" id="rCv-5F-pp0"/>
                             <constraint firstItem="YiC-DU-dcJ" firstAttribute="leading" secondItem="kti-v9-Gb1" secondAttribute="leading" id="rHf-TX-JVq"/>
-                            <constraint firstItem="EKr-WJ-GIK" firstAttribute="leading" secondItem="kti-v9-Gb1" secondAttribute="leading" constant="8" id="waD-Qs-mK2"/>
-                            <constraint firstItem="cNw-QZ-N2f" firstAttribute="leading" secondItem="kti-v9-Gb1" secondAttribute="leading" id="wy6-Od-95Y"/>
-                            <constraint firstItem="L14-9D-piY" firstAttribute="leading" secondItem="kti-v9-Gb1" secondAttribute="leading" id="yVp-1O-bYG"/>
+                            <constraint firstItem="EKr-WJ-GIK" firstAttribute="leading" secondItem="kti-v9-Gb1" secondAttribute="leading" constant="16" id="waD-Qs-mK2"/>
+                            <constraint firstItem="cNw-QZ-N2f" firstAttribute="leading" secondItem="kti-v9-Gb1" secondAttribute="leading" constant="16" id="wy6-Od-95Y"/>
+                            <constraint firstItem="L14-9D-piY" firstAttribute="leading" secondItem="kti-v9-Gb1" secondAttribute="leading" constant="8" id="yVp-1O-bYG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kti-v9-Gb1"/>
                     </view>

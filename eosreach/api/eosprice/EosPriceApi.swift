@@ -5,7 +5,7 @@ import eosswift
 class EosPriceApi {
     
     func getPrice(currency: String) -> Single<HttpResponse<Price>> {
-        return RxHttp<RequestBody, Price, PriceError>().single(
+        return RxHttp<RequestBody, Price, PriceError>(false).single(
             httpRequest: HttpRequest(
                 url: R.string.appStrings.app_reach_endpoint_url() + "price/\(currency)",
                 method: "GET",

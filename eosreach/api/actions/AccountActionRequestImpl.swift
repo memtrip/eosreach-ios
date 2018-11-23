@@ -23,7 +23,7 @@ class AccountActionsRequestImpl : AccountActionsRequest {
             } else {
                 return Result<AccountActionList, AccountActionsError>(error: .generic)
             }
-            }.catchErrorJustReturn(Result<AccountActionList, AccountActionsError>(error: .generic))
+        }.catchErrorJustReturn(Result<AccountActionList, AccountActionsError>(error: .generic))
     }
 
     private func filterActionsForAccountName(
