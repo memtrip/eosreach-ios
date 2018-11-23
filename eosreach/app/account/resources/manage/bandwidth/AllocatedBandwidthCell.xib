@@ -20,34 +20,34 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMm-CY-aeO" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
-                        <rect key="frame" x="8" y="8" width="359" height="71"/>
+                        <rect key="frame" x="8" y="8" width="359" height="111.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_account_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV7-fj-Fet" userLabel="accountName">
-                                <rect key="frame" x="8" y="8" width="343" height="17"/>
+                                <rect key="frame" x="8" y="8" width="343" height="57.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="_cpu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4x-Ys-yeU" userLabel="CPU">
-                                <rect key="frame" x="8" y="29" width="167.5" height="13.5"/>
+                                <rect key="frame" x="8" y="69.5" width="167.5" height="13.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_net" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxC-XM-4CU" userLabel="NET">
-                                <rect key="frame" x="183.5" y="29" width="167.5" height="13.5"/>
+                                <rect key="frame" x="183.5" y="69.5" width="167.5" height="13.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_cpu_value" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYH-nd-AdL">
-                                <rect key="frame" x="8" y="42.5" width="167.5" height="20.5"/>
+                                <rect key="frame" x="8" y="83" width="167.5" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="_net_value" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0D-hY-c5c">
-                                <rect key="frame" x="183.5" y="42.5" width="167.5" height="20.5"/>
+                                <rect key="frame" x="183.5" y="83" width="167.5" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
@@ -74,9 +74,9 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnd-5k-icW">
-                        <rect key="frame" x="0.0" y="87" width="375" height="41.5"/>
+                        <rect key="frame" x="0.0" y="127.5" width="375" height="1"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="41.5" id="EtF-ZW-LKA"/>
+                            <constraint firstAttribute="height" constant="1" id="EtF-ZW-LKA"/>
                         </constraints>
                     </view>
                 </subviews>
