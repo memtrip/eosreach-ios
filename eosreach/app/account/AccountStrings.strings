@@ -33,4 +33,12 @@
 	"account_navigation_settings_button" = Settings;
 	"account_navigation_accounts_title" = Accounts;
 	"account_navigation_refresh_button" = Refresh;
+	"account_view_action_amount_label" = Amount;
+	"account_view_action_amount_value" = "%@ (%@)";
+	"account_view_action_to_label" = To;
+	"account_view_action_from_label" = From;
+	"account_view_action_date_label" = Date;
+	"account_view_action_memo_label" = Memo;
+	"account_view_action_view_block_explorer_button" = "View In Block Explorer";
+	"account_view_action_title" = "View Transfer Action";
 }

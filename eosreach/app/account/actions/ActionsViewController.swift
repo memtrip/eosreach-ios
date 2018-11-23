@@ -79,7 +79,10 @@ class ActionsViewController: MxViewController<ActionsIntent, ActionsResult, Acti
         case .onLoadMoreError:
             break // todo
         case .navigateToViewAction(let accountAction):
-            break // todo
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.actionsViewController.actionsToViewAction.identifier,
+                model: ViewActionBundle(accountAction: accountAction)))
+            performSegue(withIdentifier: R.segue.actionsViewController.actionsToViewAction, sender: self)
         case .navigateToTransfer(let contractAccountBalance):
             break // todo
         }

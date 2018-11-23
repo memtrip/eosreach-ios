@@ -155,6 +155,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         balanceViewController = R.storyboard.main.balanceViewController()
         balanceViewController!.accountName = accountView.eosAccount!.accountName
         balanceViewController!.accountBalanceList = accountView.balances!
+        balanceViewController!.readOnly = self.accountBundle.readOnly
         
         voteViewController = R.storyboard.main.voteViewController()
         voteViewController!.eosAccount = accountView.eosAccount

@@ -14,6 +14,7 @@ class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, Bala
     
     var accountName: String?
     var accountBalanceList: AccountBalanceList?
+    var readOnly = false
     
     func dataTableView() -> BalanceTableView {
         return balancesTableView as! BalanceTableView
@@ -69,7 +70,7 @@ class BalanceViewController: MxViewController<BalanceIntent, BalanceResult, Bala
             setDestinationBundle(bundle: SegueBundle(
                 identifier: R.segue.balanceViewController.balanceToActions.identifier,
                 model: ActionsBundle(
-                    contractAccountBalance: contractAccountBalance, readOnly: false)
+                    contractAccountBalance: contractAccountBalance, readOnly: readOnly)
             ))
             performSegue(withIdentifier: R.segue.balanceViewController.balanceToActions, sender: self)
         case .onAirdropEmpty:

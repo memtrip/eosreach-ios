@@ -278,6 +278,7 @@
 		3CB1D70721A8296C00C87EC9 /* ViewActionViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70221A8296B00C87EC9 /* ViewActionViewState.swift */; };
 		3CB1D70821A8296C00C87EC9 /* ViewActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70321A8296C00C87EC9 /* ViewActionViewController.swift */; };
 		3CB1D70921A8296C00C87EC9 /* ViewActionIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70421A8296C00C87EC9 /* ViewActionIntent.swift */; };
+		3CB1D70B21A82D8900C87EC9 /* ViewActionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70A21A82D8900C87EC9 /* ViewActionBundle.swift */; };
 		3CC9A389219DA76C0002A25F /* BlockProducerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */; };
 		3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */; };
 		3CC9A38D219DA8480002A25F /* BlockProducerRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */; };
@@ -659,6 +660,7 @@
 		3CB1D70221A8296B00C87EC9 /* ViewActionViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActionViewState.swift; sourceTree = "<group>"; };
 		3CB1D70321A8296C00C87EC9 /* ViewActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActionViewController.swift; sourceTree = "<group>"; };
 		3CB1D70421A8296C00C87EC9 /* ViewActionIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActionIntent.swift; sourceTree = "<group>"; };
+		3CB1D70A21A82D8900C87EC9 /* ViewActionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewActionBundle.swift; sourceTree = "<group>"; };
 		3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerDetails.swift; sourceTree = "<group>"; };
 		3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRequest.swift; sourceTree = "<group>"; };
 		3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRequestImpl.swift; sourceTree = "<group>"; };
@@ -966,6 +968,7 @@
 				3CB1D70321A8296C00C87EC9 /* ViewActionViewController.swift */,
 				3CB1D70121A8296B00C87EC9 /* ViewActionViewModel.swift */,
 				3CB1D70221A8296B00C87EC9 /* ViewActionViewState.swift */,
+				3CB1D70A21A82D8900C87EC9 /* ViewActionBundle.swift */,
 				3C1F1F8D21A359080075BD71 /* ActionsIntent.swift */,
 				3C1F1F8E21A359080075BD71 /* ActionsResult.swift */,
 				3C1F1F8B21A359080075BD71 /* ActionsViewController.swift */,
@@ -2199,6 +2202,7 @@
 				3C8BD25221A6C3B300ACFA70 /* UndelegateBandwidthResult.swift in Sources */,
 				3CC9A3D9219DF6120002A25F /* SimpleTableViewCell.swift in Sources */,
 				3C8C6D9C2192D58E00FC1A0D /* Copy.swift in Sources */,
+				3CB1D70B21A82D8900C87EC9 /* ViewActionBundle.swift in Sources */,
 				3CC9E70F21A5A4180050BA57 /* CastProducersVoteViewState.swift in Sources */,
 				3C6DF78821A08D8700ADA892 /* VoteViewController.swift in Sources */,
 				3CC9A3D3219DF14D0002A25F /* RegisteredBlockProducersTableView.swift in Sources */,
