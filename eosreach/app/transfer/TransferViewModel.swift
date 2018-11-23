@@ -16,7 +16,7 @@ class TransferViewModel: MxViewModel<TransferIntent, TransferResult, TransferVie
             return just(validateForm(transferFormBundle: TransferFormBundle(
                 contractAccountBalance: contractAccountBalance,
                 toAccountName: toAccountName,
-                amount: amount,
+                amount: BalanceFormatter.formatEosBalance(amount: amount, symbol: contractAccountBalance.balance.symbol),
                 memo: memo)))
         }
     }

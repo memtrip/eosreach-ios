@@ -43,7 +43,7 @@ class SellRamViewController : MxViewController<SellRamIntent, SellRamResult, Sel
             break
         case .navigateToConfirmRamForm(let kilobytes):
             setDestinationBundle(bundle: SegueBundle(
-                identifier: R.segue.SellRamViewController.SellRamToConfirmRam.identifier,
+                identifier: R.segue.sellRamViewController.sellRamToConfirmRam.identifier,
                 model: RamBundle(
                     contractAccountBalance: manageRamBundle!.contractAccountBalance,
                     costPerKb: manageRamBundle!.costPerKb!,
@@ -51,7 +51,7 @@ class SellRamViewController : MxViewController<SellRamIntent, SellRamResult, Sel
                     commitType: RamBundle.CommitType.buy
                 )
             ))
-            performSegue(withIdentifier: R.segue.SellRamViewController.SellRamToConfirmRam, sender: self)
+            performSegue(withIdentifier: R.segue.sellRamViewController.sellRamToConfirmRam, sender: self)
         case .updateCostPerKiloByte(let eosCost):
             estimatedValue.text = R.string.ramStrings.manage_ram_estimated_value_label(eosCost)
         case .emptyRamError:

@@ -12,5 +12,6 @@
 	"transfer_confirm_from" = From;
 	"transfer_confirm_memo" = Memo;
 	"transfer_confirm_button" = Confirm;
+	"transfer_confirm_amount_value" = "%@ (%@)";
 	"transfer_confirm_generic_error" = "We could not process your transfer, please check your internet connection and try again.";
 }

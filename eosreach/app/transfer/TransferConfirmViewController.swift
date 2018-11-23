@@ -23,7 +23,7 @@ class TransferConfirmViewController : MxViewController<TransferConfirmIntent, Tr
     override func viewDidLoad() {
         super.viewDidLoad()
         setToolbar(toolbar: toolBar)
-        toolBar.text = R.string.transferStrings.transfer_confirm_title()
+        toolBar.title = R.string.transferStrings.transfer_confirm_title()
         amountLabel.text = R.string.transferStrings.transfer_confirm_amount()
         toLabel.text = R.string.transferStrings.transfer_confirm_to()
         fromLabel.text = R.string.transferStrings.transfer_confirm_from()
@@ -35,7 +35,7 @@ class TransferConfirmViewController : MxViewController<TransferConfirmIntent, Tr
         return Observable.merge(
             Observable.just(TransferConfirmIntent.start(transferFormBundle: self.transferFormBundle)),
             confirmButton.rx.tap.map {
-                TransferConfirmIntent.start(transferFormBundle: self.transferFormBundle)
+                TransferConfirmIntent.transfer(transferFormBundle: self.transferFormBundle)
             }
         )
     }
@@ -49,12 +49,15 @@ class TransferConfirmViewController : MxViewController<TransferConfirmIntent, Tr
         case .idle:
             break
         case .populate(let transferFormBundle):
-            amountValueLabel.text = BalanceFormatter.formatEosBalance(
-                balance: BalanceFormatter.create(
-                    amount: transferFormBundle.amount,
-                    symbol: transferFormBundle.contractAccountBalance.balance.symbol
-                )
-            )
+            let balance = BalanceFormatter.deserialize(balance: transferFormBundle.amount)
+            let formattedEosAmount = BalanceFormatter.formatEosBalance(balance: balance)
+            let currencyAmount = CurrencyPairFormatter.formatAmountCurrencyPairValue(
+                amount: balance.amount,
+                eosPrice: transferFormBundle.contractAccountBalance.exchangeRate)
+            
+            amountValueLabel.text = R.string.transferStrings.transfer_confirm_amount_value(
+                formattedEosAmount, currencyAmount)
+            
             toValueLabel.setTitle(transferFormBundle.toAccountName, for: .normal)
             fromValueLabel.setTitle(transferFormBundle.contractAccountBalance.accountName, for: .normal)
             memoTextView.text = transferFormBundle.memo
@@ -73,7 +76,9 @@ class TransferConfirmViewController : MxViewController<TransferConfirmIntent, Tr
         case .errorWithLog(let log):
             activityIndicator.stop()
             confirmButton.visible()
-            self.showTransactionLog(log: log)
+            showViewLog(viewLogHandler: { _ in
+                self.showTransactionLog(log: log)
+            })
         }
     }
 
