@@ -26,6 +26,7 @@ class ActionsViewController: MxViewController<ActionsIntent, ActionsResult, Acti
         toolBar.title = actionsBundle.contractAccountBalance.accountName
         setToolbar(toolbar: toolBar)
         transferButton.setTitle(R.string.accountStrings.account_actions_transfer_button(), for: .normal)
+        noResults.text = R.string.accountStrings.account_actions_no_results_body()
         
         if (self.actionsBundle.readOnly) {
             transferButton.goneCollapsed()

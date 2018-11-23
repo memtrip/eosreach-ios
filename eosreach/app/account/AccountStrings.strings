@@ -23,6 +23,7 @@
 	"account_actions_transfer_button" = Transfer;
 	"account_actions_generic_error_title" = "Failed to fetch actions";
 	"account_actions_generic_error_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
+	"account_actions_no_results_body" = "This account balance does not have any actions.";
 	"accounts_navigation_error_title" = "Failed to fetch accounts";
 	"accounts_navigation_error_body" = "If this problem persists please select a different blockchain endpoint in Settings.";
 	"accounts_navigation_no_accounts_error_title" = "No accounts";
