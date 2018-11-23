@@ -69,6 +69,9 @@
 		3C0ADD99219F3AEB0026649F /* GetTransactionLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD98219F3AEB0026649F /* GetTransactionLogs.swift */; };
 		3C0ADD9B219F3B230026649F /* InsertTransactionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD9A219F3B230026649F /* InsertTransactionLog.swift */; };
 		3C0ADD9D219F3E140026649F /* scope_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD9C219F3E140026649F /* scope_types.swift */; };
+		3C0C04B321A8877400F5F7A7 /* ReachNetCpuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04B221A8877400F5F7A7 /* ReachNetCpuView.swift */; };
+		3C0C04B521A8878000F5F7A7 /* ReachNetCpuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0C04B421A8878000F5F7A7 /* ReachNetCpuView.xib */; };
+		3C0C04B721A8881700F5F7A7 /* ReachBorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04B621A8881700F5F7A7 /* ReachBorderLabel.swift */; };
 		3C0EC80A2192FAD300562A1B /* ui_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8092192FAD300562A1B /* ui_types.swift */; };
 		3C0EC80C2192FAF900562A1B /* ReachButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC80B2192FAF900562A1B /* ReachButton.swift */; };
 		3C0EC8122193086800562A1B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8112193086800562A1B /* R.generated.swift */; };
@@ -461,6 +464,9 @@
 		3C0ADD98219F3AEB0026649F /* GetTransactionLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionLogs.swift; sourceTree = "<group>"; };
 		3C0ADD9A219F3B230026649F /* InsertTransactionLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTransactionLog.swift; sourceTree = "<group>"; };
 		3C0ADD9C219F3E140026649F /* scope_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scope_types.swift; sourceTree = "<group>"; };
+		3C0C04B221A8877400F5F7A7 /* ReachNetCpuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachNetCpuView.swift; sourceTree = "<group>"; };
+		3C0C04B421A8878000F5F7A7 /* ReachNetCpuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReachNetCpuView.xib; sourceTree = "<group>"; };
+		3C0C04B621A8881700F5F7A7 /* ReachBorderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachBorderLabel.swift; sourceTree = "<group>"; };
 		3C0EC8092192FAD300562A1B /* ui_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ui_types.swift; sourceTree = "<group>"; };
 		3C0EC80B2192FAF900562A1B /* ReachButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachButton.swift; sourceTree = "<group>"; };
 		3C0EC8112193086800562A1B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -843,9 +849,19 @@
 			path = transaction;
 			sourceTree = "<group>";
 		};
+		3C0C04B121A8875F00F5F7A7 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				3C0C04B221A8877400F5F7A7 /* ReachNetCpuView.swift */,
+				3C0C04B421A8878000F5F7A7 /* ReachNetCpuView.xib */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 		3C0EC8082192FA5700562A1B /* uikit */ = {
 			isa = PBXGroup;
 			children = (
+				3C0C04B121A8875F00F5F7A7 /* resource */,
 				3C0ADD68219F218B0026649F /* account */,
 				3CC9A3CF219DED760002A25F /* tableview */,
 				3CC9A3C6219DCEDC0002A25F /* error */,
@@ -859,6 +875,7 @@
 				3C1F1F7C21A332020075BD71 /* ReachProgressBar.swift */,
 				3CEF33CC21A52EE900716AA2 /* ReachBorderView.swift */,
 				3C07008621A6FA49008F63D2 /* ReachSwitch.swift */,
+				3C0C04B621A8881700F5F7A7 /* ReachBorderLabel.swift */,
 			);
 			path = uikit;
 			sourceTree = "<group>";
@@ -1803,6 +1820,7 @@
 				3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */,
 				3CC9A3D7219DF2B90002A25F /* RegisteredBlockProducersCell.xib in Resources */,
 				3C1A972721A3DABD00C30A75 /* BlockProducerStrings.strings in Resources */,
+				3C0C04B521A8878000F5F7A7 /* ReachNetCpuView.xib in Resources */,
 				3C340FCC219368C30017BEF9 /* SettingsStrings.strings in Resources */,
 				3CC9E72921A5C7520050BA57 /* ProxyStrings.strings in Resources */,
 				3C7F0DFE2194AC2A00E72DD1 /* ExploreStrings.strings in Resources */,
@@ -2152,6 +2170,7 @@
 				3C0EC829219350DE00562A1B /* ImportKeyResult.swift in Sources */,
 				3CCE9C2421A2B11F0050910D /* AccountRenderer.swift in Sources */,
 				3C964C3921938C71003663EF /* EosEndpointViewModel.swift in Sources */,
+				3C0C04B721A8881700F5F7A7 /* ReachBorderLabel.swift in Sources */,
 				3C14FA3F21A0A1C600B8255F /* AccountUseCase.swift in Sources */,
 				3C7F0DEC2194A17000E72DD1 /* ActiveBlockProducersResult.swift in Sources */,
 				3CC9E6F321A56AAE0050BA57 /* ViewProxyVoterIntent.swift in Sources */,
@@ -2212,6 +2231,7 @@
 				3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */,
 				3CB1D71721A85B5100C87EC9 /* TransferViewModel.swift in Sources */,
 				3C8BD24721A6C2FB00ACFA70 /* DelegateBandwidthViewModel.swift in Sources */,
+				3C0C04B321A8877400F5F7A7 /* ReachNetCpuView.swift in Sources */,
 				3C9BFB8A219B366700589936 /* ContractAccountBalance.swift in Sources */,
 				3C6DF79321A090F300ADA892 /* ResourcesResult.swift in Sources */,
 				3C6DF79B21A0934600ADA892 /* AccountNavigationIntent.swift in Sources */,

@@ -20,6 +20,9 @@
 	"account_resources_ram_graph_title" = RAM;
 	"account_resources_cpu_graph_title" = CPU;
 	"account_resources_net_graph_title" = NET;
+	"account_resources_staked_title" = STAKED;
+	"account_resources_delegated_title" = DELEGATED;
+	"account_resources_refund_title" = REFUND;
 	"account_actions_transfer_button" = Transfer;
 	"account_actions_generic_error_title" = "Failed to fetch actions";
 	"account_actions_generic_error_body" = "If this problem persists please select a different blockchain endpoint in Settings.";

@@ -12,4 +12,7 @@
 	"app_dialog_view_log_body" = "An error occurred while processing this transaction, see the log for more information.";
 	"app_dialog_view_log_positive_button" = "View Log";
 	"app_dialog_view_log_negative_button" = Cancel;
+	"app_uitkit_cpu_label" = CPU;
+	"app_uitkit_net_label" = NET;
+	"app_empty_value" = "-";
 }

@@ -2184,62 +2184,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_manage_resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTz-Lt-Jsq">
+                                <rect key="frame" x="16" y="36" width="343" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJU-VV-zAW">
+                                <rect key="frame" x="16" y="68" width="343" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQe-aP-fSF" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="179.5" y="2" width="163.5" height="30"/>
+                                        <state key="normal" title="_ram"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9o-EB-uTw" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="2" width="163.5" height="30"/>
+                                        <state key="normal" title="_bandwidth"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="l9o-EB-uTw" firstAttribute="width" secondItem="fQe-aP-fSF" secondAttribute="width" id="7wO-r8-NZm"/>
+                                    <constraint firstItem="fQe-aP-fSF" firstAttribute="leading" secondItem="l9o-EB-uTw" secondAttribute="trailing" constant="16" id="CGW-Ty-AYA"/>
+                                    <constraint firstAttribute="trailing" secondItem="fQe-aP-fSF" secondAttribute="trailing" id="Ii5-Wm-gbM"/>
+                                    <constraint firstItem="fQe-aP-fSF" firstAttribute="centerY" secondItem="PJU-VV-zAW" secondAttribute="centerY" id="UIa-f9-wLS"/>
+                                    <constraint firstItem="l9o-EB-uTw" firstAttribute="centerY" secondItem="PJU-VV-zAW" secondAttribute="centerY" id="d0l-YR-OzB"/>
+                                    <constraint firstAttribute="height" constant="34" id="wUw-Ep-2kl"/>
+                                    <constraint firstItem="l9o-EB-uTw" firstAttribute="leading" secondItem="PJU-VV-zAW" secondAttribute="leading" id="yKu-du-QZo"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIO-oK-VUt">
-                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <rect key="frame" x="16" y="118" width="343" height="533"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="AIq-zK-4GD">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="264"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="422"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_manage_resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTz-Lt-Jsq">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <color key="textColor" name="typographyColorPrimary"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJU-VV-zAW">
-                                                <rect key="frame" x="0.0" y="32" width="343" height="34"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQe-aP-fSF" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
-                                                        <rect key="frame" x="179.5" y="2" width="163.5" height="30"/>
-                                                        <state key="normal" title="_ram"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9o-EB-uTw" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="2" width="163.5" height="30"/>
-                                                        <state key="normal" title="_bandwidth"/>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="l9o-EB-uTw" firstAttribute="width" secondItem="fQe-aP-fSF" secondAttribute="width" id="7wO-r8-NZm"/>
-                                                    <constraint firstItem="fQe-aP-fSF" firstAttribute="leading" secondItem="l9o-EB-uTw" secondAttribute="trailing" constant="16" id="CGW-Ty-AYA"/>
-                                                    <constraint firstAttribute="trailing" secondItem="fQe-aP-fSF" secondAttribute="trailing" id="Ii5-Wm-gbM"/>
-                                                    <constraint firstItem="fQe-aP-fSF" firstAttribute="centerY" secondItem="PJU-VV-zAW" secondAttribute="centerY" id="UIa-f9-wLS"/>
-                                                    <constraint firstItem="l9o-EB-uTw" firstAttribute="centerY" secondItem="PJU-VV-zAW" secondAttribute="centerY" id="d0l-YR-OzB"/>
-                                                    <constraint firstAttribute="height" constant="34" id="wUw-Ep-2kl"/>
-                                                    <constraint firstItem="l9o-EB-uTw" firstAttribute="leading" secondItem="PJU-VV-zAW" secondAttribute="leading" id="yKu-du-QZo"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n76-2W-To4" userLabel="RAM graph" customClass="ResourceGraphView" customModule="eosreach" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="74" width="343" height="58"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="58" id="9xp-ad-IGy"/>
+                                                    <constraint firstAttribute="height" constant="64" id="9xp-ad-IGy"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2P-Ed-1X9" userLabel="CPU graph" customClass="ResourceGraphView" customModule="eosreach" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="140" width="343" height="58"/>
+                                                <rect key="frame" x="0.0" y="64" width="343" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="58" id="IYy-fa-C9U"/>
+                                                    <constraint firstAttribute="height" constant="64" id="IYy-fa-C9U"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zO-NL-4fd" userLabel="NET graph" customClass="ResourceGraphView" customModule="eosreach" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="206" width="343" height="58"/>
+                                                <rect key="frame" x="0.0" y="128" width="343" height="72"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="58" id="djt-mm-LT7"/>
+                                                    <constraint firstAttribute="height" constant="72" id="djt-mm-LT7"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_staked_label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlp-Hr-sns">
+                                                <rect key="frame" x="0.0" y="200" width="343" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <color key="textColor" name="typographyColorPrimary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9a-Hs-ZIO" customClass="ReachNetCpuView" customModule="eosreach" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="218" width="343" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="k0G-T1-hjI"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_delegated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoN-OM-dot">
+                                                <rect key="frame" x="0.0" y="274" width="343" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <color key="textColor" name="typographyColorPrimary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBh-Kz-hcB" customClass="ReachNetCpuView" customModule="eosreach" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="292" width="343" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="dRS-Sc-hf2"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_refund" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwG-OB-k9c">
+                                                <rect key="frame" x="0.0" y="348" width="343" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <color key="textColor" name="typographyColorPrimary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0N-YF-ihm" customClass="ReachNetCpuView" customModule="eosreach" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="366" width="343" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="2Nw-AR-Z7O"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="PJU-VV-zAW" firstAttribute="top" secondItem="BTz-Lt-Jsq" secondAttribute="bottom" constant="8" id="1pi-f7-eTb"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -2252,9 +2285,15 @@
                             </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="vIO-oK-VUt" firstAttribute="top" secondItem="dQ6-ui-eju" secondAttribute="top" constant="16" id="0bq-bL-dbO"/>
                             <constraint firstItem="vIO-oK-VUt" firstAttribute="leading" secondItem="dQ6-ui-eju" secondAttribute="leading" constant="16" id="4aH-bx-yj2"/>
+                            <constraint firstItem="BTz-Lt-Jsq" firstAttribute="leading" secondItem="dQ6-ui-eju" secondAttribute="leading" constant="16" id="4lX-Va-XBo"/>
                             <constraint firstItem="vIO-oK-VUt" firstAttribute="trailing" secondItem="dQ6-ui-eju" secondAttribute="trailing" constant="-16" id="Btu-t3-oOy"/>
+                            <constraint firstItem="dQ6-ui-eju" firstAttribute="trailing" secondItem="PJU-VV-zAW" secondAttribute="trailing" constant="16" id="OsX-3i-zaP"/>
+                            <constraint firstItem="vIO-oK-VUt" firstAttribute="top" secondItem="PJU-VV-zAW" secondAttribute="bottom" constant="16" id="boR-X9-1fw"/>
+                            <constraint firstItem="PJU-VV-zAW" firstAttribute="top" secondItem="BTz-Lt-Jsq" secondAttribute="bottom" constant="8" id="dsb-AL-BtU"/>
+                            <constraint firstItem="PJU-VV-zAW" firstAttribute="leading" secondItem="dQ6-ui-eju" secondAttribute="leading" constant="16" id="jI9-JD-4aE"/>
+                            <constraint firstItem="BTz-Lt-Jsq" firstAttribute="top" secondItem="dQ6-ui-eju" secondAttribute="top" constant="16" id="tOJ-AX-j3d"/>
+                            <constraint firstItem="dQ6-ui-eju" firstAttribute="trailing" secondItem="BTz-Lt-Jsq" secondAttribute="trailing" constant="16" id="uJZ-5S-2Ns"/>
                             <constraint firstItem="vIO-oK-VUt" firstAttribute="bottom" secondItem="dQ6-ui-eju" secondAttribute="bottom" constant="-16" id="z21-n0-DQI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dQ6-ui-eju"/>
@@ -2263,10 +2302,16 @@
                         <outlet property="bandwidthButton" destination="l9o-EB-uTw" id="dXK-cc-pMs"/>
                         <outlet property="buttonContainer" destination="PJU-VV-zAW" id="0Ez-H9-xxr"/>
                         <outlet property="cpuResourceGraph" destination="n2P-Ed-1X9" id="Nn6-A6-Mbi"/>
+                        <outlet property="delegatedLabel" destination="XoN-OM-dot" id="92O-ts-vbZ"/>
+                        <outlet property="delegatedNetCpuView" destination="vBh-Kz-hcB" id="Vcq-ui-REY"/>
                         <outlet property="manageResources" destination="BTz-Lt-Jsq" id="Dwg-Lh-XXG"/>
                         <outlet property="netResourceGraph" destination="7zO-NL-4fd" id="wMI-35-Xyb"/>
                         <outlet property="ramButton" destination="fQe-aP-fSF" id="B2N-j0-Mb3"/>
                         <outlet property="ramResourceGraph" destination="n76-2W-To4" id="wUa-cI-fB7"/>
+                        <outlet property="refundLabel" destination="FwG-OB-k9c" id="6QS-HF-fcs"/>
+                        <outlet property="refundNetCpuView" destination="s0N-YF-ihm" id="zsf-Xn-MgY"/>
+                        <outlet property="stakedLabel" destination="Zlp-Hr-sns" id="zbH-3d-7ty"/>
+                        <outlet property="stakedReachNetCpuView" destination="q9a-Hs-ZIO" id="PDJ-VL-7Pc"/>
                         <segue destination="6Ma-8z-zbj" kind="show" identifier="resourcesToManageBandwidth" id="c9J-cM-x7a"/>
                         <segue destination="3Wb-zP-H9V" kind="show" identifier="resourcesToManageRam" id="EfA-X7-MxP"/>
                     </connections>
@@ -2590,6 +2635,7 @@
                         <outlet property="producersInstruction" destination="78h-YI-OhI" id="Yo4-QW-gSo"/>
                         <outlet property="tableView" destination="2hf-mb-jm0" id="bUL-Pm-XsT"/>
                         <outlet property="voteButton" destination="aAU-Rz-t8J" id="MD1-5y-BIU"/>
+                        <segue destination="tgP-tV-kRI" kind="show" identifier="castProducersVoteToAccount" id="cAT-yL-HS7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cw-kQ-Pix" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2643,6 +2689,7 @@
                         <outlet property="proxyVoteAccountTextField" destination="XQP-d0-zZj" id="EdS-u3-aJy"/>
                         <outlet property="voteButton" destination="gL9-Nm-dJN" id="Tyv-kf-vfJ"/>
                         <segue destination="rPb-Ty-ems" kind="show" identifier="castProxyVoteToProxyVoterList" id="mMh-Tz-Zbo"/>
+                        <segue destination="tgP-tV-kRI" kind="show" identifier="castProxyVoteToAccount" id="rCe-JF-jov"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eu1-EB-mwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3063,7 +3110,7 @@
         <segue reference="2pO-q1-hHi"/>
         <segue reference="wQx-Tz-eH5"/>
         <segue reference="9Tj-Qt-8rK"/>
-        <segue reference="nRe-Ud-1BW"/>
+        <segue reference="cAT-yL-HS7"/>
         <segue reference="nIH-HN-fGl"/>
         <segue reference="EMU-T5-0SR"/>
         <segue reference="uYP-iu-Ijf"/>

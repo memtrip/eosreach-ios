@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32A-fV-Vat" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuS-7O-ZDx" customClass="ReachBorderView" customModule="eosreach" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="359" height="37"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ybr-0X-YMS">
@@ -29,18 +29,20 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tap-4a-wVP">
-                                <rect key="frame" x="296" y="2" width="55" height="30"/>
+                                <rect key="frame" x="296" y="4" width="55" height="29"/>
                                 <state key="normal" title="Remove">
                                     <color key="titleColor" name="typographyColorPrimary"/>
                                 </state>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Tap-4a-wVP" firstAttribute="top" secondItem="32A-fV-Vat" secondAttribute="top" constant="2" id="4dX-Z0-PVB"/>
-                            <constraint firstItem="ybr-0X-YMS" firstAttribute="leading" secondItem="32A-fV-Vat" secondAttribute="leading" constant="8" id="Czb-YD-7yP"/>
-                            <constraint firstItem="ybr-0X-YMS" firstAttribute="centerY" secondItem="32A-fV-Vat" secondAttribute="centerY" id="HZp-jp-uav"/>
-                            <constraint firstAttribute="trailing" secondItem="Tap-4a-wVP" secondAttribute="trailing" constant="8" id="R9T-bo-TYn"/>
-                            <constraint firstItem="Tap-4a-wVP" firstAttribute="leading" secondItem="ybr-0X-YMS" secondAttribute="trailing" constant="8" id="Z6U-Ka-zyt"/>
+                            <constraint firstItem="Tap-4a-wVP" firstAttribute="leading" secondItem="ybr-0X-YMS" secondAttribute="trailing" constant="8" id="17N-Hg-od4"/>
+                            <constraint firstAttribute="trailing" secondItem="Tap-4a-wVP" secondAttribute="trailing" constant="8" id="DfN-Bc-Lui"/>
+                            <constraint firstItem="Tap-4a-wVP" firstAttribute="centerY" secondItem="cuS-7O-ZDx" secondAttribute="centerY" id="cZB-f8-uGe"/>
+                            <constraint firstItem="ybr-0X-YMS" firstAttribute="leading" secondItem="cuS-7O-ZDx" secondAttribute="leading" constant="8" id="ibg-WA-wN2"/>
+                            <constraint firstAttribute="bottom" secondItem="Tap-4a-wVP" secondAttribute="bottom" constant="4" id="vT3-0n-RnR"/>
+                            <constraint firstItem="ybr-0X-YMS" firstAttribute="centerY" secondItem="cuS-7O-ZDx" secondAttribute="centerY" id="wy7-f5-3k7"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGE-ta-TY9">
@@ -49,12 +51,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="hGE-ta-TY9" secondAttribute="bottom" id="0c5-cN-fZk"/>
-                    <constraint firstAttribute="trailing" secondItem="32A-fV-Vat" secondAttribute="trailing" constant="8" id="36w-Ge-DkS"/>
-                    <constraint firstItem="hGE-ta-TY9" firstAttribute="top" secondItem="32A-fV-Vat" secondAttribute="bottom" constant="8" id="HWi-M7-yxw"/>
-                    <constraint firstItem="32A-fV-Vat" firstAttribute="leading" secondItem="WUV-fH-f8g" secondAttribute="leading" constant="8" id="JX6-U9-Bsh"/>
+                    <constraint firstItem="cuS-7O-ZDx" firstAttribute="top" secondItem="WUV-fH-f8g" secondAttribute="top" constant="8" id="1se-D7-Bfa"/>
                     <constraint firstItem="hGE-ta-TY9" firstAttribute="leading" secondItem="WUV-fH-f8g" secondAttribute="leading" id="NRn-jh-riB"/>
                     <constraint firstItem="hGE-ta-TY9" firstAttribute="top" secondItem="WUV-fH-f8g" secondAttribute="top" constant="53" id="THj-oK-eqt"/>
-                    <constraint firstItem="32A-fV-Vat" firstAttribute="top" secondItem="WUV-fH-f8g" secondAttribute="top" constant="8" id="fkT-co-rdd"/>
+                    <constraint firstItem="hGE-ta-TY9" firstAttribute="top" secondItem="cuS-7O-ZDx" secondAttribute="bottom" constant="8" id="eGG-mi-Jao"/>
+                    <constraint firstAttribute="trailing" secondItem="cuS-7O-ZDx" secondAttribute="trailing" constant="8" id="fCD-j2-h3w"/>
+                    <constraint firstItem="cuS-7O-ZDx" firstAttribute="leading" secondItem="WUV-fH-f8g" secondAttribute="leading" constant="8" id="k9o-w3-anK"/>
                     <constraint firstAttribute="trailing" secondItem="hGE-ta-TY9" secondAttribute="trailing" id="pye-R8-XGh"/>
                 </constraints>
             </tableViewCellContentView>

@@ -12,6 +12,12 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
     @IBOutlet weak var ramResourceGraph: ResourceGraphView!
     @IBOutlet weak var cpuResourceGraph: ResourceGraphView!
     @IBOutlet weak var netResourceGraph: ResourceGraphView!
+    @IBOutlet weak var stakedLabel: UILabel!
+    @IBOutlet weak var stakedReachNetCpuView: ReachNetCpuView!
+    @IBOutlet weak var delegatedLabel: UILabel!
+    @IBOutlet weak var delegatedNetCpuView: ReachNetCpuView!
+    @IBOutlet weak var refundLabel: UILabel!
+    @IBOutlet weak var refundNetCpuView: ReachNetCpuView!
     
     var readOnly = false
     var eosAccount: EosAccount?
@@ -26,6 +32,9 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
         manageResources.text = R.string.accountStrings.account_resources_title()
         bandwidthButton.setTitle(R.string.accountStrings.account_resources_bandwidth_button(), for: .normal)
         ramButton.setTitle(R.string.accountStrings.account_resources_ram_button(), for: .normal)
+        stakedLabel.text = R.string.accountStrings.account_resources_staked_title()
+        delegatedLabel.text = R.string.accountStrings.account_resources_delegated_title()
+        refundLabel.text = R.string.accountStrings.account_resources_refund_title()
         
         if (readOnly) {
             manageResources.removeFromSuperview()
@@ -89,50 +98,55 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
     }
     
     func emptyStakedResources() {
+        stakedLabel.removeFromSuperview()
+        stakedReachNetCpuView.removeFromSuperview()
     }
     
     func populateNetStake(formattedBalance: String) {
-        
+        stakedReachNetCpuView.netValueLabel.text = formattedBalance
     }
     
     func emptyNetStake() {
-        
+        stakedReachNetCpuView.netValueLabel.text = R.string.appStrings.app_empty_value()
     }
     
     func populateCpuStake(formattedBalance: String) {
-        
+        stakedReachNetCpuView.cpuValueLabel.text = formattedBalance
     }
     
     func emptyCpuStake() {
-        
+        stakedReachNetCpuView.cpuValueLabel.text = R.string.appStrings.app_empty_value()
     }
     
     func emptyDelegatedResources() {
-        
+        delegatedLabel.removeFromSuperview()
+        delegatedNetCpuView.removeFromSuperview()
     }
     
     func populateNetDelegated(formattedBalance: String) {
-        
+        delegatedNetCpuView.netValueLabel.text = formattedBalance
     }
     
     func emptyNetDelegated() {
-        
+        delegatedNetCpuView.netValueLabel.text = R.string.appStrings.app_empty_value()
     }
     
     func populateCpuDelegated(formattedBalance: String) {
-        
+        delegatedNetCpuView.cpuValueLabel.text = formattedBalance
     }
     
     func emptyCpuDelegated() {
-        
+        delegatedNetCpuView.cpuValueLabel.text = R.string.appStrings.app_empty_value()
     }
     
     func emptyRefundRequest() {
-        
+        refundLabel.removeFromSuperview()
+        refundNetCpuView.removeFromSuperview()
     }
     
     func populateRefundRequest(formattedNet: String, formattedCpu: String) {
-        
+        refundNetCpuView.netValueLabel.text = formattedNet
+        refundNetCpuView.cpuValueLabel.text = formattedCpu
     }
     
     func populate(eosAccount: EosAccount) {
