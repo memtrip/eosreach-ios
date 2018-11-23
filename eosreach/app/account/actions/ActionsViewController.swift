@@ -84,7 +84,11 @@ class ActionsViewController: MxViewController<ActionsIntent, ActionsResult, Acti
                 model: ViewActionBundle(accountAction: accountAction)))
             performSegue(withIdentifier: R.segue.actionsViewController.actionsToViewAction, sender: self)
         case .navigateToTransfer(let contractAccountBalance):
-            break // todo
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.actionsViewController.actionsToTransfer.identifier,
+                model: TransferBundle(contractAccountBalance: contractAccountBalance)
+            ))
+            performSegue(withIdentifier: R.segue.actionsViewController.actionsToTransfer, sender: self)
         }
     }
 

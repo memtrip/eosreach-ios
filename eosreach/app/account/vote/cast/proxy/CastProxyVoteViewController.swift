@@ -55,6 +55,7 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
         case .viewLog(let log):
             activityIndicator.stop()
             voteButton.visible()
+            self.showTransactionLog(log: log)
         case .navigateToExploreProxies:
             performSegue(withIdentifier: R.segue.castProxyVoteViewController.castProxyVoteToProxyVoterList, sender: self)
         }

@@ -1,0 +1,16 @@
+{
+	"transfer_form_title" = Transfer;
+	"transfer_form_to_placeholder" = "Recipient Account";
+	"transfer_form_amount_placeholder" = "Amount (Available: %@)";
+	"transfer_form_memo_placeholder" = "Memo (max 256 characters)";
+	"transfer_form_next_button" = Next;
+	"transfer_form_account_validation" = "Please enter the recipient you are sending funds to.";
+	"transfer_form_amount_validation" = "Please enter the amount you wish to send.";
+	"transfer_confirm_title" = "Confirm Transfer";
+	"transfer_confirm_amount" = Amount;
+	"transfer_confirm_to" = To;
+	"transfer_confirm_from" = From;
+	"transfer_confirm_memo" = Memo;
+	"transfer_confirm_button" = Confirm;
+	"transfer_confirm_generic_error" = "We could not process your transfer, please check your internet connection and try again.";
+}

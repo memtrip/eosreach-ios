@@ -115,6 +115,7 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
         case .onVoteForUsError(let log):
             activityIndicator.stop()
             noVoteButton.visible()
+            self.showTransactionLog(log: log)
         case .onVoteForUsGenericError:
             activityIndicator.stop()
             noVoteButton.visible()

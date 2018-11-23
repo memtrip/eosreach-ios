@@ -77,6 +77,9 @@ class ManageRamViewController : MxViewController<ManageRamIntent, ManageRamResul
             buyRamViewController.manageRamBundle = ManageRamBundle(
                 contractAccountBalance: manageRamBundle.contractAccountBalance,
                 costPerKb: ramPricePerKb)
+            sellRamViewController.manageRamBundle = ManageRamBundle(
+                contractAccountBalance: manageRamBundle.contractAccountBalance,
+                costPerKb: ramPricePerKb)
             replaceChildViewController(viewController: buyRamViewController, containerView: containerView)
         }
     }

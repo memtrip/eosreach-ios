@@ -279,6 +279,19 @@
 		3CB1D70821A8296C00C87EC9 /* ViewActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70321A8296C00C87EC9 /* ViewActionViewController.swift */; };
 		3CB1D70921A8296C00C87EC9 /* ViewActionIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70421A8296C00C87EC9 /* ViewActionIntent.swift */; };
 		3CB1D70B21A82D8900C87EC9 /* ViewActionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70A21A82D8900C87EC9 /* ViewActionBundle.swift */; };
+		3CB1D71621A85B5100C87EC9 /* TransferViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70C21A85B5000C87EC9 /* TransferViewState.swift */; };
+		3CB1D71721A85B5100C87EC9 /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70D21A85B5000C87EC9 /* TransferViewModel.swift */; };
+		3CB1D71821A85B5100C87EC9 /* TransferConfirmResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70E21A85B5000C87EC9 /* TransferConfirmResult.swift */; };
+		3CB1D71921A85B5100C87EC9 /* TransferConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70F21A85B5000C87EC9 /* TransferConfirmViewModel.swift */; };
+		3CB1D71A21A85B5100C87EC9 /* TransferConfirmViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71021A85B5000C87EC9 /* TransferConfirmViewState.swift */; };
+		3CB1D71B21A85B5100C87EC9 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71121A85B5000C87EC9 /* TransferViewController.swift */; };
+		3CB1D71C21A85B5100C87EC9 /* TransferConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71221A85B5000C87EC9 /* TransferConfirmViewController.swift */; };
+		3CB1D71D21A85B5100C87EC9 /* TransferResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71321A85B5100C87EC9 /* TransferResult.swift */; };
+		3CB1D71E21A85B5100C87EC9 /* TransferConfirmIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71421A85B5100C87EC9 /* TransferConfirmIntent.swift */; };
+		3CB1D71F21A85B5100C87EC9 /* TransferIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71521A85B5100C87EC9 /* TransferIntent.swift */; };
+		3CB1D72121A8619F00C87EC9 /* TransferFormBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D72021A8619F00C87EC9 /* TransferFormBundle.swift */; };
+		3CB1D72521A869D600C87EC9 /* TransferBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D72421A869D600C87EC9 /* TransferBundle.swift */; };
+		3CB1D72721A86B9100C87EC9 /* TransferStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CB1D72621A86B9100C87EC9 /* TransferStrings.strings */; };
 		3CC9A389219DA76C0002A25F /* BlockProducerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */; };
 		3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */; };
 		3CC9A38D219DA8480002A25F /* BlockProducerRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */; };
@@ -661,6 +674,19 @@
 		3CB1D70321A8296C00C87EC9 /* ViewActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActionViewController.swift; sourceTree = "<group>"; };
 		3CB1D70421A8296C00C87EC9 /* ViewActionIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActionIntent.swift; sourceTree = "<group>"; };
 		3CB1D70A21A82D8900C87EC9 /* ViewActionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewActionBundle.swift; sourceTree = "<group>"; };
+		3CB1D70C21A85B5000C87EC9 /* TransferViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferViewState.swift; sourceTree = "<group>"; };
+		3CB1D70D21A85B5000C87EC9 /* TransferViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferViewModel.swift; sourceTree = "<group>"; };
+		3CB1D70E21A85B5000C87EC9 /* TransferConfirmResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferConfirmResult.swift; sourceTree = "<group>"; };
+		3CB1D70F21A85B5000C87EC9 /* TransferConfirmViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferConfirmViewModel.swift; sourceTree = "<group>"; };
+		3CB1D71021A85B5000C87EC9 /* TransferConfirmViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferConfirmViewState.swift; sourceTree = "<group>"; };
+		3CB1D71121A85B5000C87EC9 /* TransferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
+		3CB1D71221A85B5000C87EC9 /* TransferConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferConfirmViewController.swift; sourceTree = "<group>"; };
+		3CB1D71321A85B5100C87EC9 /* TransferResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferResult.swift; sourceTree = "<group>"; };
+		3CB1D71421A85B5100C87EC9 /* TransferConfirmIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferConfirmIntent.swift; sourceTree = "<group>"; };
+		3CB1D71521A85B5100C87EC9 /* TransferIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferIntent.swift; sourceTree = "<group>"; };
+		3CB1D72021A8619F00C87EC9 /* TransferFormBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFormBundle.swift; sourceTree = "<group>"; };
+		3CB1D72421A869D600C87EC9 /* TransferBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferBundle.swift; sourceTree = "<group>"; };
+		3CB1D72621A86B9100C87EC9 /* TransferStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TransferStrings.strings; sourceTree = "<group>"; };
 		3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerDetails.swift; sourceTree = "<group>"; };
 		3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRequest.swift; sourceTree = "<group>"; };
 		3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRequestImpl.swift; sourceTree = "<group>"; };
@@ -1563,6 +1589,19 @@
 		3C9BFBA5219B518500589936 /* transfer */ = {
 			isa = PBXGroup;
 			children = (
+				3CB1D71421A85B5100C87EC9 /* TransferConfirmIntent.swift */,
+				3CB1D70E21A85B5000C87EC9 /* TransferConfirmResult.swift */,
+				3CB1D71221A85B5000C87EC9 /* TransferConfirmViewController.swift */,
+				3CB1D70F21A85B5000C87EC9 /* TransferConfirmViewModel.swift */,
+				3CB1D71021A85B5000C87EC9 /* TransferConfirmViewState.swift */,
+				3CB1D72021A8619F00C87EC9 /* TransferFormBundle.swift */,
+				3CB1D71521A85B5100C87EC9 /* TransferIntent.swift */,
+				3CB1D71321A85B5100C87EC9 /* TransferResult.swift */,
+				3CB1D71121A85B5000C87EC9 /* TransferViewController.swift */,
+				3CB1D70D21A85B5000C87EC9 /* TransferViewModel.swift */,
+				3CB1D70C21A85B5000C87EC9 /* TransferViewState.swift */,
+				3CB1D72421A869D600C87EC9 /* TransferBundle.swift */,
+				3CB1D72621A86B9100C87EC9 /* TransferStrings.strings */,
 			);
 			path = transfer;
 			sourceTree = "<group>";
@@ -1756,6 +1795,7 @@
 				3C8BD23521A6C16F00ACFA70 /* BandwidthStrings.strings in Resources */,
 				3C07009521A71AA5008F63D2 /* TransactionLogViewController.xib in Resources */,
 				3C07009B21A72217008F63D2 /* TransactionReceiptViewController.xib in Resources */,
+				3CB1D72721A86B9100C87EC9 /* TransferStrings.strings in Resources */,
 				3C1A972521A3D13E00C30A75 /* ActiveBlockProducerCell.xib in Resources */,
 				3C4406AD21A1EED2003BBFA9 /* BalanceCell.xib in Resources */,
 				3CC9E72721A5C1010050BA57 /* ProxyVoterListCell.xib in Resources */,
@@ -1966,6 +2006,7 @@
 				3C964C3821938C71003663EF /* EosEndpointResult.swift in Sources */,
 				3C964C4021944305003663EF /* EosEndpoint.swift in Sources */,
 				3C1A973521A4844200C30A75 /* AccountNavigationUseCase.swift in Sources */,
+				3CB1D71C21A85B5100C87EC9 /* TransferConfirmViewController.swift in Sources */,
 				3C8BD25121A6C3B300ACFA70 /* UndelegateBandwidthViewState.swift in Sources */,
 				3C07009121A6FC79008F63D2 /* ConfirmBandwidthResult.swift in Sources */,
 				3C0700B521A74FE8008F63D2 /* ManageRamViewModel.swift in Sources */,
@@ -1993,6 +2034,7 @@
 				3CC9E70421A5A4110050BA57 /* CastProxyVoteIntent.swift in Sources */,
 				3CEF33B921A507E700716AA2 /* CreateAccountViewController.swift in Sources */,
 				3C14FA4621A0A3AD00B8255F /* EosPriceApi.swift in Sources */,
+				3CB1D71B21A85B5100C87EC9 /* TransferViewController.swift in Sources */,
 				3CC9A3A1219DAF050002A25F /* CutomTokensRequestImpl.swift in Sources */,
 				3CB1D70721A8296C00C87EC9 /* ViewActionViewState.swift in Sources */,
 				3CC9A3B3219DB6310002A25F /* ProxyVoterRequestImpl.swift in Sources */,
@@ -2010,6 +2052,7 @@
 				3C0ADD92219F38440026649F /* InsertBalances.swift in Sources */,
 				3CC9E71F21A5BE980050BA57 /* ProxyVoterListViewController.swift in Sources */,
 				3C0700A521A72643008F63D2 /* TransactionReceiptIntent.swift in Sources */,
+				3CB1D71921A85B5100C87EC9 /* TransferConfirmViewModel.swift in Sources */,
 				3C9BFBBB219B5DC900589936 /* AccountsForPublicKeyRequest.swift in Sources */,
 				3C9BFB86219B363C00589936 /* Balance.swift in Sources */,
 				3C6DF78921A08D8700ADA892 /* VoteViewState.swift in Sources */,
@@ -2030,6 +2073,7 @@
 				3CC9E6F921A5A0D00050BA57 /* CastViewController.swift in Sources */,
 				3C0700B721A74FE8008F63D2 /* ManageRamIntent.swift in Sources */,
 				3CC9A3C3219DC4390002A25F /* RegisteredBlockProducerRequest.swift in Sources */,
+				3CB1D71D21A85B5100C87EC9 /* TransferResult.swift in Sources */,
 				3C9BFB8C219B367B00589936 /* AccountBalanceRequest.swift in Sources */,
 				3C0EC81421933B6F00562A1B /* ReachActivityIndicator.swift in Sources */,
 				3C0700C921A75138008F63D2 /* SellRamViewController.swift in Sources */,
@@ -2040,6 +2084,7 @@
 				3C0700A721A72643008F63D2 /* TransactionReceiptResult.swift in Sources */,
 				3C7F0DE82194A17000E72DD1 /* RegisteredBlockProducersResult.swift in Sources */,
 				3C592F96219D5C5200D7C9B9 /* date_types.swift in Sources */,
+				3CB1D72521A869D600C87EC9 /* TransferBundle.swift in Sources */,
 				3C07008521A6EDF2008F63D2 /* BandwidthFormBundle.swift in Sources */,
 				3C8C6DC62192D8F500FC1A0D /* EntryViewState.swift in Sources */,
 				3C7F0DFC2194A58700E72DD1 /* ReachTabBar.swift in Sources */,
@@ -2092,7 +2137,9 @@
 				3CC9A3B7219DB8890002A25F /* RamRequestImpl.swift in Sources */,
 				3C340FCA2193612A0017BEF9 /* SettingsIntent.swift in Sources */,
 				3C0ADD8A219F37B10026649F /* InsertAccountsForPublicKey.swift in Sources */,
+				3CB1D71821A85B5100C87EC9 /* TransferConfirmResult.swift in Sources */,
 				3C8BD24821A6C2FB00ACFA70 /* DelegateBandwidthViewState.swift in Sources */,
+				3CB1D71F21A85B5100C87EC9 /* TransferIntent.swift in Sources */,
 				3C340FC72193612A0017BEF9 /* SettingsViewModel.swift in Sources */,
 				3C4406A921A1ED9B003BBFA9 /* BalanceTableView.swift in Sources */,
 				3C8C6D962192D52500FC1A0D /* MxViewModel.swift in Sources */,
@@ -2114,6 +2161,7 @@
 				3C7F0E022194B73200E72DD1 /* ReachTabsController.swift in Sources */,
 				3C592F9C219D60BE00D7C9B9 /* DelegatedBandwidth.swift in Sources */,
 				3C592FCE219D6B8B00D7C9B9 /* VoteRequestImpl.swift in Sources */,
+				3CB1D71621A85B5100C87EC9 /* TransferViewState.swift in Sources */,
 				3C964C51219459D3003663EF /* EncryptedKeyPairData.swift in Sources */,
 				3C0EC8122193086800562A1B /* R.generated.swift in Sources */,
 				3C07009021A6FC79008F63D2 /* ConfirmBandwidthViewModel.swift in Sources */,
@@ -2162,6 +2210,7 @@
 				3C1F1F7121A306680075BD71 /* VoteProducerTableView.swift in Sources */,
 				3C0EC828219350DE00562A1B /* ImportKeyViewModel.swift in Sources */,
 				3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */,
+				3CB1D71721A85B5100C87EC9 /* TransferViewModel.swift in Sources */,
 				3C8BD24721A6C2FB00ACFA70 /* DelegateBandwidthViewModel.swift in Sources */,
 				3C9BFB8A219B366700589936 /* ContractAccountBalance.swift in Sources */,
 				3C6DF79321A090F300ADA892 /* ResourcesResult.swift in Sources */,
@@ -2192,6 +2241,7 @@
 				3C340FD62193801B0017BEF9 /* CurrencyPairingIntent.swift in Sources */,
 				3C8BD24621A6C2FB00ACFA70 /* DelegateBandwidthIntent.swift in Sources */,
 				3C1F1F9621A35A870075BD71 /* ActionsTableView.swift in Sources */,
+				3CB1D71A21A85B5100C87EC9 /* TransferConfirmViewState.swift in Sources */,
 				3C6DF75921A05C7E00ADA892 /* AccountCardTableView.swift in Sources */,
 				3C964C44219443D5003663EF /* EosPriceCurrencyPair.swift in Sources */,
 				3C592F98219D605E00D7C9B9 /* BandwidthRequest.swift in Sources */,
@@ -2240,6 +2290,7 @@
 				3C340FC82193612A0017BEF9 /* SettingsViewState.swift in Sources */,
 				3CEF33BC21A507E700716AA2 /* CreateAccountViewModel.swift in Sources */,
 				3C8BD23E21A6C22900ACFA70 /* AllocatedBandwidthIntent.swift in Sources */,
+				3CB1D72121A8619F00C87EC9 /* TransferFormBundle.swift in Sources */,
 				3C7F0DF72194A23900E72DD1 /* ExploreViewController.swift in Sources */,
 				3C9BFBB7219B5D7C00589936 /* AccountNameSystemBalance.swift in Sources */,
 				3C6DF76C21A082AC00ADA892 /* AccountResult.swift in Sources */,
@@ -2257,6 +2308,7 @@
 				3C9BFBBF219C21BC00589936 /* AccountAction.swift in Sources */,
 				3C7F0DED2194A17000E72DD1 /* RegisteredBlockProducersViewController.swift in Sources */,
 				3C0700DD21A751BB008F63D2 /* ConfirmRamViewState.swift in Sources */,
+				3CB1D71E21A85B5100C87EC9 /* TransferConfirmIntent.swift in Sources */,
 				3CEF33BA21A507E700716AA2 /* CreateAccountViewState.swift in Sources */,
 				3C6DF78F21A090F300ADA892 /* ResourcesViewController.swift in Sources */,
 				3C0EC81F21933D4F00562A1B /* SplashResult.swift in Sources */,

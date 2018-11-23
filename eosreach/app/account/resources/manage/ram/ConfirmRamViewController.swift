@@ -56,13 +56,10 @@ class ConfirmRamViewController : MxViewController<ConfirmRamIntent, ConfirmRamRe
             priceValue.text = BalanceFormatter.formatEosBalance(amount: costValue, symbol: ramBundle.costPerKb.symbol)
             kbValue.text = ramBundle.kb
         case .onSuccess(let actionReceipt):
-            let transactionReceiptViewController = TransactionReceiptViewController(nib: R.nib.transactionReceiptViewController)
-            transactionReceiptViewController.transactionReceiptBundle = TransactionReceiptBundle(
+            self.showTransactionReceipt(
                 actionReceipt: actionReceipt,
                 contractAccountBalance: ramBundle.contractAccountBalance,
-                transactionReceiptRoute: TransactionReceiptRoute.account_resources)
-            transactionReceiptViewController.delegate = self
-            self.present(transactionReceiptViewController, animated: true, completion: nil)
+                delegate: self)
         case .genericError:
             activityIndicator.stop()
             confirmButton.visible()
@@ -70,9 +67,7 @@ class ConfirmRamViewController : MxViewController<ConfirmRamIntent, ConfirmRamRe
             activityIndicator.stop()
             confirmButton.visible()
             showViewLog(viewLogHandler: { _ in
-                let transactionLogViewController = TransactionLogViewController(nib: R.nib.transactionLogViewController)
-                transactionLogViewController.errorLog = log
-                self.present(transactionLogViewController, animated: true, completion: nil)
+                self.showTransactionLog(log: log)
             })
         }
     }
@@ -82,6 +77,14 @@ class ConfirmRamViewController : MxViewController<ConfirmRamIntent, ConfirmRamRe
     }
     
     func transactionConfirmed() {
-        // TODO: navigate to account
+        setDestinationBundle(bundle: SegueBundle(
+            identifier: R.segue.confirmRamViewController.confirmRamToAccounts.identifier,
+            model: AccountBundle(
+                accountName: ramBundle.contractAccountBalance.accountName,
+                readOnly: false,
+                accountPage: AccountPage.resources
+            )
+        ))
+        performSegue(withIdentifier: R.segue.confirmRamViewController.confirmRamToAccounts, sender: self)
     }
 }

@@ -94,4 +94,24 @@ extension UIViewController {
     func replaceChildViewController(viewController: UIViewController) {
         fatalError()
     }
+    
+    func showTransactionReceipt(
+        actionReceipt: ActionReceipt,
+        contractAccountBalance: ContractAccountBalance,
+        delegate: TransactionReceiptDelegate
+    ) {
+        let transactionReceiptViewController = TransactionReceiptViewController(nib: R.nib.transactionReceiptViewController)
+        transactionReceiptViewController.transactionReceiptBundle = TransactionReceiptBundle(
+            actionReceipt: actionReceipt,
+            contractAccountBalance: contractAccountBalance,
+            transactionReceiptRoute: TransactionReceiptRoute.account_resources)
+        transactionReceiptViewController.delegate = delegate
+        self.present(transactionReceiptViewController, animated: true, completion: nil)
+    }
+    
+    func showTransactionLog(log: String) {
+        let transactionLogViewController = TransactionLogViewController(nib: R.nib.transactionLogViewController)
+        transactionLogViewController.errorLog = log
+        self.present(transactionLogViewController, animated: true, completion: nil)
+    }
 }

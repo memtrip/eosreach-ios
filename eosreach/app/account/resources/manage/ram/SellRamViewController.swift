@@ -8,13 +8,28 @@ class SellRamViewController : MxViewController<SellRamIntent, SellRamResult, Sel
     @IBOutlet weak var sellRamButton: ReachPrimaryButton!
     @IBOutlet weak var estimatedValue: UILabel!
     
+    var manageRamBundle: ManageRamBundle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ramAmountTextField.placeholder = R.string.ramStrings.manage_ram_amount_placeholder()
+        estimatedValue.text = R.string.ramStrings.manage_ram_estimated_value_label("0")
+        sellRamButton.setTitle(R.string.ramStrings.sell_ram_button(), for: .normal)
     }
 
     override func intents() -> Observable<SellRamIntent> {
         return Observable.merge(
-            Observable.just(SellRamIntent.idle)
+            Observable.just(SellRamIntent.idle),
+            ramAmountTextField.rx.text.asObservable().map { kb in
+                if let kb = kb {
+                    return SellRamIntent.convertKiloBytesToEOSCost(kb: kb, costPerKb: self.manageRamBundle!.costPerKb!)
+                } else {
+                    return SellRamIntent.idle
+                }
+            },
+            sellRamButton.rx.tap.map {
+                return SellRamIntent.commit(kb: self.ramAmountTextField.text!)
+            }
         )
     }
 
@@ -26,6 +41,21 @@ class SellRamViewController : MxViewController<SellRamIntent, SellRamResult, Sel
         switch state {
         case .idle:
             break
+        case .navigateToConfirmRamForm(let kilobytes):
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.SellRamViewController.SellRamToConfirmRam.identifier,
+                model: RamBundle(
+                    contractAccountBalance: manageRamBundle!.contractAccountBalance,
+                    costPerKb: manageRamBundle!.costPerKb!,
+                    kb: kilobytes,
+                    commitType: RamBundle.CommitType.buy
+                )
+            ))
+            performSegue(withIdentifier: R.segue.SellRamViewController.SellRamToConfirmRam, sender: self)
+        case .updateCostPerKiloByte(let eosCost):
+            estimatedValue.text = R.string.ramStrings.manage_ram_estimated_value_label(eosCost)
+        case .emptyRamError:
+            showOKDialog(message: R.string.ramStrings.manage_ram_form_empty())
         }
     }
 

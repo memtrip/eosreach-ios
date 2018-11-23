@@ -74,18 +74,13 @@ class ConfirmBandwidthViewController
             activityIndicator.stop()
             confirmButton.visible()
             showViewLog(viewLogHandler: { _ in
-                let transactionLogViewController = TransactionLogViewController(nib: R.nib.transactionLogViewController)
-                transactionLogViewController.errorLog = log
-                self.present(transactionLogViewController, animated: true, completion: nil)
+                self.showTransactionLog(log: log)
             })
         case .navigateToTransactionConfirmed(let actionReceipt):
-            let transactionReceiptViewController = TransactionReceiptViewController(nib: R.nib.transactionReceiptViewController)
-            transactionReceiptViewController.transactionReceiptBundle = TransactionReceiptBundle(
+            self.showTransactionReceipt(
                 actionReceipt: actionReceipt,
                 contractAccountBalance: bandwidthFormBundle.contractAccountBalance,
-                transactionReceiptRoute: TransactionReceiptRoute.account_resources)
-            transactionReceiptViewController.delegate = self
-            self.present(transactionReceiptViewController, animated: true, completion: nil)
+                delegate: self)
         }
     }
 
