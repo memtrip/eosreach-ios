@@ -8,8 +8,7 @@ class RamPriceRequestImpl : RamPriceRequest {
 
     func getRamPrice(symbol: String) -> Single<Result<Balance, RamPriceError>> {
         return getRamPrice.getPricePerKilobyte().map { price in
-            let formattedPrice = String(format: "%.8", price)
-            return Result(data: BalanceFormatter.deserialize(balance: "\(formattedPrice) \(symbol)"))
+            return Result(data: Balance(amount: price.truncate(places: 8), symbol: symbol))
         }.catchErrorJustReturn(Result(error: RamPriceError.genericError))
     }
 }

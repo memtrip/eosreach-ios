@@ -33,25 +33,16 @@ class ExploreViewController: UIViewController, TabBarDelegate {
         tabBar.delegate = self
 
         view.backgroundColor = Res.color.colorWindowBackground()
-        replaceChildViewController(viewController: searchViewController)
-    }
-
-    private func replaceChildViewController(viewController: UIViewController) {
-        addChild(viewController)
-        containerView.addSubview(viewController.view)
-
-        viewController.view.frame = containerView.bounds
-        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        viewController.didMove(toParent: self)
+        replaceChildViewController(viewController: searchViewController, containerView: containerView)
     }
 
     @objc func tabBar(tabBar: TabBar, willSelect tabItem: TabItem) {
         if (tabItem == searchTabItem) {
             self.view.endEditing(true)
-            replaceChildViewController(viewController: searchViewController)
+            replaceChildViewController(viewController: searchViewController, containerView: containerView)
         } else if (tabItem == blockProducersTabItem) {
             self.view.endEditing(true)
-            replaceChildViewController(viewController: registeredBlockProducersViewController)
+            replaceChildViewController(viewController: registeredBlockProducersViewController, containerView: containerView)
         }
     }
 }

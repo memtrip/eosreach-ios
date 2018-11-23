@@ -884,14 +884,17 @@
             </objects>
             <point key="canvasLocation" x="4964" y="795"/>
         </scene>
-        <!--View Controller-->
+        <!--Manage Ram View Controller-->
         <scene sceneID="Yxc-Z0-GrY">
             <objects>
-                <viewController id="3Wb-zP-H9V" sceneMemberID="viewController">
+                <viewController id="3Wb-zP-H9V" customClass="ManageRamViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pjr-nw-ekQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="M9X-7o-Hmn" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czi-QN-LvM" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
@@ -902,13 +905,13 @@
                                 <rect key="frame" x="0.0" y="68" width="375" height="96"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEw-Ng-gJG">
-                                        <rect key="frame" x="0.0" y="21" width="375" height="32"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <rect key="frame" x="0.0" y="21" width="375" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ram_price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9f-FT-KOM">
-                                        <rect key="frame" x="0.0" y="53" width="375" height="18"/>
+                                        <rect key="frame" x="0.0" y="45" width="375" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <color key="textColor" name="typographyColorSecondary"/>
                                         <nil key="highlightedColor"/>
@@ -924,15 +927,18 @@
                                     <constraint firstItem="s9f-FT-KOM" firstAttribute="top" secondItem="uEw-Ng-gJG" secondAttribute="bottom" id="vX4-4H-amq"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQB-zK-Dmn" userLabel="Reach TabBar" customClass="ReachTabBar" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQB-zK-Dmn" userLabel="Reach TabBar" customClass="ReachTabBar" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="164" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="vj3-M0-qY7"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yK-ch-YIA">
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yK-ch-YIA">
                                 <rect key="frame" x="0.0" y="212" width="375" height="455"/>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seN-lL-u6A" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="84" width="343" height="567"/>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="czi-QN-LvM" firstAttribute="top" secondItem="XIO-5h-bY8" secondAttribute="top" id="261-BH-FrQ"/>
@@ -941,25 +947,43 @@
                             <constraint firstItem="XIO-5h-bY8" firstAttribute="trailing" secondItem="czi-QN-LvM" secondAttribute="trailing" id="Lcy-5M-Kpn"/>
                             <constraint firstItem="5yK-ch-YIA" firstAttribute="top" secondItem="RQB-zK-Dmn" secondAttribute="bottom" id="Lnx-8i-iDi"/>
                             <constraint firstItem="5yK-ch-YIA" firstAttribute="leading" secondItem="XIO-5h-bY8" secondAttribute="leading" id="NH0-6P-spH"/>
+                            <constraint firstItem="M9X-7o-Hmn" firstAttribute="top" secondItem="XIO-5h-bY8" secondAttribute="top" constant="16" id="OYF-T6-YPS"/>
                             <constraint firstItem="XIO-5h-bY8" firstAttribute="trailing" secondItem="qPK-wt-KJF" secondAttribute="trailing" id="Oom-NB-FdH"/>
                             <constraint firstItem="RQB-zK-Dmn" firstAttribute="top" secondItem="qPK-wt-KJF" secondAttribute="bottom" id="OxN-zZ-lYd"/>
+                            <constraint firstItem="seN-lL-u6A" firstAttribute="top" secondItem="czi-QN-LvM" secondAttribute="bottom" constant="16" id="Q3E-em-wX4"/>
                             <constraint firstItem="XIO-5h-bY8" firstAttribute="trailing" secondItem="5yK-ch-YIA" secondAttribute="trailing" id="VzO-OO-Al5"/>
+                            <constraint firstItem="XIO-5h-bY8" firstAttribute="bottom" secondItem="seN-lL-u6A" secondAttribute="bottom" constant="16" id="bLi-lh-ytO"/>
+                            <constraint firstItem="seN-lL-u6A" firstAttribute="leading" secondItem="XIO-5h-bY8" secondAttribute="leading" constant="16" id="dKi-Rm-W36"/>
+                            <constraint firstItem="XIO-5h-bY8" firstAttribute="trailing" secondItem="M9X-7o-Hmn" secondAttribute="trailing" constant="16" id="diV-R4-ud4"/>
                             <constraint firstItem="czi-QN-LvM" firstAttribute="leading" secondItem="XIO-5h-bY8" secondAttribute="leading" id="hQM-Hr-ARC"/>
+                            <constraint firstItem="M9X-7o-Hmn" firstAttribute="leading" secondItem="XIO-5h-bY8" secondAttribute="leading" constant="16" id="j4X-Uk-CXz"/>
                             <constraint firstItem="XIO-5h-bY8" firstAttribute="bottom" secondItem="5yK-ch-YIA" secondAttribute="bottom" id="ner-Ji-8l6"/>
+                            <constraint firstItem="XIO-5h-bY8" firstAttribute="trailing" secondItem="seN-lL-u6A" secondAttribute="trailing" constant="16" id="x1A-pX-xLl"/>
+                            <constraint firstItem="XIO-5h-bY8" firstAttribute="bottom" secondItem="M9X-7o-Hmn" secondAttribute="bottom" constant="16" id="zW4-1c-AI9"/>
                             <constraint firstItem="XIO-5h-bY8" firstAttribute="trailing" secondItem="RQB-zK-Dmn" secondAttribute="trailing" id="zeb-Zd-1FL"/>
                             <constraint firstItem="qPK-wt-KJF" firstAttribute="top" secondItem="czi-QN-LvM" secondAttribute="bottom" id="zfe-mu-2Tp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XIO-5h-bY8"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="M9X-7o-Hmn" id="UTu-a2-6kS"/>
+                        <outlet property="containerView" destination="5yK-ch-YIA" id="tc8-65-Ysk"/>
+                        <outlet property="errorView" destination="seN-lL-u6A" id="hT8-hE-xMd"/>
+                        <outlet property="ramPriceContainer" destination="qPK-wt-KJF" id="NWn-0j-XKa"/>
+                        <outlet property="ramPriceLabel" destination="s9f-FT-KOM" id="1La-dh-AYa"/>
+                        <outlet property="ramPriceValueLabel" destination="uEw-Ng-gJG" id="gay-n6-s9F"/>
+                        <outlet property="tabBar" destination="RQB-zK-Dmn" id="qB4-z0-SgG"/>
+                        <outlet property="toolBar" destination="czi-QN-LvM" id="uBV-di-Ztl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTh-JP-Yea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5678" y="-1364"/>
         </scene>
-        <!--View Controller-->
+        <!--Buy Ram View Controller-->
         <scene sceneID="P9y-ZD-0xL">
             <objects>
-                <viewController id="ozr-RH-ja7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="buyRamViewController" id="ozr-RH-ja7" customClass="BuyRamViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oot-q0-z7L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -968,24 +992,36 @@
                                 <rect key="frame" x="16" y="52" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecG-fi-qb6" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <rect key="frame" x="16" y="151" width="343" height="30"/>
                                 <state key="normal" title="_buy_ram"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_estimated_value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ1-iQ-GEI">
+                                <rect key="frame" x="16" y="98" width="343" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="30j-PM-Lum" firstAttribute="trailing" secondItem="jZ1-iQ-GEI" secondAttribute="trailing" constant="16" id="2LP-QD-whu"/>
                             <constraint firstItem="30j-PM-Lum" firstAttribute="trailing" secondItem="ecG-fi-qb6" secondAttribute="trailing" constant="16" id="2uV-tV-f6h"/>
-                            <constraint firstItem="30j-PM-Lum" firstAttribute="bottom" secondItem="ecG-fi-qb6" secondAttribute="bottom" constant="16" id="Gur-ky-sFw"/>
                             <constraint firstItem="PJz-wL-onx" firstAttribute="leading" secondItem="30j-PM-Lum" secondAttribute="leading" constant="16" id="MPc-3m-KgP"/>
                             <constraint firstItem="30j-PM-Lum" firstAttribute="trailing" secondItem="PJz-wL-onx" secondAttribute="trailing" constant="16" id="UhN-hr-g7A"/>
+                            <constraint firstItem="jZ1-iQ-GEI" firstAttribute="top" secondItem="PJz-wL-onx" secondAttribute="bottom" constant="16" id="bip-m4-0HT"/>
                             <constraint firstItem="ecG-fi-qb6" firstAttribute="leading" secondItem="30j-PM-Lum" secondAttribute="leading" constant="16" id="hXA-QL-9h5"/>
+                            <constraint firstItem="jZ1-iQ-GEI" firstAttribute="leading" secondItem="30j-PM-Lum" secondAttribute="leading" constant="16" id="mG5-Jb-v7D"/>
                             <constraint firstItem="PJz-wL-onx" firstAttribute="top" secondItem="30j-PM-Lum" secondAttribute="top" constant="32" id="ozN-lm-hKu"/>
+                            <constraint firstItem="ecG-fi-qb6" firstAttribute="top" secondItem="jZ1-iQ-GEI" secondAttribute="bottom" constant="32" id="xBo-ij-OH1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="30j-PM-Lum"/>
                     </view>
                     <connections>
+                        <outlet property="buyRamButton" destination="ecG-fi-qb6" id="t8u-6Z-QBV"/>
+                        <outlet property="estimatedValue" destination="jZ1-iQ-GEI" id="EeL-dX-Ac9"/>
+                        <outlet property="ramAmountTextField" destination="PJz-wL-onx" id="PFW-Tc-dTu"/>
                         <segue destination="uLC-eP-q79" kind="show" identifier="buyRamToConfirmRam" id="wQx-Tz-eH5"/>
                     </connections>
                 </viewController>
@@ -993,36 +1029,48 @@
             </objects>
             <point key="canvasLocation" x="6385" y="-1364"/>
         </scene>
-        <!--View Controller-->
+        <!--Sell Ram View Controller-->
         <scene sceneID="zNR-nj-bZA">
             <objects>
-                <viewController id="FBc-Wz-hxM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sellRamViewController" id="FBc-Wz-hxM" customClass="SellRamViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qs2-dg-Hiv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31Q-Z0-9HV">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31Q-Z0-9HV" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="16" y="52" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m02-BU-QuB" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <rect key="frame" x="16" y="151" width="343" height="30"/>
                                 <state key="normal" title="_sell_ram"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_estimated_value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38c-sH-Ep9">
+                                <rect key="frame" x="16" y="98" width="343" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="31Q-Z0-9HV" firstAttribute="top" secondItem="DU8-Vk-XWw" secondAttribute="top" constant="32" id="6wJ-SS-93c"/>
+                            <constraint firstItem="38c-sH-Ep9" firstAttribute="top" secondItem="31Q-Z0-9HV" secondAttribute="bottom" constant="16" id="LB5-td-mh6"/>
                             <constraint firstItem="DU8-Vk-XWw" firstAttribute="trailing" secondItem="31Q-Z0-9HV" secondAttribute="trailing" constant="16" id="MCu-mA-crO"/>
                             <constraint firstItem="m02-BU-QuB" firstAttribute="leading" secondItem="DU8-Vk-XWw" secondAttribute="leading" constant="16" id="P0E-aC-kSx"/>
+                            <constraint firstItem="38c-sH-Ep9" firstAttribute="leading" secondItem="DU8-Vk-XWw" secondAttribute="leading" constant="16" id="ees-Zq-Fjd"/>
+                            <constraint firstItem="DU8-Vk-XWw" firstAttribute="trailing" secondItem="38c-sH-Ep9" secondAttribute="trailing" constant="16" id="es1-aO-e2k"/>
                             <constraint firstItem="DU8-Vk-XWw" firstAttribute="trailing" secondItem="m02-BU-QuB" secondAttribute="trailing" constant="16" id="gwm-3o-nUq"/>
-                            <constraint firstItem="DU8-Vk-XWw" firstAttribute="bottom" secondItem="m02-BU-QuB" secondAttribute="bottom" constant="16" id="qBR-GH-8v6"/>
                             <constraint firstItem="31Q-Z0-9HV" firstAttribute="leading" secondItem="DU8-Vk-XWw" secondAttribute="leading" constant="16" id="qkm-HI-zgr"/>
+                            <constraint firstItem="m02-BU-QuB" firstAttribute="top" secondItem="38c-sH-Ep9" secondAttribute="bottom" constant="32" id="vy6-Pr-FAV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DU8-Vk-XWw"/>
                     </view>
                     <connections>
+                        <outlet property="estimatedValue" destination="38c-sH-Ep9" id="tMn-lX-iMp"/>
+                        <outlet property="ramAmountTextField" destination="31Q-Z0-9HV" id="PPK-1M-I5F"/>
+                        <outlet property="sellRamButton" destination="m02-BU-QuB" id="QY5-D3-ytG"/>
                         <segue destination="uLC-eP-q79" kind="show" identifier="sellRamToConfirmRam" id="bAw-Fj-z4u"/>
                     </connections>
                 </viewController>
@@ -1030,10 +1078,10 @@
             </objects>
             <point key="canvasLocation" x="7124" y="-1364"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirm Ram View Controller-->
         <scene sceneID="kGv-uT-omo">
             <objects>
-                <viewController id="uLC-eP-q79" sceneMemberID="viewController">
+                <viewController id="uLC-eP-q79" customClass="ConfirmRamViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1rr-1f-PN2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1145,6 +1193,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hWR-lB-I01"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="INm-Nw-zdl" id="HWd-BI-JXt"/>
+                        <outlet property="confirmButton" destination="ypc-Ky-Edg" id="3HF-es-gDE"/>
+                        <outlet property="kbLabel" destination="TnC-wI-wwP" id="FcN-3q-dVc"/>
+                        <outlet property="kbValue" destination="4ot-eo-B27" id="ESQ-0g-D1D"/>
+                        <outlet property="priceLabel" destination="jr0-ZF-9Sf" id="iHU-cc-boc"/>
+                        <outlet property="priceValue" destination="1vs-1F-RLy" id="AK9-ck-vHb"/>
+                        <outlet property="ramInstructionLabel" destination="C2y-nT-e0K" id="mRG-bK-gtg"/>
+                        <outlet property="toolBar" destination="LnB-d5-54M" id="kPr-7C-XCs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHP-GK-D1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1664,6 +1722,7 @@
                         <outlet property="ramButton" destination="fQe-aP-fSF" id="B2N-j0-Mb3"/>
                         <outlet property="ramResourceGraph" destination="n76-2W-To4" id="wUa-cI-fB7"/>
                         <segue destination="6Ma-8z-zbj" kind="show" identifier="resourcesToManageBandwidth" id="c9J-cM-x7a"/>
+                        <segue destination="3Wb-zP-H9V" kind="show" identifier="resourcesToManageRam" id="EfA-X7-MxP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pS-Ix-Sve" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1678,7 +1737,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rg-S4-urg">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rg-S4-urg">
                                 <rect key="frame" x="7" y="150.5" width="361" height="509.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_producer_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcl-w1-psp">
@@ -2456,7 +2515,7 @@
         <segue reference="rvY-Mg-arL"/>
         <segue reference="Eks-sF-JJe"/>
         <segue reference="2pO-q1-hHi"/>
-        <segue reference="bAw-Fj-z4u"/>
+        <segue reference="wQx-Tz-eH5"/>
         <segue reference="p9U-mn-UT8"/>
         <segue reference="nIH-HN-fGl"/>
         <segue reference="EMU-T5-0SR"/>

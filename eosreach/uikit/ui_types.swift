@@ -81,4 +81,17 @@ extension UIViewController {
     func close() {
         dismiss(animated: true, completion: nil)
     }
+    
+    func replaceChildViewController(viewController: UIViewController, containerView: UIView) {
+        addChild(viewController)
+        containerView.addSubview(viewController.view)
+        
+        viewController.view.frame = containerView.bounds
+        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        viewController.didMove(toParent: self)
+    }
+    
+    func replaceChildViewController(viewController: UIViewController) {
+        fatalError()
+    }
 }

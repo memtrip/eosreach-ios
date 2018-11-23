@@ -76,15 +76,11 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
         case .navigateToManageBandwidthWithAccountName:
             print("")
         case .navigateToManageRam:
-            print("")
-        case .refundProgress:
-            print("")
-        case .refundSuccess:
-            print("")
-        case .refundFailed:
-            print("")
-        case .refundFailedWithLog(let log):
-            print("")
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.resourcesViewController.resourcesToManageRam.identifier,
+                model: ManageRamBundle(contractAccountBalance: contractAccountBalance!, costPerKb: nil)
+            ))
+            performSegue(withIdentifier: R.segue.resourcesViewController.resourcesToManageRam, sender: self)
         }
     }
 
@@ -194,6 +190,7 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         if (segue.identifier == R.segue.resourcesViewController.resourcesToManageBandwidth.identifier) {
             (segue.destination as! ManageBandwidthViewController).manageBandwidthBundle = ManageBandwidthBundle(
                 accountName: eosAccount!.accountName, contractAccountBalance: contractAccountBalance!)

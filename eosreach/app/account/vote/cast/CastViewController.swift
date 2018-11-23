@@ -41,29 +41,20 @@ class CastViewController: UIViewController, TabBarDelegate {
         
         switch castBundle!.castTab {
         case .producers:
-            replaceChildViewController(viewController: producersViewController)
+            replaceChildViewController(viewController: producersViewController, containerView: containerView)
         case .proxy:
             tabBar.select(at: 1) // select proxy tab
-            replaceChildViewController(viewController: proxyViewController)
+            replaceChildViewController(viewController: proxyViewController, containerView: containerView)
         }
-    }
-    
-    private func replaceChildViewController(viewController: UIViewController) {
-        addChild(viewController)
-        containerView.addSubview(viewController.view)
-        
-        viewController.view.frame = containerView.bounds
-        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        viewController.didMove(toParent: self)
     }
     
     @objc func tabBar(tabBar: TabBar, willSelect tabItem: TabItem) {
         if (tabItem == producersTabItem) {
             self.view.endEditing(true)
-            replaceChildViewController(viewController: producersViewController)
+            replaceChildViewController(viewController: producersViewController, containerView: containerView)
         } else if (tabItem == proxyTabItem) {
             self.view.endEditing(true)
-            replaceChildViewController(viewController: proxyViewController)
+            replaceChildViewController(viewController: proxyViewController, containerView: containerView)
         }
     }
 }

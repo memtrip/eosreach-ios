@@ -3,7 +3,11 @@
 	"manage_ram_price_label" = "RAM Price per KB";
 	"manage_ram_buy_tab" = Buy;
 	"manage_ram_sell_tab" = Sell;
-	"manage_ram_amount_placeholder" = "Enter ram amount in k/b (estimated cost: %@ EOS)";
+	"manage_ram_amount_placeholder" = "Enter ram amount in k/b";
+	"manage_ram_estimated_value_label" = "Estimated cost: %@";
+	"manage_ram_error_title" = "Could not fetch RAM price";
+	"manage_ram_error_body" = "We could not determine the current market price of RAM, please check your connection as try again.";
+	"manage_ram_form_empty" = "You must enter a RAM value greater than zero.";
 	"buy_ram_button" = Buy;
 	"sell_ram_button" = Sell;
 	"confirm_ram_title" = "Confirm Buy Ram";

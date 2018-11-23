@@ -99,22 +99,13 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         return AccountViewModel(initialState: AccountViewState(view: AccountViewState.View.idle))
     }
     
-    private func replaceChildViewController(viewController: UIViewController) {
-        addChild(viewController)
-        containerView.addSubview(viewController.view)
-        
-        viewController.view.frame = containerView.bounds
-        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        viewController.didMove(toParent: self)
-    }
-    
     @objc func tabBar(tabBar: TabBar, willSelect tabItem: TabItem) {
         if (tabItem == balanceTabItem) {
-            replaceChildViewController(viewController: balanceViewController!)
+            replaceChildViewController(viewController: balanceViewController!, containerView: containerView)
         } else if (tabItem == resourcesTabItem) {
-            replaceChildViewController(viewController: resourcesViewController!)
+            replaceChildViewController(viewController: resourcesViewController!, containerView: containerView)
         } else if (tabItem == voteTabItem) {
-            replaceChildViewController(viewController: voteViewController!)
+            replaceChildViewController(viewController: voteViewController!, containerView: containerView)
         }
     }
     
@@ -177,11 +168,11 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         
         switch page {
         case .balances:
-            replaceChildViewController(viewController: balanceViewController!)
+            replaceChildViewController(viewController: balanceViewController!, containerView: containerView)
         case .resources:
-            replaceChildViewController(viewController: resourcesViewController!)
+            replaceChildViewController(viewController: resourcesViewController!, containerView: containerView)
         case .vote:
-            replaceChildViewController(viewController: voteViewController!)
+            replaceChildViewController(viewController: voteViewController!, containerView: containerView)
         }
     }
     

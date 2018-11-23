@@ -6,8 +6,4 @@ enum ResourcesViewState: MxViewState {
     case navigateToManageBandwidth
     case navigateToManageBandwidthWithAccountName
     case navigateToManageRam
-    case refundProgress
-    case refundSuccess
-    case refundFailed
-    case refundFailedWithLog(log: String)
 }

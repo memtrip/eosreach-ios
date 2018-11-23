@@ -45,28 +45,19 @@ class ManageBandwidthViewController: UIViewController, TabBarDelegate, Allocated
         tabBar.delegate = self
         
         view.backgroundColor = Res.color.colorWindowBackground()
-        replaceChildViewController(viewController: delegateBandwidthViewController)
-    }
-    
-    private func replaceChildViewController(viewController: UIViewController) {
-        addChild(viewController)
-        containerView.addSubview(viewController.view)
-        
-        viewController.view.frame = containerView.bounds
-        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        viewController.didMove(toParent: self)
+        replaceChildViewController(viewController: delegateBandwidthViewController, containerView: containerView)
     }
     
     @objc func tabBar(tabBar: TabBar, willSelect tabItem: TabItem) {
         if (tabItem == delegateTabItem) {
             self.view.endEditing(true)
-            replaceChildViewController(viewController: delegateBandwidthViewController)
+            replaceChildViewController(viewController: delegateBandwidthViewController, containerView: containerView)
         } else if (tabItem == undelegatedTabItem) {
             self.view.endEditing(true)
-            replaceChildViewController(viewController: undelegateBandwidthViewController)
+            replaceChildViewController(viewController: undelegateBandwidthViewController, containerView: containerView)
         } else if (tabItem == allocatedTabItem) {
             self.view.endEditing(true)
-            replaceChildViewController(viewController: allocatedBandwidthViewController)
+            replaceChildViewController(viewController: allocatedBandwidthViewController, containerView: containerView)
         }
     }
     
@@ -74,7 +65,7 @@ class ManageBandwidthViewController: UIViewController, TabBarDelegate, Allocated
         tabBar.animate(to: undelegatedTabItem, completion: nil)
         let prepopulatedUndelegatedBandwidthViewController = createUndelegateBandwidthViewController()
         prepopulatedUndelegatedBandwidthViewController.prepopulated = delegatedBandwidth
-        replaceChildViewController(viewController: prepopulatedUndelegatedBandwidthViewController)
+        replaceChildViewController(viewController: prepopulatedUndelegatedBandwidthViewController, containerView: containerView)
     }
     
     private func createUndelegateBandwidthViewController() -> UndelegateBandwidthViewController {
