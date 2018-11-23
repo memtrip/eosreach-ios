@@ -10,7 +10,9 @@
 	"manage_ram_form_empty" = "You must enter a RAM value greater than zero.";
 	"buy_ram_button" = Buy;
 	"sell_ram_button" = Sell;
-	"confirm_ram_title" = "Confirm Buy Ram";
+	"confirm_ram_title" = Confirm;
+	"confirm_ram_buy_title" = "Confirm Buy Ram";
+	"confirm_ram_sell_title" = "Confirm Sell Ram";
 	"confirm_ram_kb_label" = "k/b";
 	"confirm_ram_price_label" = Price;
 	"confirm_ram_instruction_label" = "The price of RAM is determined by the market. We checked the market price for you on the previous screen, but it is possible for the price to fluctuate within a small time period.";

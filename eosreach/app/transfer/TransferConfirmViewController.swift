@@ -87,6 +87,13 @@ class TransferConfirmViewController : MxViewController<TransferConfirmIntent, Tr
     }
     
     func transactionConfirmed() {
-        performSegue(withIdentifier: R.segue.transferConfirmViewController.transferConfirmToActions, sender: self)
+        setDestinationBundle(bundle: SegueBundle(
+            identifier: R.segue.transferConfirmViewController.transferConfirmationToAccounts.identifier,
+            model: AccountBundle(
+                accountName: transferFormBundle.contractAccountBalance.accountName,
+                readOnly: false,
+                accountPage: AccountPage.balances)
+        ))
+        performSegue(withIdentifier: R.segue.transferConfirmViewController.transferConfirmationToAccounts, sender: self)
     }
 }

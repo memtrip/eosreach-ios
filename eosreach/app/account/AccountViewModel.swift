@@ -18,7 +18,8 @@ class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewSta
                 .startWith(AccountResult.onProgress(accountName: accountBundle.accountName))
         case .refresh(let accountBundle):
             return getAccount(accountName: accountBundle.accountName)
-                .startWith(AccountResult.onProgress(accountName: accountBundle.accountName))
+                .startWith(AccountResult.onProgressWithStartingTab(
+                    accountName: accountBundle.accountName, page: accountBundle.accountPage))
         case .balanceTabIdle:
             return just(AccountResult.balanceTabIdle)
         case .resourceTabIdle:

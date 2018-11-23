@@ -29,6 +29,7 @@ class ErrorView : UIView {
 
         titleLabel.textColor = R.color.typographyColorPrimary()
         bodyLabel.textColor = R.color.typographyColorPrimary()
+        gone() // start hidden
     }
 
     func populate(body: String) {

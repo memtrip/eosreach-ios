@@ -2,7 +2,7 @@ import Foundation
 
 enum ConfirmRamViewState: MxViewState {
     case idle
-    case populate
+    case populate(commitType: RamBundle.CommitType)
     case onProgress
     case onSuccess(actionReceipt: ActionReceipt)
     case genericError

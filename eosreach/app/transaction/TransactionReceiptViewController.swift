@@ -44,8 +44,9 @@ class TransactionReceiptViewController: MxViewController<TransactionReceiptInten
                 UIApplication.shared.open(url, options: [:])
             }
         case .done:
-            delegate!.transactionConfirmed()
-            dismiss(animated: false, completion: nil)
+            dismiss(animated: true, completion: {
+                self.delegate!.transactionConfirmed()
+            })
         }
     }
     

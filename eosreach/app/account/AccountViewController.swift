@@ -81,8 +81,12 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
                     readOnly: false,
                     accountPage: AccountPage.balances))
             },
-            self.rx.methodInvoked(#selector(AccountViewController.refreshAccount)).map { _ in
-                return AccountIntent.refresh(accountBundle: self.accountBundle)
+            self.rx.methodInvoked(#selector(AccountViewController.refreshAccountVote)).map { _ in
+                return AccountIntent.refresh(accountBundle: AccountBundle(
+                    accountName: self.accountBundle.accountName,
+                    readOnly: self.accountBundle.readOnly,
+                    accountPage: AccountPage.vote
+                ))
             }
         )
     }
@@ -120,7 +124,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     //
     // MARK :- AccountDelegate
     //
-    @objc dynamic func refreshAccount() {
+    @objc dynamic func refreshAccountVote() {
     }
     
     //
@@ -144,7 +148,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     func populate(accountView: AccountView, page: AccountPage) {
         loaded = true
         toolbar.title = accountView.eosAccount!.accountName
-        tabBar.select(at: 0)
+        tabBar.select(at: selectAt(page: page))
         activityIndicator.stop()
         balancesContainer.visible()
         tabBar.visible()
@@ -196,6 +200,17 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         errorView.gone()
         balancesContainer.gone()
         tabBar.gone()
+    }
+    
+    private func selectAt(page: AccountPage) -> Int {
+        switch page {
+        case .balances:
+            return 0
+        case .resources:
+            return 1
+        case .vote:
+            return 2
+        }
     }
     
     func showGetAccountError() {

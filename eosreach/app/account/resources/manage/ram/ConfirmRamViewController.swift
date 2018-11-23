@@ -29,7 +29,7 @@ class ConfirmRamViewController : MxViewController<ConfirmRamIntent, ConfirmRamRe
 
     override func intents() -> Observable<ConfirmRamIntent> {
         return Observable.merge(
-            Observable.just(ConfirmRamIntent.start),
+            Observable.just(ConfirmRamIntent.start(ramBundle: ramBundle)),
             confirmButton.rx.tap.map {
                 ConfirmRamIntent.confirm(
                     accountName: self.ramBundle.contractAccountBalance.accountName,
@@ -50,11 +50,18 @@ class ConfirmRamViewController : MxViewController<ConfirmRamIntent, ConfirmRamRe
         case .onProgress:
             activityIndicator.start()
             confirmButton.gone()
-        case .populate:
+        case .populate(let commitType):
             let kbDoubleValue = Double(ramBundle.kb)!
             let costValue = kbDoubleValue * ramBundle.costPerKb.amount
             priceValue.text = BalanceFormatter.formatEosBalance(amount: costValue, symbol: ramBundle.costPerKb.symbol)
             kbValue.text = ramBundle.kb
+            
+            switch commitType {
+            case .buy:
+                toolBar.title = R.string.ramStrings.confirm_ram_buy_title()
+            case .sell:
+                toolBar.title = R.string.ramStrings.confirm_ram_sell_title()
+            }
         case .onSuccess(let actionReceipt):
             self.showTransactionReceipt(
                 actionReceipt: actionReceipt,

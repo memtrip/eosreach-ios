@@ -12,8 +12,8 @@ class ConfirmRamViewModel: MxViewModel<ConfirmRamIntent, ConfirmRamResult, Confi
         switch intent {
         case .idle:
             return just(ConfirmRamResult.idle)
-        case .start:
-            return just(ConfirmRamResult.populate)
+        case .start(let ramBundle):
+            return just(ConfirmRamResult.populate(commitType: ramBundle.commitType))
         case .confirm(let accountName, let kb, let commitType):
             return confirm(
                 account: accountName,
@@ -26,8 +26,8 @@ class ConfirmRamViewModel: MxViewModel<ConfirmRamIntent, ConfirmRamResult, Confi
         switch result {
         case .idle:
             return ConfirmRamViewState.idle
-        case .populate:
-            return ConfirmRamViewState.populate
+        case .populate(let commitType):
+            return ConfirmRamViewState.populate(commitType: commitType)
         case .onProgress:
             return ConfirmRamViewState.onProgress
         case .onSuccess(let actionReceipt):

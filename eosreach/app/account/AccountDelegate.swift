@@ -1,5 +1,5 @@
 import Foundation
 
 protocol AccountDelegate {
-    func refreshAccount()
+    func refreshAccountVote()
 }

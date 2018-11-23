@@ -110,7 +110,7 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
             noVoteButton.gone()
         case .onVoteForUsSuccess:
             if let accountDelegate = self.accountDelegate {
-                accountDelegate.refreshAccount()
+                accountDelegate.refreshAccountVote()
             }
         case .onVoteForUsError(let log):
             activityIndicator.stop()

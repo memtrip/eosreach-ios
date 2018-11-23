@@ -585,7 +585,7 @@
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zer-Db-mUB">
                                 <rect key="frame" x="0.0" y="212" width="375" height="455"/>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIA-MA-nKF" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIA-MA-nKF" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                             </view>
                         </subviews>
@@ -1422,7 +1422,7 @@
                         <outlet property="toLabel" destination="arh-aL-4xJ" id="zus-qb-ANK"/>
                         <outlet property="toValueLabel" destination="aBP-sV-f0f" id="f3J-Dn-PHF"/>
                         <outlet property="toolBar" destination="oG1-un-Lx1" id="9H3-8c-3Kd"/>
-                        <segue destination="8P7-QF-IgG" kind="show" identifier="transferConfirmToActions" id="9Tj-Qt-8rK"/>
+                        <segue destination="tgP-tV-kRI" kind="show" identifier="transferConfirmationToAccounts" id="JiS-fD-Jqz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeK-ai-uon" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3109,8 +3109,7 @@
         <segue reference="Eks-sF-JJe"/>
         <segue reference="2pO-q1-hHi"/>
         <segue reference="wQx-Tz-eH5"/>
-        <segue reference="9Tj-Qt-8rK"/>
-        <segue reference="cAT-yL-HS7"/>
+        <segue reference="JiS-fD-Jqz"/>
         <segue reference="nIH-HN-fGl"/>
         <segue reference="EMU-T5-0SR"/>
         <segue reference="uYP-iu-Ijf"/>

@@ -48,7 +48,7 @@ class SellRamViewController : MxViewController<SellRamIntent, SellRamResult, Sel
                     contractAccountBalance: manageRamBundle!.contractAccountBalance,
                     costPerKb: manageRamBundle!.costPerKb!,
                     kb: kilobytes,
-                    commitType: RamBundle.CommitType.buy
+                    commitType: RamBundle.CommitType.sell
                 )
             ))
             performSegue(withIdentifier: R.segue.sellRamViewController.sellRamToConfirmRam, sender: self)
