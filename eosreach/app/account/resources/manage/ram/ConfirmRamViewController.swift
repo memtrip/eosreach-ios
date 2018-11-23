@@ -29,12 +29,18 @@ class ConfirmRamViewController : MxViewController<ConfirmRamIntent, ConfirmRamRe
 
     override func intents() -> Observable<ConfirmRamIntent> {
         return Observable.merge(
-            Observable.just(ConfirmRamIntent.idle)
+            Observable.just(ConfirmRamIntent.start),
+            confirmButton.rx.tap.map {
+                ConfirmRamIntent.confirm(
+                    accountName: self.ramBundle.contractAccountBalance.accountName,
+                    kb: self.ramBundle.kb,
+                    commitType: self.ramBundle.commitType)
+            }
         )
     }
 
     override func idleIntent() -> ConfirmRamIntent {
-        return ConfirmRamIntent.start
+        return ConfirmRamIntent.idle
     }
 
     override func render(state: ConfirmRamViewState) {
@@ -58,10 +64,10 @@ class ConfirmRamViewController : MxViewController<ConfirmRamIntent, ConfirmRamRe
             transactionReceiptViewController.delegate = self
             self.present(transactionReceiptViewController, animated: true, completion: nil)
         case .genericError:
-            activityIndicator.gone()
+            activityIndicator.stop()
             confirmButton.visible()
         case .errorWithLog(let log):
-            activityIndicator.gone()
+            activityIndicator.stop()
             confirmButton.visible()
             showViewLog(viewLogHandler: { _ in
                 let transactionLogViewController = TransactionLogViewController(nib: R.nib.transactionLogViewController)
