@@ -72,6 +72,8 @@
 		3C0C04B321A8877400F5F7A7 /* ReachNetCpuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04B221A8877400F5F7A7 /* ReachNetCpuView.swift */; };
 		3C0C04B521A8878000F5F7A7 /* ReachNetCpuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0C04B421A8878000F5F7A7 /* ReachNetCpuView.xib */; };
 		3C0C04B721A8881700F5F7A7 /* ReachBorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04B621A8881700F5F7A7 /* ReachBorderLabel.swift */; };
+		3C0C04B921A8AE3100F5F7A7 /* CastProducersVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04B821A8AE3100F5F7A7 /* CastProducersVote.swift */; };
+		3C0C04BB21A8B39700F5F7A7 /* CastProducersRemoveDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04BA21A8B39700F5F7A7 /* CastProducersRemoveDelegate.swift */; };
 		3C0EC80A2192FAD300562A1B /* ui_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8092192FAD300562A1B /* ui_types.swift */; };
 		3C0EC80C2192FAF900562A1B /* ReachButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC80B2192FAF900562A1B /* ReachButton.swift */; };
 		3C0EC8122193086800562A1B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8112193086800562A1B /* R.generated.swift */; };
@@ -354,9 +356,9 @@
 		3CC9E72521A5C00E0050BA57 /* ProxyVoterListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72421A5C00E0050BA57 /* ProxyVoterListCell.swift */; };
 		3CC9E72721A5C1010050BA57 /* ProxyVoterListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72621A5C1010050BA57 /* ProxyVoterListCell.xib */; };
 		3CC9E72921A5C7520050BA57 /* ProxyStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72821A5C7520050BA57 /* ProxyStrings.strings */; };
-		3CC9E72B21A5CFCA0050BA57 /* CastProducerVoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72A21A5CFCA0050BA57 /* CastProducerVoteTableView.swift */; };
-		3CC9E72D21A5CFD80050BA57 /* CastProducerVoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72C21A5CFD80050BA57 /* CastProducerVoteCell.swift */; };
-		3CC9E72F21A5D03E0050BA57 /* CastProducerVoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72E21A5D03E0050BA57 /* CastProducerVoteCell.xib */; };
+		3CC9E72B21A5CFCA0050BA57 /* CastProducersVoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72A21A5CFCA0050BA57 /* CastProducersVoteTableView.swift */; };
+		3CC9E72D21A5CFD80050BA57 /* CastProducersVoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72C21A5CFD80050BA57 /* CastProducersVoteCell.swift */; };
+		3CC9E72F21A5D03E0050BA57 /* CastProducersVoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */; };
 		3CCE9C2421A2B11F0050910D /* AccountRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */; };
 		3CCE9C2621A2B1350050910D /* AccountViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */; };
 		3CCE9C2C21A2C3810050910D /* ResourceGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */; };
@@ -467,6 +469,8 @@
 		3C0C04B221A8877400F5F7A7 /* ReachNetCpuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachNetCpuView.swift; sourceTree = "<group>"; };
 		3C0C04B421A8878000F5F7A7 /* ReachNetCpuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReachNetCpuView.xib; sourceTree = "<group>"; };
 		3C0C04B621A8881700F5F7A7 /* ReachBorderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachBorderLabel.swift; sourceTree = "<group>"; };
+		3C0C04B821A8AE3100F5F7A7 /* CastProducersVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducersVote.swift; sourceTree = "<group>"; };
+		3C0C04BA21A8B39700F5F7A7 /* CastProducersRemoveDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducersRemoveDelegate.swift; sourceTree = "<group>"; };
 		3C0EC8092192FAD300562A1B /* ui_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ui_types.swift; sourceTree = "<group>"; };
 		3C0EC80B2192FAF900562A1B /* ReachButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachButton.swift; sourceTree = "<group>"; };
 		3C0EC8112193086800562A1B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -752,9 +756,9 @@
 		3CC9E72421A5C00E0050BA57 /* ProxyVoterListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyVoterListCell.swift; sourceTree = "<group>"; };
 		3CC9E72621A5C1010050BA57 /* ProxyVoterListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProxyVoterListCell.xib; sourceTree = "<group>"; };
 		3CC9E72821A5C7520050BA57 /* ProxyStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ProxyStrings.strings; sourceTree = "<group>"; };
-		3CC9E72A21A5CFCA0050BA57 /* CastProducerVoteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducerVoteTableView.swift; sourceTree = "<group>"; };
-		3CC9E72C21A5CFD80050BA57 /* CastProducerVoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducerVoteCell.swift; sourceTree = "<group>"; };
-		3CC9E72E21A5D03E0050BA57 /* CastProducerVoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastProducerVoteCell.xib; sourceTree = "<group>"; };
+		3CC9E72A21A5CFCA0050BA57 /* CastProducersVoteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducersVoteTableView.swift; sourceTree = "<group>"; };
+		3CC9E72C21A5CFD80050BA57 /* CastProducersVoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducersVoteCell.swift; sourceTree = "<group>"; };
+		3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastProducersVoteCell.xib; sourceTree = "<group>"; };
 		3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRenderer.swift; sourceTree = "<group>"; };
 		3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewLayout.swift; sourceTree = "<group>"; };
 		3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceGraphView.swift; sourceTree = "<group>"; };
@@ -1669,9 +1673,11 @@
 				3CC9E70B21A5A4180050BA57 /* CastProducersVoteViewController.swift */,
 				3CC9E70921A5A4170050BA57 /* CastProducersVoteViewModel.swift */,
 				3CC9E70A21A5A4170050BA57 /* CastProducersVoteViewState.swift */,
-				3CC9E72A21A5CFCA0050BA57 /* CastProducerVoteTableView.swift */,
-				3CC9E72C21A5CFD80050BA57 /* CastProducerVoteCell.swift */,
-				3CC9E72E21A5D03E0050BA57 /* CastProducerVoteCell.xib */,
+				3CC9E72A21A5CFCA0050BA57 /* CastProducersVoteTableView.swift */,
+				3C0C04BA21A8B39700F5F7A7 /* CastProducersRemoveDelegate.swift */,
+				3CC9E72C21A5CFD80050BA57 /* CastProducersVoteCell.swift */,
+				3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */,
+				3C0C04B821A8AE3100F5F7A7 /* CastProducersVote.swift */,
 			);
 			path = producers;
 			sourceTree = "<group>";
@@ -1803,7 +1809,7 @@
 				3C5799CF2191D27E00B9A3D7 /* LaunchScreen.storyboard in Resources */,
 				3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */,
 				3C8BD25B21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib in Resources */,
-				3CC9E72F21A5D03E0050BA57 /* CastProducerVoteCell.xib in Resources */,
+				3CC9E72F21A5D03E0050BA57 /* CastProducersVoteCell.xib in Resources */,
 				3C0700AD21A74862008F63D2 /* RamStrings.strings in Resources */,
 				3C6DF76E21A082AC00ADA892 /* AccountStrings.strings in Resources */,
 				3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */,
@@ -2005,6 +2011,7 @@
 				3C8C6D9E2192D5B000FC1A0D /* SegueBundle.swift in Sources */,
 				3CC9E6F421A56AAE0050BA57 /* ViewProxyVoterViewController.swift in Sources */,
 				3CC9A3BB219DBC210002A25F /* RamPriceRequestImpl.swift in Sources */,
+				3C0C04BB21A8B39700F5F7A7 /* CastProducersRemoveDelegate.swift in Sources */,
 				3C964C4F2194572A003663EF /* EosKeyManager.swift in Sources */,
 				3C8BD23D21A6C22900ACFA70 /* AllocatedBandwidthViewModel.swift in Sources */,
 				3C9BFB90219B36CC00589936 /* EosPrice.swift in Sources */,
@@ -2017,7 +2024,7 @@
 				3C0700E121A75245008F63D2 /* ManageRamBundle.swift in Sources */,
 				3C0ADD90219F38160026649F /* GetBalances.swift in Sources */,
 				3CC9A3D5219DF1B00002A25F /* RegisteredBlockProducersCell.swift in Sources */,
-				3CC9E72B21A5CFCA0050BA57 /* CastProducerVoteTableView.swift in Sources */,
+				3CC9E72B21A5CFCA0050BA57 /* CastProducersVoteTableView.swift in Sources */,
 				3CC9E6F221A56AAE0050BA57 /* ViewProxyVoterViewState.swift in Sources */,
 				3C9BFBA7219B51A700589936 /* BalanceFormatter.swift in Sources */,
 				3C0EC82A219350DE00562A1B /* ImportKeyViewState.swift in Sources */,
@@ -2277,6 +2284,7 @@
 				3C6DF78821A08D8700ADA892 /* VoteViewController.swift in Sources */,
 				3CC9A3D3219DF14D0002A25F /* RegisteredBlockProducersTableView.swift in Sources */,
 				3C4406AB21A1EDBC003BBFA9 /* BalanceCell.swift in Sources */,
+				3C0C04B921A8AE3100F5F7A7 /* CastProducersVote.swift in Sources */,
 				3CC9A3BF219DC0F90002A25F /* HistoryApiModule.swift in Sources */,
 				3CC9A3B9219DBBFA0002A25F /* RamPriceRequest.swift in Sources */,
 				3C14FA4421A0A31A00B8255F /* EosPriceRequestImpl.swift in Sources */,
@@ -2300,7 +2308,7 @@
 				3C0700DF21A751BB008F63D2 /* ConfirmRamViewController.swift in Sources */,
 				3C1A972121A3D03100C30A75 /* ActiveBlockProducersCell.swift in Sources */,
 				3CC9E6F621A56AAE0050BA57 /* ViewProxyVoterViewModel.swift in Sources */,
-				3CC9E72D21A5CFD80050BA57 /* CastProducerVoteCell.swift in Sources */,
+				3CC9E72D21A5CFD80050BA57 /* CastProducersVoteCell.swift in Sources */,
 				3C9BFB8E219B368700589936 /* AccountBalanceRequestImpl.swift in Sources */,
 				3C0700E321A7726A008F63D2 /* RamBundle.swift in Sources */,
 				3C6DF76F21A082AC00ADA892 /* AccountViewModel.swift in Sources */,

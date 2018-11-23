@@ -1,10 +1,13 @@
 import Foundation
 import UIKit
 
-class CastProducerVoteCell : SimpleTableViewCell<String> {
+class CastProducersVoteCell : SimpleTableViewCell<String> {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var removeButton: UIButton!
+    
+    var delegate: CastProducersRemoveDelegate?
+    var indexPath: IndexPath?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -16,5 +19,10 @@ class CastProducerVoteCell : SimpleTableViewCell<String> {
     
     override func populate(item: String) {
         textField.text = item
+        removeButton.addTarget(self, action: #selector(removeTap), for: .touchUpInside)
+    }
+    
+    @objc private func removeTap() {
+        delegate!.removePressed(indexPath: indexPath!)
     }
 }

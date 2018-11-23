@@ -12,5 +12,7 @@ class ReachBorderView: UIView {
         layer.borderColor = color.cgColor
         layer.cornerRadius = 3.0
         clipsToBounds = true
+        
+        backgroundColor = R.color.transparentBackground()
     }
 }

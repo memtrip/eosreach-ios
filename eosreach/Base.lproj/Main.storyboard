@@ -2602,7 +2602,7 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="FCC-hN-vOF" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="177.5" y="626" width="20" height="20"/>
                             </activityIndicatorView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2hf-mb-jm0" customClass="CastProducerVoteTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2hf-mb-jm0" customClass="CastProducersVoteTableView" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="8" y="110.5" width="359" height="494.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -3109,7 +3109,7 @@
         <segue reference="Eks-sF-JJe"/>
         <segue reference="2pO-q1-hHi"/>
         <segue reference="wQx-Tz-eH5"/>
-        <segue reference="JiS-fD-Jqz"/>
+        <segue reference="cAT-yL-HS7"/>
         <segue reference="nIH-HN-fGl"/>
         <segue reference="EMU-T5-0SR"/>
         <segue reference="uYP-iu-Ijf"/>

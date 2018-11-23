@@ -4,9 +4,9 @@ import RxCocoa
 
 class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent, CastProducersVoteResult, CastProducersVoteViewState, CastProducersVoteViewModel>, DataTableView {
 
-    typealias tableViewType = CastProducerVoteTableView
+    typealias tableViewType = CastProducersVoteTableView
 
-    func dataTableView() -> CastProducerVoteTableView {
+    func dataTableView() -> CastProducersVoteTableView {
         return tableView as! tableViewType
     }
     
