@@ -34,7 +34,7 @@ class ConfirmRamViewController : MxViewController<ConfirmRamIntent, ConfirmRamRe
     }
 
     override func idleIntent() -> ConfirmRamIntent {
-        return ConfirmRamIntent.idle
+        return ConfirmRamIntent.start
     }
 
     override func render(state: ConfirmRamViewState) {
@@ -45,10 +45,10 @@ class ConfirmRamViewController : MxViewController<ConfirmRamIntent, ConfirmRamRe
             activityIndicator.start()
             confirmButton.gone()
         case .populate:
-            kbValue.text = ramBundle.kb
             let kbDoubleValue = Double(ramBundle.kb)!
             let costValue = kbDoubleValue * ramBundle.costPerKb.amount
-            priceLabel.text = BalanceFormatter.formatEosBalance(amount: costValue, symbol: ramBundle.costPerKb.symbol)
+            priceValue.text = BalanceFormatter.formatEosBalance(amount: costValue, symbol: ramBundle.costPerKb.symbol)
+            kbValue.text = ramBundle.kb
         case .onSuccess(let actionReceipt):
             let transactionReceiptViewController = TransactionReceiptViewController(nib: R.nib.transactionReceiptViewController)
             transactionReceiptViewController.transactionReceiptBundle = TransactionReceiptBundle(
