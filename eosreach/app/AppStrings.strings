@@ -15,4 +15,5 @@
 	"app_uitkit_cpu_label" = CPU;
 	"app_uitkit_net_label" = NET;
 	"app_empty_value" = "-";
+	"app_create_account_product_id" = "memtrip_issue_basic";
 }

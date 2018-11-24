@@ -2965,6 +2965,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_skProductNotFound" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSF-tn-AWU">
+                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YKr-Dw-nKA" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="84" width="343" height="567"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAQ-4J-74O" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
@@ -3017,10 +3026,10 @@
                                     <constraint firstItem="OC5-fb-Qrz" firstAttribute="centerX" secondItem="Is7-eT-owu" secondAttribute="centerX" id="sYR-e6-mMr"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-Uw-ZdL" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-Uw-ZdL" userLabel="ErrorView" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="16" y="84" width="343" height="567"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xw6-VK-7Go" userLabel="Form">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xw6-VK-7Go" userLabel="Form">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gex-w3-hfG" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
@@ -3068,38 +3077,47 @@
                             </view>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="bgc-OJ-nQ2" firstAttribute="trailing" secondItem="YKr-Dw-nKA" secondAttribute="trailing" constant="16" id="25T-1Z-kAt"/>
                             <constraint firstItem="bgc-OJ-nQ2" firstAttribute="bottom" secondItem="h4z-KI-Mbd" secondAttribute="bottom" id="3Hd-Rp-DJ6"/>
                             <constraint firstItem="bgc-OJ-nQ2" firstAttribute="trailing" secondItem="AAQ-4J-74O" secondAttribute="trailing" id="4Yg-Qi-thR"/>
                             <constraint firstItem="bgc-OJ-nQ2" firstAttribute="bottom" secondItem="Xw6-VK-7Go" secondAttribute="bottom" id="A5m-ng-Fbk"/>
+                            <constraint firstItem="bgc-OJ-nQ2" firstAttribute="bottom" secondItem="qSF-tn-AWU" secondAttribute="bottom" constant="16" id="I3H-PH-ppw"/>
+                            <constraint firstItem="bgc-OJ-nQ2" firstAttribute="bottom" secondItem="YKr-Dw-nKA" secondAttribute="bottom" constant="16" id="I9e-7E-Mb6"/>
+                            <constraint firstItem="qSF-tn-AWU" firstAttribute="leading" secondItem="bgc-OJ-nQ2" secondAttribute="leading" constant="16" id="IAe-kX-1zq"/>
                             <constraint firstItem="bgc-OJ-nQ2" firstAttribute="trailing" secondItem="VcP-Uw-ZdL" secondAttribute="trailing" constant="16" id="LgE-92-YFQ"/>
                             <constraint firstItem="h4z-KI-Mbd" firstAttribute="top" secondItem="AAQ-4J-74O" secondAttribute="bottom" id="Nss-1C-9OI"/>
+                            <constraint firstItem="qSF-tn-AWU" firstAttribute="top" secondItem="bgc-OJ-nQ2" secondAttribute="top" constant="16" id="PHK-Tx-0N6"/>
                             <constraint firstItem="Xw6-VK-7Go" firstAttribute="leading" secondItem="bgc-OJ-nQ2" secondAttribute="leading" id="RC9-pf-rSx"/>
                             <constraint firstItem="bgc-OJ-nQ2" firstAttribute="trailing" secondItem="Xw6-VK-7Go" secondAttribute="trailing" id="WNe-XX-spb"/>
                             <constraint firstItem="AAQ-4J-74O" firstAttribute="leading" secondItem="bgc-OJ-nQ2" secondAttribute="leading" id="WU7-pA-gDn"/>
+                            <constraint firstItem="YKr-Dw-nKA" firstAttribute="leading" secondItem="bgc-OJ-nQ2" secondAttribute="leading" constant="16" id="Xnh-Jh-rrr"/>
                             <constraint firstItem="Xw6-VK-7Go" firstAttribute="top" secondItem="AAQ-4J-74O" secondAttribute="bottom" id="ZMR-sW-KEG"/>
                             <constraint firstItem="VcP-Uw-ZdL" firstAttribute="top" secondItem="AAQ-4J-74O" secondAttribute="bottom" constant="16" id="aW6-ro-faE"/>
                             <constraint firstItem="h4z-KI-Mbd" firstAttribute="leading" secondItem="bgc-OJ-nQ2" secondAttribute="leading" id="fB6-jO-CiY"/>
                             <constraint firstItem="bgc-OJ-nQ2" firstAttribute="trailing" secondItem="h4z-KI-Mbd" secondAttribute="trailing" id="fek-yn-ulj"/>
                             <constraint firstItem="VcP-Uw-ZdL" firstAttribute="leading" secondItem="bgc-OJ-nQ2" secondAttribute="leading" constant="16" id="haf-fU-u2X"/>
+                            <constraint firstItem="bgc-OJ-nQ2" firstAttribute="trailing" secondItem="qSF-tn-AWU" secondAttribute="trailing" constant="16" id="kSg-Qd-RNG"/>
                             <constraint firstItem="bgc-OJ-nQ2" firstAttribute="bottom" secondItem="VcP-Uw-ZdL" secondAttribute="bottom" constant="16" id="nqq-Zg-DtZ"/>
                             <constraint firstItem="AAQ-4J-74O" firstAttribute="top" secondItem="bgc-OJ-nQ2" secondAttribute="top" id="q9R-i6-Mjd"/>
+                            <constraint firstItem="YKr-Dw-nKA" firstAttribute="top" secondItem="AAQ-4J-74O" secondAttribute="bottom" constant="16" id="vVf-ab-dpl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bgc-OJ-nQ2"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="YKr-Dw-nKA" id="omi-hU-q4s"/>
                         <outlet property="doneCreateAccountLabel" destination="Vhd-sO-s76" id="NVA-1F-OF8"/>
                         <outlet property="doneCtaActivityIndicator" destination="OC5-fb-Qrz" id="2vl-0a-xaO"/>
                         <outlet property="doneCtaButton" destination="Is7-eT-owu" id="8YK-ZZ-PHo"/>
                         <outlet property="doneInstructionLabel" destination="pI2-g3-qGc" id="Tjt-Jq-jum"/>
                         <outlet property="donePrivateKey" destination="uBz-DV-xvh" id="9ql-wG-f1k"/>
                         <outlet property="doneViewGroup" destination="h4z-KI-Mbd" id="I21-CM-mRN"/>
-                        <outlet property="errorView" destination="VcP-Uw-ZdL" id="wm6-OE-azY"/>
                         <outlet property="formAccountTextField" destination="gex-w3-hfG" id="hzq-8r-xrH"/>
                         <outlet property="formCtaActivityIndicator" destination="eOP-r1-llB" id="R9Z-U2-Ge6"/>
                         <outlet property="formCtaButton" destination="ika-Qy-Lgd" id="KJS-8R-imQ"/>
                         <outlet property="formInstructionLabel" destination="kxK-Ay-TiT" id="6M2-gB-hID"/>
                         <outlet property="formNetCpuResources" destination="eIY-Ua-Mjq" id="IgI-di-xKB"/>
                         <outlet property="formViewGroup" destination="Xw6-VK-7Go" id="Ry3-iP-SAp"/>
+                        <outlet property="skProductNotFound" destination="qSF-tn-AWU" id="P5V-o6-RHM"/>
                         <outlet property="toolBar" destination="AAQ-4J-74O" id="tfe-xs-Thi"/>
                         <segue destination="tgP-tV-kRI" kind="show" identifier="createAccountToAccount" id="leo-zV-II3"/>
                     </connections>

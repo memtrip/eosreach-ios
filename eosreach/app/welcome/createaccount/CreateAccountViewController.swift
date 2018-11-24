@@ -1,11 +1,13 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import StoreKit
 
-class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateAccountResult, CreateAccountViewState, CreateAccountViewModel> {
+class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateAccountResult, CreateAccountViewState, CreateAccountViewModel>, BillingFlowDelegate, BillingConnectionDelegate {
 
     @IBOutlet weak var toolBar: ReachToolbar!
-    @IBOutlet weak var errorView: ErrorView!
+    @IBOutlet weak var activityIndicator: ReachActivityIndicator!
+    @IBOutlet weak var skProductNotFound: UILabel!
     
     @IBOutlet weak var formViewGroup: UIView!
     @IBOutlet weak var formAccountTextField: ReachTextField!
@@ -21,6 +23,9 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     @IBOutlet weak var doneCtaButton: ReachPrimaryButton!
     @IBOutlet weak var doneCtaActivityIndicator: UIActivityIndicatorView!
     
+    private let billing = BillingImpl(storeKitHandler: StoreKitHandler())
+    private var skProduct: SKProduct?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setToolbar(toolbar: toolBar)
@@ -29,7 +34,8 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
         formInstructionLabel.text = R.string.welcomeStrings.create_account_resource_instructions()
         formNetCpuResources.cpuValueLabel.text = R.string.welcomeStrings.create_account_resource_cpu()
         formNetCpuResources.netValueLabel.text = R.string.welcomeStrings.create_account_resource_net()
-        formCtaButton.setTitle(R.string.welcomeStrings.create_account_cta_button("£2.99"), for: .normal)
+        formCtaButton.setTitle(R.string.welcomeStrings.create_account_cta_button(R.string.appStrings.app_empty_value()), for: .normal)
+        skProductNotFound.text = R.string.welcomeStrings.create_account_sku_error()
         
         doneCreateAccountLabel.text = R.string.welcomeStrings.create_account_done_title()
         doneInstructionLabel.text = R.string.welcomeStrings.create_account_done_instructions()
@@ -37,7 +43,13 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     }
 
     override func intents() -> Observable<CreateAccountIntent> {
-        return Observable.just(CreateAccountIntent.idle)
+        return Observable.merge(
+            Observable.just(CreateAccountIntent.startBillingConnection),
+            self.rx.methodInvoked(#selector(CreateAccountViewController.success(skProduct:))).map { args in
+                let skProduct = args[0] as! SKProduct
+                return CreateAccountIntent.onSKProductSuccess(skProduct: skProduct)
+            }
+        )
     }
 
     override func idleIntent() -> CreateAccountIntent {
@@ -48,10 +60,80 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
         switch state {
         case .idle:
             break
+        case .startBillingConnection:
+            activityIndicator.start()
+            billing.startConnection(billingConnectionDelegate: self, billingFlowDelegate: self)
+        case .onSKProductSuccess(let formattedPrice, let skProduct):
+            self.skProduct = skProduct
+            activityIndicator.stop()
+            formViewGroup.visible()
+            formCtaButton.setTitle(R.string.welcomeStrings.create_account_cta_button(formattedPrice), for: .normal)
+        case .onSKProductError:
+            print("")
+        case .onAccountNameValidationPassed:
+            print("")
+        case .onCreateAccountProgress:
+            print("")
+        case .onCreateAccountSuccess(let transactionIdentifier):
+            print("")
+        case .onImportKeyProgress:
+            print("")
+        case .onImportKeyError:
+            print("")
+        case .navigateToAccounts:
+            print("")
         }
     }
 
     override func provideViewModel() -> CreateAccountViewModel {
         return CreateAccountViewModel(initialState: CreateAccountViewState.idle)
+    }
+    
+    //
+    // MARK :- BillingFlowDelegate
+    //
+    func cannotMakePayment() {
+        print("cannotMakePayment")
+    }
+    
+    func purchasing() {
+        print("purchasing")
+    }
+    
+    func success(transactionIdentifier: String) {
+        print("success")
+    }
+    
+    func failed() {
+        print("failed")
+    }
+    
+    func deferred() {
+        print("deferred")
+    }
+    
+    //
+    // MARK :- BillingConnectionDelegate
+    //
+    @objc dynamic func success(skProduct: SKProduct) {
+    }
+    
+    func skuNotFound() {
+        activityIndicator.stop()
+        formViewGroup.gone()
+        skProductNotFound.visible()
+        billing.endConnection()
+    }
+    
+    func skuBillingUnavailable() {
+        print("skuBillingUnavailable")
+    }
+    
+    func skuRequestFailed() {
+        print("skuRequestFailed")
+    }
+    
+    func billingSetupFailed() {
+        print("billingSetupFailed")
     }
 }
