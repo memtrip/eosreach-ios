@@ -48,6 +48,12 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
             self.rx.methodInvoked(#selector(CreateAccountViewController.success(skProduct:))).map { args in
                 let skProduct = args[0] as! SKProduct
                 return CreateAccountIntent.onSKProductSuccess(skProduct: skProduct)
+            },
+            Observable.merge(
+                formAccountTextField.rx.controlEvent(.editingDidEndOnExit).asObservable(),
+                formCtaButton.rx.tap.asObservable()
+            ).map {
+                CreateAccountIntent.createAccount(accountName: self.formAccountTextField.text!)
             }
         )
     }
@@ -68,10 +74,8 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
             activityIndicator.stop()
             formViewGroup.visible()
             formCtaButton.setTitle(R.string.welcomeStrings.create_account_cta_button(formattedPrice), for: .normal)
-        case .onSKProductError:
-            print("")
         case .onAccountNameValidationPassed:
-            print("")
+            billing.pay(product: skProduct!)
         case .onCreateAccountProgress:
             print("")
         case .onCreateAccountSuccess(let transactionIdentifier):
@@ -82,6 +86,10 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
             print("")
         case .navigateToAccounts:
             print("")
+        case .onAccountNameValidationFailed:
+            showOKDialog(message: R.string.welcomeStrings.create_account_username_format_validation_error())
+        case .onAccountNameValidationNumberStartFailed:
+            showOKDialog(message: R.string.welcomeStrings.create_account_username_length_validation_error())
         }
     }
 

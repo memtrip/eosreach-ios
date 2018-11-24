@@ -5,7 +5,8 @@ enum CreateAccountViewState: MxViewState {
     case idle
     case startBillingConnection
     case onSKProductSuccess(formattedPrice: String, skProduct: SKProduct)
-    case onSKProductError()
+    case onAccountNameValidationFailed
+    case onAccountNameValidationNumberStartFailed
     case onAccountNameValidationPassed
     case onCreateAccountProgress
     case onCreateAccountSuccess(transactionIdentifier: String)

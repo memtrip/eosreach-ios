@@ -5,5 +5,5 @@ enum CreateAccountIntent: MxIntent {
     case idle
     case startBillingConnection
     case onSKProductSuccess(skProduct: SKProduct)
-    case onSKProductError
+    case createAccount(accountName: String)
 }

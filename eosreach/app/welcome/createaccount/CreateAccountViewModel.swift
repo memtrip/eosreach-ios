@@ -12,8 +12,8 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
             return just(CreateAccountResult.startBillingConnection)
         case .onSKProductSuccess(let skProduct):
             return just(formatPrice(skProduct: skProduct))
-        case .onSKProductError:
-            return just(CreateAccountResult.onSKProductError)
+        case .createAccount(let accountName):
+            return just(createAccount(accountName: accountName))
         }
     }
 
@@ -25,8 +25,6 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
             return CreateAccountViewState.startBillingConnection
         case .onSKProductSuccess(let formattedPrice, let skProduct):
             return CreateAccountViewState.onSKProductSuccess(formattedPrice: formattedPrice, skProduct: skProduct)
-        case .onSKProductError:
-            return CreateAccountViewState.onSKProductError()
         case .onAccountNameValidationPassed:
             return CreateAccountViewState.onAccountNameValidationPassed
         case .onCreateAccountProgress:
@@ -39,6 +37,10 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
             return CreateAccountViewState.onImportKeyError
         case .navigateToAccounts:
             return CreateAccountViewState.navigateToAccounts
+        case .onAccountNameValidationFailed:
+            return CreateAccountViewState.onAccountNameValidationFailed
+        case .onAccountNameValidationNumberStartFailed:
+            return CreateAccountViewState.onAccountNameValidationNumberStartFailed
         }
     }
     
@@ -48,5 +50,15 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
         numberFormatter.locale = skProduct.priceLocale
         let formattedPrice = numberFormatter.string(from: skProduct.price)!
         return CreateAccountResult.onSKProductSuccess(formattedPrice: formattedPrice, skProduct: skProduct)
+    }
+    
+    private func createAccount(accountName: String) -> CreateAccountResult {
+        if (accountName.isEmpty || accountName.count != 12) {
+            return CreateAccountResult.onAccountNameValidationFailed
+        } else if (accountName[0] >= "0" && accountName[0] <= "9") {
+            return CreateAccountResult.onAccountNameValidationNumberStartFailed
+        } else {
+            return CreateAccountResult.onAccountNameValidationPassed
+        }
     }
 }
