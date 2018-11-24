@@ -1635,6 +1635,13 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		3C9C665B21A9642500612CD8 /* storekit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = storekit;
+			sourceTree = "<group>";
+		};
 		3CC9A3C6219DCEDC0002A25F /* error */ = {
 			isa = PBXGroup;
 			children = (
@@ -1697,6 +1704,7 @@
 		3CEF33B321A5079400716AA2 /* createaccount */ = {
 			isa = PBXGroup;
 			children = (
+				3C9C665B21A9642500612CD8 /* storekit */,
 				3CEF33B621A507E700716AA2 /* CreateAccountIntent.swift */,
 				3CEF33B821A507E700716AA2 /* CreateAccountResult.swift */,
 				3CEF33B421A507E700716AA2 /* CreateAccountViewController.swift */,
@@ -2516,7 +2524,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = memtrip.eosreach;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memtrip.eosreach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2540,7 +2548,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = memtrip.eosreach;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memtrip.eosreach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

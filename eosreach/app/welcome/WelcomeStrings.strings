@@ -12,5 +12,24 @@
 	"welcome_import_key_error_invalid_key" = "Invalid private key format.";
 	"welcome_import_key_error_generic" = "Could not import private key, please check your connection and try again.";
 	"welcome_import_key_error_no_accounts" = "We did not find any accounts associated with this private key, the Create Account option is the easiest way to get started. If this is unexpected, try changing the EOS endpoint in settings.";
-	"welcome_create_account_title" = "Create Account";
+	"create_account_title" = "Create Account";
+	"create_account_account_name_placeholder" = "Account name - characters (A-Z) digits (1-5)";
+	"create_account_resource_instructions" = "We will stake your new account with resources to get you started. This comes at a small cost, but it is required to issue you a new account on the EOS network.";
+	"create_account_resource_cpu" = "0.3000 EOS";
+	"create_account_resource_net" = "0.1000 EOS";
+	"create_account_cta_button" = "Create Account (%@)";
+	"create_account_done_title" = "Your account has been created.";
+	"create_account_done_instructions" = "The private key below was added as both the active and owner permission of your new account. Please backup this private key and do not share it with anyone, under any circumstances!";
+	"create_account_done_button" = Done;
+	"create_account_sku_error" = "Our create account feature is currently unavailable, you can still use this app by importing an existing private key.";
+	"create_account_billing_setup_error" = "We could not connect to the App Store, please check your internet connection and try again.";
+	"create_account_billing_cancelled" = "You cancelled the App Store purchase. You can import an existing private key if you do not want to pay our fee.";
+	"create_account_billing_frozen" = "Our account issuing service is currently frozen. You can use the app by importing an existing private key, we apologies for any inconvenience.";
+	"create_account_billing_generic_error" = "App Store could not process your payment, please check your internet connection and try again. You have not been charged for this transaction.";
+	"create_account_billing_fatal_error" = "You have already purchased an account, but unfortunately an issue occurred while processing your transaction. You will have received an email confirmation containing your purchaseId, please contact support@memtrip.com quoting this purchaseId. We will resolve this for you ASAP.";
+	"create_account_username_length_validation_error" = "Please enter an account name that is 12 characters in length.";
+	"create_account_username_format_validation_error" = "Please use a-z for the first character of your account name.";
+	"create_account_error_name_exists" = "The account name you chose already exists, please choose another name.";
+	"create_account_error_generic" = "We could not create an account at this time, please check your connection and try again.";
+	"create_account_error_fatal" = "We could not create an account at this time, please check your connection and try again. If you continue to encounter difficulties, please contact support@memtrip.com and quote your purchase id. The purchase id will have been sent to your google play email account.";
 }

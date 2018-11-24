@@ -38,7 +38,7 @@ class SplashViewController: MxViewController<SplashIntent, SplashResult, SplashV
         case .idle:
             break
         case .navigateToCreateAccount:
-            print("create account")
+            performSegue(withIdentifier: R.segue.splashViewController.splashToCreateAccount, sender: self)
         case .navigateToImportPrivateKey:
             performSegue(withIdentifier: R.segue.splashViewController.splashToImportPrivateKey, sender: self)
         case .navigateToExplore:

@@ -453,6 +453,7 @@
                         <outlet property="importPrivateKeyButton" destination="ies-v4-gpP" id="fzY-nM-0TP"/>
                         <segue destination="uwo-3q-08m" kind="show" identifier="splashToImportPrivateKey" id="1Wt-0h-Agf"/>
                         <segue destination="Spf-hF-xRr" kind="show" identifier="splashToExplore" id="dMo-xo-wz4"/>
+                        <segue destination="SZE-Lt-A3B" kind="show" identifier="splashToCreateAccount" id="SIU-CS-KrR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Jx-fj-esb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2970,16 +2971,137 @@
                                     <constraint firstAttribute="height" constant="48" id="Owi-uH-O7p"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4z-KI-Mbd" userLabel="Done">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_account_create" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhd-sO-s76">
+                                        <rect key="frame" x="16" y="16" width="343" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <color key="textColor" name="colorSecondary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_instruction" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pI2-g3-qGc">
+                                        <rect key="frame" x="16" y="48" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" name="typographyColorPrimary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBz-DV-xvh">
+                                        <rect key="frame" x="16" y="76.5" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is7-eT-owu" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="553" width="343" height="30"/>
+                                        <state key="normal" title="_done"/>
+                                    </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="OC5-fb-Qrz">
+                                        <rect key="frame" x="177.5" y="558" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uBz-DV-xvh" secondAttribute="trailing" constant="16" id="9Hv-Ki-JOq"/>
+                                    <constraint firstItem="uBz-DV-xvh" firstAttribute="leading" secondItem="h4z-KI-Mbd" secondAttribute="leading" constant="16" id="CsD-PH-cxa"/>
+                                    <constraint firstItem="uBz-DV-xvh" firstAttribute="top" secondItem="pI2-g3-qGc" secondAttribute="bottom" constant="8" id="Ea7-Xq-Dg7"/>
+                                    <constraint firstItem="Is7-eT-owu" firstAttribute="leading" secondItem="h4z-KI-Mbd" secondAttribute="leading" constant="16" id="Obq-1R-aDJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="pI2-g3-qGc" secondAttribute="trailing" constant="16" id="RRt-tO-Cfj"/>
+                                    <constraint firstItem="Vhd-sO-s76" firstAttribute="top" secondItem="h4z-KI-Mbd" secondAttribute="top" constant="16" id="UVl-ta-rMu"/>
+                                    <constraint firstItem="Vhd-sO-s76" firstAttribute="leading" secondItem="h4z-KI-Mbd" secondAttribute="leading" constant="16" id="bdl-eM-b5K"/>
+                                    <constraint firstAttribute="bottom" secondItem="Is7-eT-owu" secondAttribute="bottom" constant="16" id="g9o-og-r3p"/>
+                                    <constraint firstItem="pI2-g3-qGc" firstAttribute="leading" secondItem="h4z-KI-Mbd" secondAttribute="leading" constant="16" id="hkL-7i-ah3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Is7-eT-owu" secondAttribute="trailing" constant="16" id="iK3-F3-WWb"/>
+                                    <constraint firstItem="OC5-fb-Qrz" firstAttribute="centerY" secondItem="Is7-eT-owu" secondAttribute="centerY" id="mfU-PC-i1i"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vhd-sO-s76" secondAttribute="trailing" constant="16" id="pGW-pR-vSX"/>
+                                    <constraint firstItem="pI2-g3-qGc" firstAttribute="top" secondItem="Vhd-sO-s76" secondAttribute="bottom" constant="8" id="rTi-Po-pY2"/>
+                                    <constraint firstItem="OC5-fb-Qrz" firstAttribute="centerX" secondItem="Is7-eT-owu" secondAttribute="centerX" id="sYR-e6-mMr"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-Uw-ZdL" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="84" width="343" height="567"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xw6-VK-7Go" userLabel="Form">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gex-w3-hfG" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="32" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_instruction" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxK-Ay-TiT">
+                                        <rect key="frame" x="16" y="78" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" name="typographyColorPrimary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-Ua-Mjq" customClass="ReachNetCpuView" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="114.5" width="343" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="96" id="RQX-x8-njG"/>
+                                        </constraints>
+                                    </view>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="eOP-r1-llB" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="177.5" y="558" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ika-Qy-Lgd" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="553" width="343" height="30"/>
+                                        <state key="normal" title="_create_account"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ika-Qy-Lgd" secondAttribute="trailing" constant="16" id="1Km-0V-gJu"/>
+                                    <constraint firstItem="eOP-r1-llB" firstAttribute="centerX" secondItem="ika-Qy-Lgd" secondAttribute="centerX" id="3Zt-4B-A7E"/>
+                                    <constraint firstItem="eOP-r1-llB" firstAttribute="centerY" secondItem="ika-Qy-Lgd" secondAttribute="centerY" id="5RJ-DN-Zm1"/>
+                                    <constraint firstItem="kxK-Ay-TiT" firstAttribute="top" secondItem="gex-w3-hfG" secondAttribute="bottom" constant="16" id="5ig-Qt-IeE"/>
+                                    <constraint firstAttribute="trailing" secondItem="eIY-Ua-Mjq" secondAttribute="trailing" constant="16" id="67o-TB-Dzo"/>
+                                    <constraint firstAttribute="trailing" secondItem="kxK-Ay-TiT" secondAttribute="trailing" constant="16" id="AIi-D7-1R9"/>
+                                    <constraint firstItem="ika-Qy-Lgd" firstAttribute="leading" secondItem="Xw6-VK-7Go" secondAttribute="leading" constant="16" id="CGM-Wz-HhR"/>
+                                    <constraint firstItem="gex-w3-hfG" firstAttribute="top" secondItem="Xw6-VK-7Go" secondAttribute="top" constant="32" id="H5Y-ZB-7ge"/>
+                                    <constraint firstItem="eIY-Ua-Mjq" firstAttribute="leading" secondItem="Xw6-VK-7Go" secondAttribute="leading" constant="16" id="JEY-b2-MkH"/>
+                                    <constraint firstItem="eIY-Ua-Mjq" firstAttribute="top" secondItem="kxK-Ay-TiT" secondAttribute="bottom" constant="16" id="O36-y5-cDa"/>
+                                    <constraint firstItem="kxK-Ay-TiT" firstAttribute="leading" secondItem="Xw6-VK-7Go" secondAttribute="leading" constant="16" id="VHk-pX-so1"/>
+                                    <constraint firstItem="gex-w3-hfG" firstAttribute="leading" secondItem="Xw6-VK-7Go" secondAttribute="leading" constant="16" id="nUE-ph-Gxj"/>
+                                    <constraint firstAttribute="bottom" secondItem="ika-Qy-Lgd" secondAttribute="bottom" constant="16" id="oO7-Vx-Wyk"/>
+                                    <constraint firstAttribute="trailing" secondItem="gex-w3-hfG" secondAttribute="trailing" constant="16" id="uy4-LM-CIu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="bgc-OJ-nQ2" firstAttribute="bottom" secondItem="h4z-KI-Mbd" secondAttribute="bottom" id="3Hd-Rp-DJ6"/>
                             <constraint firstItem="bgc-OJ-nQ2" firstAttribute="trailing" secondItem="AAQ-4J-74O" secondAttribute="trailing" id="4Yg-Qi-thR"/>
+                            <constraint firstItem="bgc-OJ-nQ2" firstAttribute="bottom" secondItem="Xw6-VK-7Go" secondAttribute="bottom" id="A5m-ng-Fbk"/>
+                            <constraint firstItem="bgc-OJ-nQ2" firstAttribute="trailing" secondItem="VcP-Uw-ZdL" secondAttribute="trailing" constant="16" id="LgE-92-YFQ"/>
+                            <constraint firstItem="h4z-KI-Mbd" firstAttribute="top" secondItem="AAQ-4J-74O" secondAttribute="bottom" id="Nss-1C-9OI"/>
+                            <constraint firstItem="Xw6-VK-7Go" firstAttribute="leading" secondItem="bgc-OJ-nQ2" secondAttribute="leading" id="RC9-pf-rSx"/>
+                            <constraint firstItem="bgc-OJ-nQ2" firstAttribute="trailing" secondItem="Xw6-VK-7Go" secondAttribute="trailing" id="WNe-XX-spb"/>
                             <constraint firstItem="AAQ-4J-74O" firstAttribute="leading" secondItem="bgc-OJ-nQ2" secondAttribute="leading" id="WU7-pA-gDn"/>
+                            <constraint firstItem="Xw6-VK-7Go" firstAttribute="top" secondItem="AAQ-4J-74O" secondAttribute="bottom" id="ZMR-sW-KEG"/>
+                            <constraint firstItem="VcP-Uw-ZdL" firstAttribute="top" secondItem="AAQ-4J-74O" secondAttribute="bottom" constant="16" id="aW6-ro-faE"/>
+                            <constraint firstItem="h4z-KI-Mbd" firstAttribute="leading" secondItem="bgc-OJ-nQ2" secondAttribute="leading" id="fB6-jO-CiY"/>
+                            <constraint firstItem="bgc-OJ-nQ2" firstAttribute="trailing" secondItem="h4z-KI-Mbd" secondAttribute="trailing" id="fek-yn-ulj"/>
+                            <constraint firstItem="VcP-Uw-ZdL" firstAttribute="leading" secondItem="bgc-OJ-nQ2" secondAttribute="leading" constant="16" id="haf-fU-u2X"/>
+                            <constraint firstItem="bgc-OJ-nQ2" firstAttribute="bottom" secondItem="VcP-Uw-ZdL" secondAttribute="bottom" constant="16" id="nqq-Zg-DtZ"/>
                             <constraint firstItem="AAQ-4J-74O" firstAttribute="top" secondItem="bgc-OJ-nQ2" secondAttribute="top" id="q9R-i6-Mjd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bgc-OJ-nQ2"/>
                     </view>
                     <connections>
+                        <outlet property="doneCreateAccountLabel" destination="Vhd-sO-s76" id="NVA-1F-OF8"/>
+                        <outlet property="doneCtaActivityIndicator" destination="OC5-fb-Qrz" id="2vl-0a-xaO"/>
+                        <outlet property="doneCtaButton" destination="Is7-eT-owu" id="8YK-ZZ-PHo"/>
+                        <outlet property="doneInstructionLabel" destination="pI2-g3-qGc" id="Tjt-Jq-jum"/>
+                        <outlet property="donePrivateKey" destination="uBz-DV-xvh" id="9ql-wG-f1k"/>
+                        <outlet property="doneViewGroup" destination="h4z-KI-Mbd" id="I21-CM-mRN"/>
+                        <outlet property="errorView" destination="VcP-Uw-ZdL" id="wm6-OE-azY"/>
+                        <outlet property="formAccountTextField" destination="gex-w3-hfG" id="hzq-8r-xrH"/>
+                        <outlet property="formCtaActivityIndicator" destination="eOP-r1-llB" id="R9Z-U2-Ge6"/>
+                        <outlet property="formCtaButton" destination="ika-Qy-Lgd" id="KJS-8R-imQ"/>
+                        <outlet property="formInstructionLabel" destination="kxK-Ay-TiT" id="6M2-gB-hID"/>
+                        <outlet property="formNetCpuResources" destination="eIY-Ua-Mjq" id="IgI-di-xKB"/>
+                        <outlet property="formViewGroup" destination="Xw6-VK-7Go" id="Ry3-iP-SAp"/>
                         <outlet property="toolBar" destination="AAQ-4J-74O" id="tfe-xs-Thi"/>
+                        <segue destination="tgP-tV-kRI" kind="show" identifier="createAccountToAccount" id="leo-zV-II3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xK-rF-Fz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3105,12 +3227,13 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rvY-Mg-arL"/>
+        <segue reference="SIU-CS-KrR"/>
+        <segue reference="dMo-xo-wz4"/>
         <segue reference="Eks-sF-JJe"/>
         <segue reference="2pO-q1-hHi"/>
         <segue reference="wQx-Tz-eH5"/>
-        <segue reference="cAT-yL-HS7"/>
-        <segue reference="nIH-HN-fGl"/>
+        <segue reference="leo-zV-II3"/>
+        <segue reference="1Wt-0h-Agf"/>
         <segue reference="EMU-T5-0SR"/>
         <segue reference="uYP-iu-Ijf"/>
         <segue reference="kx6-Ea-lKC"/>
