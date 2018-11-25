@@ -2632,6 +2632,7 @@
                         <outlet property="addFromListButton" destination="pY9-sl-ITc" id="0Oy-rg-yFl"/>
                         <outlet property="producersInstruction" destination="78h-YI-OhI" id="Yo4-QW-gSo"/>
                         <outlet property="tableView" destination="2hf-mb-jm0" id="bUL-Pm-XsT"/>
+                        <outlet property="tableViewBottomConstraint" destination="EcL-e3-euI" id="436-Kp-XdI"/>
                         <outlet property="voteButton" destination="aAU-Rz-t8J" id="MD1-5y-BIU"/>
                         <segue destination="tgP-tV-kRI" kind="show" identifier="castProducersVoteToAccount" id="cAT-yL-HS7"/>
                         <segue destination="KeL-6I-ll1" kind="show" identifier="castProducerVoteToActiveBlockProducerList" id="9w4-95-M8t"/>
@@ -2758,15 +2759,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P80-mD-q93">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6j-9O-USY" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="51e-sn-6hP"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P80-mD-q93">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
-                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFL-Gh-hqf" customClass="ReachTabBar" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="48"/>
                                 <constraints>

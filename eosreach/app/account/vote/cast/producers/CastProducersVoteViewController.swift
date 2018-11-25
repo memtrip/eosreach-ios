@@ -16,6 +16,7 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
     @IBOutlet weak var addButton: ReachButton!
     @IBOutlet weak var producersInstruction: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewBottomConstraint: NSLayoutConstraint!
     
     var eosAccount: EosAccount?
     
@@ -25,6 +26,9 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
         addButton.setTitle(R.string.voteStrings.cast_producers_add_button(), for: .normal)
         producersInstruction.text = R.string.voteStrings.cast_producers_instructions_label()
         voteButton.setTitle(R.string.voteStrings.cast_producers_vote_button(), for: .normal)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     override func intents() -> Observable<CastProducersVoteIntent> {
@@ -88,5 +92,20 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
     //
     func selected(blockProducerDetails: BlockProducerDetails) {
         dataTableView().addProducer(producer: blockProducerDetails.owner)
+    }
+    
+    //
+    // MARK :- keyboard visibility
+    //
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.tableViewBottomConstraint.constant == 0 {
+                self.tableViewBottomConstraint.constant += keyboardSize.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.tableViewBottomConstraint.constant = 0
     }
 }

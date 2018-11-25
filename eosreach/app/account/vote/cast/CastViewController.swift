@@ -4,7 +4,7 @@ import RxCocoa
 import Material
 
 class CastViewController: UIViewController, TabBarDelegate {
-    
+
     @IBOutlet weak var toolBar: ReachToolbar!
     @IBOutlet weak var tabBar: ReachTabBar!
     @IBOutlet weak var containerView: UIView!
@@ -13,8 +13,6 @@ class CastViewController: UIViewController, TabBarDelegate {
     
     let producersTabItem = TabItem()
     let proxyTabItem = TabItem()
-    
-    private var originalY: CGFloat?
     
     private lazy var producersViewController: CastProducersVoteViewController = {
         return R.storyboard.main.castProducersVoteViewController()!
@@ -48,11 +46,6 @@ class CastViewController: UIViewController, TabBarDelegate {
             tabBar.select(at: 1) // select proxy tab
             replaceChildViewController(viewController: proxyViewController, containerView: containerView)
         }
-        
-        originalY = self.view.frame.origin.y
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func tabBar(tabBar: TabBar, willSelect tabItem: TabItem) {
@@ -63,18 +56,5 @@ class CastViewController: UIViewController, TabBarDelegate {
             self.view.endEditing(true)
             replaceChildViewController(viewController: proxyViewController, containerView: containerView)
         }
-    }
-    
-    //
-    // MARK :- keyboard visibility
-    //
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            self.view.frame.origin.y -= keyboardSize.height
-        }
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        self.view.frame.origin.y = originalY!
     }
 }
