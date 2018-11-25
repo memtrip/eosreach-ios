@@ -9,7 +9,7 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
     @IBOutlet weak var activityIndicator: ReachActivityIndicator!
     @IBOutlet weak var voteButton: ReachButton!
     
-    var accountName: String?
+    var eosAccount: EosAccount?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
                 proxyVoteAccountTextField.rx.controlEvent(.editingDidEndOnExit).asObservable()
             ).map {
                 CastProxyVoteIntent.vote(
-                    voterAccountName: self.accountName!,
+                    voterAccountName: self.eosAccount!.accountName,
                     proxyAccountName: self.proxyVoteAccountTextField.text!)
             }
         )
@@ -55,7 +55,7 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
             setDestinationBundle(bundle: SegueBundle(
                 identifier: R.segue.castProxyVoteViewController.castProxyVoteToAccount.identifier,
                 model: AccountBundle(
-                    accountName: accountName!,
+                    accountName: eosAccount!.accountName,
                     readOnly: false,
                     accountPage: AccountPage.vote
                 )

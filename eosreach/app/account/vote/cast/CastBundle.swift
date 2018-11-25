@@ -1,6 +1,6 @@
 import Foundation
 
 struct CastBundle {
-    let accountName: String
+    let eosAccount: EosAccount
     let castTab: CastTab
 }

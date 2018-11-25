@@ -17,8 +17,8 @@ class RegisteredBlockProducersViewModel: MxViewModel<RegisteredBlockProducersInt
             return self.getRegisteredBlockProducers(nextAccount: lastAccountName)
         case .websiteSelected(let website):
             return just(RegisteredBlockProducersResult.websiteSelected(url: website))
-        case .registeredBlockProducersSelected(let accountName):
-            return just(RegisteredBlockProducersResult.registeredBlockProducersSelected(accountName: accountName))
+        case .registeredBlockProducersSelected(let registeredBlockProducer):
+            return just(RegisteredBlockProducersResult.registeredBlockProducersSelected(registeredBlockProducer: registeredBlockProducer))
         }
     }
 
@@ -40,8 +40,8 @@ class RegisteredBlockProducersViewModel: MxViewModel<RegisteredBlockProducersInt
             return RegisteredBlockProducersViewState.onSuccess(registeredBlockProducers: registeredBlockProducers, more: more)
         case .websiteSelected(let url):
             return RegisteredBlockProducersViewState.websiteSelected(url: url)
-        case .registeredBlockProducersSelected(let accountName):
-            return RegisteredBlockProducersViewState.registeredBlockProducersSelected(accountName: accountName)
+        case .registeredBlockProducersSelected(let registeredBlockProducer):
+            return RegisteredBlockProducersViewState.registeredBlockProducersSelected(registeredBlockProducer: registeredBlockProducer)
         }
     }
     

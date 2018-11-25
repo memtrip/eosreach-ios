@@ -78,10 +78,6 @@ class EosEndpointViewController: MxViewController<EosEndpointIntent, EosEndpoint
         }
     }
     
-    func onResult(blockProducerDetails: BlockProducerDetails) {
-        changeEndpointTextField.text = blockProducerDetails.apiUrl
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == R.segue.eosEndpointViewController.endpointToActiveBlockProducers.identifier) {
             (segue.destination as! ActiveBlockProducersViewController).delegate = self
@@ -94,5 +90,12 @@ class EosEndpointViewController: MxViewController<EosEndpointIntent, EosEndpoint
             endpointUrl: EosEndpoint().get(),
             view: EosEndpointViewState.View.idle
         ))
+    }
+    
+    //
+    // MARK :- ActiveBlockProducersDelegate
+    //
+    func selected(blockProducerDetails: BlockProducerDetails) {
+        changeEndpointTextField.text = blockProducerDetails.apiUrl
     }
 }

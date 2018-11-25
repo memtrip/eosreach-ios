@@ -131,10 +131,10 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
         super.prepare(for: segue, sender: sender)
         if (segue.identifier == R.segue.voteViewController.voteToCastProducer.identifier) {
             (segue.destination as! CastViewController).castBundle = CastBundle(
-                accountName: eosAccount!.accountName, castTab: CastTab.producers)
+                eosAccount: eosAccount!, castTab: CastTab.producers)
         } else if (segue.identifier == R.segue.voteViewController.voteToCastProxy.identifier) {
             (segue.destination as! CastViewController).castBundle = CastBundle(
-                accountName: eosAccount!.accountName, castTab: CastTab.proxy)
+                eosAccount: eosAccount!, castTab: CastTab.proxy)
         }
     }
 }

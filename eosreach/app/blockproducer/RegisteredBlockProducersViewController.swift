@@ -11,6 +11,8 @@ class RegisteredBlockProducersViewController
     @IBOutlet weak var errorView: ErrorView!
     @IBOutlet weak var tableView: UITableView!
 
+    var delegate: RegisteredBlockProducersDelegate?
+    
     func dataTableView() -> RegisteredBlockProducersTableView {
         return tableView as! RegisteredBlockProducersTableView
     }
@@ -24,8 +26,8 @@ class RegisteredBlockProducersViewController
             dataTableView().atBottom.map { data in
                 return RegisteredBlockProducersIntent.loadMore(lastAccountName: data.owner)
             },
-            dataTableView().selected.map { blockProducer in
-                return RegisteredBlockProducersIntent.registeredBlockProducersSelected(accountName: blockProducer.owner)
+            dataTableView().selected.map { registeredBlockProducer in
+                return RegisteredBlockProducersIntent.registeredBlockProducersSelected(registeredBlockProducer: registeredBlockProducer)
             }
         )
     }
@@ -65,27 +67,24 @@ class RegisteredBlockProducersViewController
             if let url = URL(string: url) {
                 UIApplication.shared.open(url, options: [:])
             }
-        case .registeredBlockProducersSelected(let accountName):
-            setDestinationBundle(bundle: SegueBundle(
-                identifier: R.segue.registeredBlockProducersViewController.registeredBlockProducersToAccount.identifier,
-                model: AccountBundle(
-                    accountName: accountName,
-                    readOnly: true,
-                    accountPage: AccountPage.balances
-                )
-            ))
-            performSegue(withIdentifier: R.segue.registeredBlockProducersViewController.registeredBlockProducersToAccount, sender: self)
+        case .registeredBlockProducersSelected(let registeredBlockProducer):
+            if let delegate = delegate {
+                delegate.selected(registeredBlockProducer: registeredBlockProducer)
+            } else {
+                setDestinationBundle(bundle: SegueBundle(
+                    identifier: R.segue.registeredBlockProducersViewController.registeredBlockProducersToAccount.identifier,
+                    model: AccountBundle(
+                        accountName: registeredBlockProducer.owner,
+                        readOnly: true,
+                        accountPage: AccountPage.balances
+                    )
+                ))
+                performSegue(withIdentifier: R.segue.registeredBlockProducersViewController.registeredBlockProducersToAccount, sender: self)
+            }
         }
     }
 
     override func provideViewModel() -> RegisteredBlockProducersViewModel {
         return RegisteredBlockProducersViewModel(initialState: RegisteredBlockProducersViewState.idle)
     }
-}
-
-protocol DataTableView {
-    
-    associatedtype tableViewType
-    
-    func dataTableView() -> tableViewType
 }

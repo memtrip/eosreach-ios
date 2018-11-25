@@ -6,5 +6,5 @@ enum RegisteredBlockProducersIntent: MxIntent {
     case retry
     case loadMore(lastAccountName: String)
     case websiteSelected(website: String)
-    case registeredBlockProducersSelected(accountName: String)
+    case registeredBlockProducersSelected(registeredBlockProducer: RegisteredBlockProducer)
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-enum RegisteredBlockProducersResult: MxResult {
+enum RegisteredBlockProducersViewState: MxViewState {
     case idle
     case onProgress
     case empty
@@ -9,5 +9,5 @@ enum RegisteredBlockProducersResult: MxResult {
     case onLoadMoreError
     case onSuccess(registeredBlockProducers: [RegisteredBlockProducer], more: Bool)
     case websiteSelected(url: String)
-    case registeredBlockProducersSelected(accountName: String)
+    case registeredBlockProducersSelected(registeredBlockProducer: RegisteredBlockProducer)
 }

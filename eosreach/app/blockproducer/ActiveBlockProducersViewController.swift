@@ -2,10 +2,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol ActiveBlockProducersDelegate {
-    func onResult(blockProducerDetails: BlockProducerDetails)
-}
-
 class ActiveBlockProducersViewController
 : MxViewController<ActiveBlockProducersIntent, ActiveBlockProducersResult, ActiveBlockProducersViewState, ActiveBlockProducersViewModel>, DataTableView {
 
@@ -59,7 +55,7 @@ class ActiveBlockProducersViewController
             dataTableView().populate(data: blockProducerList)
         case .blockProducerSelected(let blockProducer):
             if let delegate = self.delegate {
-                delegate.onResult(blockProducerDetails: blockProducer)
+                delegate.selected(blockProducerDetails: blockProducer)
                 DispatchQueue.main.async {
                     self.close()
                 }

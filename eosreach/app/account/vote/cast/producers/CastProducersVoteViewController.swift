@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent, CastProducersVoteResult, CastProducersVoteViewState, CastProducersVoteViewModel>, DataTableView {
+class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent, CastProducersVoteResult, CastProducersVoteViewState, CastProducersVoteViewModel>, DataTableView, ActiveBlockProducersDelegate {
 
     typealias tableViewType = CastProducersVoteTableView
 
@@ -17,7 +17,7 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
     @IBOutlet weak var producersInstruction: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var accountName: String?
+    var eosAccount: EosAccount?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +25,19 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
         addButton.setTitle(R.string.voteStrings.cast_producers_add_button(), for: .normal)
         producersInstruction.text = R.string.voteStrings.cast_producers_instructions_label()
         voteButton.setTitle(R.string.voteStrings.cast_producers_vote_button(), for: .normal)
-        dataTableView().populate(data: ["memtripissue"])
     }
 
     override func intents() -> Observable<CastProducersVoteIntent> {
         return Observable.merge(
-            Observable.just(CastProducersVoteIntent.idle),
+            Observable.just(CastProducersVoteIntent.start(eosAccountVote: eosAccount!.eosAcconuntVote)),
             addButton.rx.tap.map {
                 return CastProducersVoteIntent.idle
             },
             addFromListButton.rx.tap.map {
-                return CastProducersVoteIntent.idle
+                return CastProducersVoteIntent.addProducerFromList
+            },
+            addButton.rx.tap.map {
+                return CastProducersVoteIntent.addProducerField
             }
         )
     }
@@ -49,25 +51,42 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
         case .idle:
             break
         case .onProgress:
-            print("")
+            activityIndicator.start()
+            voteButton.gone()
+        case .addProducerFromList:
+            performSegue(withIdentifier: R.segue.castProducersVoteViewController.castProducerVoteToActiveBlockProducerList, sender: self)
         case .addExistingProducers(let producers):
-            print("")
-        case .addProducerField(let nextPosition):
-            print("")
-        case .removeProducerField(let position):
-            print("")
-        case .insertProducerField(let nextPosition, let producerName):
-            print("")
+            dataTableView().populate(data: producers)
+        case .addProducerField:
+            dataTableView().addProducer(producer: "")
         case .onGenericError:
-            print("")
+            activityIndicator.stop()
+            voteButton.visible()
         case .onSuccess:
             print("")
         case .viewLog(let log):
-            print("")
+            showViewLog(viewLogHandler: { (_) in
+                self.activityIndicator.stop()
+                self.voteButton.visible()
+                self.showTransactionLog(log: log)
+            })
         }
     }
 
     override func provideViewModel() -> CastProducersVoteViewModel {
         return CastProducersVoteViewModel(initialState: CastProducersVoteViewState.idle)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == R.segue.castProducersVoteViewController.castProducerVoteToActiveBlockProducerList.identifier) {
+            (segue.destination as! ActiveBlockProducersViewController).delegate = self
+        }
+    }
+    
+    //
+    // MARK :- ActiveBlockProducersDelegate
+    //
+    func selected(blockProducerDetails: BlockProducerDetails) {
+        dataTableView().addProducer(producer: blockProducerDetails.owner)
     }
 }
