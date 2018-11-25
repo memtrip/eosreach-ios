@@ -4,7 +4,7 @@ import RxSwift
 class SettingsViewModel: MxViewModel<SettingsIntent, SettingsResult, SettingsViewState> {
 
     private let eosPriceCurrencyPair = EosPriceCurrencyPair()
-    private let dropRealm = DropRealm()
+    private let dropDb = DropDb()
     
     override func dispatcher(intent: SettingsIntent) -> Observable<SettingsResult> {
         switch intent {
@@ -57,10 +57,8 @@ class SettingsViewModel: MxViewModel<SettingsIntent, SettingsResult, SettingsVie
     }
     
     private func clearData() -> Observable<SettingsResult> {
-        return dropRealm.drop().asObservable().map { _ in
-            UserDefaults.standard.removePersistentDomain(
-                forName: Bundle.main.bundleIdentifier!)
-            return SettingsResult.navigateToEntry
-        }
+        return dropDb.drop()
+            .andThen(Single.just(SettingsResult.navigateToEntry))
+            .asObservable()
     }
 }

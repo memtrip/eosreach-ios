@@ -360,7 +360,7 @@
 		3CC9E72B21A5CFCA0050BA57 /* CastProducersVoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72A21A5CFCA0050BA57 /* CastProducersVoteTableView.swift */; };
 		3CC9E72D21A5CFD80050BA57 /* CastProducersVoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72C21A5CFD80050BA57 /* CastProducersVoteCell.swift */; };
 		3CC9E72F21A5D03E0050BA57 /* CastProducersVoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */; };
-		3CCE0EF821AAA84300D81458 /* DropRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EF721AAA84300D81458 /* DropRealm.swift */; };
+		3CCE0EF821AAA84300D81458 /* DropDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EF721AAA84300D81458 /* DropDb.swift */; };
 		3CCE9C2421A2B11F0050910D /* AccountRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */; };
 		3CCE9C2621A2B1350050910D /* AccountViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */; };
 		3CCE9C2C21A2C3810050910D /* ResourceGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */; };
@@ -762,7 +762,7 @@
 		3CC9E72A21A5CFCA0050BA57 /* CastProducersVoteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducersVoteTableView.swift; sourceTree = "<group>"; };
 		3CC9E72C21A5CFD80050BA57 /* CastProducersVoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducersVoteCell.swift; sourceTree = "<group>"; };
 		3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastProducersVoteCell.xib; sourceTree = "<group>"; };
-		3CCE0EF721AAA84300D81458 /* DropRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRealm.swift; sourceTree = "<group>"; };
+		3CCE0EF721AAA84300D81458 /* DropDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDb.swift; sourceTree = "<group>"; };
 		3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRenderer.swift; sourceTree = "<group>"; };
 		3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewLayout.swift; sourceTree = "<group>"; };
 		3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceGraphView.swift; sourceTree = "<group>"; };
@@ -1311,7 +1311,7 @@
 				3C0ADD7C219F376D0026649F /* airdrop */,
 				3C0ADD93219F3A740026649F /* transaction */,
 				3C0ADD70219F28700026649F /* Connection.swift */,
-				3CCE0EF721AAA84300D81458 /* DropRealm.swift */,
+				3CCE0EF721AAA84300D81458 /* DropDb.swift */,
 			);
 			path = realm;
 			sourceTree = "<group>";
@@ -2106,7 +2106,7 @@
 				3C8BD24921A6C2FB00ACFA70 /* DelegateBandwidthViewController.swift in Sources */,
 				3C1F1F9321A359090075BD71 /* ActionsResult.swift in Sources */,
 				3C0ADD89219F37B10026649F /* AccountEntity.swift in Sources */,
-				3CCE0EF821AAA84300D81458 /* DropRealm.swift in Sources */,
+				3CCE0EF821AAA84300D81458 /* DropDb.swift in Sources */,
 				3C7F0DD92194A0D400E72DD1 /* SearchViewController.swift in Sources */,
 				3C6DF79221A090F300ADA892 /* ResourcesIntent.swift in Sources */,
 				3CC9E6F521A56AAE0050BA57 /* ViewProxyVoterResult.swift in Sources */,
