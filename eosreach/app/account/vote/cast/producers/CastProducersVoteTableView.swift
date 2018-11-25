@@ -39,7 +39,12 @@ class CastProducersVoteTableView : SimpleTableView<String, CastProducersVoteCell
     // MARK :- UITextFieldDelegate
     //
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        for index in 0..<self.numberOfRows(inSection: 0) {
+            let cell = cellForRow(at: IndexPath.init(row: index, section: 0)) as! CastProducersVoteCell
+            data[index] = cell.textField.text!
+        }
         textField.endEditing(true)
+        reloadData()
         return false
     }
     

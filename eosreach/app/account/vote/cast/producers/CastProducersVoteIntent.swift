@@ -5,6 +5,5 @@ enum CastProducersVoteIntent: MxIntent {
     case start(eosAccountVote: EosAccountVote?)
     case vote(voterAccountName: String, blockProducers: [String])
     case addProducerField
-    case viewLog(log: String)
     case addProducerFromList
 }

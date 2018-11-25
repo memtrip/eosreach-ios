@@ -35,13 +35,18 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
         return Observable.merge(
             Observable.just(CastProducersVoteIntent.start(eosAccountVote: eosAccount!.eosAcconuntVote)),
             addButton.rx.tap.map {
-                return CastProducersVoteIntent.idle
+                CastProducersVoteIntent.idle
             },
             addFromListButton.rx.tap.map {
-                return CastProducersVoteIntent.addProducerFromList
+                CastProducersVoteIntent.addProducerFromList
             },
             addButton.rx.tap.map {
-                return CastProducersVoteIntent.addProducerField
+                CastProducersVoteIntent.addProducerField
+            },
+            voteButton.rx.tap.map {
+                CastProducersVoteIntent.vote(
+                    voterAccountName: self.eosAccount!.accountName,
+                    blockProducers: self.dataTableView().data)
             }
         )
     }
@@ -67,7 +72,15 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
             activityIndicator.stop()
             voteButton.visible()
         case .onSuccess:
-            print("")
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.castProducersVoteViewController.castProducersVoteToAccount.identifier,
+                model: AccountBundle(
+                    accountName: eosAccount!.accountName,
+                    readOnly: false,
+                    accountPage: AccountPage.vote
+                )
+            ))
+            performSegue(withIdentifier: R.segue.castProducersVoteViewController.castProducersVoteToAccount, sender: self)
         case .viewLog(let log):
             showViewLog(viewLogHandler: { (_) in
                 self.activityIndicator.stop()
@@ -82,6 +95,7 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         if (segue.identifier == R.segue.castProducersVoteViewController.castProducerVoteToActiveBlockProducerList.identifier) {
             (segue.destination as! ActiveBlockProducersViewController).delegate = self
         }
