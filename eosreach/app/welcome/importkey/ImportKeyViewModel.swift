@@ -44,26 +44,25 @@ class ImportKeyViewModel: MxViewModel<ImportKeyIntent, ImportKeyResult, ImportKe
 
     private func importKey(privateKey: String) -> Observable<ImportKeyResult> {
         return eosKeyManager.createEosPrivateKey(value: privateKey).flatMap { eosPrivateKey in
-            return self.eosKeyManager.importPrivateKey(eosPrivateKey: eosPrivateKey).flatMap { publicKey in
-                return self.accountsForPublicKeyRequest.getAccountsForKey(publicKey: publicKey).flatMap { result in
-                    if (result.success()) {
-                        let publicKey = result.data!.publicKey
-                        let accounts = result.data!.accounts
-                        if (accounts.isEmpty) {
-                            return Single.just(ImportKeyResult.noAccounts)
-                        } else {
-                            return self.insertAccountsForPublicKey.insertAccounts(
+            return self.accountsForPublicKeyRequest.getAccountsForKey(publicKey: eosPrivateKey.publicKey.base58).flatMap { result in
+                if (result.success()) {
+                    let accounts = result.data!.accounts
+                    if (accounts.isEmpty) {
+                        return Single.just(ImportKeyResult.noAccounts)
+                    } else {
+                        return self.eosKeyManager.importPrivateKey(eosPrivateKey: eosPrivateKey).flatMap { publicKey in
+                            self.insertAccountsForPublicKey.insertAccounts(
                                 publicKey: publicKey,
                                 accounts: accounts
-                            ).map { _ in
-                                return ImportKeyResult.onSuccess
+                                ).map { _ in
+                                    return ImportKeyResult.onSuccess
                             }
-                        }
-                    } else {
-                        return Single.just(ImportKeyResult.genericError)
+                        }.catchErrorJustReturn(ImportKeyResult.genericError)
                     }
+                } else {
+                    return Single.just(ImportKeyResult.genericError)
                 }
-            }.catchErrorJustReturn(ImportKeyResult.genericError)
+            }
         }.catchErrorJustReturn(
             ImportKeyResult.invalidKey
         ).asObservable().startWith(ImportKeyResult.onProgress)
