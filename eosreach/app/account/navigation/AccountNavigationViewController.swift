@@ -38,19 +38,22 @@ class AccountNavigationViewController: MxViewController<AccountNavigationIntent,
         return Observable.merge(
             Observable.just(AccountNavigationIntent.start),
             importKeyButton.rx.tap.map {
-                return AccountNavigationIntent.navigateToImportKey
+                AccountNavigationIntent.navigateToImportKey
             },
             createAccountButton.rx.tap.map {
-                return AccountNavigationIntent.navigateToCreateAccount
+                AccountNavigationIntent.navigateToCreateAccount
             },
             settingsButton.rx.tap.map {
-                return AccountNavigationIntent.navigateToSettings
+                AccountNavigationIntent.navigateToSettings
             },
             refreshButton.rx.tap.map {
-                return AccountNavigationIntent.refreshAccounts
+                AccountNavigationIntent.refreshAccounts
             },
             dataTableView().selected.map { accountModel in
-                return AccountNavigationIntent.accountSelected(accountName: accountModel.accountName)
+                AccountNavigationIntent.accountSelected(accountName: accountModel.accountName)
+            },
+            errorView.retryClick().map {
+                AccountNavigationIntent.refreshAccounts
             }
         )
     }
@@ -74,6 +77,7 @@ class AccountNavigationViewController: MxViewController<AccountNavigationIntent,
             dataTableView().populate(data: accountList)
         case .onError:
             activityIndicator.stop()
+            errorView.visible()
             errorView.populate(
                 title: R.string.accountStrings.accounts_navigation_error_title(),
                 body: R.string.accountStrings.accounts_navigation_error_body())
