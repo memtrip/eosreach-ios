@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import Kingfisher
 
 class ProxyVoterListCell : SimpleTableViewCell<ProxyVoterDetails> {
    
@@ -7,7 +8,6 @@ class ProxyVoterListCell : SimpleTableViewCell<ProxyVoterDetails> {
     @IBOutlet weak var proxyName: UILabel!
     @IBOutlet weak var proxySlogan: UILabel!
     @IBOutlet weak var proxyInformation: UIImageView!
-    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -20,6 +20,10 @@ class ProxyVoterListCell : SimpleTableViewCell<ProxyVoterDetails> {
     override func populate(item: ProxyVoterDetails) {
         proxyName.text = item.name
         proxySlogan.text = item.slogan
-        // TODO: image view
+        
+        if let url = URL(string: item.logo256) {
+            proxyImageView.kf.setImage(with: url)
+            proxyImageView.contentMode = .scaleAspectFit
+        }
     }
 }

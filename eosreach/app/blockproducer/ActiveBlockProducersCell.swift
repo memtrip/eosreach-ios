@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import Kingfisher
 
 class ActiveBlockProducersCell : SimpleTableViewCell<BlockProducerDetails> {
     
@@ -19,5 +20,12 @@ class ActiveBlockProducersCell : SimpleTableViewCell<BlockProducerDetails> {
     override func populate(item: BlockProducerDetails) {
         blockProducerNameLabel.text = item.candidateName
         ownerLabel.text = item.owner
+        
+        if let logo256 = item.logo256 {
+            if let url = URL(string: logo256) {
+                logoImageView.kf.setImage(with: url)
+                logoImageView.contentMode = .scaleAspectFit
+            }
+        }
     }
 }
