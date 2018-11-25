@@ -27,6 +27,10 @@ class SearchViewController: MxViewController<SearchIntent, SearchResult, SearchV
             searchTextField.rx.text
                 .asObservable()
                 .map { terms in SearchIntent.searchValueChanged(searchValue: terms!) },
+            searchTextField.rx.controlEvent(.editingDidEndOnExit).map {
+                self.view.endEditing(true)
+                return SearchIntent.idle
+            },
             errorView.retryClick().map {
                 return SearchIntent.searchValueChanged(searchValue: self.searchTextField.text!)
             },

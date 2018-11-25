@@ -37,8 +37,8 @@ class ResourcesViewController: MxViewController<ResourcesIntent, ResourcesResult
         refundLabel.text = R.string.accountStrings.account_resources_refund_title()
         
         if (readOnly) {
-            manageResources.removeFromSuperview()
-            buttonContainer.removeFromSuperview()
+            manageResources.goneCollapsed()
+            buttonContainer.goneCollapsed()
         }
     }
 

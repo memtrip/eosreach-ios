@@ -4,6 +4,7 @@ import RxSwift
 class SettingsViewModel: MxViewModel<SettingsIntent, SettingsResult, SettingsViewState> {
 
     private let eosPriceCurrencyPair = EosPriceCurrencyPair()
+    private let dropRealm = DropRealm()
     
     override func dispatcher(intent: SettingsIntent) -> Observable<SettingsResult> {
         switch intent {
@@ -24,8 +25,7 @@ class SettingsViewModel: MxViewModel<SettingsIntent, SettingsResult, SettingsVie
         case .requestClearDataAndLogout:
             return just(SettingsResult.confirmClearData)
         case .confirmClearDataAndLogout:
-            // TODO: clear data
-            return just(SettingsResult.navigateToEntry)
+            return clearData()
         case .navigateToAuthor:
             return just(SettingsResult.navigateToAuthor)
         }
@@ -53,6 +53,14 @@ class SettingsViewModel: MxViewModel<SettingsIntent, SettingsResult, SettingsVie
             return SettingsViewState.navigateToEntry
         case .navigateToAuthor:
             return SettingsViewState.navigateToAuthor
+        }
+    }
+    
+    private func clearData() -> Observable<SettingsResult> {
+        return dropRealm.drop().asObservable().map { _ in
+            UserDefaults.standard.removePersistentDomain(
+                forName: Bundle.main.bundleIdentifier!)
+            return SettingsResult.navigateToEntry
         }
     }
 }

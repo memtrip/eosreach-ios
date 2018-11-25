@@ -23,16 +23,16 @@ class EosAccountRequestImpl : EosAccountRequest {
                     accountName: account.account_name,
                     balance: balance,
                     netResource: EosAccountResource(
-                        used: account.net_limit.used,
-                        available: account.net_limit.available,
+                        used: account.net_limit.used.value,
+                        available: account.net_limit.available.value,
                         staked: stakedNetBalance,
                         delegated: self.delegatedNetBalance(
                             totalResources: account.total_resources,
                             stakedNetBalance: stakedNetBalance)
                     ),
                     cpuResource: EosAccountResource(
-                        used: account.cpu_limit.used,
-                        available: account.cpu_limit.available,
+                        used: account.cpu_limit.used.value,
+                        available: account.cpu_limit.available.value,
                         staked: stakedCpuBalance,
                         delegated: self.delegatedCpuBalance(
                             totalResources: account.total_resources,
@@ -129,7 +129,7 @@ class EosAccountRequestImpl : EosAccountRequest {
             return EosAccountVote(
                 proxyVoterAccountName: voterInfo!.proxy,
                 producers: voterInfo!.producers,
-                staked: voterInfo!.staked,
+                staked: voterInfo!.staked.value,
                 lastVoteWeight: voterInfo!.last_vote_weight,
                 proxiedVoteWeight: voterInfo!.proxied_vote_weight,
                 isProxyVoter: voterInfo!.is_proxy == 1,

@@ -1161,7 +1161,7 @@
                                     <constraint firstAttribute="height" constant="48" id="BJh-0u-Wlh"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-Oh-Jw8" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-Oh-Jw8" customClass="ReachUsernameTextField" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="16" y="100" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -3134,14 +3134,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tM6-tU-nIZ" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tM6-tU-nIZ" customClass="ReachUsernameTextField" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="8" y="52" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                             </textField>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0R-Oe-E1L" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                                <rect key="frame" x="0.0" y="90" width="375" height="208"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="208" id="Kyh-kw-bRC"/>
+                                </constraints>
                             </view>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-3v-1pz" customClass="AccountCardTableView" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="90" width="375" height="577"/>
@@ -3153,7 +3156,6 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="cc8-Rz-5d9" firstAttribute="top" secondItem="tM6-tU-nIZ" secondAttribute="bottom" constant="32" id="4B8-VZ-KJz"/>
-                            <constraint firstItem="bP6-Ma-BG9" firstAttribute="bottom" secondItem="J0R-Oe-E1L" secondAttribute="bottom" id="CfK-8n-m2H"/>
                             <constraint firstItem="J0R-Oe-E1L" firstAttribute="top" secondItem="tM6-tU-nIZ" secondAttribute="bottom" constant="8" id="Uux-3I-mAD"/>
                             <constraint firstItem="bP6-Ma-BG9" firstAttribute="trailing" secondItem="J0R-Oe-E1L" secondAttribute="trailing" id="UvT-Le-6kI"/>
                             <constraint firstItem="J0R-Oe-E1L" firstAttribute="leading" secondItem="bP6-Ma-BG9" secondAttribute="leading" id="cKa-W1-2G4"/>
@@ -3250,7 +3252,7 @@
         <segue reference="Eks-sF-JJe"/>
         <segue reference="2pO-q1-hHi"/>
         <segue reference="wQx-Tz-eH5"/>
-        <segue reference="leo-zV-II3"/>
+        <segue reference="tiU-62-5pJ"/>
         <segue reference="1Wt-0h-Agf"/>
         <segue reference="EMU-T5-0SR"/>
         <segue reference="uYP-iu-Ijf"/>
