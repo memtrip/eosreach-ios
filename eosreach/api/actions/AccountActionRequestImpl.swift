@@ -16,7 +16,7 @@ class AccountActionsRequestImpl : AccountActionsRequest {
             pos: position,
             offset: offset)
         ).map { response in
-            if (response.success) {
+            if (response.success && response.body != nil) {
                 return try self.filterActionsForAccountName(
                     contractAccountBalance: contractAccountBalance,
                     historicAccountActionParent: response.body!)
