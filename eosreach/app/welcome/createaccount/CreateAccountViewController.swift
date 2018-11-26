@@ -64,7 +64,7 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
                 formCtaButton.rx.tap.asObservable(),
                 formAccountTextField.rx.controlEvent(.editingDidEndOnExit).asObservable()
             ).map {
-                CreateAccountIntent.createAccount(accountName: self.formAccountTextField.text!)
+                CreateAccountIntent.purchaseAccount(accountName: self.formAccountTextField.text!)
             }.asObservable(),
             self.rx.methodInvoked(#selector(CreateAccountViewController.success(transactionIdentifier:))).map { args in
                 CreateAccountIntent.accountPurchased(

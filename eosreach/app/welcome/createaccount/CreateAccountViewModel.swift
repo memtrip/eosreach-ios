@@ -12,6 +12,7 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
     private let unusedPublicKey = UnusedPublicKey()
     private let unusedTransactionIdentifier = UnusedTransactionIdentifier()
     private let unusedAccountInLimbo = UnusedAccountInLimbo()
+    private let unusedPublicKeyNoAccountsSynced = UnusedPublicKeyNoAccountsSynced()
     
     override func dispatcher(intent: CreateAccountIntent) -> Observable<CreateAccountResult> {
         switch intent {
@@ -21,8 +22,8 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
             return just(CreateAccountResult.startBillingConnection)
         case .onSKProductSuccess(let skProduct):
             return just(formatPrice(skProduct: skProduct))
-        case .createAccount(let accountName):
-            return just(validateAccountName(accountName: accountName))
+        case .purchaseAccount(let accountName):
+            return purchaseAccount(accountName: accountName)
         case .accountPurchased(let transactionId, let accountName):
             return createAccount(transactionIdentifier: transactionId, accountName: accountName)
         case .goToSettings:
@@ -77,13 +78,27 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
         return CreateAccountResult.onSKProductSuccess(formattedPrice: formattedPrice, skProduct: skProduct)
     }
     
-    private func validateAccountName(accountName: String) -> CreateAccountResult {
+    private func purchaseAccount(accountName: String) -> Observable<CreateAccountResult> {
         if (accountName.isEmpty || accountName.count != 12) {
-            return CreateAccountResult.onAccountNameValidationFailed
+            return just(CreateAccountResult.onAccountNameValidationFailed)
         } else if (accountName[0] >= "0" && accountName[0] <= "9") {
-            return CreateAccountResult.onAccountNameValidationNumberStartFailed
+            return just(CreateAccountResult.onAccountNameValidationNumberStartFailed)
         } else {
-            return CreateAccountResult.onAccountNameValidationPassed
+            return resolveFlowState(accountName: accountName)
+        }
+    }
+    
+    private func resolveFlowState(accountName: String) -> Observable<CreateAccountResult> {
+        if (unusedAccountInLimbo.get()) {
+            return just(CreateAccountResult.onCreateAccountLimbo)
+        } else if (unusedPublicKeyNoAccountsSynced.get()) {
+            return just(CreateAccountResult.onImportKeyError)
+        } else if (unusedTransactionIdentifier.get().isNotEmpty()) {
+            return createAccount(
+                transactionIdentifier: unusedTransactionIdentifier.get(),
+                accountName: accountName)
+        } else {
+            return just(CreateAccountResult.onAccountNameValidationPassed)
         }
     }
     
@@ -107,10 +122,10 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
     }
     
     private func createAccountSuccess(publicKey: String) -> Single<CreateAccountResult> {
-        // TODO: does limbo exist on iOS?
-        // TODO: no accounts synced?
-        unusedPublicKey.clear()
+        unusedAccountInLimbo.clear()
         unusedTransactionIdentifier.clear()
+        unusedPublicKey.clear()
+        unusedPublicKeyNoAccountsSynced.put(value: true)
         return eosKeyManager.getPrivateKey(eosPublicKey: publicKey).map { privateKey in
             CreateAccountResult.onCreateAccountSuccess(privateKey: privateKey.base58)
         }.catchErrorJustReturn(CreateAccountResult.onCreateAccountFatalError)
