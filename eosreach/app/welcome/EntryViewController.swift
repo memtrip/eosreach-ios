@@ -15,7 +15,7 @@ class EntryViewController: MxViewController<EntryIntent, EntryResult, EntryViewS
         return Observable.merge(
             Observable.just(EntryIntent.start),
             errorView.retryClick().map {
-                return EntryIntent.start
+                EntryIntent.start
             }
         )
     }

@@ -21,13 +21,16 @@ class RegisteredBlockProducersViewController
         return Observable.merge(
             Observable.just(RegisteredBlockProducersIntent.start),
             errorView.retryClick().map {
-                return RegisteredBlockProducersIntent.retry
+                RegisteredBlockProducersIntent.retry
             },
             dataTableView().atBottom.map { data in
-                return RegisteredBlockProducersIntent.loadMore(lastAccountName: data.owner)
+                RegisteredBlockProducersIntent.loadMore(lastAccountName: data.owner)
             },
             dataTableView().selected.map { registeredBlockProducer in
-                return RegisteredBlockProducersIntent.registeredBlockProducersSelected(registeredBlockProducer: registeredBlockProducer)
+                RegisteredBlockProducersIntent.registeredBlockProducersSelected(registeredBlockProducer: registeredBlockProducer)
+            },
+            dataTableView().extraTapSelected.map { registeredBlockProducer in
+                RegisteredBlockProducersIntent.websiteSelected(website: registeredBlockProducer.url)
             }
         )
     }

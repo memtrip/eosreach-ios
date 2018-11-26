@@ -33,13 +33,13 @@ class ViewProxyVoterViewController
         return Observable.merge(
             Observable.just(ViewProxyVoterIntent.start(viewProxyVoterBundle: viewProxyVoterBundle)),
             websiteButton.rx.tap.map {
-                return ViewProxyVoterIntent.navigateToUrl(url: self.proxyVoterDetails!.website)
+                ViewProxyVoterIntent.navigateToUrl(url: self.proxyVoterDetails!.website)
             },
             viewAccountButton.rx.tap.map {
-                return ViewProxyVoterIntent.viewAccount(accountName: self.proxyVoterDetails!.owner)
+                ViewProxyVoterIntent.viewAccount(accountName: self.proxyVoterDetails!.owner)
             },
             errorView.retryClick().map {
-                return ViewProxyVoterIntent.retry(viewProxyVoterBundle: self.viewProxyVoterBundle)
+                ViewProxyVoterIntent.retry(viewProxyVoterBundle: self.viewProxyVoterBundle)
             }
         )
     }

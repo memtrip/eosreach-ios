@@ -32,10 +32,10 @@ class SearchViewController: MxViewController<SearchIntent, SearchResult, SearchV
                 return SearchIntent.idle
             },
             errorView.retryClick().map {
-                return SearchIntent.searchValueChanged(searchValue: self.searchTextField.text!)
+                SearchIntent.searchValueChanged(searchValue: self.searchTextField.text!)
             },
             dataTableView().selected.map { accountCardModel in
-                return SearchIntent.viewAccount(accountCardModel: accountCardModel)
+                SearchIntent.viewAccount(accountCardModel: accountCardModel)
             }
         )
     }

@@ -23,13 +23,13 @@
                         <rect key="frame" x="8" y="8" width="359" height="58"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_block_producer_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIJ-wx-dFk">
-                                <rect key="frame" x="58" y="8" width="253" height="21"/>
+                                <rect key="frame" x="58" y="8" width="245" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="_owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hD-vF-zxj">
-                                <rect key="frame" x="58" y="29" width="253" height="21"/>
+                                <rect key="frame" x="58" y="29" width="245" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" name="colorSecondary"/>
                                 <nil key="highlightedColor"/>
@@ -42,12 +42,12 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQH-MX-HAc">
-                                <rect key="frame" x="319" y="13" width="32" height="32"/>
+                                <rect key="frame" x="311" y="5" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wQH-MX-HAc" secondAttribute="height" multiplier="1:1" id="Ebf-7b-H5h"/>
-                                    <constraint firstAttribute="height" constant="32" id="nPT-Um-BJC"/>
+                                    <constraint firstAttribute="height" constant="48" id="nPT-Um-BJC"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="ic_external_large"/>
+                                <state key="normal" image="ic_external_large"/>
                             </button>
                         </subviews>
                         <constraints>
@@ -60,7 +60,7 @@
                             <constraint firstItem="wQH-MX-HAc" firstAttribute="leading" secondItem="gIJ-wx-dFk" secondAttribute="trailing" constant="8" id="ZLy-si-alN"/>
                             <constraint firstItem="wQH-MX-HAc" firstAttribute="centerY" secondItem="MjN-0n-rl7" secondAttribute="centerY" id="a0f-cl-8G5"/>
                             <constraint firstItem="gIJ-wx-dFk" firstAttribute="leading" secondItem="cHb-vl-30m" secondAttribute="trailing" constant="8" id="buh-PC-Jz5"/>
-                            <constraint firstAttribute="trailing" secondItem="wQH-MX-HAc" secondAttribute="trailing" constant="8" id="eds-Fc-pii"/>
+                            <constraint firstAttribute="trailing" secondItem="wQH-MX-HAc" secondAttribute="trailing" id="eds-Fc-pii"/>
                             <constraint firstItem="cHb-vl-30m" firstAttribute="centerY" secondItem="MjN-0n-rl7" secondAttribute="centerY" id="iUm-Of-YoN"/>
                         </constraints>
                     </view>

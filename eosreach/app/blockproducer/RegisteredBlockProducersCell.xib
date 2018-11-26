@@ -19,38 +19,40 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcs-de-5Hc" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcs-de-5Hc" customClass="ReachBorderView" customModule="eosreach" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="359" height="61.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_block_producer_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fu-8d-Y5e">
-                                <rect key="frame" x="8" y="8" width="183" height="20.5"/>
+                                <rect key="frame" x="8" y="8" width="287" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SQ-Ba-Hb8">
-                                <rect key="frame" x="8" y="32.5" width="351" height="21"/>
+                                <rect key="frame" x="8" y="32.5" width="287" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" name="colorSecondary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XbT-Ss-l9n">
-                                <rect key="frame" x="305.5" y="8" width="45.5" height="45.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNj-NX-WvY">
+                                <rect key="frame" x="303" y="7" width="48" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="XbT-Ss-l9n" secondAttribute="height" multiplier="1:1" id="7so-TE-8Rr"/>
+                                    <constraint firstAttribute="height" constant="48" id="KA3-xJ-Fzm"/>
+                                    <constraint firstAttribute="width" secondItem="UNj-NX-WvY" secondAttribute="height" multiplier="1:1" id="wn1-Se-14h"/>
                                 </constraints>
-                            </imageView>
+                                <state key="normal" image="ic_external_large"/>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="XbT-Ss-l9n" firstAttribute="top" secondItem="dcs-de-5Hc" secondAttribute="top" constant="8" id="2Yu-oY-OKO"/>
                             <constraint firstItem="0SQ-Ba-Hb8" firstAttribute="top" secondItem="6fu-8d-Y5e" secondAttribute="bottom" constant="4" id="3Ie-Uq-LVT"/>
                             <constraint firstItem="0SQ-Ba-Hb8" firstAttribute="leading" secondItem="dcs-de-5Hc" secondAttribute="leading" constant="8" id="Ftn-Tg-Zgx"/>
-                            <constraint firstAttribute="trailing" secondItem="XbT-Ss-l9n" secondAttribute="trailing" constant="8" id="HGh-93-WiC"/>
-                            <constraint firstAttribute="bottom" secondItem="XbT-Ss-l9n" secondAttribute="bottom" constant="8" id="K8g-DZ-hTS"/>
+                            <constraint firstItem="UNj-NX-WvY" firstAttribute="leading" secondItem="6fu-8d-Y5e" secondAttribute="trailing" constant="8" id="GQn-uT-Y9U"/>
                             <constraint firstItem="6fu-8d-Y5e" firstAttribute="leading" secondItem="dcs-de-5Hc" secondAttribute="leading" constant="8" id="Xjk-vh-1fe"/>
-                            <constraint firstAttribute="trailing" secondItem="0SQ-Ba-Hb8" secondAttribute="trailing" id="c7x-WF-v0w"/>
+                            <constraint firstItem="UNj-NX-WvY" firstAttribute="centerY" secondItem="dcs-de-5Hc" secondAttribute="centerY" id="fJa-XW-jJB"/>
                             <constraint firstAttribute="bottom" secondItem="0SQ-Ba-Hb8" secondAttribute="bottom" constant="8" id="gsF-dr-ghT"/>
+                            <constraint firstItem="UNj-NX-WvY" firstAttribute="leading" secondItem="0SQ-Ba-Hb8" secondAttribute="trailing" constant="8" id="gtc-kI-URt"/>
                             <constraint firstItem="6fu-8d-Y5e" firstAttribute="top" secondItem="dcs-de-5Hc" secondAttribute="top" constant="8" id="hbQ-Kx-r3j"/>
+                            <constraint firstAttribute="trailing" secondItem="UNj-NX-WvY" secondAttribute="trailing" constant="8" id="xnC-lX-ERY"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZW-UF-iHR">
@@ -71,12 +73,13 @@
                 <outlet property="blockProducerNameLabel" destination="6fu-8d-Y5e" id="Md2-KM-VlI"/>
                 <outlet property="rowContent" destination="dcs-de-5Hc" id="qQc-xE-ouA"/>
                 <outlet property="totalVotesLabel" destination="0SQ-Ba-Hb8" id="q6a-Xs-Fz7"/>
-                <outlet property="websiteImage" destination="XbT-Ss-l9n" id="cmd-7q-DC7"/>
+                <outlet property="viewBlockProducer" destination="UNj-NX-WvY" id="Q9E-io-Quk"/>
             </connections>
             <point key="canvasLocation" x="-101.59999999999999" y="146.62668665667167"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ic_external_large" width="80" height="80"/>
         <namedColor name="colorSecondary">
             <color red="0.36862745098039218" green="0.9882352941176471" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

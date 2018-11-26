@@ -5,8 +5,8 @@ class RegisteredBlockProducersCell : SimpleTableViewCell<RegisteredBlockProducer
     
     @IBOutlet weak var blockProducerNameLabel: UILabel!
     @IBOutlet weak var totalVotesLabel: UILabel!
-    @IBOutlet weak var websiteImage: UIImageView!
     @IBOutlet weak var rowContent: UIView!
+    @IBOutlet weak var viewBlockProducer: UIButton!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -19,5 +19,12 @@ class RegisteredBlockProducersCell : SimpleTableViewCell<RegisteredBlockProducer
     override func populate(item: RegisteredBlockProducer) {
         blockProducerNameLabel.text = item.owner
         totalVotesLabel.text = item.votesInEos
+        viewBlockProducer.addTarget(self, action: #selector(viewBlockProducerButtonTap), for: .touchUpInside)
+    }
+    
+    @objc private func viewBlockProducerButtonTap() {
+        if let extraTapDelegate = extraTapDelegate {
+            extraTapDelegate.extraTap(indexPath: indexPath!)
+        }
     }
 }
