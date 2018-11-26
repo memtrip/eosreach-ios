@@ -71,7 +71,7 @@ class SettingsViewController: MxViewController<SettingsIntent, SettingsResult, S
         case .navigateToEosEndpoint:
             performSegue(withIdentifier: R.segue.settingsViewController.settingsToEosEndpoint, sender: self)
         case .navigateToPrivateKeys:
-            print("")
+            performSegue(withIdentifier: R.segue.settingsViewController.settingsToViewPrivateKeys, sender: self)
         case .navigateToViewConfirmedTransactions:
             print("")
         case .navigateToTelegram:

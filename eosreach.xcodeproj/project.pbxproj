@@ -51,6 +51,16 @@
 		3C0700DF21A751BB008F63D2 /* ConfirmRamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700DA21A751BA008F63D2 /* ConfirmRamViewController.swift */; };
 		3C0700E121A75245008F63D2 /* ManageRamBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700E021A75245008F63D2 /* ManageRamBundle.swift */; };
 		3C0700E321A7726A008F63D2 /* RamBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700E221A7726A008F63D2 /* RamBundle.swift */; };
+		3C0A86A221ABF05B00F48302 /* ViewPrivateKeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A869D21ABF05B00F48302 /* ViewPrivateKeysViewController.swift */; };
+		3C0A86A321ABF05B00F48302 /* ViewPrivateKeysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A869E21ABF05B00F48302 /* ViewPrivateKeysViewModel.swift */; };
+		3C0A86A421ABF05B00F48302 /* ViewPrivateKeysIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A869F21ABF05B00F48302 /* ViewPrivateKeysIntent.swift */; };
+		3C0A86A521ABF05B00F48302 /* ViewPrivateKeysResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86A021ABF05B00F48302 /* ViewPrivateKeysResult.swift */; };
+		3C0A86A621ABF05B00F48302 /* ViewPrivateKeysViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86A121ABF05B00F48302 /* ViewPrivateKeysViewState.swift */; };
+		3C0A86A821ABF0BD00F48302 /* ViewKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86A721ABF0BD00F48302 /* ViewKeyPair.swift */; };
+		3C0A86AA21ABFC6900F48302 /* KeyPairCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86A921ABFC6900F48302 /* KeyPairCell.swift */; };
+		3C0A86AC21ABFC8100F48302 /* KeyPairTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86AB21ABFC8100F48302 /* KeyPairTableView.swift */; };
+		3C0A86AE21ABFD5D00F48302 /* KeyPairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0A86AD21ABFD5D00F48302 /* KeyPairCell.xib */; };
+		3C0A86B021AC060700F48302 /* ReachTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86AF21AC060700F48302 /* ReachTextView.swift */; };
 		3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0ADD69219F24380026649F /* AccountCardCell.xib */; };
 		3C0ADD71219F28700026649F /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD70219F28700026649F /* Connection.swift */; };
 		3C0ADD7E219F378C0026649F /* BalanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7D219F378C0026649F /* BalanceEntity.swift */; };
@@ -453,6 +463,16 @@
 		3C0700DA21A751BA008F63D2 /* ConfirmRamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmRamViewController.swift; sourceTree = "<group>"; };
 		3C0700E021A75245008F63D2 /* ManageRamBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageRamBundle.swift; sourceTree = "<group>"; };
 		3C0700E221A7726A008F63D2 /* RamBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamBundle.swift; sourceTree = "<group>"; };
+		3C0A869D21ABF05B00F48302 /* ViewPrivateKeysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPrivateKeysViewController.swift; sourceTree = "<group>"; };
+		3C0A869E21ABF05B00F48302 /* ViewPrivateKeysViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPrivateKeysViewModel.swift; sourceTree = "<group>"; };
+		3C0A869F21ABF05B00F48302 /* ViewPrivateKeysIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPrivateKeysIntent.swift; sourceTree = "<group>"; };
+		3C0A86A021ABF05B00F48302 /* ViewPrivateKeysResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPrivateKeysResult.swift; sourceTree = "<group>"; };
+		3C0A86A121ABF05B00F48302 /* ViewPrivateKeysViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPrivateKeysViewState.swift; sourceTree = "<group>"; };
+		3C0A86A721ABF0BD00F48302 /* ViewKeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewKeyPair.swift; sourceTree = "<group>"; };
+		3C0A86A921ABFC6900F48302 /* KeyPairCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPairCell.swift; sourceTree = "<group>"; };
+		3C0A86AB21ABFC8100F48302 /* KeyPairTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPairTableView.swift; sourceTree = "<group>"; };
+		3C0A86AD21ABFD5D00F48302 /* KeyPairCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyPairCell.xib; sourceTree = "<group>"; };
+		3C0A86AF21AC060700F48302 /* ReachTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachTextView.swift; sourceTree = "<group>"; };
 		3C0ADD69219F24380026649F /* AccountCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCardCell.xib; sourceTree = "<group>"; };
 		3C0ADD70219F28700026649F /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		3C0ADD7D219F378C0026649F /* BalanceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceEntity.swift; sourceTree = "<group>"; };
@@ -815,6 +835,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C0A869C21ABEFBC00F48302 /* viewprivatekey */ = {
+			isa = PBXGroup;
+			children = (
+				3C0A869F21ABF05B00F48302 /* ViewPrivateKeysIntent.swift */,
+				3C0A86A021ABF05B00F48302 /* ViewPrivateKeysResult.swift */,
+				3C0A869D21ABF05B00F48302 /* ViewPrivateKeysViewController.swift */,
+				3C0A869E21ABF05B00F48302 /* ViewPrivateKeysViewModel.swift */,
+				3C0A86A121ABF05B00F48302 /* ViewPrivateKeysViewState.swift */,
+				3C0A86A721ABF0BD00F48302 /* ViewKeyPair.swift */,
+				3C0A86AB21ABFC8100F48302 /* KeyPairTableView.swift */,
+				3C0A86A921ABFC6900F48302 /* KeyPairCell.swift */,
+				3C0A86AD21ABFD5D00F48302 /* KeyPairCell.xib */,
+			);
+			path = viewprivatekey;
+			sourceTree = "<group>";
+		};
 		3C0ADD68219F218B0026649F /* account */ = {
 			isa = PBXGroup;
 			children = (
@@ -890,6 +926,7 @@
 				3CEF33CC21A52EE900716AA2 /* ReachBorderView.swift */,
 				3C07008621A6FA49008F63D2 /* ReachSwitch.swift */,
 				3C0C04B621A8881700F5F7A7 /* ReachBorderLabel.swift */,
+				3C0A86AF21AC060700F48302 /* ReachTextView.swift */,
 			);
 			path = uikit;
 			sourceTree = "<group>";
@@ -931,6 +968,7 @@
 			children = (
 				3C340FCF21937FDE0017BEF9 /* currencypairing */,
 				3C964C2F21938C33003663EF /* eosendpoint */,
+				3C0A869C21ABEFBC00F48302 /* viewprivatekey */,
 				3C340FC52193612A0017BEF9 /* SettingsIntent.swift */,
 				3C340FC42193612A0017BEF9 /* SettingsResult.swift */,
 				3C340FC12193612A0017BEF9 /* SettingsViewController.swift */,
@@ -1832,6 +1870,7 @@
 				3C1F1F9A21A35B090075BD71 /* ActionsCell.xib in Resources */,
 				3C8BD23521A6C16F00ACFA70 /* BandwidthStrings.strings in Resources */,
 				3C07009521A71AA5008F63D2 /* TransactionLogViewController.xib in Resources */,
+				3C0A86AE21ABFD5D00F48302 /* KeyPairCell.xib in Resources */,
 				3C07009B21A72217008F63D2 /* TransactionReceiptViewController.xib in Resources */,
 				3CB1D72721A86B9100C87EC9 /* TransferStrings.strings in Resources */,
 				3C1A972521A3D13E00C30A75 /* ActiveBlockProducerCell.xib in Resources */,
@@ -2055,6 +2094,7 @@
 				3C8BD25121A6C3B300ACFA70 /* UndelegateBandwidthViewState.swift in Sources */,
 				3C07009121A6FC79008F63D2 /* ConfirmBandwidthResult.swift in Sources */,
 				3C0700B521A74FE8008F63D2 /* ManageRamViewModel.swift in Sources */,
+				3C0A86AC21ABFC8100F48302 /* KeyPairTableView.swift in Sources */,
 				3C964C4A219444DB003663EF /* RsaEncryptionVerified.swift in Sources */,
 				3C6DF79C21A0934600ADA892 /* AccountNavigationViewState.swift in Sources */,
 				3CC9E70521A5A4110050BA57 /* CastProxyVoteViewModel.swift in Sources */,
@@ -2084,6 +2124,7 @@
 				3CC9A3A1219DAF050002A25F /* CutomTokensRequestImpl.swift in Sources */,
 				3CB1D70721A8296C00C87EC9 /* ViewActionViewState.swift in Sources */,
 				3CC9A3B3219DB6310002A25F /* ProxyVoterRequestImpl.swift in Sources */,
+				3C0A86A221ABF05B00F48302 /* ViewPrivateKeysViewController.swift in Sources */,
 				3C6DF76B21A082AC00ADA892 /* AccountViewState.swift in Sources */,
 				3C6DF77B21A08B5100ADA892 /* BalanceIntent.swift in Sources */,
 				3C9BFBC4219C21D600589936 /* AccountActionRequest.swift in Sources */,
@@ -2162,6 +2203,7 @@
 				3CC9E72021A5BE980050BA57 /* ProxyVoterListIntent.swift in Sources */,
 				3C0ADD9B219F3B230026649F /* InsertTransactionLog.swift in Sources */,
 				3C0ADD8E219F37E60026649F /* DeleteBalances.swift in Sources */,
+				3C0A86A421ABF05B00F48302 /* ViewPrivateKeysIntent.swift in Sources */,
 				3C8C6DC42192D86F00FC1A0D /* EntryResult.swift in Sources */,
 				3CEF33C121A513DF00716AA2 /* AccountNavigationSelected.swift in Sources */,
 				3C1F1F7B21A31CCF0075BD71 /* ResourcesViewLayout.swift in Sources */,
@@ -2205,6 +2247,7 @@
 				3CC9E6F321A56AAE0050BA57 /* ViewProxyVoterIntent.swift in Sources */,
 				3C0700B421A74FE8008F63D2 /* ManageRamViewState.swift in Sources */,
 				3C0700DC21A751BB008F63D2 /* ConfirmRamViewModel.swift in Sources */,
+				3C0A86A321ABF05B00F48302 /* ViewPrivateKeysViewModel.swift in Sources */,
 				3CCE9C2C21A2C3810050910D /* ResourceGraphView.swift in Sources */,
 				3C7F0E022194B73200E72DD1 /* ReachTabsController.swift in Sources */,
 				3C592F9C219D60BE00D7C9B9 /* DelegatedBandwidth.swift in Sources */,
@@ -2213,6 +2256,7 @@
 				3C964C51219459D3003663EF /* EncryptedKeyPairData.swift in Sources */,
 				3C0EC8122193086800562A1B /* R.generated.swift in Sources */,
 				3C07009021A6FC79008F63D2 /* ConfirmBandwidthViewModel.swift in Sources */,
+				3C0A86A621ABF05B00F48302 /* ViewPrivateKeysViewState.swift in Sources */,
 				3C0ADD86219F37B10026649F /* DeleteAccounts.swift in Sources */,
 				3C0700BF21A750DE008F63D2 /* BuyRamResult.swift in Sources */,
 				3C340FD72193801B0017BEF9 /* CurrencyPairingViewModel.swift in Sources */,
@@ -2260,10 +2304,12 @@
 				3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */,
 				3CB1D71721A85B5100C87EC9 /* TransferViewModel.swift in Sources */,
 				3C8BD24721A6C2FB00ACFA70 /* DelegateBandwidthViewModel.swift in Sources */,
+				3C0A86AA21ABFC6900F48302 /* KeyPairCell.swift in Sources */,
 				3C0C04B321A8877400F5F7A7 /* ReachNetCpuView.swift in Sources */,
 				3C9BFB8A219B366700589936 /* ContractAccountBalance.swift in Sources */,
 				3C6DF79321A090F300ADA892 /* ResourcesResult.swift in Sources */,
 				3C6DF79B21A0934600ADA892 /* AccountNavigationIntent.swift in Sources */,
+				3C0A86B021AC060700F48302 /* ReachTextView.swift in Sources */,
 				3C0700B621A74FE8008F63D2 /* ManageRamViewController.swift in Sources */,
 				3C7F0DD72194A0D400E72DD1 /* SearchViewModel.swift in Sources */,
 				3C1A973121A4755D00C30A75 /* BalanceModel.swift in Sources */,
@@ -2278,6 +2324,7 @@
 				3C592FA6219D623300D7C9B9 /* TransferRequestImpl.swift in Sources */,
 				3C0EC80A2192FAD300562A1B /* ui_types.swift in Sources */,
 				3CC9E72321A5BFFF0050BA57 /* ProxyVoterListTableView.swift in Sources */,
+				3C0A86A521ABF05B00F48302 /* ViewPrivateKeysResult.swift in Sources */,
 				3CC9E70621A5A4110050BA57 /* CastProxyVoteViewState.swift in Sources */,
 				3C8BD25721A6CED900ACFA70 /* AllocatedBandwidthTableView.swift in Sources */,
 				3C0ADD87219F37B10026649F /* CountAccounts.swift in Sources */,
@@ -2321,6 +2368,7 @@
 				3CCE0EFC21AADC2100D81458 /* DataTableView.swift in Sources */,
 				3CEF33BF21A513CB00716AA2 /* AccountNavigationDelegate.swift in Sources */,
 				3C1A971D21A3C5F100C30A75 /* EosEndpointUseCase.swift in Sources */,
+				3C0A86A821ABF0BD00F48302 /* ViewKeyPair.swift in Sources */,
 				3CC9E6F121A56AAE0050BA57 /* ViewProxyVoterBundle.swift in Sources */,
 				3C964C3521938C71003663EF /* EosEndpointIntent.swift in Sources */,
 				3C7F0DD62194A0D400E72DD1 /* SearchResult.swift in Sources */,

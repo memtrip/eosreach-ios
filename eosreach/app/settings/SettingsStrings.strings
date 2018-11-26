@@ -26,4 +26,10 @@
 	"settings_eos_endpoint_success_title" = Success;
 	"settings_clear_data_warning_dialog_title" = "Are you sure?";
 	"settings_clear_data_warning_dialog_body" = "Clearing data will also remove your encrypted private key, are you sure you want to continue?";
+	"settings_view_private_keys_title" = "View Private Keys";
+	"settings_view_private_keys_instruction" = "Your private keys are encrypted using an RSA keypair, the private key responsible for this encryption is stored in the AndroidKeyStore. Screenshots have been disabled on this screen. Continue below to decrypt your private keys.";
+	"settings_view_private_keys_button" = "Show private keys";
+	"settings_view_private_keys_empty" = "Could not find any private keys.";
+	"settings_key_pair_cell_public_key_title" = "Public Key";
+	"settings_key_pair_cell_private_key_title" = "Private Key";
 }

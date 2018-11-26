@@ -164,6 +164,7 @@
                         <segue destination="BYZ-38-t0r" kind="show" identifier="settingsToEntry" id="cDM-mx-vQS"/>
                         <segue destination="nRr-uf-Ks7" kind="show" identifier="settingsToCurrencyPairing" id="bMO-tT-PCK"/>
                         <segue destination="BLF-jA-WCe" kind="show" identifier="settingsToEosEndpoint" id="X0C-WJ-xId"/>
+                        <segue destination="96N-le-3DO" kind="show" identifier="settingsToViewPrivateKeys" id="SPJ-VD-wSi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldj-Ns-Ajb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,6 +310,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXX-H7-vea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2081" y="-674"/>
+        </scene>
+        <!--View Private Keys View Controller-->
+        <scene sceneID="gns-LQ-hDL">
+            <objects>
+                <viewController id="96N-le-3DO" customClass="ViewPrivateKeysViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8SW-Yx-2B0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vr0-mU-K9f" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="6wQ-vY-fyx"/>
+                                </constraints>
+                            </view>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JRH-MX-Fzc" customClass="KeyPairTableView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_no_private_keys" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfo-Dw-VmM">
+                                <rect key="frame" x="16" y="84" width="343" height="567"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fj9-cW-mM5">
+                                <rect key="frame" x="16" y="84" width="343" height="567"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_private_keys" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5F9-A9-BcF">
+                                        <rect key="frame" x="16" y="16" width="311" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" name="typographyColorPrimary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpv-40-sGD" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="108" y="52.5" width="127" height="30"/>
+                                        <state key="normal" title="_view_private_keys"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5F9-A9-BcF" secondAttribute="trailing" constant="16" id="Gj3-9V-xTT"/>
+                                    <constraint firstItem="Mpv-40-sGD" firstAttribute="centerX" secondItem="fj9-cW-mM5" secondAttribute="centerX" id="UZg-Cr-s0b"/>
+                                    <constraint firstItem="Mpv-40-sGD" firstAttribute="top" secondItem="5F9-A9-BcF" secondAttribute="bottom" constant="16" id="ZVB-nm-VHr"/>
+                                    <constraint firstItem="5F9-A9-BcF" firstAttribute="leading" secondItem="fj9-cW-mM5" secondAttribute="leading" constant="16" id="pnY-6F-YhD"/>
+                                    <constraint firstItem="5F9-A9-BcF" firstAttribute="top" secondItem="fj9-cW-mM5" secondAttribute="top" constant="16" id="rUC-El-b6f"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Bqg-X7-SIA" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="84" width="343" height="567"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="vr0-mU-K9f" firstAttribute="top" secondItem="SmD-P1-9dH" secondAttribute="top" id="14d-2i-RUJ"/>
+                            <constraint firstItem="SmD-P1-9dH" firstAttribute="bottom" secondItem="mfo-Dw-VmM" secondAttribute="bottom" constant="16" id="Cow-Dg-W9b"/>
+                            <constraint firstItem="vr0-mU-K9f" firstAttribute="leading" secondItem="SmD-P1-9dH" secondAttribute="leading" id="GAg-Oe-osm"/>
+                            <constraint firstItem="SmD-P1-9dH" firstAttribute="trailing" secondItem="Bqg-X7-SIA" secondAttribute="trailing" constant="16" id="GOc-aQ-jZh"/>
+                            <constraint firstItem="SmD-P1-9dH" firstAttribute="trailing" secondItem="fj9-cW-mM5" secondAttribute="trailing" constant="16" id="HiA-ue-ghM"/>
+                            <constraint firstItem="SmD-P1-9dH" firstAttribute="bottom" secondItem="JRH-MX-Fzc" secondAttribute="bottom" id="L7J-aR-wog"/>
+                            <constraint firstItem="fj9-cW-mM5" firstAttribute="leading" secondItem="SmD-P1-9dH" secondAttribute="leading" constant="16" id="Mpe-7d-lzg"/>
+                            <constraint firstItem="mfo-Dw-VmM" firstAttribute="leading" secondItem="SmD-P1-9dH" secondAttribute="leading" constant="16" id="N67-52-cuX"/>
+                            <constraint firstItem="fj9-cW-mM5" firstAttribute="top" secondItem="vr0-mU-K9f" secondAttribute="bottom" constant="16" id="QWJ-HM-vqo"/>
+                            <constraint firstItem="SmD-P1-9dH" firstAttribute="trailing" secondItem="mfo-Dw-VmM" secondAttribute="trailing" constant="16" id="frK-k9-G1x"/>
+                            <constraint firstItem="SmD-P1-9dH" firstAttribute="trailing" secondItem="vr0-mU-K9f" secondAttribute="trailing" id="gX3-gQ-KpE"/>
+                            <constraint firstItem="Bqg-X7-SIA" firstAttribute="top" secondItem="vr0-mU-K9f" secondAttribute="bottom" constant="16" id="gbX-Se-NTA"/>
+                            <constraint firstItem="JRH-MX-Fzc" firstAttribute="leading" secondItem="SmD-P1-9dH" secondAttribute="leading" id="hyV-Qn-0C8"/>
+                            <constraint firstItem="SmD-P1-9dH" firstAttribute="bottom" secondItem="Bqg-X7-SIA" secondAttribute="bottom" constant="16" id="kl2-wm-QVg"/>
+                            <constraint firstItem="SmD-P1-9dH" firstAttribute="bottom" secondItem="fj9-cW-mM5" secondAttribute="bottom" constant="16" id="oYZ-ai-Stq"/>
+                            <constraint firstItem="mfo-Dw-VmM" firstAttribute="top" secondItem="vr0-mU-K9f" secondAttribute="bottom" constant="16" id="quD-Fk-GM8"/>
+                            <constraint firstItem="Bqg-X7-SIA" firstAttribute="leading" secondItem="SmD-P1-9dH" secondAttribute="leading" constant="16" id="r4N-X4-URZ"/>
+                            <constraint firstItem="SmD-P1-9dH" firstAttribute="trailing" secondItem="JRH-MX-Fzc" secondAttribute="trailing" id="sLf-iK-ewe"/>
+                            <constraint firstItem="JRH-MX-Fzc" firstAttribute="top" secondItem="vr0-mU-K9f" secondAttribute="bottom" constant="8" id="wd2-K9-CFr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SmD-P1-9dH"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Bqg-X7-SIA" id="ZBr-5V-Pjq"/>
+                        <outlet property="noPrivateKeysLabel" destination="mfo-Dw-VmM" id="O86-p9-dd9"/>
+                        <outlet property="tableView" destination="JRH-MX-Fzc" id="L9B-g0-5b4"/>
+                        <outlet property="toolBar" destination="vr0-mU-K9f" id="sym-8y-85z"/>
+                        <outlet property="viewPrivateKeyButtonGroup" destination="fj9-cW-mM5" id="DEB-bA-0yz"/>
+                        <outlet property="viewPrivateKeysButton" destination="Mpv-40-sGD" id="OFT-VR-Mou"/>
+                        <outlet property="viewPrivateKeysInstructionLabel" destination="5F9-A9-BcF" id="5nY-fJ-bS1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aNE-VJ-dp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318" y="-2022"/>
         </scene>
         <!--Currency Pairing View Controller-->
         <scene sceneID="hWr-d4-pDW">
@@ -3253,7 +3341,7 @@
         <segue reference="bAw-Fj-z4u"/>
         <segue reference="cAT-yL-HS7"/>
         <segue reference="1Wt-0h-Agf"/>
-        <segue reference="EMU-T5-0SR"/>
+        <segue reference="cDM-mx-vQS"/>
         <segue reference="9w4-95-M8t"/>
         <segue reference="kx6-Ea-lKC"/>
     </inferredMetricsTieBreakers>

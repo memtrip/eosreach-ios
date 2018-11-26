@@ -83,7 +83,7 @@ class EosKeyManagerImpl: EosKeyManager {
                 single(.error(error))
             }
             return Disposables.create()
-        }
+        }.subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background)).observeOn(MainScheduler.instance)
     }
 
     func createEosPrivateKey(value: String) -> Single<EOSPrivateKey> {

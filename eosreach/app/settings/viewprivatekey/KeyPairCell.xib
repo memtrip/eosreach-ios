@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="259" id="G5p-Ja-F7f" customClass="KeyPairCell" customModule="eosreach" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G5p-Ja-F7f" id="qGD-SY-Cv4">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="258.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_account_name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qw-ln-Weh" userLabel="account_name_label">
+                        <rect key="frame" x="16" y="16" width="343" height="20.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <color key="textColor" name="colorSecondary"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_public_key_label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcG-s5-1bC" userLabel="public_key_label">
+                        <rect key="frame" x="16" y="40.5" width="343" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <color key="textColor" name="typographyColorPrimary"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ESJ-3d-tbV" customClass="ReachTextView" customModule="eosreach" customModuleProvider="target">
+                        <rect key="frame" x="16" y="69.5" width="343" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="3sC-G7-Q4b"/>
+                        </constraints>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" name="typographyColorPrimary"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_private_key_label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f0-ud-jqD">
+                        <rect key="frame" x="16" y="149.5" width="343" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <color key="textColor" name="typographyColorPrimary"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KbL-bO-UY4" customClass="ReachTextView" customModule="eosreach" customModuleProvider="target">
+                        <rect key="frame" x="16" y="174.5" width="343" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="Zcv-0t-GBT"/>
+                        </constraints>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" name="typographyColorPrimary"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tk5-5g-j2p">
+                        <rect key="frame" x="0.0" y="246.5" width="375" height="12"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3qw-ln-Weh" firstAttribute="leading" secondItem="qGD-SY-Cv4" secondAttribute="leading" constant="16" id="3dd-6j-N3F"/>
+                    <constraint firstItem="KbL-bO-UY4" firstAttribute="leading" secondItem="qGD-SY-Cv4" secondAttribute="leading" constant="16" id="CMi-qq-xQc"/>
+                    <constraint firstAttribute="trailing" secondItem="OcG-s5-1bC" secondAttribute="trailing" constant="16" id="Ei2-2E-9FM"/>
+                    <constraint firstItem="ESJ-3d-tbV" firstAttribute="leading" secondItem="qGD-SY-Cv4" secondAttribute="leading" constant="16" id="Exa-ZK-oyL"/>
+                    <constraint firstAttribute="bottom" secondItem="Tk5-5g-j2p" secondAttribute="bottom" id="LfT-Rw-Nar"/>
+                    <constraint firstItem="KbL-bO-UY4" firstAttribute="top" secondItem="0f0-ud-jqD" secondAttribute="bottom" constant="4" id="ODa-HS-hBX"/>
+                    <constraint firstItem="OcG-s5-1bC" firstAttribute="leading" secondItem="qGD-SY-Cv4" secondAttribute="leading" constant="16" id="QiZ-iM-h7E"/>
+                    <constraint firstAttribute="trailing" secondItem="ESJ-3d-tbV" secondAttribute="trailing" constant="16" id="WJ2-eh-YFc"/>
+                    <constraint firstItem="0f0-ud-jqD" firstAttribute="leading" secondItem="qGD-SY-Cv4" secondAttribute="leading" constant="16" id="cdX-WF-qrT"/>
+                    <constraint firstAttribute="trailing" secondItem="0f0-ud-jqD" secondAttribute="trailing" constant="16" id="csM-WZ-mwv"/>
+                    <constraint firstItem="ESJ-3d-tbV" firstAttribute="top" secondItem="OcG-s5-1bC" secondAttribute="bottom" constant="8" id="fMb-42-2NR"/>
+                    <constraint firstAttribute="trailing" secondItem="KbL-bO-UY4" secondAttribute="trailing" constant="16" id="jNf-Nm-k1O"/>
+                    <constraint firstItem="3qw-ln-Weh" firstAttribute="top" secondItem="qGD-SY-Cv4" secondAttribute="top" constant="16" id="n0v-Uy-b6t"/>
+                    <constraint firstItem="Tk5-5g-j2p" firstAttribute="leading" secondItem="qGD-SY-Cv4" secondAttribute="leading" id="nKh-dZ-7Nj"/>
+                    <constraint firstAttribute="trailing" secondItem="3qw-ln-Weh" secondAttribute="trailing" constant="16" id="plV-Ae-lIq"/>
+                    <constraint firstAttribute="trailing" secondItem="Tk5-5g-j2p" secondAttribute="trailing" id="uEo-hl-BSh"/>
+                    <constraint firstItem="0f0-ud-jqD" firstAttribute="top" secondItem="ESJ-3d-tbV" secondAttribute="bottom" constant="16" id="vUx-bJ-n6p"/>
+                    <constraint firstItem="Tk5-5g-j2p" firstAttribute="top" secondItem="KbL-bO-UY4" secondAttribute="bottom" constant="8" id="w2W-op-d7J"/>
+                    <constraint firstItem="OcG-s5-1bC" firstAttribute="top" secondItem="3qw-ln-Weh" secondAttribute="bottom" constant="4" id="wEp-Fv-wmt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="accountNameLabel" destination="3qw-ln-Weh" id="eSY-qM-KBZ"/>
+                <outlet property="privateKeyLabel" destination="0f0-ud-jqD" id="Cas-m2-hdH"/>
+                <outlet property="privateKeyValue" destination="KbL-bO-UY4" id="KtL-Kb-GlL"/>
+                <outlet property="publicKeyLabel" destination="OcG-s5-1bC" id="guE-lX-JqM"/>
+                <outlet property="publicKeyValue" destination="ESJ-3d-tbV" id="dQd-1a-Ok4"/>
+            </connections>
+            <point key="canvasLocation" x="213.59999999999999" y="203.74812593703149"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="colorSecondary">
+            <color red="0.36862745098039218" green="0.9882352941176471" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="typographyColorPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -63,7 +63,7 @@
                 <outlet property="amount" destination="thS-T0-KeI" id="EU8-n5-M4T"/>
                 <outlet property="symbol" destination="3Av-ha-pDg" id="iIU-OI-8M9"/>
             </connections>
-            <point key="canvasLocation" x="214" y="146"/>
+            <point key="canvasLocation" x="213.59999999999999" y="145.72713643178412"/>
         </tableViewCell>
     </objects>
     <resources>
