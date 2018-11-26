@@ -732,44 +732,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" image="account_navigation_import_key" translatesAutoresizingMaskIntoConstraints="NO" id="hQa-hC-TRy">
+                                <rect key="frame" x="335" y="23" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="By1-hH-23E"/>
+                                    <constraint firstAttribute="width" secondItem="hQa-hC-TRy" secondAttribute="height" multiplier="1:1" id="saf-aN-1qS"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account_navigation_create_account" translatesAutoresizingMaskIntoConstraints="NO" id="TuB-rD-UCv">
+                                <rect key="frame" x="335" y="53" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TuB-rD-UCv" secondAttribute="height" multiplier="1:1" id="6LZ-U7-kvC"/>
+                                    <constraint firstAttribute="height" constant="24" id="yag-HX-Ekl"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account_navigation_settings" translatesAutoresizingMaskIntoConstraints="NO" id="All-TO-r63">
+                                <rect key="frame" x="335" y="84" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="I8q-Ql-FAy"/>
+                                    <constraint firstAttribute="width" secondItem="All-TO-r63" secondAttribute="height" multiplier="1:1" id="WLL-SX-QyU"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1K-kQ-OR2" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="20" width="80" height="30"/>
                                 <state key="normal" title="_import key"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8Z-Tx-JuN" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="51" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="30"/>
                                 <state key="normal" title="_create_new_account"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZz-zQ-cxh" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="82" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="81" width="375" height="30"/>
                                 <state key="normal" title="_settings"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2h-ri-BlB">
-                                <rect key="frame" x="16" y="128" width="343" height="1"/>
+                                <rect key="frame" x="16" y="127" width="343" height="1"/>
                                 <color key="backgroundColor" name="colorBorderTransparent"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="BLo-yv-I6W"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_accounts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDg-4D-ydh">
-                                <rect key="frame" x="16" y="144" width="88.5" height="30"/>
+                                <rect key="frame" x="16" y="143" width="88.5" height="30"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JST-l5-Hcs" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="270.5" y="145" width="88.5" height="30"/>
+                                <rect key="frame" x="270.5" y="144" width="88.5" height="30"/>
                                 <state key="normal" title="_refresh"/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-KR-3bJ" customClass="AccountCardTableView" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="8" y="182" width="359" height="477"/>
+                                <rect key="frame" x="8" y="181" width="359" height="478"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WLj-pu-16Z" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="169" y="402" width="37" height="37"/>
+                                <rect key="frame" x="169" y="401.5" width="37" height="37"/>
                             </activityIndicatorView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcQ-6Y-dLR" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="174" width="375" height="493"/>
+                                <rect key="frame" x="0.0" y="173" width="375" height="494"/>
                             </view>
                         </subviews>
                         <constraints>
@@ -779,23 +800,28 @@
                             <constraint firstItem="YcQ-6Y-dLR" firstAttribute="leading" secondItem="KBD-p8-KUL" secondAttribute="leading" id="5Ip-0d-Bbp"/>
                             <constraint firstItem="NDg-4D-ydh" firstAttribute="top" secondItem="K2h-ri-BlB" secondAttribute="top" constant="16" id="78t-7H-ikv"/>
                             <constraint firstItem="WLj-pu-16Z" firstAttribute="centerY" secondItem="bGT-KR-3bJ" secondAttribute="centerY" id="7K5-TM-eU3"/>
+                            <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="TuB-rD-UCv" secondAttribute="trailing" constant="16" id="BdY-1m-xmd"/>
                             <constraint firstItem="NDg-4D-ydh" firstAttribute="leading" secondItem="KBD-p8-KUL" secondAttribute="leading" constant="16" id="Dh3-5e-61s"/>
                             <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="e8Z-Tx-JuN" secondAttribute="trailing" id="G5B-Sf-o0J"/>
                             <constraint firstItem="y1K-kQ-OR2" firstAttribute="leading" secondItem="KBD-p8-KUL" secondAttribute="leading" id="GvD-S5-yU6"/>
+                            <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="All-TO-r63" secondAttribute="trailing" constant="16" id="JUx-5s-1SW"/>
                             <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="eZz-zQ-cxh" secondAttribute="trailing" id="LiY-G9-zhm"/>
                             <constraint firstItem="YcQ-6Y-dLR" firstAttribute="top" secondItem="NDg-4D-ydh" secondAttribute="bottom" id="Mp4-sT-Ted"/>
+                            <constraint firstItem="All-TO-r63" firstAttribute="centerY" secondItem="eZz-zQ-cxh" secondAttribute="centerY" id="Nnm-Mh-QFQ"/>
                             <constraint firstItem="K2h-ri-BlB" firstAttribute="top" secondItem="eZz-zQ-cxh" secondAttribute="bottom" constant="16" id="Nsk-5r-fEe"/>
                             <constraint firstItem="KBD-p8-KUL" firstAttribute="bottom" secondItem="bGT-KR-3bJ" secondAttribute="bottom" constant="8" id="RUs-2B-DNg"/>
                             <constraint firstItem="JST-l5-Hcs" firstAttribute="top" secondItem="K2h-ri-BlB" secondAttribute="bottom" constant="16" id="TpE-pG-a2Q"/>
                             <constraint firstItem="bGT-KR-3bJ" firstAttribute="top" secondItem="NDg-4D-ydh" secondAttribute="bottom" constant="8" id="U0F-ZQ-rd4"/>
-                            <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="y1K-kQ-OR2" secondAttribute="trailing" id="UoN-W1-Q8Z"/>
+                            <constraint firstItem="TuB-rD-UCv" firstAttribute="centerY" secondItem="e8Z-Tx-JuN" secondAttribute="centerY" id="bCG-54-E5u"/>
                             <constraint firstItem="WLj-pu-16Z" firstAttribute="centerX" secondItem="bGT-KR-3bJ" secondAttribute="centerX" id="dsJ-cp-ShC"/>
                             <constraint firstItem="e8Z-Tx-JuN" firstAttribute="leading" secondItem="KBD-p8-KUL" secondAttribute="leading" id="e7Y-SW-gAZ"/>
                             <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="JST-l5-Hcs" secondAttribute="trailing" constant="16" id="fTC-Pr-lbs"/>
                             <constraint firstItem="KBD-p8-KUL" firstAttribute="bottom" secondItem="YcQ-6Y-dLR" secondAttribute="bottom" id="jsI-Br-xE4"/>
                             <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="bGT-KR-3bJ" secondAttribute="trailing" constant="8" id="jtV-aX-llg"/>
-                            <constraint firstItem="e8Z-Tx-JuN" firstAttribute="top" secondItem="y1K-kQ-OR2" secondAttribute="bottom" constant="1" id="lEg-aL-7hK"/>
+                            <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="hQa-hC-TRy" secondAttribute="trailing" constant="16" id="kbJ-Fo-FEV"/>
+                            <constraint firstItem="e8Z-Tx-JuN" firstAttribute="top" secondItem="y1K-kQ-OR2" secondAttribute="bottom" id="lEg-aL-7hK"/>
                             <constraint firstItem="bGT-KR-3bJ" firstAttribute="leading" secondItem="KBD-p8-KUL" secondAttribute="leading" constant="8" id="lZS-87-wMd"/>
+                            <constraint firstItem="hQa-hC-TRy" firstAttribute="centerY" secondItem="y1K-kQ-OR2" secondAttribute="centerY" id="qy3-oZ-UHe"/>
                             <constraint firstItem="y1K-kQ-OR2" firstAttribute="top" secondItem="KBD-p8-KUL" secondAttribute="top" id="r8w-0Y-hol"/>
                             <constraint firstItem="KBD-p8-KUL" firstAttribute="trailing" secondItem="YcQ-6Y-dLR" secondAttribute="trailing" id="tef-qR-mHa"/>
                             <constraint firstItem="K2h-ri-BlB" firstAttribute="leading" secondItem="KBD-p8-KUL" secondAttribute="leading" constant="16" id="tvy-ag-MVu"/>
@@ -3320,6 +3346,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="account_navigation_create_account" width="80" height="80"/>
+        <image name="account_navigation_import_key" width="80" height="80"/>
+        <image name="account_navigation_settings" width="80" height="80"/>
         <namedColor name="colorAccent">
             <color red="1" green="0.45490196078431372" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -3344,7 +3373,7 @@
         <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="leo-zV-II3"/>
+        <segue reference="p9U-mn-UT8"/>
         <segue reference="1Wt-0h-Agf"/>
         <segue reference="cDM-mx-vQS"/>
         <segue reference="9w4-95-M8t"/>
