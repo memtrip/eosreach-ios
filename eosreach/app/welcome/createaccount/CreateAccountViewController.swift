@@ -23,6 +23,12 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     @IBOutlet weak var doneCtaActivityIndicator: ReachActivityIndicator!
     @IBOutlet weak var donePrivateKeyTextView: ReachTextView!
     
+    @IBOutlet weak var limboViewGroup: UIView!
+    @IBOutlet weak var limboTitle: UILabel!
+    @IBOutlet weak var limboBody: UILabel!
+    @IBOutlet weak var limboGoToSettingsButton: ReachPrimaryButton!
+    @IBOutlet weak var limboRetryButton: ReachPrimaryButton!
+    
     private let billing = BillingImpl(storeKitHandler: StoreKitHandler())
     private var skProduct: SKProduct?
     
@@ -40,6 +46,11 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
         doneCreateAccountLabel.text = R.string.welcomeStrings.create_account_done_title()
         doneInstructionLabel.text = R.string.welcomeStrings.create_account_done_instructions()
         doneCtaButton.setTitle(R.string.welcomeStrings.create_account_done_button(), for: .normal)
+        
+        limboTitle.text = R.string.welcomeStrings.create_account_limbo_error_title()
+        limboBody.text = R.string.welcomeStrings.create_account_limbo_error_body()
+        limboGoToSettingsButton.setTitle(R.string.welcomeStrings.create_account_limbo_settings_button(), for: .normal)
+        limboRetryButton.setTitle(R.string.appStrings.app_error_view_cta(), for: .normal)
     }
 
     override func intents() -> Observable<CreateAccountIntent> {
@@ -54,6 +65,17 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
                 formAccountTextField.rx.controlEvent(.editingDidEndOnExit).asObservable()
             ).map {
                 CreateAccountIntent.createAccount(accountName: self.formAccountTextField.text!)
+            }.asObservable(),
+            self.rx.methodInvoked(#selector(CreateAccountViewController.success(transactionIdentifier:))).map { args in
+                CreateAccountIntent.accountPurchased(
+                    transactionId: args[0] as! String,
+                    accountName: self.formAccountTextField.text!)
+            },
+            limboGoToSettingsButton.rx.tap.map {
+                CreateAccountIntent.goToSettings
+            },
+            limboRetryButton.rx.tap.map {
+                CreateAccountIntent.limboRetry
             }
         )
     }
@@ -79,16 +101,23 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
         case .onCreateAccountProgress:
             formCtaActivityIndicator.start()
             formCtaButton.gone()
-        case .onCreateAccountSuccess(let accountName, let privateKey):
+        case .onCreateAccountSuccess(let privateKey):
             formViewGroup.gone()
             doneViewGroup.visible()
             donePrivateKeyTextView.text = privateKey
         case .onCreateAccountFatalError:
             formCtaActivityIndicator.stop()
             formCtaButton.visible()
+        case .onCreateAccountGenericError:
+            formCtaActivityIndicator.stop()
+            formCtaButton.visible()
+            showOKDialog(message: R.string.welcomeStrings.create_account_error_generic())
         case .onCreateAccountUsernameExists:
             formCtaActivityIndicator.stop()
             formCtaButton.visible()
+        case .onCreateAccountLimbo:
+            formViewGroup.gone()
+            limboViewGroup.visible()
         case .onImportKeyProgress:
             doneCtaActivityIndicator.start()
             doneCtaButton.gone()
@@ -109,6 +138,8 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
             showOKDialog(message: R.string.welcomeStrings.create_account_username_format_validation_error())
         case .onAccountNameValidationNumberStartFailed:
             showOKDialog(message: R.string.welcomeStrings.create_account_username_length_validation_error())
+        case .goToSettings:
+            performSegue(withIdentifier: R.segue.createAccountViewController.createAccountToSettings, sender: self)
         }
     }
 
@@ -119,8 +150,13 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     //
     // MARK :- BillingFlowDelegate
     //
+    @objc dynamic func success(transactionIdentifier: String) {
+    }
+    
     func cannotMakePayment() {
-        print("cannotMakePayment")
+        showOKDialog(message: R.string.welcomeStrings.create_account_billing_cancelled())
+        formCtaActivityIndicator.stop()
+        formCtaButton.visible()
     }
     
     func purchasing() {
@@ -128,16 +164,14 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
         formCtaButton.gone()
     }
     
-    func success(transactionIdentifier: String) {
-        print("success")
-    }
-    
     func failed() {
-        print("failed")
+        showOKDialog(message: R.string.welcomeStrings.create_account_billing_cancelled())
+        formCtaActivityIndicator.stop()
+        formCtaButton.visible()
     }
     
     func deferred() {
-        print("fatal error?")
+        print("deferred")
     }
     
     //
@@ -147,21 +181,25 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     }
     
     func skuNotFound() {
+        skProductError()
+    }
+    
+    func skuBillingUnavailable() {
+        skProductError()
+    }
+    
+    func skuRequestFailed() {
+        skProductError()
+    }
+    
+    func billingSetupFailed() {
+        skProductError()
+    }
+    
+    private func skProductError() {
         activityIndicator.stop()
         formViewGroup.gone()
         skProductNotFound.visible()
         billing.endConnection()
-    }
-    
-    func skuBillingUnavailable() {
-        print("skuBillingUnavailable")
-    }
-    
-    func skuRequestFailed() {
-        print("skuRequestFailed")
-    }
-    
-    func billingSetupFailed() {
-        print("billingSetupFailed")
     }
 }

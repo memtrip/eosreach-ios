@@ -11,6 +11,7 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
     private let accountListSelection = AccountListSelection()
     private let unusedPublicKey = UnusedPublicKey()
     private let unusedTransactionIdentifier = UnusedTransactionIdentifier()
+    private let unusedAccountInLimbo = UnusedAccountInLimbo()
     
     override func dispatcher(intent: CreateAccountIntent) -> Observable<CreateAccountResult> {
         switch intent {
@@ -22,6 +23,12 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
             return just(formatPrice(skProduct: skProduct))
         case .createAccount(let accountName):
             return just(validateAccountName(accountName: accountName))
+        case .accountPurchased(let transactionId, let accountName):
+            return createAccount(transactionIdentifier: transactionId, accountName: accountName)
+        case .goToSettings:
+            return just(CreateAccountResult.goToSettings)
+        case .limboRetry:
+            return createAccount(transactionIdentifier: unusedTransactionIdentifier.get(), accountName: "")
         }
     }
 
@@ -37,12 +44,16 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
             return CreateAccountViewState.onAccountNameValidationPassed
         case .onCreateAccountProgress:
             return CreateAccountViewState.onCreateAccountProgress
-        case .onCreateAccountSuccess(let accountName, let privateKey):
-            return CreateAccountViewState.onCreateAccountSuccess(accountName: accountName, privateKey: privateKey)
+        case .onCreateAccountSuccess(let privateKey):
+            return CreateAccountViewState.onCreateAccountSuccess(privateKey: privateKey)
         case .onCreateAccountFatalError:
             return CreateAccountViewState.onCreateAccountFatalError
+        case .onCreateAccountGenericError:
+            return CreateAccountViewState.onCreateAccountGenericError
         case .onCreateAccountUsernameExists:
             return CreateAccountViewState.onCreateAccountUsernameExists
+        case .onCreateAccountLimbo:
+            return CreateAccountViewState.onCreateAccountLimbo
         case .onImportKeyProgress:
             return CreateAccountViewState.onImportKeyProgress
         case .onImportKeyError:
@@ -53,6 +64,8 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
             return CreateAccountViewState.onAccountNameValidationFailed
         case .onAccountNameValidationNumberStartFailed:
             return CreateAccountViewState.onAccountNameValidationNumberStartFailed
+        case .goToSettings:
+            return CreateAccountViewState.goToSettings
         }
     }
     
@@ -83,34 +96,34 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
                 publicKey: publicKey
             ).flatMap { result in
                 if (result.success()) {
-                    return self.createAccountSuccess(accountName: accountName, publicKey: publicKey)
+                    return self.createAccountSuccess(publicKey: publicKey)
                 } else {
-                    return Single.just(self.createAccountError(createAccountError: result.error!))
+                    return self.createAccountError(createAccountError: result.error!, publicKey: publicKey)
                 }
             }.catchError { error in
-                fatalError("verifyAccountsForPublicKey")
+                return self.verifyAccountsForPublicKey(publicKey: publicKey)
             }
         }.asObservable().startWith(CreateAccountResult.onCreateAccountProgress)
     }
     
-    private func createAccountSuccess(accountName: String, publicKey: String) -> Single<CreateAccountResult> {
+    private func createAccountSuccess(publicKey: String) -> Single<CreateAccountResult> {
         // TODO: does limbo exist on iOS?
         // TODO: no accounts synced?
         unusedPublicKey.clear()
         unusedTransactionIdentifier.clear()
         return eosKeyManager.getPrivateKey(eosPublicKey: publicKey).map { privateKey in
-            CreateAccountResult.onCreateAccountSuccess(accountName: accountName, privateKey: privateKey.base58)
+            CreateAccountResult.onCreateAccountSuccess(privateKey: privateKey.base58)
         }.catchErrorJustReturn(CreateAccountResult.onCreateAccountFatalError)
     }
     
-    private func createAccountError(createAccountError: EosCreateAccountError) -> CreateAccountResult {
+    private func createAccountError(createAccountError: EosCreateAccountError, publicKey: String) -> Single<CreateAccountResult> {
         switch createAccountError {
         case .genericError:
-            fatalError("verifyAccountsForPublicKey")
+            return verifyAccountsForPublicKey(publicKey: publicKey)
         case .fatalError:
-            return CreateAccountResult.onCreateAccountFatalError
+            return Single.just(CreateAccountResult.onCreateAccountFatalError)
         case .accountNameExists:
-            return CreateAccountResult.onCreateAccountUsernameExists
+            return Single.just(CreateAccountResult.onCreateAccountUsernameExists)
         }
     }
     
@@ -127,6 +140,36 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
             return eosKeyManager.createEosPrivateKey().flatMap { privateKey in
                 self.unusedPublicKey.put(value: privateKey.publicKey.base58)
                 return self.eosKeyManager.importPrivateKey(eosPrivateKey: privateKey)
+            }
+        }
+    }
+    
+    /**
+     * A user might lose internet connection while creating an account, in this case the
+     * account might have been created, so we check accounts for the public key. If the accounts
+     * for public key request fails, the create account process is in limbo.
+     */
+    private func verifyAccountsForPublicKey(publicKey: String) -> Single<CreateAccountResult> {
+        return accountsForPublicKeyRequest.getAccountsForKey(publicKey: publicKey).flatMap { result in
+            if (result.success()) {
+                if (result.data != nil && result.data!.accounts.isNotEmpty()) {
+                    return self.createAccountSuccess(publicKey: publicKey)
+                } else {
+                    /**
+                     * If no accounts are returned, we can safely assume that
+                     * the account was not created and it was a legit error.
+                     */
+                    self.unusedAccountInLimbo.clear()
+                    return Single.just(CreateAccountResult.onCreateAccountGenericError)
+                }
+            } else {
+                /**
+                 * If we cannot verify whether the current session public key has any
+                 * accounts, we will display an error to the user. The user must get a
+                 * successful response from accountForPublicKeyRequest before continuing.
+                 */
+                self.unusedAccountInLimbo.put(value: true)
+                return Single.just(CreateAccountResult.onCreateAccountLimbo)
             }
         }
     }

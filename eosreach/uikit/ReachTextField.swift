@@ -16,23 +16,40 @@ class ReachTextField : TextField {
 
 class ReachUsernameTextField : ReachTextField, UITextFieldDelegate {
     
+    private weak var userDelegate: UITextFieldDelegate?
+    
     let usernameFilter = UsernameFilter()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        delegate = self
+        super.delegate = self
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return usernameFilter.check(string: string, textField: textField)
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.delegate?.textFieldDidEndEditing?(self)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        self.delegate?.textFieldDidEndEditing?(self, reason: reason)
+    }
+    
+    override var delegate: UITextFieldDelegate? {
+        get { return userDelegate }
+        set { userDelegate = newValue }
+    }
 }
 
 class ReachBalanceTextField : ReachTextField, UITextFieldDelegate {
     
+    private weak var userDelegate: UITextFieldDelegate?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        delegate = self
+        super.delegate = self
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -41,6 +58,15 @@ class ReachBalanceTextField : ReachTextField, UITextFieldDelegate {
             return Double(res) != nil
         }
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.delegate?.textFieldDidEndEditing?(self)
+    }
+    
+    override var delegate: UITextFieldDelegate? {
+        get { return userDelegate }
+        set { userDelegate = newValue }
     }
 }
 

@@ -9,10 +9,13 @@ enum CreateAccountResult: MxResult {
     case onAccountNameValidationNumberStartFailed
     case onAccountNameValidationPassed
     case onCreateAccountProgress
-    case onCreateAccountSuccess(accountName: String, privateKey: String)
+    case onCreateAccountSuccess(privateKey: String)
     case onCreateAccountFatalError
+    case onCreateAccountGenericError
     case onCreateAccountUsernameExists
+    case onCreateAccountLimbo
     case onImportKeyProgress
     case onImportKeyError
     case navigateToAccounts(accountName: String)
+    case goToSettings
 }

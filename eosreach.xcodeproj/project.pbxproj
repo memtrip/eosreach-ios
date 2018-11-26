@@ -251,6 +251,7 @@
 		3C91C99721AC6946001398F4 /* UnusedPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99621AC6946001398F4 /* UnusedPublicKey.swift */; };
 		3C91C99921AC69BE001398F4 /* UnusedTransactionIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99821AC69BE001398F4 /* UnusedTransactionIdentifier.swift */; };
 		3C91C99B21AC7460001398F4 /* EosCreateAccountApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99A21AC7460001398F4 /* EosCreateAccountApi.swift */; };
+		3C91C99D21AC88D9001398F4 /* UnusedAccountInLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99C21AC88D9001398F4 /* UnusedAccountInLimbo.swift */; };
 		3C964C3521938C71003663EF /* EosEndpointIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3021938C71003663EF /* EosEndpointIntent.swift */; };
 		3C964C3621938C71003663EF /* EosEndpointViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3121938C71003663EF /* EosEndpointViewState.swift */; };
 		3C964C3721938C71003663EF /* EosEndpointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3221938C71003663EF /* EosEndpointViewController.swift */; };
@@ -669,6 +670,7 @@
 		3C91C99621AC6946001398F4 /* UnusedPublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnusedPublicKey.swift; sourceTree = "<group>"; };
 		3C91C99821AC69BE001398F4 /* UnusedTransactionIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnusedTransactionIdentifier.swift; sourceTree = "<group>"; };
 		3C91C99A21AC7460001398F4 /* EosCreateAccountApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosCreateAccountApi.swift; sourceTree = "<group>"; };
+		3C91C99C21AC88D9001398F4 /* UnusedAccountInLimbo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnusedAccountInLimbo.swift; sourceTree = "<group>"; };
 		3C964C3021938C71003663EF /* EosEndpointIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EosEndpointIntent.swift; sourceTree = "<group>"; };
 		3C964C3121938C71003663EF /* EosEndpointViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EosEndpointViewState.swift; sourceTree = "<group>"; };
 		3C964C3221938C71003663EF /* EosEndpointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EosEndpointViewController.swift; sourceTree = "<group>"; };
@@ -1334,6 +1336,7 @@
 				3C964C50219459D3003663EF /* EncryptedKeyPairData.swift */,
 				3C91C99621AC6946001398F4 /* UnusedPublicKey.swift */,
 				3C91C99821AC69BE001398F4 /* UnusedTransactionIdentifier.swift */,
+				3C91C99C21AC88D9001398F4 /* UnusedAccountInLimbo.swift */,
 			);
 			path = userDefaults;
 			sourceTree = "<group>";
@@ -2109,6 +2112,7 @@
 				3C7F0DEE2194A17000E72DD1 /* RegisteredBlockProducersIntent.swift in Sources */,
 				3C07009D21A72264008F63D2 /* TransactionReceiptBundle.swift in Sources */,
 				3C9BFB9C219B3AAE00589936 /* EosAccountRequestImpl.swift in Sources */,
+				3C91C99D21AC88D9001398F4 /* UnusedAccountInLimbo.swift in Sources */,
 				3C964C3E2194422D003663EF /* AccountListSelection.swift in Sources */,
 				3CC9E70421A5A4110050BA57 /* CastProxyVoteIntent.swift in Sources */,
 				3CEF33B921A507E700716AA2 /* CreateAccountViewController.swift in Sources */,
