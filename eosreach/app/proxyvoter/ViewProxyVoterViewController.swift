@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class ViewProxyVoterViewController
 : MxViewController<ViewProxyVoterIntent, ViewProxyVoterResult, ViewProxyVoterViewState, ViewProxyVoterViewModel> {
@@ -67,6 +68,11 @@ class ViewProxyVoterViewController
             proxyVoterBlurb.text = proxyVoterDetails.slogan
             summaryTextView.text = proxyVoterDetails.philosophy
             toolBar.title = proxyVoterDetails.name
+            
+            if let url = URL(string: proxyVoterDetails.logo256) {
+                voterImageView.kf.setImage(with: url)
+                voterImageView.contentMode = .scaleAspectFit
+            }
         case .onInvalidUrl(let url):
             showOKDialog(message: R.string.proxyStrings.view_proxy_voter_invalid_url(url))
         case .navigateToUrl(let url):

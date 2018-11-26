@@ -2644,6 +2644,7 @@
                         <outlet property="codeOfConductButton" destination="KuX-jV-trJ" id="6N5-pd-Oms"/>
                         <outlet property="emailButton" destination="5Pw-IE-mpB" id="lGb-z5-cJy"/>
                         <outlet property="errorView" destination="Xkm-C5-AMd" id="vuY-F7-Bap"/>
+                        <outlet property="logoImageView" destination="i0H-W5-OVK" id="Bc5-Wh-eCb"/>
                         <outlet property="noProducers" destination="1oS-ND-opr" id="Zwl-ds-qsi"/>
                         <outlet property="ownerAccountButton" destination="aZV-8g-I7P" id="aaR-YM-nFd"/>
                         <outlet property="ownershipDisclosureButton" destination="eml-s1-OJ0" id="x89-gf-iVE"/>

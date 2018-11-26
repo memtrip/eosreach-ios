@@ -18,6 +18,7 @@ class ViewBlockProducerViewController
     @IBOutlet weak var errorView: ErrorView!
     @IBOutlet weak var websiteButton: UIButton!
     @IBOutlet weak var emailButton: UIButton!
+    @IBOutlet weak var logoImageView: UIImageView!
     
     var blockProducerDetails: BlockProducerDetails?
     
@@ -94,7 +95,12 @@ class ViewBlockProducerViewController
             toolBar.title = blockProducerDetails.candidateName
             websiteButton.setTitle(blockProducerDetails.website, for: .normal)
             emailButton.setTitle(blockProducerDetails.email, for: .normal)
-            // TODO: populate image
+            if let logo256 = blockProducerDetails.logo256 {
+                if let url = URL(string: logo256) {
+                    logoImageView.kf.setImage(with: url)
+                    logoImageView.contentMode = .scaleAspectFit
+                }
+            }
         case .sendEmail(let email):
             if let url = URL(string: "mailto:\(email)") {
                 UIApplication.shared.open(url)

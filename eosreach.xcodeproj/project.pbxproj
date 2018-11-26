@@ -1266,8 +1266,6 @@
 				3C9BFB9D219B510B00589936 /* account */,
 				3C9BFB9E219B511A00589936 /* blockproducer */,
 				3C7F0DCF2194A07500E72DD1 /* explore */,
-				3C9BFBA0219B514F00589936 /* issue */,
-				3C9BFBA1219B515800589936 /* manage */,
 				3C9BFBA3219B516E00589936 /* proxyvoter */,
 				3C14FA4021A0A24E00B8255F /* price */,
 				3C340FC0219360C60017BEF9 /* settings */,
@@ -1583,20 +1581,6 @@
 				3C1A972621A3DABD00C30A75 /* BlockProducerStrings.strings */,
 			);
 			path = blockproducer;
-			sourceTree = "<group>";
-		};
-		3C9BFBA0219B514F00589936 /* issue */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = issue;
-			sourceTree = "<group>";
-		};
-		3C9BFBA1219B515800589936 /* manage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = manage;
 			sourceTree = "<group>";
 		};
 		3C9BFBA2219B516400589936 /* formatter */ = {
