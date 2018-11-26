@@ -8,6 +8,7 @@ class ActiveBlockProducersCell : SimpleTableViewCell<BlockProducerDetails> {
     @IBOutlet weak var blockProducerNameLabel: UILabel!
     @IBOutlet weak var ownerLabel: UILabel!
     @IBOutlet weak var informationView: UIImageView!
+    @IBOutlet weak var externalImageView: UIImageView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

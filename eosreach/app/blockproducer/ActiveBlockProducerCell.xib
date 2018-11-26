@@ -10,7 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
+            <connections>
+                <outlet property="externalImageView" destination="alc-be-ovw" id="DcJ-6k-XQI"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="x9h-Th-1bc" customClass="ActiveBlockProducersCell" customModule="eosreach" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
@@ -23,13 +27,13 @@
                         <rect key="frame" x="8" y="8" width="359" height="58"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_block_producer_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIJ-wx-dFk">
-                                <rect key="frame" x="58" y="8" width="243" height="20.5"/>
+                                <rect key="frame" x="58" y="8" width="253" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="_owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hD-vF-zxj">
-                                <rect key="frame" x="58" y="28.5" width="243" height="21"/>
+                                <rect key="frame" x="58" y="29" width="253" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" name="colorSecondary"/>
                                 <nil key="highlightedColor"/>
@@ -41,25 +45,25 @@
                                     <constraint firstAttribute="width" secondItem="cHb-vl-30m" secondAttribute="height" multiplier="1:1" id="zOP-Im-Gth"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="alc-be-ovw">
-                                <rect key="frame" x="309" y="8" width="42" height="42"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_external_large" translatesAutoresizingMaskIntoConstraints="NO" id="alc-be-ovw">
+                                <rect key="frame" x="319" y="13" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="alc-be-ovw" secondAttribute="height" multiplier="1:1" id="D29-hI-J46"/>
+                                    <constraint firstAttribute="height" constant="32" id="nvf-ma-tAg"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="cHb-vl-30m" firstAttribute="leading" secondItem="MjN-0n-rl7" secondAttribute="leading" constant="8" id="4Pz-jw-1Fn"/>
-                            <constraint firstAttribute="bottom" secondItem="cHb-vl-30m" secondAttribute="bottom" constant="8" id="6pb-JZ-5ra"/>
                             <constraint firstItem="gIJ-wx-dFk" firstAttribute="top" secondItem="MjN-0n-rl7" secondAttribute="top" constant="8" id="8zG-5C-w4c"/>
                             <constraint firstItem="0hD-vF-zxj" firstAttribute="top" secondItem="gIJ-wx-dFk" secondAttribute="bottom" id="Ko6-w5-Q6C"/>
                             <constraint firstItem="0hD-vF-zxj" firstAttribute="leading" secondItem="cHb-vl-30m" secondAttribute="trailing" constant="8" id="LFZ-fX-FXw"/>
+                            <constraint firstAttribute="bottom" secondItem="0hD-vF-zxj" secondAttribute="bottom" constant="8" id="OrV-5W-dhI"/>
                             <constraint firstItem="alc-be-ovw" firstAttribute="leading" secondItem="gIJ-wx-dFk" secondAttribute="trailing" constant="8" id="Ozh-CD-xpm"/>
-                            <constraint firstItem="cHb-vl-30m" firstAttribute="top" secondItem="MjN-0n-rl7" secondAttribute="top" constant="8" id="VqI-go-crL"/>
-                            <constraint firstItem="alc-be-ovw" firstAttribute="top" secondItem="MjN-0n-rl7" secondAttribute="top" constant="8" id="YMC-0Z-Hkv"/>
-                            <constraint firstAttribute="bottom" secondItem="alc-be-ovw" secondAttribute="bottom" constant="8" id="aNN-Ra-eq5"/>
                             <constraint firstItem="gIJ-wx-dFk" firstAttribute="leading" secondItem="cHb-vl-30m" secondAttribute="trailing" constant="8" id="buh-PC-Jz5"/>
+                            <constraint firstItem="cHb-vl-30m" firstAttribute="centerY" secondItem="MjN-0n-rl7" secondAttribute="centerY" id="iUm-Of-YoN"/>
                             <constraint firstAttribute="trailing" secondItem="alc-be-ovw" secondAttribute="trailing" constant="8" id="nrV-4X-oHS"/>
+                            <constraint firstItem="alc-be-ovw" firstAttribute="centerY" secondItem="MjN-0n-rl7" secondAttribute="centerY" id="pDz-ES-EZP"/>
                             <constraint firstItem="alc-be-ovw" firstAttribute="leading" secondItem="0hD-vF-zxj" secondAttribute="trailing" constant="8" id="sbO-rB-e7r"/>
                         </constraints>
                     </view>
@@ -87,6 +91,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ic_external_large" width="80" height="80"/>
         <namedColor name="colorSecondary">
             <color red="0.36862745098039218" green="0.9882352941176471" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

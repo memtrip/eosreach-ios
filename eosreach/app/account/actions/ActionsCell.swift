@@ -24,9 +24,11 @@ class ActionsCell : SimpleTableViewCell<AccountAction> {
         fiatLabel.text = item.currencyPairValue
         
         if (item.transferIncoming) {
-            // incoming icon
+            iconImageView.image = R.image.account_actions_incoming()
         } else {
-            // outgoing icon
+            iconImageView.image = R.image.account_actions_outgoing()
         }
+        
+        iconImageView.contentMode = .scaleAspectFit
     }
 }
