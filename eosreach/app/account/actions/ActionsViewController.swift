@@ -37,13 +37,18 @@ class ActionsViewController: MxViewController<ActionsIntent, ActionsResult, Acti
         return Observable.merge(
             Observable.just(ActionsIntent.start(contractAccountBalance: self.actionsBundle.contractAccountBalance)),
             errorView.retryClick().map {
-                return ActionsIntent.retry(contractAccountBalance: self.actionsBundle.contractAccountBalance)
+                ActionsIntent.retry(contractAccountBalance: self.actionsBundle.contractAccountBalance)
             },
             transferButton.rx.tap.map {
                 ActionsIntent.navigateToTransfer(contractAccountBalance: self.actionsBundle.contractAccountBalance)
             },
             self.dataTableView().selected.map { accountAction in
-                return ActionsIntent.navigateToViewAction(accountAction: accountAction)
+                ActionsIntent.navigateToViewAction(accountAction: accountAction)
+            },
+            self.dataTableView().atBottom.map { accountAction in
+                ActionsIntent.loadMoreActions(
+                    contractAccountBalance: self.actionsBundle.contractAccountBalance,
+                    lastItem: accountAction)
             }
         )
     }
@@ -75,7 +80,11 @@ class ActionsViewController: MxViewController<ActionsIntent, ActionsResult, Acti
         case .onLoadMoreProgress:
             break // todo
         case .onLoadMoreSuccess(let accountActionList):
-            dataTableView().populate(data: accountActionList.actions)
+            if (accountActionList.actions.count == 0) {
+                dataTableView().atEnd = true
+            } else {
+                dataTableView().populate(data: accountActionList.actions)
+            }
         case .onLoadMoreError:
             break // todo
         case .navigateToViewAction(let accountAction):

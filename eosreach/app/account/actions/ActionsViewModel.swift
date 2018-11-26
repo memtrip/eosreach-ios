@@ -6,7 +6,7 @@ class ActionsViewModel: MxViewModel<ActionsIntent, ActionsResult, ActionsViewSta
     
     private let accountActionsRequest = AccountActionsRequestImpl()
     
-    private let ITEM_OFFSET = -500
+    private let ITEM_OFFSET = -1000
     private let RECURSIVE_LIMIT = 10
     
     override func dispatcher(intent: ActionsIntent) -> Observable<ActionsResult> {
@@ -113,11 +113,11 @@ class ActionsViewModel: MxViewModel<ActionsIntent, ActionsResult, ActionsViewSta
                                     recursivePosition: recursivePosition + 1
                                 )
                             } else {
-                                return Single.just(ActionsResult.onLoadMoreSuccess(accountActionList: results))
+                                // end
+                                return Single.just(ActionsResult.onLoadMoreSuccess(accountActionList: AccountActionList(actions: [])))
                             }
                         } else {
-                            // end
-                            return Single.just(ActionsResult.onLoadMoreSuccess(accountActionList: AccountActionList(actions: [])))
+                            return Single.just(ActionsResult.onLoadMoreSuccess(accountActionList: results))
                         }
                     } else {
                         return Single.just(ActionsResult.onLoadMoreError)

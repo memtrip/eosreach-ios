@@ -37,7 +37,7 @@ class AccountActionsRequestImpl : AccountActionsRequest {
             return historicAccountAction.action_trace.trx_id
         }
 
-        if (historicActions.count > 0) {
+        if (historicActions.isNotEmpty()) {
             return Result(
                 data: AccountActionList(
                     actions: Array(try historicActions.reversed().map { historicAction in
@@ -49,7 +49,11 @@ class AccountActionsRequestImpl : AccountActionsRequest {
                 )
             )
         } else {
-            return Result(data: AccountActionList(actions: []))
+            if (historicAccountActionParent.actions.isNotEmpty()) {
+                return Result(data: AccountActionList(actions: [],  noResultsNext: historicAccountActionParent.actions.last!.account_action_seq))
+            } else {
+                return Result(data: AccountActionList(actions: []))
+            }
         }
     }
 

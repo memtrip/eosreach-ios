@@ -47,7 +47,7 @@
                                 <rect key="frame" x="0.0" y="146" width="375" height="30"/>
                                 <state key="normal" title="_view_private_keys"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlO-wi-oBO" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlO-wi-oBO" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="177" width="375" height="30"/>
                                 <state key="normal" title="_confirmed_transactions"/>
                             </button>
@@ -80,7 +80,7 @@
                                     <constraint firstAttribute="height" constant="1" id="aY0-Uz-IbP"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpw-f8-sAU">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpw-f8-sAU">
                                 <rect key="frame" x="0.0" y="207" width="375" height="1"/>
                                 <color key="backgroundColor" name="colorBorderTransparent"/>
                                 <constraints>
