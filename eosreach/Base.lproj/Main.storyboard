@@ -522,8 +522,16 @@
                                 <rect key="frame" x="16" y="529" width="343" height="30"/>
                                 <state key="normal" title="_create_account"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_eosio" translatesAutoresizingMaskIntoConstraints="NO" id="3EI-GU-69P">
+                                <rect key="frame" x="101.5" y="84" width="172" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="RgQ-0d-0vx"/>
+                                    <constraint firstAttribute="width" secondItem="3EI-GU-69P" secondAttribute="height" multiplier="1:1" id="ntr-03-5LK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="3EI-GU-69P" firstAttribute="top" secondItem="T0L-8w-pfP" secondAttribute="top" constant="64" id="0IX-bq-ZAb"/>
                             <constraint firstItem="Qnb-j5-fmx" firstAttribute="leading" secondItem="T0L-8w-pfP" secondAttribute="leading" constant="16" id="3ch-6X-2MR"/>
                             <constraint firstItem="ies-v4-gpP" firstAttribute="leading" secondItem="T0L-8w-pfP" secondAttribute="leading" constant="16" id="3rZ-Ov-uiw"/>
                             <constraint firstItem="T0L-8w-pfP" firstAttribute="trailing" secondItem="yHd-vN-Imy" secondAttribute="trailing" constant="16" id="6o5-uI-9Bf"/>
@@ -533,6 +541,7 @@
                             <constraint firstItem="T0L-8w-pfP" firstAttribute="trailing" secondItem="Qnb-j5-fmx" secondAttribute="trailing" constant="16" id="bKM-Qa-8u9"/>
                             <constraint firstItem="ies-v4-gpP" firstAttribute="top" secondItem="yHd-vN-Imy" secondAttribute="bottom" constant="16" id="gtn-2Z-naI"/>
                             <constraint firstItem="yHd-vN-Imy" firstAttribute="leading" secondItem="T0L-8w-pfP" secondAttribute="leading" constant="16" id="n7h-PX-uif"/>
+                            <constraint firstItem="3EI-GU-69P" firstAttribute="centerX" secondItem="T0L-8w-pfP" secondAttribute="centerX" id="vZo-yH-ZbX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T0L-8w-pfP"/>
                     </view>
@@ -3349,6 +3358,7 @@
         <image name="account_navigation_create_account" width="80" height="80"/>
         <image name="account_navigation_import_key" width="80" height="80"/>
         <image name="account_navigation_settings" width="80" height="80"/>
+        <image name="splash_eosio" width="348" height="348"/>
         <namedColor name="colorAccent">
             <color red="1" green="0.45490196078431372" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

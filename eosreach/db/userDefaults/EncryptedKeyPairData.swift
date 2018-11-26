@@ -17,7 +17,11 @@ class EncryptedKeyPairData {
     }
 
     func getAll() -> [String:Data] {
-        return defaults.dictionary(forKey: key) as! [String : Data]
+        if let all = defaults.dictionary(forKey: key) {
+            return all as! [String : Data]
+        } else {
+            return [:]
+        }
     }
 
     func getKeys() -> [String] {
