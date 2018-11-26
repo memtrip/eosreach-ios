@@ -3120,12 +3120,16 @@
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBz-DV-xvh">
-                                        <rect key="frame" x="16" y="76.5" width="343" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uoN-a8-OGg" customClass="ReachTextView" customModule="eosreach" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="76.5" width="343" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="z48-Db-OCf"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is7-eT-owu" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
                                         <rect key="frame" x="16" y="553" width="343" height="30"/>
                                         <state key="normal" title="_done"/>
@@ -3135,16 +3139,16 @@
                                     </activityIndicatorView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="uBz-DV-xvh" secondAttribute="trailing" constant="16" id="9Hv-Ki-JOq"/>
-                                    <constraint firstItem="uBz-DV-xvh" firstAttribute="leading" secondItem="h4z-KI-Mbd" secondAttribute="leading" constant="16" id="CsD-PH-cxa"/>
-                                    <constraint firstItem="uBz-DV-xvh" firstAttribute="top" secondItem="pI2-g3-qGc" secondAttribute="bottom" constant="8" id="Ea7-Xq-Dg7"/>
+                                    <constraint firstItem="uoN-a8-OGg" firstAttribute="top" secondItem="pI2-g3-qGc" secondAttribute="bottom" constant="8" id="Eiz-sV-Fot"/>
                                     <constraint firstItem="Is7-eT-owu" firstAttribute="leading" secondItem="h4z-KI-Mbd" secondAttribute="leading" constant="16" id="Obq-1R-aDJ"/>
                                     <constraint firstAttribute="trailing" secondItem="pI2-g3-qGc" secondAttribute="trailing" constant="16" id="RRt-tO-Cfj"/>
                                     <constraint firstItem="Vhd-sO-s76" firstAttribute="top" secondItem="h4z-KI-Mbd" secondAttribute="top" constant="16" id="UVl-ta-rMu"/>
+                                    <constraint firstItem="uoN-a8-OGg" firstAttribute="leading" secondItem="h4z-KI-Mbd" secondAttribute="leading" constant="16" id="XYr-FE-d7t"/>
                                     <constraint firstItem="Vhd-sO-s76" firstAttribute="leading" secondItem="h4z-KI-Mbd" secondAttribute="leading" constant="16" id="bdl-eM-b5K"/>
                                     <constraint firstAttribute="bottom" secondItem="Is7-eT-owu" secondAttribute="bottom" constant="16" id="g9o-og-r3p"/>
                                     <constraint firstItem="pI2-g3-qGc" firstAttribute="leading" secondItem="h4z-KI-Mbd" secondAttribute="leading" constant="16" id="hkL-7i-ah3"/>
                                     <constraint firstAttribute="trailing" secondItem="Is7-eT-owu" secondAttribute="trailing" constant="16" id="iK3-F3-WWb"/>
+                                    <constraint firstAttribute="trailing" secondItem="uoN-a8-OGg" secondAttribute="trailing" constant="16" id="juO-MA-PGB"/>
                                     <constraint firstItem="OC5-fb-Qrz" firstAttribute="centerY" secondItem="Is7-eT-owu" secondAttribute="centerY" id="mfU-PC-i1i"/>
                                     <constraint firstAttribute="trailing" secondItem="Vhd-sO-s76" secondAttribute="trailing" constant="16" id="pGW-pR-vSX"/>
                                     <constraint firstItem="pI2-g3-qGc" firstAttribute="top" secondItem="Vhd-sO-s76" secondAttribute="bottom" constant="8" id="rTi-Po-pY2"/>
@@ -3154,7 +3158,7 @@
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-Uw-ZdL" userLabel="ErrorView" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="16" y="84" width="343" height="567"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xw6-VK-7Go" userLabel="Form">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xw6-VK-7Go" userLabel="Form">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gex-w3-hfG" customClass="ReachUsernameTextField" customModule="eosreach" customModuleProvider="target">
@@ -3234,7 +3238,7 @@
                         <outlet property="doneCtaActivityIndicator" destination="OC5-fb-Qrz" id="2vl-0a-xaO"/>
                         <outlet property="doneCtaButton" destination="Is7-eT-owu" id="8YK-ZZ-PHo"/>
                         <outlet property="doneInstructionLabel" destination="pI2-g3-qGc" id="Tjt-Jq-jum"/>
-                        <outlet property="donePrivateKey" destination="uBz-DV-xvh" id="9ql-wG-f1k"/>
+                        <outlet property="donePrivateKeyTextView" destination="uoN-a8-OGg" id="yFY-8n-WWB"/>
                         <outlet property="doneViewGroup" destination="h4z-KI-Mbd" id="I21-CM-mRN"/>
                         <outlet property="formAccountTextField" destination="gex-w3-hfG" id="hzq-8r-xrH"/>
                         <outlet property="formCtaActivityIndicator" destination="eOP-r1-llB" id="R9Z-U2-Ge6"/>
@@ -3383,7 +3387,7 @@
         <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="p9U-mn-UT8"/>
+        <segue reference="leo-zV-II3"/>
         <segue reference="1Wt-0h-Agf"/>
         <segue reference="cDM-mx-vQS"/>
         <segue reference="9w4-95-M8t"/>

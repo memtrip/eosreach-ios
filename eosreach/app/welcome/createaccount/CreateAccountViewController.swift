@@ -19,9 +19,9 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     @IBOutlet weak var doneViewGroup: UIView!
     @IBOutlet weak var doneCreateAccountLabel: UILabel!
     @IBOutlet weak var doneInstructionLabel: UILabel!
-    @IBOutlet weak var donePrivateKey: UITextField!
     @IBOutlet weak var doneCtaButton: ReachPrimaryButton!
-    @IBOutlet weak var doneCtaActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var doneCtaActivityIndicator: ReachActivityIndicator!
+    @IBOutlet weak var donePrivateKeyTextView: ReachTextView!
     
     private let billing = BillingImpl(storeKitHandler: StoreKitHandler())
     private var skProduct: SKProduct?
@@ -50,8 +50,8 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
                 return CreateAccountIntent.onSKProductSuccess(skProduct: skProduct)
             },
             Observable.merge(
-                formAccountTextField.rx.controlEvent(.editingDidEndOnExit).asObservable(),
-                formCtaButton.rx.tap.asObservable()
+                formCtaButton.rx.tap.asObservable(),
+                formAccountTextField.rx.controlEvent(.editingDidEndOnExit).asObservable()
             ).map {
                 CreateAccountIntent.createAccount(accountName: self.formAccountTextField.text!)
             }
@@ -77,15 +77,34 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
         case .onAccountNameValidationPassed:
             billing.pay(product: skProduct!)
         case .onCreateAccountProgress:
-            print("")
-        case .onCreateAccountSuccess(let transactionIdentifier):
-            print("")
+            formCtaActivityIndicator.start()
+            formCtaButton.gone()
+        case .onCreateAccountSuccess(let accountName, let privateKey):
+            formViewGroup.gone()
+            doneViewGroup.visible()
+            donePrivateKeyTextView.text = privateKey
+        case .onCreateAccountFatalError:
+            formCtaActivityIndicator.stop()
+            formCtaButton.visible()
+        case .onCreateAccountUsernameExists:
+            formCtaActivityIndicator.stop()
+            formCtaButton.visible()
         case .onImportKeyProgress:
-            print("")
+            doneCtaActivityIndicator.start()
+            doneCtaButton.gone()
         case .onImportKeyError:
-            print("")
-        case .navigateToAccounts:
-            print("")
+            doneCtaActivityIndicator.stop()
+            doneCtaButton.visible()
+        case .navigateToAccounts(let accountName):
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.createAccountViewController.createAccountToAccount.identifier,
+                model: AccountBundle(
+                    accountName: accountName,
+                    readOnly: false,
+                    accountPage: AccountPage.balances
+                )
+            ))
+            performSegue(withIdentifier: R.segue.createAccountViewController.createAccountToAccount, sender: self)
         case .onAccountNameValidationFailed:
             showOKDialog(message: R.string.welcomeStrings.create_account_username_format_validation_error())
         case .onAccountNameValidationNumberStartFailed:
@@ -105,7 +124,8 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     }
     
     func purchasing() {
-        print("purchasing")
+        formCtaActivityIndicator.start()
+        formCtaButton.gone()
     }
     
     func success(transactionIdentifier: String) {
@@ -117,7 +137,7 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     }
     
     func deferred() {
-        print("deferred")
+        print("fatal error?")
     }
     
     //

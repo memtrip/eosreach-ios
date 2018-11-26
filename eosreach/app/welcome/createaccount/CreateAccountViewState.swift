@@ -9,8 +9,10 @@ enum CreateAccountViewState: MxViewState {
     case onAccountNameValidationNumberStartFailed
     case onAccountNameValidationPassed
     case onCreateAccountProgress
-    case onCreateAccountSuccess(transactionIdentifier: String)
+    case onCreateAccountSuccess(accountName: String, privateKey: String)
+    case onCreateAccountFatalError
+    case onCreateAccountUsernameExists
     case onImportKeyProgress
     case onImportKeyError
-    case navigateToAccounts
+    case navigateToAccounts(accountName: String)
 }

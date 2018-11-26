@@ -4,7 +4,7 @@ import RxSwift
 protocol EosCreateAccountRequest {
 
     func createAccount(
-        purchaseToken: String,
+        transactionIdentifier: String,
         accountName: String,
         publicKey: String
     ) -> Single<Result<CreateAccountReceipt, EosCreateAccountError>>

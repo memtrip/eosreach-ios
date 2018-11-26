@@ -248,6 +248,9 @@
 		3C8C6DC42192D86F00FC1A0D /* EntryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6DC32192D86F00FC1A0D /* EntryResult.swift */; };
 		3C8C6DC62192D8F500FC1A0D /* EntryViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6DC52192D8F500FC1A0D /* EntryViewState.swift */; };
 		3C919C8F21A5FA15006B2FB2 /* AccountDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C919C8E21A5FA15006B2FB2 /* AccountDelegate.swift */; };
+		3C91C99721AC6946001398F4 /* UnusedPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99621AC6946001398F4 /* UnusedPublicKey.swift */; };
+		3C91C99921AC69BE001398F4 /* UnusedTransactionIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99821AC69BE001398F4 /* UnusedTransactionIdentifier.swift */; };
+		3C91C99B21AC7460001398F4 /* EosCreateAccountApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99A21AC7460001398F4 /* EosCreateAccountApi.swift */; };
 		3C964C3521938C71003663EF /* EosEndpointIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3021938C71003663EF /* EosEndpointIntent.swift */; };
 		3C964C3621938C71003663EF /* EosEndpointViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3121938C71003663EF /* EosEndpointViewState.swift */; };
 		3C964C3721938C71003663EF /* EosEndpointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3221938C71003663EF /* EosEndpointViewController.swift */; };
@@ -663,6 +666,9 @@
 		3C8C6DC32192D86F00FC1A0D /* EntryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryResult.swift; sourceTree = "<group>"; };
 		3C8C6DC52192D8F500FC1A0D /* EntryViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewState.swift; sourceTree = "<group>"; };
 		3C919C8E21A5FA15006B2FB2 /* AccountDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDelegate.swift; sourceTree = "<group>"; };
+		3C91C99621AC6946001398F4 /* UnusedPublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnusedPublicKey.swift; sourceTree = "<group>"; };
+		3C91C99821AC69BE001398F4 /* UnusedTransactionIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnusedTransactionIdentifier.swift; sourceTree = "<group>"; };
+		3C91C99A21AC7460001398F4 /* EosCreateAccountApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosCreateAccountApi.swift; sourceTree = "<group>"; };
 		3C964C3021938C71003663EF /* EosEndpointIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EosEndpointIntent.swift; sourceTree = "<group>"; };
 		3C964C3121938C71003663EF /* EosEndpointViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EosEndpointViewState.swift; sourceTree = "<group>"; };
 		3C964C3221938C71003663EF /* EosEndpointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EosEndpointViewController.swift; sourceTree = "<group>"; };
@@ -1326,6 +1332,8 @@
 				3C964C49219444DB003663EF /* RsaEncryptionVerified.swift */,
 				3C964C4B2194469B003663EF /* PurgeUserDefaults.swift */,
 				3C964C50219459D3003663EF /* EncryptedKeyPairData.swift */,
+				3C91C99621AC6946001398F4 /* UnusedPublicKey.swift */,
+				3C91C99821AC69BE001398F4 /* UnusedTransactionIdentifier.swift */,
 			);
 			path = userDefaults;
 			sourceTree = "<group>";
@@ -1460,9 +1468,10 @@
 		3C9BFB7D219B35F500589936 /* eoscreateaccount */ = {
 			isa = PBXGroup;
 			children = (
-				3CC9A3A6219DB23F0002A25F /* CreateAccountReceipt.swift */,
 				3CC9A3A8219DB2640002A25F /* EosCreateAccountRequest.swift */,
 				3CC9A3AA219DB2BA0002A25F /* EosCreateAccountRequestImpl.swift */,
+				3C91C99A21AC7460001398F4 /* EosCreateAccountApi.swift */,
+				3CC9A3A6219DB23F0002A25F /* CreateAccountReceipt.swift */,
 			);
 			path = eoscreateaccount;
 			sourceTree = "<group>";
@@ -2116,6 +2125,7 @@
 				3CEF33BD21A507E700716AA2 /* CreateAccountResult.swift in Sources */,
 				3C8C6D942192D50700FC1A0D /* MxResult.swift in Sources */,
 				3CC9E71121A5A4180050BA57 /* CastProducersVoteIntent.swift in Sources */,
+				3C91C99921AC69BE001398F4 /* UnusedTransactionIdentifier.swift in Sources */,
 				3C964C48219444A2003663EF /* EosPriceValue.swift in Sources */,
 				3CC9E71D21A5BE980050BA57 /* ProxyVoterListViewModel.swift in Sources */,
 				3C0ADD99219F3AEB0026649F /* GetTransactionLogs.swift in Sources */,
@@ -2173,6 +2183,7 @@
 				3CB1D70621A8296C00C87EC9 /* ViewActionViewModel.swift in Sources */,
 				3C9BFBC2219C21CD00589936 /* AccountActionList.swift in Sources */,
 				3CAD34752192F77C000F304A /* EntryViewModel.swift in Sources */,
+				3C91C99721AC6946001398F4 /* UnusedPublicKey.swift in Sources */,
 				3C7F0DDA2194A0D400E72DD1 /* SearchIntent.swift in Sources */,
 				3C592FCA219D6B0700D7C9B9 /* VoteReceipt.swift in Sources */,
 				3C8BD23321A6C01300ACFA70 /* ManageBandwidthViewController.swift in Sources */,
@@ -2288,6 +2299,7 @@
 				3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */,
 				3CB1D71721A85B5100C87EC9 /* TransferViewModel.swift in Sources */,
 				3C8BD24721A6C2FB00ACFA70 /* DelegateBandwidthViewModel.swift in Sources */,
+				3C91C99B21AC7460001398F4 /* EosCreateAccountApi.swift in Sources */,
 				3C0A86AA21ABFC6900F48302 /* KeyPairCell.swift in Sources */,
 				3C0C04B321A8877400F5F7A7 /* ReachNetCpuView.swift in Sources */,
 				3C9BFB8A219B366700589936 /* ContractAccountBalance.swift in Sources */,
