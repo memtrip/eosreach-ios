@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFd-L6-NiW" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFd-L6-NiW" customClass="ReachBorderView" customModule="eosreach" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="359" height="51"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_proxy_name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R79-Tl-iuN">
@@ -41,26 +41,27 @@
                                     <constraint firstAttribute="height" constant="36" id="qWf-MB-ajT"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SW0-bg-dVV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAs-vy-fGO">
                                 <rect key="frame" x="319" y="9.5" width="32" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="SW0-bg-dVV" secondAttribute="height" multiplier="1:1" id="Kgz-8W-cgI"/>
-                                    <constraint firstAttribute="height" constant="32" id="NaY-8R-dcJ"/>
+                                    <constraint firstAttribute="width" secondItem="XAs-vy-fGO" secondAttribute="height" multiplier="1:1" id="WXJ-0g-Bqu"/>
+                                    <constraint firstAttribute="height" constant="32" id="j3u-Ra-fAv"/>
                                 </constraints>
-                            </imageView>
+                                <state key="normal" title="Button" image="ic_external_large"/>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="SW0-bg-dVV" secondAttribute="trailing" constant="8" id="9ec-By-lND"/>
+                            <constraint firstItem="XAs-vy-fGO" firstAttribute="centerY" secondItem="eFd-L6-NiW" secondAttribute="centerY" id="AHP-xf-oXf"/>
                             <constraint firstItem="5nq-0W-GRm" firstAttribute="top" secondItem="eFd-L6-NiW" secondAttribute="top" constant="8" id="BbA-6A-zSd"/>
                             <constraint firstItem="R79-Tl-iuN" firstAttribute="top" secondItem="eFd-L6-NiW" secondAttribute="top" constant="8" id="C0G-tn-EeX"/>
+                            <constraint firstItem="XAs-vy-fGO" firstAttribute="leading" secondItem="iPo-du-DYa" secondAttribute="trailing" constant="8" id="ELc-OI-uhi"/>
+                            <constraint firstItem="XAs-vy-fGO" firstAttribute="leading" secondItem="R79-Tl-iuN" secondAttribute="trailing" constant="8" id="Olg-qr-KUK"/>
                             <constraint firstItem="R79-Tl-iuN" firstAttribute="leading" secondItem="5nq-0W-GRm" secondAttribute="trailing" constant="8" id="RwO-ZQ-3GJ"/>
                             <constraint firstAttribute="bottom" secondItem="iPo-du-DYa" secondAttribute="bottom" constant="8" id="Tir-DV-eRp"/>
-                            <constraint firstItem="SW0-bg-dVV" firstAttribute="centerY" secondItem="eFd-L6-NiW" secondAttribute="centerY" id="YoN-SI-mvM"/>
                             <constraint firstItem="iPo-du-DYa" firstAttribute="leading" secondItem="5nq-0W-GRm" secondAttribute="trailing" constant="8" id="dMR-B2-I1K"/>
                             <constraint firstItem="5nq-0W-GRm" firstAttribute="leading" secondItem="eFd-L6-NiW" secondAttribute="leading" constant="8" id="gNT-zi-U0C"/>
-                            <constraint firstItem="SW0-bg-dVV" firstAttribute="leading" secondItem="R79-Tl-iuN" secondAttribute="trailing" constant="8" id="lvv-Ed-xUJ"/>
+                            <constraint firstAttribute="trailing" secondItem="XAs-vy-fGO" secondAttribute="trailing" constant="8" id="nIW-gA-mYO"/>
                             <constraint firstItem="iPo-du-DYa" firstAttribute="top" secondItem="R79-Tl-iuN" secondAttribute="bottom" id="x2O-g2-sVe"/>
-                            <constraint firstItem="SW0-bg-dVV" firstAttribute="leading" secondItem="iPo-du-DYa" secondAttribute="trailing" constant="8" id="zSL-mB-KYB"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QmA-hY-NzE">
@@ -79,14 +80,15 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="proxyImageView" destination="5nq-0W-GRm" id="9uT-te-LfO"/>
-                <outlet property="proxyInformation" destination="SW0-bg-dVV" id="f9o-Vh-Q0q"/>
                 <outlet property="proxyName" destination="R79-Tl-iuN" id="6HB-fN-FMD"/>
                 <outlet property="proxySlogan" destination="iPo-du-DYa" id="wWn-Jo-ifo"/>
+                <outlet property="viewProxyButton" destination="XAs-vy-fGO" id="RTa-Na-jek"/>
             </connections>
             <point key="canvasLocation" x="-101.59999999999999" y="146.62668665667167"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ic_external_large" width="80" height="80"/>
         <namedColor name="colorSecondary">
             <color red="0.36862745098039218" green="0.9882352941176471" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

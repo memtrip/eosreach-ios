@@ -39,6 +39,9 @@ class ProxyVoterListViewController
             },
             errorView.retryClick().map {
                 ProxyVoterListIntent.retry
+            },
+            dataTableView().extraTapSelected.map { proxyVoterDetails in
+                ProxyVoterListIntent.proxyInformationSelected(proxyVoterDetails: proxyVoterDetails)
             }
         )
     }
@@ -71,7 +74,14 @@ class ProxyVoterListViewController
         case .onMoreSuccess(let proxyVoterDetails):
             dataTableView().populate(data: proxyVoterDetails)
         case .proxyInformationSelected(let proxyVoterDetails):
-            break // TODO
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.proxyVoterListViewController.proxyVoterListToViewProxy.identifier,
+                model: ViewProxyVoterBundle(
+                    accountName: nil,
+                    proxyVoterDetails: proxyVoterDetails
+                )
+            ))
+            performSegue(withIdentifier: R.segue.proxyVoterListViewController.proxyVoterListToViewProxy, sender: self)
         case .proxyVoterSelected(let proxyVoterDetails):
             if let delegate = self.delegate {
                 delegate.onResult(proxyVoterDetails: proxyVoterDetails)

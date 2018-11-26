@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 class ProxyVoterListTableView : SimpleTableView<ProxyVoterDetails, ProxyVoterListCell> {
-    
+        
     override func cellNib() -> UINib {
         return UINib(resource: R.nib.proxyVoterListCell)
     }

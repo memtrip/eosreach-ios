@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import RxCocoa
 
-class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDelegate, UITableViewDataSource {
+class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDelegate, UITableViewDataSource, ExtraTapDelegate {
 
     var data = [T]()
     var atEnd = false
@@ -60,12 +60,14 @@ class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDe
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = createCell(tableView: tableView, indexPath: indexPath)
-
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
+        cell.indexPath = indexPath
         
         if let color = cellBackgroundColor {
             cell.contentView.backgroundColor = color
         }
+        
+        cell.extraTapDelegate = self
         
         return bindCell(
             cell: cell,
@@ -94,6 +96,15 @@ class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDe
         return ControlEvent(events: source)
     }
     
+    var extraTapSelected: ControlEvent<T> {
+        let source = rx.methodInvoked(#selector(SimpleTableView.extraTap(indexPath:))).map { event -> T in
+            let indexPath = event[0] as! IndexPath
+            return self.data[indexPath.row]
+        }
+        
+        return ControlEvent(events: source)
+    }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     }
     
@@ -110,5 +121,8 @@ class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDe
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    @objc dynamic func extraTap(indexPath: IndexPath) {
     }
 }

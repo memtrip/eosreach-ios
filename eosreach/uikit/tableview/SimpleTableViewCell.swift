@@ -2,7 +2,10 @@ import Foundation
 import UIKit
 
 class SimpleTableViewCell<T> : UITableViewCell {
-
+    
+    var extraTapDelegate: ExtraTapDelegate?
+    var indexPath: IndexPath?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         initView()

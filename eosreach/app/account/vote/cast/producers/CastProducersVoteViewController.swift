@@ -41,7 +41,7 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
                 CastProducersVoteIntent.addProducerFromList
             },
             addButton.rx.tap.map {
-                CastProducersVoteIntent.addProducerField
+                CastProducersVoteIntent.addProducerField(producerName: "")
             },
             voteButton.rx.tap.map {
                 CastProducersVoteIntent.vote(

@@ -305,6 +305,7 @@
                         <outlet property="errorView" destination="PFw-Pt-kCe" id="AoN-XU-3KT"/>
                         <outlet property="tableView" destination="KQC-wm-XDg" id="igM-hg-ZQv"/>
                         <outlet property="toolBar" destination="EP7-dH-Ocn" id="5XI-UO-mQ4"/>
+                        <segue destination="aZW-vt-og8" kind="show" identifier="activeBlockProducerListToViewBlockProducer" id="adL-2Q-ujF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXX-H7-vea" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2834,6 +2835,7 @@
                         <outlet property="errorView" destination="xBc-nA-WEl" id="jK0-nM-JiA"/>
                         <outlet property="proxyVoterList" destination="bUy-g6-QrK" id="R3q-fw-ToP"/>
                         <outlet property="toolBar" destination="2MF-DB-g4n" id="IgN-Aj-y20"/>
+                        <segue destination="6oY-0J-ULN" kind="show" identifier="proxyVoterListToViewProxy" id="Jnr-cb-LO9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFE-gu-f1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3337,10 +3339,12 @@
     <inferredMetricsTieBreakers>
         <segue reference="SIU-CS-KrR"/>
         <segue reference="dMo-xo-wz4"/>
+        <segue reference="Jnr-cb-LO9"/>
         <segue reference="Eks-sF-JJe"/>
+        <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="1bl-ap-rcg"/>
+        <segue reference="leo-zV-II3"/>
         <segue reference="1Wt-0h-Agf"/>
         <segue reference="cDM-mx-vQS"/>
         <segue reference="9w4-95-M8t"/>

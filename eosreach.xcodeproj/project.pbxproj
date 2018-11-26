@@ -61,6 +61,7 @@
 		3C0A86AC21ABFC8100F48302 /* KeyPairTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86AB21ABFC8100F48302 /* KeyPairTableView.swift */; };
 		3C0A86AE21ABFD5D00F48302 /* KeyPairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0A86AD21ABFD5D00F48302 /* KeyPairCell.xib */; };
 		3C0A86B021AC060700F48302 /* ReachTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86AF21AC060700F48302 /* ReachTextView.swift */; };
+		3C0A86B221AC278200F48302 /* ExtraTapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86B121AC278200F48302 /* ExtraTapDelegate.swift */; };
 		3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0ADD69219F24380026649F /* AccountCardCell.xib */; };
 		3C0ADD71219F28700026649F /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD70219F28700026649F /* Connection.swift */; };
 		3C0ADD7E219F378C0026649F /* BalanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7D219F378C0026649F /* BalanceEntity.swift */; };
@@ -83,7 +84,6 @@
 		3C0C04B521A8878000F5F7A7 /* ReachNetCpuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0C04B421A8878000F5F7A7 /* ReachNetCpuView.xib */; };
 		3C0C04B721A8881700F5F7A7 /* ReachBorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04B621A8881700F5F7A7 /* ReachBorderLabel.swift */; };
 		3C0C04B921A8AE3100F5F7A7 /* CastProducersVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04B821A8AE3100F5F7A7 /* CastProducersVote.swift */; };
-		3C0C04BB21A8B39700F5F7A7 /* CastProducersRemoveDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04BA21A8B39700F5F7A7 /* CastProducersRemoveDelegate.swift */; };
 		3C0EC80A2192FAD300562A1B /* ui_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8092192FAD300562A1B /* ui_types.swift */; };
 		3C0EC80C2192FAF900562A1B /* ReachButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC80B2192FAF900562A1B /* ReachButton.swift */; };
 		3C0EC8122193086800562A1B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8112193086800562A1B /* R.generated.swift */; };
@@ -473,6 +473,7 @@
 		3C0A86AB21ABFC8100F48302 /* KeyPairTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPairTableView.swift; sourceTree = "<group>"; };
 		3C0A86AD21ABFD5D00F48302 /* KeyPairCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyPairCell.xib; sourceTree = "<group>"; };
 		3C0A86AF21AC060700F48302 /* ReachTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachTextView.swift; sourceTree = "<group>"; };
+		3C0A86B121AC278200F48302 /* ExtraTapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraTapDelegate.swift; sourceTree = "<group>"; };
 		3C0ADD69219F24380026649F /* AccountCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCardCell.xib; sourceTree = "<group>"; };
 		3C0ADD70219F28700026649F /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		3C0ADD7D219F378C0026649F /* BalanceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceEntity.swift; sourceTree = "<group>"; };
@@ -495,7 +496,6 @@
 		3C0C04B421A8878000F5F7A7 /* ReachNetCpuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReachNetCpuView.xib; sourceTree = "<group>"; };
 		3C0C04B621A8881700F5F7A7 /* ReachBorderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachBorderLabel.swift; sourceTree = "<group>"; };
 		3C0C04B821A8AE3100F5F7A7 /* CastProducersVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducersVote.swift; sourceTree = "<group>"; };
-		3C0C04BA21A8B39700F5F7A7 /* CastProducersRemoveDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducersRemoveDelegate.swift; sourceTree = "<group>"; };
 		3C0EC8092192FAD300562A1B /* ui_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ui_types.swift; sourceTree = "<group>"; };
 		3C0EC80B2192FAF900562A1B /* ReachButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachButton.swift; sourceTree = "<group>"; };
 		3C0EC8112193086800562A1B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -1684,6 +1684,7 @@
 			children = (
 				3CC9A3D0219DED830002A25F /* SimpleTableView.swift */,
 				3CC9A3D8219DF6120002A25F /* SimpleTableViewCell.swift */,
+				3C0A86B121AC278200F48302 /* ExtraTapDelegate.swift */,
 				3CCE0EFB21AADC2100D81458 /* DataTableView.swift */,
 			);
 			path = tableview;
@@ -1710,7 +1711,6 @@
 				3CC9E70921A5A4170050BA57 /* CastProducersVoteViewModel.swift */,
 				3CC9E70A21A5A4170050BA57 /* CastProducersVoteViewState.swift */,
 				3CC9E72A21A5CFCA0050BA57 /* CastProducersVoteTableView.swift */,
-				3C0C04BA21A8B39700F5F7A7 /* CastProducersRemoveDelegate.swift */,
 				3CC9E72C21A5CFD80050BA57 /* CastProducersVoteCell.swift */,
 				3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */,
 				3C0C04B821A8AE3100F5F7A7 /* CastProducersVote.swift */,
@@ -2053,7 +2053,6 @@
 				3C8C6D9E2192D5B000FC1A0D /* SegueBundle.swift in Sources */,
 				3CC9E6F421A56AAE0050BA57 /* ViewProxyVoterViewController.swift in Sources */,
 				3CC9A3BB219DBC210002A25F /* RamPriceRequestImpl.swift in Sources */,
-				3C0C04BB21A8B39700F5F7A7 /* CastProducersRemoveDelegate.swift in Sources */,
 				3C964C4F2194572A003663EF /* EosKeyManager.swift in Sources */,
 				3C8BD23D21A6C22900ACFA70 /* AllocatedBandwidthViewModel.swift in Sources */,
 				3C9BFB90219B36CC00589936 /* EosPrice.swift in Sources */,
@@ -2084,6 +2083,7 @@
 				3CC9E70521A5A4110050BA57 /* CastProxyVoteViewModel.swift in Sources */,
 				3C6DF78721A08D8700ADA892 /* VoteResult.swift in Sources */,
 				3C0700CB21A75138008F63D2 /* SellRamViewModel.swift in Sources */,
+				3C0A86B221AC278200F48302 /* ExtraTapDelegate.swift in Sources */,
 				3C9BFB98219B3A1000589936 /* EosRefundRequest.swift in Sources */,
 				3C9C665D21A97C1800612CD8 /* StoreKitHandler.swift in Sources */,
 				3C0EC826219350DE00562A1B /* ImportKeyIntent.swift in Sources */,

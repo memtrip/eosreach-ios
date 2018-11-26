@@ -28,7 +28,10 @@ class ActiveBlockProducersViewController
         return Observable.merge(
             Observable.just(ActiveBlockProducersIntent.start),
             dataTableView().selected.map { blockProducerDetails in
-                return ActiveBlockProducersIntent.blockProducerSelected(blockProducerDetails: blockProducerDetails)
+                ActiveBlockProducersIntent.blockProducerSelected(blockProducerDetails: blockProducerDetails)
+            },
+            dataTableView().extraTapSelected.map { blockProducerDetails in
+                ActiveBlockProducersIntent.blockProducerInformationSelected(blockProducerDetails: blockProducerDetails)
             }
         )
     }
@@ -61,7 +64,14 @@ class ActiveBlockProducersViewController
                 }
             }
         case .blockProducerInformationSelected(let blockProducer):
-            print("")
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.activeBlockProducersViewController.activeBlockProducerListToViewBlockProducer.identifier,
+                model: ViewBlockProducerBundle(
+                    accountName: nil,
+                    blockProducerDetails: blockProducer
+                )
+            ))
+            performSegue(withIdentifier: R.segue.activeBlockProducersViewController.activeBlockProducerListToViewBlockProducer, sender: self)
         }
     }
 

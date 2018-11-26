@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class CastProducersVoteTableView : SimpleTableView<String, CastProducersVoteCell>, UITextFieldDelegate, CastProducersRemoveDelegate {
+class CastProducersVoteTableView : SimpleTableView<String, CastProducersVoteCell>, UITextFieldDelegate {
 
     private let usernameFilter = UsernameFilter()
     
@@ -17,7 +17,6 @@ class CastProducersVoteTableView : SimpleTableView<String, CastProducersVoteCell
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cellId(), for: indexPath) as! CastProducersVoteCell
         cell.textField.delegate = self
         cell.textField.tag = indexPath.item
-        cell.delegate = self
         cell.indexPath = indexPath
         return cell
     }
@@ -31,7 +30,6 @@ class CastProducersVoteTableView : SimpleTableView<String, CastProducersVoteCell
         let rowCount = numberOfRows(inSection: 0)
         if (rowCount < 30) {
             self.populate(data: [producer])
-            print(numberOfRows(inSection: 0))
         }
     }
     
@@ -50,5 +48,9 @@ class CastProducersVoteTableView : SimpleTableView<String, CastProducersVoteCell
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return usernameFilter.check(string: string, textField: textField)
+    }
+    
+    override func extraTap(indexPath: IndexPath) {
+        removePressed(indexPath: indexPath)
     }
 }

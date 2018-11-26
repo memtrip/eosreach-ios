@@ -6,9 +6,6 @@ class CastProducersVoteCell : SimpleTableViewCell<String> {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var removeButton: UIButton!
     
-    var delegate: CastProducersRemoveDelegate?
-    var indexPath: IndexPath?
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
@@ -23,6 +20,8 @@ class CastProducersVoteCell : SimpleTableViewCell<String> {
     }
     
     @objc private func removeTap() {
-        delegate!.removePressed(indexPath: indexPath!)
+        if let extraTapDelegate = extraTapDelegate {
+            extraTapDelegate.extraTap(indexPath: indexPath!)
+        }
     }
 }
