@@ -46,7 +46,7 @@ class VoteViewController: MxViewController<VoteIntent, VoteResult, VoteViewState
 
     override func intents() -> Observable<VoteIntent> {
         return Observable.merge(
-            Observable.just(VoteIntent.start(eosAccountVote: eosAccount!.eosAcconuntVote!)),
+            Observable.just(VoteIntent.start(eosAccountVote: eosAccount!.eosAcconuntVote)),
             producerButton.rx.tap.map {
                 VoteIntent.navigateToCastProducerVote
             },
