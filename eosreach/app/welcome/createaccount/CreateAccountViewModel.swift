@@ -129,7 +129,8 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
             }.catchError { error in
                 return self.verifyAccountsForPublicKey(publicKey: publicKey)
             }
-        }.asObservable().startWith(CreateAccountResult.onCreateAccountProgress)
+        }.catchErrorJustReturn(CreateAccountResult.onCreateAccountGenericError)
+            .asObservable().startWith(CreateAccountResult.onCreateAccountProgress)
     }
     
     private func createAccountSuccess(publicKey: String) -> Single<CreateAccountResult> {
@@ -214,7 +215,8 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
                     return Single.just(CreateAccountResult.onImportKeyError)
                 }
             }
-        }.asObservable().startWith(CreateAccountResult.onImportKeyProgress)
+        }.catchErrorJustReturn(CreateAccountResult.onImportKeyError)
+            .asObservable().startWith(CreateAccountResult.onImportKeyProgress)
     }
     
     private func getPrivateKey(privateKey: String = "") -> Single<EOSPrivateKey> {
