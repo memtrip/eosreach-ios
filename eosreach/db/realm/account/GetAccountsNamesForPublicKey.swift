@@ -9,7 +9,9 @@ class GetAccountsNamesForPublicKey {
             do {
                 let realm = try Realm()
                 let results = Array(realm
-                    .objects(AccountEntity.self)).map { entity in
+                    .objects(AccountEntity.self)
+                    .filter("publicKey = %@", publicKey)
+                ).map { entity in
                     return entity.accountName
                 }
                 single(.success(Array(results)))

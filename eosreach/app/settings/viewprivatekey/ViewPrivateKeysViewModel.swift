@@ -37,8 +37,8 @@ class ViewPrivateKeysViewModel: MxViewModel<ViewPrivateKeysIntent, ViewPrivateKe
                 return self.getAccountsForPrivateKey(privateKeys: privateKeys)
             }
         }.catchErrorJustReturn(ViewPrivateKeysResult.noPrivateKeys)
-            .asObservable()
-            .startWith(ViewPrivateKeysResult.onProgress)
+        .asObservable()
+        .startWith(ViewPrivateKeysResult.onProgress)
     }
     
     private func getAccountsForPrivateKey(privateKeys: [EOSPrivateKey]) -> Single<ViewPrivateKeysResult> {
@@ -51,9 +51,9 @@ class ViewPrivateKeysViewModel: MxViewModel<ViewPrivateKeysIntent, ViewPrivateKe
                     eosPrivateKey: eosPrivateKey,
                     associatedAccounts: names
                 )
-            }.toArray().map { keyPairs in
-                ViewPrivateKeysResult.showPrivateKeys(viewKeyPair: keyPairs)
-            }.catchErrorJustReturn(ViewPrivateKeysResult.noPrivateKeys)
-        }.asSingle()
+            }
+        }.toArray().map { keyPairs in
+            ViewPrivateKeysResult.showPrivateKeys(viewKeyPair: keyPairs)
+        }.catchErrorJustReturn(ViewPrivateKeysResult.noPrivateKeys).asSingle()
     }
 }

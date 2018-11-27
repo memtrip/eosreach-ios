@@ -139,7 +139,7 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
         unusedPublicKeyNoAccountsSynced.put(value: true)
         return eosKeyManager.getPrivateKey(eosPublicKey: publicKey).map { privateKey in
             CreateAccountResult.onCreateAccountSuccess(privateKey: privateKey.base58)
-        }.catchErrorJustReturn(CreateAccountResult.onCreateAccountFatalError)
+        }.catchErrorJustReturn(CreateAccountResult.onImportKeyError)
     }
     
     private func createAccountError(createAccountError: EosCreateAccountError, publicKey: String) -> Single<CreateAccountResult> {
