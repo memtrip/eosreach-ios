@@ -1,8 +1,8 @@
 import Foundation
 
-class UnusedAccountInLimbo {
+class UnusedPublicKeyInLimbo {
 
-    private let key = "UNSED_ACCOUNT_IN_LIMBO"
+    private let key = "UNSED_PUBLIC_KEY_IN_LIMBO"
     private let defaults = UserDefaults.standard
 
     func put(value: Bool) {

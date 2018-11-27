@@ -35,4 +35,7 @@
 	"create_account_limbo_error_title" = "Could not create account";
 	"create_account_limbo_error_body" = "An error occurred while creating you account, please check your internet connection and try again. If this problem continues to persist, please change your EOS endpoint from settings.";
 	"create_account_limbo_settings_button" = "Go to Settings";
+	"create_account_import_key_instruction_label" = "Your account has been created, but we failed to sync your accounts. Please check your connection and try again. If this error still persists, please change your EOS endpoint in Settings.";
+	"create_account_import_key_sync_button" = "Sync Accounts";
+	"create_account_import_key_settings_button" = "Go To Settings";
 }

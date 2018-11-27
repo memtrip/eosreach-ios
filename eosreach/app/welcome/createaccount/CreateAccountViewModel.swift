@@ -1,6 +1,7 @@
 import Foundation
 import RxSwift
 import StoreKit
+import eosswift
 
 class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResult, CreateAccountViewState> {
 
@@ -11,15 +12,15 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
     private let accountListSelection = AccountListSelection()
     private let unusedPublicKey = UnusedPublicKey()
     private let unusedTransactionIdentifier = UnusedTransactionIdentifier()
-    private let unusedAccountInLimbo = UnusedAccountInLimbo()
+    private let unusedPublicKeyInLimbo = UnusedPublicKeyInLimbo()
     private let unusedPublicKeyNoAccountsSynced = UnusedPublicKeyNoAccountsSynced()
     
     override func dispatcher(intent: CreateAccountIntent) -> Observable<CreateAccountResult> {
         switch intent {
         case .idle:
             return just(CreateAccountResult.idle)
-        case .startBillingConnection:
-            return just(CreateAccountResult.startBillingConnection)
+        case .start:
+            return just(startingFlow())
         case .onSKProductSuccess(let skProduct):
             return just(formatPrice(skProduct: skProduct))
         case .purchaseAccount(let accountName):
@@ -30,6 +31,10 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
             return just(CreateAccountResult.goToSettings)
         case .limboRetry:
             return createAccount(transactionIdentifier: unusedTransactionIdentifier.get(), accountName: "")
+        case .syncAccounts:
+            return syncAccountsForKey()
+        case .syncAccountsForPrivateKey(let privateKey):
+            return syncAccountsForKey(privateKey: privateKey)
         }
     }
 
@@ -70,6 +75,14 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
         }
     }
     
+    private func startingFlow() -> CreateAccountResult {
+        if (unusedPublicKeyNoAccountsSynced.get()) {
+            return CreateAccountResult.onImportKeyError
+        } else {
+            return CreateAccountResult.startBillingConnection
+        }
+    }
+    
     private func formatPrice(skProduct: SKProduct) -> CreateAccountResult {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
@@ -89,10 +102,8 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
     }
     
     private func resolveFlowState(accountName: String) -> Observable<CreateAccountResult> {
-        if (unusedAccountInLimbo.get()) {
+        if (unusedPublicKeyInLimbo.get()) {
             return just(CreateAccountResult.onCreateAccountLimbo)
-        } else if (unusedPublicKeyNoAccountsSynced.get()) {
-            return just(CreateAccountResult.onImportKeyError)
         } else if (unusedTransactionIdentifier.get().isNotEmpty()) {
             return createAccount(
                 transactionIdentifier: unusedTransactionIdentifier.get(),
@@ -122,9 +133,8 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
     }
     
     private func createAccountSuccess(publicKey: String) -> Single<CreateAccountResult> {
-        unusedAccountInLimbo.clear()
+        unusedPublicKeyInLimbo.clear()
         unusedTransactionIdentifier.clear()
-        unusedPublicKey.clear()
         unusedPublicKeyNoAccountsSynced.put(value: true)
         return eosKeyManager.getPrivateKey(eosPublicKey: publicKey).map { privateKey in
             CreateAccountResult.onCreateAccountSuccess(privateKey: privateKey.base58)
@@ -174,7 +184,7 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
                      * If no accounts are returned, we can safely assume that
                      * the account was not created and it was a legit error.
                      */
-                    self.unusedAccountInLimbo.clear()
+                    self.unusedPublicKeyInLimbo.clear()
                     return Single.just(CreateAccountResult.onCreateAccountGenericError)
                 }
             } else {
@@ -183,9 +193,45 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
                  * accounts, we will display an error to the user. The user must get a
                  * successful response from accountForPublicKeyRequest before continuing.
                  */
-                self.unusedAccountInLimbo.put(value: true)
+                self.unusedPublicKeyInLimbo.put(value: true)
                 return Single.just(CreateAccountResult.onCreateAccountLimbo)
             }
+        }
+    }
+    
+    private func syncAccountsForKey(privateKey: String = "") -> Observable<CreateAccountResult> {
+        return getPrivateKey(privateKey: privateKey).flatMap { eosPrivateKey in
+            return self.accountsForPublicKeyRequest.getAccountsForKey(publicKey: eosPrivateKey.publicKey.base58).flatMap { result in
+                if (result.success()) {
+                    if (result.data!.accounts.isEmpty) {
+                        return Single.just(CreateAccountResult.onImportKeyError)
+                    } else {
+                        return self.insertAccounts(
+                            publicKey: result.data!.publicKey,
+                            accounts: result.data!.accounts)
+                    }
+                } else {
+                    return Single.just(CreateAccountResult.onImportKeyError)
+                }
+            }
+        }.asObservable().startWith(CreateAccountResult.onImportKeyProgress)
+    }
+    
+    private func getPrivateKey(privateKey: String = "") -> Single<EOSPrivateKey> {
+        if (privateKey.isNotEmpty()) {
+            let privateKey = try! EOSPrivateKey(base58: privateKey)
+            return Single.just(privateKey)
+        } else {
+            return eosKeyManager.getPrivateKey(eosPublicKey: unusedPublicKey.get())
+        }
+    }
+    
+    private func insertAccounts(publicKey: String, accounts: [AccountNameSystemBalance]) -> Single<CreateAccountResult> {
+        return insertAccountsForPublicKey.insertAccounts(publicKey: publicKey, accounts: accounts).map { _ in
+            self.accountListSelection.clear()
+            self.unusedPublicKey.clear()
+            self.unusedPublicKeyNoAccountsSynced.clear()
+            return CreateAccountResult.navigateToAccounts(accountName: accounts[0].accountName)
         }
     }
 }

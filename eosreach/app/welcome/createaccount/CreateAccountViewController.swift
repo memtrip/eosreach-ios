@@ -20,7 +20,6 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     @IBOutlet weak var doneCreateAccountLabel: UILabel!
     @IBOutlet weak var doneInstructionLabel: UILabel!
     @IBOutlet weak var doneCtaButton: ReachPrimaryButton!
-    @IBOutlet weak var doneCtaActivityIndicator: ReachActivityIndicator!
     @IBOutlet weak var donePrivateKeyTextView: ReachTextView!
     
     @IBOutlet weak var limboViewGroup: UIView!
@@ -28,6 +27,11 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     @IBOutlet weak var limboBody: UILabel!
     @IBOutlet weak var limboGoToSettingsButton: ReachPrimaryButton!
     @IBOutlet weak var limboRetryButton: ReachPrimaryButton!
+    
+    @IBOutlet weak var importKeyGroup: UIView!
+    @IBOutlet weak var importKeyInstructionLabel: UILabel!
+    @IBOutlet weak var importKeySyncButton: ReachPrimaryButton!
+    @IBOutlet weak var importKeyGoToSettings: UIButton!
     
     private let billing = BillingImpl(storeKitHandler: StoreKitHandler())
     private var skProduct: SKProduct?
@@ -51,11 +55,15 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
         limboBody.text = R.string.welcomeStrings.create_account_limbo_error_body()
         limboGoToSettingsButton.setTitle(R.string.welcomeStrings.create_account_limbo_settings_button(), for: .normal)
         limboRetryButton.setTitle(R.string.appStrings.app_error_view_cta(), for: .normal)
+        
+        importKeyInstructionLabel.text = R.string.welcomeStrings.create_account_import_key_instruction_label()
+        importKeySyncButton.setTitle(R.string.welcomeStrings.create_account_import_key_sync_button(), for: .normal)
+        importKeyGoToSettings.setTitle(R.string.welcomeStrings.create_account_import_key_settings_button(), for: .normal)
     }
 
     override func intents() -> Observable<CreateAccountIntent> {
         return Observable.merge(
-            Observable.just(CreateAccountIntent.startBillingConnection),
+            Observable.just(CreateAccountIntent.start),
             self.rx.methodInvoked(#selector(CreateAccountViewController.success(skProduct:))).map { args in
                 let skProduct = args[0] as! SKProduct
                 return CreateAccountIntent.onSKProductSuccess(skProduct: skProduct)
@@ -71,11 +79,20 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
                     transactionId: args[0] as! String,
                     accountName: self.formAccountTextField.text!)
             },
-            limboGoToSettingsButton.rx.tap.map {
+            Observable.merge(
+                importKeyGoToSettings.rx.tap.asObservable(),
+                limboGoToSettingsButton.rx.tap.asObservable()
+            ).map {
                 CreateAccountIntent.goToSettings
             },
             limboRetryButton.rx.tap.map {
                 CreateAccountIntent.limboRetry
+            },
+            doneCtaButton.rx.tap.map {
+                CreateAccountIntent.syncAccountsForPrivateKey(privateKey: self.donePrivateKeyTextView.text)
+            },
+            importKeySyncButton.rx.tap.map {
+                CreateAccountIntent.syncAccounts
             }
         )
     }
@@ -115,15 +132,18 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
         case .onCreateAccountUsernameExists:
             formCtaActivityIndicator.stop()
             formCtaButton.visible()
+            showOKDialog(message: R.string.welcomeStrings.create_account_error_name_exists())
         case .onCreateAccountLimbo:
             formViewGroup.gone()
             limboViewGroup.visible()
         case .onImportKeyProgress:
-            doneCtaActivityIndicator.start()
-            doneCtaButton.gone()
+            activityIndicator.start()
+            doneViewGroup.gone()
+            importKeyGroup.gone()
         case .onImportKeyError:
-            doneCtaActivityIndicator.stop()
-            doneCtaButton.visible()
+            activityIndicator.stop()
+            doneViewGroup.gone()
+            importKeyGroup.visible()
         case .navigateToAccounts(let accountName):
             setDestinationBundle(bundle: SegueBundle(
                 identifier: R.segue.createAccountViewController.createAccountToAccount.identifier,
@@ -135,9 +155,9 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
             ))
             performSegue(withIdentifier: R.segue.createAccountViewController.createAccountToAccount, sender: self)
         case .onAccountNameValidationFailed:
-            showOKDialog(message: R.string.welcomeStrings.create_account_username_format_validation_error())
-        case .onAccountNameValidationNumberStartFailed:
             showOKDialog(message: R.string.welcomeStrings.create_account_username_length_validation_error())
+        case .onAccountNameValidationNumberStartFailed:
+            showOKDialog(message: R.string.welcomeStrings.create_account_username_format_validation_error())
         case .goToSettings:
             performSegue(withIdentifier: R.segue.createAccountViewController.createAccountToSettings, sender: self)
         }

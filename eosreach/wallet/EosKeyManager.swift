@@ -17,14 +17,14 @@ protocol EosKeyManager {
 
 class EosKeyManagerImpl: EosKeyManager {
 
-    struct KeyPair {
+    private struct KeyPair {
         static let manager: EllipticCurveKeyPair.Manager = {
             let publicAccessControl = EllipticCurveKeyPair.AccessControl(protection: kSecAttrAccessibleAlwaysThisDeviceOnly, flags: [])
             let privateAccessControl = EllipticCurveKeyPair.AccessControl(protection: kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly, flags: [.userPresence, .privateKeyUsage])
             let config = EllipticCurveKeyPair.Config(
-                publicLabel: "payment.sign.public",
-                privateLabel: "payment.sign.private",
-                operationPrompt: "Confirm payment",
+                publicLabel: "eosprivatekey.sign.public",
+                privateLabel: "eosprivatekey.sign.private",
+                operationPrompt: "Decrypted private key",
                 publicKeyAccessControl: publicAccessControl,
                 privateKeyAccessControl: privateAccessControl,
                 token: .secureEnclave)
@@ -32,7 +32,7 @@ class EosKeyManagerImpl: EosKeyManager {
         }()
     }
 
-    let encryptedKeyPairData = EncryptedKeyPairData()
+    private let encryptedKeyPairData = EncryptedKeyPairData()
 
     func importPrivateKey(eosPrivateKey: EOSPrivateKey) -> Single<String> {
         return Single<String>.create { single in

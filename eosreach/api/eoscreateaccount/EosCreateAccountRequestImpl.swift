@@ -38,6 +38,6 @@ class EosCreateAccountRequestImpl : EosCreateAccountRequest {
                     return Single.just(Result(error: EosCreateAccountError.genericError))
                 }
             }
-        }
+        }.catchErrorJustReturn(Result(error: EosCreateAccountError.fatalError))
     }
 }
