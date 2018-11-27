@@ -52,7 +52,7 @@ class ConfirmRamViewModel: MxViewModel<ConfirmRamIntent, ConfirmRamResult, Confi
                 case .sell:
                     return self.sellRam(account: account, quantity: Double(kb)!, privaeKey: privateKey)
                 }
-            }
+            }.catchErrorJustReturn(ConfirmRamResult.genericError)
         }.catchErrorJustReturn(ConfirmRamResult.genericError)
             .asObservable()
             .startWith(ConfirmRamResult.onProgress)

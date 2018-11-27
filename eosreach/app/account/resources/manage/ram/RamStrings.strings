@@ -16,4 +16,5 @@
 	"confirm_ram_kb_label" = "k/b";
 	"confirm_ram_price_label" = Price;
 	"confirm_ram_instruction_label" = "The price of RAM is determined by the market. We checked the market price for you on the previous screen, but it is possible for the price to fluctuate within a small time period.";
+	"confirm_ram_error_body" = "Could not process transaction, please check your internet connection and try again.";
 }

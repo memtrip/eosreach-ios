@@ -70,6 +70,7 @@ class ConfirmRamViewController : MxViewController<ConfirmRamIntent, ConfirmRamRe
         case .genericError:
             activityIndicator.stop()
             confirmButton.visible()
+            showOKDialog(message: R.string.ramStrings.confirm_ram_error_body())
         case .errorWithLog(let log):
             activityIndicator.stop()
             confirmButton.visible()
