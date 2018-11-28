@@ -47,7 +47,7 @@
                                 <rect key="frame" x="0.0" y="146" width="375" height="30"/>
                                 <state key="normal" title="_view_private_keys"/>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlO-wi-oBO" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlO-wi-oBO" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="177" width="375" height="30"/>
                                 <state key="normal" title="_confirmed_transactions"/>
                             </button>
@@ -80,7 +80,7 @@
                                     <constraint firstAttribute="height" constant="1" id="aY0-Uz-IbP"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpw-f8-sAU">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpw-f8-sAU">
                                 <rect key="frame" x="0.0" y="207" width="375" height="1"/>
                                 <color key="backgroundColor" name="colorBorderTransparent"/>
                                 <constraints>
@@ -165,6 +165,7 @@
                         <segue destination="nRr-uf-Ks7" kind="show" identifier="settingsToCurrencyPairing" id="bMO-tT-PCK"/>
                         <segue destination="BLF-jA-WCe" kind="show" identifier="settingsToEosEndpoint" id="X0C-WJ-xId"/>
                         <segue destination="96N-le-3DO" kind="show" identifier="settingsToViewPrivateKeys" id="SPJ-VD-wSi"/>
+                        <segue destination="zGh-3c-R08" kind="show" identifier="settingsToTransactionHistory" id="dg6-A7-A6G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldj-Ns-Ajb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -311,6 +312,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXX-H7-vea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2081" y="-674"/>
+        </scene>
+        <!--Transaction History View Controller-->
+        <scene sceneID="Qit-Xe-yWH">
+            <objects>
+                <viewController id="zGh-3c-R08" customClass="TransactionHistoryViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="idD-Uy-Kpg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WaU-rg-tu5" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="16" y="84" width="343" height="567"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLi-oX-aJv" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="aPh-zJ-WkX"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-Rf-SZ5">
+                                <rect key="frame" x="16" y="84" width="343" height="582"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hr4-Dc-TpV" customClass="TransactionHistoryTableView" customModule="eosreach" customModuleProvider="target">
+                                <rect key="frame" x="8" y="76" width="359" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="kLi-oX-aJv" firstAttribute="top" secondItem="nzC-Q0-HkE" secondAttribute="top" id="0bA-Hd-xiJ"/>
+                            <constraint firstItem="nzC-Q0-HkE" firstAttribute="bottom" secondItem="Hr4-Dc-TpV" secondAttribute="bottom" constant="8" id="7Po-zF-LDs"/>
+                            <constraint firstItem="kLi-oX-aJv" firstAttribute="leading" secondItem="nzC-Q0-HkE" secondAttribute="leading" id="7QR-qT-uAq"/>
+                            <constraint firstItem="nzC-Q0-HkE" firstAttribute="bottom" secondItem="LtI-Rf-SZ5" secondAttribute="bottom" constant="1" id="9dZ-9J-0lC"/>
+                            <constraint firstItem="nzC-Q0-HkE" firstAttribute="trailing" secondItem="kLi-oX-aJv" secondAttribute="trailing" id="AuO-w1-USK"/>
+                            <constraint firstItem="LtI-Rf-SZ5" firstAttribute="top" secondItem="kLi-oX-aJv" secondAttribute="bottom" constant="16" id="I5K-UD-HVI"/>
+                            <constraint firstItem="WaU-rg-tu5" firstAttribute="leading" secondItem="nzC-Q0-HkE" secondAttribute="leading" constant="16" id="QxY-aG-jsI"/>
+                            <constraint firstItem="Hr4-Dc-TpV" firstAttribute="leading" secondItem="nzC-Q0-HkE" secondAttribute="leading" constant="8" id="RNa-vm-6GY"/>
+                            <constraint firstItem="nzC-Q0-HkE" firstAttribute="trailing" secondItem="LtI-Rf-SZ5" secondAttribute="trailing" constant="16" id="S3v-II-Euq"/>
+                            <constraint firstItem="nzC-Q0-HkE" firstAttribute="trailing" secondItem="Hr4-Dc-TpV" secondAttribute="trailing" constant="8" id="b7j-EH-KAY"/>
+                            <constraint firstItem="nzC-Q0-HkE" firstAttribute="trailing" secondItem="WaU-rg-tu5" secondAttribute="trailing" constant="16" id="cz0-T4-uKQ"/>
+                            <constraint firstItem="LtI-Rf-SZ5" firstAttribute="leading" secondItem="nzC-Q0-HkE" secondAttribute="leading" constant="16" id="iHM-3o-ATg"/>
+                            <constraint firstItem="nzC-Q0-HkE" firstAttribute="bottom" secondItem="WaU-rg-tu5" secondAttribute="bottom" constant="16" id="kQj-iM-QV0"/>
+                            <constraint firstItem="WaU-rg-tu5" firstAttribute="top" secondItem="kLi-oX-aJv" secondAttribute="bottom" constant="16" id="q54-hv-3Ve"/>
+                            <constraint firstItem="Hr4-Dc-TpV" firstAttribute="top" secondItem="kLi-oX-aJv" secondAttribute="bottom" constant="8" id="rS3-Mh-Mwg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nzC-Q0-HkE"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="WaU-rg-tu5" id="jS2-sn-nIM"/>
+                        <outlet property="emptyLabel" destination="LtI-Rf-SZ5" id="yeA-Qn-1n3"/>
+                        <outlet property="tableView" destination="Hr4-Dc-TpV" id="LLw-jc-qPo"/>
+                        <outlet property="toolBar" destination="kLi-oX-aJv" id="PC5-7o-xrf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xfx-2H-dfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1329" y="-2697"/>
         </scene>
         <!--View Private Keys View Controller-->
         <scene sceneID="gns-LQ-hDL">

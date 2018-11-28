@@ -5,6 +5,6 @@ enum TransactionHistoryViewState: MxViewState {
     case onProgress
     case onError
     case empty
-    case populate
+    case populate(transactionHistory: [TransactionHistoryModel])
     case navigateToBlockExplorer(transactionId: String)
 }

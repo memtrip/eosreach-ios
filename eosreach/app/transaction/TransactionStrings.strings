@@ -5,4 +5,5 @@
 	"transaction_receipt_done_button" = Done;
 	"transaction_receipt_view_in_block_explorer_button" = "View In Block Explorer";
 	"transaction_receipt_block_explorer_url" = "https://eosflare.io/tx/%@";
+	"transaction_history_title" = "Device Transaction History";
 }

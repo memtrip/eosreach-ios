@@ -26,8 +26,8 @@ class TransactionHistoryViewModel: MxViewModel<TransactionHistoryIntent, Transac
             return TransactionHistoryViewState.onError
         case .empty:
             return TransactionHistoryViewState.empty
-        case .populate:
-            return TransactionHistoryViewState.populate
+        case .populate(let transactionHistory):
+            return TransactionHistoryViewState.populate(transactionHistory: transactionHistory)
         case .navigateToBlockExplorer(let transactionId):
             return TransactionHistoryViewState.navigateToBlockExplorer(transactionId: transactionId)
         }
@@ -38,6 +38,6 @@ class TransactionHistoryViewModel: MxViewModel<TransactionHistoryIntent, Transac
             TransactionHistoryResult.populate(transactionHistory: results)
         }.catchErrorJustReturn(TransactionHistoryResult.empty)
             .asObservable()
-            .startWith(TransactionHistoryResult.onProgress)
+            .startWith(TransactionHistoryResult.onError)
     }
 }

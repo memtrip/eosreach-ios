@@ -73,7 +73,7 @@ class SettingsViewController: MxViewController<SettingsIntent, SettingsResult, S
         case .navigateToPrivateKeys:
             performSegue(withIdentifier: R.segue.settingsViewController.settingsToViewPrivateKeys, sender: self)
         case .navigateToViewConfirmedTransactions:
-            print("")
+            performSegue(withIdentifier: R.segue.settingsViewController.settingsToTransactionHistory, sender: self)
         case .navigateToTelegram:
             if let url = URL(string: R.string.settingsStrings.settings_telegram_url()) {
                 UIApplication.shared.open(url, options: [:])

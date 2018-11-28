@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="Rhp-Uw-tAp" customClass="TransactionHistoryCell" customModule="eosreach" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rhp-Uw-tAp" id="Ogx-oi-Sym">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0n-18-h9m" customClass="ReachBorderView" customModule="eosreach" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="359" height="55"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_transaction_id" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJ8-kV-zgl" userLabel="TransactionId">
+                                <rect key="frame" x="8" y="8" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="typographyColorPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="_date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcp-qi-pKj" userLabel="Date">
+                                <rect key="frame" x="8" y="32.5" width="343" height="14.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" name="colorSecondary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="pJ8-kV-zgl" firstAttribute="leading" secondItem="h0n-18-h9m" secondAttribute="leading" constant="8" id="JcE-et-d2u"/>
+                            <constraint firstItem="qcp-qi-pKj" firstAttribute="leading" secondItem="h0n-18-h9m" secondAttribute="leading" constant="8" id="ZQn-9i-Vgt"/>
+                            <constraint firstAttribute="bottom" secondItem="qcp-qi-pKj" secondAttribute="bottom" constant="8" id="hVk-hF-FBb"/>
+                            <constraint firstItem="pJ8-kV-zgl" firstAttribute="top" secondItem="h0n-18-h9m" secondAttribute="top" constant="8" id="jNP-zA-yyQ"/>
+                            <constraint firstAttribute="trailing" secondItem="pJ8-kV-zgl" secondAttribute="trailing" constant="8" id="pC6-p9-x6O"/>
+                            <constraint firstAttribute="trailing" secondItem="qcp-qi-pKj" secondAttribute="trailing" constant="8" id="qmL-hh-Xy1"/>
+                            <constraint firstItem="qcp-qi-pKj" firstAttribute="top" secondItem="pJ8-kV-zgl" secondAttribute="bottom" constant="4" id="wOD-ss-iaF"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5g-dP-8YC">
+                        <rect key="frame" x="0.0" y="71" width="375" height="58.5"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="A5g-dP-8YC" firstAttribute="top" secondItem="h0n-18-h9m" secondAttribute="bottom" constant="8" id="9FD-Uj-B3j"/>
+                    <constraint firstAttribute="trailing" secondItem="h0n-18-h9m" secondAttribute="trailing" constant="8" id="INY-ia-KMA"/>
+                    <constraint firstAttribute="trailing" secondItem="A5g-dP-8YC" secondAttribute="trailing" id="M0l-To-Wyo"/>
+                    <constraint firstItem="h0n-18-h9m" firstAttribute="leading" secondItem="Ogx-oi-Sym" secondAttribute="leading" constant="8" id="O0u-1p-O8A"/>
+                    <constraint firstAttribute="bottom" secondItem="A5g-dP-8YC" secondAttribute="bottom" id="WuG-cE-NCd"/>
+                    <constraint firstItem="h0n-18-h9m" firstAttribute="top" secondItem="Ogx-oi-Sym" secondAttribute="top" constant="8" id="duS-mR-VXp"/>
+                    <constraint firstItem="A5g-dP-8YC" firstAttribute="leading" secondItem="Ogx-oi-Sym" secondAttribute="leading" id="pDv-wp-Rrx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="qcp-qi-pKj" id="lLF-Fd-R8V"/>
+                <outlet property="transactionIdLabel" destination="pJ8-kV-zgl" id="LQ4-zA-gMW"/>
+            </connections>
+            <point key="canvasLocation" x="-101.59999999999999" y="146.62668665667167"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="colorSecondary">
+            <color red="0.36862745098039218" green="0.9882352941176471" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="typographyColorPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
