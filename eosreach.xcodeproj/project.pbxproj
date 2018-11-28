@@ -77,7 +77,7 @@
 		3C0ADD92219F38440026649F /* InsertBalances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD91219F38440026649F /* InsertBalances.swift */; };
 		3C0ADD95219F3A8B0026649F /* DeleteTransactionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD94219F3A8B0026649F /* DeleteTransactionLog.swift */; };
 		3C0ADD97219F3AAF0026649F /* TransactionLogEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD96219F3AAF0026649F /* TransactionLogEntity.swift */; };
-		3C0ADD99219F3AEB0026649F /* GetTransactionLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD98219F3AEB0026649F /* GetTransactionLogs.swift */; };
+		3C0ADD99219F3AEB0026649F /* GetTransactionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD98219F3AEB0026649F /* GetTransactionHistory.swift */; };
 		3C0ADD9B219F3B230026649F /* InsertTransactionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD9A219F3B230026649F /* InsertTransactionLog.swift */; };
 		3C0ADD9D219F3E140026649F /* scope_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD9C219F3E140026649F /* scope_types.swift */; };
 		3C0C04B321A8877400F5F7A7 /* ReachNetCpuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04B221A8877400F5F7A7 /* ReachNetCpuView.swift */; };
@@ -144,6 +144,12 @@
 		3C4406A921A1ED9B003BBFA9 /* BalanceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4406A821A1ED9B003BBFA9 /* BalanceTableView.swift */; };
 		3C4406AB21A1EDBC003BBFA9 /* BalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4406AA21A1EDBC003BBFA9 /* BalanceCell.swift */; };
 		3C4406AD21A1EED2003BBFA9 /* BalanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4406AC21A1EED2003BBFA9 /* BalanceCell.xib */; };
+		3C4C5E7121AEF52B00C219C4 /* TransactionHistoryIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E6C21AEF52A00C219C4 /* TransactionHistoryIntent.swift */; };
+		3C4C5E7221AEF52B00C219C4 /* TransactionHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E6D21AEF52A00C219C4 /* TransactionHistoryViewModel.swift */; };
+		3C4C5E7321AEF52B00C219C4 /* TransactionHistoryViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E6E21AEF52A00C219C4 /* TransactionHistoryViewState.swift */; };
+		3C4C5E7421AEF52B00C219C4 /* TransactionHistoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E6F21AEF52A00C219C4 /* TransactionHistoryResult.swift */; };
+		3C4C5E7521AEF52B00C219C4 /* TransactionHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7021AEF52B00C219C4 /* TransactionHistoryViewController.swift */; };
+		3C4C5E7921AEF63B00C219C4 /* TransactionHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7821AEF63B00C219C4 /* TransactionHistoryModel.swift */; };
 		3C5799C52191D27D00B9A3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */; };
 		3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799C82191D27D00B9A3D7 /* Main.storyboard */; };
 		3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
@@ -480,7 +486,7 @@
 		3C0ADD91219F38440026649F /* InsertBalances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertBalances.swift; sourceTree = "<group>"; };
 		3C0ADD94219F3A8B0026649F /* DeleteTransactionLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTransactionLog.swift; sourceTree = "<group>"; };
 		3C0ADD96219F3AAF0026649F /* TransactionLogEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionLogEntity.swift; sourceTree = "<group>"; };
-		3C0ADD98219F3AEB0026649F /* GetTransactionLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionLogs.swift; sourceTree = "<group>"; };
+		3C0ADD98219F3AEB0026649F /* GetTransactionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionHistory.swift; sourceTree = "<group>"; };
 		3C0ADD9A219F3B230026649F /* InsertTransactionLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTransactionLog.swift; sourceTree = "<group>"; };
 		3C0ADD9C219F3E140026649F /* scope_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scope_types.swift; sourceTree = "<group>"; };
 		3C0C04B221A8877400F5F7A7 /* ReachNetCpuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachNetCpuView.swift; sourceTree = "<group>"; };
@@ -548,6 +554,12 @@
 		3C4406A821A1ED9B003BBFA9 /* BalanceTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableView.swift; sourceTree = "<group>"; };
 		3C4406AA21A1EDBC003BBFA9 /* BalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCell.swift; sourceTree = "<group>"; };
 		3C4406AC21A1EED2003BBFA9 /* BalanceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceCell.xib; sourceTree = "<group>"; };
+		3C4C5E6C21AEF52A00C219C4 /* TransactionHistoryIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHistoryIntent.swift; sourceTree = "<group>"; };
+		3C4C5E6D21AEF52A00C219C4 /* TransactionHistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewModel.swift; sourceTree = "<group>"; };
+		3C4C5E6E21AEF52A00C219C4 /* TransactionHistoryViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewState.swift; sourceTree = "<group>"; };
+		3C4C5E6F21AEF52A00C219C4 /* TransactionHistoryResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHistoryResult.swift; sourceTree = "<group>"; };
+		3C4C5E7021AEF52B00C219C4 /* TransactionHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewController.swift; sourceTree = "<group>"; };
+		3C4C5E7821AEF63B00C219C4 /* TransactionHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryModel.swift; sourceTree = "<group>"; };
 		3C5799C12191D27D00B9A3D7 /* eosreach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eosreach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5799C92191D27D00B9A3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -889,8 +901,9 @@
 			isa = PBXGroup;
 			children = (
 				3C0ADD96219F3AAF0026649F /* TransactionLogEntity.swift */,
+				3C4C5E7821AEF63B00C219C4 /* TransactionHistoryModel.swift */,
 				3C0ADD94219F3A8B0026649F /* DeleteTransactionLog.swift */,
-				3C0ADD98219F3AEB0026649F /* GetTransactionLogs.swift */,
+				3C0ADD98219F3AEB0026649F /* GetTransactionHistory.swift */,
 				3C0ADD9A219F3B230026649F /* InsertTransactionLog.swift */,
 			);
 			path = transaction;
@@ -1621,6 +1634,11 @@
 		3C9BFBA4219B517A00589936 /* transaction */ = {
 			isa = PBXGroup;
 			children = (
+				3C4C5E6C21AEF52A00C219C4 /* TransactionHistoryIntent.swift */,
+				3C4C5E6F21AEF52A00C219C4 /* TransactionHistoryResult.swift */,
+				3C4C5E7021AEF52B00C219C4 /* TransactionHistoryViewController.swift */,
+				3C4C5E6D21AEF52A00C219C4 /* TransactionHistoryViewModel.swift */,
+				3C4C5E6E21AEF52A00C219C4 /* TransactionHistoryViewState.swift */,
 				3C07009221A71A7C008F63D2 /* TransactionLogViewController.swift */,
 				3C07009421A71AA5008F63D2 /* TransactionLogViewController.xib */,
 				3C0700A121A72643008F63D2 /* TransactionReceiptIntent.swift */,
@@ -2110,8 +2128,10 @@
 				3CB1D71B21A85B5100C87EC9 /* TransferViewController.swift in Sources */,
 				3CC9A3A1219DAF050002A25F /* CutomTokensRequestImpl.swift in Sources */,
 				3CB1D70721A8296C00C87EC9 /* ViewActionViewState.swift in Sources */,
+				3C4C5E7121AEF52B00C219C4 /* TransactionHistoryIntent.swift in Sources */,
 				3CC9A3B3219DB6310002A25F /* ProxyVoterRequestImpl.swift in Sources */,
 				3C0A86A221ABF05B00F48302 /* ViewPrivateKeysViewController.swift in Sources */,
+				3C4C5E7521AEF52B00C219C4 /* TransactionHistoryViewController.swift in Sources */,
 				3C6DF76B21A082AC00ADA892 /* AccountViewState.swift in Sources */,
 				3C6DF77B21A08B5100ADA892 /* BalanceIntent.swift in Sources */,
 				3C9BFBC4219C21D600589936 /* AccountActionRequest.swift in Sources */,
@@ -2122,13 +2142,14 @@
 				3C91C99921AC69BE001398F4 /* UnusedTransactionIdentifier.swift in Sources */,
 				3C964C48219444A2003663EF /* EosPriceValue.swift in Sources */,
 				3CC9E71D21A5BE980050BA57 /* ProxyVoterListViewModel.swift in Sources */,
-				3C0ADD99219F3AEB0026649F /* GetTransactionLogs.swift in Sources */,
+				3C0ADD99219F3AEB0026649F /* GetTransactionHistory.swift in Sources */,
 				3CAD34772192F7DB000F304A /* EntryViewController.swift in Sources */,
 				3C0ADD92219F38440026649F /* InsertBalances.swift in Sources */,
 				3CC9E71F21A5BE980050BA57 /* ProxyVoterListViewController.swift in Sources */,
 				3C0700A521A72643008F63D2 /* TransactionReceiptIntent.swift in Sources */,
 				3CB1D71921A85B5100C87EC9 /* TransferConfirmViewModel.swift in Sources */,
 				3C9BFBBB219B5DC900589936 /* AccountsForPublicKeyRequest.swift in Sources */,
+				3C4C5E7421AEF52B00C219C4 /* TransactionHistoryResult.swift in Sources */,
 				3C9BFB86219B363C00589936 /* Balance.swift in Sources */,
 				3C6DF78921A08D8700ADA892 /* VoteViewState.swift in Sources */,
 				3C6DF78521A08D8700ADA892 /* VoteIntent.swift in Sources */,
@@ -2200,6 +2221,7 @@
 				3CC9A3A3219DAF0B0002A25F /* Token.swift in Sources */,
 				3C6DF79021A090F300ADA892 /* ResourcesViewState.swift in Sources */,
 				3C7F0DE92194A17000E72DD1 /* ActiveBlockProducersViewState.swift in Sources */,
+				3C4C5E7321AEF52B00C219C4 /* TransactionHistoryViewState.swift in Sources */,
 				3C8BD23B21A6C22900ACFA70 /* AllocatedBandwidthViewState.swift in Sources */,
 				3C1F1F9021A359090075BD71 /* ActionsViewController.swift in Sources */,
 				3C7F0DE72194A17000E72DD1 /* ActiveBlockProducersViewModel.swift in Sources */,
@@ -2337,6 +2359,7 @@
 				3C6DF78621A08D8700ADA892 /* VoteViewModel.swift in Sources */,
 				3CC9A3AD219DB2E90002A25F /* EosPriceRequest.swift in Sources */,
 				3C592FCC219D6B1B00D7C9B9 /* VoteRequest.swift in Sources */,
+				3C4C5E7921AEF63B00C219C4 /* TransactionHistoryModel.swift in Sources */,
 				3C8BD25221A6C3B300ACFA70 /* UndelegateBandwidthResult.swift in Sources */,
 				3CC9A3D9219DF6120002A25F /* SimpleTableViewCell.swift in Sources */,
 				3C8C6D9C2192D58E00FC1A0D /* Copy.swift in Sources */,
@@ -2395,6 +2418,7 @@
 				3CEF33C721A52A1900716AA2 /* ViewBlockProducerViewController.swift in Sources */,
 				3C6DF76A21A082AC00ADA892 /* AccountViewController.swift in Sources */,
 				3C291BA3219D58B800562448 /* CurrencyPairFormatter.swift in Sources */,
+				3C4C5E7221AEF52B00C219C4 /* TransactionHistoryViewModel.swift in Sources */,
 				3C0EC81D21933D4F00562A1B /* SplashViewController.swift in Sources */,
 				3CCE0EFE21AADCE600D81458 /* ActiveBlockProducersDelegate.swift in Sources */,
 				3C9BFBBF219C21BC00589936 /* AccountAction.swift in Sources */,
@@ -2570,6 +2594,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8F4QT3VHG;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2594,6 +2619,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8F4QT3VHG;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/frameworks_temp",

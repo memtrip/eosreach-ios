@@ -45,10 +45,11 @@ class CastProxyVoteViewModel: MxViewModel<CastProxyVoteIntent, CastProxyVoteResu
                     voterAccountName: voterAccountName,
                     proxyVoteAccountName: proxyVoteAccountName,
                     authorizingPrivateKey: privateKey
-                ).map { result in
+                ).flatMap { result in
                     if (result.success()) {
-                        // TODO: transaction log
-                        return CastProxyVoteResult.onSuccess
+                        return self.insertTransactionLog.insert(
+                            transactionId: result.data!.transactionId
+                        ).map { _ in CastProxyVoteResult.onSuccess }
                     } else {
                         return self.voteError(voteError: result.error!)
                     }
@@ -59,12 +60,12 @@ class CastProxyVoteViewModel: MxViewModel<CastProxyVoteIntent, CastProxyVoteResu
             .startWith(CastProxyVoteResult.onProgress)
     }
     
-    private func voteError(voteError: VoteError) -> CastProxyVoteResult {
+    private func voteError(voteError: VoteError) -> Single<CastProxyVoteResult> {
         switch voteError {
         case .withLog(let body):
-            return CastProxyVoteResult.viewLog(log: body)
+            return Single.just(CastProxyVoteResult.viewLog(log: body))
         case .generic:
-            return CastProxyVoteResult.onGenericError
+            return Single.just(CastProxyVoteResult.onGenericError)
         }
     }
 }

@@ -6,6 +6,7 @@ class VoteViewModel: MxViewModel<VoteIntent, VoteResult, VoteViewState> {
     private let getAccoutByName = GetAccountByName()
     private let eosKeyManagerImpl = EosKeyManagerImpl()
     private let voteRequest = VoteRequestImpl()
+    private let insertTransactionLog = InsertTransactionLog()
     
     override func dispatcher(intent: VoteIntent) -> Observable<VoteResult> {
         switch intent {
@@ -72,9 +73,11 @@ class VoteViewModel: MxViewModel<VoteIntent, VoteResult, VoteViewState> {
     private func voteForUs(accountName: String) -> Observable<VoteResult> {
         return getAccoutByName.select(accountName: accountName).flatMap { accountEntity in
             return self.eosKeyManagerImpl.getPrivateKey(eosPublicKey: accountEntity.publicKey).flatMap { privateKey in
-                return self.voteRequest.voteForProducer(voterAccountName: accountName, producers: [R.string.appStrings.app_block_producer_name()], authorizingPrivateKey: privateKey).map { result in
+                return self.voteRequest.voteForProducer(voterAccountName: accountName, producers: [R.string.appStrings.app_block_producer_name()], authorizingPrivateKey: privateKey).flatMap { result in
                     if (result.success()) {
-                        return VoteResult.onVoteForUsSuccess
+                        return self.insertTransactionLog.insert(
+                            transactionId: result.data!.transactionId
+                        ).map { _ in VoteResult.onVoteForUsSuccess } 
                     } else {
                         return self.voteForUsError(voteError: result.error!)
                     }
@@ -83,12 +86,12 @@ class VoteViewModel: MxViewModel<VoteIntent, VoteResult, VoteViewState> {
         }.asObservable().startWith(VoteResult.onVoteForUsProgress)
     }
     
-    private func voteForUsError(voteError: VoteError) -> VoteResult {
+    private func voteForUsError(voteError: VoteError) -> Single<VoteResult> {
         switch voteError {
         case .withLog(let body):
-            return VoteResult.onVoteForUsError(log: body)
+            return Single.just(VoteResult.onVoteForUsError(log: body))
         case .generic:
-            return VoteResult.onVoteForUsGenericError
+            return Single.just(VoteResult.onVoteForUsGenericError)
         }
     }
 }

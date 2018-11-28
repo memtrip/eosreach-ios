@@ -60,12 +60,13 @@ class CastProducersVoteViewModel: MxViewModel<CastProducersVoteIntent, CastProdu
                     voterAccountName: voterAccountName,
                     producers: sortedBlockProducers,
                     authorizingPrivateKey: privateKey
-                ).map { result in
+                ).flatMap { result in
                     if (result.success()) {
-                        // TODO: transaction log
-                        return CastProducersVoteResult.onSuccess
+                        return self.insertTransactionLog.insert(
+                            transactionId: result.data!.transactionId
+                        ).map { _ in CastProducersVoteResult.onSuccess }
                     } else {
-                        return self.voteError(voteError: result.error!)
+                        return Single.just(self.voteError(voteError: result.error!))
                     }
                 }.catchErrorJustReturn(CastProducersVoteResult.onGenericError)
             }.catchErrorJustReturn(CastProducersVoteResult.onGenericError)

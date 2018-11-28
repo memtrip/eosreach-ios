@@ -7,6 +7,7 @@ class ConfirmRamViewModel: MxViewModel<ConfirmRamIntent, ConfirmRamResult, Confi
     private let ramRequest = RamRequestImpl()
     private let getAccountByName = GetAccountByName()
     private let eosKeyManager = EosKeyManagerImpl()
+    private let insertTransactionLog = InsertTransactionLog()
     
     override func dispatcher(intent: ConfirmRamIntent) -> Observable<ConfirmRamResult> {
         switch intent {
@@ -63,11 +64,13 @@ class ConfirmRamViewModel: MxViewModel<ConfirmRamIntent, ConfirmRamResult, Confi
         quantity: Double,
         privaeKey: EOSPrivateKey
     ) -> Single<ConfirmRamResult> {
-        return ramRequest.buy(receiver: account, kb: quantity, authorizingPrivateKey: privaeKey).map { result in
+        return ramRequest.buy(receiver: account, kb: quantity, authorizingPrivateKey: privaeKey).flatMap { result in
             if (result.success()) {
-                return ConfirmRamResult.onSuccess(actionReceipt: result.data!)
+                return self.insertTransactionLog.insert(
+                    transactionId: result.data!.transactionId
+                ).map { _ in ConfirmRamResult.onSuccess(actionReceipt: result.data!) }
             } else {
-                return self.ramError(ramError: result.error!)
+                return Single.just(self.ramError(ramError: result.error!))
             }
         }.catchErrorJustReturn(ConfirmRamResult.genericError)
     }
@@ -77,11 +80,13 @@ class ConfirmRamViewModel: MxViewModel<ConfirmRamIntent, ConfirmRamResult, Confi
         quantity: Double,
         privaeKey: EOSPrivateKey
     ) -> Single<ConfirmRamResult> {
-        return ramRequest.sell(account: account, kb: quantity, authorizingPrivateKey: privaeKey).map { result in
+        return ramRequest.sell(account: account, kb: quantity, authorizingPrivateKey: privaeKey).flatMap { result in
             if (result.success()) {
-                return ConfirmRamResult.onSuccess(actionReceipt: result.data!)
+                return self.insertTransactionLog.insert(
+                    transactionId: result.data!.transactionId
+                ).map { _ in ConfirmRamResult.onSuccess(actionReceipt: result.data!) }
             } else {
-                return self.ramError(ramError: result.error!)
+                return Single.just(self.ramError(ramError: result.error!))
             }
         }.catchErrorJustReturn(ConfirmRamResult.genericError)
     }

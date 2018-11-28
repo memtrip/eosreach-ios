@@ -4,16 +4,23 @@ import RealmSwift
 
 class InsertTransactionLog {
     
-    func insert(transactionLogEntities: [TransactionLogEntity]) -> Completable {
-        return Completable.create { completable in
+    func insert(transactionId: String) -> Single<String> {
+        let transactionLogEntity = TransactionLogEntity()
+        transactionLogEntity.transactionId = transactionId
+        transactionLogEntity.formattedDate = Date().fullDateTime()
+        return self.insertEntity(transactionEntity: transactionLogEntity)
+    }
+    
+    private func insertEntity(transactionEntity: TransactionLogEntity) -> Single<String> {
+        return Single.create { single in
             do {
                 let realm = try Realm()
                 try realm.write {
-                    realm.add(transactionLogEntities)
+                    realm.add(transactionEntity)
                 }
-                completable(.completed)
+                single(.success(transactionEntity.transactionId))
             } catch {
-                completable(.error(error))
+                single(.error(error))
             }
             return Disposables.create()
         }

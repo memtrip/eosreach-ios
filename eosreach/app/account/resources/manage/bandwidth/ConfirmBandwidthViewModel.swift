@@ -7,6 +7,7 @@ class ConfirmBandwidthViewModel: MxViewModel<ConfirmBandwidthIntent, ConfirmBand
     private let bandwidthRequest = BandwidthRequestImpl()
     private let getAccountByName = GetAccountByName()
     private let eosKeyManager = EosKeyManagerImpl()
+    private let insertTransactionLog = InsertTransactionLog()
     
     override func dispatcher(intent: ConfirmBandwidthIntent) -> Observable<ConfirmBandwidthResult> {
         switch intent {
@@ -104,17 +105,25 @@ class ConfirmBandwidthViewModel: MxViewModel<ConfirmBandwidthIntent, ConfirmBand
             cpuAmount: BalanceFormatter.formatEosBalance(balance: cpuAmount),
             authorizingPrivateKey: privateKey,
             transactionExpiry: Date.defaultTransactionExpiry()
-        ).map { response in
+        ).flatMap { response in
             if (response.success()) {
-                return ConfirmBandwidthResult.navigateToTransactionConfirmed(actionReceipt: response.data!)
-            } else {
-                switch response.error! {
-                case .transactionError(let body):
-                    return ConfirmBandwidthResult.withLog(log: body)
-                case .genericError:
-                    return ConfirmBandwidthResult.onError
+                return self.insertTransactionLog.insert(
+                    transactionId: response.data!.transactionId
+                ).map { _ in
+                    ConfirmBandwidthResult.navigateToTransactionConfirmed(actionReceipt: response.data!)
                 }
+            } else {
+                return Single.just(self.bandwidthError(bandwidthError: response.error!))
             }
+        }
+    }
+    
+    private func bandwidthError(bandwidthError: BandwidthError) -> ConfirmBandwidthResult {
+        switch bandwidthError {
+        case .transactionError(let body):
+            return ConfirmBandwidthResult.withLog(log: body)
+        case .genericError:
+            return ConfirmBandwidthResult.onError
         }
     }
 }

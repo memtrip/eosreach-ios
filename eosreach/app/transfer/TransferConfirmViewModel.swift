@@ -7,6 +7,7 @@ class TransferConfirmViewModel: MxViewModel<TransferConfirmIntent, TransferConfi
     private let getAccountByName = GetAccountByName()
     private let eosKeyManager = EosKeyManagerImpl()
     private let transferRequest = TransferRequestImpl()
+    private let insertTransactionLog = InsertTransactionLog()
     
     override func dispatcher(intent: TransferConfirmIntent) -> Observable<TransferConfirmResult> {
         switch intent {
@@ -54,13 +55,16 @@ class TransferConfirmViewModel: MxViewModel<TransferConfirmIntent, TransferConfi
                     quantity: quantity,
                     memo: memo,
                     authorizingPrivateKey: privateKey
-                ).map { response in
+                ).flatMap { response in
                     if (response.success()) {
-                        // TODO: insert to transaction log
-                        return TransferConfirmResult.onSuccess(actionReceipt: ActionReceipt(
-                            transactionId: response.data!.transaction_id,
-                            authorizingAccountName: fromAccount
-                        ))
+                        return self.insertTransactionLog.insert(
+                            transactionId: response.data!.transaction_id
+                        ).map { _ in
+                            TransferConfirmResult.onSuccess(actionReceipt: ActionReceipt(
+                                transactionId: response.data!.transaction_id,
+                                authorizingAccountName: fromAccount
+                            ))
+                        }
                     } else {
                         return self.transferError(transferError: response.error!)
                     }
@@ -69,12 +73,12 @@ class TransferConfirmViewModel: MxViewModel<TransferConfirmIntent, TransferConfi
         }.asObservable().startWith(TransferConfirmResult.onProgress)
     }
     
-    private func transferError(transferError: TransferError) -> TransferConfirmResult {
+    private func transferError(transferError: TransferError) -> Single<TransferConfirmResult> {
         switch transferError {
         case .generic:
-            return TransferConfirmResult.onError
+            return Single.just(TransferConfirmResult.onError)
         case .withLog(let log):
-            return TransferConfirmResult.errorWithLog(log: log)
+            return Single.just(TransferConfirmResult.errorWithLog(log: log))
         }
     }
 }
