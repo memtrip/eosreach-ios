@@ -17,6 +17,7 @@ class TransferConfirmViewModel: MxViewModel<TransferConfirmIntent, TransferConfi
             return just(TransferConfirmResult.populate(transferFormBundle: transferFormBundle))
         case .transfer(let transferFormBundle):
             return transfer(
+                contract: transferFormBundle.contractAccountBalance.contractName,
                 fromAccount: transferFormBundle.contractAccountBalance.accountName,
                 toAccount: transferFormBundle.toAccountName,
                 quantity: transferFormBundle.amount,
@@ -42,6 +43,7 @@ class TransferConfirmViewModel: MxViewModel<TransferConfirmIntent, TransferConfi
     }
     
     func transfer(
+        contract: String,
         fromAccount: String,
         toAccount: String,
         quantity: String,
@@ -50,6 +52,7 @@ class TransferConfirmViewModel: MxViewModel<TransferConfirmIntent, TransferConfi
         return getAccountByName.select(accountName: fromAccount).flatMap { accountEntity in
             return self.eosKeyManager.getPrivateKey(eosPublicKey: accountEntity.publicKey).flatMap { privateKey in
                 return self.transferRequest.transfer(
+                    contract: contract,
                     fromAccount: accountEntity.accountName,
                     toAccount: toAccount,
                     quantity: quantity,

@@ -4,7 +4,7 @@ import Material
 
 struct AccountAction {
     let tranactionId: String
-    let accountActionSequence: Int
+    let accountActionSequence: Int64
     let from: String
     let to: String
     let memo: String

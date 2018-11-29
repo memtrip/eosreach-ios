@@ -6,8 +6,8 @@ class ActionsViewModel: MxViewModel<ActionsIntent, ActionsResult, ActionsViewSta
     
     private let accountActionsRequest = AccountActionsRequestImpl()
     
-    private let ITEM_OFFSET = -1000
-    private let RECURSIVE_LIMIT = 10
+    private let ITEM_OFFSET: Int64 = -1000
+    private let RECURSIVE_LIMIT: Int64 = 10
     
     override func dispatcher(intent: ActionsIntent) -> Observable<ActionsResult> {
         switch intent {
@@ -56,8 +56,8 @@ class ActionsViewModel: MxViewModel<ActionsIntent, ActionsResult, ActionsViewSta
     
     private func getInitialActions(
         contractAccountBalance: ContractAccountBalance,
-        position: Int = -1,
-        recursivePosition: Int = 0
+        position: Int64 = -1,
+        recursivePosition: Int64 = 0
     ) -> Single<ActionsResult> {
         if (recursivePosition >= RECURSIVE_LIMIT) {
             return Single.just(ActionsResult.noResults)
@@ -91,7 +91,7 @@ class ActionsViewModel: MxViewModel<ActionsIntent, ActionsResult, ActionsViewSta
     private func getMoreActions(
         contractAccountBalance: ContractAccountBalance,
         lastAccountActionItem: AccountAction,
-        recursivePosition: Int = 0
+        recursivePosition: Int64 = 0
     ) -> Single<ActionsResult> {
         if (recursivePosition >= RECURSIVE_LIMIT) {
             // end

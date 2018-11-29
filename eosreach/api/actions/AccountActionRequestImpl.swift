@@ -8,8 +8,8 @@ class AccountActionsRequestImpl : AccountActionsRequest {
 
     func getActionsForAccountName(
         contractAccountBalance: ContractAccountBalance,
-        position: Int,
-        offset: Int
+        position: Int64,
+        offset: Int64
     ) -> Single<Result<AccountActionList, AccountActionsError>> {
         return historyApi.getActions(body: GetActions(
             account_name: contractAccountBalance.accountName,

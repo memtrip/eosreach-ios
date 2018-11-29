@@ -5,6 +5,7 @@ import eosswift
 protocol TransferRequest {
 
     func transfer(
+        contract: String,
         fromAccount: String,
         toAccount: String,
         quantity: String,

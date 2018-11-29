@@ -7,6 +7,7 @@ class TransferRequestImpl : TransferRequest {
     let transferChain = TransferChain(chainApi: ChainApiModule.create())
 
     func transfer(
+        contract: String,
         fromAccount: String,
         toAccount: String,
         quantity: String,
@@ -14,6 +15,7 @@ class TransferRequestImpl : TransferRequest {
         authorizingPrivateKey: EOSPrivateKey
     ) -> Single<Result<TransactionCommitted, TransferError>> {
         return transferChain.transfer(
+            contract: contract,
             args: TransferChain.Args(
                 fromAccount: fromAccount,
                 toAccount: toAccount,
