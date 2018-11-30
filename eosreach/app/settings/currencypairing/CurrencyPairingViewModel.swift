@@ -22,8 +22,8 @@ class CurrencyPairingViewModel: MxViewModel<CurrencyPairingIntent, CurrencyPairi
             return CurrencyPairingViewState.onProgress
         case .onError(let message):
             return CurrencyPairingViewState.onError(message: message)
-        case .onSuccess:
-            return CurrencyPairingViewState.onSuccess
+        case .onSuccess(let symbol):
+            return CurrencyPairingViewState.onSuccess(symbol: symbol)
         }
     }
     
@@ -35,7 +35,7 @@ class CurrencyPairingViewModel: MxViewModel<CurrencyPairingIntent, CurrencyPairi
                 if (eosPrice.unavailable) {
                     return CurrencyPairingResult.onError(message: R.string.settingsStrings.settings_currency_pairing_error_generic(currencyCode))
                 } else {
-                    return CurrencyPairingResult.onSuccess
+                    return CurrencyPairingResult.onSuccess(symbol: eosPrice.currency)
                 }
             }.catchErrorJustReturn(CurrencyPairingResult.onError(
                 message: R.string.settingsStrings.settings_currency_pairing_error_generic(currencyCode)))

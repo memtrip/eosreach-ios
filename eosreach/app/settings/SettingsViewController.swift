@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SettingsViewController: MxViewController<SettingsIntent, SettingsResult, SettingsViewState, SettingsViewModel> {
+class SettingsViewController: MxViewController<SettingsIntent, SettingsResult, SettingsViewState, SettingsViewModel>, SettingsDelegate {
 
     @IBOutlet weak var toolbar: ReachToolbar!
     @IBOutlet weak var memtripButton: ReachButton!
@@ -102,5 +102,18 @@ class SettingsViewController: MxViewController<SettingsIntent, SettingsResult, S
     }
     
     @objc dynamic func clearData() {
+    }
+    
+    //
+    // MARK :- SettingsDelegate
+    //
+    func currencyUpdate(symbol: String) {
+        currencyLabel.text = symbol
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == R.segue.settingsViewController.settingsToCurrencyPairing.identifier) {
+            (segue.destination as! CurrencyPairingViewController).delegate = self
+        }
     }
 }

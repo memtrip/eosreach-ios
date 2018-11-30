@@ -10,6 +10,8 @@ class CurrencyPairingViewController: MxViewController<CurrencyPairingIntent, Cur
     @IBOutlet weak var updatePairButton: ReachPrimaryButton!
     @IBOutlet weak var activityIndicator: ReachActivityIndicator!
 
+    var delegate: SettingsDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         toolbar.title = R.string.settingsStrings.settings_currency_pairing_title()
@@ -48,9 +50,13 @@ class CurrencyPairingViewController: MxViewController<CurrencyPairingIntent, Cur
             showOKDialog(
                 title: R.string.appStrings.app_dialog_error_default_title(),
                 message: message)
-        case .onSuccess:
+        case .onSuccess(let symbol):
             activityIndicator.stop()
             updatePairButton.visible()
+            if let delegate = delegate {
+                delegate.currencyUpdate(symbol: symbol)
+            }
+            close()
         }
     }
 

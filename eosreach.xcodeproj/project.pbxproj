@@ -321,6 +321,7 @@
 		3CB1D72121A8619F00C87EC9 /* TransferFormBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D72021A8619F00C87EC9 /* TransferFormBundle.swift */; };
 		3CB1D72521A869D600C87EC9 /* TransferBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D72421A869D600C87EC9 /* TransferBundle.swift */; };
 		3CB1D72721A86B9100C87EC9 /* TransferStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CB1D72621A86B9100C87EC9 /* TransferStrings.strings */; };
+		3CB403A121B1B98D00407F4C /* SettingsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB403A021B1B98D00407F4C /* SettingsDelegate.swift */; };
 		3CC76EF821ADB923002068E8 /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1A972C21A41EFD00C30A75 /* eosswift.framework */; };
 		3CC9A389219DA76C0002A25F /* BlockProducerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */; };
 		3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */; };
@@ -738,6 +739,7 @@
 		3CB1D72021A8619F00C87EC9 /* TransferFormBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFormBundle.swift; sourceTree = "<group>"; };
 		3CB1D72421A869D600C87EC9 /* TransferBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferBundle.swift; sourceTree = "<group>"; };
 		3CB1D72621A86B9100C87EC9 /* TransferStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TransferStrings.strings; sourceTree = "<group>"; };
+		3CB403A021B1B98D00407F4C /* SettingsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDelegate.swift; sourceTree = "<group>"; };
 		3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerDetails.swift; sourceTree = "<group>"; };
 		3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRequest.swift; sourceTree = "<group>"; };
 		3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRequestImpl.swift; sourceTree = "<group>"; };
@@ -991,6 +993,7 @@
 				3C340FC22193612A0017BEF9 /* SettingsViewModel.swift */,
 				3C340FC32193612A0017BEF9 /* SettingsViewState.swift */,
 				3C340FCB219368C30017BEF9 /* SettingsStrings.strings */,
+				3CB403A021B1B98D00407F4C /* SettingsDelegate.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -2181,6 +2184,7 @@
 				3C0700B721A74FE8008F63D2 /* ManageRamIntent.swift in Sources */,
 				3CC9A3C3219DC4390002A25F /* RegisteredBlockProducerRequest.swift in Sources */,
 				3CB1D71D21A85B5100C87EC9 /* TransferResult.swift in Sources */,
+				3CB403A121B1B98D00407F4C /* SettingsDelegate.swift in Sources */,
 				3C9BFB8C219B367B00589936 /* AccountBalanceRequest.swift in Sources */,
 				3C0EC81421933B6F00562A1B /* ReachActivityIndicator.swift in Sources */,
 				3C0700C921A75138008F63D2 /* SellRamViewController.swift in Sources */,
