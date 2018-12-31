@@ -322,7 +322,6 @@
 		3CB1D72521A869D600C87EC9 /* TransferBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D72421A869D600C87EC9 /* TransferBundle.swift */; };
 		3CB1D72721A86B9100C87EC9 /* TransferStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CB1D72621A86B9100C87EC9 /* TransferStrings.strings */; };
 		3CB403A121B1B98D00407F4C /* SettingsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB403A021B1B98D00407F4C /* SettingsDelegate.swift */; };
-		3CC76EF821ADB923002068E8 /* eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1A972C21A41EFD00C30A75 /* eosswift.framework */; };
 		3CC9A389219DA76C0002A25F /* BlockProducerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */; };
 		3CC9A38B219DA7EB0002A25F /* BlockProducerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */; };
 		3CC9A38D219DA8480002A25F /* BlockProducerRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */; };
@@ -520,7 +519,6 @@
 		3C1A972021A3D03100C30A75 /* ActiveBlockProducersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersCell.swift; sourceTree = "<group>"; };
 		3C1A972421A3D13E00C30A75 /* ActiveBlockProducerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActiveBlockProducerCell.xib; sourceTree = "<group>"; };
 		3C1A972621A3DABD00C30A75 /* BlockProducerStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = BlockProducerStrings.strings; sourceTree = "<group>"; };
-		3C1A972C21A41EFD00C30A75 /* eosswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eosswift.framework; sourceTree = "<group>"; };
 		3C1A973021A4755D00C30A75 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 		3C1A973421A4844200C30A75 /* AccountNavigationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNavigationUseCase.swift; sourceTree = "<group>"; };
 		3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerTableView.swift; sourceTree = "<group>"; };
@@ -836,7 +834,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC76EF821ADB923002068E8 /* eosswift.framework in Frameworks */,
 				3C291BA1219D572F00562448 /* Pods_eosreach.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1066,7 +1063,6 @@
 		3C5799E42191D39A00B9A3D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C1A972C21A41EFD00C30A75 /* eosswift.framework */,
 				3C291BA0219D572F00562448 /* Pods_eosreach.framework */,
 				B747F913CEFFA4BFF47AA857 /* Pods_eosreach.framework */,
 				7E68380B3778BFD3FC51ED1A /* Pods_eosreach_eosreachTests.framework */,
@@ -2000,6 +1996,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/eosswift/eosswift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
@@ -2020,6 +2017,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/eosswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
@@ -2050,6 +2048,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/eosswift/eosswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -2068,6 +2067,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/eosswift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

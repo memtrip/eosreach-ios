@@ -57,7 +57,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         return Observable.merge(
             Observable.just(AccountIntent.start(accountBundle: accountBundle)),
             errorView.retryClick().map {
-                return AccountIntent.retry(accountBundle: self.accountBundle)
+                AccountIntent.retry(accountBundle: self.accountBundle)
             },
             navigationMenuItem.rx.tap.map {
                 AccountIntent.openNavigation
@@ -66,13 +66,13 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
                 AccountIntent.navigateToExplore
             },
             self.rx.methodInvoked(#selector(AccountViewController.importKeyNavigationSelected)).map { _ in
-                return AccountIntent.navigateToImportKey
+                AccountIntent.navigateToImportKey
             },
             self.rx.methodInvoked(#selector(AccountViewController.createAccountNavigationSelected)).map { _ in
-                return AccountIntent.navigateToCreateAccount
+                AccountIntent.navigateToCreateAccount
             },
             self.rx.methodInvoked(#selector(AccountViewController.settingsNavigationSelected)).map { _ in
-                return AccountIntent.navigateToSettings
+                AccountIntent.navigateToSettings
             },
             self.rx.methodInvoked(#selector(AccountViewController.accountsNavigationSelected(accountName:))).map { accountNameInArgs in
                 self.loaded = false
@@ -82,7 +82,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
                     accountPage: AccountPage.balances))
             },
             self.rx.methodInvoked(#selector(AccountViewController.refreshAccountVote)).map { _ in
-                return AccountIntent.refresh(accountBundle: AccountBundle(
+                AccountIntent.refresh(accountBundle: AccountBundle(
                     accountName: self.accountBundle.accountName,
                     readOnly: self.accountBundle.readOnly,
                     accountPage: AccountPage.vote
