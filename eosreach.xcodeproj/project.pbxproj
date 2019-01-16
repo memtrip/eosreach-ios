@@ -144,6 +144,50 @@
 		3C4406A921A1ED9B003BBFA9 /* BalanceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4406A821A1ED9B003BBFA9 /* BalanceTableView.swift */; };
 		3C4406AB21A1EDBC003BBFA9 /* BalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4406AA21A1EDBC003BBFA9 /* BalanceCell.swift */; };
 		3C4406AD21A1EED2003BBFA9 /* BalanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4406AC21A1EED2003BBFA9 /* BalanceCell.xib */; };
+		3C44F2DD21EFAE8800A0720B /* StubUrlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2DC21EFAE8800A0720B /* StubUrlProtocol.swift */; };
+		3C44F2E321EFDC5200A0720B /* StubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E221EFDC5200A0720B /* StubApi.swift */; };
+		3C44F2E521EFDC8000A0720B /* StubMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E421EFDC8000A0720B /* StubMatcher.swift */; };
+		3C44F2E721EFDCE100A0720B /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E621EFDCE100A0720B /* Stub.swift */; };
+		3C44F2E921EFDCF100A0720B /* StubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E821EFDCF100A0720B /* StubRequest.swift */; };
+		3C44F2EC21EFDD7D00A0720B /* BasicStubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2EB21EFDD7D00A0720B /* BasicStubResponse.swift */; };
+		3C44F2EE21EFE02400A0720B /* StubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2ED21EFE02400A0720B /* StubResponse.swift */; };
+		3C44F2F021EFE15000A0720B /* ErrorOnFirstStubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2EF21EFE15000A0720B /* ErrorOnFirstStubRequest.swift */; };
+		3C44F2F421EFE60100A0720B /* happy_path_get_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F321EFE60100A0720B /* happy_path_get_info.json */; };
+		3C44F2F621EFE63D00A0720B /* happy_path_create_account.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F521EFE63D00A0720B /* happy_path_create_account.json */; };
+		3C44F2F821EFE66300A0720B /* happy_path_get_account_core_liquid_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F721EFE66300A0720B /* happy_path_get_account_core_liquid_balance.json */; };
+		3C44F2FA21EFE68000A0720B /* happy_path_get_account_refund.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F921EFE68000A0720B /* happy_path_get_account_refund.json */; };
+		3C44F2FC21EFE6A000A0720B /* happy_path_get_account_staked.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2FB21EFE6A000A0720B /* happy_path_get_account_staked.json */; };
+		3C44F2FE21EFE6BE00A0720B /* happy_path_get_account_unstaked.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2FD21EFE6BE00A0720B /* happy_path_get_account_unstaked.json */; };
+		3C44F31421EFE71F00A0720B /* happy_path_get_table_rows_producerjson_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2FF21EFE71D00A0720B /* happy_path_get_table_rows_producerjson_empty.json */; };
+		3C44F31521EFE71F00A0720B /* happy_path_get_table_rows_customtoken.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30021EFE71D00A0720B /* happy_path_get_table_rows_customtoken.json */; };
+		3C44F31621EFE71F00A0720B /* happy_path_get_producers.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30121EFE71D00A0720B /* happy_path_get_producers.json */; };
+		3C44F31721EFE71F00A0720B /* happy_path_get_table_rows_delegated_bandwidth.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30221EFE71D00A0720B /* happy_path_get_table_rows_delegated_bandwidth.json */; };
+		3C44F31821EFE71F00A0720B /* happy_path_price.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30321EFE71D00A0720B /* happy_path_price.json */; };
+		3C44F31921EFE71F00A0720B /* happy_path_get_table_rows_regproxyinfo_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30421EFE71D00A0720B /* happy_path_get_table_rows_regproxyinfo_single.json */; };
+		3C44F31A21EFE71F00A0720B /* happy_path_get_table_rows_regproxyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30521EFE71D00A0720B /* happy_path_get_table_rows_regproxyinfo.json */; };
+		3C44F31B21EFE71F00A0720B /* happy_path_get_empty_currency_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30621EFE71D00A0720B /* happy_path_get_empty_currency_balance.json */; };
+		3C44F31C21EFE71F00A0720B /* happy_path_get_account_voter_info_proxy_vote.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30721EFE71E00A0720B /* happy_path_get_account_voter_info_proxy_vote.json */; };
+		3C44F31D21EFE71F00A0720B /* happy_path_get_key_accounts_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30821EFE71E00A0720B /* happy_path_get_key_accounts_single.json */; };
+		3C44F31E21EFE71F00A0720B /* happy_path_get_sys_currency_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30921EFE71E00A0720B /* happy_path_get_sys_currency_balance.json */; };
+		3C44F31F21EFE71F00A0720B /* happy_path_get_key_accounts_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30A21EFE71E00A0720B /* happy_path_get_key_accounts_empty.json */; };
+		3C44F32021EFE71F00A0720B /* happy_path_get_actions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30B21EFE71E00A0720B /* happy_path_get_actions.json */; };
+		3C44F32121EFE71F00A0720B /* happy_path_get_table_rows_producerjson_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30C21EFE71E00A0720B /* happy_path_get_table_rows_producerjson_single.json */; };
+		3C44F32221EFE71F00A0720B /* happy_path_get_account_voter_info_no_vote.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30D21EFE71E00A0720B /* happy_path_get_account_voter_info_no_vote.json */; };
+		3C44F32321EFE71F00A0720B /* happy_path_get_table_rows_producerjson.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30E21EFE71E00A0720B /* happy_path_get_table_rows_producerjson.json */; };
+		3C44F32421EFE71F00A0720B /* happy_path_get_key_accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30F21EFE71E00A0720B /* happy_path_get_key_accounts.json */; };
+		3C44F32521EFE71F00A0720B /* happy_path_get_table_rows_delegated_bandwidth_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F31021EFE71E00A0720B /* happy_path_get_table_rows_delegated_bandwidth_empty.json */; };
+		3C44F32621EFE71F00A0720B /* happy_path_push_transaction_log.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F31121EFE71F00A0720B /* happy_path_push_transaction_log.json */; };
+		3C44F32721EFE71F00A0720B /* happy_path_get_edna_currency_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F31221EFE71F00A0720B /* happy_path_get_edna_currency_balance.json */; };
+		3C44F32821EFE71F00A0720B /* happy_path_get_account_voter_info_producer_vote.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F31321EFE71F00A0720B /* happy_path_get_account_voter_info_producer_vote.json */; };
+		3C44F32D21EFE7A000A0720B /* error_push_transaction_log.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F32B21EFE7A000A0720B /* error_push_transaction_log.json */; };
+		3C44F32E21EFE7A000A0720B /* error_path_get_key_accounts_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F32C21EFE7A000A0720B /* error_path_get_key_accounts_empty.json */; };
+		3C44F33621EFE7A600A0720B /* request_get_table_rows_regproxyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F32F21EFE7A600A0720B /* request_get_table_rows_regproxyinfo.json */; };
+		3C44F33721EFE7A600A0720B /* request_get_table_rows_producerjson.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33021EFE7A600A0720B /* request_get_table_rows_producerjson.json */; };
+		3C44F33821EFE7A600A0720B /* request_get_currency_balance_edna.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33121EFE7A600A0720B /* request_get_currency_balance_edna.json */; };
+		3C44F33921EFE7A600A0720B /* request_get_table_rows_producerjson_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33221EFE7A600A0720B /* request_get_table_rows_producerjson_single.json */; };
+		3C44F33A21EFE7A600A0720B /* request_get_table_rows_delegated_bandwidth.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33321EFE7A600A0720B /* request_get_table_rows_delegated_bandwidth.json */; };
+		3C44F33B21EFE7A600A0720B /* request_get_table_rows_regproxyinfo_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33421EFE7A600A0720B /* request_get_table_rows_regproxyinfo_single.json */; };
+		3C44F33C21EFE7A600A0720B /* request_get_table_rows_customtoken.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33521EFE7A600A0720B /* request_get_table_rows_customtoken.json */; };
 		3C4C5E7121AEF52B00C219C4 /* TransactionHistoryIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E6C21AEF52A00C219C4 /* TransactionHistoryIntent.swift */; };
 		3C4C5E7221AEF52B00C219C4 /* TransactionHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E6D21AEF52A00C219C4 /* TransactionHistoryViewModel.swift */; };
 		3C4C5E7321AEF52B00C219C4 /* TransactionHistoryViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E6E21AEF52A00C219C4 /* TransactionHistoryViewState.swift */; };
@@ -556,6 +600,50 @@
 		3C4406A821A1ED9B003BBFA9 /* BalanceTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableView.swift; sourceTree = "<group>"; };
 		3C4406AA21A1EDBC003BBFA9 /* BalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCell.swift; sourceTree = "<group>"; };
 		3C4406AC21A1EED2003BBFA9 /* BalanceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceCell.xib; sourceTree = "<group>"; };
+		3C44F2DC21EFAE8800A0720B /* StubUrlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUrlProtocol.swift; sourceTree = "<group>"; };
+		3C44F2E221EFDC5200A0720B /* StubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubApi.swift; sourceTree = "<group>"; };
+		3C44F2E421EFDC8000A0720B /* StubMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubMatcher.swift; sourceTree = "<group>"; };
+		3C44F2E621EFDCE100A0720B /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
+		3C44F2E821EFDCF100A0720B /* StubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubRequest.swift; sourceTree = "<group>"; };
+		3C44F2EB21EFDD7D00A0720B /* BasicStubResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStubResponse.swift; sourceTree = "<group>"; };
+		3C44F2ED21EFE02400A0720B /* StubResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubResponse.swift; sourceTree = "<group>"; };
+		3C44F2EF21EFE15000A0720B /* ErrorOnFirstStubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorOnFirstStubRequest.swift; sourceTree = "<group>"; };
+		3C44F2F321EFE60100A0720B /* happy_path_get_info.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_info.json; sourceTree = "<group>"; };
+		3C44F2F521EFE63D00A0720B /* happy_path_create_account.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_create_account.json; sourceTree = "<group>"; };
+		3C44F2F721EFE66300A0720B /* happy_path_get_account_core_liquid_balance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_core_liquid_balance.json; sourceTree = "<group>"; };
+		3C44F2F921EFE68000A0720B /* happy_path_get_account_refund.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_refund.json; sourceTree = "<group>"; };
+		3C44F2FB21EFE6A000A0720B /* happy_path_get_account_staked.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_staked.json; sourceTree = "<group>"; };
+		3C44F2FD21EFE6BE00A0720B /* happy_path_get_account_unstaked.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_unstaked.json; sourceTree = "<group>"; };
+		3C44F2FF21EFE71D00A0720B /* happy_path_get_table_rows_producerjson_empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_producerjson_empty.json; sourceTree = "<group>"; };
+		3C44F30021EFE71D00A0720B /* happy_path_get_table_rows_customtoken.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_customtoken.json; sourceTree = "<group>"; };
+		3C44F30121EFE71D00A0720B /* happy_path_get_producers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_producers.json; sourceTree = "<group>"; };
+		3C44F30221EFE71D00A0720B /* happy_path_get_table_rows_delegated_bandwidth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_delegated_bandwidth.json; sourceTree = "<group>"; };
+		3C44F30321EFE71D00A0720B /* happy_path_price.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_price.json; sourceTree = "<group>"; };
+		3C44F30421EFE71D00A0720B /* happy_path_get_table_rows_regproxyinfo_single.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_regproxyinfo_single.json; sourceTree = "<group>"; };
+		3C44F30521EFE71D00A0720B /* happy_path_get_table_rows_regproxyinfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_regproxyinfo.json; sourceTree = "<group>"; };
+		3C44F30621EFE71D00A0720B /* happy_path_get_empty_currency_balance.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_empty_currency_balance.json; sourceTree = "<group>"; };
+		3C44F30721EFE71E00A0720B /* happy_path_get_account_voter_info_proxy_vote.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_account_voter_info_proxy_vote.json; sourceTree = "<group>"; };
+		3C44F30821EFE71E00A0720B /* happy_path_get_key_accounts_single.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_key_accounts_single.json; sourceTree = "<group>"; };
+		3C44F30921EFE71E00A0720B /* happy_path_get_sys_currency_balance.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_sys_currency_balance.json; sourceTree = "<group>"; };
+		3C44F30A21EFE71E00A0720B /* happy_path_get_key_accounts_empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_key_accounts_empty.json; sourceTree = "<group>"; };
+		3C44F30B21EFE71E00A0720B /* happy_path_get_actions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_actions.json; sourceTree = "<group>"; };
+		3C44F30C21EFE71E00A0720B /* happy_path_get_table_rows_producerjson_single.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_producerjson_single.json; sourceTree = "<group>"; };
+		3C44F30D21EFE71E00A0720B /* happy_path_get_account_voter_info_no_vote.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_account_voter_info_no_vote.json; sourceTree = "<group>"; };
+		3C44F30E21EFE71E00A0720B /* happy_path_get_table_rows_producerjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_producerjson.json; sourceTree = "<group>"; };
+		3C44F30F21EFE71E00A0720B /* happy_path_get_key_accounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_key_accounts.json; sourceTree = "<group>"; };
+		3C44F31021EFE71E00A0720B /* happy_path_get_table_rows_delegated_bandwidth_empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_delegated_bandwidth_empty.json; sourceTree = "<group>"; };
+		3C44F31121EFE71F00A0720B /* happy_path_push_transaction_log.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_push_transaction_log.json; sourceTree = "<group>"; };
+		3C44F31221EFE71F00A0720B /* happy_path_get_edna_currency_balance.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_edna_currency_balance.json; sourceTree = "<group>"; };
+		3C44F31321EFE71F00A0720B /* happy_path_get_account_voter_info_producer_vote.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_account_voter_info_producer_vote.json; sourceTree = "<group>"; };
+		3C44F32B21EFE7A000A0720B /* error_push_transaction_log.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error_push_transaction_log.json; sourceTree = "<group>"; };
+		3C44F32C21EFE7A000A0720B /* error_path_get_key_accounts_empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error_path_get_key_accounts_empty.json; sourceTree = "<group>"; };
+		3C44F32F21EFE7A600A0720B /* request_get_table_rows_regproxyinfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = request_get_table_rows_regproxyinfo.json; sourceTree = "<group>"; };
+		3C44F33021EFE7A600A0720B /* request_get_table_rows_producerjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = request_get_table_rows_producerjson.json; sourceTree = "<group>"; };
+		3C44F33121EFE7A600A0720B /* request_get_currency_balance_edna.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = request_get_currency_balance_edna.json; sourceTree = "<group>"; };
+		3C44F33221EFE7A600A0720B /* request_get_table_rows_producerjson_single.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = request_get_table_rows_producerjson_single.json; sourceTree = "<group>"; };
+		3C44F33321EFE7A600A0720B /* request_get_table_rows_delegated_bandwidth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = request_get_table_rows_delegated_bandwidth.json; sourceTree = "<group>"; };
+		3C44F33421EFE7A600A0720B /* request_get_table_rows_regproxyinfo_single.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = request_get_table_rows_regproxyinfo_single.json; sourceTree = "<group>"; };
+		3C44F33521EFE7A600A0720B /* request_get_table_rows_customtoken.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = request_get_table_rows_customtoken.json; sourceTree = "<group>"; };
 		3C4C5E6C21AEF52A00C219C4 /* TransactionHistoryIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHistoryIntent.swift; sourceTree = "<group>"; };
 		3C4C5E6D21AEF52A00C219C4 /* TransactionHistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewModel.swift; sourceTree = "<group>"; };
 		3C4C5E6E21AEF52A00C219C4 /* TransactionHistoryViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewState.swift; sourceTree = "<group>"; };
@@ -1007,11 +1095,102 @@
 			path = currencypairing;
 			sourceTree = "<group>";
 		};
+		3C44F2DB21EFAE7300A0720B /* stub */ = {
+			isa = PBXGroup;
+			children = (
+				3C44F2EA21EFDCFF00A0720B /* request */,
+				3C44F2DC21EFAE8800A0720B /* StubUrlProtocol.swift */,
+				3C44F2E221EFDC5200A0720B /* StubApi.swift */,
+				3C44F2E421EFDC8000A0720B /* StubMatcher.swift */,
+				3C44F2E621EFDCE100A0720B /* Stub.swift */,
+			);
+			path = stub;
+			sourceTree = "<group>";
+		};
+		3C44F2EA21EFDCFF00A0720B /* request */ = {
+			isa = PBXGroup;
+			children = (
+				3C44F2E821EFDCF100A0720B /* StubRequest.swift */,
+				3C44F2EB21EFDD7D00A0720B /* BasicStubResponse.swift */,
+				3C44F2ED21EFE02400A0720B /* StubResponse.swift */,
+				3C44F2EF21EFE15000A0720B /* ErrorOnFirstStubRequest.swift */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		3C44F2F121EFE5D700A0720B /* stub */ = {
+			isa = PBXGroup;
+			children = (
+				3C44F32921EFE75400A0720B /* error */,
+				3C44F2F221EFE5EE00A0720B /* happypath */,
+				3C44F32A21EFE75A00A0720B /* request */,
+			);
+			path = stub;
+			sourceTree = "<group>";
+		};
+		3C44F2F221EFE5EE00A0720B /* happypath */ = {
+			isa = PBXGroup;
+			children = (
+				3C44F30D21EFE71E00A0720B /* happy_path_get_account_voter_info_no_vote.json */,
+				3C44F31321EFE71F00A0720B /* happy_path_get_account_voter_info_producer_vote.json */,
+				3C44F30721EFE71E00A0720B /* happy_path_get_account_voter_info_proxy_vote.json */,
+				3C44F30B21EFE71E00A0720B /* happy_path_get_actions.json */,
+				3C44F31221EFE71F00A0720B /* happy_path_get_edna_currency_balance.json */,
+				3C44F30621EFE71D00A0720B /* happy_path_get_empty_currency_balance.json */,
+				3C44F30A21EFE71E00A0720B /* happy_path_get_key_accounts_empty.json */,
+				3C44F30821EFE71E00A0720B /* happy_path_get_key_accounts_single.json */,
+				3C44F30F21EFE71E00A0720B /* happy_path_get_key_accounts.json */,
+				3C44F30121EFE71D00A0720B /* happy_path_get_producers.json */,
+				3C44F30921EFE71E00A0720B /* happy_path_get_sys_currency_balance.json */,
+				3C44F30021EFE71D00A0720B /* happy_path_get_table_rows_customtoken.json */,
+				3C44F31021EFE71E00A0720B /* happy_path_get_table_rows_delegated_bandwidth_empty.json */,
+				3C44F30221EFE71D00A0720B /* happy_path_get_table_rows_delegated_bandwidth.json */,
+				3C44F2FF21EFE71D00A0720B /* happy_path_get_table_rows_producerjson_empty.json */,
+				3C44F30C21EFE71E00A0720B /* happy_path_get_table_rows_producerjson_single.json */,
+				3C44F30E21EFE71E00A0720B /* happy_path_get_table_rows_producerjson.json */,
+				3C44F30421EFE71D00A0720B /* happy_path_get_table_rows_regproxyinfo_single.json */,
+				3C44F30521EFE71D00A0720B /* happy_path_get_table_rows_regproxyinfo.json */,
+				3C44F30321EFE71D00A0720B /* happy_path_price.json */,
+				3C44F31121EFE71F00A0720B /* happy_path_push_transaction_log.json */,
+				3C44F2F321EFE60100A0720B /* happy_path_get_info.json */,
+				3C44F2F521EFE63D00A0720B /* happy_path_create_account.json */,
+				3C44F2F721EFE66300A0720B /* happy_path_get_account_core_liquid_balance.json */,
+				3C44F2F921EFE68000A0720B /* happy_path_get_account_refund.json */,
+				3C44F2FB21EFE6A000A0720B /* happy_path_get_account_staked.json */,
+				3C44F2FD21EFE6BE00A0720B /* happy_path_get_account_unstaked.json */,
+			);
+			path = happypath;
+			sourceTree = "<group>";
+		};
+		3C44F32921EFE75400A0720B /* error */ = {
+			isa = PBXGroup;
+			children = (
+				3C44F32C21EFE7A000A0720B /* error_path_get_key_accounts_empty.json */,
+				3C44F32B21EFE7A000A0720B /* error_push_transaction_log.json */,
+			);
+			path = error;
+			sourceTree = "<group>";
+		};
+		3C44F32A21EFE75A00A0720B /* request */ = {
+			isa = PBXGroup;
+			children = (
+				3C44F33121EFE7A600A0720B /* request_get_currency_balance_edna.json */,
+				3C44F33521EFE7A600A0720B /* request_get_table_rows_customtoken.json */,
+				3C44F33321EFE7A600A0720B /* request_get_table_rows_delegated_bandwidth.json */,
+				3C44F33221EFE7A600A0720B /* request_get_table_rows_producerjson_single.json */,
+				3C44F33021EFE7A600A0720B /* request_get_table_rows_producerjson.json */,
+				3C44F33421EFE7A600A0720B /* request_get_table_rows_regproxyinfo_single.json */,
+				3C44F32F21EFE7A600A0720B /* request_get_table_rows_regproxyinfo.json */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
 		3C5799B82191D27D00B9A3D7 = {
 			isa = PBXGroup;
 			children = (
 				3C5799C32191D27D00B9A3D7 /* eosreach */,
 				3C5799D82191D27E00B9A3D7 /* eosreachTests */,
+				3C44F2F121EFE5D700A0720B /* stub */,
 				3C5799C22191D27D00B9A3D7 /* Products */,
 				3C5799E42191D39A00B9A3D7 /* Frameworks */,
 				4A8C8B683B63E7118BDE78A2 /* Pods */,
@@ -1032,6 +1211,7 @@
 			isa = PBXGroup;
 			children = (
 				3C9BFB73219B306A00589936 /* api */,
+				3C44F2DB21EFAE7300A0720B /* stub */,
 				3C8C6D9F2192D6AD00FC1A0D /* app */,
 				3C964C3A219441C8003663EF /* db */,
 				3C9BFBA2219B516400589936 /* formatter */,
@@ -1869,37 +2049,73 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C44F31521EFE71F00A0720B /* happy_path_get_table_rows_customtoken.json in Resources */,
 				3C340FBF219354E70017BEF9 /* WelcomeStrings.strings in Resources */,
 				3C4C5E7F21AEFC9300C219C4 /* TransactionHistoryCell.xib in Resources */,
 				3CC9E6FB21A5A35D0050BA57 /* VoteStrings.strings in Resources */,
+				3C44F31921EFE71F00A0720B /* happy_path_get_table_rows_regproxyinfo_single.json in Resources */,
+				3C44F33C21EFE7A600A0720B /* request_get_table_rows_customtoken.json in Resources */,
 				3C5799CF2191D27E00B9A3D7 /* LaunchScreen.storyboard in Resources */,
 				3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */,
 				3C8BD25B21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib in Resources */,
+				3C44F32E21EFE7A000A0720B /* error_path_get_key_accounts_empty.json in Resources */,
+				3C44F2F821EFE66300A0720B /* happy_path_get_account_core_liquid_balance.json in Resources */,
 				3CC9E72F21A5D03E0050BA57 /* CastProducersVoteCell.xib in Resources */,
 				3C0700AD21A74862008F63D2 /* RamStrings.strings in Resources */,
 				3C6DF76E21A082AC00ADA892 /* AccountStrings.strings in Resources */,
+				3C44F31A21EFE71F00A0720B /* happy_path_get_table_rows_regproxyinfo.json in Resources */,
+				3C44F33621EFE7A600A0720B /* request_get_table_rows_regproxyinfo.json in Resources */,
 				3C0ADD6A219F24380026649F /* AccountCardCell.xib in Resources */,
+				3C44F32021EFE71F00A0720B /* happy_path_get_actions.json in Resources */,
 				3CC9A3CA219DCF900002A25F /* ErrorView.xib in Resources */,
 				3C1F1F9A21A35B090075BD71 /* ActionsCell.xib in Resources */,
 				3C8BD23521A6C16F00ACFA70 /* BandwidthStrings.strings in Resources */,
+				3C44F33721EFE7A600A0720B /* request_get_table_rows_producerjson.json in Resources */,
 				3C07009521A71AA5008F63D2 /* TransactionLogViewController.xib in Resources */,
+				3C44F31721EFE71F00A0720B /* happy_path_get_table_rows_delegated_bandwidth.json in Resources */,
+				3C44F32121EFE71F00A0720B /* happy_path_get_table_rows_producerjson_single.json in Resources */,
+				3C44F31621EFE71F00A0720B /* happy_path_get_producers.json in Resources */,
+				3C44F32421EFE71F00A0720B /* happy_path_get_key_accounts.json in Resources */,
 				3C0A86AE21ABFD5D00F48302 /* KeyPairCell.xib in Resources */,
 				3C07009B21A72217008F63D2 /* TransactionReceiptViewController.xib in Resources */,
+				3C44F32721EFE71F00A0720B /* happy_path_get_edna_currency_balance.json in Resources */,
 				3CB1D72721A86B9100C87EC9 /* TransferStrings.strings in Resources */,
+				3C44F31821EFE71F00A0720B /* happy_path_price.json in Resources */,
+				3C44F32221EFE71F00A0720B /* happy_path_get_account_voter_info_no_vote.json in Resources */,
+				3C44F32521EFE71F00A0720B /* happy_path_get_table_rows_delegated_bandwidth_empty.json in Resources */,
+				3C44F2FC21EFE6A000A0720B /* happy_path_get_account_staked.json in Resources */,
 				3C1A972521A3D13E00C30A75 /* ActiveBlockProducerCell.xib in Resources */,
+				3C44F32621EFE71F00A0720B /* happy_path_push_transaction_log.json in Resources */,
+				3C44F32821EFE71F00A0720B /* happy_path_get_account_voter_info_producer_vote.json in Resources */,
+				3C44F31C21EFE71F00A0720B /* happy_path_get_account_voter_info_proxy_vote.json in Resources */,
 				3C4406AD21A1EED2003BBFA9 /* BalanceCell.xib in Resources */,
 				3CC9E72721A5C1010050BA57 /* ProxyVoterListCell.xib in Resources */,
 				3C964C4221944367003663EF /* AppStrings.strings in Resources */,
 				3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */,
+				3C44F31F21EFE71F00A0720B /* happy_path_get_key_accounts_empty.json in Resources */,
 				3CC9A3D7219DF2B90002A25F /* RegisteredBlockProducersCell.xib in Resources */,
+				3C44F33B21EFE7A600A0720B /* request_get_table_rows_regproxyinfo_single.json in Resources */,
+				3C44F2FE21EFE6BE00A0720B /* happy_path_get_account_unstaked.json in Resources */,
 				3C1A972721A3DABD00C30A75 /* BlockProducerStrings.strings in Resources */,
+				3C44F33921EFE7A600A0720B /* request_get_table_rows_producerjson_single.json in Resources */,
+				3C44F32D21EFE7A000A0720B /* error_push_transaction_log.json in Resources */,
+				3C44F2F421EFE60100A0720B /* happy_path_get_info.json in Resources */,
+				3C44F32321EFE71F00A0720B /* happy_path_get_table_rows_producerjson.json in Resources */,
 				3C0C04B521A8878000F5F7A7 /* ReachNetCpuView.xib in Resources */,
 				3C340FCC219368C30017BEF9 /* SettingsStrings.strings in Resources */,
+				3C44F31421EFE71F00A0720B /* happy_path_get_table_rows_producerjson_empty.json in Resources */,
+				3C44F31D21EFE71F00A0720B /* happy_path_get_key_accounts_single.json in Resources */,
+				3C44F31B21EFE71F00A0720B /* happy_path_get_empty_currency_balance.json in Resources */,
 				3CC9E72921A5C7520050BA57 /* ProxyStrings.strings in Resources */,
+				3C44F2F621EFE63D00A0720B /* happy_path_create_account.json in Resources */,
+				3C44F31E21EFE71F00A0720B /* happy_path_get_sys_currency_balance.json in Resources */,
+				3C44F33A21EFE7A600A0720B /* request_get_table_rows_delegated_bandwidth.json in Resources */,
 				3C7F0DFE2194AC2A00E72DD1 /* ExploreStrings.strings in Resources */,
 				3CCE9C2E21A2C38E0050910D /* ResourceGraphView.xib in Resources */,
 				3C07009721A71BC8008F63D2 /* TransactionStrings.strings in Resources */,
+				3C44F33821EFE7A600A0720B /* request_get_currency_balance_edna.json in Resources */,
 				3C1F1F7521A306800075BD71 /* VoteProducerCell.xib in Resources */,
+				3C44F2FA21EFE68000A0720B /* happy_path_get_account_refund.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2112,6 +2328,7 @@
 				3C0700B521A74FE8008F63D2 /* ManageRamViewModel.swift in Sources */,
 				3C0A86AC21ABFC8100F48302 /* KeyPairTableView.swift in Sources */,
 				3C964C4A219444DB003663EF /* RsaEncryptionVerified.swift in Sources */,
+				3C44F2E721EFDCE100A0720B /* Stub.swift in Sources */,
 				3C6DF79C21A0934600ADA892 /* AccountNavigationViewState.swift in Sources */,
 				3CC9E70521A5A4110050BA57 /* CastProxyVoteViewModel.swift in Sources */,
 				3C6DF78721A08D8700ADA892 /* VoteResult.swift in Sources */,
@@ -2189,11 +2406,13 @@
 				3C0EC81421933B6F00562A1B /* ReachActivityIndicator.swift in Sources */,
 				3C0700C921A75138008F63D2 /* SellRamViewController.swift in Sources */,
 				3CC9A3A5219DAF110002A25F /* TokenParent.swift in Sources */,
+				3C44F2E321EFDC5200A0720B /* StubApi.swift in Sources */,
 				3CCE9C2621A2B1350050910D /* AccountViewLayout.swift in Sources */,
 				3C07008721A6FA49008F63D2 /* ReachSwitch.swift in Sources */,
 				3C91C9A121AC9BDC001398F4 /* ReceiptDataRequest.swift in Sources */,
 				3C9BFBC8219C29B000589936 /* types.swift in Sources */,
 				3C0700A721A72643008F63D2 /* TransactionReceiptResult.swift in Sources */,
+				3C44F2EC21EFDD7D00A0720B /* BasicStubResponse.swift in Sources */,
 				3C7F0DE82194A17000E72DD1 /* RegisteredBlockProducersResult.swift in Sources */,
 				3C592F96219D5C5200D7C9B9 /* date_types.swift in Sources */,
 				3CB1D72521A869D600C87EC9 /* TransferBundle.swift in Sources */,
@@ -2284,6 +2503,7 @@
 				3C964C51219459D3003663EF /* EncryptedKeyPairData.swift in Sources */,
 				3C0EC8122193086800562A1B /* R.generated.swift in Sources */,
 				3C07009021A6FC79008F63D2 /* ConfirmBandwidthViewModel.swift in Sources */,
+				3C44F2E921EFDCF100A0720B /* StubRequest.swift in Sources */,
 				3C0A86A621ABF05B00F48302 /* ViewPrivateKeysViewState.swift in Sources */,
 				3C0ADD86219F37B10026649F /* DeleteAccounts.swift in Sources */,
 				3C0700BF21A750DE008F63D2 /* BuyRamResult.swift in Sources */,
@@ -2393,6 +2613,7 @@
 				3CEF33CD21A52EE900716AA2 /* ReachBorderView.swift in Sources */,
 				3C6DF77321A0833600ADA892 /* AccountBundle.swift in Sources */,
 				3C291BA5219D597900562448 /* CurrencySymbol.swift in Sources */,
+				3C44F2F021EFE15000A0720B /* ErrorOnFirstStubRequest.swift in Sources */,
 				3C1F1F7721A306A10075BD71 /* VoteProducerCell.swift in Sources */,
 				3C0700C021A750DE008F63D2 /* BuyRamViewState.swift in Sources */,
 				3C964C3721938C71003663EF /* EosEndpointViewController.swift in Sources */,
@@ -2438,13 +2659,16 @@
 				3C0EC81D21933D4F00562A1B /* SplashViewController.swift in Sources */,
 				3CCE0EFE21AADCE600D81458 /* ActiveBlockProducersDelegate.swift in Sources */,
 				3C9BFBBF219C21BC00589936 /* AccountAction.swift in Sources */,
+				3C44F2DD21EFAE8800A0720B /* StubUrlProtocol.swift in Sources */,
 				3C7F0DED2194A17000E72DD1 /* RegisteredBlockProducersViewController.swift in Sources */,
 				3C0700DD21A751BB008F63D2 /* ConfirmRamViewState.swift in Sources */,
 				3CB1D71E21A85B5100C87EC9 /* TransferConfirmIntent.swift in Sources */,
 				3CEF33BA21A507E700716AA2 /* CreateAccountViewState.swift in Sources */,
+				3C44F2EE21EFE02400A0720B /* StubResponse.swift in Sources */,
 				3C6DF78F21A090F300ADA892 /* ResourcesViewController.swift in Sources */,
 				3C0EC81F21933D4F00562A1B /* SplashResult.swift in Sources */,
 				3CC9A3C8219DCEEB0002A25F /* ErrorView.swift in Sources */,
+				3C44F2E521EFDC8000A0720B /* StubMatcher.swift in Sources */,
 				3C8BD25021A6C3B300ACFA70 /* UndelegateBandwidthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
