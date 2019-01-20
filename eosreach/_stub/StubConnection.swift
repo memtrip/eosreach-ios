@@ -22,7 +22,6 @@ class StubConnection {
             
             let urlMatch = stub.matcher.urlMatcher.matches(
                 in: urlToMatch,
-                options: NSRegularExpression.MatchingOptions.anchored,
                 range: NSRange(0..<urlToMatch.count)).count > 0
             
             if let bodyMatcher = stub.matcher.bodyMatcher {

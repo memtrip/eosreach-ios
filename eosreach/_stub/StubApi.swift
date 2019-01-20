@@ -209,7 +209,7 @@ open class StubApi {
     }
     
     private func regex(_ pattern: String) -> NSRegularExpression {
-        return try! NSRegularExpression(pattern: "v1/chain/get_info$", options: [])
+        return try! NSRegularExpression(pattern: pattern, options: [])
     }
     
     private func readJson(_ path: URL?) -> Data {

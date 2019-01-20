@@ -27,7 +27,11 @@ class StubUrlProtocol : URLProtocol {
     
     override open class func canInit(with request: URLRequest) -> Bool {
         let hasMatch = StubUrlSession.shared.stubConnection().hasMatch(request: request)
-        return hasMatch
+        if (hasMatch) {
+            return true
+        } else {
+            fatalError("Could not match on URLRequest: \(request)")
+        }
     }
     
     override func startLoading() {
@@ -36,21 +40,17 @@ class StubUrlProtocol : URLProtocol {
         
         if (urlResponse.response.success()) {
             client?.urlProtocol(self, didReceive: urlResponse.response, cacheStoragePolicy: .allowed)
-            client?.urlProtocolDidFinishLoading(self)
+            if let body = urlResponse.responseBody {
+                client?.urlProtocol(self, didLoad: body)
+            }
         } else {
             client?.urlProtocol(self, didFailWithError: StubError())
         }
         
-        // FAILURE
-        // client?.urlProtocol(self, didFailWithError: Mew())
-        // SUCCESS
-        // client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .allowed)
-        // client?.urlProtocolDidFinishLoading(self)
+        client?.urlProtocolDidFinishLoading(self)
     }
     
     override open func stopLoading() {
-        // potentially call this here:
-        // client?.urlProtocolDidFinishLoading(self)
     }
     
     override open class func canonicalRequest(for request: URLRequest) -> URLRequest {
