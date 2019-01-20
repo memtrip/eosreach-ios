@@ -38,8 +38,8 @@ class EosAccountRequestImpl : EosAccountRequest {
                             totalResources: account.total_resources,
                             stakedCpuBalance: stakedCpuBalance)),
                     ramResource: EosAccountResource(
-                        used: account.ram_usage,
-                        available: account.ram_quota,
+                        used: account.ram_usage.value,
+                        available: account.ram_quota.value,
                         staked: nil,
                         delegated: nil),
                     eosAcconuntVote: self.eosCurrentVote(voterInfo: account.voter_info),

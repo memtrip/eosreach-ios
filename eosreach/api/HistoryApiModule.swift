@@ -3,6 +3,14 @@ import eosswift
 
 class HistoryApiModule {
     static func create() -> HistoryApi {
-        return HistoryApiFactory.create(rootUrl: EosEndpoint().get())
+        switch TargetSwitch.api() {
+        case .stub:
+            return HistoryApiFactory.create(
+                rootUrl: EosEndpoint().get(),
+                urlSession: StubUrlSession.shared.urlSession,
+                useLogger: true)
+        case .prod:
+            return HistoryApiFactory.create(rootUrl: EosEndpoint().get())
+        }
     }
 }

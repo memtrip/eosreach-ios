@@ -9,7 +9,7 @@ open class StubApi {
                 urlMatcher: self.regex("v1/chain/get_info$")
             ),
             request: BasicStubRequest(code: 200, body: {
-                return self.readJson("stub/happypath/happy_path_get_info.json")
+                return self.readJson("_stub/json/happypath/happy_path_get_info.json")
             })
         )
     }
@@ -21,7 +21,7 @@ open class StubApi {
                 urlMatcher: self.regex("v1/chain/get_account$")
             ),
             request: BasicStubRequest(code: 200, body: {
-                return self.readJson("stub/happypath/happy_path_get_account_unstaked.json")
+                return self.readJson("_stub/json/happypath/happy_path_get_account_unstaked.json")
             })
         )
     }
@@ -33,7 +33,7 @@ open class StubApi {
                 urlMatcher: self.regex("v1/history/get_key_accounts$")
             ),
             request: BasicStubRequest(code: 200, body: {
-                return self.readJson("stub/happypath/happy_path_get_key_accounts.json")
+                return self.readJson("_stub/json/happypath/happy_path_get_key_accounts.json")
             })
         )
     }
@@ -45,7 +45,7 @@ open class StubApi {
                 urlMatcher: self.regex("v1/chain/get_currency_balance$")
             ),
             request: BasicStubRequest(code: 200, body: {
-                return self.readJson("stub/happypath/happy_path_get_sys_currency_balance.json")
+                return self.readJson("_stub/json/happypath/happy_path_get_sys_currency_balance.json")
             })
         )
     }
@@ -81,7 +81,7 @@ open class StubApi {
                 urlMatcher: self.regex("v1/history/get_actions$")
             ),
             request: BasicStubRequest(code: 200, body: {
-                return self.readJson("stub/happypath/happy_path_get_actions.json")
+                return self.readJson("_stub/json/happypath/happy_path_get_actions.json")
             })
         )
     }
@@ -93,7 +93,7 @@ open class StubApi {
                 urlMatcher: self.regex("v1/chain/get_producers$")
             ),
             request: BasicStubRequest(code: 200, body: {
-                return self.readJson("stub/happypath/happy_path_get_producers.json")
+                return self.readJson("_stub/json/happypath/happy_path_get_producers.json")
             })
         )
     }
@@ -105,7 +105,7 @@ open class StubApi {
                 urlMatcher: self.regex("v1/chain/push_transaction$")
             ),
             request: BasicStubRequest(code: 400, body: {
-                return self.readJson("stub/error/error_push_transaction_log.json")
+                return self.readJson("_stub/json/error/error_push_transaction_log.json")
             })
         )
     }
@@ -117,7 +117,7 @@ open class StubApi {
                 urlMatcher: self.regex("price/(.*)$")
             ),
             request: BasicStubRequest(code: 200, body: {
-                return self.readJson("stub/happypath/happy_path_price.json")
+                return self.readJson("_stub/json/happypath/happy_path_price.json")
             })
         )
     }
@@ -129,9 +129,29 @@ open class StubApi {
                 urlMatcher: self.regex("createAccount$")
             ),
             request: BasicStubRequest(code: 200, body: {
-                return self.readJson("stub/happypath/happy_path_create_account.json")
+                return self.readJson("_stub/json/happypath/happy_path_create_account.json")
             })
         )
+    }
+    
+    func stubs() -> Array<Stub> {
+        return [
+            getInfo(),
+            getAccount(),
+            getKeyAccounts(),
+            getCurrencyBalance(),
+            getCustomTokensTableRows(),
+            getTableRowsProducerJson(),
+            getTableRowsProducerSingleJson(),
+            getTableRowsProxyVoter(),
+            getTableRowsSingleProxyVoter(),
+            getTableRowsAllocatedBandwidth(),
+            getActions(),
+            getBlockProducers(),
+            pushTransaction(),
+            getPriceForCurrency(),
+            createAccount()
+        ]
     }
     
     private func regex(_ pattern: String) -> NSRegularExpression {

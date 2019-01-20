@@ -4,8 +4,14 @@ import eosswift
 
 class EosPriceApi {
     
+    private let urlSession: URLSession
+    
+    init(_ urlSession: URLSession) {
+        self.urlSession = urlSession
+    }
+    
     func getPrice(currency: String) -> Single<HttpResponse<Price>> {
-        return RxHttp<RequestBody, Price, PriceError>(false).single(
+        return RxHttp<RequestBody, Price, PriceError>(urlSession, false).single(
             httpRequest: HttpRequest(
                 url: R.string.appStrings.app_reach_endpoint_url() + "price/\(currency)",
                 method: "GET",

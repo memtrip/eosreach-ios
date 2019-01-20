@@ -5,7 +5,7 @@ import eosswift
 class EosCreateAccountRequestImpl : EosCreateAccountRequest {
 
     private let receiptDataRequest = ReceiptDataRequest()
-    private let eosCreateAccountApi = EosCreateAccountApi()
+    private let eosCreateAccountApi = ReachApiModule.eosCreateAccountApi()
     
     func createAccount(
         transactionIdentifier: String,

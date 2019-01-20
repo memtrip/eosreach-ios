@@ -4,12 +4,18 @@ import eosswift
 
 class EosCreateAccountApi {
 
+    private let urlSession: URLSession
+    
+    init(_ urlSession: URLSession) {
+        self.urlSession = urlSession
+    }
+    
     func createAccount(
         purchaseToken: String,
         accountName: String,
         publicKey: String
     ) -> Single<HttpResponse<CreateAccountResponse>> {
-        return RxHttp<CreateAccountRequest, CreateAccountResponse, CreateAccountError>(true).single(
+        return RxHttp<CreateAccountRequest, CreateAccountResponse, CreateAccountError>(urlSession, true).single(
             httpRequest: HttpRequest(
                 url: R.string.appStrings.app_reach_endpoint_url() + "createAccount",
                 method: "POST",

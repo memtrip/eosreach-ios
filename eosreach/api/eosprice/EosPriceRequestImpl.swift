@@ -4,7 +4,7 @@ import eosswift
 
 class EosPriceRequestImpl : EosPriceRequest {
     
-    private let eosPriceApi = EosPriceApi()
+    private let eosPriceApi = ReachApiModule.eosPriceApi()
     
     func getPrice(currencyCode: String) -> Single<Result<EosPrice, EosPriceError>> {
         return eosPriceApi.getPrice(currency: currencyCode.uppercased()).map { response in

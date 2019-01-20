@@ -3,10 +3,14 @@ import eosswift
 
 class ChainApiModule {
     static func create() -> ChainApi {
-        if (true) {
+        switch TargetSwitch.api() {
+        case .stub:
+            return ChainApiFactory.create(
+                rootUrl: EosEndpoint().get(),
+                urlSession: StubUrlSession.shared.urlSession,
+                useLogger: true)
+        case .prod:
             return ChainApiFactory.create(rootUrl: EosEndpoint().get())
-        } else {
-            return ChainApiFactory.create(rootUrl: EosEndpoint().get(), useLogger: true)
         }
     }
 }
