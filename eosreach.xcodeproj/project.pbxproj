@@ -1021,7 +1021,7 @@
 		3C44F2FB21EFE6A000A0720B /* happy_path_get_account_staked.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_staked.json; sourceTree = "<group>"; };
 		3C44F2FD21EFE6BE00A0720B /* happy_path_get_account_unstaked.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_unstaked.json; sourceTree = "<group>"; };
 		3C44F2FF21EFE71D00A0720B /* happy_path_get_table_rows_producerjson_empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_producerjson_empty.json; sourceTree = "<group>"; };
-		3C44F30021EFE71D00A0720B /* happy_path_get_table_rows_customtoken.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_customtoken.json; sourceTree = "<group>"; };
+		3C44F30021EFE71D00A0720B /* happy_path_get_table_rows_customtoken.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = happy_path_get_table_rows_customtoken.json; path = eosreach/_stub/json/happypath/happy_path_get_table_rows_customtoken.json; sourceTree = SOURCE_ROOT; };
 		3C44F30121EFE71D00A0720B /* happy_path_get_producers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_producers.json; sourceTree = "<group>"; };
 		3C44F30221EFE71D00A0720B /* happy_path_get_table_rows_delegated_bandwidth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_delegated_bandwidth.json; sourceTree = "<group>"; };
 		3C44F30321EFE71D00A0720B /* happy_path_price.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_price.json; sourceTree = "<group>"; };
@@ -1514,8 +1514,8 @@
 			children = (
 				3C44F2F121EFE5D700A0720B /* json */,
 				3C44F2EA21EFDCFF00A0720B /* request */,
-				3C44F2DC21EFAE8800A0720B /* StubUrlSession.swift */,
 				3C44F2E221EFDC5200A0720B /* StubApi.swift */,
+				3C44F2DC21EFAE8800A0720B /* StubUrlSession.swift */,
 				3C44F2E421EFDC8000A0720B /* StubMatcher.swift */,
 				3C44F2E621EFDCE100A0720B /* Stub.swift */,
 				3C0DBC2821F506E00020CA1F /* StubConnection.swift */,

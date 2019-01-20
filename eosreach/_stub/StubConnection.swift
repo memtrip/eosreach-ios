@@ -19,14 +19,22 @@ class StubConnection {
     private func match(request: URLRequest) -> Stub? {
         let urlToMatch = request.url!.absoluteString
         return self.stubs.first(where: { stub in
-            let urlMatch = stub.matcher.urlMatcher
-                
-            let matchedUrl = urlMatch.matches(
+            
+            let urlMatch = stub.matcher.urlMatcher.matches(
                 in: urlToMatch,
                 options: NSRegularExpression.MatchingOptions.anchored,
                 range: NSRange(0..<urlToMatch.count)).count > 0
             
-            return matchedUrl
+            if let bodyMatcher = stub.matcher.bodyMatcher {
+                if let requestBodyString = request.bodyString() {
+                    let bodyMatch = bodyMatcher == requestBodyString
+                    return urlMatch && bodyMatch
+                } else {
+                    return false
+                }
+            } else {
+                return urlMatch
+            }
         })
     }
 }

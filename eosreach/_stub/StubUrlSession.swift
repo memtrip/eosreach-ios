@@ -26,7 +26,8 @@ class StubUrlSession {
 class StubUrlProtocol : URLProtocol {
     
     override open class func canInit(with request: URLRequest) -> Bool {
-        return StubUrlSession.shared.stubConnection().hasMatch(request: request)
+        let hasMatch = StubUrlSession.shared.stubConnection().hasMatch(request: request)
+        return hasMatch
     }
     
     override func startLoading() {

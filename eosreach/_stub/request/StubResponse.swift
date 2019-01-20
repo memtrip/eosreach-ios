@@ -15,3 +15,14 @@ extension HTTPURLResponse {
         return !success()
     }
 }
+
+extension URLRequest {
+    
+    func bodyString() -> String? {
+        if let body = httpBody {
+            return String(data: body, encoding: String.Encoding.utf8)
+        } else {
+            return nil
+        }
+    }
+}
