@@ -31,7 +31,7 @@ struct AccountAction {
 
         return AccountAction(
             tranactionId: action.action_trace.trx_id,
-            accountActionSequence: action.account_action_seq,
+            accountActionSequence: action.account_action_seq.value,
             from: from,
             to: to,
             memo: memo,

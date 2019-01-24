@@ -50,7 +50,7 @@ class AccountActionsRequestImpl : AccountActionsRequest {
             )
         } else {
             if (historicAccountActionParent.actions.isNotEmpty()) {
-                return Result(data: AccountActionList(actions: [],  noResultsNext: historicAccountActionParent.actions.last!.account_action_seq))
+                return Result(data: AccountActionList(actions: [],  noResultsNext: historicAccountActionParent.actions.last!.account_action_seq.value))
             } else {
                 return Result(data: AccountActionList(actions: []))
             }
