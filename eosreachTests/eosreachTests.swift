@@ -1,10 +1,9 @@
 import XCTest
 import EarlGrey
 
-class FirstTest: XCTestCase {
+class FirstTest: TestCase {
     
     func testExample() {
-        EarlGrey.selectElement(with: grey_keyWindow())
-            .assert(grey_sufficientlyVisible())
+        let _ = SplashRobot().selectExplore()
     }
 }

@@ -1,0 +1,32 @@
+import Foundation
+import EarlGrey
+
+func onView(_ matcher: GREYMatcher) -> GREYInteraction {
+    return EarlGrey.selectElement(with: matcher)
+}
+
+func withId(_ id: String) -> GREYMatcher {
+    return grey_accessibilityID(id)
+}
+
+extension GREYInteraction {
+    func matches(_ matcher: GREYMatcher) -> GREYInteraction {
+        self.assert(matcher)
+        return self
+    }
+}
+
+//
+// MARK :- matchers
+//
+func isDisplayed() -> GREYMatcher {
+    return grey_sufficientlyVisible()
+}
+
+//
+// MARK :- actions
+//
+func click() -> GREYAction {
+    return grey_tap()
+}
+

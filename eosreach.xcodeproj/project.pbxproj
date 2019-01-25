@@ -828,6 +828,10 @@
 		3CC9E72B21A5CFCA0050BA57 /* CastProducersVoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72A21A5CFCA0050BA57 /* CastProducersVoteTableView.swift */; };
 		3CC9E72D21A5CFD80050BA57 /* CastProducersVoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72C21A5CFD80050BA57 /* CastProducersVoteCell.swift */; };
 		3CC9E72F21A5D03E0050BA57 /* CastProducersVoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */; };
+		3CCC804221FB86AE00B715C2 /* SplashRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804121FB86AE00B715C2 /* SplashRobot.swift */; };
+		3CCC804421FB877A00B715C2 /* EspressoDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804321FB877A00B715C2 /* EspressoDSL.swift */; };
+		3CCC804921FB929100B715C2 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804821FB929100B715C2 /* TestCase.swift */; };
+		3CCC804D21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */; };
 		3CCE0EF821AAA84300D81458 /* DropDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EF721AAA84300D81458 /* DropDb.swift */; };
 		3CCE0EFC21AADC2100D81458 /* DataTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFB21AADC2100D81458 /* DataTableView.swift */; };
 		3CCE0EFE21AADCE600D81458 /* ActiveBlockProducersDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFD21AADCE600D81458 /* ActiveBlockProducersDelegate.swift */; };
@@ -1313,6 +1317,10 @@
 		3CC9E72A21A5CFCA0050BA57 /* CastProducersVoteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducersVoteTableView.swift; sourceTree = "<group>"; };
 		3CC9E72C21A5CFD80050BA57 /* CastProducersVoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducersVoteCell.swift; sourceTree = "<group>"; };
 		3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastProducersVoteCell.xib; sourceTree = "<group>"; };
+		3CCC804121FB86AE00B715C2 /* SplashRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRobot.swift; sourceTree = "<group>"; };
+		3CCC804321FB877A00B715C2 /* EspressoDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoDSL.swift; sourceTree = "<group>"; };
+		3CCC804821FB929100B715C2 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStakedWithoutCoreBalanceTestCase.swift; sourceTree = "<group>"; };
 		3CCE0EF721AAA84300D81458 /* DropDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDb.swift; sourceTree = "<group>"; };
 		3CCE0EFB21AADC2100D81458 /* DataTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableView.swift; sourceTree = "<group>"; };
 		3CCE0EFD21AADCE600D81458 /* ActiveBlockProducersDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersDelegate.swift; sourceTree = "<group>"; };
@@ -1679,9 +1687,13 @@
 		3C5799D82191D27E00B9A3D7 /* eosreachTests */ = {
 			isa = PBXGroup;
 			children = (
+				3CCC804021FB865400B715C2 /* robot */,
+				3CCC804A21FB972200B715C2 /* app */,
 				3C5799D92191D27E00B9A3D7 /* eosreachTests.swift */,
 				3C5799DB2191D27E00B9A3D7 /* Info.plist */,
 				DC0F5558D8100EC99A44F586 /* EarlGrey.swift */,
+				3CCC804321FB877A00B715C2 /* EspressoDSL.swift */,
+				3CCC804821FB929100B715C2 /* TestCase.swift */,
 			);
 			path = eosreachTests;
 			sourceTree = "<group>";
@@ -2387,6 +2399,30 @@
 				3CC9E70121A5A4110050BA57 /* CastProxyVoteViewState.swift */,
 			);
 			path = proxy;
+			sourceTree = "<group>";
+		};
+		3CCC804021FB865400B715C2 /* robot */ = {
+			isa = PBXGroup;
+			children = (
+				3CCC804121FB86AE00B715C2 /* SplashRobot.swift */,
+			);
+			path = robot;
+			sourceTree = "<group>";
+		};
+		3CCC804A21FB972200B715C2 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				3CCC804B21FB972C00B715C2 /* account */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		3CCC804B21FB972C00B715C2 /* account */ = {
+			isa = PBXGroup;
+			children = (
+				3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */,
+			);
+			path = account;
 			sourceTree = "<group>";
 		};
 		3CEF33B321A5079400716AA2 /* createaccount */ = {
@@ -3660,7 +3696,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C5799DA2191D27E00B9A3D7 /* eosreachTests.swift in Sources */,
+				3CCC804921FB929100B715C2 /* TestCase.swift in Sources */,
+				3CCC804D21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */,
+				3CCC804221FB86AE00B715C2 /* SplashRobot.swift in Sources */,
 				5459E12781E4B0E892AC7BD0 /* EarlGrey.swift in Sources */,
+				3CCC804421FB877A00B715C2 /* EspressoDSL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

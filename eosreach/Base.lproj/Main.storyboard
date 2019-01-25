@@ -14,12 +14,12 @@
         <!--Settings View Controller-->
         <scene sceneID="852-HC-cW8">
             <objects>
-                <viewController id="se4-xM-JVq" customClass="SettingsViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="se4-xM-JVq" customClass="SettingsViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fgc-c1-nNE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQj-hn-cjt" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQj-hn-cjt" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="590.5" width="343" height="30"/>
                                 <state key="normal" title="memtrip"/>
                             </button>
@@ -29,33 +29,33 @@
                                 <color key="textColor" name="colorSecondary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOf-ld-LnK" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOf-ld-LnK" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="KOg-aO-j5e"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rh-Pc-Tbo" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rh-Pc-Tbo" customClass="ReachNavigationButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="84" width="375" height="30"/>
                                 <state key="normal" title="_currency_pair"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDK-Zf-ZrQ" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDK-Zf-ZrQ" customClass="ReachNavigationButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="115" width="375" height="30"/>
                                 <state key="normal" title="_change_eos_endpoint"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNr-yW-vhS" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNr-yW-vhS" customClass="ReachNavigationButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="146" width="375" height="30"/>
                                 <state key="normal" title="_view_private_keys"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlO-wi-oBO" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlO-wi-oBO" customClass="ReachNavigationButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="177" width="375" height="30"/>
                                 <state key="normal" title="_confirmed_transactions"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaG-QX-qc5" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaG-QX-qc5" customClass="ReachNavigationButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="208" width="375" height="30"/>
                                 <state key="normal" title="_join_us_on_telegram"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pk-rx-0Vu" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pk-rx-0Vu" customClass="ReachNavigationButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="238" width="375" height="30"/>
                                 <state key="normal" title="_clear_data_and_logout"/>
                             </button>
@@ -175,12 +175,12 @@
         <!--Eos Endpoint View Controller-->
         <scene sceneID="hGP-dy-Tu5">
             <objects>
-                <viewController id="BLF-jA-WCe" customClass="EosEndpointViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BLF-jA-WCe" customClass="EosEndpointViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wPZ-k0-VJU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ast-fT-FnB" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ast-fT-FnB" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="HpI-Xy-O8R"/>
@@ -198,21 +198,21 @@
                                 <color key="textColor" name="typographyColorSecondary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOY-ZE-rZH" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOY-ZE-rZH" customClass="ReachTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="154.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3C-qE-ylI" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3C-qE-ylI" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="200.5" width="170" height="30"/>
                                 <state key="normal" title="_choose_block_producer"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2v-RU-t3Q" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2v-RU-t3Q" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_change_endpoint"/>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="nEt-vI-VxP" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="nEt-vI-VxP" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="626" width="375" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -259,25 +259,25 @@
         <!--Active Block Producers View Controller-->
         <scene sceneID="0HL-Vy-l2p">
             <objects>
-                <viewController id="KeL-6I-ll1" customClass="ActiveBlockProducersViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KeL-6I-ll1" customClass="ActiveBlockProducersViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="es8-2N-u6L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Trn-Mv-Lv0" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Trn-Mv-Lv0" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                             </activityIndicatorView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFw-Pt-kCe" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFw-Pt-kCe" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-dH-Ocn" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-dH-Ocn" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="VT0-0Q-l5K"/>
                                 </constraints>
                             </view>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KQC-wm-XDg" customClass="ActiveBlockProducersTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KQC-wm-XDg" customClass="ActiveBlockProducersTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -316,15 +316,15 @@
         <!--Transaction History View Controller-->
         <scene sceneID="Qit-Xe-yWH">
             <objects>
-                <viewController id="zGh-3c-R08" customClass="TransactionHistoryViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zGh-3c-R08" customClass="TransactionHistoryViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="idD-Uy-Kpg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WaU-rg-tu5" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WaU-rg-tu5" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="84" width="343" height="567"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLi-oX-aJv" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLi-oX-aJv" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="aPh-zJ-WkX"/>
@@ -336,7 +336,7 @@
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hr4-Dc-TpV" customClass="TransactionHistoryTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hr4-Dc-TpV" customClass="TransactionHistoryTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="8" y="76" width="359" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -374,18 +374,18 @@
         <!--View Private Keys View Controller-->
         <scene sceneID="gns-LQ-hDL">
             <objects>
-                <viewController id="96N-le-3DO" customClass="ViewPrivateKeysViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="96N-le-3DO" customClass="ViewPrivateKeysViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8SW-Yx-2B0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vr0-mU-K9f" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vr0-mU-K9f" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="6wQ-vY-fyx"/>
                                 </constraints>
                             </view>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JRH-MX-Fzc" customClass="KeyPairTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JRH-MX-Fzc" customClass="KeyPairTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="76" width="375" height="591"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -404,7 +404,7 @@
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpv-40-sGD" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpv-40-sGD" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="108" y="52.5" width="127" height="30"/>
                                         <state key="normal" title="_view_private_keys"/>
                                     </button>
@@ -417,7 +417,7 @@
                                     <constraint firstItem="5F9-A9-BcF" firstAttribute="top" secondItem="fj9-cW-mM5" secondAttribute="top" constant="16" id="rUC-El-b6f"/>
                                 </constraints>
                             </view>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Bqg-X7-SIA" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Bqg-X7-SIA" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="84" width="343" height="567"/>
                             </activityIndicatorView>
                         </subviews>
@@ -461,22 +461,22 @@
         <!--Currency Pairing View Controller-->
         <scene sceneID="hWr-d4-pDW">
             <objects>
-                <viewController id="nRr-uf-Ks7" customClass="CurrencyPairingViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nRr-uf-Ks7" customClass="CurrencyPairingViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sSe-Zt-Y9G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jnh-DR-1LS" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jnh-DR-1LS" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="lHR-Nr-dXs"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SP-Gd-rHf" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SP-Gd-rHf" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_update_pair"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYp-dZ-lyv" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYp-dZ-lyv" customClass="ReachTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="100" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -488,7 +488,7 @@
                                 <color key="textColor" name="typographyColorSecondary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="D4W-l9-uBZ" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="D4W-l9-uBZ" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="626" width="375" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -526,15 +526,15 @@
         <!--EntryViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="EntryViewController" customClass="EntryViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="EntryViewController" customClass="EntryViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HyF-fF-0Yh" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HyF-fF-0Yh" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="36" width="343" height="615"/>
                             </activityIndicatorView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGd-Ex-t0Y" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGd-Ex-t0Y" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </view>
                         </subviews>
@@ -564,21 +564,24 @@
         <!--SplashViewController-->
         <scene sceneID="pMN-1J-TBn">
             <objects>
-                <viewController id="eGy-rE-FWZ" userLabel="SplashViewController" customClass="SplashViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="splash" id="eGy-rE-FWZ" userLabel="SplashViewController" customClass="SplashViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gj1-3v-vOY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnb-j5-fmx" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnb-j5-fmx" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="welcome_splash_explore_button"/>
                                 <state key="normal" title="_explore"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ies-v4-gpP" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ies-v4-gpP" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="575" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="welcome_splash_import_private_key_button"/>
                                 <state key="normal" title="_import_private_key"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHd-vN-Imy" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHd-vN-Imy" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="529" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="welcome_splash_create_account_button"/>
                                 <state key="normal" title="_create_account"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_eosio" translatesAutoresizingMaskIntoConstraints="NO" id="3EI-GU-69P">
@@ -620,18 +623,18 @@
         <!--Import Key View Controller-->
         <scene sceneID="2LL-MZ-a5c">
             <objects>
-                <viewController id="uwo-3q-08m" customClass="ImportKeyViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uwo-3q-08m" customClass="ImportKeyViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ScW-uf-uec">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAk-kH-fch" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAk-kH-fch" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="upT-EC-5U4"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88y-b3-ou7" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88y-b3-ou7" customClass="ReachTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="100" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -643,15 +646,15 @@
                                 <color key="textColor" name="typographyColorSecondary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="els-6i-Neh" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="els-6i-Neh" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="182.5" width="162" height="30"/>
                                 <state key="normal" title="_view_source_on_github"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxG-EI-U5e" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxG-EI-U5e" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_import_key"/>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ede-YS-IrT" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ede-YS-IrT" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="617.5" width="375" height="37"/>
                             </activityIndicatorView>
                         </subviews>
@@ -694,21 +697,21 @@
         <!--Account View Controller-->
         <scene sceneID="0Fa-b9-98g">
             <objects>
-                <viewController id="tgP-tV-kRI" customClass="AccountViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tgP-tV-kRI" customClass="AccountViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JLS-cK-D3e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2KH-gd-coI" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2KH-gd-coI" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="jbL-tC-yCg"/>
                                 </constraints>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-UH-n2O" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-UH-n2O" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                             </activityIndicatorView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ill-09-nMU" customClass="ReachTabBar" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ill-09-nMU" customClass="ReachTabBar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="164" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="0ad-PT-Lid"/>
@@ -743,7 +746,7 @@
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zer-Db-mUB">
                                 <rect key="frame" x="0.0" y="212" width="375" height="455"/>
                             </containerView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIA-MA-nKF" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIA-MA-nKF" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                             </view>
                         </subviews>
@@ -795,7 +798,7 @@
         <!--Account Navigation View Controller-->
         <scene sceneID="rRZ-OS-72O">
             <objects>
-                <viewController id="6zL-f0-LYz" customClass="AccountNavigationViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6zL-f0-LYz" customClass="AccountNavigationViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pt5-sd-gct">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -821,15 +824,15 @@
                                     <constraint firstAttribute="width" secondItem="All-TO-r63" secondAttribute="height" multiplier="1:1" id="WLL-SX-QyU"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1K-kQ-OR2" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1K-kQ-OR2" customClass="ReachNavigationButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="80" height="30"/>
                                 <state key="normal" title="_import key"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8Z-Tx-JuN" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8Z-Tx-JuN" customClass="ReachNavigationButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="375" height="30"/>
                                 <state key="normal" title="_create_new_account"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZz-zQ-cxh" customClass="ReachNavigationButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZz-zQ-cxh" customClass="ReachNavigationButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="81" width="375" height="30"/>
                                 <state key="normal" title="_settings"/>
                             </button>
@@ -846,18 +849,18 @@
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JST-l5-Hcs" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JST-l5-Hcs" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="270.5" y="144" width="88.5" height="30"/>
                                 <state key="normal" title="_refresh"/>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-KR-3bJ" customClass="AccountCardTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-KR-3bJ" customClass="AccountCardTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="8" y="181" width="359" height="478"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WLj-pu-16Z" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WLj-pu-16Z" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="169" y="401.5" width="37" height="37"/>
                             </activityIndicatorView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcQ-6Y-dLR" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcQ-6Y-dLR" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="173" width="375" height="494"/>
                             </view>
                         </subviews>
@@ -935,15 +938,15 @@
         <!--Balance View Controller-->
         <scene sceneID="XFg-vg-gCX">
             <objects>
-                <viewController storyboardIdentifier="balanceViewController" id="uXY-1i-MwV" customClass="BalanceViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="balanceViewController" id="uXY-1i-MwV" customClass="BalanceViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5td-dn-cjt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="v8s-NC-x0K" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="v8s-NC-x0K" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="169" y="364" width="37" height="37"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-MK-JoW" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-MK-JoW" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="36" width="343" height="30"/>
                                 <state key="normal" title="_scan_for_airdrops"/>
                             </button>
@@ -959,7 +962,7 @@
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ThX-Aa-b2Q" customClass="BalanceTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ThX-Aa-b2Q" customClass="BalanceTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="8" y="106" width="359" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -1000,7 +1003,7 @@
         <!--Actions View Controller-->
         <scene sceneID="w9y-7T-hgR">
             <objects>
-                <viewController id="8P7-QF-IgG" customClass="ActionsViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8P7-QF-IgG" customClass="ActionsViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dVf-Sj-SFk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1011,23 +1014,23 @@
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNw-QZ-N2f" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNw-QZ-N2f" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="114" width="343" height="537"/>
                             </view>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PEY-G5-7zb" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PEY-G5-7zb" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="169" y="372" width="37" height="37"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YiC-DU-dcJ" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YiC-DU-dcJ" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="JWm-QO-Ado"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKr-WJ-GIK" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKr-WJ-GIK" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="76" width="343" height="30"/>
                                 <state key="normal" title="_transfer"/>
                             </button>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L14-9D-piY" customClass="ActionsTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L14-9D-piY" customClass="ActionsTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="8" y="122" width="359" height="537"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -1073,12 +1076,12 @@
         <!--View Action View Controller-->
         <scene sceneID="Efb-sV-G1g">
             <objects>
-                <viewController id="gDS-g9-Evt" customClass="ViewActionViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gDS-g9-Evt" customClass="ViewActionViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mpp-3V-SDf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KP7-0r-b7E" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KP7-0r-b7E" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="ZQC-Xm-wco"/>
@@ -1291,7 +1294,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvR-EO-uEe" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvR-EO-uEe" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_view_in_block_explorer"/>
                             </button>
@@ -1333,36 +1336,36 @@
         <!--Transfer View Controller-->
         <scene sceneID="I1Y-9i-MVf">
             <objects>
-                <viewController id="V9P-mv-Tn4" customClass="TransferViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V9P-mv-Tn4" customClass="TransferViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6kn-gS-cyq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eke-Gb-fU4" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eke-Gb-fU4" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="BJh-0u-Wlh"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-Oh-Jw8" customClass="ReachUsernameTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-Oh-Jw8" customClass="ReachUsernameTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="100" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4B-s9-tVv" customClass="ReachBalanceTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4B-s9-tVv" customClass="ReachBalanceTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="162" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-fP-UhZ" customClass="ReachTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-fP-UhZ" customClass="ReachTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="224" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSc-z5-ekr" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSc-z5-ekr" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_next"/>
                             </button>
@@ -1402,12 +1405,12 @@
         <!--Transfer Confirm View Controller-->
         <scene sceneID="BN3-DQ-kVr">
             <objects>
-                <viewController id="lVG-fj-Ffb" customClass="TransferConfirmViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lVG-fj-Ffb" customClass="TransferConfirmViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aQ7-81-Mjq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oG1-un-Lx1" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oG1-un-Lx1" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="kkc-d9-0bT"/>
@@ -1571,11 +1574,11 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBB-Dv-vKL" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBB-Dv-vKL" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_primary_button"/>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="9Qg-v8-h1Z" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="9Qg-v8-h1Z" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="177.5" y="626" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -1616,15 +1619,15 @@
         <!--Manage Ram View Controller-->
         <scene sceneID="Yxc-Z0-GrY">
             <objects>
-                <viewController id="3Wb-zP-H9V" customClass="ManageRamViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3Wb-zP-H9V" customClass="ManageRamViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pjr-nw-ekQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="M9X-7o-Hmn" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="M9X-7o-Hmn" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="36" width="343" height="615"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czi-QN-LvM" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czi-QN-LvM" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="NEs-oV-Shk"/>
@@ -1656,7 +1659,7 @@
                                     <constraint firstItem="s9f-FT-KOM" firstAttribute="top" secondItem="uEw-Ng-gJG" secondAttribute="bottom" id="vX4-4H-amq"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQB-zK-Dmn" userLabel="Reach TabBar" customClass="ReachTabBar" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQB-zK-Dmn" userLabel="Reach TabBar" customClass="ReachTabBar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="164" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="vj3-M0-qY7"/>
@@ -1665,7 +1668,7 @@
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yK-ch-YIA">
                                 <rect key="frame" x="0.0" y="212" width="375" height="455"/>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seN-lL-u6A" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seN-lL-u6A" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="84" width="343" height="567"/>
                             </view>
                         </subviews>
@@ -1712,18 +1715,18 @@
         <!--Buy Ram View Controller-->
         <scene sceneID="P9y-ZD-0xL">
             <objects>
-                <viewController storyboardIdentifier="buyRamViewController" id="ozr-RH-ja7" customClass="BuyRamViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="buyRamViewController" id="ozr-RH-ja7" customClass="BuyRamViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oot-q0-z7L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJz-wL-onx" customClass="ReachBalanceTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJz-wL-onx" customClass="ReachBalanceTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="52" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecG-fi-qb6" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecG-fi-qb6" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="151" width="343" height="30"/>
                                 <state key="normal" title="_buy_ram"/>
                             </button>
@@ -1761,18 +1764,18 @@
         <!--Sell Ram View Controller-->
         <scene sceneID="zNR-nj-bZA">
             <objects>
-                <viewController storyboardIdentifier="sellRamViewController" id="FBc-Wz-hxM" customClass="SellRamViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sellRamViewController" id="FBc-Wz-hxM" customClass="SellRamViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qs2-dg-Hiv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31Q-Z0-9HV" customClass="ReachBalanceTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31Q-Z0-9HV" customClass="ReachBalanceTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="52" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m02-BU-QuB" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m02-BU-QuB" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="151" width="343" height="30"/>
                                 <state key="normal" title="_sell_ram"/>
                             </button>
@@ -1810,22 +1813,22 @@
         <!--Confirm Ram View Controller-->
         <scene sceneID="kGv-uT-omo">
             <objects>
-                <viewController id="uLC-eP-q79" customClass="ConfirmRamViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uLC-eP-q79" customClass="ConfirmRamViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1rr-1f-PN2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnB-d5-54M" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnB-d5-54M" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="b8E-Ps-Yw6"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypc-Ky-Edg" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypc-Ky-Edg" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_confirm"/>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="INm-Nw-zdl" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="INm-Nw-zdl" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="177.5" y="626" width="20" height="20"/>
                             </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Aw-zW-AOt">
@@ -1941,18 +1944,18 @@
         <!--Manage Bandwidth View Controller-->
         <scene sceneID="VaG-Zd-81H">
             <objects>
-                <viewController id="6Ma-8z-zbj" customClass="ManageBandwidthViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Ma-8z-zbj" customClass="ManageBandwidthViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="slk-hz-TQf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Et-L0-fwU" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Et-L0-fwU" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="wX0-iT-q10"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0im-Kp-WbS" customClass="ReachTabBar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0im-Kp-WbS" customClass="ReachTabBar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="y1p-Hj-mUZ"/>
@@ -1989,27 +1992,27 @@
         <!--Delegate Bandwidth View Controller-->
         <scene sceneID="dVH-Jh-ywi">
             <objects>
-                <viewController storyboardIdentifier="delegatedBandwidthViewController" id="DxX-Q4-9ut" customClass="DelegateBandwidthViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="delegatedBandwidthViewController" id="DxX-Q4-9ut" customClass="DelegateBandwidthViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OZf-C8-UGJ" customClass="DelegatedBandwidthViewController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-aK-Oxh" customClass="ReachUsernameTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-aK-Oxh" customClass="ReachUsernameTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="176" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srB-pA-4CE" customClass="ReachBalanceTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srB-pA-4CE" customClass="ReachBalanceTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="114" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKC-Kf-JbC" customClass="ReachSwitch" customModule="eosreach" customModuleProvider="target">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKC-Kf-JbC" customClass="ReachSwitch" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="222" width="51" height="31"/>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffh-iM-c2O" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffh-iM-c2O" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_delegate"/>
                             </button>
@@ -2019,7 +2022,7 @@
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ql9-Id-TMZ" customClass="ReachBalanceTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ql9-Id-TMZ" customClass="ReachBalanceTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="52" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2064,30 +2067,30 @@
         <!--Undelegate Bandwidth View Controller-->
         <scene sceneID="hBX-hc-C8f">
             <objects>
-                <viewController storyboardIdentifier="undelegatedBandwidthViewController" id="WGH-W9-7ex" customClass="UndelegateBandwidthViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="undelegatedBandwidthViewController" id="WGH-W9-7ex" customClass="UndelegateBandwidthViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ftS-gq-nuV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WZA-lX-sYC" customClass="ReachBalanceTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WZA-lX-sYC" customClass="ReachBalanceTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="52" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-B5-B3U" customClass="ReachBalanceTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-B5-B3U" customClass="ReachBalanceTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="114" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxD-xe-LIv" customClass="ReachUsernameTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxD-xe-LIv" customClass="ReachUsernameTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="176" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2h-xk-b2W" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2h-xk-b2W" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_undelegate"/>
                             </button>
@@ -2123,12 +2126,12 @@
         <!--Confirm Bandwidth View Controller-->
         <scene sceneID="dRD-or-dB5">
             <objects>
-                <viewController id="SFb-1f-Us3" customClass="ConfirmBandwidthViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SFb-1f-Us3" customClass="ConfirmBandwidthViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HEu-38-bl7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWK-Gy-Mhh" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWK-Gy-Mhh" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="aNM-iQ-i3x"/>
@@ -2262,11 +2265,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7A-DD-V9b" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7A-DD-V9b" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_confirm"/>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="soS-Qu-yqn" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="soS-Qu-yqn" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="177.5" y="626" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -2307,7 +2310,7 @@
         <!--Allocated Bandwidth View Controller-->
         <scene sceneID="oGm-be-cZQ">
             <objects>
-                <viewController storyboardIdentifier="allocatedBandwidthViewController" id="YmX-GN-Rf1" customClass="AllocatedBandwidthViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="allocatedBandwidthViewController" id="YmX-GN-Rf1" customClass="AllocatedBandwidthViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="re4-cu-4b6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2318,13 +2321,13 @@
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lE-tQ-OOO" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lE-tQ-OOO" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="36" width="343" height="615"/>
                             </view>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hpG-A5-n2E" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hpG-A5-n2E" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </activityIndicatorView>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yiS-LS-hba" customClass="AllocatedBandwidthTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yiS-LS-hba" customClass="AllocatedBandwidthTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -2363,7 +2366,7 @@
         <!--Resources View Controller-->
         <scene sceneID="20f-A4-huH">
             <objects>
-                <viewController storyboardIdentifier="resourcesViewController" id="776-wQ-BcW" customClass="ResourcesViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resourcesViewController" id="776-wQ-BcW" customClass="ResourcesViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="54E-mb-Q3c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2377,11 +2380,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJU-VV-zAW">
                                 <rect key="frame" x="16" y="68" width="343" height="34"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQe-aP-fSF" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQe-aP-fSF" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="179.5" y="2" width="163.5" height="30"/>
                                         <state key="normal" title="_ram"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9o-EB-uTw" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9o-EB-uTw" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="2" width="163.5" height="30"/>
                                         <state key="normal" title="_bandwidth"/>
                                     </button>
@@ -2402,19 +2405,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="AIq-zK-4GD">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="422"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n76-2W-To4" userLabel="RAM graph" customClass="ResourceGraphView" customModule="eosreach" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n76-2W-To4" userLabel="RAM graph" customClass="ResourceGraphView" customModule="prod" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="9xp-ad-IGy"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2P-Ed-1X9" userLabel="CPU graph" customClass="ResourceGraphView" customModule="eosreach" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2P-Ed-1X9" userLabel="CPU graph" customClass="ResourceGraphView" customModule="prod" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="64" width="343" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="IYy-fa-C9U"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zO-NL-4fd" userLabel="NET graph" customClass="ResourceGraphView" customModule="eosreach" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zO-NL-4fd" userLabel="NET graph" customClass="ResourceGraphView" customModule="prod" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="128" width="343" height="72"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="72" id="djt-mm-LT7"/>
@@ -2426,7 +2429,7 @@
                                                 <color key="textColor" name="typographyColorPrimary"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9a-Hs-ZIO" customClass="ReachNetCpuView" customModule="eosreach" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9a-Hs-ZIO" customClass="ReachNetCpuView" customModule="prod" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="218" width="343" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="k0G-T1-hjI"/>
@@ -2438,7 +2441,7 @@
                                                 <color key="textColor" name="typographyColorPrimary"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBh-Kz-hcB" customClass="ReachNetCpuView" customModule="eosreach" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBh-Kz-hcB" customClass="ReachNetCpuView" customModule="prod" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="292" width="343" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="dRS-Sc-hf2"/>
@@ -2450,7 +2453,7 @@
                                                 <color key="textColor" name="typographyColorPrimary"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0N-YF-ihm" customClass="ReachNetCpuView" customModule="eosreach" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0N-YF-ihm" customClass="ReachNetCpuView" customModule="prod" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="366" width="343" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="2Nw-AR-Z7O"/>
@@ -2507,7 +2510,7 @@
         <!--Vote View Controller-->
         <scene sceneID="HFr-qF-Gi9">
             <objects>
-                <viewController storyboardIdentifier="voteViewController" id="BFH-di-g9c" customClass="VoteViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="voteViewController" id="BFH-di-g9c" customClass="VoteViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dya-vh-iOi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2521,11 +2524,11 @@
                                         <color key="textColor" name="colorSecondary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAv-be-vXp" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAv-be-vXp" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="8" y="56" width="345" height="30"/>
                                         <state key="normal" title="_give_us_your_vote"/>
                                     </button>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hso-5S-3UT" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hso-5S-3UT" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="170.5" y="61" width="20" height="20"/>
                                     </activityIndicatorView>
                                 </subviews>
@@ -2546,11 +2549,11 @@
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS0-1h-WGs" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS0-1h-WGs" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="68" width="163.5" height="30"/>
                                 <state key="normal" title="_producer"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvq-Xh-6PP" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvq-Xh-6PP" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="195.5" y="68" width="163.5" height="30"/>
                                 <state key="normal" title="_proxy"/>
                             </button>
@@ -2560,11 +2563,11 @@
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="woz-Ku-Fzt" customClass="VoteProducerTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="woz-Ku-Fzt" customClass="VoteProducerTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="8" y="142.5" width="359" height="516.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lc0-EU-Bc9" customClass="VoteProducerTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lc0-EU-Bc9" customClass="VoteProducerTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="8" y="142.5" width="359" height="516.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -2622,7 +2625,7 @@
         <!--View Block Producer View Controller-->
         <scene sceneID="uut-zm-SZh">
             <objects>
-                <viewController id="aZW-vt-og8" customClass="ViewBlockProducerViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aZW-vt-og8" customClass="ViewBlockProducerViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YMZ-Nn-5he">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2657,15 +2660,15 @@
                                             <color key="titleColor" name="colorSecondary"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZV-8g-I7P" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZV-8g-I7P" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="95" y="72" width="256" height="30"/>
                                         <state key="normal" title="_view_owner_account"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuX-jV-trJ" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuX-jV-trJ" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="95" y="110" width="256" height="30"/>
                                         <state key="normal" title="_code_of_conduct"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eml-s1-OJ0" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eml-s1-OJ0" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="96" y="148" width="255" height="30"/>
                                         <state key="normal" title="_ownership_disclosure"/>
                                     </button>
@@ -2690,7 +2693,7 @@
                                     <constraint firstItem="aZV-8g-I7P" firstAttribute="leading" secondItem="i0H-W5-OVK" secondAttribute="trailing" constant="15" id="vgF-4n-hBW"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0So-Cu-Hea" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0So-Cu-Hea" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="dyx-dm-lpX"/>
@@ -2702,10 +2705,10 @@
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xkm-C5-AMd" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xkm-C5-AMd" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="84" width="343" height="567"/>
                             </view>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ire-r6-w75" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ire-r6-w75" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </activityIndicatorView>
                         </subviews>
@@ -2755,7 +2758,7 @@
         <!--Cast Producers Vote View Controller-->
         <scene sceneID="QXB-Qb-aA6">
             <objects>
-                <viewController storyboardIdentifier="castProducersVoteViewController" id="5DF-D9-eY9" customClass="CastProducersVoteViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="castProducersVoteViewController" id="5DF-D9-eY9" customClass="CastProducersVoteViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fA1-fi-hHC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2766,25 +2769,25 @@
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7st-Fa-bUO" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7st-Fa-bUO" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="72.5" width="64" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="INK-NN-ykh"/>
                                 </constraints>
                                 <state key="normal" title="_add"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pY9-sl-ITc" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pY9-sl-ITc" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="88" y="72.5" width="271" height="30"/>
                                 <state key="normal" title="_add_from_list"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAU-Rz-t8J" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAU-Rz-t8J" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_vote"/>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="FCC-hN-vOF" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="FCC-hN-vOF" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="177.5" y="626" width="20" height="20"/>
                             </activityIndicatorView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2hf-mb-jm0" customClass="CastProducersVoteTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2hf-mb-jm0" customClass="CastProducersVoteTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="8" y="110.5" width="359" height="494.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -2829,26 +2832,26 @@
         <!--Cast Proxy Vote View Controller-->
         <scene sceneID="IMo-of-gLP">
             <objects>
-                <viewController storyboardIdentifier="castProxyVoteViewController" id="SwQ-1Q-Jey" customClass="CastProxyVoteViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="castProxyVoteViewController" id="SwQ-1Q-Jey" customClass="CastProxyVoteViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nKr-J1-ddt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ii3-WY-lDN" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ii3-WY-lDN" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="36" width="343" height="30"/>
                                 <state key="normal" title="_explore_proxy_accounts"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQP-d0-zZj" customClass="ReachUsernameTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQP-d0-zZj" customClass="ReachUsernameTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="98" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-Nm-dJN" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-Nm-dJN" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <state key="normal" title="_vote"/>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="crB-zx-quz" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="crB-zx-quz" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="177.5" y="626" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -2883,25 +2886,25 @@
         <!--Proxy Voter List View Controller-->
         <scene sceneID="8zn-GO-dAM">
             <objects>
-                <viewController id="rPb-Ty-ems" customClass="ProxyVoterListViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rPb-Ty-ems" customClass="ProxyVoterListViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hND-K9-gmL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2MF-DB-g4n" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2MF-DB-g4n" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="uXb-Vx-Tzb"/>
                                 </constraints>
                             </view>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bUy-g6-QrK" customClass="ProxyVoterListTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bUy-g6-QrK" customClass="ProxyVoterListTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-hK-xhk" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-hK-xhk" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                             </activityIndicatorView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBc-nA-WEl" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBc-nA-WEl" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                             </view>
                         </subviews>
@@ -2939,7 +2942,7 @@
         <!--Cast View Controller-->
         <scene sceneID="O3h-Hx-FBL">
             <objects>
-                <viewController id="iGC-qm-93n" customClass="CastViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iGC-qm-93n" customClass="CastViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IE4-Bv-Vbm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2947,13 +2950,13 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P80-mD-q93">
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6j-9O-USY" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6j-9O-USY" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="51e-sn-6hP"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFL-Gh-hqf" customClass="ReachTabBar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFL-Gh-hqf" customClass="ReachTabBar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="vvz-Z5-KqA"/>
@@ -2987,18 +2990,18 @@
         <!--View Proxy Voter View Controller-->
         <scene sceneID="fjO-IG-2JF">
             <objects>
-                <viewController id="6oY-0J-ULN" customClass="ViewProxyVoterViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6oY-0J-ULN" customClass="ViewProxyVoterViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R89-bf-VOQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MAu-wC-TgO" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MAu-wC-TgO" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                             </activityIndicatorView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usm-Mi-LJ6" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usm-Mi-LJ6" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="84" width="343" height="567"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1LU-0J-OAd" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1LU-0J-OAd" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="bDA-xp-br5"/>
@@ -3020,12 +3023,12 @@
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvd-kx-ztW" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvd-kx-ztW" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="96" y="44" width="255" height="33"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <state key="normal" title="_website"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9O-cU-TJc" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9O-cU-TJc" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="96" y="85" width="255" height="33"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <state key="normal" title="_view_account"/>
@@ -3096,12 +3099,12 @@
         <!--Explore View Controller-->
         <scene sceneID="nuT-Hy-S2b">
             <objects>
-                <viewController id="Spf-hF-xRr" customClass="ExploreViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Spf-hF-xRr" customClass="ExploreViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V6r-7N-Ncf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqx-OB-R76" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqx-OB-R76" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="wxQ-zz-vt2"/>
@@ -3110,7 +3113,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGi-7D-yNa">
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2d-Dw-k1T" customClass="ReachTabBar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2d-Dw-k1T" customClass="ReachTabBar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="7pg-5d-0uS"/>
@@ -3144,7 +3147,7 @@
         <!--Create Account View Controller-->
         <scene sceneID="ACI-63-gvH">
             <objects>
-                <viewController id="SZE-Lt-A3B" customClass="CreateAccountViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SZE-Lt-A3B" customClass="CreateAccountViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ODy-7Z-AJf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3155,10 +3158,10 @@
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YKr-Dw-nKA" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YKr-Dw-nKA" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="84" width="343" height="567"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAQ-4J-74O" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAQ-4J-74O" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Owi-uH-O7p"/>
@@ -3173,11 +3176,11 @@
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYo-fi-ihf" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYo-fi-ihf" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="133.5" y="284.5" width="108" height="30"/>
                                         <state key="normal" title="_sync_accounts"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEt-Ji-dFC" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEt-Ji-dFC" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="135" y="322.5" width="105" height="30"/>
                                         <state key="normal" title="_go_to_settings"/>
                                     </button>
@@ -3207,11 +3210,11 @@
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwc-1c-2Mc" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwc-1c-2Mc" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="152" y="268.5" width="39" height="30"/>
                                         <state key="normal" title="_retry"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76Q-q0-JwA" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76Q-q0-JwA" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="119" y="306.5" width="105" height="30"/>
                                         <state key="normal" title="_go_to_settings"/>
                                     </button>
@@ -3243,7 +3246,7 @@
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uoN-a8-OGg" customClass="ReachTextView" customModule="eosreach" customModuleProvider="target">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uoN-a8-OGg" customClass="ReachTextView" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="16" y="76.5" width="343" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="z48-Db-OCf"/>
@@ -3253,7 +3256,7 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is7-eT-owu" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is7-eT-owu" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="16" y="553" width="343" height="30"/>
                                         <state key="normal" title="_done"/>
                                     </button>
@@ -3273,13 +3276,13 @@
                                     <constraint firstItem="pI2-g3-qGc" firstAttribute="top" secondItem="Vhd-sO-s76" secondAttribute="bottom" constant="8" id="rTi-Po-pY2"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-Uw-ZdL" userLabel="ErrorView" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-Uw-ZdL" userLabel="ErrorView" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="84" width="343" height="567"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xw6-VK-7Go" userLabel="Form">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1JK-Ri-q3E" customClass="ReachUsernameTextField" customModule="eosreach" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1JK-Ri-q3E" customClass="ReachUsernameTextField" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="16" y="32" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -3291,16 +3294,16 @@
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-Ua-Mjq" customClass="ReachNetCpuView" customModule="eosreach" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-Ua-Mjq" customClass="ReachNetCpuView" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="16" y="114.5" width="343" height="96"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="96" id="RQX-x8-njG"/>
                                         </constraints>
                                     </view>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="eOP-r1-llB" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="eOP-r1-llB" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="177.5" y="558" width="20" height="20"/>
                                     </activityIndicatorView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ika-Qy-Lgd" customClass="ReachPrimaryButton" customModule="eosreach" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ika-Qy-Lgd" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="16" y="553" width="343" height="30"/>
                                         <state key="normal" title="_create_account"/>
                                     </button>
@@ -3394,28 +3397,28 @@
         <!--Search View Controller-->
         <scene sceneID="p7s-Kf-lrM">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" id="1n1-Hw-Qhx" customClass="SearchViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="1n1-Hw-Qhx" customClass="SearchViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gML-gY-WDD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tM6-tU-nIZ" customClass="ReachUsernameTextField" customModule="eosreach" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tM6-tU-nIZ" customClass="ReachUsernameTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="8" y="52" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                             </textField>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0R-Oe-E1L" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0R-Oe-E1L" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="90" width="375" height="208"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="208" id="Kyh-kw-bRC"/>
                                 </constraints>
                             </view>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-3v-1pz" customClass="AccountCardTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-3v-1pz" customClass="AccountCardTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-Rz-5d9" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-Rz-5d9" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="169" y="114" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
@@ -3450,19 +3453,19 @@
         <!--Registered Block Producers View Controller-->
         <scene sceneID="HiQ-yd-EJP">
             <objects>
-                <viewController storyboardIdentifier="RegisteredBlockProducersViewController" id="GJf-nr-Yhz" customClass="RegisteredBlockProducersViewController" customModule="eosreach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisteredBlockProducersViewController" id="GJf-nr-Yhz" customClass="RegisteredBlockProducersViewController" customModule="prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IH7-vO-cQK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YKi-4J-dv2" customClass="ReachActivityIndicator" customModule="eosreach" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YKi-4J-dv2" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </activityIndicatorView>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P1s-qI-QEP" customClass="RegisteredBlockProducersTableView" customModule="eosreach" customModuleProvider="target">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P1s-qI-QEP" customClass="RegisteredBlockProducersTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-2P-2j5" customClass="ErrorView" customModule="eosreach" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-2P-2j5" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </view>
                         </subviews>
@@ -3523,10 +3526,10 @@
         <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="leo-zV-II3"/>
+        <segue reference="BHx-VC-kzC"/>
         <segue reference="1Wt-0h-Agf"/>
-        <segue reference="cDM-mx-vQS"/>
+        <segue reference="EMU-T5-0SR"/>
         <segue reference="9w4-95-M8t"/>
-        <segue reference="8Yp-E9-EYq"/>
+        <segue reference="HUM-Qw-frB"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,24 +9,24 @@ class StubUrlSession {
     
     var stubApi: StubApi = StubApi()
     
+    lazy var stubConnection: StubConnection = {
+        return StubConnection(stubs: stubApi.stubs())
+    }()
+    
     init() {
-        urlSession = URLSession(configuration: URLSessionConfiguration.default.with(block: { it in 
+        urlSession = URLSession(configuration: URLSessionConfiguration.default.with({ it in 
             it.protocolClasses = [
                 StubUrlProtocol.self
             ]
             return it
         }))
     }
-    
-    func stubConnection() -> StubConnection {
-        return StubConnection(stubs: stubApi.stubs())
-    }
 }
 
 class StubUrlProtocol : URLProtocol {
     
     override open class func canInit(with request: URLRequest) -> Bool {
-        let hasMatch = StubUrlSession.shared.stubConnection().hasMatch(request: request)
+        let hasMatch = StubUrlSession.shared.stubConnection.hasMatch(request: request)
         if (hasMatch) {
             return true
         } else {
@@ -36,7 +36,7 @@ class StubUrlProtocol : URLProtocol {
     
     override func startLoading() {
     
-        let urlResponse = StubUrlSession.shared.stubConnection().performRequest(request: request)
+        let urlResponse = StubUrlSession.shared.stubConnection.performRequest(request: request)
         
         if (urlResponse.response.success()) {
             client?.urlProtocol(self, didReceive: urlResponse.response, cacheStoragePolicy: .allowed)

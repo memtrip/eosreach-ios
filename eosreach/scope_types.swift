@@ -7,7 +7,7 @@ extension Scope {
         block(self)
         return self
     }
-    @inline(__always) func with<R>(block: (Self) -> R) -> R {
+    @inline(__always) func with<R>(_ block: (Self) -> R) -> R {
         return block(self)
     }
 }
