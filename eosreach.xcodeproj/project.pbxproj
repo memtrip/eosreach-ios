@@ -832,6 +832,21 @@
 		3CCC804421FB877A00B715C2 /* EspressoDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804321FB877A00B715C2 /* EspressoDSL.swift */; };
 		3CCC804921FB929100B715C2 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804821FB929100B715C2 /* TestCase.swift */; };
 		3CCC804D21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */; };
+		3CCC805021FB9BD700B715C2 /* ImportKeyOrchestra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804F21FB9BD700B715C2 /* ImportKeyOrchestra.swift */; };
+		3CCC805221FB9BF700B715C2 /* Orchestra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805121FB9BF700B715C2 /* Orchestra.swift */; };
+		3CCC805421FB9C4A00B715C2 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805321FB9C4A00B715C2 /* Robot.swift */; };
+		3CCC805621FB9C6900B715C2 /* CommonRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805521FB9C6900B715C2 /* CommonRobot.swift */; };
+		3CCC805821FB9C8100B715C2 /* ImportKeyRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805721FB9C8100B715C2 /* ImportKeyRobot.swift */; };
+		3CCC805A21FB9C9500B715C2 /* CreateAccountRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805921FB9C9500B715C2 /* CreateAccountRobot.swift */; };
+		3CCC805C21FB9CA400B715C2 /* AccountNavigationRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805B21FB9CA400B715C2 /* AccountNavigationRobot.swift */; };
+		3CCC805E21FB9CB300B715C2 /* AccountRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805D21FB9CB300B715C2 /* AccountRobot.swift */; };
+		3CCC806021FB9CC400B715C2 /* BalanceRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805F21FB9CC400B715C2 /* BalanceRobot.swift */; };
+		3CCC806221FB9CD100B715C2 /* VoteRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806121FB9CD100B715C2 /* VoteRobot.swift */; };
+		3CCC806421FB9CDF00B715C2 /* ResourcesRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806321FB9CDF00B715C2 /* ResourcesRobot.swift */; };
+		3CCC806621FB9CEE00B715C2 /* ActionsRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806521FB9CEE00B715C2 /* ActionsRobot.swift */; };
+		3CCC806821FB9CFC00B715C2 /* TransferRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806721FB9CFC00B715C2 /* TransferRobot.swift */; };
+		3CCC806A21FB9D0E00B715C2 /* TransactionRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806921FB9D0E00B715C2 /* TransactionRobot.swift */; };
+		3CCC806C21FB9D2000B715C2 /* SettingsRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806B21FB9D2000B715C2 /* SettingsRobot.swift */; };
 		3CCE0EF821AAA84300D81458 /* DropDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EF721AAA84300D81458 /* DropDb.swift */; };
 		3CCE0EFC21AADC2100D81458 /* DataTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFB21AADC2100D81458 /* DataTableView.swift */; };
 		3CCE0EFE21AADCE600D81458 /* ActiveBlockProducersDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFD21AADCE600D81458 /* ActiveBlockProducersDelegate.swift */; };
@@ -1321,6 +1336,21 @@
 		3CCC804321FB877A00B715C2 /* EspressoDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoDSL.swift; sourceTree = "<group>"; };
 		3CCC804821FB929100B715C2 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
 		3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStakedWithoutCoreBalanceTestCase.swift; sourceTree = "<group>"; };
+		3CCC804F21FB9BD700B715C2 /* ImportKeyOrchestra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportKeyOrchestra.swift; sourceTree = "<group>"; };
+		3CCC805121FB9BF700B715C2 /* Orchestra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orchestra.swift; sourceTree = "<group>"; };
+		3CCC805321FB9C4A00B715C2 /* Robot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
+		3CCC805521FB9C6900B715C2 /* CommonRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonRobot.swift; sourceTree = "<group>"; };
+		3CCC805721FB9C8100B715C2 /* ImportKeyRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportKeyRobot.swift; sourceTree = "<group>"; };
+		3CCC805921FB9C9500B715C2 /* CreateAccountRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRobot.swift; sourceTree = "<group>"; };
+		3CCC805B21FB9CA400B715C2 /* AccountNavigationRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNavigationRobot.swift; sourceTree = "<group>"; };
+		3CCC805D21FB9CB300B715C2 /* AccountRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRobot.swift; sourceTree = "<group>"; };
+		3CCC805F21FB9CC400B715C2 /* BalanceRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceRobot.swift; sourceTree = "<group>"; };
+		3CCC806121FB9CD100B715C2 /* VoteRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteRobot.swift; sourceTree = "<group>"; };
+		3CCC806321FB9CDF00B715C2 /* ResourcesRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesRobot.swift; sourceTree = "<group>"; };
+		3CCC806521FB9CEE00B715C2 /* ActionsRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsRobot.swift; sourceTree = "<group>"; };
+		3CCC806721FB9CFC00B715C2 /* TransferRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRobot.swift; sourceTree = "<group>"; };
+		3CCC806921FB9D0E00B715C2 /* TransactionRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRobot.swift; sourceTree = "<group>"; };
+		3CCC806B21FB9D2000B715C2 /* SettingsRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRobot.swift; sourceTree = "<group>"; };
 		3CCE0EF721AAA84300D81458 /* DropDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDb.swift; sourceTree = "<group>"; };
 		3CCE0EFB21AADC2100D81458 /* DataTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableView.swift; sourceTree = "<group>"; };
 		3CCE0EFD21AADCE600D81458 /* ActiveBlockProducersDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersDelegate.swift; sourceTree = "<group>"; };
@@ -1687,6 +1717,7 @@
 		3C5799D82191D27E00B9A3D7 /* eosreachTests */ = {
 			isa = PBXGroup;
 			children = (
+				3CCC804E21FB9BB900B715C2 /* orchestra */,
 				3CCC804021FB865400B715C2 /* robot */,
 				3CCC804A21FB972200B715C2 /* app */,
 				3C5799D92191D27E00B9A3D7 /* eosreachTests.swift */,
@@ -2404,7 +2435,20 @@
 		3CCC804021FB865400B715C2 /* robot */ = {
 			isa = PBXGroup;
 			children = (
+				3CCC805321FB9C4A00B715C2 /* Robot.swift */,
 				3CCC804121FB86AE00B715C2 /* SplashRobot.swift */,
+				3CCC805521FB9C6900B715C2 /* CommonRobot.swift */,
+				3CCC805721FB9C8100B715C2 /* ImportKeyRobot.swift */,
+				3CCC805921FB9C9500B715C2 /* CreateAccountRobot.swift */,
+				3CCC805B21FB9CA400B715C2 /* AccountNavigationRobot.swift */,
+				3CCC805D21FB9CB300B715C2 /* AccountRobot.swift */,
+				3CCC805F21FB9CC400B715C2 /* BalanceRobot.swift */,
+				3CCC806121FB9CD100B715C2 /* VoteRobot.swift */,
+				3CCC806321FB9CDF00B715C2 /* ResourcesRobot.swift */,
+				3CCC806521FB9CEE00B715C2 /* ActionsRobot.swift */,
+				3CCC806721FB9CFC00B715C2 /* TransferRobot.swift */,
+				3CCC806921FB9D0E00B715C2 /* TransactionRobot.swift */,
+				3CCC806B21FB9D2000B715C2 /* SettingsRobot.swift */,
 			);
 			path = robot;
 			sourceTree = "<group>";
@@ -2423,6 +2467,15 @@
 				3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */,
 			);
 			path = account;
+			sourceTree = "<group>";
+		};
+		3CCC804E21FB9BB900B715C2 /* orchestra */ = {
+			isa = PBXGroup;
+			children = (
+				3CCC805121FB9BF700B715C2 /* Orchestra.swift */,
+				3CCC804F21FB9BD700B715C2 /* ImportKeyOrchestra.swift */,
+			);
+			path = orchestra;
 			sourceTree = "<group>";
 		};
 		3CEF33B321A5079400716AA2 /* createaccount */ = {
@@ -3695,12 +3748,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CCC805821FB9C8100B715C2 /* ImportKeyRobot.swift in Sources */,
 				3C5799DA2191D27E00B9A3D7 /* eosreachTests.swift in Sources */,
 				3CCC804921FB929100B715C2 /* TestCase.swift in Sources */,
 				3CCC804D21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */,
 				3CCC804221FB86AE00B715C2 /* SplashRobot.swift in Sources */,
 				5459E12781E4B0E892AC7BD0 /* EarlGrey.swift in Sources */,
+				3CCC805E21FB9CB300B715C2 /* AccountRobot.swift in Sources */,
+				3CCC806421FB9CDF00B715C2 /* ResourcesRobot.swift in Sources */,
+				3CCC806C21FB9D2000B715C2 /* SettingsRobot.swift in Sources */,
+				3CCC806821FB9CFC00B715C2 /* TransferRobot.swift in Sources */,
+				3CCC805A21FB9C9500B715C2 /* CreateAccountRobot.swift in Sources */,
+				3CCC805C21FB9CA400B715C2 /* AccountNavigationRobot.swift in Sources */,
+				3CCC806621FB9CEE00B715C2 /* ActionsRobot.swift in Sources */,
+				3CCC805221FB9BF700B715C2 /* Orchestra.swift in Sources */,
+				3CCC806A21FB9D0E00B715C2 /* TransactionRobot.swift in Sources */,
+				3CCC806021FB9CC400B715C2 /* BalanceRobot.swift in Sources */,
+				3CCC805021FB9BD700B715C2 /* ImportKeyOrchestra.swift in Sources */,
+				3CCC805421FB9C4A00B715C2 /* Robot.swift in Sources */,
 				3CCC804421FB877A00B715C2 /* EspressoDSL.swift in Sources */,
+				3CCC806221FB9CD100B715C2 /* VoteRobot.swift in Sources */,
+				3CCC805621FB9C6900B715C2 /* CommonRobot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

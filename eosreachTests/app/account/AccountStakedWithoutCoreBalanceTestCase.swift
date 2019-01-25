@@ -4,7 +4,9 @@ import Foundation
 class AccountStakedWithoutCoreBalanceTestCase : TestCase {
     
     func go() {
-        let _ = SplashRobot().selectExplore()
+        importKeyOrchestra.go(privateKey: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
+        accountRobot.verifyAccountScreen()
+        accountRobot.verifyAvailableBalance()
     }
     
     override func configure(stubApi: StubApi) -> StubApi {

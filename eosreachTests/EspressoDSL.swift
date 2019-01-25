@@ -30,3 +30,6 @@ func click() -> GREYAction {
     return grey_tap()
 }
 
+func typeText(_ text: String) -> GREYAction {
+    return grey_typeText(text)
+}

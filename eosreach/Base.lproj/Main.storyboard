@@ -630,12 +630,14 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAk-kH-fch" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="import_key_toolbar"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="upT-EC-5U4"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88y-b3-ou7" customClass="ReachTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="100" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="import_key_private_key_value_input"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -652,6 +654,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxG-EI-U5e" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="import_key_import_button"/>
                                 <state key="normal" title="_import_key"/>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ede-YS-IrT" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">

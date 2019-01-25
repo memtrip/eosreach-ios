@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class SplashRobot {
+class SplashRobot: Robot {
 
     func selectCreateAccount() -> SplashRobot {
         onView(withId("welcome_splash_create_account_button"))
