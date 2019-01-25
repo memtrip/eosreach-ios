@@ -3,8 +3,14 @@ import Foundation
 class ImportKeyOrchestra: Orchestra {
     
     func go(privateKey: String) {
-        splashRobot.selectImportKey()
-        importKeyRobot.verifyImportKeyScreen()
-        importKeyRobot.typePrivateKey(privateKey: privateKey)
+        
+        splashRobot.begin { it in
+            it.selectImportKey()
+        }
+        
+        importKeyRobot.begin { it in
+            it.verifyImportKeyScreen()
+            it.typePrivateKey(privateKey: privateKey)
+        }
     }
 }

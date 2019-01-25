@@ -1,17 +1,62 @@
 import Foundation
 
-class Orchestra {
-    let commonRobot = CommonRobot()
-    let splashRobot = SplashRobot()
-    let importKeyRobot = ImportKeyRobot()
-    let createAccountRobot = CreateAccountRobot()
-    let accountNavigationRobot = AccountNavigationRobot()
-    let accountRobot = AccountRobot()
-    let balanceRobot = BalanceRobot()
-    let voteRobot = VoteRobot()
-    let resourcesRobot = ResourcesRobot()
-    let actionsRobot = ActionsRobot()
-    let transferRobot = TransferRobot()
-    let transactionRobot = TransactionRobot()
-    let settingsRobot = SettingsRobot()
+protocol Orchestra {
+}
+
+class BasicOrchestra : Orchestra {
+}
+
+extension Orchestra {
+    
+    var commonRobot: CommonRobot {
+        return CommonRobot()
+    }
+    
+    var splashRobot: SplashRobot {
+        return SplashRobot()
+    }
+    
+    var importKeyRobot: ImportKeyRobot {
+        return ImportKeyRobot()
+    }
+ 
+    var createAccountRobot: CreateAccountRobot {
+        return CreateAccountRobot()
+    }
+
+    var accountNavigationRobot: AccountNavigationRobot {
+        return AccountNavigationRobot()
+    }
+
+    var accountRobot: AccountRobot {
+        return AccountRobot()
+    }
+    
+    var balanceRobot: BalanceRobot {
+        return BalanceRobot()
+    }
+
+    var voteRobot: VoteRobot {
+        return VoteRobot()
+    }
+    
+    var resourcesRobot: ResourcesRobot {
+        return ResourcesRobot()
+    }
+
+    var actionsRobot: ActionsRobot {
+        return ActionsRobot()
+    }
+    
+    var transferRobot: TransferRobot {
+        return TransferRobot()
+    }
+    
+    var transactionRobot: TransactionRobot {
+        return TransactionRobot()
+    }
+    
+    var settingsRobot: SettingsRobot {
+        return SettingsRobot()
+    }
 }

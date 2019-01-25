@@ -33,3 +33,7 @@ func click() -> GREYAction {
 func typeText(_ text: String) -> GREYAction {
     return grey_typeText(text)
 }
+
+func replaceText(_ text: String) -> GREYAction {
+    return grey_replaceText(text)
+}

@@ -10,6 +10,6 @@ class ImportKeyRobot : Robot {
     func typePrivateKey(privateKey: String) {
         onView(withId("import_key_private_key_value_input"))
             .matches(isDisplayed())
-            .perform(typeText(privateKey))
+            .perform(replaceText(privateKey))
     }
 }

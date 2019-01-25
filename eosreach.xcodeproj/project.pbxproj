@@ -601,7 +601,6 @@
 		3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799C82191D27D00B9A3D7 /* Main.storyboard */; };
 		3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
 		3C5799CF2191D27E00B9A3D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CD2191D27E00B9A3D7 /* LaunchScreen.storyboard */; };
-		3C5799DA2191D27E00B9A3D7 /* eosreachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5799D92191D27E00B9A3D7 /* eosreachTests.swift */; };
 		3C592F96219D5C5200D7C9B9 /* date_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592F95219D5C5200D7C9B9 /* date_types.swift */; };
 		3C592F98219D605E00D7C9B9 /* BandwidthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592F97219D605E00D7C9B9 /* BandwidthRequest.swift */; };
 		3C592F9A219D60B400D7C9B9 /* BandwidthRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592F99219D60B400D7C9B9 /* BandwidthRequestImpl.swift */; };
@@ -829,7 +828,7 @@
 		3CC9E72D21A5CFD80050BA57 /* CastProducersVoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72C21A5CFD80050BA57 /* CastProducersVoteCell.swift */; };
 		3CC9E72F21A5D03E0050BA57 /* CastProducersVoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */; };
 		3CCC804221FB86AE00B715C2 /* SplashRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804121FB86AE00B715C2 /* SplashRobot.swift */; };
-		3CCC804421FB877A00B715C2 /* EspressoDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804321FB877A00B715C2 /* EspressoDSL.swift */; };
+		3CCC804421FB877A00B715C2 /* Espresso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804321FB877A00B715C2 /* Espresso.swift */; };
 		3CCC804921FB929100B715C2 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804821FB929100B715C2 /* TestCase.swift */; };
 		3CCC804D21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */; };
 		3CCC805021FB9BD700B715C2 /* ImportKeyOrchestra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804F21FB9BD700B715C2 /* ImportKeyOrchestra.swift */; };
@@ -1104,7 +1103,6 @@
 		3C5799CE2191D27E00B9A3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C5799D02191D27E00B9A3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C5799D52191D27E00B9A3D7 /* eosreachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eosreachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C5799D92191D27E00B9A3D7 /* eosreachTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eosreachTests.swift; sourceTree = "<group>"; };
 		3C5799DB2191D27E00B9A3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C592F95219D5C5200D7C9B9 /* date_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = date_types.swift; sourceTree = "<group>"; };
 		3C592F97219D605E00D7C9B9 /* BandwidthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandwidthRequest.swift; sourceTree = "<group>"; };
@@ -1333,7 +1331,7 @@
 		3CC9E72C21A5CFD80050BA57 /* CastProducersVoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProducersVoteCell.swift; sourceTree = "<group>"; };
 		3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastProducersVoteCell.xib; sourceTree = "<group>"; };
 		3CCC804121FB86AE00B715C2 /* SplashRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRobot.swift; sourceTree = "<group>"; };
-		3CCC804321FB877A00B715C2 /* EspressoDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoDSL.swift; sourceTree = "<group>"; };
+		3CCC804321FB877A00B715C2 /* Espresso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Espresso.swift; sourceTree = "<group>"; };
 		3CCC804821FB929100B715C2 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
 		3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStakedWithoutCoreBalanceTestCase.swift; sourceTree = "<group>"; };
 		3CCC804F21FB9BD700B715C2 /* ImportKeyOrchestra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportKeyOrchestra.swift; sourceTree = "<group>"; };
@@ -1720,10 +1718,9 @@
 				3CCC804E21FB9BB900B715C2 /* orchestra */,
 				3CCC804021FB865400B715C2 /* robot */,
 				3CCC804A21FB972200B715C2 /* app */,
-				3C5799D92191D27E00B9A3D7 /* eosreachTests.swift */,
 				3C5799DB2191D27E00B9A3D7 /* Info.plist */,
 				DC0F5558D8100EC99A44F586 /* EarlGrey.swift */,
-				3CCC804321FB877A00B715C2 /* EspressoDSL.swift */,
+				3CCC804321FB877A00B715C2 /* Espresso.swift */,
 				3CCC804821FB929100B715C2 /* TestCase.swift */,
 			);
 			path = eosreachTests;
@@ -3749,7 +3746,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CCC805821FB9C8100B715C2 /* ImportKeyRobot.swift in Sources */,
-				3C5799DA2191D27E00B9A3D7 /* eosreachTests.swift in Sources */,
 				3CCC804921FB929100B715C2 /* TestCase.swift in Sources */,
 				3CCC804D21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */,
 				3CCC804221FB86AE00B715C2 /* SplashRobot.swift in Sources */,
@@ -3766,7 +3762,7 @@
 				3CCC806021FB9CC400B715C2 /* BalanceRobot.swift in Sources */,
 				3CCC805021FB9BD700B715C2 /* ImportKeyOrchestra.swift in Sources */,
 				3CCC805421FB9C4A00B715C2 /* Robot.swift in Sources */,
-				3CCC804421FB877A00B715C2 /* EspressoDSL.swift in Sources */,
+				3CCC804421FB877A00B715C2 /* Espresso.swift in Sources */,
 				3CCC806221FB9CD100B715C2 /* VoteRobot.swift in Sources */,
 				3CCC805621FB9C6900B715C2 /* CommonRobot.swift in Sources */,
 			);

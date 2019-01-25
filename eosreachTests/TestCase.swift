@@ -4,11 +4,8 @@ import XCTest
 
 class TestCase : XCTestCase {
     
-    let orchestra = Orchestra()
-    
-    lazy var importKeyOrchestra: ImportKeyOrchestra = {
-        return orchestra as! ImportKeyOrchestra
-    }()
+    let orchestra: Orchestra = BasicOrchestra()
+    let importKeyOrchestra = ImportKeyOrchestra()
     
     lazy var commonRobot: CommonRobot = {
         return orchestra.commonRobot
@@ -68,5 +65,13 @@ class TestCase : XCTestCase {
     
     func configure(stubApi: StubApi) -> StubApi {
         return stubApi
+    }
+    
+    func testIt() {
+        go()
+    }
+    
+    func go() {
+        fatalError("TestCase must override go, and execute the robot actions")
     }
 }

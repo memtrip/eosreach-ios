@@ -3,25 +3,22 @@ import Foundation
 
 class SplashRobot: Robot {
 
-    func selectCreateAccount() -> SplashRobot {
+    func selectCreateAccount() {
         onView(withId("welcome_splash_create_account_button"))
             .matches(isDisplayed())
             .perform(click())
-        return self
     }
     
-    func selectImportKey() -> SplashRobot {
+    func selectImportKey() {
         onView(withId("welcome_splash_import_private_key_button"))
             .matches(isDisplayed())
             .perform(click())
-        return self
     }
     
-    func selectExplore() -> SplashRobot {
+    func selectExplore() {
         onView(withId("welcome_splash_explore_button"))
             .matches(isDisplayed())
             .perform(click())
-        return self
     }
 }
 

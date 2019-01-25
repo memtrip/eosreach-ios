@@ -3,10 +3,14 @@ import Foundation
 
 class AccountStakedWithoutCoreBalanceTestCase : TestCase {
     
-    func go() {
-        importKeyOrchestra.go(privateKey: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
-        accountRobot.verifyAccountScreen()
-        accountRobot.verifyAvailableBalance()
+    override func go() {
+        importKeyOrchestra
+            .go(privateKey: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
+        
+        accountRobot.begin { it in
+            it.verifyAccountScreen()
+            it.verifyAvailableBalance()
+        }
     }
     
     override func configure(stubApi: StubApi) -> StubApi {
