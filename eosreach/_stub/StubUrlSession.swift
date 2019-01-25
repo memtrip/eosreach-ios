@@ -2,15 +2,20 @@ import Foundation
 import eosswift
 
 class StubUrlSession {
-        
+    
     static let shared = StubUrlSession()
     
     let urlSession: URLSession
     
     var stubApi: StubApi = StubApi()
     
+    private var internalState: Int = 0
+    private let internalQueue: DispatchQueue = DispatchQueue(label:"LockingQueue")
+    
     lazy var stubConnection: StubConnection = {
-        return StubConnection(stubs: stubApi.stubs())
+        internalQueue.sync {
+            return StubConnection(stubs: stubApi.stubs())
+        }
     }()
     
     init() {
