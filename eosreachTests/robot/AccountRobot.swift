@@ -20,6 +20,18 @@ class AccountRobot : Robot {
             .matches(withText("Available Balance"))
     }
     
+    func verifyAccountError() {
+        // account_error_container
+        // error_view
+        // error_view_title
+        // error_view_body
+        // error_view_retry
+    }
+    
+    func selectAccountErrorRetry() {
+        
+    }
+    
     func selectResourcesTab() {
         onView(withText("Resources"))
             .matchesNext(isDisplayed())

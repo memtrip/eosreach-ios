@@ -1,6 +1,6 @@
 import Foundation
 
-struct StubResponse {
+struct StubResponse: Scope {
     let response: HTTPURLResponse
     let responseBody: Data?
 }

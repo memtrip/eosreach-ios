@@ -46,16 +46,11 @@
   }],
   "total_resources": {
     "owner": "memtripissue",
-    "net_weight": "1.0000 SYS",
-    "cpu_weight": "1.0000 SYS",
+    "net_weight": -1,
+    "cpu_weight": -1,
     "ram_bytes": 34170938
   },
-  "self_delegated_bandwidth": {
-    "from": "memtripissue",
-    "to": "memtripissue",
-    "net_weight": "1.0000 SYS",
-    "cpu_weight": "1.0000 SYS"
-  },
+  "self_delegated_bandwidth": {},
   "refund_request": null,
   "voter_info": null
 }

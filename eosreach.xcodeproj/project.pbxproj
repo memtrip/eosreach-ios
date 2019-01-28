@@ -849,6 +849,9 @@
 		3CCC807121FBB1E500B715C2 /* EosKeyManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */; };
 		3CCC807221FBB1F000B715C2 /* EosKeyManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */; };
 		3CCC807921FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807821FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift */; };
+		3CCC807D21FEF99D00B715C2 /* AccountWithErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807C21FEF99D00B715C2 /* AccountWithErrorTestCase.swift */; };
+		3CCC808121FEFB4900B715C2 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807F21FEFAE600B715C2 /* LinkedList.swift */; };
+		3CCC808221FEFB4900B715C2 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807F21FEFAE600B715C2 /* LinkedList.swift */; };
 		3CCE0EF821AAA84300D81458 /* DropDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EF721AAA84300D81458 /* DropDb.swift */; };
 		3CCE0EFC21AADC2100D81458 /* DataTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFB21AADC2100D81458 /* DataTableView.swift */; };
 		3CCE0EFE21AADCE600D81458 /* ActiveBlockProducersDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFD21AADCE600D81458 /* ActiveBlockProducersDelegate.swift */; };
@@ -1354,6 +1357,8 @@
 		3CCC806B21FB9D2000B715C2 /* SettingsRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRobot.swift; sourceTree = "<group>"; };
 		3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosKeyManagerStub.swift; sourceTree = "<group>"; };
 		3CCC807821FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStakedWithCoreBalanceTestCase.swift; sourceTree = "<group>"; };
+		3CCC807C21FEF99D00B715C2 /* AccountWithErrorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWithErrorTestCase.swift; sourceTree = "<group>"; };
+		3CCC807F21FEFAE600B715C2 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		3CCE0EF721AAA84300D81458 /* DropDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDb.swift; sourceTree = "<group>"; };
 		3CCE0EFB21AADC2100D81458 /* DataTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableView.swift; sourceTree = "<group>"; };
 		3CCE0EFD21AADCE600D81458 /* ActiveBlockProducersDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersDelegate.swift; sourceTree = "<group>"; };
@@ -1699,6 +1704,7 @@
 				3C0EC8082192FA5700562A1B /* uikit */,
 				3C8C6D8B2192D47E00FC1A0D /* mxswift */,
 				3C964C4D219456A9003663EF /* wallet */,
+				3CCC807E21FEFAD900B715C2 /* types */,
 				3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */,
 				3C0DBC2621F5028C0020CA1F /* TargetSwitch.swift */,
 				3C0EC8112193086800562A1B /* R.generated.swift */,
@@ -2464,6 +2470,7 @@
 			children = (
 				3CCC807821FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift */,
 				3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */,
+				3CCC807C21FEF99D00B715C2 /* AccountWithErrorTestCase.swift */,
 			);
 			path = account;
 			sourceTree = "<group>";
@@ -2496,6 +2503,14 @@
 				3C0DBC2821F506E00020CA1F /* StubConnection.swift */,
 			);
 			path = api;
+			sourceTree = "<group>";
+		};
+		3CCC807E21FEFAD900B715C2 /* types */ = {
+			isa = PBXGroup;
+			children = (
+				3CCC807F21FEFAE600B715C2 /* LinkedList.swift */,
+			);
+			path = types;
 			sourceTree = "<group>";
 		};
 		3CEF33B321A5079400716AA2 /* createaccount */ = {
@@ -3101,6 +3116,7 @@
 				3C0DBABA21F501430020CA1F /* ConfirmBandwidthViewController.swift in Sources */,
 				3C0DBABB21F501430020CA1F /* UndelegateBandwidthIntent.swift in Sources */,
 				3C0DBABC21F501430020CA1F /* CreateAccountIntent.swift in Sources */,
+				3CCC808121FEFB4900B715C2 /* LinkedList.swift in Sources */,
 				3C0DBABD21F501430020CA1F /* ViewActionViewController.swift in Sources */,
 				3C0DBABE21F501430020CA1F /* DelegateBandwidthResult.swift in Sources */,
 				3C0DBABF21F501430020CA1F /* AccountCardCell.swift in Sources */,
@@ -3656,6 +3672,7 @@
 				3C6DF79321A090F300ADA892 /* ResourcesResult.swift in Sources */,
 				3C6DF79B21A0934600ADA892 /* AccountNavigationIntent.swift in Sources */,
 				3C0A86B021AC060700F48302 /* ReachTextView.swift in Sources */,
+				3CCC808221FEFB4900B715C2 /* LinkedList.swift in Sources */,
 				3C0700B621A74FE8008F63D2 /* ManageRamViewController.swift in Sources */,
 				3C7F0DD72194A0D400E72DD1 /* SearchViewModel.swift in Sources */,
 				3C1A973121A4755D00C30A75 /* BalanceModel.swift in Sources */,
@@ -3786,6 +3803,7 @@
 				3CCC805221FB9BF700B715C2 /* Orchestra.swift in Sources */,
 				3CCC806A21FB9D0E00B715C2 /* TransactionRobot.swift in Sources */,
 				3CCC806021FB9CC400B715C2 /* BalanceRobot.swift in Sources */,
+				3CCC807D21FEF99D00B715C2 /* AccountWithErrorTestCase.swift in Sources */,
 				3CCC805021FB9BD700B715C2 /* ImportKeyOrchestra.swift in Sources */,
 				3CCC805421FB9C4A00B715C2 /* Robot.swift in Sources */,
 				3CCC804421FB877A00B715C2 /* Espresso.swift in Sources */,

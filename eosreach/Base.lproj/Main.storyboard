@@ -755,6 +755,7 @@
                             </containerView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIA-MA-nKF" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <accessibility key="accessibilityConfiguration" identifier="account_error_container"/>
                             </view>
                         </subviews>
                         <constraints>

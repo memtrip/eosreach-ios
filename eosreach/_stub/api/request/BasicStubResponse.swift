@@ -4,9 +4,9 @@ class BasicStubRequest : StubRequest {
 
     private let code: Int
     private let body: () -> Data?
-    private let headers: [String : String]?
+    private let headers: [String : String]
     
-    init(code: Int, body: @escaping () -> Data?, headers: [String : String] = [:]) {
+    init(code: Int, body: @escaping () -> Data? = { return nil }, headers: [String : String] = [:]) {
         self.code = code
         self.body = body
         self.headers = headers
