@@ -848,6 +848,7 @@
 		3CCC806C21FB9D2000B715C2 /* SettingsRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806B21FB9D2000B715C2 /* SettingsRobot.swift */; };
 		3CCC807121FBB1E500B715C2 /* EosKeyManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */; };
 		3CCC807221FBB1F000B715C2 /* EosKeyManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */; };
+		3CCC807921FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807821FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift */; };
 		3CCE0EF821AAA84300D81458 /* DropDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EF721AAA84300D81458 /* DropDb.swift */; };
 		3CCE0EFC21AADC2100D81458 /* DataTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFB21AADC2100D81458 /* DataTableView.swift */; };
 		3CCE0EFE21AADCE600D81458 /* ActiveBlockProducersDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFD21AADCE600D81458 /* ActiveBlockProducersDelegate.swift */; };
@@ -1352,6 +1353,7 @@
 		3CCC806921FB9D0E00B715C2 /* TransactionRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRobot.swift; sourceTree = "<group>"; };
 		3CCC806B21FB9D2000B715C2 /* SettingsRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRobot.swift; sourceTree = "<group>"; };
 		3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosKeyManagerStub.swift; sourceTree = "<group>"; };
+		3CCC807821FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStakedWithCoreBalanceTestCase.swift; sourceTree = "<group>"; };
 		3CCE0EF721AAA84300D81458 /* DropDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDb.swift; sourceTree = "<group>"; };
 		3CCE0EFB21AADC2100D81458 /* DataTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableView.swift; sourceTree = "<group>"; };
 		3CCE0EFD21AADCE600D81458 /* ActiveBlockProducersDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveBlockProducersDelegate.swift; sourceTree = "<group>"; };
@@ -2460,6 +2462,7 @@
 		3CCC804B21FB972C00B715C2 /* account */ = {
 			isa = PBXGroup;
 			children = (
+				3CCC807821FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift */,
 				3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */,
 			);
 			path = account;
@@ -3772,6 +3775,7 @@
 				3CCC804D21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */,
 				3CCC804221FB86AE00B715C2 /* SplashRobot.swift in Sources */,
 				5459E12781E4B0E892AC7BD0 /* EarlGrey.swift in Sources */,
+				3CCC807921FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift in Sources */,
 				3CCC805E21FB9CB300B715C2 /* AccountRobot.swift in Sources */,
 				3CCC806421FB9CDF00B715C2 /* ResourcesRobot.swift in Sources */,
 				3CCC806C21FB9D2000B715C2 /* SettingsRobot.swift in Sources */,

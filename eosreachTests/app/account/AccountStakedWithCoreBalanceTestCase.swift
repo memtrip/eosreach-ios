@@ -1,9 +1,9 @@
 import Foundation
 @testable import stub
 
-class AccountStakedWithoutCoreBalanceTestCase : TestCase {
+class AccountStakedWithCoreBalanceTestCase : TestCase {
     
-    func testAccountWithoutCoreBalance() {
+    func testAccountWithCoreBalance() {
         importKeyOrchestra
             .go(privateKey: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
         
@@ -14,7 +14,7 @@ class AccountStakedWithoutCoreBalanceTestCase : TestCase {
         }
         
         resourcesRobot.begin { it in
-            it.verifyStakedResources(cpu: "2.2999 SYS", net: "1.0000 SYS")
+            it.verifyStakedResources(cpu: "9.0001 SYS", net: "1.0009 SYS")
         }
     }
     
@@ -25,7 +25,7 @@ class AccountStakedWithoutCoreBalanceTestCase : TestCase {
                 urlMatcher: regex("v1/chain/get_account$")
             ),
             request: BasicStubRequest(code: 200, body: {
-                return readJson(R.file.happy_path_get_account_without_core_liquid_balanceJson())
+                return readJson(R.file.happy_path_get_account_stakedJson())
             })
         )
         return stubApi
