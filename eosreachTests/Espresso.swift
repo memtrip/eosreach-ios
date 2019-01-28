@@ -10,7 +10,12 @@ func withId(_ id: String) -> GREYMatcher {
 }
 
 extension GREYInteraction {
-    func matches(_ matcher: GREYMatcher) -> GREYInteraction {
+    
+    func matches(_ matcher: GREYMatcher) {
+        self.assert(matcher)
+    }
+    
+    func matchesNext(_ matcher: GREYMatcher) -> GREYInteraction {
         self.assert(matcher)
         return self
     }
@@ -21,6 +26,10 @@ extension GREYInteraction {
 //
 func isDisplayed() -> GREYMatcher {
     return grey_sufficientlyVisible()
+}
+
+func withText(_ text: String) -> GREYMatcher {
+    return grey_text(text)
 }
 
 //

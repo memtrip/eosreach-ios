@@ -1,5 +1,9 @@
 import Foundation
 import XCTest
+import RxSwift
+import RxTest
+import RxBlocking
+
 @testable import stub
 
 class TestCase : XCTestCase {
@@ -61,17 +65,18 @@ class TestCase : XCTestCase {
     
     override func setUp() {
         StubUrlSession.shared.stubApi = configure(stubApi: StubApi())
+        addTeardownBlock {
+            let _ = try! DropDb().drop().asObservable().toBlocking().first()
+        }
     }
+    
+//    override func tearDown() {
+//        let _ = try! DropDb().drop().asObservable().toBlocking().first()
+////        Springboard.deleteApp(withName: "eosreach")
+//        super.tearDown()
+//    }
     
     func configure(stubApi: StubApi) -> StubApi {
         return stubApi
-    }
-    
-    func testIt() {
-        go()
-    }
-    
-    func go() {
-        fatalError("TestCase must override go, and execute the robot actions")
     }
 }

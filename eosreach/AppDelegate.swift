@@ -1,5 +1,6 @@
 import UIKit
 import SideMenu
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,6 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.backgroundColor = R.color.colorWindowBackground()
         application.statusBarStyle = .lightContent
         SideMenuManager.default.menuPresentMode = .menuSlideIn
+        
+        if (ProcessInfo.processInfo.arguments.contains("EarlGrey")) {
+            try! DropDb().cleanUp()
+        }
+
         return true
     }
 

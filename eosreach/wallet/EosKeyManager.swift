@@ -32,7 +32,7 @@ class EosKeyManagerImpl: EosKeyManager {
         }()
     }
 
-    private let encryptedKeyPairData = EncryptedKeyPairData()
+    internal let encryptedKeyPairData = EncryptedKeyPairData()
 
     func importPrivateKey(eosPrivateKey: EOSPrivateKey) -> Single<String> {
         return Single<String>.create { single in
@@ -120,7 +120,11 @@ class EosKeyManagerImpl: EosKeyManager {
 class EosKeyManagerFactory {
 
     static func create() -> EosKeyManager {
-        return EosKeyManagerImpl()
+        switch TargetSwitch.api() {
+        case .stub:
+            return EosKeyManagerStub()
+        case .prod:
+            return EosKeyManagerImpl()
+        }
     }
 }
-

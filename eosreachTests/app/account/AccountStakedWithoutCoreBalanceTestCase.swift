@@ -3,13 +3,13 @@ import Foundation
 
 class AccountStakedWithoutCoreBalanceTestCase : TestCase {
     
-    override func go() {
+    func testAccountWithoutCoreBalance() {
         importKeyOrchestra
             .go(privateKey: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
         
         accountRobot.begin { it in
             it.verifyAccountScreen()
-            it.verifyAvailableBalance()
+            it.verifyAvailableBalance(availableBalance: "$162947.12")
         }
     }
     

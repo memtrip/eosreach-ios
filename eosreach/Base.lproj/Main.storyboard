@@ -707,6 +707,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2KH-gd-coI" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="account_toolbar"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="jbL-tC-yCg"/>
                                 </constraints>
@@ -725,17 +726,20 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXp-r0-8jB">
                                         <rect key="frame" x="0.0" y="20.5" width="375" height="31.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="account_available_balance_value"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IY-l1-llm">
                                         <rect key="frame" x="0.0" y="52" width="375" height="18"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="account_available_balance_label"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <color key="textColor" name="typographyColorSecondary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <accessibility key="accessibilityConfiguration" identifier="account_balances"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="Ay0-gC-Fta"/>
                                     <constraint firstItem="vXp-r0-8jB" firstAttribute="centerY" secondItem="3kj-Ag-Cha" secondAttribute="centerY" constant="-12" id="GK2-Hq-WM5"/>
@@ -3522,17 +3526,17 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SIU-CS-KrR"/>
-        <segue reference="dMo-xo-wz4"/>
+        <segue reference="G0s-Vg-eJt"/>
+        <segue reference="rvY-Mg-arL"/>
         <segue reference="Jnr-cb-LO9"/>
         <segue reference="Eks-sF-JJe"/>
         <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
         <segue reference="BHx-VC-kzC"/>
-        <segue reference="1Wt-0h-Agf"/>
+        <segue reference="nIH-HN-fGl"/>
         <segue reference="EMU-T5-0SR"/>
         <segue reference="9w4-95-M8t"/>
-        <segue reference="HUM-Qw-frB"/>
+        <segue reference="kx6-Ea-lKC"/>
     </inferredMetricsTieBreakers>
 </document>
