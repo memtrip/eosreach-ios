@@ -2380,6 +2380,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_manage_resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTz-Lt-Jsq">
                                 <rect key="frame" x="16" y="36" width="343" height="24"/>
+                                <accessibility key="accessibilityConfiguration" identifier="resources_title"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
@@ -2389,10 +2390,12 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQe-aP-fSF" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="179.5" y="2" width="163.5" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="resources_ram_button"/>
                                         <state key="normal" title="_ram"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9o-EB-uTw" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="2" width="163.5" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="resources_bandwidth_button"/>
                                         <state key="normal" title="_bandwidth"/>
                                     </button>
                                 </subviews>
@@ -2438,6 +2441,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9a-Hs-ZIO" customClass="ReachNetCpuView" customModule="prod" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="218" width="343" height="56"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="resources_staked_container"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="k0G-T1-hjI"/>
                                                 </constraints>
@@ -2450,6 +2454,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBh-Kz-hcB" customClass="ReachNetCpuView" customModule="prod" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="292" width="343" height="56"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="resources_delegated_container"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="dRS-Sc-hf2"/>
                                                 </constraints>
@@ -2462,6 +2467,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0N-YF-ihm" customClass="ReachNetCpuView" customModule="prod" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="366" width="343" height="56"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="resources_refund_container"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="2Nw-AR-Z7O"/>
                                                 </constraints>
@@ -2476,6 +2482,9 @@
                                     <constraint firstItem="AIq-zK-4GD" firstAttribute="top" secondItem="vIO-oK-VUt" secondAttribute="top" id="rmJ-y6-JTB"/>
                                     <constraint firstAttribute="trailing" secondItem="AIq-zK-4GD" secondAttribute="trailing" id="vQR-mo-Kzh"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="resources_scroll_container"/>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <constraints>
@@ -3533,7 +3542,7 @@
         <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="BHx-VC-kzC"/>
+        <segue reference="tfG-Pv-tX3"/>
         <segue reference="nIH-HN-fGl"/>
         <segue reference="EMU-T5-0SR"/>
         <segue reference="9w4-95-M8t"/>

@@ -469,7 +469,7 @@
 		3C0DBBE421F501430020CA1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
 		3C0DBBE521F501430020CA1F /* AllocatedBandwidthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BD25A21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib */; };
 		3C0DBBE621F501430020CA1F /* error_path_get_key_accounts_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F32C21EFE7A000A0720B /* error_path_get_key_accounts_empty.json */; };
-		3C0DBBE721F501430020CA1F /* happy_path_get_account_core_liquid_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F721EFE66300A0720B /* happy_path_get_account_core_liquid_balance.json */; };
+		3C0DBBE721F501430020CA1F /* happy_path_get_account_without_core_liquid_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F721EFE66300A0720B /* happy_path_get_account_without_core_liquid_balance.json */; };
 		3C0DBBE821F501430020CA1F /* CastProducersVoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */; };
 		3C0DBBE921F501430020CA1F /* RamStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C0700AC21A74862008F63D2 /* RamStrings.strings */; };
 		3C0DBBEA21F501430020CA1F /* AccountStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C6DF76821A082AC00ADA892 /* AccountStrings.strings */; };
@@ -1055,7 +1055,7 @@
 		3C44F2EF21EFE15000A0720B /* ErrorOnFirstStubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorOnFirstStubRequest.swift; sourceTree = "<group>"; };
 		3C44F2F321EFE60100A0720B /* happy_path_get_info.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_info.json; sourceTree = "<group>"; };
 		3C44F2F521EFE63D00A0720B /* happy_path_create_account.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_create_account.json; sourceTree = "<group>"; };
-		3C44F2F721EFE66300A0720B /* happy_path_get_account_core_liquid_balance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_core_liquid_balance.json; sourceTree = "<group>"; };
+		3C44F2F721EFE66300A0720B /* happy_path_get_account_without_core_liquid_balance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_without_core_liquid_balance.json; sourceTree = "<group>"; };
 		3C44F2F921EFE68000A0720B /* happy_path_get_account_refund.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_refund.json; sourceTree = "<group>"; };
 		3C44F2FB21EFE6A000A0720B /* happy_path_get_account_staked.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_staked.json; sourceTree = "<group>"; };
 		3C44F2FD21EFE6BE00A0720B /* happy_path_get_account_unstaked.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_unstaked.json; sourceTree = "<group>"; };
@@ -1633,7 +1633,7 @@
 				3C44F31121EFE71F00A0720B /* happy_path_push_transaction_log.json */,
 				3C44F2F321EFE60100A0720B /* happy_path_get_info.json */,
 				3C44F2F521EFE63D00A0720B /* happy_path_create_account.json */,
-				3C44F2F721EFE66300A0720B /* happy_path_get_account_core_liquid_balance.json */,
+				3C44F2F721EFE66300A0720B /* happy_path_get_account_without_core_liquid_balance.json */,
 				3C44F2F921EFE68000A0720B /* happy_path_get_account_refund.json */,
 				3C44F2FB21EFE6A000A0720B /* happy_path_get_account_staked.json */,
 				3C44F2FD21EFE6BE00A0720B /* happy_path_get_account_unstaked.json */,
@@ -2643,7 +2643,7 @@
 				3C0DBBE421F501430020CA1F /* Assets.xcassets in Resources */,
 				3C0DBBE521F501430020CA1F /* AllocatedBandwidthCell.xib in Resources */,
 				3C0DBBE621F501430020CA1F /* error_path_get_key_accounts_empty.json in Resources */,
-				3C0DBBE721F501430020CA1F /* happy_path_get_account_core_liquid_balance.json in Resources */,
+				3C0DBBE721F501430020CA1F /* happy_path_get_account_without_core_liquid_balance.json in Resources */,
 				3C0DBBE821F501430020CA1F /* CastProducersVoteCell.xib in Resources */,
 				3C0DBBE921F501430020CA1F /* RamStrings.strings in Resources */,
 				3C0DBBEA21F501430020CA1F /* AccountStrings.strings in Resources */,

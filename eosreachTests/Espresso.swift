@@ -5,10 +5,6 @@ func onView(_ matcher: GREYMatcher) -> GREYInteraction {
     return EarlGrey.selectElement(with: matcher)
 }
 
-func withId(_ id: String) -> GREYMatcher {
-    return grey_accessibilityID(id)
-}
-
 extension GREYInteraction {
     
     func matches(_ matcher: GREYMatcher) {
@@ -28,8 +24,24 @@ func isDisplayed() -> GREYMatcher {
     return grey_sufficientlyVisible()
 }
 
+func withId(_ id: String) -> GREYMatcher {
+    return grey_accessibilityID(id)
+}
+
 func withText(_ text: String) -> GREYMatcher {
     return grey_text(text)
+}
+
+func allOf(_ matchers: GREYMatcher...) -> GREYMatcher {
+    return grey_allOf(matchers)
+}
+
+func descendantOf(_ matcher: GREYMatcher) -> GREYMatcher {
+    return grey_descendant(matcher)
+}
+
+func ancestorOf(_ matcher: GREYMatcher) -> GREYMatcher {
+    return grey_ancestor(matcher)
 }
 
 //
@@ -45,4 +57,8 @@ func typeText(_ text: String) -> GREYAction {
 
 func replaceText(_ text: String) -> GREYAction {
     return grey_replaceText(text)
+}
+
+func scrollToBottomn() -> GREYAction {
+    return grey_scrollToContentEdge(GREYContentEdge.bottom)
 }

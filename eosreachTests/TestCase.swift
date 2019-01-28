@@ -65,8 +65,8 @@ class TestCase : XCTestCase {
     
     override func setUp() {
         StubUrlSession.shared.stubApi = configure(stubApi: StubApi())
-        addTeardownBlock {
-            let _ = try! DropDb().drop().asObservable().toBlocking().first()
+        if (!ProcessInfo.processInfo.arguments.contains("EarlGrey")) {
+            fatalError("Scheme must contain an argument named `EarlGrey` to trgger an app data clean.")
         }
     }
     

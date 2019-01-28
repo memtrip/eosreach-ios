@@ -6,8 +6,8 @@ class AccountRobot : Robot {
         onView(withId("account_toolbar"))
             .matches(isDisplayed())
         
-//        onView(withId("account_balances"))
-//            .matches(isDisplayed())
+        onView(withId("account_balances"))
+            .matches(isDisplayed())
     }
     
     func verifyAvailableBalance(availableBalance: String) {
@@ -18,5 +18,11 @@ class AccountRobot : Robot {
         onView(withId("account_available_balance_label"))
             .matchesNext(isDisplayed())
             .matches(withText("Available Balance"))
+    }
+    
+    func selectResourcesTab() {
+        onView(withText("Resources"))
+            .matchesNext(isDisplayed())
+            .perform(click())
     }
 }

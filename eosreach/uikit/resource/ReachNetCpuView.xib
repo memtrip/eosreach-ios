@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReachNetCpuView" customModule="eosreach" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReachNetCpuView" customModule="prod" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="ZQ0-nF-xn2"/>
                 <outlet property="cpuLabel" destination="qmV-VP-kXf" id="2Lx-d6-VCC"/>
@@ -37,19 +37,22 @@
                     <color key="textColor" name="typographyColorPrimary"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_cpu_value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCh-DV-td7" customClass="ReachBorderLabel" customModule="eosreach" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_cpu_value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCh-DV-td7" customClass="ReachBorderLabel" customModule="prod" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="38.5" width="179.5" height="14.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="cpu_value"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                     <color key="textColor" name="typographyColorSecondary"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_net_value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYc-LC-fa6" customClass="ReachBorderLabel" customModule="eosreach" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_net_value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYc-LC-fa6" customClass="ReachBorderLabel" customModule="prod" customModuleProvider="target">
                     <rect key="frame" x="195.5" y="38.5" width="179.5" height="14.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="net_value"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                     <color key="textColor" name="typographyColorSecondary"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <accessibility key="accessibilityConfiguration" identifier="net_cpu_container"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FYc-LC-fa6" secondAttribute="trailing" id="8BV-he-XXo"/>
                 <constraint firstItem="FYc-LC-fa6" firstAttribute="top" secondItem="HSE-hX-dx4" secondAttribute="bottom" constant="4" id="H8E-sH-2b3"/>
