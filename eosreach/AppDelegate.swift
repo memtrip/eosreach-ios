@@ -7,19 +7,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.window!.tintColor = R.color.colorAccent()
         self.window!.backgroundColor = R.color.colorWindowBackground()
         application.statusBarStyle = .lightContent
         SideMenuManager.default.menuPresentMode = .menuSlideIn
-        
-        if (ProcessInfo.processInfo.arguments.contains("EarlGrey")) {
-            try! DropDb().cleanUp()
-        }
-
         return true
+    }
+    
+    func clearData() {
+        try! DropDb().cleanUp()
+    }
+    
+    func resetApplicationState() {
+        self.window?.rootViewController = R.storyboard.main().instantiateInitialViewController()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

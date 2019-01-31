@@ -7,7 +7,7 @@ import RxBlocking
 @testable import stub
 
 class TestCase : XCTestCase {
-    
+
     let orchestra: Orchestra = BasicOrchestra()
     let importKeyOrchestra = ImportKeyOrchestra()
     
@@ -65,16 +65,13 @@ class TestCase : XCTestCase {
     
     override func setUp() {
         StubUrlSession.shared.stubApi = configure(stubApi: StubApi())
-        if (!ProcessInfo.processInfo.arguments.contains("EarlGrey")) {
-            fatalError("Scheme must contain an argument named `EarlGrey` to trgger an app data clean.")
-        }
+        (UIApplication.shared.delegate as! AppDelegate).clearData()
+        (UIApplication.shared.delegate as! AppDelegate).resetApplicationState()
     }
     
-//    override func tearDown() {
-//        let _ = try! DropDb().drop().asObservable().toBlocking().first()
-////        Springboard.deleteApp(withName: "eosreach")
-//        super.tearDown()
-//    }
+    override func tearDown() {
+        (UIApplication.shared.delegate as! AppDelegate).clearData()
+    }
     
     func configure(stubApi: StubApi) -> StubApi {
         return stubApi

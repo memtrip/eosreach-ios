@@ -7,8 +7,6 @@ class AccountWithErrorTestCase : TestCase {
         importKeyOrchestra
             .go(privateKey: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
         
-        sleep(4)
-        
         commonRobot.begin { it in
             it.verifyErrorView(
                 parentId: "account_error_container",
