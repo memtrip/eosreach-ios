@@ -7,13 +7,12 @@ class EntryViewController: MxViewController<EntryIntent, EntryResult, EntryViewS
     @IBOutlet weak var activityIndicator: ReachActivityIndicator!
     @IBOutlet weak var errorView: ErrorView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        viewModel.publish(intent: EntryIntent.start)
     }
 
     override func intents() -> Observable<EntryIntent> {
         return Observable.merge(
-            Observable.just(EntryIntent.start),
             errorView.retryClick().map {
                 EntryIntent.start
             }
@@ -54,5 +53,9 @@ class EntryViewController: MxViewController<EntryIntent, EntryResult, EntryViewS
 
     override func provideViewModel() -> EntryViewModel {
         return EntryViewModel(initialState: EntryViewState.idle)
+    }
+    
+    @IBAction func unwindToEntryViewController(segue: UIStoryboardSegue) {
+        
     }
 }

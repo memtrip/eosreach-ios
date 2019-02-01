@@ -69,10 +69,6 @@ class TestCase : XCTestCase {
         (UIApplication.shared.delegate as! AppDelegate).resetApplicationState()
     }
     
-    override func tearDown() {
-        (UIApplication.shared.delegate as! AppDelegate).clearData()
-    }
-    
     func configure(stubApi: StubApi) -> StubApi {
         return stubApi
     }

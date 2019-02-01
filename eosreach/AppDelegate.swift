@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func resetApplicationState() {
+        self.window?.rootViewController?.dismiss(animated: false, completion: nil)
         self.window?.rootViewController = R.storyboard.main().instantiateInitialViewController()
     }
 

@@ -1,24 +1,18 @@
 import Foundation
 
 class StubConnection {
-    
-    private let stubs: Array<Stub>
-    
-    init(stubs: Array<Stub>) {
-        self.stubs = stubs
+
+    static func performRequest(request: URLRequest, stubApi: StubApi) -> StubResponse {
+        return self.match(request: request, stubs: stubApi.stubs())!.request.call(request: request)
     }
     
-    func performRequest(request: URLRequest) -> StubResponse {
-        return self.match(request: request)!.request.call(request: request)
+    static func hasMatch(request: URLRequest, stubApi: StubApi) -> Bool {
+        return self.match(request: request, stubs: stubApi.stubs()) != nil
     }
     
-    func hasMatch(request: URLRequest) -> Bool {
-        return self.match(request: request) != nil
-    }
-    
-    private func match(request: URLRequest) -> Stub? {
+    private static func match(request: URLRequest, stubs: Array<Stub>) -> Stub? {
         let urlToMatch = request.url!.absoluteString
-        return self.stubs.first(where: { stub in
+        return stubs.first(where: { stub in
             
             let urlMatch = stub.matcher.urlMatcher.matches(
                 in: urlToMatch,

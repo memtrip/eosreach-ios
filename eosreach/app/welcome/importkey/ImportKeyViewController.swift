@@ -57,7 +57,7 @@ class ImportKeyViewController: MxViewController<ImportKeyIntent, ImportKeyResult
         case .onSuccess:
             importKeyButton.gone()
             activityIndicator.stop()
-            performSegue(withIdentifier: R.segue.importKeyViewController.importKeyToEntry, sender: self)
+            performSegue(withIdentifier: R.segue.importKeyViewController.importKeyUnwindToEntry, sender: self)
         case .genericError:
             showOKDialog(message: R.string.welcomeStrings.welcome_import_key_error_generic())
             importKeyButton.visible()
