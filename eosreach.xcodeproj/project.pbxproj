@@ -415,7 +415,6 @@
 		3C0DBBAB21F501430020CA1F /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD12194A0D400E72DD1 /* SearchResult.swift */; };
 		3C0DBBAC21F501430020CA1F /* SettingsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FC42193612A0017BEF9 /* SettingsResult.swift */; };
 		3C0DBBAD21F501430020CA1F /* BalanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7D219F378C0026649F /* BalanceEntity.swift */; };
-		3C0DBBAE21F501430020CA1F /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D8C2192D4B600FC1A0D /* Rx.swift */; };
 		3C0DBBAF21F501430020CA1F /* CastProducersVoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E70B21A5A4180050BA57 /* CastProducersVoteViewController.swift */; };
 		3C0DBBB021F501430020CA1F /* ConfirmRamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700DA21A751BA008F63D2 /* ConfirmRamViewController.swift */; };
 		3C0DBBB121F501430020CA1F /* ActiveBlockProducersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A972021A3D03100C30A75 /* ActiveBlockProducersCell.swift */; };
@@ -543,6 +542,8 @@
 		3C0EC828219350DE00562A1B /* ImportKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC823219350DE00562A1B /* ImportKeyViewModel.swift */; };
 		3C0EC829219350DE00562A1B /* ImportKeyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC824219350DE00562A1B /* ImportKeyResult.swift */; };
 		3C0EC82A219350DE00562A1B /* ImportKeyViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC825219350DE00562A1B /* ImportKeyViewState.swift */; };
+		3C108D712204F3F40011F07B /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C108D702204F3F40011F07B /* Rx.swift */; };
+		3C108D722204F4160011F07B /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C108D702204F3F40011F07B /* Rx.swift */; };
 		3C14FA3F21A0A1C600B8255F /* AccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA3E21A0A1C600B8255F /* AccountUseCase.swift */; };
 		3C14FA4221A0A2A900B8255F /* EosPriceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA4121A0A2A900B8255F /* EosPriceUseCase.swift */; };
 		3C14FA4421A0A31A00B8255F /* EosPriceRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA4321A0A31A00B8255F /* EosPriceRequestImpl.swift */; };
@@ -685,7 +686,6 @@
 		3C8BD25721A6CED900ACFA70 /* AllocatedBandwidthTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD25621A6CED900ACFA70 /* AllocatedBandwidthTableView.swift */; };
 		3C8BD25921A6CEE600ACFA70 /* AllocatedBandwidthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD25821A6CEE600ACFA70 /* AllocatedBandwidthCell.swift */; };
 		3C8BD25B21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BD25A21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib */; };
-		3C8C6D8D2192D4B600FC1A0D /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D8C2192D4B600FC1A0D /* Rx.swift */; };
 		3C8C6D902192D4CE00FC1A0D /* MxViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D8F2192D4CE00FC1A0D /* MxViewState.swift */; };
 		3C8C6D922192D4F400FC1A0D /* MxIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D912192D4F400FC1A0D /* MxIntent.swift */; };
 		3C8C6D942192D50700FC1A0D /* MxResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D932192D50700FC1A0D /* MxResult.swift */; };
@@ -1003,6 +1003,7 @@
 		3C0EC823219350DE00562A1B /* ImportKeyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportKeyViewModel.swift; sourceTree = "<group>"; };
 		3C0EC824219350DE00562A1B /* ImportKeyResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportKeyResult.swift; sourceTree = "<group>"; };
 		3C0EC825219350DE00562A1B /* ImportKeyViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportKeyViewState.swift; sourceTree = "<group>"; };
+		3C108D702204F3F40011F07B /* Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
 		3C14FA3E21A0A1C600B8255F /* AccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUseCase.swift; sourceTree = "<group>"; };
 		3C14FA4121A0A2A900B8255F /* EosPriceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosPriceUseCase.swift; sourceTree = "<group>"; };
 		3C14FA4321A0A31A00B8255F /* EosPriceRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosPriceRequestImpl.swift; sourceTree = "<group>"; };
@@ -1194,7 +1195,6 @@
 		3C8BD25621A6CED900ACFA70 /* AllocatedBandwidthTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocatedBandwidthTableView.swift; sourceTree = "<group>"; };
 		3C8BD25821A6CEE600ACFA70 /* AllocatedBandwidthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocatedBandwidthCell.swift; sourceTree = "<group>"; };
 		3C8BD25A21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllocatedBandwidthCell.xib; sourceTree = "<group>"; };
-		3C8C6D8C2192D4B600FC1A0D /* Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
 		3C8C6D8F2192D4CE00FC1A0D /* MxViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxViewState.swift; sourceTree = "<group>"; };
 		3C8C6D912192D4F400FC1A0D /* MxIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxIntent.swift; sourceTree = "<group>"; };
 		3C8C6D932192D50700FC1A0D /* MxResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxResult.swift; sourceTree = "<group>"; };
@@ -1938,7 +1938,7 @@
 		3C8C6D8B2192D47E00FC1A0D /* mxswift */ = {
 			isa = PBXGroup;
 			children = (
-				3C8C6D8C2192D4B600FC1A0D /* Rx.swift */,
+				3C108D702204F3F40011F07B /* Rx.swift */,
 				3C8C6D8F2192D4CE00FC1A0D /* MxViewState.swift */,
 				3C8C6D912192D4F400FC1A0D /* MxIntent.swift */,
 				3C8C6D932192D50700FC1A0D /* MxResult.swift */,
@@ -3343,6 +3343,7 @@
 				3C0DBB9C21F501430020CA1F /* ViewBlockProducerViewState.swift in Sources */,
 				3C0DBB9D21F501430020CA1F /* ConfirmRamIntent.swift in Sources */,
 				3C0DBB9E21F501430020CA1F /* ReachBorderView.swift in Sources */,
+				3C108D722204F4160011F07B /* Rx.swift in Sources */,
 				3C0DBB9F21F501430020CA1F /* AccountBundle.swift in Sources */,
 				3C0DBBA021F501430020CA1F /* CurrencySymbol.swift in Sources */,
 				3C0DBBA121F501430020CA1F /* ErrorOnFirstStubRequest.swift in Sources */,
@@ -3359,7 +3360,6 @@
 				3C0DBBAB21F501430020CA1F /* SearchResult.swift in Sources */,
 				3C0DBBAC21F501430020CA1F /* SettingsResult.swift in Sources */,
 				3C0DBBAD21F501430020CA1F /* BalanceEntity.swift in Sources */,
-				3C0DBBAE21F501430020CA1F /* Rx.swift in Sources */,
 				3C0DBBAF21F501430020CA1F /* CastProducersVoteViewController.swift in Sources */,
 				3C0DBBB021F501430020CA1F /* ConfirmRamViewController.swift in Sources */,
 				3C0DBBB121F501430020CA1F /* ActiveBlockProducersCell.swift in Sources */,
@@ -3458,6 +3458,7 @@
 				3C8BD23C21A6C22900ACFA70 /* AllocatedBandwidthResult.swift in Sources */,
 				3CC9E72521A5C00E0050BA57 /* ProxyVoterListCell.swift in Sources */,
 				3C0ADD8B219F37B10026649F /* GetAccounts.swift in Sources */,
+				3C108D712204F3F40011F07B /* Rx.swift in Sources */,
 				3C0700AB21A7333C008F63D2 /* AllocatedBandwidthDelegate.swift in Sources */,
 				3C9BFBBD219B5E2C00589936 /* AccountsForPublicKeyRequestImpl.swift in Sources */,
 				3C1F1F9221A359090075BD71 /* ActionsIntent.swift in Sources */,
@@ -3739,7 +3740,6 @@
 				3C7F0DD62194A0D400E72DD1 /* SearchResult.swift in Sources */,
 				3C340FC92193612A0017BEF9 /* SettingsResult.swift in Sources */,
 				3C0ADD7E219F378C0026649F /* BalanceEntity.swift in Sources */,
-				3C8C6D8D2192D4B600FC1A0D /* Rx.swift in Sources */,
 				3CC9E71021A5A4180050BA57 /* CastProducersVoteViewController.swift in Sources */,
 				3C0700DF21A751BB008F63D2 /* ConfirmRamViewController.swift in Sources */,
 				3C1A972121A3D03100C30A75 /* ActiveBlockProducersCell.swift in Sources */,

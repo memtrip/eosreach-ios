@@ -19,11 +19,3 @@ extension ConnectableObservableType {
         }
     }
 }
-
-extension ObservableType where E: Sequence, E.Iterator.Element: Equatable {
-    func distinctUntilChanged() -> Observable<E> {
-        return distinctUntilChanged { (lhs, rhs) -> Bool in
-            return Array(lhs) == Array(rhs)
-        }
-    }
-}
