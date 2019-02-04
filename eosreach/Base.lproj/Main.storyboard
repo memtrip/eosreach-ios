@@ -2587,10 +2587,16 @@
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="woz-Ku-Fzt" customClass="VoteProducerTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="8" y="142.5" width="359" height="516.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="vote_producer_tableview"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lc0-EU-Bc9" customClass="VoteProducerTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="8" y="142.5" width="359" height="516.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="vote_proxy_tableview"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <constraints>
@@ -3550,6 +3556,6 @@
         <segue reference="BHx-VC-kzC"/>
         <segue reference="nIH-HN-fGl"/>
         <segue reference="9w4-95-M8t"/>
-        <segue reference="HUM-Qw-frB"/>
+        <segue reference="kx6-Ea-lKC"/>
     </inferredMetricsTieBreakers>
 </document>

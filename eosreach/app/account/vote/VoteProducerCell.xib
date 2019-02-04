@@ -12,23 +12,25 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="woX-9s-kCO" customClass="VoteProducerCell" customModule="eosreach" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="woX-9s-kCO" customClass="VoteProducerCell" customModule="prod" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="woX-9s-kCO" id="bZT-YR-FuL">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJR-2Y-qTn" customClass="ReachButton" customModule="eosreach" customModuleProvider="target">
+                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJR-2Y-qTn" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="359" height="36.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_account_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6c-Pt-MUF" userLabel="Producer name">
                                 <rect key="frame" x="8" y="8" width="343" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="vote_producer_cell_name"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <accessibility key="accessibilityConfiguration" identifier="vote_producer_cell_border"/>
                         <constraints>
                             <constraint firstItem="L6c-Pt-MUF" firstAttribute="leading" secondItem="KJR-2Y-qTn" secondAttribute="leading" constant="8" id="6rr-VV-Jmz"/>
                             <constraint firstAttribute="bottom" secondItem="L6c-Pt-MUF" secondAttribute="bottom" constant="8" id="ecb-08-otC"/>

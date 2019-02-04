@@ -45,6 +45,7 @@ class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDe
 
     open func bindCell(cell: C, item: T) -> C {
         cell.populate(item: item)
+        
         return cell
     }
 
@@ -68,11 +69,20 @@ class SimpleTableView<T, C: SimpleTableViewCell<T>> : UITableView, UITableViewDe
         }
         
         cell.extraTapDelegate = self
+        cell.contentView.accessibilityIdentifier = "\(self.accessibilityId())_\(indexPath.row)"
         
         return bindCell(
             cell: cell,
             item: data[indexPath.row]
         )
+    }
+    
+    private func accessibilityId() -> String {
+        if let id = accessibilityIdentifier {
+            return id
+        } else {
+            return "UITableView"
+        }
     }
     
     var atBottom: ControlEvent<T> {
