@@ -544,6 +544,7 @@
 		3C0EC82A219350DE00562A1B /* ImportKeyViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC825219350DE00562A1B /* ImportKeyViewState.swift */; };
 		3C108D712204F3F40011F07B /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C108D702204F3F40011F07B /* Rx.swift */; };
 		3C108D722204F4160011F07B /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C108D702204F3F40011F07B /* Rx.swift */; };
+		3C108D742204F6860011F07B /* GetAccountPriceErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C108D732204F6860011F07B /* GetAccountPriceErrorTestCase.swift */; };
 		3C14FA3F21A0A1C600B8255F /* AccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA3E21A0A1C600B8255F /* AccountUseCase.swift */; };
 		3C14FA4221A0A2A900B8255F /* EosPriceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA4121A0A2A900B8255F /* EosPriceUseCase.swift */; };
 		3C14FA4421A0A31A00B8255F /* EosPriceRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA4321A0A31A00B8255F /* EosPriceRequestImpl.swift */; };
@@ -1004,6 +1005,7 @@
 		3C0EC824219350DE00562A1B /* ImportKeyResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportKeyResult.swift; sourceTree = "<group>"; };
 		3C0EC825219350DE00562A1B /* ImportKeyViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportKeyViewState.swift; sourceTree = "<group>"; };
 		3C108D702204F3F40011F07B /* Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
+		3C108D732204F6860011F07B /* GetAccountPriceErrorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountPriceErrorTestCase.swift; sourceTree = "<group>"; };
 		3C14FA3E21A0A1C600B8255F /* AccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUseCase.swift; sourceTree = "<group>"; };
 		3C14FA4121A0A2A900B8255F /* EosPriceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosPriceUseCase.swift; sourceTree = "<group>"; };
 		3C14FA4321A0A31A00B8255F /* EosPriceRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosPriceRequestImpl.swift; sourceTree = "<group>"; };
@@ -2471,6 +2473,7 @@
 				3CCC807821FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift */,
 				3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */,
 				3CCC807C21FEF99D00B715C2 /* AccountWithErrorTestCase.swift */,
+				3C108D732204F6860011F07B /* GetAccountPriceErrorTestCase.swift */,
 			);
 			path = account;
 			sourceTree = "<group>";
@@ -3804,6 +3807,7 @@
 				3CCC806A21FB9D0E00B715C2 /* TransactionRobot.swift in Sources */,
 				3CCC806021FB9CC400B715C2 /* BalanceRobot.swift in Sources */,
 				3CCC807D21FEF99D00B715C2 /* AccountWithErrorTestCase.swift in Sources */,
+				3C108D742204F6860011F07B /* GetAccountPriceErrorTestCase.swift in Sources */,
 				3CCC805021FB9BD700B715C2 /* ImportKeyOrchestra.swift in Sources */,
 				3CCC805421FB9C4A00B715C2 /* Robot.swift in Sources */,
 				3CCC804421FB877A00B715C2 /* Espresso.swift in Sources */,

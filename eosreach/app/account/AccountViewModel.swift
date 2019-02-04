@@ -42,68 +42,68 @@ class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewSta
     override func reducer(previousState: AccountViewState, result: AccountResult) -> AccountViewState {
         switch result {
         case .idle:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.idle
-            })
+            }
         case .balanceTabIdle:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.idle
                 copy.page = AccountPage.balances
-            })
+            }
         case .resourceTabIdle:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.idle
                 copy.page = AccountPage.resources
-            })
+            }
         case .voteTabIdle:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.idle
                 copy.page = AccountPage.vote
-            })
+            }
         case .onProgress(let accountName):
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.onProgress
                 copy.accountName = accountName
-            })
+            }
         case .onProgressWithStartingTab(let accountName, let page):
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.onProgress
                 copy.accountName = accountName
                 copy.page = page
-            })
+            }
         case .onSuccess(let accountView):
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.onSuccess
                 copy.accountView = accountView
-            })
+            }
         case .onErrorFetchingAccount:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.onErrorFetchingAccount
-            })
+            }
         case .onErrorFetchingBalances:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.onErrorFetchingBalances
-            })
+            }
         case .openNavigation:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.openNavigation
-            })
+            }
         case .navigateToExplore:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.navigateToExplore
-            })
+            }
         case .navigateToImportKey:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.navigateToImportKey
-            })
+            }
         case .navigateToCreateAccount:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.navigateToCreateAccount
-            })
+            }
         case .navigateToSettings:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = AccountViewState.View.navigateToSettings
-            })
+            }
         }
     }
     

@@ -24,43 +24,43 @@ class BalanceViewModel: MxViewModel<BalanceIntent, BalanceResult, BalanceViewSta
     override func reducer(previousState: BalanceViewState, result: BalanceResult) -> BalanceViewState {
         switch result {
         case .idle:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = BalanceViewState.View.idle
-            })
+            }
         case .populate(let accountBalances):
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = BalanceViewState.View.populate
                 copy.accountBalances = accountBalances
-            })
+            }
         case .onAirdropError:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = BalanceViewState.View.onAirdropError
-            })
+            }
         case .onAirdropSuccess(let balances):
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = BalanceViewState.View.onAirdropSuccess
                 copy.accountBalances = AccountBalanceList(balances: balances)
-            })
+            }
         case .onAirdropProgress:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = BalanceViewState.View.onAirdropProgress
-            })
+            }
         case .navigateToActions(let contractAccountBalance):
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = BalanceViewState.View.navigateToActions(contractAccountBalance: contractAccountBalance)
-            })
+            }
         case .onAirdropEmpty:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = BalanceViewState.View.onAirdropEmpty
-            })
+            }
         case .onAirdropCustomTokenTableEmpty:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = BalanceViewState.View.onAirdropCustomTokenTableEmpty
-            })
+            }
         case .emptyBalances:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = BalanceViewState.View.emptyBalances
-            })
+            }
         }
     }
     

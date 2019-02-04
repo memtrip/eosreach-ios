@@ -22,7 +22,7 @@ class StubApi {
             urlMatcher: regex("v1/chain/get_account$")
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_account_unstakedJson())
+            return readJson(R.file.happy_path_get_account_stakedJson())
         })
     )
     
@@ -144,7 +144,7 @@ class StubApi {
     
     var getPriceForCurrency: Stub = Stub(
         matcher: StubMatcher(
-            rootUrl: R.string.appStrings.app_endpoint_url(),
+            rootUrl: R.string.appStrings.app_reach_endpoint_url(),
             urlMatcher: regex("price/(.*)$")
         ),
         request: BasicStubRequest(code: 200, body: {
@@ -154,7 +154,7 @@ class StubApi {
     
     var createAccount: Stub = Stub(
         matcher: StubMatcher(
-            rootUrl: R.string.appStrings.app_endpoint_url(),
+            rootUrl: R.string.appStrings.app_reach_endpoint_url(),
             urlMatcher: regex("createAccount$")
         ),
         request: BasicStubRequest(code: 200, body: {

@@ -20,34 +20,34 @@ class EosEndpointViewModel: MxViewModel<EosEndpointIntent, EosEndpointResult, Eo
     override func reducer(previousState: EosEndpointViewState, result: EosEndpointResult) -> EosEndpointViewState {
         switch result {
         case .idle:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = EosEndpointViewState.View.idle
-            })
+            }
         case .onProgress:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = EosEndpointViewState.View.onProgress
-            })
+            }
         case .onSuccess(let url):
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = EosEndpointViewState.View.onSuccess
                 copy.endpointUrl = url
-            })
+            }
         case .navigateToBlockProducerList:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = EosEndpointViewState.View.navigateToBlockProducerList
-            })
+            }
         case .onErrorInvalidUrl:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = EosEndpointViewState.View.onErrorInvalidUrl
-            })
+            }
         case .onErrorNothingChanged:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = EosEndpointViewState.View.onErrorNothingChanged
-            })
+            }
         case .onErrorGeneric:
-            return previousState.copy(copy: { copy in
+            return previousState.copy { copy in
                 copy.view = EosEndpointViewState.View.onErrorGeneric
-            })
+            }
         }
     }
     
