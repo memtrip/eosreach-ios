@@ -877,6 +877,7 @@
 		3CEF33CF21A53E7E00716AA2 /* ViewBlockProducerBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33CE21A53E7E00716AA2 /* ViewBlockProducerBundle.swift */; };
 		3CF9031E2208201700ABDB58 /* VoteForUsErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9031D2208201700ABDB58 /* VoteForUsErrorTestCase.swift */; };
 		3CF903212208336C00ABDB58 /* BlockProducerVoteTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF903202208336C00ABDB58 /* BlockProducerVoteTestCase.swift */; };
+		3CF9032322083FDA00ABDB58 /* ProxyVoteTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9032222083FDA00ABDB58 /* ProxyVoteTestCase.swift */; };
 		5459E12781E4B0E892AC7BD0 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0F5558D8100EC99A44F586 /* EarlGrey.swift */; };
 		64D127582CBE758855AE4A51 /* Pods_stub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AF008691BE8085E838A527 /* Pods_stub.framework */; };
 		C1E5A46CDDED48FC645D7A7D /* Pods_prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5440B07D6A2278ADEAB5EF2 /* Pods_prod.framework */; };
@@ -1387,6 +1388,7 @@
 		3CEF33CE21A53E7E00716AA2 /* ViewBlockProducerBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBlockProducerBundle.swift; sourceTree = "<group>"; };
 		3CF9031D2208201700ABDB58 /* VoteForUsErrorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteForUsErrorTestCase.swift; sourceTree = "<group>"; };
 		3CF903202208336C00ABDB58 /* BlockProducerVoteTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerVoteTestCase.swift; sourceTree = "<group>"; };
+		3CF9032222083FDA00ABDB58 /* ProxyVoteTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyVoteTestCase.swift; sourceTree = "<group>"; };
 		48ECDAAEF6BB465B8887CE03 /* Pods-eosreach-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
 		7027EF510FA54A38C246E66C /* Pods-eosreachTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreachTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests.debug.xcconfig"; sourceTree = "<group>"; };
 		83C4DF4FE9AF77299AE53124 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = Pods/EarlGrey/EarlGrey/EarlGrey.framework; sourceTree = SOURCE_ROOT; };
@@ -2539,6 +2541,7 @@
 			children = (
 				3CF9031D2208201700ABDB58 /* VoteForUsErrorTestCase.swift */,
 				3CF903202208336C00ABDB58 /* BlockProducerVoteTestCase.swift */,
+				3CF9032222083FDA00ABDB58 /* ProxyVoteTestCase.swift */,
 			);
 			path = vote;
 			sourceTree = "<group>";
@@ -3806,6 +3809,7 @@
 			files = (
 				3CCC805821FB9C8100B715C2 /* ImportKeyRobot.swift in Sources */,
 				3CCC804921FB929100B715C2 /* TestCase.swift in Sources */,
+				3CF9032322083FDA00ABDB58 /* ProxyVoteTestCase.swift in Sources */,
 				3CF9031E2208201700ABDB58 /* VoteForUsErrorTestCase.swift in Sources */,
 				3CCC804D21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */,
 				3CCC804221FB86AE00B715C2 /* SplashRobot.swift in Sources */,

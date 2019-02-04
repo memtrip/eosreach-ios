@@ -47,4 +47,22 @@ class VoteRobot : Robot {
             .matchesNext(isDisplayed())
             .matches(withText("eosflareiobp"))
     }
+    
+    func verifyProxyVoteScreen() {
+        
+        onView(withId("vote_title_label"))
+            .matches(isDisplayed())
+        
+        onView(withId("vote_proxy_tableview"))
+            .matches(isDisplayed())
+        
+        onView(
+            withIdInParent(
+                withIdInTableView("vote_proxy_tableview", position: 0, id: "vote_producer_cell_border"),
+                id: "vote_producer_cell_name"
+            )
+            )
+            .matchesNext(isDisplayed())
+            .matches(withText("memtripproxy"))
+    }
 }
