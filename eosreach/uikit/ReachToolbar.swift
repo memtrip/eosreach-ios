@@ -7,6 +7,7 @@ class ReachToolbar : Toolbar {
 
     required init?(coder aDecoder: NSCoder) {
         backMenuButton = IconButton(image: Icon.cm.arrowBack, tintColor: .white)
+        backMenuButton.accessibilityIdentifier = "app_toolbar_back"
 
         super.init(coder: aDecoder)
 

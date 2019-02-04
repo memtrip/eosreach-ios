@@ -4,7 +4,7 @@ import RxSwift
 class VoteViewModel: MxViewModel<VoteIntent, VoteResult, VoteViewState> {
 
     private let getAccoutByName = GetAccountByName()
-    private let eosKeyManagerImpl = EosKeyManagerImpl()
+    private let eosKeyManagerImpl = EosKeyManagerFactory.create()
     private let voteRequest = VoteRequestImpl()
     private let insertTransactionLog = InsertTransactionLog()
     

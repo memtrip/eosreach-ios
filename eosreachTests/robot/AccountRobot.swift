@@ -36,4 +36,10 @@ class AccountRobot : Robot {
             .matchesNext(isDisplayed())
             .perform(click())
     }
+    
+    func selectVoteTab() {
+        onView(withText("Vote"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
 }

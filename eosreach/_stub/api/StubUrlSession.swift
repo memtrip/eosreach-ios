@@ -41,15 +41,11 @@ class StubUrlProtocol : URLProtocol {
             request: request,
             stubApi: StubUrlSession.shared.stubApi)
         
-        if (urlResponse.response.success()) {
-            client?.urlProtocol(self, didReceive: urlResponse.response, cacheStoragePolicy: .allowed)
-            if let body = urlResponse.responseBody {
-                client?.urlProtocol(self, didLoad: body)
-            }
-        } else {
-            client?.urlProtocol(self, didFailWithError: StubError())
+        client?.urlProtocol(self, didReceive: urlResponse.response, cacheStoragePolicy: .allowed)
+        if let body = urlResponse.responseBody {
+            client?.urlProtocol(self, didLoad: body)
         }
-        
+
         client?.urlProtocolDidFinishLoading(self)
     }
     
@@ -59,7 +55,4 @@ class StubUrlProtocol : URLProtocol {
     override open class func canonicalRequest(for request: URLRequest) -> URLRequest {
         return request
     }
-}
-
-class StubError : Error {
 }

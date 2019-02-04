@@ -2538,12 +2538,14 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_producer_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcl-w1-psp">
                                         <rect key="frame" x="8" y="8" width="345" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="vote_no_vote_body_label"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" name="colorSecondary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAv-be-vXp" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="8" y="56" width="345" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="vote_no_vote_castvote_button"/>
                                         <state key="normal" title="_give_us_your_vote"/>
                                     </button>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hso-5S-3UT" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
@@ -2577,6 +2579,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_vote_" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeC-v6-POE" userLabel="_vote">
                                 <rect key="frame" x="16" y="114" width="343" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="vote_title_label"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
@@ -3539,9 +3542,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="G0s-Vg-eJt"/>
         <segue reference="rvY-Mg-arL"/>
-        <segue reference="Jnr-cb-LO9"/>
+        <segue reference="Yir-oe-XsA"/>
         <segue reference="Eks-sF-JJe"/>
-        <segue reference="adL-2Q-ujF"/>
+        <segue reference="8th-cq-vMG"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
         <segue reference="BHx-VC-kzC"/>

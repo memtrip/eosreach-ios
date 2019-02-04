@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionLogViewController" customModule="eosreach" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionLogViewController" customModule="prod" customModuleProvider="target">
             <connections>
                 <outlet property="logTextView" destination="bpD-Q3-Njo" id="Ygq-hK-IXN"/>
                 <outlet property="toolBar" destination="ckX-XO-B3E" id="Wh3-vE-wdD"/>
@@ -23,14 +23,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckX-XO-B3E" customClass="ReachToolbar" customModule="eosreach" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckX-XO-B3E" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                    <accessibility key="accessibilityConfiguration" identifier="transaction_log_toolbar"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="ifU-tT-OSc"/>
                     </constraints>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bpD-Q3-Njo">
                     <rect key="frame" x="16" y="84" width="343" height="567"/>
+                    <accessibility key="accessibilityConfiguration" identifier="transaction_log_body"/>
                     <color key="textColor" name="typographyColorPrimary"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

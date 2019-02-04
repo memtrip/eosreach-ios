@@ -44,6 +44,15 @@ func ancestorOf(_ matcher: GREYMatcher) -> GREYMatcher {
     return grey_ancestor(matcher)
 }
 
+func withIdInParent(_ parentId: String, id: String) -> GREYMatcher {
+    return ancestorOf(
+        allOf(
+            withId(id),
+            ancestorOf(withId(parentId))
+        )
+    )
+}
+
 //
 // MARK :- actions
 //
