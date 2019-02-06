@@ -19,8 +19,8 @@ class StubConnection {
                 range: NSRange(0..<urlToMatch.count)).count > 0
             
             if let bodyMatcher = stub.matcher.bodyMatcher {
-                if let requestBodyString = request.bodyString() {
-                    let bodyMatch = bodyMatcher == requestBodyString
+                if let requestBodyString = request.streamToString() {
+                    let bodyMatch = bodyMatcher.trim() == requestBodyString.trim()
                     return urlMatch && bodyMatch
                 } else {
                     return false
@@ -29,5 +29,10 @@ class StubConnection {
                 return urlMatch
             }
         })
+    }
+    
+    private static func compareBody(body1: String, body2: String) -> Bool {
+        return body1.trimmingCharacters(in: .whitespacesAndNewlines) ==
+            body2.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }

@@ -56,6 +56,10 @@ extension Orchestra {
         return TransactionRobot()
     }
     
+    var blockProducerRobot: BlockProducerRobot {
+        return BlockProducerRobot()
+    }
+    
     var settingsRobot: SettingsRobot {
         return SettingsRobot()
     }

@@ -21,6 +21,45 @@ class VoteRobot : Robot {
             .perform(click())
     }
     
+    func selectVoteForProducers() {
+        
+        onView(withId("vote_cast_producer_button"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
+    func verifyVoteForProducersScreen() {
+        
+        onView(withId("cast_producer_vote_instructions_label"))
+            .matches(isDisplayed())
+        
+        onView(withId("cast_producer_vote_add_button"))
+            .matches(isDisplayed())
+        
+        onView(withId("cast_producer_vote_add_from_list_button"))
+            .matches(isDisplayed())
+        
+        onView(withId("cast_producer_vote_button"))
+            .matches(isDisplayed())
+        
+        onView(withId("cast_producer_vote_list"))
+            .matches(isDisplayed())
+    }
+    
+    func selectAddBlockProducerFromList() {
+        
+        onView(withId("cast_producer_vote_add_from_list_button"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
+    func selectVoteForProxy() {
+        
+        onView(withId("vote_cast_proxy_button"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
     func verifyVotedBlockProducersScreen() {
         
         onView(withId("vote_title_label"))

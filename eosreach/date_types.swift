@@ -8,3 +8,10 @@ extension Date {
         return dateFormatterPrint.string(from: self)
     }
 }
+
+extension String {
+    
+    func trim() -> String {
+        return trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}

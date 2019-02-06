@@ -56,3 +56,27 @@ class StubUrlProtocol : URLProtocol {
         return request
     }
 }
+
+extension URLRequest {
+
+    func streamToString() -> String? {
+        var data = Data()
+        var buffer = [UInt8](repeating: 0, count: 4096)
+        
+        if let stream = httpBodyStream {
+            stream.open()
+            while stream.hasBytesAvailable {
+                let length = stream.read(&buffer, maxLength: 4096)
+                if length == 0 {
+                    break
+                } else {
+                    data.append(&buffer, count: length)
+                }
+            }
+            stream.close()
+            return String(data: data, encoding: .utf8)
+        } else {
+            return nil
+        }
+    }
+}

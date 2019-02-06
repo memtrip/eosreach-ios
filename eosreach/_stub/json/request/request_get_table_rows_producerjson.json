@@ -1,1 +1,1 @@
-{"scope":"producerjson","code":"producerjson","table":"producerjson","table_key":"","json":true,"limit":50,"lower_bound":"","upper_bound":"","key_type":"","index_position":"","encode_type":"dec"}
+{"table_key":"","lower_bound":"","key_type":"","index_position":"","code":"producerjson","scope":"producerjson","table":"producerjson","limit":100,"encode_type":"dec","upper_bound":"","json":true}

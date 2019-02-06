@@ -59,6 +59,10 @@ class TestCase : XCTestCase {
         return orchestra.transactionRobot
     }()
     
+    lazy var blockProducerRobot: BlockProducerRobot = {
+        return orchestra.blockProducerRobot
+    }()
+    
     lazy var settingsRobot: SettingsRobot = {
         return orchestra.settingsRobot
     }()

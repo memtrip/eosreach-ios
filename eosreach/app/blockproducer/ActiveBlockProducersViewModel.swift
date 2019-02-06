@@ -38,7 +38,7 @@ class ActiveBlockProducersViewModel: MxViewModel<ActiveBlockProducersIntent, Act
     }
     
     private func getBlockProducerList() -> Observable<ActiveBlockProducersResult> {
-        return blockProducerRequest.getBlockProducers(limit: 50).map { response in
+        return blockProducerRequest.getBlockProducers(limit: 100).map { response in
                 if (response.success()) {
                     return ActiveBlockProducersResult.onSuccess(blockProducerList: response.data!)
                 } else {
