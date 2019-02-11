@@ -11,7 +11,7 @@ class StubApi {
             urlMatcher: regex("v1/chain/get_info$")
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_infoJson())
+            readJson(R.file.happy_path_get_infoJson())
         })
     )
     
@@ -22,7 +22,7 @@ class StubApi {
             urlMatcher: regex("v1/chain/get_account$")
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_account_stakedJson())
+            readJson(R.file.happy_path_get_account_stakedJson())
         })
     )
     
@@ -32,7 +32,7 @@ class StubApi {
             urlMatcher: regex("v1/history/get_key_accounts$")
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_key_accountsJson())
+            readJson(R.file.happy_path_get_key_accountsJson())
         })
     )
     
@@ -42,7 +42,7 @@ class StubApi {
             urlMatcher: regex("v1/chain/get_currency_balance$")
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_sys_currency_balanceJson())
+            readJson(R.file.happy_path_get_sys_currency_balanceJson())
         })
     )
     
@@ -53,7 +53,7 @@ class StubApi {
             bodyMatcher: jsonString(R.file.request_get_table_rows_customtokenJson())
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_table_rows_customtokenJson())
+            readJson(R.file.happy_path_get_table_rows_customtokenJson())
         })
     )
     
@@ -64,7 +64,7 @@ class StubApi {
             bodyMatcher: jsonString(R.file.request_get_table_rows_producerjsonJson())
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_table_rows_producerjsonJson())
+            readJson(R.file.happy_path_get_table_rows_producerjsonJson())
         })
     )
     
@@ -75,7 +75,7 @@ class StubApi {
             bodyMatcher: jsonString(R.file.request_get_table_rows_producerjson_singleJson())
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_table_rows_producerjson_singleJson())
+            readJson(R.file.happy_path_get_table_rows_producerjson_singleJson())
         })
     )
     
@@ -86,7 +86,7 @@ class StubApi {
             bodyMatcher: jsonString(R.file.request_get_table_rows_regproxyinfoJson())
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_table_rows_regproxyinfoJson())
+            readJson(R.file.happy_path_get_table_rows_regproxyinfoJson())
         })
     )
     
@@ -97,7 +97,7 @@ class StubApi {
             bodyMatcher: jsonString(R.file.request_get_table_rows_regproxyinfoJson())
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_table_rows_regproxyinfo_singleJson())
+            readJson(R.file.happy_path_get_table_rows_regproxyinfo_singleJson())
         })
     )
     
@@ -108,7 +108,7 @@ class StubApi {
             bodyMatcher: jsonString(R.file.request_get_table_rows_delegated_bandwidthJson())
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_table_rows_delegated_bandwidthJson())
+            readJson(R.file.happy_path_get_table_rows_delegated_bandwidthJson())
         })
     )
 
@@ -118,7 +118,7 @@ class StubApi {
             urlMatcher: regex("v1/history/get_actions$")
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_actionsJson())
+            readJson(R.file.happy_path_get_actionsJson())
         })
     )
 
@@ -128,7 +128,7 @@ class StubApi {
             urlMatcher: regex("v1/chain/get_producers$")
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_producersJson())
+            readJson(R.file.happy_path_get_producersJson())
         })
     )
     
@@ -138,7 +138,7 @@ class StubApi {
             urlMatcher: regex("v1/chain/push_transaction$")
         ),
         request: BasicStubRequest(code: 400, body: {
-            return readJson(R.file.error_push_transaction_logJson())
+            readJson(R.file.error_push_transaction_logJson())
         })
     )
     
@@ -148,7 +148,7 @@ class StubApi {
             urlMatcher: regex("price/(.*)$")
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_priceJson())
+            readJson(R.file.happy_path_priceJson())
         })
     )
     
@@ -158,7 +158,7 @@ class StubApi {
             urlMatcher: regex("createAccount$")
         ),
         request: BasicStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_create_accountJson())
+            readJson(R.file.happy_path_create_accountJson())
         })
     )
     

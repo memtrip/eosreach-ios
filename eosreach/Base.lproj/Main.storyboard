@@ -2890,16 +2890,19 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ii3-WY-lDN" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="36" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cast_vote_explore_proxy_accounts_button"/>
                                 <state key="normal" title="_explore_proxy_accounts"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQP-d0-zZj" customClass="ReachUsernameTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="98" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cast_proxy_vote_input"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-Nm-dJN" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cast_proxy_vote_button"/>
                                 <state key="normal" title="_vote"/>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="crB-zx-quz" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
@@ -3575,12 +3578,12 @@
     <inferredMetricsTieBreakers>
         <segue reference="G0s-Vg-eJt"/>
         <segue reference="rvY-Mg-arL"/>
-        <segue reference="Yir-oe-XsA"/>
+        <segue reference="Jnr-cb-LO9"/>
         <segue reference="Eks-sF-JJe"/>
         <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="agL-0e-eci"/>
+        <segue reference="rCe-JF-jov"/>
         <segue reference="nIH-HN-fGl"/>
         <segue reference="9w4-95-M8t"/>
         <segue reference="kx6-Ea-lKC"/>

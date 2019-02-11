@@ -100,8 +100,28 @@ class VoteRobot : Robot {
                 withIdInTableView("vote_proxy_tableview", position: 0, id: "vote_producer_cell_border"),
                 id: "vote_producer_cell_name"
             )
-            )
+        )
             .matchesNext(isDisplayed())
             .matches(withText("memtripproxy"))
+    }
+    
+    func verifyCastProxyVoteScreen() {
+        onView(withId("cast_proxy_vote_input"))
+            .matches(isDisplayed())
+        
+        onView(withId("cast_vote_explore_proxy_accounts_button"))
+            .matches(isDisplayed())
+    }
+    
+    func typeCastProxyVote(proxyName: String) {
+        onView(withId("cast_proxy_vote_input"))
+            .matchesNext(isDisplayed())
+            .perform(replaceText(proxyName))
+    }
+    
+    func selectCastProxyVoteButton() {
+        onView(withId("cast_proxy_vote_button"))
+            .matchesNext(isDisplayed())
+            .perform(click())
     }
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-public final class LinkedList<T> {
+public final class LinkedList<T> : Scope {
     
     /// Linked List's Node Class Declaration
     public class LinkedListNode<T> {
