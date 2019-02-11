@@ -14,36 +14,36 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var activityIndicator: ReachActivityIndicator!
     @IBOutlet weak var errorView: ErrorView!
-    
+
     private let navigationMenuItem = IconButton(image: Icon.cm.menu, tintColor: .white)
     private let navigationExploreItem = IconButton(image: Icon.cm.search, tintColor: .white)
     private let balanceTabItem = TabItem()
     private let resourcesTabItem = TabItem()
     private let voteTabItem = TabItem()
     private var loaded = false
-    
+
     private var balanceViewController: BalanceViewController?
     private var resourcesViewController: ResourcesViewController?
     private var voteViewController: VoteViewController?
-    
+
     private lazy var accountBundle = {
         return self.getDestinationBundle()!.model as! AccountBundle
     }()
-    
+
     private lazy var accountRenderer: AccountRenderer = {
         return AccountRenderer(accountViewLayout: self)
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         balanceTabItem.title = R.string.accountStrings.account_tab_balance()
         resourcesTabItem.title = R.string.accountStrings.account_tab_resources()
         voteTabItem.title = R.string.accountStrings.account_tab_vote()
         tabBar.tabItems = [balanceTabItem,resourcesTabItem,voteTabItem]
         tabBar.setup()
         tabBar.delegate = self
-        
+
         if (accountBundle.readOnly) {
             setToolbar(toolbar: toolbar)
         } else {
@@ -94,7 +94,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     override func idleIntent() -> AccountIntent {
         return AccountIntent.idle
     }
-    
+
     override func render(state: AccountViewState) {
         accountRenderer.render(state: state)
     }
@@ -102,7 +102,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     override func provideViewModel() -> AccountViewModel {
         return AccountViewModel(initialState: AccountViewState(view: AccountViewState.View.idle))
     }
-    
+
     @objc func tabBar(tabBar: TabBar, willSelect tabItem: TabItem) {
         if (tabItem == balanceTabItem) {
             replaceChildViewController(viewController: balanceViewController!, containerView: containerView)
@@ -112,7 +112,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
             replaceChildViewController(viewController: voteViewController!, containerView: containerView)
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.destination is UISideMenuNavigationController) {
             let sideMenuNavigationController = (segue.destination as! UISideMenuNavigationController)
@@ -120,28 +120,28 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
             super.prepare(for: segue, sender: sender)
         }
     }
-    
+
     //
     // MARK :- AccountDelegate
     //
     @objc dynamic func refreshAccountVote() {
     }
-    
+
     //
     // MARK :- AccountNavigationDelegate
     //
     @objc dynamic func importKeyNavigationSelected() {
     }
-    
+
     @objc dynamic func createAccountNavigationSelected() {
     }
-    
+
     @objc dynamic func settingsNavigationSelected() {
     }
-    
+
     @objc dynamic func accountsNavigationSelected(accountName: String) {
     }
-    
+
     //
     // MARK :- AccountViewLayout
     //
@@ -153,24 +153,24 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         balancesContainer.visible()
         tabBar.visible()
         containerView.visible()
-        
+
         let contractAccountBalance = createContractAccountBalance(accountView: accountView)
-        
+
         balanceViewController = R.storyboard.main.balanceViewController()
         balanceViewController!.accountName = accountView.eosAccount!.accountName
         balanceViewController!.accountBalanceList = accountView.balances!
         balanceViewController!.readOnly = self.accountBundle.readOnly
-        
+
         voteViewController = R.storyboard.main.voteViewController()
         voteViewController!.eosAccount = accountView.eosAccount
         voteViewController!.readOnly = self.accountBundle.readOnly
         voteViewController!.accountDelegate = self
-        
+
         resourcesViewController = R.storyboard.main.resourcesViewController()
         resourcesViewController!.eosAccount = accountView.eosAccount!
         resourcesViewController!.contractAccountBalance = contractAccountBalance
         resourcesViewController!.readOnly = self.accountBundle.readOnly
-        
+
         switch page {
         case .balances:
             replaceChildViewController(viewController: balanceViewController!, containerView: containerView)
@@ -180,20 +180,20 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
             replaceChildViewController(viewController: voteViewController!, containerView: containerView)
         }
     }
-    
+
     func populateTitle(title: String) {
         toolbar.title = title
     }
-    
+
     func showPriceUnavailable() {
         availableBalanceValueLabel.text = R.string.accountStrings.account_available_balance_unavailable_value()
         availableBalanceLabel.text = R.string.accountStrings.account_available_balance_unavailable_label()
     }
-    
+
     func showPrice(formattedPrice: String) {
         availableBalanceValueLabel.text = formattedPrice
     }
-    
+
     func showProgress() {
         activityIndicator.start()
         containerView.gone()
@@ -201,7 +201,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         balancesContainer.gone()
         tabBar.gone()
     }
-    
+
     private func selectAt(page: AccountPage) -> Int {
         switch page {
         case .balances:
@@ -212,10 +212,10 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
             return 2
         }
     }
-    
+
     func showGetAccountError() {
         activityIndicator.stop()
-        
+
         if (!loaded) {
             errorView.visible()
             errorView.populate(
@@ -225,7 +225,7 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
             showOKDialog(title: R.string.accountStrings.account_error_get_account_title(), message: R.string.accountStrings.account_error_get_account_body())
         }
     }
-    
+
     func showGetBalancesError() {
         activityIndicator.stop()
         errorView.visible()
@@ -233,27 +233,27 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
             title: R.string.accountStrings.account_error_get_balances_title(),
             body: R.string.accountStrings.account_error_get_balances_body())
     }
-    
+
     func openNavigation() {
         performSegue(withIdentifier: R.segue.accountViewController.accountToNavigationDrawer, sender: self)
     }
-    
+
     func navigateToExplore() {
         performSegue(withIdentifier: R.segue.accountViewController.accountToExplore, sender: self)
     }
-    
+
     func navigateToImportKey() {
         performSegue(withIdentifier: R.segue.accountViewController.accountToImportKey, sender: self)
     }
-    
+
     func navigateToCreateAccount() {
         performSegue(withIdentifier: R.segue.accountViewController.accountToCreateAccount, sender: self)
     }
-    
+
     func navigateToSettings() {
         performSegue(withIdentifier: R.segue.accountViewController.accountToSettings, sender: self)
     }
-    
+
     private func createContractAccountBalance(accountView: AccountView) -> ContractAccountBalance {
         if let accountBalanceList = accountView.balances {
             if (accountBalanceList.balances.isNotEmpty()) {
@@ -264,5 +264,9 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
         } else {
             return ContractAccountBalance.unavailable()
         }
+    }
+    
+    @IBAction func unwindToAccountViewController(segue: UIStoryboardSegue) {
+        
     }
 }

@@ -2872,11 +2872,12 @@
                         <outlet property="tableView" destination="2hf-mb-jm0" id="bUL-Pm-XsT"/>
                         <outlet property="tableViewBottomConstraint" destination="EcL-e3-euI" id="436-Kp-XdI"/>
                         <outlet property="voteButton" destination="aAU-Rz-t8J" id="MD1-5y-BIU"/>
-                        <segue destination="tgP-tV-kRI" kind="show" identifier="castProducersVoteToAccount" id="cAT-yL-HS7"/>
                         <segue destination="KeL-6I-ll1" kind="show" identifier="castProducerVoteToActiveBlockProducerList" id="9w4-95-M8t"/>
+                        <segue destination="X4D-TJ-xLG" kind="unwind" identifier="unwindToAccount" unwindAction="unwindToAccountViewControllerWithSegue:" id="rCG-qY-3h9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cw-kQ-Pix" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="X4D-TJ-xLG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="7124" y="1496"/>
         </scene>
@@ -2930,10 +2931,11 @@
                         <outlet property="proxyVoteAccountTextField" destination="XQP-d0-zZj" id="EdS-u3-aJy"/>
                         <outlet property="voteButton" destination="gL9-Nm-dJN" id="Tyv-kf-vfJ"/>
                         <segue destination="rPb-Ty-ems" kind="show" identifier="castProxyVoteToProxyVoterList" id="mMh-Tz-Zbo"/>
-                        <segue destination="tgP-tV-kRI" kind="show" identifier="castProxyVoteToAccount" id="rCe-JF-jov"/>
+                        <segue destination="dvq-tn-px8" kind="unwind" identifier="unwindToAccount" unwindAction="unwindToAccountViewControllerWithSegue:" id="eyZ-fT-WA3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eu1-EB-mwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dvq-tn-px8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="7852" y="1496"/>
         </scene>
@@ -3092,13 +3094,11 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9O-cU-TJc" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="96" y="85" width="255" height="33"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="view_proxy_voter_view_account"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <state key="normal" title="_view_account"/>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JSk-g6-zkD">
                                         <rect key="frame" x="96" y="126" width="263" height="457"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="view_proxy_voter_summary"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -3594,7 +3594,7 @@
         <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="1bl-ap-rcg"/>
+        <segue reference="agL-0e-eci"/>
         <segue reference="nIH-HN-fGl"/>
         <segue reference="9w4-95-M8t"/>
         <segue reference="kx6-Ea-lKC"/>
