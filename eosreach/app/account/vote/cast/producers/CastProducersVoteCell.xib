@@ -12,24 +12,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="0he-a2-n3h" customClass="CastProducersVoteCell" customModule="eosreach" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="0he-a2-n3h" customClass="CastProducersVoteCell" customModule="prod" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0he-a2-n3h" id="WUV-fH-f8g">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuS-7O-ZDx" customClass="ReachBorderView" customModule="eosreach" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuS-7O-ZDx" customClass="ReachBorderView" customModule="prod" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="359" height="37"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ybr-0X-YMS">
                                 <rect key="frame" x="8" y="10" width="280" height="17"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cast_producer_vote_input"/>
                                 <color key="textColor" name="colorAccent"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tap-4a-wVP">
                                 <rect key="frame" x="296" y="4" width="55" height="29"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cast_producer_vote_remove_button"/>
                                 <state key="normal" title="Remove">
                                     <color key="titleColor" name="typographyColorPrimary"/>
                                 </state>
@@ -39,6 +41,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="cast_producer_vote_border"/>
                         <constraints>
                             <constraint firstItem="Tap-4a-wVP" firstAttribute="leading" secondItem="ybr-0X-YMS" secondAttribute="trailing" constant="8" id="17N-Hg-od4"/>
                             <constraint firstAttribute="trailing" secondItem="Tap-4a-wVP" secondAttribute="trailing" constant="8" id="DfN-Bc-Lui"/>

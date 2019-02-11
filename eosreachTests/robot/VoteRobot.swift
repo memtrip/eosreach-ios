@@ -28,7 +28,7 @@ class VoteRobot : Robot {
             .perform(click())
     }
     
-    func verifyVoteForProducersScreen() {
+    func verifyCastProducerVoteScreen() {
         
         onView(withId("cast_producer_vote_instructions_label"))
             .matches(isDisplayed())
@@ -51,6 +51,68 @@ class VoteRobot : Robot {
         onView(withId("cast_producer_vote_add_from_list_button"))
             .matchesNext(isDisplayed())
             .perform(click())
+    }
+    
+    func selectAddBlockProducerRow() {
+        
+        onView(withId("cast_producer_vote_add_button"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
+    func selectVoteBlockProducerRow(position: Int) {
+        
+        onView(
+            withIdInParent(
+                withIdInTableView("cast_producer_vote_list", position: position, id: "cast_producer_vote_border"),
+                id: "cast_producer_vote_input"
+            )
+        )
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
+    func typeVoteBlockProducerRow(position: Int, value: String) {
+        
+        onView(
+            withIdInParent(
+                withIdInTableView("cast_producer_vote_list", position: position, id: "cast_producer_vote_border"),
+                id: "cast_producer_vote_input"
+            )
+        )
+            .matchesNext(isDisplayed())
+            .perform(replaceText(value))
+            .perform(dismissKeyboard())
+    }
+    
+    func removeVoteBlockProducerRow(position: Int) {
+        
+        onView(
+            withIdInParent(
+                withIdInTableView("cast_producer_vote_list", position: position, id: "cast_producer_vote_border"),
+                id: "cast_producer_vote_remove_button"
+            )
+        )
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
+    func selectVoteBlockProducerButton() {
+        onView(withId("cast_producer_vote_button"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
+    func verifyCastBlockProducerRow() {
+        
+        onView(
+            withIdInParent(
+                withIdInTableView("cast_producer_vote_list", position: 0, id: "cast_producer_vote_border"),
+                id: "cast_producer_vote_input"
+            )
+        )
+            .matchesNext(isDisplayed())
+            .matchesNext(withText("eosnewyorkio"))
     }
     
     func selectVoteForProxy() {

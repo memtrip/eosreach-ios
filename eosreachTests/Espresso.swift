@@ -86,3 +86,7 @@ func replaceText(_ text: String) -> GREYAction {
 func scrollToBottomn() -> GREYAction {
     return grey_scrollToContentEdge(GREYContentEdge.bottom)
 }
+
+func dismissKeyboard() -> GREYAction {
+    return grey_typeText("\n")
+}

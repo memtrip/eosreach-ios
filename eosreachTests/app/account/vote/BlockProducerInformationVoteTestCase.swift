@@ -15,7 +15,7 @@ class BlockProducerInformationVoteTestCase : TestCase {
         voteRobot.begin { it in
             it.verifyNotVotedScreen()
             it.selectVoteForProducers()
-            it.verifyVoteForProducersScreen()
+            it.verifyCastProducerVoteScreen()
             it.selectAddBlockProducerFromList()
         }
         

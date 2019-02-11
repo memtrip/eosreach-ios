@@ -38,8 +38,10 @@ class CastProducersVoteTableView : SimpleTableView<String, CastProducersVoteCell
     //
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         for index in 0..<self.numberOfRows(inSection: 0) {
-            let cell = cellForRow(at: IndexPath.init(row: index, section: 0)) as! CastProducersVoteCell
-            data[index] = cell.textField.text!
+            if let cell = cellForRow(at: IndexPath.init(row: index, section: 0)) {
+                let unwrapped = cell as! CastProducersVoteCell
+                data[index] = unwrapped.textField.text!
+            }
         }
         textField.endEditing(true)
         reloadData()

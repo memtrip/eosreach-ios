@@ -30,6 +30,17 @@ class BlockProducerRobot: Robot {
             .matches(withText("EOS New York"))
     }
     
+    func selectFirstBlockProducerRow() {
+        onView(
+            withIdInParent(
+                withIdInTableView("block_producer_list_tableview", position: 0, id: "block_producer_list_cell_border"),
+                id: "block_producer_list_cell_owner"
+            )
+        )
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
     func selectBlockProducerListFirstAccountRowInformation() {
         onView(
             withIdInParent(

@@ -71,6 +71,7 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
         case .onGenericError:
             activityIndicator.stop()
             voteButton.visible()
+            showOKDialog(message: R.string.voteStrings.cast_producers_vote_error_body())
         case .onSuccess:
             setDestinationBundle(bundle: SegueBundle(
                 identifier: R.segue.castProducersVoteViewController.castProducersVoteToAccount.identifier,
@@ -82,11 +83,9 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
             ))
             performSegue(withIdentifier: R.segue.castProducersVoteViewController.castProducersVoteToAccount, sender: self)
         case .viewLog(let log):
-            showViewLog(viewLogHandler: { (_) in
-                self.activityIndicator.stop()
-                self.voteButton.visible()
-                self.showTransactionLog(log: log)
-            })
+            self.activityIndicator.stop()
+            self.voteButton.visible()
+            self.showTransactionLog(log: log)
         }
     }
 

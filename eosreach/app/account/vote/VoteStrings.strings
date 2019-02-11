@@ -20,4 +20,5 @@
 	"cast_producers_add_from_list_button" = "Add From List";
 	"cast_producers_instructions_label" = "Vote for up to 30 Block Producer candidates.";
 	"cast_producers_vote_button" = Vote;
+    "cast_producers_vote_error_body" = "Could not process the vote, please check your internet connection and try again.";
 }

@@ -4,7 +4,7 @@ import RxSwift
 class CastProducersVoteViewModel: MxViewModel<CastProducersVoteIntent, CastProducersVoteResult, CastProducersVoteViewState> {
     
     private let getAccountByName = GetAccountByName()
-    private let eosKeyManager = EosKeyManagerImpl()
+    private let eosKeyManager = EosKeyManagerFactory.create()
     private let insertTransactionLog = InsertTransactionLog()
     private let voteRequest = VoteRequestImpl()
     
