@@ -12,18 +12,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="zeU-Qf-EaD" customClass="ProxyVoterListCell" customModule="eosreach" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="zeU-Qf-EaD" customClass="ProxyVoterListCell" customModule="prod" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zeU-Qf-EaD" id="xGS-Bc-mQZ">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFd-L6-NiW" customClass="ReachBorderView" customModule="eosreach" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFd-L6-NiW" customClass="ReachBorderView" customModule="prod" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="359" height="51"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_proxy_name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R79-Tl-iuN">
                                 <rect key="frame" x="52" y="8" width="251" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="proxy_voter_list_name"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
@@ -43,6 +44,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAs-vy-fGO">
                                 <rect key="frame" x="311" y="1.5" width="48" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="proxy_voter_list_information_button"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XAs-vy-fGO" secondAttribute="height" multiplier="1:1" id="WXJ-0g-Bqu"/>
                                     <constraint firstAttribute="height" constant="48" id="j3u-Ra-fAv"/>
@@ -50,6 +52,7 @@
                                 <state key="normal" image="ic_external_large"/>
                             </button>
                         </subviews>
+                        <accessibility key="accessibilityConfiguration" identifier="proxy_voter_list_border"/>
                         <constraints>
                             <constraint firstItem="XAs-vy-fGO" firstAttribute="centerY" secondItem="eFd-L6-NiW" secondAttribute="centerY" id="AHP-xf-oXf"/>
                             <constraint firstItem="5nq-0W-GRm" firstAttribute="top" secondItem="eFd-L6-NiW" secondAttribute="top" constant="8" id="BbA-6A-zSd"/>

@@ -2947,6 +2947,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2MF-DB-g4n" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="proxy_voter_list_toolbar"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="uXb-Vx-Tzb"/>
                                 </constraints>
@@ -2954,6 +2955,9 @@
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bUy-g6-QrK" customClass="ProxyVoterListTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="proxy_voter_list_tableview"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-hK-xhk" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
@@ -3583,7 +3587,7 @@
         <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="cAT-yL-HS7"/>
+        <segue reference="1bl-ap-rcg"/>
         <segue reference="nIH-HN-fGl"/>
         <segue reference="9w4-95-M8t"/>
         <segue reference="kx6-Ea-lKC"/>

@@ -63,6 +63,10 @@ class TestCase : XCTestCase {
         return orchestra.blockProducerRobot
     }()
     
+    lazy var proxyRobot: ProxyRobot = {
+        return orchestra.proxyRobot
+    }()
+    
     lazy var settingsRobot: SettingsRobot = {
         return orchestra.settingsRobot
     }()

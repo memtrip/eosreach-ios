@@ -60,6 +60,10 @@ extension Orchestra {
         return BlockProducerRobot()
     }
     
+    var proxyRobot: ProxyRobot {
+        return ProxyRobot()
+    }
+    
     var settingsRobot: SettingsRobot {
         return SettingsRobot()
     }

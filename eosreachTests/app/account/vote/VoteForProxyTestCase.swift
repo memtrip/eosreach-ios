@@ -18,6 +18,17 @@ class VoteForProxyTestCase : TestCase {
             it.verifyNotVotedScreen()
             it.selectVoteForProxy()
             it.verifyCastProxyVoteScreen()
+            it.selectExploreProxyAccountsButton()
+        }
+        
+        proxyRobot.begin { it in
+            it.verifyExploreProxyAccounts()
+            it.selectFirstProxyRow()
+        }
+        
+        voteRobot.begin { it in
+            it.verifyCastProxyVoteScreen()
+            it.verifyCastProxyInputValue(value: "aagileproxyy")
             it.typeCastProxyVote(proxyName: "memtripproxy")
         }
         

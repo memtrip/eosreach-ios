@@ -175,6 +175,18 @@ class VoteRobot : Robot {
             .matches(isDisplayed())
     }
     
+    func verifyCastProxyInputValue(value: String) {
+        onView(withId("cast_proxy_vote_input"))
+            .matchesNext(isDisplayed())
+            .matchesNext(withText(value))
+    }
+    
+    func selectExploreProxyAccountsButton() {
+        onView(withId("cast_vote_explore_proxy_accounts_button"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
     func typeCastProxyVote(proxyName: String) {
         onView(withId("cast_proxy_vote_input"))
             .matchesNext(isDisplayed())
