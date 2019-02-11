@@ -560,6 +560,7 @@
 		3C1D1AEA22115BEF00EF4560 /* VoteForProxyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AE4221152C600EF4560 /* VoteForProxyTestCase.swift */; };
 		3C1D1AEC22115D6F00EF4560 /* VoteForProducerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AEB22115D6F00EF4560 /* VoteForProducerTestCase.swift */; };
 		3C1D1AEE22116B9100EF4560 /* ProxyRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AED22116B9100EF4560 /* ProxyRobot.swift */; };
+		3C1D1AF0221172A400EF4560 /* ProxyVoteInformationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AEF221172A400EF4560 /* ProxyVoteInformationTestCase.swift */; };
 		3C1F1F7121A306680075BD71 /* VoteProducerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */; };
 		3C1F1F7521A306800075BD71 /* VoteProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */; };
 		3C1F1F7721A306A10075BD71 /* VoteProducerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */; };
@@ -1031,6 +1032,7 @@
 		3C1D1AE622115A7F00EF4560 /* QueuedStubResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuedStubResponse.swift; sourceTree = "<group>"; };
 		3C1D1AEB22115D6F00EF4560 /* VoteForProducerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteForProducerTestCase.swift; sourceTree = "<group>"; };
 		3C1D1AED22116B9100EF4560 /* ProxyRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyRobot.swift; sourceTree = "<group>"; };
+		3C1D1AEF221172A400EF4560 /* ProxyVoteInformationTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyVoteInformationTestCase.swift; sourceTree = "<group>"; };
 		3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerTableView.swift; sourceTree = "<group>"; };
 		3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteProducerCell.xib; sourceTree = "<group>"; };
 		3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerCell.swift; sourceTree = "<group>"; };
@@ -2558,9 +2560,10 @@
 			children = (
 				3CF9031D2208201700ABDB58 /* VoteForUsErrorTestCase.swift */,
 				3CF903202208336C00ABDB58 /* BlockProducerVoteTestCase.swift */,
-				3CF9032222083FDA00ABDB58 /* ProxyVoteTestCase.swift */,
-				3CF90324220841C500ABDB58 /* NotVotedTestCase.swift */,
 				3CF90326220A374000ABDB58 /* BlockProducerInformationVoteTestCase.swift */,
+				3CF9032222083FDA00ABDB58 /* ProxyVoteTestCase.swift */,
+				3C1D1AEF221172A400EF4560 /* ProxyVoteInformationTestCase.swift */,
+				3CF90324220841C500ABDB58 /* NotVotedTestCase.swift */,
 				3C1D1AE4221152C600EF4560 /* VoteForProxyTestCase.swift */,
 				3C1D1AEB22115D6F00EF4560 /* VoteForProducerTestCase.swift */,
 			);
@@ -3830,6 +3833,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CCC805821FB9C8100B715C2 /* ImportKeyRobot.swift in Sources */,
+				3C1D1AF0221172A400EF4560 /* ProxyVoteInformationTestCase.swift in Sources */,
 				3CCC804921FB929100B715C2 /* TestCase.swift in Sources */,
 				3CF9032322083FDA00ABDB58 /* ProxyVoteTestCase.swift in Sources */,
 				3CF9031E2208201700ABDB58 /* VoteForUsErrorTestCase.swift in Sources */,

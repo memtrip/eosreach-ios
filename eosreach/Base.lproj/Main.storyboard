@@ -3061,6 +3061,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1LU-0J-OAd" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="view_proxy_voter_toolbar"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="bDA-xp-br5"/>
                                 </constraints>
@@ -3070,6 +3071,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t9D-P9-G9P">
                                         <rect key="frame" x="16" y="8" width="64" height="64"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_proxy_voter_image"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="t9D-P9-G9P" secondAttribute="height" multiplier="1:1" id="JKq-9g-YfZ"/>
                                             <constraint firstAttribute="width" constant="64" id="R0m-9C-1jW"/>
@@ -3077,28 +3079,33 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_proxy_voter_blurb" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2D3-9f-j3N">
                                         <rect key="frame" x="96" y="12" width="255" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_proxy_voter_blurb"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvd-kx-ztW" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="96" y="44" width="255" height="33"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_proxy_voter_website"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <state key="normal" title="_website"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9O-cU-TJc" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="96" y="85" width="255" height="33"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_proxy_voter_view_account"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <state key="normal" title="_view_account"/>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JSk-g6-zkD">
                                         <rect key="frame" x="96" y="126" width="263" height="457"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_proxy_voter_summary"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
+                                <accessibility key="accessibilityConfiguration" identifier="view_proxy_voter_container"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="2D3-9f-j3N" secondAttribute="trailing" constant="8" id="5au-SS-iPm"/>
                                     <constraint firstItem="Nvd-kx-ztW" firstAttribute="top" secondItem="2D3-9f-j3N" secondAttribute="bottom" constant="8" id="8Ug-nG-8Jc"/>
