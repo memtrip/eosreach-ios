@@ -12,24 +12,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="x9h-Th-1bc" customClass="ActiveBlockProducersCell" customModule="eosreach" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="x9h-Th-1bc" customClass="ActiveBlockProducersCell" customModule="prod" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x9h-Th-1bc" id="57J-M1-cdj">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjN-0n-rl7" customClass="ReachBorderView" customModule="eosreach" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjN-0n-rl7" customClass="ReachBorderView" customModule="prod" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="359" height="58"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_block_producer_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIJ-wx-dFk">
                                 <rect key="frame" x="58" y="8" width="245" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="block_producer_list_cell_account_name"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="_owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hD-vF-zxj">
                                 <rect key="frame" x="58" y="29" width="245" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="block_producer_list_cell_owner"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" name="colorSecondary"/>
                                 <nil key="highlightedColor"/>
@@ -43,6 +45,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQH-MX-HAc">
                                 <rect key="frame" x="311" y="5" width="48" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="block_producer_list_cell_information_button"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wQH-MX-HAc" secondAttribute="height" multiplier="1:1" id="Ebf-7b-H5h"/>
                                     <constraint firstAttribute="height" constant="48" id="nPT-Um-BJC"/>
@@ -50,6 +53,7 @@
                                 <state key="normal" image="ic_external_large"/>
                             </button>
                         </subviews>
+                        <accessibility key="accessibilityConfiguration" identifier="block_producer_list_cell_border"/>
                         <constraints>
                             <constraint firstItem="cHb-vl-30m" firstAttribute="leading" secondItem="MjN-0n-rl7" secondAttribute="leading" constant="8" id="4Pz-jw-1Fn"/>
                             <constraint firstItem="gIJ-wx-dFk" firstAttribute="top" secondItem="MjN-0n-rl7" secondAttribute="top" constant="8" id="8zG-5C-w4c"/>

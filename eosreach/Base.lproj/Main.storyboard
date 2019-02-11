@@ -270,9 +270,11 @@
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFw-Pt-kCe" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="block_producer_list_error"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-dH-Ocn" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="block_producer_list_toolbar"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="VT0-0Q-l5K"/>
                                 </constraints>
@@ -280,6 +282,9 @@
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KQC-wm-XDg" customClass="ActiveBlockProducersTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="block_producer_list_tableview"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <constraints>
@@ -2664,6 +2669,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i0H-W5-OVK">
                                         <rect key="frame" x="16" y="8" width="64" height="64"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_block_producer_icon"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="64" id="Jle-Tq-Vtm"/>
                                             <constraint firstAttribute="width" secondItem="i0H-W5-OVK" secondAttribute="height" multiplier="1:1" id="eI7-VC-rTT"/>
@@ -2671,37 +2677,43 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwE-wH-Cir">
                                         <rect key="frame" x="95" y="8" width="256" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_block_producer_website_button"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="0VE-Xh-xO0"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <state key="normal" title="_website">
                                             <color key="titleColor" name="colorSecondary"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pw-IE-mpB">
                                         <rect key="frame" x="95" y="32" width="256" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_block_producer_email_button"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="1rJ-zT-XYI"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <state key="normal" title="_email">
                                             <color key="titleColor" name="colorSecondary"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZV-8g-I7P" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="95" y="72" width="256" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_block_producer_owner_button"/>
                                         <state key="normal" title="_view_owner_account"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuX-jV-trJ" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="95" y="110" width="256" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_block_producer_code_of_conduct_button"/>
                                         <state key="normal" title="_code_of_conduct"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eml-s1-OJ0" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="96" y="148" width="255" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_block_producer_ownership_button"/>
                                         <state key="normal" title="_ownership_disclosure"/>
                                     </button>
                                 </subviews>
+                                <accessibility key="accessibilityConfiguration" identifier="view_block_producer_container"/>
                                 <constraints>
                                     <constraint firstItem="KwE-wH-Cir" firstAttribute="leading" secondItem="i0H-W5-OVK" secondAttribute="trailing" constant="15" id="11N-ff-2nd"/>
                                     <constraint firstItem="KuX-jV-trJ" firstAttribute="top" secondItem="aZV-8g-I7P" secondAttribute="bottom" constant="8" id="20r-IF-v5K"/>
@@ -2724,18 +2736,21 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0So-Cu-Hea" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="view_block_producer_toolbar"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="dyx-dm-lpX"/>
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_no_producers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oS-ND-opr">
                                 <rect key="frame" x="16" y="84" width="343" height="567"/>
+                                <accessibility key="accessibilityConfiguration" identifier="view_block_producer_not_found"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xkm-C5-AMd" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="84" width="343" height="567"/>
+                                <accessibility key="accessibilityConfiguration" identifier="view_block_producer_error"/>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ire-r6-w75" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
@@ -3500,6 +3515,9 @@
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P1s-qI-QEP" customClass="RegisteredBlockProducersTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="block_producer_list_toolbar"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-2P-2j5" customClass="ErrorView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
@@ -3559,10 +3577,10 @@
         <segue reference="rvY-Mg-arL"/>
         <segue reference="Yir-oe-XsA"/>
         <segue reference="Eks-sF-JJe"/>
-        <segue reference="8th-cq-vMG"/>
+        <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="cAT-yL-HS7"/>
+        <segue reference="agL-0e-eci"/>
         <segue reference="nIH-HN-fGl"/>
         <segue reference="9w4-95-M8t"/>
         <segue reference="kx6-Ea-lKC"/>

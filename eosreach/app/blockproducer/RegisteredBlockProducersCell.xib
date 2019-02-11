@@ -12,24 +12,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="NCl-Jm-a4V" customClass="RegisteredBlockProducersCell" customModule="eosreach" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="NCl-Jm-a4V" customClass="RegisteredBlockProducersCell" customModule="prod" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NCl-Jm-a4V" id="zdl-9z-En2">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcs-de-5Hc" customClass="ReachBorderView" customModule="eosreach" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcs-de-5Hc" customClass="ReachBorderView" customModule="prod" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="359" height="61.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_block_producer_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fu-8d-Y5e">
                                 <rect key="frame" x="8" y="8" width="287" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="block_producer_list_cell_name"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SQ-Ba-Hb8">
                                 <rect key="frame" x="8" y="32.5" width="287" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="block_producer_list_cell_accoint_votes"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" name="colorSecondary"/>
                                 <nil key="highlightedColor"/>
@@ -43,6 +45,7 @@
                                 <state key="normal" image="ic_external_large"/>
                             </button>
                         </subviews>
+                        <accessibility key="accessibilityConfiguration" identifier="block_producer_list_cell_border"/>
                         <constraints>
                             <constraint firstItem="0SQ-Ba-Hb8" firstAttribute="top" secondItem="6fu-8d-Y5e" secondAttribute="bottom" constant="4" id="3Ie-Uq-LVT"/>
                             <constraint firstItem="0SQ-Ba-Hb8" firstAttribute="leading" secondItem="dcs-de-5Hc" secondAttribute="leading" constant="8" id="Ftn-Tg-Zgx"/>
