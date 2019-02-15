@@ -1,6 +1,7 @@
 import Foundation
 
 class ReachApiModule {
+    
     static func eosPriceApi() -> EosPriceApi {
         switch TargetSwitch.api() {
         case .stub:
@@ -16,6 +17,15 @@ class ReachApiModule {
             return EosCreateAccountApi(StubUrlSession.shared.urlSession)
         case .prod:
             return EosCreateAccountApi(URLSession.shared)
+        }
+    }
+    
+    static func receiptDataRequest() -> ReceiptDataRequest {
+        switch TargetSwitch.api() {
+        case .stub:
+            return ReceiptDataRequestStub()
+        case .prod:
+            return ReceiptDataRequestImpl()
         }
     }
 }

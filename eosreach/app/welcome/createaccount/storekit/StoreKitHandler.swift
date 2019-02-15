@@ -49,7 +49,7 @@ class BillingImpl : Billing {
     }
 }
 
-class StoreKitHandler : NSObject {
+class StoreKitHandler : NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
     
     var billingConnectionDelegate: BillingConnectionDelegate?
     var billingFlowDelegate: BillingFlowDelegate?
@@ -61,9 +61,6 @@ class StoreKitHandler : NSObject {
         self.billingConnectionDelegate = billingConnectionDelegate
         self.billingFlowDelegate = billingFlowDelegate
     }
-}
-
-extension StoreKitHandler : SKProductsRequestDelegate, SKPaymentTransactionObserver {
     
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         if (response.products.count > 0) {

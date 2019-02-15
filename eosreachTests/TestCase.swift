@@ -67,6 +67,10 @@ class TestCase : XCTestCase {
         return orchestra.proxyRobot
     }()
     
+    lazy var searchRobot: SearchRobot = {
+        return orchestra.searchRobot
+    }()
+    
     lazy var settingsRobot: SettingsRobot = {
         return orchestra.settingsRobot
     }()

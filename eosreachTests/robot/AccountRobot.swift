@@ -8,6 +8,27 @@ class AccountRobot : Robot {
         
         onView(withId("account_balances"))
             .matches(isDisplayed())
+        
+        onView(withId("account_menu_item"))
+            .matches(isDisplayed())
+        
+        onView(withId("account_search_item"))
+            .matches(isDisplayed())
+    }
+    
+    func verifyReadOnlyAccountScreen() {
+
+        onView(withId("account_toolbar"))
+            .matches(isDisplayed())
+
+        onView(withId("account_balances"))
+            .matches(isDisplayed())
+        
+        onView(withId("account_menu_item"))
+            .matches(isNotDisplayed())
+        
+        onView(withId("account_search_item"))
+            .matches(isNotDisplayed())
     }
     
     func verifyAvailableBalance(availableBalance: String) {

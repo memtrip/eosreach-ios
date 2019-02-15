@@ -1,8 +1,9 @@
 import Foundation
+import UIKit
 
-protocol Scope {
+protocol BlockScope {
 }
-extension Scope {
+extension BlockScope {
     @inline(__always) func apply(block: (Self) -> ()) -> Self {
         block(self)
         return self
@@ -12,7 +13,10 @@ extension Scope {
     }
 }
 
-extension NSObject: Scope {
+extension NSObject: BlockScope {
+}
+
+extension UIView: BlockScope {
 }
 
 extension Array {

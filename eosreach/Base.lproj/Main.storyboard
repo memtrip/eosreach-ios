@@ -3094,11 +3094,13 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9O-cU-TJc" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="96" y="85" width="255" height="33"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_proxy_voter_view_account"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <state key="normal" title="_view_account"/>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JSk-g6-zkD">
                                         <rect key="frame" x="96" y="126" width="263" height="457"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="view_proxy_voter_summary"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -3469,6 +3471,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tM6-tU-nIZ" customClass="ReachUsernameTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="8" y="52" width="359" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="explore_search_input_view"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
@@ -3482,6 +3485,9 @@
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-3v-1pz" customClass="AccountCardTableView" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="explore_search_account_card"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-Rz-5d9" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="169" y="114" width="37" height="37"/>
@@ -3594,9 +3600,9 @@
         <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="agL-0e-eci"/>
+        <segue reference="tiU-62-5pJ"/>
         <segue reference="nIH-HN-fGl"/>
-        <segue reference="9w4-95-M8t"/>
-        <segue reference="kx6-Ea-lKC"/>
+        <segue reference="ctq-NB-9iI"/>
+        <segue reference="8Yp-E9-EYq"/>
     </inferredMetricsTieBreakers>
 </document>

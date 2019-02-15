@@ -112,7 +112,7 @@ class VoteRobot : Robot {
             )
         )
             .matchesNext(isDisplayed())
-            .matchesNext(withText("eosnewyorkio"))
+            .matches(withText("eosnewyorkio"))
     }
     
     func selectVoteForProxy() {
@@ -178,7 +178,7 @@ class VoteRobot : Robot {
     func verifyCastProxyInputValue(value: String) {
         onView(withId("cast_proxy_vote_input"))
             .matchesNext(isDisplayed())
-            .matchesNext(withText(value))
+            .matches(withText(value))
     }
     
     func selectExploreProxyAccountsButton() {

@@ -30,6 +30,6 @@ class BlockProducerInformationVoteTestCase : TestCase {
             it.selectViewOwnerAccount()
         }
         
-        accountRobot.verifyAccountScreen()
+        accountRobot.verifyReadOnlyAccountScreen()
     }
 }

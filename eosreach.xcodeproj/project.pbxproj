@@ -561,6 +561,9 @@
 		3C1D1AEC22115D6F00EF4560 /* VoteForProducerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AEB22115D6F00EF4560 /* VoteForProducerTestCase.swift */; };
 		3C1D1AEE22116B9100EF4560 /* ProxyRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AED22116B9100EF4560 /* ProxyRobot.swift */; };
 		3C1D1AF0221172A400EF4560 /* ProxyVoteInformationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AEF221172A400EF4560 /* ProxyVoteInformationTestCase.swift */; };
+		3C1D1AF322117BCD00EF4560 /* SearchAccountErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AF222117BCD00EF4560 /* SearchAccountErrorTestCase.swift */; };
+		3C1D1AF522117BDC00EF4560 /* SearchAccountTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AF422117BDC00EF4560 /* SearchAccountTestCase.swift */; };
+		3C1D1AF722117BEB00EF4560 /* VerifyReadOnlySearchAccountTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AF622117BEB00EF4560 /* VerifyReadOnlySearchAccountTestCase.swift */; };
 		3C1F1F7121A306680075BD71 /* VoteProducerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */; };
 		3C1F1F7521A306800075BD71 /* VoteProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */; };
 		3C1F1F7721A306A10075BD71 /* VoteProducerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */; };
@@ -749,6 +752,14 @@
 		3C9BFBC6219C21E000589936 /* AccountActionRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBC5219C21E000589936 /* AccountActionRequestImpl.swift */; };
 		3C9BFBC8219C29B000589936 /* types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBC7219C29B000589936 /* types.swift */; };
 		3C9C665D21A97C1800612CD8 /* StoreKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C665C21A97C1800612CD8 /* StoreKitHandler.swift */; };
+		3CA2978722173872001DC2D5 /* SearchRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2978622173872001DC2D5 /* SearchRobot.swift */; };
+		3CA2978C221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2978B221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift */; };
+		3CA29792221746FD001DC2D5 /* ReceiptDataRequestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979022174670001DC2D5 /* ReceiptDataRequestStub.swift */; };
+		3CA29797221750C6001DC2D5 /* StoreKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979522174D8F001DC2D5 /* StoreKitRequest.swift */; };
+		3CA29798221750C8001DC2D5 /* StoreKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979522174D8F001DC2D5 /* StoreKitRequest.swift */; };
+		3CA2979D22175477001DC2D5 /* StoreKitRequestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979B22175450001DC2D5 /* StoreKitRequestStub.swift */; };
+		3CA2979E221754F0001DC2D5 /* StoreKitRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA29799221753DB001DC2D5 /* StoreKitRequestFactory.swift */; };
+		3CA2979F221754F0001DC2D5 /* StoreKitRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA29799221753DB001DC2D5 /* StoreKitRequestFactory.swift */; };
 		3CAD34752192F77C000F304A /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD34742192F77C000F304A /* EntryViewModel.swift */; };
 		3CAD34772192F7DB000F304A /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD34762192F7DB000F304A /* EntryViewController.swift */; };
 		3CB1D70521A8296C00C87EC9 /* ViewActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70021A8296B00C87EC9 /* ViewActionResult.swift */; };
@@ -1033,6 +1044,9 @@
 		3C1D1AEB22115D6F00EF4560 /* VoteForProducerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteForProducerTestCase.swift; sourceTree = "<group>"; };
 		3C1D1AED22116B9100EF4560 /* ProxyRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyRobot.swift; sourceTree = "<group>"; };
 		3C1D1AEF221172A400EF4560 /* ProxyVoteInformationTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyVoteInformationTestCase.swift; sourceTree = "<group>"; };
+		3C1D1AF222117BCD00EF4560 /* SearchAccountErrorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAccountErrorTestCase.swift; sourceTree = "<group>"; };
+		3C1D1AF422117BDC00EF4560 /* SearchAccountTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAccountTestCase.swift; sourceTree = "<group>"; };
+		3C1D1AF622117BEB00EF4560 /* VerifyReadOnlySearchAccountTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyReadOnlySearchAccountTestCase.swift; sourceTree = "<group>"; };
 		3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerTableView.swift; sourceTree = "<group>"; };
 		3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteProducerCell.xib; sourceTree = "<group>"; };
 		3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerCell.swift; sourceTree = "<group>"; };
@@ -1270,6 +1284,12 @@
 		3C9BFBC5219C21E000589936 /* AccountActionRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActionRequestImpl.swift; sourceTree = "<group>"; };
 		3C9BFBC7219C29B000589936 /* types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = types.swift; sourceTree = "<group>"; };
 		3C9C665C21A97C1800612CD8 /* StoreKitHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitHandler.swift; sourceTree = "<group>"; };
+		3CA2978622173872001DC2D5 /* SearchRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRobot.swift; sourceTree = "<group>"; };
+		3CA2978B221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingFlowSuccessTestCase.swift; sourceTree = "<group>"; };
+		3CA2979022174670001DC2D5 /* ReceiptDataRequestStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDataRequestStub.swift; sourceTree = "<group>"; };
+		3CA2979522174D8F001DC2D5 /* StoreKitRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitRequest.swift; sourceTree = "<group>"; };
+		3CA29799221753DB001DC2D5 /* StoreKitRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitRequestFactory.swift; sourceTree = "<group>"; };
+		3CA2979B22175450001DC2D5 /* StoreKitRequestStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitRequestStub.swift; sourceTree = "<group>"; };
 		3CAD34742192F77C000F304A /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 		3CAD34762192F7DB000F304A /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		3CB1D70021A8296B00C87EC9 /* ViewActionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActionResult.swift; sourceTree = "<group>"; };
@@ -1578,6 +1598,46 @@
 			path = price;
 			sourceTree = "<group>";
 		};
+		3C1D1AF122117BB900EF4560 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				3C1D1AF222117BCD00EF4560 /* SearchAccountErrorTestCase.swift */,
+				3C1D1AF422117BDC00EF4560 /* SearchAccountTestCase.swift */,
+				3C1D1AF622117BEB00EF4560 /* VerifyReadOnlySearchAccountTestCase.swift */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		3C1D1AF822117CC600EF4560 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				3C1D1AFA22117CD000EF4560 /* ram */,
+				3C1D1AF922117CCB00EF4560 /* bandwidth */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		3C1D1AF922117CCB00EF4560 /* bandwidth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = bandwidth;
+			sourceTree = "<group>";
+		};
+		3C1D1AFA22117CD000EF4560 /* ram */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ram;
+			sourceTree = "<group>";
+		};
+		3C1D1AFB22117CD900EF4560 /* balance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = balance;
+			sourceTree = "<group>";
+		};
 		3C340FC0219360C60017BEF9 /* settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1612,6 +1672,7 @@
 			children = (
 				3C44F2F121EFE5D700A0720B /* json */,
 				3CCC806E21FBB15E00B715C2 /* api */,
+				3CA2978F2217465F001DC2D5 /* appstore */,
 				3CCC806D21FBB15400B715C2 /* wallet */,
 			);
 			path = _stub;
@@ -2397,8 +2458,43 @@
 			isa = PBXGroup;
 			children = (
 				3C9C665C21A97C1800612CD8 /* StoreKitHandler.swift */,
+				3CA2979522174D8F001DC2D5 /* StoreKitRequest.swift */,
+				3CA29799221753DB001DC2D5 /* StoreKitRequestFactory.swift */,
 			);
 			path = storekit;
+			sourceTree = "<group>";
+		};
+		3CA2978822174499001DC2D5 /* welcome */ = {
+			isa = PBXGroup;
+			children = (
+				3CA29789221744A4001DC2D5 /* createaccount */,
+				3CA2978A221744B2001DC2D5 /* importkey */,
+			);
+			path = welcome;
+			sourceTree = "<group>";
+		};
+		3CA29789221744A4001DC2D5 /* createaccount */ = {
+			isa = PBXGroup;
+			children = (
+				3CA2978B221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift */,
+			);
+			path = createaccount;
+			sourceTree = "<group>";
+		};
+		3CA2978A221744B2001DC2D5 /* importkey */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = importkey;
+			sourceTree = "<group>";
+		};
+		3CA2978F2217465F001DC2D5 /* appstore */ = {
+			isa = PBXGroup;
+			children = (
+				3CA2979022174670001DC2D5 /* ReceiptDataRequestStub.swift */,
+				3CA2979B22175450001DC2D5 /* StoreKitRequestStub.swift */,
+			);
+			path = appstore;
 			sourceTree = "<group>";
 		};
 		3CC9A3C6219DCEDC0002A25F /* error */ = {
@@ -2480,6 +2576,7 @@
 				3CCC806721FB9CFC00B715C2 /* TransferRobot.swift */,
 				3CCC806921FB9D0E00B715C2 /* TransactionRobot.swift */,
 				3CCC806B21FB9D2000B715C2 /* SettingsRobot.swift */,
+				3CA2978622173872001DC2D5 /* SearchRobot.swift */,
 			);
 			path = robot;
 			sourceTree = "<group>";
@@ -2488,6 +2585,7 @@
 			isa = PBXGroup;
 			children = (
 				3CCC804B21FB972C00B715C2 /* account */,
+				3CA2978822174499001DC2D5 /* welcome */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -2495,6 +2593,9 @@
 		3CCC804B21FB972C00B715C2 /* account */ = {
 			isa = PBXGroup;
 			children = (
+				3C1D1AFB22117CD900EF4560 /* balance */,
+				3C1D1AF822117CC600EF4560 /* resources */,
+				3C1D1AF122117BB900EF4560 /* search */,
 				3CF9031C22081FFC00ABDB58 /* vote */,
 				3CCC807821FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift */,
 				3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */,
@@ -3088,6 +3189,7 @@
 				3C0DBA7221F501430020CA1F /* ManageRamBundle.swift in Sources */,
 				3C0DBA7321F501430020CA1F /* GetBalances.swift in Sources */,
 				3C0DBA7421F501430020CA1F /* RegisteredBlockProducersCell.swift in Sources */,
+				3CA2979D22175477001DC2D5 /* StoreKitRequestStub.swift in Sources */,
 				3C0DBA7521F501430020CA1F /* CastProducersVoteTableView.swift in Sources */,
 				3C0DBA7621F501430020CA1F /* ViewProxyVoterViewState.swift in Sources */,
 				3C0DBA7721F501430020CA1F /* BalanceFormatter.swift in Sources */,
@@ -3266,6 +3368,7 @@
 				3C0DBB2221F501430020CA1F /* EosEndpointViewModel.swift in Sources */,
 				3C0DBB2321F501430020CA1F /* ReachBorderLabel.swift in Sources */,
 				3C0DBB2421F501430020CA1F /* AccountUseCase.swift in Sources */,
+				3CA29792221746FD001DC2D5 /* ReceiptDataRequestStub.swift in Sources */,
 				3C0DBB2521F501430020CA1F /* ActiveBlockProducersResult.swift in Sources */,
 				3C0DBB2621F501430020CA1F /* ViewProxyVoterIntent.swift in Sources */,
 				3C0DBB2721F501430020CA1F /* ManageRamViewState.swift in Sources */,
@@ -3329,6 +3432,7 @@
 				3C0DBB6121F501430020CA1F /* BlockProducerRequest.swift in Sources */,
 				3C0DBB6221F501430020CA1F /* TransferViewModel.swift in Sources */,
 				3C0DBB6321F501430020CA1F /* DelegateBandwidthViewModel.swift in Sources */,
+				3CA2979E221754F0001DC2D5 /* StoreKitRequestFactory.swift in Sources */,
 				3C0DBB6421F501430020CA1F /* EosCreateAccountApi.swift in Sources */,
 				3C0DBB6521F501430020CA1F /* KeyPairCell.swift in Sources */,
 				3C0DBB6621F501430020CA1F /* ReachNetCpuView.swift in Sources */,
@@ -3370,6 +3474,7 @@
 				3C0DBB8A21F501430020CA1F /* BandwidthRequest.swift in Sources */,
 				3C0DBB8B21F501430020CA1F /* AppDelegate.swift in Sources */,
 				3C0DBB8C21F501430020CA1F /* VoteViewModel.swift in Sources */,
+				3CA29797221750C6001DC2D5 /* StoreKitRequest.swift in Sources */,
 				3C0DBB8D21F501430020CA1F /* EosPriceRequest.swift in Sources */,
 				3C0DBB8E21F501430020CA1F /* VoteRequest.swift in Sources */,
 				3C0DBB8F21F501430020CA1F /* TransactionHistoryModel.swift in Sources */,
@@ -3629,6 +3734,7 @@
 				3C8C6D9A2192D56000FC1A0D /* Logger.swift in Sources */,
 				3CC9A3B7219DB8890002A25F /* RamRequestImpl.swift in Sources */,
 				3CCC807221FBB1F000B715C2 /* EosKeyManagerStub.swift in Sources */,
+				3CA2979F221754F0001DC2D5 /* StoreKitRequestFactory.swift in Sources */,
 				3C340FCA2193612A0017BEF9 /* SettingsIntent.swift in Sources */,
 				3C0ADD8A219F37B10026649F /* InsertAccountsForPublicKey.swift in Sources */,
 				3CB1D71821A85B5100C87EC9 /* TransferConfirmResult.swift in Sources */,
@@ -3738,6 +3844,7 @@
 				3C8BD25721A6CED900ACFA70 /* AllocatedBandwidthTableView.swift in Sources */,
 				3C0ADD87219F37B10026649F /* CountAccounts.swift in Sources */,
 				3C07009321A71A7D008F63D2 /* TransactionLogViewController.swift in Sources */,
+				3CA29798221750C8001DC2D5 /* StoreKitRequest.swift in Sources */,
 				3C6DF79921A0934600ADA892 /* AccountNavigationViewController.swift in Sources */,
 				3C9BFBB9219B5DA500589936 /* AccountsForPublicKey.swift in Sources */,
 				3CB1D70921A8296C00C87EC9 /* ViewActionIntent.swift in Sources */,
@@ -3834,12 +3941,17 @@
 			files = (
 				3CCC805821FB9C8100B715C2 /* ImportKeyRobot.swift in Sources */,
 				3C1D1AF0221172A400EF4560 /* ProxyVoteInformationTestCase.swift in Sources */,
+				3C1D1AF722117BEB00EF4560 /* VerifyReadOnlySearchAccountTestCase.swift in Sources */,
+				3C1D1AF322117BCD00EF4560 /* SearchAccountErrorTestCase.swift in Sources */,
+				3CA2978C221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift in Sources */,
 				3CCC804921FB929100B715C2 /* TestCase.swift in Sources */,
 				3CF9032322083FDA00ABDB58 /* ProxyVoteTestCase.swift in Sources */,
 				3CF9031E2208201700ABDB58 /* VoteForUsErrorTestCase.swift in Sources */,
 				3CCC804D21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */,
+				3CA2978722173872001DC2D5 /* SearchRobot.swift in Sources */,
 				3CCC804221FB86AE00B715C2 /* SplashRobot.swift in Sources */,
 				3C1D1AEC22115D6F00EF4560 /* VoteForProducerTestCase.swift in Sources */,
+				3C1D1AF522117BDC00EF4560 /* SearchAccountTestCase.swift in Sources */,
 				5459E12781E4B0E892AC7BD0 /* EarlGrey.swift in Sources */,
 				3CCC807921FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift in Sources */,
 				3CCC805E21FB9CB300B715C2 /* AccountRobot.swift in Sources */,

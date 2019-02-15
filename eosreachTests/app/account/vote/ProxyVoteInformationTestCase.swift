@@ -29,7 +29,7 @@ class ProxyVoteInformationTestCase : TestCase {
         }
         
         accountRobot.begin { it in
-            it.verifyAccountScreen()
+            it.verifyReadOnlyAccountScreen()
             it.verifyAvailableBalance(availableBalance: "$162947.12")
         }
     }

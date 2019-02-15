@@ -5,7 +5,7 @@ import eosswift
 
 class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResult, CreateAccountViewState> {
 
-    private let eosKeyManager = EosKeyManagerImpl()
+    private let eosKeyManager = EosKeyManagerFactory.create()
     private let eosCreateAccountRequest = EosCreateAccountRequestImpl()
     private let accountsForPublicKeyRequest = AccountsForPublicKeyRequestImpl()
     private let insertAccountsForPublicKey = InsertAccountsForPublicKey()

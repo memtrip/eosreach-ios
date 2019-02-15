@@ -64,6 +64,10 @@ extension Orchestra {
         return ProxyRobot()
     }
     
+    var searchRobot: SearchRobot {
+        return SearchRobot()
+    }
+    
     var settingsRobot: SettingsRobot {
         return SettingsRobot()
     }

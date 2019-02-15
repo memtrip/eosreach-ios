@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-class ReceiptDataRequest {
+class ReceiptDataRequestImpl : ReceiptDataRequest {
     
     func retrieveReceipt() -> Single<String> {
         return Single.create { single in
@@ -19,6 +19,11 @@ class ReceiptDataRequest {
             return Disposables.create()
         }
     }
+}
+
+
+protocol ReceiptDataRequest {
+    func retrieveReceipt() -> Single<String>
 }
 
 class NoReceiptError : Error {

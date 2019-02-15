@@ -24,6 +24,10 @@ func isDisplayed() -> GREYMatcher {
     return grey_sufficientlyVisible()
 }
 
+func isNotDisplayed() -> GREYMatcher {
+    return grey_notVisible()
+}
+
 func withId(_ id: String) -> GREYMatcher {
     return grey_accessibilityID(id)
 }

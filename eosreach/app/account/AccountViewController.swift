@@ -15,8 +15,12 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     @IBOutlet weak var activityIndicator: ReachActivityIndicator!
     @IBOutlet weak var errorView: ErrorView!
 
-    private let navigationMenuItem = IconButton(image: Icon.cm.menu, tintColor: .white)
-    private let navigationExploreItem = IconButton(image: Icon.cm.search, tintColor: .white)
+    private let navigationMenuItem =  IconButton(image: Icon.cm.menu, tintColor: .white).apply { it in
+        it.accessibilityIdentifier = "account_menu_item"
+    }
+    private let navigationExploreItem = IconButton(image: Icon.cm.search, tintColor: .white).apply { it in
+        it.accessibilityIdentifier = "account_search_item"
+    }
     private let balanceTabItem = TabItem()
     private let resourcesTabItem = TabItem()
     private let voteTabItem = TabItem()
