@@ -33,8 +33,12 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     @IBOutlet weak var importKeySyncButton: ReachPrimaryButton!
     @IBOutlet weak var importKeyGoToSettings: UIButton!
     
-    private let billing = BillingImpl(storeKitHandler: StoreKitHandler())
     private var skProduct: SKProduct?
+    private var createBilling: Billing?
+    
+    private lazy var billing: Billing = {
+        return createBilling!
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +63,12 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
         importKeyInstructionLabel.text = R.string.welcomeStrings.create_account_import_key_instruction_label()
         importKeySyncButton.setTitle(R.string.welcomeStrings.create_account_import_key_sync_button(), for: .normal)
         importKeyGoToSettings.setTitle(R.string.welcomeStrings.create_account_import_key_settings_button(), for: .normal)
+        
+        createBilling = BillingImpl(
+            storeKitHandler: StoreKitHandler(
+                billingConnectionDelegate: self,
+                billingFlowDelegate: self),
+            billingFlowDelegate: self)
     }
 
     override func intents() -> Observable<CreateAccountIntent> {
@@ -107,7 +117,7 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
             break
         case .startBillingConnection:
             activityIndicator.start()
-            billing.startConnection(billingConnectionDelegate: self, billingFlowDelegate: self)
+            billing.startConnection()
         case .onSKProductSuccess(let formattedPrice, let skProduct):
             self.skProduct = skProduct
             activityIndicator.stop()

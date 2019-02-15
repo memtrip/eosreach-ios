@@ -3,16 +3,17 @@ import StoreKit
 
 class StoreKitRequestFactory {
     
-    func create(storeKitHandler: StoreKitHandler, skProductsRequest: SKProductsRequest) -> StoreKitRequest {
+    static func create(storeKitHandler: StoreKitHandler) -> StoreKitRequest {
         switch TargetSwitch.api() {
         case .stub:
             return StoreKitRequestStub(
                 storeKitHandler: storeKitHandler,
-                skProductsRequest: skProductsRequest)
+                skProductsRequest: SKProductsRequest(productIdentifiers: NSSet(object: "") as! Set<String>))
         case .prod:
             return StoreKitRequestImpl(
                 storeKitHandler: storeKitHandler,
-                skProductsRequest: skProductsRequest)
+                skProductsRequest: SKProductsRequest(productIdentifiers:
+                    NSSet(object: R.string.appStrings.app_create_account_product_id()) as! Set<String>))
         }
     }
 }

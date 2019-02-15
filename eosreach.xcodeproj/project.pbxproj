@@ -760,6 +760,7 @@
 		3CA2979D22175477001DC2D5 /* StoreKitRequestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979B22175450001DC2D5 /* StoreKitRequestStub.swift */; };
 		3CA2979E221754F0001DC2D5 /* StoreKitRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA29799221753DB001DC2D5 /* StoreKitRequestFactory.swift */; };
 		3CA2979F221754F0001DC2D5 /* StoreKitRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA29799221753DB001DC2D5 /* StoreKitRequestFactory.swift */; };
+		3CA297A2221761F4001DC2D5 /* StubSkPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA297A022176154001DC2D5 /* StubSkPrice.swift */; };
 		3CAD34752192F77C000F304A /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD34742192F77C000F304A /* EntryViewModel.swift */; };
 		3CAD34772192F7DB000F304A /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD34762192F7DB000F304A /* EntryViewController.swift */; };
 		3CB1D70521A8296C00C87EC9 /* ViewActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70021A8296B00C87EC9 /* ViewActionResult.swift */; };
@@ -1290,6 +1291,7 @@
 		3CA2979522174D8F001DC2D5 /* StoreKitRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitRequest.swift; sourceTree = "<group>"; };
 		3CA29799221753DB001DC2D5 /* StoreKitRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitRequestFactory.swift; sourceTree = "<group>"; };
 		3CA2979B22175450001DC2D5 /* StoreKitRequestStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitRequestStub.swift; sourceTree = "<group>"; };
+		3CA297A022176154001DC2D5 /* StubSkPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubSkPrice.swift; sourceTree = "<group>"; };
 		3CAD34742192F77C000F304A /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 		3CAD34762192F7DB000F304A /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		3CB1D70021A8296B00C87EC9 /* ViewActionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActionResult.swift; sourceTree = "<group>"; };
@@ -2493,6 +2495,7 @@
 			children = (
 				3CA2979022174670001DC2D5 /* ReceiptDataRequestStub.swift */,
 				3CA2979B22175450001DC2D5 /* StoreKitRequestStub.swift */,
+				3CA297A022176154001DC2D5 /* StubSkPrice.swift */,
 			);
 			path = appstore;
 			sourceTree = "<group>";
@@ -3358,6 +3361,7 @@
 				3C0DBB1821F501430020CA1F /* MxViewModel.swift in Sources */,
 				3C0DBB1921F501430020CA1F /* EosCreateAccountRequestImpl.swift in Sources */,
 				3C0DBB1A21F501430020CA1F /* PurgeUserDefaults.swift in Sources */,
+				3CA297A2221761F4001DC2D5 /* StubSkPrice.swift in Sources */,
 				3C0DBB1B21F501430020CA1F /* AccountBalanceList.swift in Sources */,
 				3C0DBB1C21F501430020CA1F /* CastProxyVoteViewController.swift in Sources */,
 				3C0DBB1D21F501430020CA1F /* ResourcesRenderer.swift in Sources */,
