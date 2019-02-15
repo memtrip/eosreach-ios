@@ -26,13 +26,8 @@ class BillingImpl : Billing {
         storeKitRequest.cancel()
     }
     
-    func pay(product: SKProduct)  {
-        if (SKPaymentQueue.canMakePayments()) {
-            SKPaymentQueue.default().add(storeKitRequest.getStoreKitHandler())
-            SKPaymentQueue.default().add(SKPayment(product: product))
-        } else {
-            self.billingFlowDelegate.cannotMakePayment()
-        }
+    func pay(product: SKProduct) {
+        storeKitRequest.pay(product: product)
     }
 }
 

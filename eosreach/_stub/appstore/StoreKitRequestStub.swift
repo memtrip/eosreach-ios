@@ -13,14 +13,21 @@ class StoreKitRequestStub : StoreKitRequest {
         switch StoreKitStubStateHolder.shared.state {
         case .success:
             storeKitHandler.billingConnectionDelegate.success(skProduct: StubSkPrice.create())
+        case .cannotMakePayment:
+            storeKitHandler.billingConnectionDelegate.success(skProduct: StubSkPrice.create())
         }
     }
     
     func cancel() {
     }
     
-    func getStoreKitHandler() -> StoreKitHandler {
-        return storeKitHandler
+    func pay(product: SKProduct) {
+        switch StoreKitStubStateHolder.shared.state {
+        case .success:
+            self.storeKitHandler.billingFlowDelegate.success(transactionIdentifier: "orbx")
+        case .cannotMakePayment:
+            self.storeKitHandler.billingFlowDelegate.cannotMakePayment()
+        }
     }
 }
 
@@ -33,4 +40,5 @@ class StoreKitStubStateHolder {
 
 enum StoreKitStubState {
     case success
+    case cannotMakePayment
 }

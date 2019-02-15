@@ -20,8 +20,13 @@ class StoreKitRequestImpl : StoreKitRequest {
         self.skProductsRequest.cancel()
     }
     
-    func getStoreKitHandler() -> StoreKitHandler {
-        return storeKitHandler
+    func pay(product: SKProduct)  {
+        if (SKPaymentQueue.canMakePayments()) {
+            SKPaymentQueue.default().add(storeKitHandler)
+            SKPaymentQueue.default().add(SKPayment(product: product))
+        } else {
+            self.storeKitHandler.billingFlowDelegate.cannotMakePayment()
+        }
     }
 }
 
@@ -29,5 +34,5 @@ protocol StoreKitRequest {
     init(storeKitHandler: StoreKitHandler, skProductsRequest: SKProductsRequest)
     func start()
     func cancel()
-    func getStoreKitHandler() -> StoreKitHandler
+    func pay(product: SKProduct)
 }
