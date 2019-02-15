@@ -3230,6 +3230,7 @@
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAQ-4J-74O" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="create_account_toolbar"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Owi-uH-O7p"/>
                                 </constraints>
@@ -3303,18 +3304,21 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_account_create" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhd-sO-s76">
                                         <rect key="frame" x="16" y="16" width="343" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="create_account_done_title_label"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" name="colorSecondary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_instruction" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pI2-g3-qGc">
                                         <rect key="frame" x="16" y="48" width="343" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="create_account_done_instruction_label"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uoN-a8-OGg" customClass="ReachTextView" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="16" y="76.5" width="343" height="64"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="create_account_done_privatekey_label"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="z48-Db-OCf"/>
                                         </constraints>
@@ -3325,9 +3329,11 @@
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is7-eT-owu" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="16" y="553" width="343" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="create_account_done_button"/>
                                         <state key="normal" title="_done"/>
                                     </button>
                                 </subviews>
+                                <accessibility key="accessibilityConfiguration" identifier="create_account_done"/>
                                 <constraints>
                                     <constraint firstItem="uoN-a8-OGg" firstAttribute="top" secondItem="pI2-g3-qGc" secondAttribute="bottom" constant="8" id="Eiz-sV-Fot"/>
                                     <constraint firstItem="Is7-eT-owu" firstAttribute="leading" secondItem="h4z-KI-Mbd" secondAttribute="leading" constant="16" id="Obq-1R-aDJ"/>
@@ -3351,18 +3357,21 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1JK-Ri-q3E" customClass="ReachUsernameTextField" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="16" y="32" width="343" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="create_account_name_input"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_instruction" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxK-Ay-TiT">
                                         <rect key="frame" x="16" y="78" width="343" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="create_account_instruction_label"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-Ua-Mjq" customClass="ReachNetCpuView" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="16" y="114.5" width="343" height="96"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="create_account_resource_instruction_label"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="96" id="RQX-x8-njG"/>
                                         </constraints>
@@ -3372,9 +3381,11 @@
                                     </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ika-Qy-Lgd" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="16" y="553" width="343" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="create_account_form_cta"/>
                                         <state key="normal" title="_create_account"/>
                                     </button>
                                 </subviews>
+                                <accessibility key="accessibilityConfiguration" identifier="create_account_form"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ika-Qy-Lgd" secondAttribute="trailing" constant="16" id="1Km-0V-gJu"/>
                                     <constraint firstItem="eOP-r1-llB" firstAttribute="centerX" secondItem="ika-Qy-Lgd" secondAttribute="centerX" id="3Zt-4B-A7E"/>
@@ -3593,15 +3604,15 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="G0s-Vg-eJt"/>
-        <segue reference="rvY-Mg-arL"/>
+        <segue reference="SIU-CS-KrR"/>
+        <segue reference="dMo-xo-wz4"/>
         <segue reference="Jnr-cb-LO9"/>
         <segue reference="Eks-sF-JJe"/>
         <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="tiU-62-5pJ"/>
-        <segue reference="nIH-HN-fGl"/>
+        <segue reference="leo-zV-II3"/>
+        <segue reference="1Wt-0h-Agf"/>
         <segue reference="ctq-NB-9iI"/>
         <segue reference="8Yp-E9-EYq"/>
     </inferredMetricsTieBreakers>
