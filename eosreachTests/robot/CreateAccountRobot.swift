@@ -62,6 +62,18 @@ class CreateAccountRobot : Robot {
         ).matches(isDisplayed())
     }
     
+    func verifyCreateAccountError() {
+        onView(allOf(withText("Sorry"), isDisplayed()))
+            .matches(isDisplayed())
+        
+        onView(allOf(withText("We could not create an account at this time, please check your connection and try again."), isDisplayed()))
+            .matches(isDisplayed())
+        
+        onView(allOf(withText("OK"), isDisplayed()))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
     func selectAccountCreatedDoneButton() {
         
         onView(

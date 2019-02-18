@@ -24,8 +24,20 @@ func isDisplayed() -> GREYMatcher {
     return grey_sufficientlyVisible()
 }
 
-func isNotDisplayed() -> GREYMatcher {
-    return grey_notVisible()
+func isSystemAlertShown() -> GREYMatcher {
+    return grey_systemAlertViewShown()
+}
+
+func not(_ matcher: GREYMatcher) -> GREYMatcher {
+    return grey_not(matcher)
+}
+
+func withWindow() -> GREYMatcher {
+    return grey_keyWindow()
+}
+
+func withAny() -> GREYMatcher {
+    return grey_anything()
 }
 
 func withId(_ id: String) -> GREYMatcher {
@@ -54,7 +66,6 @@ func withIdInParent(_ parentMatcher: GREYMatcher, id: String) -> GREYMatcher {
         ancestorOf(parentMatcher)
     )
 }
-
 
 func withIdInParent(_ parentId: String, id: String) -> GREYMatcher {
     return ancestorOf(

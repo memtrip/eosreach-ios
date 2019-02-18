@@ -25,10 +25,10 @@ class AccountRobot : Robot {
             .matches(isDisplayed())
         
         onView(withId("account_menu_item"))
-            .matches(isNotDisplayed())
+            .matches(not(isDisplayed()))
         
         onView(withId("account_search_item"))
-            .matches(isNotDisplayed())
+            .matches(not(isDisplayed()))
     }
     
     func verifyAvailableBalance(availableBalance: String) {
