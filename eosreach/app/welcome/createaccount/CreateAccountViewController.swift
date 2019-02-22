@@ -130,6 +130,7 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
             formCtaButton.gone()
         case .onCreateAccountSuccess(let privateKey):
             formViewGroup.gone()
+            limboViewGroup.gone()
             doneViewGroup.visible()
             donePrivateKeyTextView.text = privateKey
         case .onCreateAccountFatalError:

@@ -80,4 +80,62 @@ class CreateAccountRobot : Robot {
             withIdInParent(withId("create_account_done"), id: "create_account_done_button")
         ).matchesNext(isDisplayed()).perform(click())
     }
+    
+    func verifyLimboScreen() {
+        
+        onView(withIdInParent(
+            withId("create_account_limbo_container"),
+            id: "create_account_limbo_title"
+        ))
+            .matchesNext(isDisplayed())
+            .matches(withText("Connectivity issue"))
+        
+        onView(withIdInParent(
+            withId("create_account_limbo_container"),
+            id: "create_account_limbo_body"
+        ))
+            .matchesNext(isDisplayed())
+            .matches(withText("We could not create your account at this time. Please check your internet connection and try again. If this problem continues to persist, please change your EOS endpoint from settings."))
+        
+        onView(withIdInParent(
+            withId("create_account_limbo_container"),
+            id: "create_account_limbo_settings_button"
+        )).matches(isDisplayed())
+    }
+    
+    func verifyLimboScreenNotDisplayed() {
+        
+        onView(withIdInParent(
+            withId("create_account_limbo_container"),
+            id: "create_account_limbo_title"
+        ))
+            .matchesNext(not(isDisplayed()))
+            .matches(withText("Connectivity issue"))
+        
+        onView(withIdInParent(
+            withId("create_account_limbo_container"),
+            id: "create_account_limbo_body"
+        ))
+            .matchesNext(not(isDisplayed()))
+            .matches(withText("We could not create your account at this time. Please check your internet connection and try again. If this problem continues to persist, please change your EOS endpoint from settings."))
+        
+        onView(withIdInParent(
+            withId("create_account_limbo_container"),
+            id: "create_account_limbo_settings_button"
+        )).matches(not(isDisplayed()))
+    }
+    
+    func selectLimboSettingsButton() {
+        onView(withIdInParent(
+            withId("create_account_limbo_container"),
+            id: "create_account_limbo_settings_button"
+        )).matchesNext(isDisplayed()).perform(click())
+    }
+    
+    func selectLimboRetryButton() {
+        onView(withIdInParent(
+            withId("create_account_limbo_container"),
+            id: "create_account_limbo_retry_button"
+        )).matchesNext(isDisplayed()).perform(click())
+    }
 }

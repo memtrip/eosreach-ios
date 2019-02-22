@@ -6,7 +6,7 @@ class ChainApiModule {
         switch TargetSwitch.api() {
         case .stub:
             return ChainApiFactory.create(
-                rootUrl: EosEndpoint().get(),
+                rootUrl: "http://offline.com/",
                 urlSession: StubUrlSession.shared.urlSession,
                 useLogger: true)
         case .prod:

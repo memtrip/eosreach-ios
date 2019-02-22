@@ -6,7 +6,7 @@ class HistoryApiModule {
         switch TargetSwitch.api() {
         case .stub:
             return HistoryApiFactory.create(
-                rootUrl: EosEndpoint().get(),
+                rootUrl: "http://offline.com/",
                 urlSession: StubUrlSession.shared.urlSession,
                 useLogger: true)
         case .prod:

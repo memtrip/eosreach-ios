@@ -147,7 +147,7 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
         case .genericError:
             return verifyAccountsForPublicKey(publicKey: publicKey)
         case .fatalError:
-            return Single.just(CreateAccountResult.onCreateAccountFatalError)
+            return verifyAccountsForPublicKey(publicKey: publicKey)
         case .accountNameExists:
             return Single.just(CreateAccountResult.onCreateAccountUsernameExists)
         }
@@ -189,15 +189,21 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
                     return Single.just(CreateAccountResult.onCreateAccountGenericError)
                 }
             } else {
-                /**
-                 * If we cannot verify whether the current session public key has any
-                 * accounts, we will display an error to the user. The user must get a
-                 * successful response from accountForPublicKeyRequest before continuing.
-                 */
-                self.unusedPublicKeyInLimbo.put(value: true)
-                return Single.just(CreateAccountResult.onCreateAccountLimbo)
+                return self.verifyAccountsForPublicKeyError()
             }
+        }.catchError { it in
+            return self.verifyAccountsForPublicKeyError()
         }
+    }
+    
+    private func verifyAccountsForPublicKeyError() -> Single<CreateAccountResult> {
+        /**
+         * If we cannot verify whether the current session public key has any
+         * accounts, we will display an error to the user. The user must get a
+         * successful response from accountForPublicKeyRequest before continuing.
+         */
+        self.unusedPublicKeyInLimbo.put(value: true)
+        return Single.just(CreateAccountResult.onCreateAccountLimbo)
     }
     
     private func syncAccountsForKey(privateKey: String = "") -> Observable<CreateAccountResult> {
