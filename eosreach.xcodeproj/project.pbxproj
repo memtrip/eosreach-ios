@@ -628,6 +628,7 @@
 		3C68074A2220A2DD00B5F169 /* PendingAccountNameInLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807462220A00100B5F169 /* PendingAccountNameInLimbo.swift */; };
 		3C68074B2220A2DD00B5F169 /* PendingAccountNameInLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807462220A00100B5F169 /* PendingAccountNameInLimbo.swift */; };
 		3C68074F2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68074E2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift */; };
+		3C6807512220B6E600B5F169 /* BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807502220B6E600B5F169 /* BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift */; };
 		3C6DF75921A05C7E00ADA892 /* AccountCardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75821A05C7E00ADA892 /* AccountCardTableView.swift */; };
 		3C6DF75B21A05CF600ADA892 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75A21A05CF600ADA892 /* AccountModel.swift */; };
 		3C6DF75D21A05DCA00ADA892 /* AccountCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75C21A05DCA00ADA892 /* AccountCardCell.swift */; };
@@ -883,7 +884,7 @@
 		3CCE9C2621A2B1350050910D /* AccountViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */; };
 		3CCE9C2C21A2C3810050910D /* ResourceGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */; };
 		3CCE9C2E21A2C38E0050910D /* ResourceGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2D21A2C38E0050910D /* ResourceGraphView.xib */; };
-		3CE7AF5D221AA58B00FB9D39 /* BillingFlowSuccessCreateAccountFailedNoAccountsForPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE7AF5C221AA58B00FB9D39 /* BillingFlowSuccessCreateAccountFailedNoAccountsForPublicKeyTestCase.swift */; };
+		3CE7AF5D221AA58B00FB9D39 /* BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE7AF5C221AA58B00FB9D39 /* BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase.swift */; };
 		3CEF33B921A507E700716AA2 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B421A507E700716AA2 /* CreateAccountViewController.swift */; };
 		3CEF33BA21A507E700716AA2 /* CreateAccountViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B521A507E700716AA2 /* CreateAccountViewState.swift */; };
 		3CEF33BB21A507E700716AA2 /* CreateAccountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B621A507E700716AA2 /* CreateAccountIntent.swift */; };
@@ -1166,6 +1167,7 @@
 		3C68074422209BFA00B5F169 /* BillingFlowLimboEndWithNoAccountsTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingFlowLimboEndWithNoAccountsTestCase.swift; sourceTree = "<group>"; };
 		3C6807462220A00100B5F169 /* PendingAccountNameInLimbo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingAccountNameInLimbo.swift; sourceTree = "<group>"; };
 		3C68074E2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingFlowStoreKitErrorTestCase.swift; sourceTree = "<group>"; };
+		3C6807502220B6E600B5F169 /* BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift; sourceTree = "<group>"; };
 		3C6DF75821A05C7E00ADA892 /* AccountCardTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardTableView.swift; sourceTree = "<group>"; };
 		3C6DF75A21A05CF600ADA892 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		3C6DF75C21A05DCA00ADA892 /* AccountCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardCell.swift; sourceTree = "<group>"; };
@@ -1417,7 +1419,7 @@
 		3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewLayout.swift; sourceTree = "<group>"; };
 		3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceGraphView.swift; sourceTree = "<group>"; };
 		3CCE9C2D21A2C38E0050910D /* ResourceGraphView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourceGraphView.xib; sourceTree = "<group>"; };
-		3CE7AF5C221AA58B00FB9D39 /* BillingFlowSuccessCreateAccountFailedNoAccountsForPublicKeyTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingFlowSuccessCreateAccountFailedNoAccountsForPublicKeyTestCase.swift; sourceTree = "<group>"; };
+		3CE7AF5C221AA58B00FB9D39 /* BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase.swift; sourceTree = "<group>"; };
 		3CEF33B421A507E700716AA2 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		3CEF33B521A507E700716AA2 /* CreateAccountViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewState.swift; sourceTree = "<group>"; };
 		3CEF33B621A507E700716AA2 /* CreateAccountIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountIntent.swift; sourceTree = "<group>"; };
@@ -2492,7 +2494,8 @@
 			children = (
 				3C68074E2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift */,
 				3CA2978B221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift */,
-				3CE7AF5C221AA58B00FB9D39 /* BillingFlowSuccessCreateAccountFailedNoAccountsForPublicKeyTestCase.swift */,
+				3CE7AF5C221AA58B00FB9D39 /* BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase.swift */,
+				3C6807502220B6E600B5F169 /* BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift */,
 				3C680742222074E600B5F169 /* BillingFlowLimboEndWithAccountsReceivedTestCase.swift */,
 				3C68074422209BFA00B5F169 /* BillingFlowLimboEndWithNoAccountsTestCase.swift */,
 			);
@@ -3974,6 +3977,7 @@
 				3CCC804D21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */,
 				3CA2978722173872001DC2D5 /* SearchRobot.swift in Sources */,
 				3C680743222074E600B5F169 /* BillingFlowLimboEndWithAccountsReceivedTestCase.swift in Sources */,
+				3C6807512220B6E600B5F169 /* BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift in Sources */,
 				3CCC804221FB86AE00B715C2 /* SplashRobot.swift in Sources */,
 				3C1D1AEC22115D6F00EF4560 /* VoteForProducerTestCase.swift in Sources */,
 				3C1D1AF522117BDC00EF4560 /* SearchAccountTestCase.swift in Sources */,
@@ -3999,7 +4003,7 @@
 				3C1D1AEA22115BEF00EF4560 /* VoteForProxyTestCase.swift in Sources */,
 				3CCC805021FB9BD700B715C2 /* ImportKeyOrchestra.swift in Sources */,
 				3CCC805421FB9C4A00B715C2 /* Robot.swift in Sources */,
-				3CE7AF5D221AA58B00FB9D39 /* BillingFlowSuccessCreateAccountFailedNoAccountsForPublicKeyTestCase.swift in Sources */,
+				3CE7AF5D221AA58B00FB9D39 /* BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase.swift in Sources */,
 				3CCC804421FB877A00B715C2 /* Espresso.swift in Sources */,
 				3CCC806221FB9CD100B715C2 /* VoteRobot.swift in Sources */,
 				3CCC805621FB9C6900B715C2 /* CommonRobot.swift in Sources */,
