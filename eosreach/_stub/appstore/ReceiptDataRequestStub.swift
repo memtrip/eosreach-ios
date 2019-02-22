@@ -10,6 +10,8 @@ class ReceiptDataRequestStub : ReceiptDataRequest {
                 single(.success("VGhlIHdoZWVsIHB1dCB0aGUgZ2lhbnRzIG91dCBvZiBidXNpbmVzcw"))
             case .cannotMakePayment:
                 fatalError("Impossible path, critical test failure.")
+            case .storekitError:
+                fatalError("Impossible path, critical test failure.")
             }
             return Disposables.create()
         }

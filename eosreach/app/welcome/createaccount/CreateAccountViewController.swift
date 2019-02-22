@@ -220,23 +220,7 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     @objc dynamic func success(skProduct: SKProduct) {
     }
     
-    func skuNotFound() {
-        skProductError()
-    }
-    
-    func skuBillingUnavailable() {
-        skProductError()
-    }
-    
-    func skuRequestFailed() {
-        skProductError()
-    }
-    
-    func billingSetupFailed() {
-        skProductError()
-    }
-    
-    private func skProductError() {
+    func storekitError() {
         activityIndicator.stop()
         formViewGroup.gone()
         skProductNotFound.visible()

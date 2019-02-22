@@ -51,7 +51,7 @@ class StoreKitHandler : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
             }
         } else {
             DispatchQueue.main.async {
-                self.billingConnectionDelegate.skuNotFound()
+                self.billingConnectionDelegate.storekitError()
             }
         }
     }
@@ -78,10 +78,7 @@ class StoreKitHandler : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
 
 protocol BillingConnectionDelegate {
     func success(skProduct: SKProduct)
-    func skuNotFound()
-    func skuBillingUnavailable()
-    func skuRequestFailed()
-    func billingSetupFailed()
+    func storekitError()
 }
 
 protocol BillingFlowDelegate {

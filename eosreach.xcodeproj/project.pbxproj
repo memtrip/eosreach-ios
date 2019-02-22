@@ -627,6 +627,7 @@
 		3C68074522209BFA00B5F169 /* BillingFlowLimboEndWithNoAccountsTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68074422209BFA00B5F169 /* BillingFlowLimboEndWithNoAccountsTestCase.swift */; };
 		3C68074A2220A2DD00B5F169 /* PendingAccountNameInLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807462220A00100B5F169 /* PendingAccountNameInLimbo.swift */; };
 		3C68074B2220A2DD00B5F169 /* PendingAccountNameInLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807462220A00100B5F169 /* PendingAccountNameInLimbo.swift */; };
+		3C68074F2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68074E2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift */; };
 		3C6DF75921A05C7E00ADA892 /* AccountCardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75821A05C7E00ADA892 /* AccountCardTableView.swift */; };
 		3C6DF75B21A05CF600ADA892 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75A21A05CF600ADA892 /* AccountModel.swift */; };
 		3C6DF75D21A05DCA00ADA892 /* AccountCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75C21A05DCA00ADA892 /* AccountCardCell.swift */; };
@@ -1164,6 +1165,7 @@
 		3C680742222074E600B5F169 /* BillingFlowLimboEndWithAccountsReceivedTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingFlowLimboEndWithAccountsReceivedTestCase.swift; sourceTree = "<group>"; };
 		3C68074422209BFA00B5F169 /* BillingFlowLimboEndWithNoAccountsTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingFlowLimboEndWithNoAccountsTestCase.swift; sourceTree = "<group>"; };
 		3C6807462220A00100B5F169 /* PendingAccountNameInLimbo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingAccountNameInLimbo.swift; sourceTree = "<group>"; };
+		3C68074E2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingFlowStoreKitErrorTestCase.swift; sourceTree = "<group>"; };
 		3C6DF75821A05C7E00ADA892 /* AccountCardTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardTableView.swift; sourceTree = "<group>"; };
 		3C6DF75A21A05CF600ADA892 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		3C6DF75C21A05DCA00ADA892 /* AccountCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardCell.swift; sourceTree = "<group>"; };
@@ -2488,6 +2490,7 @@
 		3CA29789221744A4001DC2D5 /* createaccount */ = {
 			isa = PBXGroup;
 			children = (
+				3C68074E2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift */,
 				3CA2978B221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift */,
 				3CE7AF5C221AA58B00FB9D39 /* BillingFlowSuccessCreateAccountFailedNoAccountsForPublicKeyTestCase.swift */,
 				3C680742222074E600B5F169 /* BillingFlowLimboEndWithAccountsReceivedTestCase.swift */,
@@ -3961,6 +3964,7 @@
 				3CCC805821FB9C8100B715C2 /* ImportKeyRobot.swift in Sources */,
 				3C1D1AF0221172A400EF4560 /* ProxyVoteInformationTestCase.swift in Sources */,
 				3C1D1AF722117BEB00EF4560 /* VerifyReadOnlySearchAccountTestCase.swift in Sources */,
+				3C68074F2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift in Sources */,
 				3C1D1AF322117BCD00EF4560 /* SearchAccountErrorTestCase.swift in Sources */,
 				3CA2978C221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift in Sources */,
 				3CCC804921FB929100B715C2 /* TestCase.swift in Sources */,

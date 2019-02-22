@@ -138,4 +138,12 @@ class CreateAccountRobot : Robot {
             id: "create_account_limbo_retry_button"
         )).matchesNext(isDisplayed()).perform(click())
     }
+    
+    func verifyCreateAccountUnavailable() {
+        onView(withId("create_account_toolbar"))
+            .matches(isDisplayed())
+        
+        onView(withId("create_account_sku_not_found"))
+            .matches(isDisplayed())
+    }
 }
