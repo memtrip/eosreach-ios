@@ -3293,6 +3293,9 @@
                                         <accessibility key="accessibilityConfiguration" identifier="create_account_limbo_retry_button"/>
                                         <state key="normal" title="_retry"/>
                                     </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rhA-Cv-DW6" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
+                                        <rect key="frame" x="161.5" y="273.5" width="20" height="20"/>
+                                    </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76Q-q0-JwA" customClass="ReachButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="119" y="306.5" width="105" height="30"/>
                                         <accessibility key="accessibilityConfiguration" identifier="create_account_limbo_settings_button"/>
@@ -3303,9 +3306,11 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Zcf-ip-YBO" secondAttribute="trailing" id="1da-lX-Tfy"/>
                                     <constraint firstItem="Zcf-ip-YBO" firstAttribute="top" secondItem="Q9E-aj-Rp1" secondAttribute="bottom" constant="4" id="3wB-LL-N0s"/>
+                                    <constraint firstItem="rhA-Cv-DW6" firstAttribute="centerX" secondItem="Wwc-1c-2Mc" secondAttribute="centerX" id="Sra-WT-IEe"/>
                                     <constraint firstItem="76Q-q0-JwA" firstAttribute="centerX" secondItem="tdw-1M-VXY" secondAttribute="centerX" id="UcB-5I-ntE"/>
                                     <constraint firstItem="Q9E-aj-Rp1" firstAttribute="leading" secondItem="tdw-1M-VXY" secondAttribute="leading" id="bC4-y1-4Zg"/>
                                     <constraint firstItem="76Q-q0-JwA" firstAttribute="top" secondItem="Wwc-1c-2Mc" secondAttribute="bottom" constant="8" id="eCv-PX-BT9"/>
+                                    <constraint firstItem="rhA-Cv-DW6" firstAttribute="centerY" secondItem="Wwc-1c-2Mc" secondAttribute="centerY" id="eRb-OF-VAF"/>
                                     <constraint firstAttribute="trailing" secondItem="Q9E-aj-Rp1" secondAttribute="trailing" id="k6N-h3-Zrw"/>
                                     <constraint firstItem="Wwc-1c-2Mc" firstAttribute="trailing" secondItem="76Q-q0-JwA" secondAttribute="trailing" id="lcs-52-DKr"/>
                                     <constraint firstItem="Wwc-1c-2Mc" firstAttribute="leading" secondItem="76Q-q0-JwA" secondAttribute="leading" id="lei-xK-jPh"/>
@@ -3472,6 +3477,7 @@
                         <outlet property="importKeyGroup" destination="FPW-lJ-Fga" id="GPy-pP-Y5W"/>
                         <outlet property="importKeyInstructionLabel" destination="ry7-yF-Tty" id="DcJ-e6-Ucl"/>
                         <outlet property="importKeySyncButton" destination="GYo-fi-ihf" id="u62-JK-e6I"/>
+                        <outlet property="limboActivityIndicator" destination="rhA-Cv-DW6" id="LBn-F4-L8i"/>
                         <outlet property="limboBody" destination="Zcf-ip-YBO" id="h19-ix-6kh"/>
                         <outlet property="limboGoToSettingsButton" destination="76Q-q0-JwA" id="Jlb-aE-anI"/>
                         <outlet property="limboRetryButton" destination="Wwc-1c-2Mc" id="sp4-fJ-kPm"/>

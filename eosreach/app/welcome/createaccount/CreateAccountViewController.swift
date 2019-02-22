@@ -27,6 +27,7 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     @IBOutlet weak var limboBody: UILabel!
     @IBOutlet weak var limboGoToSettingsButton: ReachPrimaryButton!
     @IBOutlet weak var limboRetryButton: ReachPrimaryButton!
+    @IBOutlet weak var limboActivityIndicator: ReachActivityIndicator!
     
     @IBOutlet weak var importKeyGroup: UIView!
     @IBOutlet weak var importKeyInstructionLabel: UILabel!
@@ -128,6 +129,8 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
         case .onCreateAccountProgress:
             formCtaActivityIndicator.start()
             formCtaButton.gone()
+            limboActivityIndicator.start()
+            limboRetryButton.gone()
         case .onCreateAccountSuccess(let privateKey):
             formViewGroup.gone()
             limboViewGroup.gone()
@@ -136,9 +139,13 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
         case .onCreateAccountFatalError:
             formCtaActivityIndicator.stop()
             formCtaButton.visible()
+            limboActivityIndicator.stop()
+            limboRetryButton.visible()
         case .onCreateAccountGenericError:
             formCtaActivityIndicator.stop()
             formCtaButton.visible()
+            limboActivityIndicator.stop()
+            limboRetryButton.visible()
             showOKDialog(message: R.string.welcomeStrings.create_account_error_generic())
         case .onCreateAccountUsernameExists:
             formCtaActivityIndicator.stop()
@@ -147,6 +154,8 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
         case .onCreateAccountLimbo:
             formViewGroup.gone()
             limboViewGroup.visible()
+            limboActivityIndicator.stop()
+            limboRetryButton.visible()
         case .onImportKeyProgress:
             activityIndicator.start()
             doneViewGroup.gone()

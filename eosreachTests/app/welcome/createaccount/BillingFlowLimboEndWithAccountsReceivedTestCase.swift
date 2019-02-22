@@ -1,9 +1,9 @@
 import Foundation
 @testable import stub
 
-class BillingFlowLimboEndWithNoAccountsTestCase : TestCase {
-    
-    func testBillingFlowLimboEndWithNoAccountsTestCase() {
+class BillingFlowLimboEndWithAccountsReceivedTestCase : TestCase {
+
+    func testBillingFlowLimboEndWithAccountsReceivedTestCase() {
         splashRobot.selectCreateAccount()
         
         createAccountRobot.begin { it in
@@ -19,14 +19,18 @@ class BillingFlowLimboEndWithNoAccountsTestCase : TestCase {
         
         createAccountRobot.begin { it in
             it.selectLimboRetryButton()
-            it.verifyCreateAccountError()
+            it.verifyLimboScreenNotDisplayed()
+            it.verifyAccountCreatedScreen()
+            it.selectAccountCreatedDoneButton()
         }
+        
+        accountRobot.verifyAccountScreen()
     }
     
     override func configure(stubApi: StubApi) -> StubApi {
         
         let request = ErrorOnFirstStubRequest(code: 200, body: {
-            return readJson(R.file.happy_path_get_key_accounts_emptyJson())
+            return readJson(R.file.happy_path_get_key_accountsJson())
         })
         
         stubApi.createAccount = Stub(

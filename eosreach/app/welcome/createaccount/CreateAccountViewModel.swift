@@ -14,6 +14,7 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
     private let unusedTransactionIdentifier = UnusedTransactionIdentifier()
     private let unusedPublicKeyInLimbo = UnusedPublicKeyInLimbo()
     private let unusedPublicKeyNoAccountsSynced = UnusedPublicKeyNoAccountsSynced()
+    private let pendingAccountNameInLimbo = PendingAccountNameInLimbo()
     
     override func dispatcher(intent: CreateAccountIntent) -> Observable<CreateAccountResult> {
         switch intent {
@@ -30,7 +31,7 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
         case .goToSettings:
             return just(CreateAccountResult.goToSettings)
         case .limboRetry:
-            return createAccount(transactionIdentifier: unusedTransactionIdentifier.get(), accountName: "")
+            return createAccount(transactionIdentifier: unusedTransactionIdentifier.get(), accountName: pendingAccountNameInLimbo.get())
         case .syncAccounts:
             return syncAccountsForKey()
         case .syncAccountsForPrivateKey(let privateKey):
@@ -124,10 +125,10 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
                 if (result.success()) {
                     return self.createAccountSuccess(publicKey: publicKey)
                 } else {
-                    return self.createAccountError(createAccountError: result.error!, publicKey: publicKey)
+                    return self.createAccountError(createAccountError: result.error!, publicKey: publicKey, accountName: accountName)
                 }
             }.catchError { error in
-                return self.verifyAccountsForPublicKey(publicKey: publicKey)
+                return self.verifyAccountsForPublicKey(publicKey: publicKey, accountName: accountName)
             }
         }.catchErrorJustReturn(CreateAccountResult.onCreateAccountGenericError)
             .asObservable().startWith(CreateAccountResult.onCreateAccountProgress)
@@ -135,6 +136,7 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
     
     private func createAccountSuccess(publicKey: String) -> Single<CreateAccountResult> {
         unusedPublicKeyInLimbo.clear()
+        pendingAccountNameInLimbo.clear()
         unusedTransactionIdentifier.clear()
         unusedPublicKeyNoAccountsSynced.put(value: true)
         return eosKeyManager.getPrivateKey(eosPublicKey: publicKey).map { privateKey in
@@ -142,12 +144,12 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
         }.catchErrorJustReturn(CreateAccountResult.onImportKeyError)
     }
     
-    private func createAccountError(createAccountError: EosCreateAccountError, publicKey: String) -> Single<CreateAccountResult> {
+    private func createAccountError(createAccountError: EosCreateAccountError, publicKey: String, accountName: String) -> Single<CreateAccountResult> {
         switch createAccountError {
         case .genericError:
-            return verifyAccountsForPublicKey(publicKey: publicKey)
+            return verifyAccountsForPublicKey(publicKey: publicKey, accountName: accountName)
         case .fatalError:
-            return verifyAccountsForPublicKey(publicKey: publicKey)
+            return verifyAccountsForPublicKey(publicKey: publicKey, accountName: accountName)
         case .accountNameExists:
             return Single.just(CreateAccountResult.onCreateAccountUsernameExists)
         }
@@ -175,7 +177,7 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
      * account might have been created, so we check accounts for the public key. If the accounts
      * for public key request fails, the create account process is in limbo.
      */
-    private func verifyAccountsForPublicKey(publicKey: String) -> Single<CreateAccountResult> {
+    private func verifyAccountsForPublicKey(publicKey: String, accountName: String) -> Single<CreateAccountResult> {
         return accountsForPublicKeyRequest.getAccountsForKey(publicKey: publicKey).flatMap { result in
             if (result.success()) {
                 if (result.data != nil && result.data!.accounts.isNotEmpty()) {
@@ -189,20 +191,21 @@ class CreateAccountViewModel: MxViewModel<CreateAccountIntent, CreateAccountResu
                     return Single.just(CreateAccountResult.onCreateAccountGenericError)
                 }
             } else {
-                return self.verifyAccountsForPublicKeyError()
+                return self.verifyAccountsForPublicKeyError(accountName: accountName)
             }
         }.catchError { it in
-            return self.verifyAccountsForPublicKeyError()
+            return self.verifyAccountsForPublicKeyError(accountName: accountName)
         }
     }
     
-    private func verifyAccountsForPublicKeyError() -> Single<CreateAccountResult> {
+    private func verifyAccountsForPublicKeyError(accountName: String) -> Single<CreateAccountResult> {
         /**
          * If we cannot verify whether the current session public key has any
          * accounts, we will display an error to the user. The user must get a
          * successful response from accountForPublicKeyRequest before continuing.
          */
         self.unusedPublicKeyInLimbo.put(value: true)
+        self.pendingAccountNameInLimbo.put(value: accountName)
         return Single.just(CreateAccountResult.onCreateAccountLimbo)
     }
     
