@@ -3249,25 +3249,30 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_unsynced_error" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ry7-yF-Tty">
                                         <rect key="frame" x="16" y="256" width="343" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="create_account_import_key_instruction_label"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" name="typographyColorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYo-fi-ihf" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                         <rect key="frame" x="133.5" y="284.5" width="108" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="create_account_import_key_sync_button"/>
                                         <state key="normal" title="_sync_accounts"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEt-Ji-dFC" customClass="ReachButton" customModule="prod" customModuleProvider="target">
-                                        <rect key="frame" x="135" y="322.5" width="105" height="30"/>
+                                        <rect key="frame" x="133.5" y="322.5" width="108" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="create_account_import_key_settings_button"/>
                                         <state key="normal" title="_go_to_settings"/>
                                     </button>
                                 </subviews>
+                                <accessibility key="accessibilityConfiguration" identifier="create_account_import_key_container"/>
                                 <constraints>
                                     <constraint firstItem="GYo-fi-ihf" firstAttribute="top" secondItem="ry7-yF-Tty" secondAttribute="bottom" constant="8" id="8N6-gZ-XGu"/>
-                                    <constraint firstItem="GYo-fi-ihf" firstAttribute="centerX" secondItem="FPW-lJ-Fga" secondAttribute="centerX" id="8SC-HL-SO2"/>
                                     <constraint firstItem="GYo-fi-ihf" firstAttribute="centerY" secondItem="FPW-lJ-Fga" secondAttribute="centerY" id="ABB-0h-SZ1"/>
                                     <constraint firstItem="bEt-Ji-dFC" firstAttribute="centerX" secondItem="FPW-lJ-Fga" secondAttribute="centerX" id="Nyf-JX-XR8"/>
+                                    <constraint firstItem="GYo-fi-ihf" firstAttribute="trailing" secondItem="bEt-Ji-dFC" secondAttribute="trailing" id="S3S-wh-eJk"/>
                                     <constraint firstItem="ry7-yF-Tty" firstAttribute="leading" secondItem="FPW-lJ-Fga" secondAttribute="leading" constant="16" id="TV4-ma-Xtx"/>
+                                    <constraint firstItem="GYo-fi-ihf" firstAttribute="leading" secondItem="bEt-Ji-dFC" secondAttribute="leading" id="VPH-iX-K3m"/>
                                     <constraint firstItem="bEt-Ji-dFC" firstAttribute="top" secondItem="GYo-fi-ihf" secondAttribute="bottom" constant="8" id="XSL-Ha-Xa2"/>
                                     <constraint firstAttribute="trailing" secondItem="ry7-yF-Tty" secondAttribute="trailing" constant="16" id="tqU-SF-6zH"/>
                                 </constraints>

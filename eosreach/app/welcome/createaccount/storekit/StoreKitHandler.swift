@@ -70,7 +70,8 @@ class StoreKitHandler : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
             case .restored:
                 break
             case .deferred:
-                break // TODO: hmm?
+                self.billingFlowDelegate.failed()
+                break
             }
         }
     }
@@ -86,5 +87,4 @@ protocol BillingFlowDelegate {
     func purchasing()
     func success(transactionIdentifier: String)
     func failed()
-    func deferred()
 }

@@ -17,6 +17,8 @@ class StoreKitRequestStub : StoreKitRequest {
             storeKitHandler.billingConnectionDelegate.success(skProduct: StubSkPrice.create())
         case .storekitError:
             storeKitHandler.billingConnectionDelegate.storekitError()
+        case .paymentFailed:
+            storeKitHandler.billingConnectionDelegate.success(skProduct: StubSkPrice.create())
         }
     }
     
@@ -31,6 +33,8 @@ class StoreKitRequestStub : StoreKitRequest {
             fatalError("Impossible path, critical test failure.")
         case .cannotMakePayment:
             self.storeKitHandler.billingFlowDelegate.cannotMakePayment()
+        case .paymentFailed:
+            self.storeKitHandler.billingFlowDelegate.failed()
         }
     }
 }
@@ -46,4 +50,5 @@ enum StoreKitStubState {
     case success
     case storekitError
     case cannotMakePayment
+    case paymentFailed
 }

@@ -3,7 +3,7 @@ import Foundation
 
 class BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase : TestCase {
 
-    func testBillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase() {
+    func testBillingFlowFailedCreateAccountFailedNoAccountsForPublicKey() {
         splashRobot.selectCreateAccount()
         
         createAccountRobot.begin { it in

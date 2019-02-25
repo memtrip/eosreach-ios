@@ -109,20 +109,72 @@ class CreateAccountRobot : Robot {
             withId("create_account_limbo_container"),
             id: "create_account_limbo_title"
         ))
-            .matchesNext(not(isDisplayed()))
-            .matches(withText("Connectivity issue"))
+            .matches(not(isDisplayed()))
         
         onView(withIdInParent(
             withId("create_account_limbo_container"),
             id: "create_account_limbo_body"
         ))
-            .matchesNext(not(isDisplayed()))
-            .matches(withText("We could not create your account at this time. Please check your internet connection and try again. If this problem continues to persist, please change your EOS endpoint from settings."))
+            .matches(not(isDisplayed()))
         
         onView(withIdInParent(
             withId("create_account_limbo_container"),
             id: "create_account_limbo_settings_button"
         )).matches(not(isDisplayed()))
+    }
+    
+    func verifyImportKeyErrorScreen() {
+        
+        onView(withIdInParent(
+            withId("create_account_import_key_container"),
+            id: "create_account_import_key_instruction_label"
+        ))
+            .matchesNext(isDisplayed())
+            .matches(withText("Your account has been created, but we failed to sync your accounts. Please check your connection and try again. If this error still persists, please change your EOS endpoint in Settings."))
+        
+        onView(withIdInParent(
+            withId("create_account_import_key_container"),
+            id: "create_account_import_key_sync_button"
+        ))
+            .matches(isDisplayed())
+        
+        onView(withIdInParent(
+            withId("create_account_import_key_container"),
+            id: "create_account_import_key_settings_button"
+        ))
+            .matches(isDisplayed())
+    }
+    
+    func verifyImportKeyErrorScreenNotDisplayed() {
+        
+        onView(withIdInParent(
+            withId("create_account_import_key_container"),
+            id: "create_account_import_key_instruction_label"
+        )).matches(not(isDisplayed()))
+        
+        onView(withIdInParent(
+            withId("create_account_import_key_container"),
+            id: "create_account_import_key_sync_button"
+        )).matches(not(isDisplayed()))
+        
+        onView(withIdInParent(
+            withId("create_account_import_key_container"),
+            id: "create_account_import_key_settings_button"
+        )).matches(not(isDisplayed()))
+    }
+    
+    func selectImportKeySettingsButton() {
+        onView(withIdInParent(
+            withId("create_account_import_key_container"),
+            id: "create_account_import_key_settings_button"
+        )).matchesNext(isDisplayed()).perform(click())
+    }
+    
+    func selectImportKeySyncButton() {
+        onView(withIdInParent(
+            withId("create_account_import_key_container"),
+            id: "create_account_import_key_sync_button"
+        )).matchesNext(isDisplayed()).perform(click())
     }
     
     func selectLimboSettingsButton() {
@@ -139,11 +191,59 @@ class CreateAccountRobot : Robot {
         )).matchesNext(isDisplayed()).perform(click())
     }
     
+    func verifyAccountMustStartWithLetterError() {
+        onView(allOf(withText("Sorry"), isDisplayed()))
+            .matches(isDisplayed())
+        
+        onView(allOf(withText("Please enter an account name that is 12 characters in length."), isDisplayed()))
+            .matches(isDisplayed())
+        
+        onView(allOf(withText("OK"), isDisplayed()))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
+    func verifyAccountMustBe12CharactersError() {
+        onView(allOf(withText("Sorry"), isDisplayed()))
+            .matches(isDisplayed())
+        
+        onView(allOf(withText("Please use a-z for the first character of your account name."), isDisplayed()))
+            .matches(isDisplayed())
+        
+        onView(allOf(withText("OK"), isDisplayed()))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
     func verifyCreateAccountUnavailable() {
         onView(withId("create_account_toolbar"))
             .matches(isDisplayed())
         
         onView(withId("create_account_sku_not_found"))
             .matches(isDisplayed())
+    }
+    
+    func verifyCannotMakePaymentError() {
+        onView(allOf(withText("Sorry"), isDisplayed()))
+            .matches(isDisplayed())
+        
+        onView(allOf(withText("You cancelled the App Store purchase. You can import an existing private key if you do not want to pay our fee."), isDisplayed()))
+            .matches(isDisplayed())
+        
+        onView(allOf(withText("OK"), isDisplayed()))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
+    func verifyPaymentFailedError() {
+        onView(allOf(withText("Sorry"), isDisplayed()))
+            .matches(isDisplayed())
+        
+        onView(allOf(withText("App Store could not process your payment, please check your internet connection and try again. You have not been charged for this transaction."), isDisplayed()))
+            .matches(isDisplayed())
+        
+        onView(allOf(withText("OK"), isDisplayed()))
+            .matchesNext(isDisplayed())
+            .perform(click())
     }
 }

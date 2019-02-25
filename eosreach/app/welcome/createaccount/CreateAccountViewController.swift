@@ -33,6 +33,7 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     @IBOutlet weak var importKeyInstructionLabel: UILabel!
     @IBOutlet weak var importKeySyncButton: ReachPrimaryButton!
     @IBOutlet weak var importKeyGoToSettings: UIButton!
+    @IBOutlet weak var importKeyActivityIndicator: ReachActivityIndicator!
     
     private var skProduct: SKProduct?
     private var createBilling: Billing?
@@ -205,13 +206,9 @@ class CreateAccountViewController: MxViewController<CreateAccountIntent, CreateA
     }
     
     func failed() {
-        showOKDialog(message: R.string.welcomeStrings.create_account_billing_cancelled())
+        showOKDialog(message: R.string.welcomeStrings.create_account_billing_generic_error())
         formCtaActivityIndicator.stop()
         formCtaButton.visible()
-    }
-    
-    func deferred() {
-        print("deferred")
     }
     
     //
