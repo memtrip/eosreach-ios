@@ -6,7 +6,7 @@ class ConfirmBandwidthViewModel: MxViewModel<ConfirmBandwidthIntent, ConfirmBand
     
     private let bandwidthRequest = BandwidthRequestImpl()
     private let getAccountByName = GetAccountByName()
-    private let eosKeyManager = EosKeyManagerImpl()
+    private let eosKeyManager = EosKeyManagerFactory.create()
     private let insertTransactionLog = InsertTransactionLog()
     
     override func dispatcher(intent: ConfirmBandwidthIntent) -> Observable<ConfirmBandwidthResult> {

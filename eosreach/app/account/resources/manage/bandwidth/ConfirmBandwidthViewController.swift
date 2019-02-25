@@ -73,9 +73,7 @@ class ConfirmBandwidthViewController
         case .withLog(let log):
             activityIndicator.stop()
             confirmButton.visible()
-            showViewLog(viewLogHandler: { _ in
-                self.showTransactionLog(log: log)
-            })
+            self.showTransactionLog(log: log)
         case .navigateToTransactionConfirmed(let actionReceipt):
             self.showTransactionReceipt(
                 actionReceipt: actionReceipt,

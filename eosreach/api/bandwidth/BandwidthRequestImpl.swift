@@ -42,7 +42,7 @@ class BandwidthRequestImpl : BandwidthRequest {
             } else {
                 return Result(error: BandwidthError.transactionError(body: response.errorBody!))
             }
-        }
+        }.catchErrorJustReturn(Result(error: BandwidthError.genericError))
     }
     
     func undelegate(

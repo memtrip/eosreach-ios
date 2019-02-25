@@ -2021,21 +2021,25 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-aK-Oxh" customClass="ReachUsernameTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="176" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="delegate_bandwidth_target_account"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srB-pA-4CE" customClass="ReachBalanceTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="114" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="delegate_bandwidth_cpu_amount"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKC-Kf-JbC" customClass="ReachSwitch" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="222" width="51" height="31"/>
+                                <accessibility key="accessibilityConfiguration" identifier="delegate_bandwidth_transfer_perm"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffh-iM-c2O" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="delegate_bandwidth_delegate_ button"/>
                                 <state key="normal" title="_delegate"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_switch_placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYn-UK-9cF">
@@ -2046,6 +2050,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ql9-Id-TMZ" customClass="ReachBalanceTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="52" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="delegate_bandwidth_net_amount"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -2096,24 +2101,30 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WZA-lX-sYC" customClass="ReachBalanceTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="52" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="undelegate_bandwidth_net_amount">
+                                    <accessibilityTraits key="traits" summaryElement="YES"/>
+                                </accessibility>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-B5-B3U" customClass="ReachBalanceTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="114" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="undelegate_bandwidth_cpu_amount"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxD-xe-LIv" customClass="ReachUsernameTextField" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="176" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="undelegate_bandwidth_target_account"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2h-xk-b2W" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="undelegate_bandwidth_button"/>
                                 <state key="normal" title="_undelegate"/>
                             </button>
                         </subviews>
@@ -2155,6 +2166,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWK-Gy-Mhh" customClass="ReachToolbar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="confirm_bandwidth_toolbar"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="aNM-iQ-i3x"/>
                                 </constraints>
@@ -2173,6 +2185,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_account_name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldQ-Eh-YP1">
                                                 <rect key="frame" x="175.5" y="14" width="151.5" height="20.5"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="confirm_bandwidth_account_name_label"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" name="typographyColorPrimary"/>
                                                 <nil key="highlightedColor"/>
@@ -2211,6 +2224,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_net_value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7b-Va-vRj">
                                                 <rect key="frame" x="175.5" y="14" width="151.5" height="20.5"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="confirm_bandwidth_net_value_label"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" name="typographyColorPrimary"/>
                                                 <nil key="highlightedColor"/>
@@ -2249,6 +2263,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_cpu_value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZI-nE-G2f">
                                                 <rect key="frame" x="175.5" y="14" width="151.5" height="20.5"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="confirm_bandwidth_cpu_value_label"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" name="typographyColorPrimary"/>
                                                 <nil key="highlightedColor"/>
@@ -2278,6 +2293,7 @@
                                     </view>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_delegate funds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCa-mh-XdV">
                                         <rect key="frame" x="0.0" y="146" width="343" height="48"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="confirm_bandwidth_delegate_funds_perm_label"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="9om-xo-fO9"/>
                                         </constraints>
@@ -2289,6 +2305,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7A-DD-V9b" customClass="ReachPrimaryButton" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="confirm_bandwidth_cta_button"/>
                                 <state key="normal" title="_confirm"/>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="soS-Qu-yqn" customClass="ReachActivityIndicator" customModule="prod" customModuleProvider="target">
@@ -3638,7 +3655,7 @@
         <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="leo-zV-II3"/>
+        <segue reference="p9U-mn-UT8"/>
         <segue reference="1Wt-0h-Agf"/>
         <segue reference="ctq-NB-9iI"/>
         <segue reference="8Yp-E9-EYq"/>

@@ -43,6 +43,10 @@ extension Orchestra {
     var resourcesRobot: ResourcesRobot {
         return ResourcesRobot()
     }
+    
+    var bandwidthRobot: BandwidthRobot {
+        return BandwidthRobot()
+    }
 
     var actionsRobot: ActionsRobot {
         return ActionsRobot()

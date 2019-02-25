@@ -561,9 +561,6 @@
 		3C1D1AEC22115D6F00EF4560 /* VoteForProducerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AEB22115D6F00EF4560 /* VoteForProducerTestCase.swift */; };
 		3C1D1AEE22116B9100EF4560 /* ProxyRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AED22116B9100EF4560 /* ProxyRobot.swift */; };
 		3C1D1AF0221172A400EF4560 /* ProxyVoteInformationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AEF221172A400EF4560 /* ProxyVoteInformationTestCase.swift */; };
-		3C1D1AF322117BCD00EF4560 /* SearchAccountErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AF222117BCD00EF4560 /* SearchAccountErrorTestCase.swift */; };
-		3C1D1AF522117BDC00EF4560 /* SearchAccountTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AF422117BDC00EF4560 /* SearchAccountTestCase.swift */; };
-		3C1D1AF722117BEB00EF4560 /* VerifyReadOnlySearchAccountTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AF622117BEB00EF4560 /* VerifyReadOnlySearchAccountTestCase.swift */; };
 		3C1F1F7121A306680075BD71 /* VoteProducerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */; };
 		3C1F1F7521A306800075BD71 /* VoteProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */; };
 		3C1F1F7721A306A10075BD71 /* VoteProducerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */; };
@@ -635,6 +632,9 @@
 		3C6807592223BB3100B5F169 /* BillingFlowAccountLengthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807582223BB3100B5F169 /* BillingFlowAccountLengthTestCase.swift */; };
 		3C68075B2223BC9600B5F169 /* BillingFlowFailedCreateAccountSuccessNoAccountsForPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68075A2223BC9600B5F169 /* BillingFlowFailedCreateAccountSuccessNoAccountsForPublicKeyTestCase.swift */; };
 		3C68075D2223C7B800B5F169 /* BillingFlowFailedCreateAccountSuccessErrorImportingPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68075C2223C7B800B5F169 /* BillingFlowFailedCreateAccountSuccessErrorImportingPublicKeyTestCase.swift */; };
+		3C6807612223DA2400B5F169 /* DelegateBandwidthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807602223DA2400B5F169 /* DelegateBandwidthTestCase.swift */; };
+		3C6807632223DBD800B5F169 /* BandwidthRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807622223DBD800B5F169 /* BandwidthRobot.swift */; };
+		3C6807652223E76E00B5F169 /* UnDelegateBandwidthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807642223E76E00B5F169 /* UnDelegateBandwidthTestCase.swift */; };
 		3C6DF75921A05C7E00ADA892 /* AccountCardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75821A05C7E00ADA892 /* AccountCardTableView.swift */; };
 		3C6DF75B21A05CF600ADA892 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75A21A05CF600ADA892 /* AccountModel.swift */; };
 		3C6DF75D21A05DCA00ADA892 /* AccountCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75C21A05DCA00ADA892 /* AccountCardCell.swift */; };
@@ -1058,9 +1058,6 @@
 		3C1D1AEB22115D6F00EF4560 /* VoteForProducerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteForProducerTestCase.swift; sourceTree = "<group>"; };
 		3C1D1AED22116B9100EF4560 /* ProxyRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyRobot.swift; sourceTree = "<group>"; };
 		3C1D1AEF221172A400EF4560 /* ProxyVoteInformationTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyVoteInformationTestCase.swift; sourceTree = "<group>"; };
-		3C1D1AF222117BCD00EF4560 /* SearchAccountErrorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAccountErrorTestCase.swift; sourceTree = "<group>"; };
-		3C1D1AF422117BDC00EF4560 /* SearchAccountTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAccountTestCase.swift; sourceTree = "<group>"; };
-		3C1D1AF622117BEB00EF4560 /* VerifyReadOnlySearchAccountTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyReadOnlySearchAccountTestCase.swift; sourceTree = "<group>"; };
 		3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerTableView.swift; sourceTree = "<group>"; };
 		3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteProducerCell.xib; sourceTree = "<group>"; };
 		3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteProducerCell.swift; sourceTree = "<group>"; };
@@ -1180,6 +1177,9 @@
 		3C6807582223BB3100B5F169 /* BillingFlowAccountLengthTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingFlowAccountLengthTestCase.swift; sourceTree = "<group>"; };
 		3C68075A2223BC9600B5F169 /* BillingFlowFailedCreateAccountSuccessNoAccountsForPublicKeyTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingFlowFailedCreateAccountSuccessNoAccountsForPublicKeyTestCase.swift; sourceTree = "<group>"; };
 		3C68075C2223C7B800B5F169 /* BillingFlowFailedCreateAccountSuccessErrorImportingPublicKeyTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingFlowFailedCreateAccountSuccessErrorImportingPublicKeyTestCase.swift; sourceTree = "<group>"; };
+		3C6807602223DA2400B5F169 /* DelegateBandwidthTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateBandwidthTestCase.swift; sourceTree = "<group>"; };
+		3C6807622223DBD800B5F169 /* BandwidthRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandwidthRobot.swift; sourceTree = "<group>"; };
+		3C6807642223E76E00B5F169 /* UnDelegateBandwidthTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnDelegateBandwidthTestCase.swift; sourceTree = "<group>"; };
 		3C6DF75821A05C7E00ADA892 /* AccountCardTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardTableView.swift; sourceTree = "<group>"; };
 		3C6DF75A21A05CF600ADA892 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		3C6DF75C21A05DCA00ADA892 /* AccountCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardCell.swift; sourceTree = "<group>"; };
@@ -1625,16 +1625,6 @@
 			path = price;
 			sourceTree = "<group>";
 		};
-		3C1D1AF122117BB900EF4560 /* search */ = {
-			isa = PBXGroup;
-			children = (
-				3C1D1AF222117BCD00EF4560 /* SearchAccountErrorTestCase.swift */,
-				3C1D1AF422117BDC00EF4560 /* SearchAccountTestCase.swift */,
-				3C1D1AF622117BEB00EF4560 /* VerifyReadOnlySearchAccountTestCase.swift */,
-			);
-			path = search;
-			sourceTree = "<group>";
-		};
 		3C1D1AF822117CC600EF4560 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1647,6 +1637,8 @@
 		3C1D1AF922117CCB00EF4560 /* bandwidth */ = {
 			isa = PBXGroup;
 			children = (
+				3C6807602223DA2400B5F169 /* DelegateBandwidthTestCase.swift */,
+				3C6807642223E76E00B5F169 /* UnDelegateBandwidthTestCase.swift */,
 			);
 			path = bandwidth;
 			sourceTree = "<group>";
@@ -2612,6 +2604,7 @@
 				3CCC805F21FB9CC400B715C2 /* BalanceRobot.swift */,
 				3CCC806121FB9CD100B715C2 /* VoteRobot.swift */,
 				3CCC806321FB9CDF00B715C2 /* ResourcesRobot.swift */,
+				3C6807622223DBD800B5F169 /* BandwidthRobot.swift */,
 				3CCC806521FB9CEE00B715C2 /* ActionsRobot.swift */,
 				3CCC806721FB9CFC00B715C2 /* TransferRobot.swift */,
 				3CCC806921FB9D0E00B715C2 /* TransactionRobot.swift */,
@@ -2635,7 +2628,6 @@
 			children = (
 				3C1D1AFB22117CD900EF4560 /* balance */,
 				3C1D1AF822117CC600EF4560 /* resources */,
-				3C1D1AF122117BB900EF4560 /* search */,
 				3CF9031C22081FFC00ABDB58 /* vote */,
 				3CCC807821FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift */,
 				3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */,
@@ -3984,9 +3976,7 @@
 			files = (
 				3CCC805821FB9C8100B715C2 /* ImportKeyRobot.swift in Sources */,
 				3C1D1AF0221172A400EF4560 /* ProxyVoteInformationTestCase.swift in Sources */,
-				3C1D1AF722117BEB00EF4560 /* VerifyReadOnlySearchAccountTestCase.swift in Sources */,
 				3C68074F2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift in Sources */,
-				3C1D1AF322117BCD00EF4560 /* SearchAccountErrorTestCase.swift in Sources */,
 				3CA2978C221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift in Sources */,
 				3CCC804921FB929100B715C2 /* TestCase.swift in Sources */,
 				3C6807552222C25D00B5F169 /* BillingFlowPaymentFailedErrorTestCase.swift in Sources */,
@@ -3998,10 +3988,11 @@
 				3C680743222074E600B5F169 /* BillingFlowLimboEndWithAccountsReceivedTestCase.swift in Sources */,
 				3C6807572223B9E300B5F169 /* BillingFlowAccountNumericStartTestCase.swift in Sources */,
 				3C6807512220B6E600B5F169 /* BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift in Sources */,
+				3C6807652223E76E00B5F169 /* UnDelegateBandwidthTestCase.swift in Sources */,
+				3C6807632223DBD800B5F169 /* BandwidthRobot.swift in Sources */,
 				3CCC804221FB86AE00B715C2 /* SplashRobot.swift in Sources */,
 				3C1D1AEC22115D6F00EF4560 /* VoteForProducerTestCase.swift in Sources */,
 				3C6807532220B91B00B5F169 /* BillingFlowCannotMakePaymentErrorTestCase.swift in Sources */,
-				3C1D1AF522117BDC00EF4560 /* SearchAccountTestCase.swift in Sources */,
 				5459E12781E4B0E892AC7BD0 /* EarlGrey.swift in Sources */,
 				3CCC807921FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift in Sources */,
 				3CCC805E21FB9CB300B715C2 /* AccountRobot.swift in Sources */,
@@ -4022,6 +4013,7 @@
 				3C108D742204F6860011F07B /* GetAccountPriceErrorTestCase.swift in Sources */,
 				3CF90325220841C500ABDB58 /* NotVotedTestCase.swift in Sources */,
 				3CF90327220A374000ABDB58 /* BlockProducerInformationVoteTestCase.swift in Sources */,
+				3C6807612223DA2400B5F169 /* DelegateBandwidthTestCase.swift in Sources */,
 				3C1D1AEA22115BEF00EF4560 /* VoteForProxyTestCase.swift in Sources */,
 				3CCC805021FB9BD700B715C2 /* ImportKeyOrchestra.swift in Sources */,
 				3CCC805421FB9C4A00B715C2 /* Robot.swift in Sources */,
