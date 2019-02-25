@@ -15,6 +15,7 @@ class ProxyVoteTestCase : TestCase {
         
         voteRobot
             .verifyProxyVoteScreen()
+
     }
     
     override func configure(stubApi: StubApi) -> StubApi {

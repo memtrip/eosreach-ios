@@ -43,6 +43,16 @@ class DelegateBandwidthTestCase : TestCase {
         }
         
         resourcesRobot.verifyResourcesScreen()
+        
+        // confirm that the side navigation functions correctly, issues
+        // with the backstack can break this functionality!
+        accountRobot.begin { it in
+            it.verifyAccountScreen()
+            it.selectMenu()
+            it.selectMenuImportKey()
+        }
+        
+        importKeyRobot.verifyImportKeyScreen()
     }
     
     override func configure(stubApi: StubApi) -> StubApi {

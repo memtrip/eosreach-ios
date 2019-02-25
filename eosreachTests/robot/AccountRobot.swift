@@ -63,4 +63,22 @@ class AccountRobot : Robot {
             .matchesNext(isDisplayed())
             .perform(click())
     }
+    
+    func selectMenu() {
+        onView(withId("account_menu_item"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
+    func selectMenuImportKey() {
+        onView(withId("account_navigation_import_key_button"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
+    func selectMenuSettings() {
+        onView(withId("account_navigation_settings_button"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
 }

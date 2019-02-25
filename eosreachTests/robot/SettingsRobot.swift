@@ -27,4 +27,10 @@ class SettingsRobot : Robot {
         onView(withId("search_memtrip_button"))
             .matches(isDisplayed())
     }
+    
+    func selectClearDataAndLogout() {
+        onView(withId("search_clear_data_and_logout_button"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
 }

@@ -39,4 +39,10 @@ class CommonRobot : Robot {
             .matchesNext(isDisplayed())
             .perform(click())
     }
+    
+    func selectDialogOKButton() {
+        onView(withText("OK"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
 }
