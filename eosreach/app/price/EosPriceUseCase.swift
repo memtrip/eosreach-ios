@@ -40,6 +40,6 @@ class EosPriceUseCase {
     }
     
     private func expired(lastUpdated: Double) -> Bool {
-        return lastUpdated == 0 || lastUpdated > (Date().timeIntervalSince1970 - TEN_MINUTES)
+        return lastUpdated == 0 || (Date().timeIntervalSince1970 - TEN_MINUTES) > lastUpdated
     }
 }
