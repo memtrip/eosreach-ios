@@ -9,6 +9,8 @@ class ChainApiModule {
                 rootUrl: "http://offline.com/",
                 urlSession: StubUrlSession.shared.urlSession,
                 useLogger: true)
+        case .dev:
+            return ChainApiFactory.create(rootUrl: R.string.apiStrings.dev_endpoint())
         case .prod:
             return ChainApiFactory.create(rootUrl: EosEndpoint().get())
         }

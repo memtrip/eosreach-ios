@@ -123,6 +123,8 @@ class EosKeyManagerFactory {
         switch TargetSwitch.api() {
         case .stub:
             return EosKeyManagerStub()
+        case .dev:
+            return EosKeyManagerStub()
         case .prod:
             return EosKeyManagerImpl()
         }

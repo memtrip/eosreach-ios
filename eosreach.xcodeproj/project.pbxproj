@@ -544,7 +544,6 @@
 		3C0EC82A219350DE00562A1B /* ImportKeyViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC825219350DE00562A1B /* ImportKeyViewState.swift */; };
 		3C108D712204F3F40011F07B /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C108D702204F3F40011F07B /* Rx.swift */; };
 		3C108D722204F4160011F07B /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C108D702204F3F40011F07B /* Rx.swift */; };
-		3C108D742204F6860011F07B /* GetAccountPriceErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C108D732204F6860011F07B /* GetAccountPriceErrorTestCase.swift */; };
 		3C14FA3F21A0A1C600B8255F /* AccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA3E21A0A1C600B8255F /* AccountUseCase.swift */; };
 		3C14FA4221A0A2A900B8255F /* EosPriceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA4121A0A2A900B8255F /* EosPriceUseCase.swift */; };
 		3C14FA4421A0A31A00B8255F /* EosPriceRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA4321A0A31A00B8255F /* EosPriceRequestImpl.swift */; };
@@ -557,10 +556,7 @@
 		3C1A973121A4755D00C30A75 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A973021A4755D00C30A75 /* BalanceModel.swift */; };
 		3C1A973521A4844200C30A75 /* AccountNavigationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A973421A4844200C30A75 /* AccountNavigationUseCase.swift */; };
 		3C1D1AE822115A9600EF4560 /* QueuedStubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AE622115A7F00EF4560 /* QueuedStubResponse.swift */; };
-		3C1D1AEA22115BEF00EF4560 /* VoteForProxyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AE4221152C600EF4560 /* VoteForProxyTestCase.swift */; };
-		3C1D1AEC22115D6F00EF4560 /* VoteForProducerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AEB22115D6F00EF4560 /* VoteForProducerTestCase.swift */; };
 		3C1D1AEE22116B9100EF4560 /* ProxyRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AED22116B9100EF4560 /* ProxyRobot.swift */; };
-		3C1D1AF0221172A400EF4560 /* ProxyVoteInformationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AEF221172A400EF4560 /* ProxyVoteInformationTestCase.swift */; };
 		3C1F1F7121A306680075BD71 /* VoteProducerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */; };
 		3C1F1F7521A306800075BD71 /* VoteProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */; };
 		3C1F1F7721A306A10075BD71 /* VoteProducerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */; };
@@ -604,11 +600,552 @@
 		3C4C5E7B21AEFBA700C219C4 /* TransactionHistoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7A21AEFBA700C219C4 /* TransactionHistoryTableView.swift */; };
 		3C4C5E7D21AEFBB300C219C4 /* TransactionHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7C21AEFBB300C219C4 /* TransactionHistoryCell.swift */; };
 		3C4C5E7F21AEFC9300C219C4 /* TransactionHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7E21AEFC9300C219C4 /* TransactionHistoryCell.xib */; };
-		3C517EB7223C388D00FFA4C1 /* BuyRamTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C517EB6223C388D00FFA4C1 /* BuyRamTestCase.swift */; };
 		3C517EB9223C38F800FFA4C1 /* RamRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C517EB8223C38F800FFA4C1 /* RamRobot.swift */; };
 		3C517EBC223C3C6A00FFA4C1 /* request_get_table_rows_rammarket.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C517EBA223C3BD700FFA4C1 /* request_get_table_rows_rammarket.json */; };
 		3C517EBF223C3DC500FFA4C1 /* happy_path_get_table_rows_rammarket.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C517EBD223C3D8800FFA4C1 /* happy_path_get_table_rows_rammarket.json */; };
-		3C517EC1223C470600FFA4C1 /* SellRamTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C517EC0223C470600FFA4C1 /* SellRamTestCase.swift */; };
+		3C517EC6223C52A100FFA4C1 /* DeleteTransactionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD94219F3A8B0026649F /* DeleteTransactionLog.swift */; };
+		3C517EC7223C52A100FFA4C1 /* RegisteredBlockProducersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE62194A17000E72DD1 /* RegisteredBlockProducersViewModel.swift */; };
+		3C517EC8223C52A100FFA4C1 /* SegueBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D9D2192D5B000FC1A0D /* SegueBundle.swift */; };
+		3C517EC9223C52A100FFA4C1 /* ViewProxyVoterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6EE21A56AAE0050BA57 /* ViewProxyVoterViewController.swift */; };
+		3C517ECA223C52A100FFA4C1 /* RamPriceRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3BA219DBC210002A25F /* RamPriceRequestImpl.swift */; };
+		3C517ECB223C52A100FFA4C1 /* EosKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C4E2194572A003663EF /* EosKeyManager.swift */; };
+		3C517ECC223C52A100FFA4C1 /* AllocatedBandwidthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD23821A6C22900ACFA70 /* AllocatedBandwidthViewModel.swift */; };
+		3C517ECD223C52A100FFA4C1 /* TargetSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DBC2621F5028C0020CA1F /* TargetSwitch.swift */; };
+		3C517ECE223C52A100FFA4C1 /* EosPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB8F219B36CC00589936 /* EosPrice.swift */; };
+		3C517ECF223C52A100FFA4C1 /* PendingAccountNameInLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807462220A00100B5F169 /* PendingAccountNameInLimbo.swift */; };
+		3C517ED0223C52A100FFA4C1 /* CastProducersVoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E70821A5A4170050BA57 /* CastProducersVoteResult.swift */; };
+		3C517ED1223C52A100FFA4C1 /* CastTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E71421A5AA280050BA57 /* CastTab.swift */; };
+		3C517ED2223C52A100FFA4C1 /* SellRamViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700C221A75138008F63D2 /* SellRamViewState.swift */; };
+		3C517ED3223C52A100FFA4C1 /* GetAccountByName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD81219F37B10026649F /* GetAccountByName.swift */; };
+		3C517ED4223C52A100FFA4C1 /* MxIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D912192D4F400FC1A0D /* MxIntent.swift */; };
+		3C517ED5223C52A100FFA4C1 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF77421A0840C00ADA892 /* AccountView.swift */; };
+		3C517ED6223C52A100FFA4C1 /* ManageRamBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700E021A75245008F63D2 /* ManageRamBundle.swift */; };
+		3C517ED7223C52A100FFA4C1 /* GetBalances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD8F219F38160026649F /* GetBalances.swift */; };
+		3C517ED8223C52A100FFA4C1 /* RegisteredBlockProducersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D4219DF1B00002A25F /* RegisteredBlockProducersCell.swift */; };
+		3C517ED9223C52A100FFA4C1 /* StoreKitRequestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979B22175450001DC2D5 /* StoreKitRequestStub.swift */; };
+		3C517EDA223C52A100FFA4C1 /* CastProducersVoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72A21A5CFCA0050BA57 /* CastProducersVoteTableView.swift */; };
+		3C517EDB223C52A100FFA4C1 /* ViewProxyVoterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6EC21A56AAE0050BA57 /* ViewProxyVoterViewState.swift */; };
+		3C517EDC223C52A100FFA4C1 /* BalanceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBA6219B51A700589936 /* BalanceFormatter.swift */; };
+		3C517EDD223C52A100FFA4C1 /* ImportKeyViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC825219350DE00562A1B /* ImportKeyViewState.swift */; };
+		3C517EDE223C52A100FFA4C1 /* EosEndpointResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3321938C71003663EF /* EosEndpointResult.swift */; };
+		3C517EDF223C52A100FFA4C1 /* EosEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3F21944305003663EF /* EosEndpoint.swift */; };
+		3C517EE0223C52A100FFA4C1 /* AccountNavigationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A973421A4844200C30A75 /* AccountNavigationUseCase.swift */; };
+		3C517EE1223C52A100FFA4C1 /* RegisteredBlockProducersDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFF21AADDAF00D81458 /* RegisteredBlockProducersDelegate.swift */; };
+		3C517EE2223C52A100FFA4C1 /* TransferConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71221A85B5000C87EC9 /* TransferConfirmViewController.swift */; };
+		3C517EE3223C52A100FFA4C1 /* UndelegateBandwidthViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24C21A6C3B300ACFA70 /* UndelegateBandwidthViewState.swift */; };
+		3C517EE4223C52A100FFA4C1 /* ConfirmBandwidthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008C21A6FC78008F63D2 /* ConfirmBandwidthResult.swift */; };
+		3C517EE5223C52A100FFA4C1 /* ManageRamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700B021A74FE8008F63D2 /* ManageRamViewModel.swift */; };
+		3C517EE6223C52A100FFA4C1 /* KeyPairTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86AB21ABFC8100F48302 /* KeyPairTableView.swift */; };
+		3C517EE7223C52A100FFA4C1 /* RsaEncryptionVerified.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C49219444DB003663EF /* RsaEncryptionVerified.swift */; };
+		3C517EE8223C52A100FFA4C1 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E621EFDCE100A0720B /* Stub.swift */; };
+		3C517EE9223C52A100FFA4C1 /* AccountNavigationViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF79721A0934600ADA892 /* AccountNavigationViewState.swift */; };
+		3C517EEA223C52A100FFA4C1 /* CastProxyVoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E70021A5A4110050BA57 /* CastProxyVoteViewModel.swift */; };
+		3C517EEB223C52A100FFA4C1 /* VoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF78221A08D8700ADA892 /* VoteResult.swift */; };
+		3C517EEC223C52A100FFA4C1 /* SellRamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700C621A75138008F63D2 /* SellRamViewModel.swift */; };
+		3C517EED223C52A100FFA4C1 /* ExtraTapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86B121AC278200F48302 /* ExtraTapDelegate.swift */; };
+		3C517EEE223C52A100FFA4C1 /* EosRefundRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB97219B3A1000589936 /* EosRefundRequest.swift */; };
+		3C517EEF223C52A100FFA4C1 /* StoreKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C665C21A97C1800612CD8 /* StoreKitHandler.swift */; };
+		3C517EF0223C52A100FFA4C1 /* ImportKeyIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC821219350DE00562A1B /* ImportKeyIntent.swift */; };
+		3C517EF1223C52A100FFA4C1 /* ViewBlockProducerBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33CE21A53E7E00716AA2 /* ViewBlockProducerBundle.swift */; };
+		3C517EF2223C52A100FFA4C1 /* ProxyVoterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3B0219DB52F0002A25F /* ProxyVoterRequest.swift */; };
+		3C517EF3223C52A100FFA4C1 /* BalanceViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF77721A08B5100ADA892 /* BalanceViewState.swift */; };
+		3C517EF4223C52A100FFA4C1 /* SplashViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC81921933D4F00562A1B /* SplashViewState.swift */; };
+		3C517EF5223C52A100FFA4C1 /* AllocatedBandwidthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD23721A6C22900ACFA70 /* AllocatedBandwidthResult.swift */; };
+		3C517EF6223C52A100FFA4C1 /* ProxyVoterListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72421A5C00E0050BA57 /* ProxyVoterListCell.swift */; };
+		3C517EF7223C52A100FFA4C1 /* GetAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD84219F37B10026649F /* GetAccounts.swift */; };
+		3C517EF8223C52A100FFA4C1 /* AllocatedBandwidthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700AA21A7333C008F63D2 /* AllocatedBandwidthDelegate.swift */; };
+		3C517EF9223C52A100FFA4C1 /* AccountsForPublicKeyRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBBC219B5E2C00589936 /* AccountsForPublicKeyRequestImpl.swift */; };
+		3C517EFA223C52A100FFA4C1 /* ActionsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8D21A359080075BD71 /* ActionsIntent.swift */; };
+		3C517EFB223C52A100FFA4C1 /* RegisteredBlockProducersIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE42194A17000E72DD1 /* RegisteredBlockProducersIntent.swift */; };
+		3C517EFC223C52A100FFA4C1 /* TransactionReceiptBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07009C21A72264008F63D2 /* TransactionReceiptBundle.swift */; };
+		3C517EFD223C52A100FFA4C1 /* EosAccountRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB9B219B3AAE00589936 /* EosAccountRequestImpl.swift */; };
+		3C517EFE223C52A100FFA4C1 /* UnusedAccountInLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99C21AC88D9001398F4 /* UnusedAccountInLimbo.swift */; };
+		3C517EFF223C52A100FFA4C1 /* AccountListSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3D2194422D003663EF /* AccountListSelection.swift */; };
+		3C517F00223C52A100FFA4C1 /* CastProxyVoteIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6FF21A5A4110050BA57 /* CastProxyVoteIntent.swift */; };
+		3C517F01223C52A100FFA4C1 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B421A507E700716AA2 /* CreateAccountViewController.swift */; };
+		3C517F02223C52A100FFA4C1 /* EosPriceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA4521A0A3AD00B8255F /* EosPriceApi.swift */; };
+		3C517F03223C52A100FFA4C1 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71121A85B5000C87EC9 /* TransferViewController.swift */; };
+		3C517F04223C52A100FFA4C1 /* CutomTokensRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A0219DAF050002A25F /* CutomTokensRequestImpl.swift */; };
+		3C517F05223C52A100FFA4C1 /* ViewActionViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70221A8296B00C87EC9 /* ViewActionViewState.swift */; };
+		3C517F06223C52A100FFA4C1 /* TransactionHistoryIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E6C21AEF52A00C219C4 /* TransactionHistoryIntent.swift */; };
+		3C517F07223C52A100FFA4C1 /* ProxyVoterRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3B2219DB6310002A25F /* ProxyVoterRequestImpl.swift */; };
+		3C517F08223C52A100FFA4C1 /* ViewPrivateKeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A869D21ABF05B00F48302 /* ViewPrivateKeysViewController.swift */; };
+		3C517F09223C52A100FFA4C1 /* TransactionHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7021AEF52B00C219C4 /* TransactionHistoryViewController.swift */; };
+		3C517F0A223C52A100FFA4C1 /* AccountViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF76521A082AC00ADA892 /* AccountViewState.swift */; };
+		3C517F0B223C52A100FFA4C1 /* BalanceIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF77621A08B5100ADA892 /* BalanceIntent.swift */; };
+		3C517F0C223C52A100FFA4C1 /* AccountActionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBC3219C21D600589936 /* AccountActionRequest.swift */; };
+		3C517F0D223C52A100FFA4C1 /* MxViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D8F2192D4CE00FC1A0D /* MxViewState.swift */; };
+		3C517F0E223C52A100FFA4C1 /* CreateAccountResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B821A507E700716AA2 /* CreateAccountResult.swift */; };
+		3C517F0F223C52A100FFA4C1 /* MxResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D932192D50700FC1A0D /* MxResult.swift */; };
+		3C517F10223C52A100FFA4C1 /* CastProducersVoteIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E70C21A5A4180050BA57 /* CastProducersVoteIntent.swift */; };
+		3C517F11223C52A100FFA4C1 /* QueuedStubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AE622115A7F00EF4560 /* QueuedStubResponse.swift */; };
+		3C517F12223C52A100FFA4C1 /* UnusedTransactionIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99821AC69BE001398F4 /* UnusedTransactionIdentifier.swift */; };
+		3C517F13223C52A100FFA4C1 /* EosPriceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C47219444A2003663EF /* EosPriceValue.swift */; };
+		3C517F14223C52A100FFA4C1 /* ProxyVoterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E71721A5BE970050BA57 /* ProxyVoterListViewModel.swift */; };
+		3C517F15223C52A100FFA4C1 /* GetTransactionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD98219F3AEB0026649F /* GetTransactionHistory.swift */; };
+		3C517F16223C52A100FFA4C1 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD34762192F7DB000F304A /* EntryViewController.swift */; };
+		3C517F17223C52A100FFA4C1 /* InsertBalances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD91219F38440026649F /* InsertBalances.swift */; };
+		3C517F18223C52A100FFA4C1 /* ProxyVoterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E71921A5BE980050BA57 /* ProxyVoterListViewController.swift */; };
+		3C517F19223C52A100FFA4C1 /* TransactionReceiptIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A121A72643008F63D2 /* TransactionReceiptIntent.swift */; };
+		3C517F1A223C52A100FFA4C1 /* TransferConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70F21A85B5000C87EC9 /* TransferConfirmViewModel.swift */; };
+		3C517F1B223C52A100FFA4C1 /* AccountsForPublicKeyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBBA219B5DC900589936 /* AccountsForPublicKeyRequest.swift */; };
+		3C517F1C223C52A100FFA4C1 /* TransactionHistoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E6F21AEF52A00C219C4 /* TransactionHistoryResult.swift */; };
+		3C517F1D223C52A100FFA4C1 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB85219B363C00589936 /* Balance.swift */; };
+		3C517F1E223C52A100FFA4C1 /* VoteViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF78421A08D8700ADA892 /* VoteViewState.swift */; };
+		3C517F1F223C52A100FFA4C1 /* VoteIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF78021A08D8700ADA892 /* VoteIntent.swift */; };
+		3C517F20223C52A100FFA4C1 /* ConfirmBandwidthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008821A6FC78008F63D2 /* ConfirmBandwidthViewController.swift */; };
+		3C517F21223C52A100FFA4C1 /* UndelegateBandwidthIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24E21A6C3B300ACFA70 /* UndelegateBandwidthIntent.swift */; };
+		3C517F22223C52A100FFA4C1 /* CreateAccountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B621A507E700716AA2 /* CreateAccountIntent.swift */; };
+		3C517F23223C52A100FFA4C1 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807F21FEFAE600B715C2 /* LinkedList.swift */; };
+		3C517F24223C52A100FFA4C1 /* ViewActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70321A8296C00C87EC9 /* ViewActionViewController.swift */; };
+		3C517F25223C52A100FFA4C1 /* DelegateBandwidthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24021A6C2FA00ACFA70 /* DelegateBandwidthResult.swift */; };
+		3C517F26223C52A100FFA4C1 /* AccountCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75C21A05DCA00ADA892 /* AccountCardCell.swift */; };
+		3C517F27223C52A100FFA4C1 /* DelegateBandwidthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24421A6C2FA00ACFA70 /* DelegateBandwidthViewController.swift */; };
+		3C517F28223C52A100FFA4C1 /* ActionsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8E21A359080075BD71 /* ActionsResult.swift */; };
+		3C517F29223C52A100FFA4C1 /* AccountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD82219F37B10026649F /* AccountEntity.swift */; };
+		3C517F2A223C52A100FFA4C1 /* DropDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EF721AAA84300D81458 /* DropDb.swift */; };
+		3C517F2B223C52A100FFA4C1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD42194A0D400E72DD1 /* SearchViewController.swift */; };
+		3C517F2C223C52A100FFA4C1 /* ResourcesIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF78D21A090F300ADA892 /* ResourcesIntent.swift */; };
+		3C517F2D223C52A100FFA4C1 /* ViewProxyVoterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6EF21A56AAE0050BA57 /* ViewProxyVoterResult.swift */; };
+		3C517F2E223C52A100FFA4C1 /* ViewBlockProducerIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C621A52A1900716AA2 /* ViewBlockProducerIntent.swift */; };
+		3C517F2F223C52A100FFA4C1 /* CastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6F821A5A0D00050BA57 /* CastViewController.swift */; };
+		3C517F30223C52A100FFA4C1 /* ManageRamIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700B221A74FE8008F63D2 /* ManageRamIntent.swift */; };
+		3C517F31223C52A100FFA4C1 /* RegisteredBlockProducerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C2219DC4390002A25F /* RegisteredBlockProducerRequest.swift */; };
+		3C517F32223C52A100FFA4C1 /* TransferResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71321A85B5100C87EC9 /* TransferResult.swift */; };
+		3C517F33223C52A100FFA4C1 /* SettingsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB403A021B1B98D00407F4C /* SettingsDelegate.swift */; };
+		3C517F34223C52A100FFA4C1 /* AccountBalanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB8B219B367B00589936 /* AccountBalanceRequest.swift */; };
+		3C517F35223C52A100FFA4C1 /* ReachActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC81321933B6F00562A1B /* ReachActivityIndicator.swift */; };
+		3C517F36223C52A100FFA4C1 /* SellRamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700C421A75138008F63D2 /* SellRamViewController.swift */; };
+		3C517F37223C52A100FFA4C1 /* TokenParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A4219DAF110002A25F /* TokenParent.swift */; };
+		3C517F38223C52A100FFA4C1 /* StubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E221EFDC5200A0720B /* StubApi.swift */; };
+		3C517F39223C52A100FFA4C1 /* AccountViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */; };
+		3C517F3A223C52A100FFA4C1 /* ReachSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008621A6FA49008F63D2 /* ReachSwitch.swift */; };
+		3C517F3B223C52A100FFA4C1 /* ReceiptDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C9A021AC9BDC001398F4 /* ReceiptDataRequest.swift */; };
+		3C517F3C223C52A100FFA4C1 /* types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBC7219C29B000589936 /* types.swift */; };
+		3C517F3D223C52A100FFA4C1 /* TransactionReceiptResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A321A72643008F63D2 /* TransactionReceiptResult.swift */; };
+		3C517F3E223C52A100FFA4C1 /* BasicStubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2EB21EFDD7D00A0720B /* BasicStubResponse.swift */; };
+		3C517F3F223C52A100FFA4C1 /* RegisteredBlockProducersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DDE2194A17000E72DD1 /* RegisteredBlockProducersResult.swift */; };
+		3C517F40223C52A100FFA4C1 /* date_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592F95219D5C5200D7C9B9 /* date_types.swift */; };
+		3C517F41223C52A100FFA4C1 /* TransferBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D72421A869D600C87EC9 /* TransferBundle.swift */; };
+		3C517F42223C52A100FFA4C1 /* BandwidthFormBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008421A6EDF2008F63D2 /* BandwidthFormBundle.swift */; };
+		3C517F43223C52A100FFA4C1 /* EntryViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6DC52192D8F500FC1A0D /* EntryViewState.swift */; };
+		3C517F44223C52A100FFA4C1 /* ReachTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DFB2194A58700E72DD1 /* ReachTabBar.swift */; };
+		3C517F45223C52A100FFA4C1 /* ImportKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC822219350DE00562A1B /* ImportKeyViewController.swift */; };
+		3C517F46223C52A100FFA4C1 /* AccountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF76721A082AC00ADA892 /* AccountIntent.swift */; };
+		3C517F47223C52A100FFA4C1 /* ReachButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC80B2192FAF900562A1B /* ReachButton.swift */; };
+		3C517F48223C52A100FFA4C1 /* SimpleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D0219DED830002A25F /* SimpleTableView.swift */; };
+		3C517F49223C52A100FFA4C1 /* EosPriceLastUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C452194441E003663EF /* EosPriceLastUpdated.swift */; };
+		3C517F4A223C52A100FFA4C1 /* ActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F9721A35A8F0075BD71 /* ActionsCell.swift */; };
+		3C517F4B223C52A100FFA4C1 /* RegisteredBlockProducerRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C4219DC4420002A25F /* RegisteredBlockProducerRequestImpl.swift */; };
+		3C517F4C223C52A100FFA4C1 /* ResourcesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF78C21A090F300ADA892 /* ResourcesViewModel.swift */; };
+		3C517F4D223C52A100FFA4C1 /* ProxyVoterListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E71B21A5BE980050BA57 /* ProxyVoterListViewState.swift */; };
+		3C517F4E223C52A100FFA4C1 /* AccountDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C919C8E21A5FA15006B2FB2 /* AccountDelegate.swift */; };
+		3C517F4F223C52A100FFA4C1 /* ViewActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70121A8296B00C87EC9 /* ViewActionViewModel.swift */; };
+		3C517F50223C52A100FFA4C1 /* AccountActionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBC1219C21CD00589936 /* AccountActionList.swift */; };
+		3C517F51223C52A100FFA4C1 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD34742192F77C000F304A /* EntryViewModel.swift */; };
+		3C517F52223C52A100FFA4C1 /* UnusedPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99621AC6946001398F4 /* UnusedPublicKey.swift */; };
+		3C517F53223C52A100FFA4C1 /* SearchIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD52194A0D400E72DD1 /* SearchIntent.swift */; };
+		3C517F54223C52A100FFA4C1 /* VoteReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FC9219D6B0700D7C9B9 /* VoteReceipt.swift */; };
+		3C517F55223C52A100FFA4C1 /* ManageBandwidthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD23221A6C01300ACFA70 /* ManageBandwidthViewController.swift */; };
+		3C517F56223C52A100FFA4C1 /* ChainApiModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3BC219DC06C0002A25F /* ChainApiModule.swift */; };
+		3C517F57223C52A100FFA4C1 /* SellRamIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700C321A75138008F63D2 /* SellRamIntent.swift */; };
+		3C517F58223C52A100FFA4C1 /* SearchViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD32194A0D400E72DD1 /* SearchViewState.swift */; };
+		3C517F59223C52A100FFA4C1 /* AllocatedBandwidthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD23A21A6C22900ACFA70 /* AllocatedBandwidthViewController.swift */; };
+		3C517F5A223C52A100FFA4C1 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF77921A08B5100ADA892 /* BalanceViewModel.swift */; };
+		3C517F5B223C52A100FFA4C1 /* ManageBandwidthBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD25421A6C72700ACFA70 /* ManageBandwidthBundle.swift */; };
+		3C517F5C223C52A100FFA4C1 /* EosEndpointViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3121938C71003663EF /* EosEndpointViewState.swift */; };
+		3C517F5D223C52A100FFA4C1 /* EosPriceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA4121A0A2A900B8255F /* EosPriceUseCase.swift */; };
+		3C517F5E223C52A100FFA4C1 /* ProxyVoterListIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E71A21A5BE980050BA57 /* ProxyVoterListIntent.swift */; };
+		3C517F5F223C52A100FFA4C1 /* InsertTransactionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD9A219F3B230026649F /* InsertTransactionLog.swift */; };
+		3C517F60223C52A100FFA4C1 /* DeleteBalances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD8D219F37E60026649F /* DeleteBalances.swift */; };
+		3C517F61223C52A100FFA4C1 /* ViewPrivateKeysIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A869F21ABF05B00F48302 /* ViewPrivateKeysIntent.swift */; };
+		3C517F62223C52A100FFA4C1 /* EntryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6DC32192D86F00FC1A0D /* EntryResult.swift */; };
+		3C517F63223C52A100FFA4C1 /* AccountNavigationSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C021A513DF00716AA2 /* AccountNavigationSelected.swift */; };
+		3C517F64223C52A100FFA4C1 /* ResourcesViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7A21A31CCF0075BD71 /* ResourcesViewLayout.swift */; };
+		3C517F65223C52A100FFA4C1 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A2219DAF0B0002A25F /* Token.swift */; };
+		3C517F66223C52A100FFA4C1 /* ResourcesViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF78B21A090F300ADA892 /* ResourcesViewState.swift */; };
+		3C517F67223C52A100FFA4C1 /* ActiveBlockProducersViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DDF2194A17000E72DD1 /* ActiveBlockProducersViewState.swift */; };
+		3C517F68223C52A100FFA4C1 /* TransactionHistoryViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E6E21AEF52A00C219C4 /* TransactionHistoryViewState.swift */; };
+		3C517F69223C52A100FFA4C1 /* AllocatedBandwidthViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD23621A6C22900ACFA70 /* AllocatedBandwidthViewState.swift */; };
+		3C517F6A223C52A100FFA4C1 /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8B21A359080075BD71 /* ActionsViewController.swift */; };
+		3C517F6B223C52A100FFA4C1 /* ActiveBlockProducersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DDD2194A17000E72DD1 /* ActiveBlockProducersViewModel.swift */; };
+		3C517F6C223C52A100FFA4C1 /* BandwidthRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592F99219D60B400D7C9B9 /* BandwidthRequestImpl.swift */; };
+		3C517F6D223C52A100FFA4C1 /* ActiveBlockProducersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE02194A17000E72DD1 /* ActiveBlockProducersViewController.swift */; };
+		3C517F6E223C52A100FFA4C1 /* AccountNavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF79521A0934600ADA892 /* AccountNavigationViewModel.swift */; };
+		3C517F6F223C52A100FFA4C1 /* BuyRamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700B921A750DD008F63D2 /* BuyRamViewModel.swift */; };
+		3C517F70223C52A100FFA4C1 /* ActionsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F9B21A36FCA0075BD71 /* ActionsBundle.swift */; };
+		3C517F71223C52A100FFA4C1 /* BuyRamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700BC21A750DE008F63D2 /* BuyRamViewController.swift */; };
+		3C517F72223C52A100FFA4C1 /* UnusedPublicKeyNoAccountsSynced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99E21AC9172001398F4 /* UnusedPublicKeyNoAccountsSynced.swift */; };
+		3C517F73223C52A100FFA4C1 /* CastBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E71221A5A9BE0050BA57 /* CastBundle.swift */; };
+		3C517F74223C52A100FFA4C1 /* TransactionReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07009821A7220A008F63D2 /* TransactionReceiptViewController.swift */; };
+		3C517F75223C52A100FFA4C1 /* ViewActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70021A8296B00C87EC9 /* ViewActionResult.swift */; };
+		3C517F76223C52A100FFA4C1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D992192D56000FC1A0D /* Logger.swift */; };
+		3C517F77223C52A100FFA4C1 /* RamRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3B6219DB8890002A25F /* RamRequestImpl.swift */; };
+		3C517F78223C52A100FFA4C1 /* SettingsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FC52193612A0017BEF9 /* SettingsIntent.swift */; };
+		3C517F79223C52A100FFA4C1 /* InsertAccountsForPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD83219F37B10026649F /* InsertAccountsForPublicKey.swift */; };
+		3C517F7A223C52A100FFA4C1 /* TransferConfirmResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70E21A85B5000C87EC9 /* TransferConfirmResult.swift */; };
+		3C517F7B223C52A100FFA4C1 /* DelegateBandwidthViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24321A6C2FA00ACFA70 /* DelegateBandwidthViewState.swift */; };
+		3C517F7C223C52A100FFA4C1 /* TransferIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71521A85B5100C87EC9 /* TransferIntent.swift */; };
+		3C517F7D223C52A100FFA4C1 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FC22193612A0017BEF9 /* SettingsViewModel.swift */; };
+		3C517F7E223C52A100FFA4C1 /* BalanceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4406A821A1ED9B003BBFA9 /* BalanceTableView.swift */; };
+		3C517F7F223C52A100FFA4C1 /* MxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D952192D52500FC1A0D /* MxViewModel.swift */; };
+		3C517F80223C52A100FFA4C1 /* EosCreateAccountRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3AA219DB2BA0002A25F /* EosCreateAccountRequestImpl.swift */; };
+		3C517F81223C52A100FFA4C1 /* PurgeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C4B2194469B003663EF /* PurgeUserDefaults.swift */; };
+		3C517F82223C52A100FFA4C1 /* StubSkPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA297A022176154001DC2D5 /* StubSkPrice.swift */; };
+		3C517F83223C52A100FFA4C1 /* AccountBalanceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB87219B365C00589936 /* AccountBalanceList.swift */; };
+		3C517F84223C52A100FFA4C1 /* CastProxyVoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E70221A5A4110050BA57 /* CastProxyVoteViewController.swift */; };
+		3C517F85223C52A100FFA4C1 /* ResourcesRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7821A31CBB0075BD71 /* ResourcesRenderer.swift */; };
+		3C517F86223C52A100FFA4C1 /* ConfirmRamResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700D621A751BA008F63D2 /* ConfirmRamResult.swift */; };
+		3C517F87223C52A100FFA4C1 /* TransactionHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7C21AEFBB300C219C4 /* TransactionHistoryCell.swift */; };
+		3C517F88223C52A100FFA4C1 /* ImportKeyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC824219350DE00562A1B /* ImportKeyResult.swift */; };
+		3C517F89223C52A100FFA4C1 /* AccountRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2321A2B11F0050910D /* AccountRenderer.swift */; };
+		3C517F8A223C52A100FFA4C1 /* EosEndpointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3421938C71003663EF /* EosEndpointViewModel.swift */; };
+		3C517F8B223C52A100FFA4C1 /* ReachBorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04B621A8881700F5F7A7 /* ReachBorderLabel.swift */; };
+		3C517F8C223C52A100FFA4C1 /* AccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA3E21A0A1C600B8255F /* AccountUseCase.swift */; };
+		3C517F8D223C52A100FFA4C1 /* ReceiptDataRequestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979022174670001DC2D5 /* ReceiptDataRequestStub.swift */; };
+		3C517F8E223C52A100FFA4C1 /* ActiveBlockProducersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersResult.swift */; };
+		3C517F8F223C52A100FFA4C1 /* ViewProxyVoterIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6ED21A56AAE0050BA57 /* ViewProxyVoterIntent.swift */; };
+		3C517F90223C52A100FFA4C1 /* ManageRamViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700AF21A74FE8008F63D2 /* ManageRamViewState.swift */; };
+		3C517F91223C52A100FFA4C1 /* ConfirmRamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700D721A751BA008F63D2 /* ConfirmRamViewModel.swift */; };
+		3C517F92223C52A100FFA4C1 /* ViewPrivateKeysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A869E21ABF05B00F48302 /* ViewPrivateKeysViewModel.swift */; };
+		3C517F93223C52A100FFA4C1 /* ResourceGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */; };
+		3C517F94223C52A100FFA4C1 /* ReachTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0E012194B73200E72DD1 /* ReachTabsController.swift */; };
+		3C517F95223C52A100FFA4C1 /* DelegatedBandwidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592F9B219D60BE00D7C9B9 /* DelegatedBandwidth.swift */; };
+		3C517F96223C52A100FFA4C1 /* VoteRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FCD219D6B8B00D7C9B9 /* VoteRequestImpl.swift */; };
+		3C517F97223C52A100FFA4C1 /* TransferViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70C21A85B5000C87EC9 /* TransferViewState.swift */; };
+		3C517F98223C52A100FFA4C1 /* EncryptedKeyPairData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C50219459D3003663EF /* EncryptedKeyPairData.swift */; };
+		3C517F99223C52A100FFA4C1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8112193086800562A1B /* R.generated.swift */; };
+		3C517F9A223C52A100FFA4C1 /* ConfirmBandwidthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008B21A6FC78008F63D2 /* ConfirmBandwidthViewModel.swift */; };
+		3C517F9B223C52A100FFA4C1 /* StubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E821EFDCF100A0720B /* StubRequest.swift */; };
+		3C517F9C223C52A100FFA4C1 /* ViewPrivateKeysViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86A121ABF05B00F48302 /* ViewPrivateKeysViewState.swift */; };
+		3C517F9D223C52A100FFA4C1 /* DeleteAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7F219F37B00026649F /* DeleteAccounts.swift */; };
+		3C517F9E223C52A100FFA4C1 /* BuyRamResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700BA21A750DE008F63D2 /* BuyRamResult.swift */; };
+		3C517F9F223C52A100FFA4C1 /* CurrencyPairingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FD22193801B0017BEF9 /* CurrencyPairingViewModel.swift */; };
+		3C517FA0223C52A100FFA4C1 /* MxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D972192D54000FC1A0D /* MxViewController.swift */; };
+		3C517FA1223C52A100FFA4C1 /* EntryIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6DC12192D7B900FC1A0D /* EntryIntent.swift */; };
+		3C517FA2223C52A100FFA4C1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FC12193612A0017BEF9 /* SettingsViewController.swift */; };
+		3C517FA3223C52A100FFA4C1 /* SellRamResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700C521A75138008F63D2 /* SellRamResult.swift */; };
+		3C517FA4223C52A100FFA4C1 /* RegisteredBlockProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C0219DC4300002A25F /* RegisteredBlockProducer.swift */; };
+		3C517FA5223C52A100FFA4C1 /* ActiveBlockProducersIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE52194A17000E72DD1 /* ActiveBlockProducersIntent.swift */; };
+		3C517FA6223C52A100FFA4C1 /* TransactionReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A021A72643008F63D2 /* TransactionReceiptViewModel.swift */; };
+		3C517FA7223C52A100FFA4C1 /* CreateAccountReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A6219DB23F0002A25F /* CreateAccountReceipt.swift */; };
+		3C517FA8223C52A100FFA4C1 /* GetBandwidthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592F9D219D60C700D7C9B9 /* GetBandwidthRequest.swift */; };
+		3C517FA9223C52A100FFA4C1 /* GetAccountsNamesForPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD85219F37B10026649F /* GetAccountsNamesForPublicKey.swift */; };
+		3C517FAA223C52A100FFA4C1 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD70219F28700026649F /* Connection.swift */; };
+		3C517FAB223C52A100FFA4C1 /* SplashIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC81721933D4F00562A1B /* SplashIntent.swift */; };
+		3C517FAC223C52A100FFA4C1 /* AccountPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF77021A0830600ADA892 /* AccountPage.swift */; };
+		3C517FAD223C52A100FFA4C1 /* ViewBlockProducerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C521A52A1900716AA2 /* ViewBlockProducerViewModel.swift */; };
+		3C517FAE223C52A100FFA4C1 /* ManageRamResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700AE21A74FE8008F63D2 /* ManageRamResult.swift */; };
+		3C517FAF223C52A100FFA4C1 /* ReachToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FBC219353D20017BEF9 /* ReachToolbar.swift */; };
+		3C517FB0223C52A100FFA4C1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB91219B37E100589936 /* Result.swift */; };
+		3C517FB1223C52A100FFA4C1 /* ReachTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FDA219383210017BEF9 /* ReachTextField.swift */; };
+		3C517FB2223C52A100FFA4C1 /* scope_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD9C219F3E140026649F /* scope_types.swift */; };
+		3C517FB3223C52A100FFA4C1 /* CurrencyPairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FD42193801B0017BEF9 /* CurrencyPairingViewController.swift */; };
+		3C517FB4223C52A100FFA4C1 /* BlockProducerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A388219DA76C0002A25F /* BlockProducerDetails.swift */; };
+		3C517FB5223C52A100FFA4C1 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC81621933D4F00562A1B /* SplashViewModel.swift */; };
+		3C517FB6223C52A100FFA4C1 /* TransactionReceiptViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A221A72643008F63D2 /* TransactionReceiptViewState.swift */; };
+		3C517FB7223C52A100FFA4C1 /* CurrencyPairingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FD02193801B0017BEF9 /* CurrencyPairingResult.swift */; };
+		3C517FB8223C52A100FFA4C1 /* ActiveBlockProducersTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A971E21A3D02600C30A75 /* ActiveBlockProducersTableView.swift */; };
+		3C517FB9223C52A100FFA4C1 /* ProxyVoterListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E71821A5BE970050BA57 /* ProxyVoterListResult.swift */; };
+		3C517FBA223C52A100FFA4C1 /* CastProducersVoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E70921A5A4170050BA57 /* CastProducersVoteViewModel.swift */; };
+		3C517FBB223C52A100FFA4C1 /* TransactionHistoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7A21AEFBA700C219C4 /* TransactionHistoryTableView.swift */; };
+		3C517FBC223C52A100FFA4C1 /* EosAccountResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB93219B39B900589936 /* EosAccountResource.swift */; };
+		3C517FBD223C52A100FFA4C1 /* TransactionReceiptRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07009E21A724BC008F63D2 /* TransactionReceiptRoute.swift */; };
+		3C517FBE223C52A100FFA4C1 /* ProxyVoterDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3AE219DB4F00002A25F /* ProxyVoterDetails.swift */; };
+		3C517FBF223C52A100FFA4C1 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75A21A05CF600ADA892 /* AccountModel.swift */; };
+		3C517FC0223C52A100FFA4C1 /* GetBandwidthRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592F9F219D60D100D7C9B9 /* GetBandwidthRequestImpl.swift */; };
+		3C517FC1223C52A100FFA4C1 /* ConfirmBandwidthIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008921A6FC78008F63D2 /* ConfirmBandwidthIntent.swift */; };
+		3C517FC2223C52A100FFA4C1 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF77821A08B5100ADA892 /* BalanceViewController.swift */; };
+		3C517FC3223C52A100FFA4C1 /* UndelegateBandwidthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24A21A6C3B300ACFA70 /* UndelegateBandwidthViewModel.swift */; };
+		3C517FC4223C52A100FFA4C1 /* ViewBlockProducerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C421A52A1800716AA2 /* ViewBlockProducerResult.swift */; };
+		3C517FC5223C52A100FFA4C1 /* ActionsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8F21A359090075BD71 /* ActionsViewState.swift */; };
+		3C517FC6223C52A100FFA4C1 /* CastProxyVoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6FE21A5A4100050BA57 /* CastProxyVoteResult.swift */; };
+		3C517FC7223C52A100FFA4C1 /* ActionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8C21A359080075BD71 /* ActionsViewModel.swift */; };
+		3C517FC8223C52A100FFA4C1 /* VoteProducerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7021A306680075BD71 /* VoteProducerTableView.swift */; };
+		3C517FC9223C52A100FFA4C1 /* ImportKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC823219350DE00562A1B /* ImportKeyViewModel.swift */; };
+		3C517FCA223C52A100FFA4C1 /* BlockProducerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38A219DA7EB0002A25F /* BlockProducerRequest.swift */; };
+		3C517FCB223C52A100FFA4C1 /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70D21A85B5000C87EC9 /* TransferViewModel.swift */; };
+		3C517FCC223C52A100FFA4C1 /* DelegateBandwidthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24221A6C2FA00ACFA70 /* DelegateBandwidthViewModel.swift */; };
+		3C517FCD223C52A100FFA4C1 /* StoreKitRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA29799221753DB001DC2D5 /* StoreKitRequestFactory.swift */; };
+		3C517FCE223C52A100FFA4C1 /* EosCreateAccountApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99A21AC7460001398F4 /* EosCreateAccountApi.swift */; };
+		3C517FCF223C52A100FFA4C1 /* KeyPairCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86A921ABFC6900F48302 /* KeyPairCell.swift */; };
+		3C517FD0223C52A100FFA4C1 /* ReachNetCpuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04B221A8877400F5F7A7 /* ReachNetCpuView.swift */; };
+		3C517FD1223C52A100FFA4C1 /* ContractAccountBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB89219B366700589936 /* ContractAccountBalance.swift */; };
+		3C517FD2223C52A100FFA4C1 /* ResourcesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF78E21A090F300ADA892 /* ResourcesResult.swift */; };
+		3C517FD3223C52A100FFA4C1 /* AccountNavigationIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF79621A0934600ADA892 /* AccountNavigationIntent.swift */; };
+		3C517FD4223C52A100FFA4C1 /* ReachTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86AF21AC060700F48302 /* ReachTextView.swift */; };
+		3C517FD5223C52A100FFA4C1 /* ManageRamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700B121A74FE8008F63D2 /* ManageRamViewController.swift */; };
+		3C517FD6223C52A100FFA4C1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD22194A0D400E72DD1 /* SearchViewModel.swift */; };
+		3C517FD7223C52A100FFA4C1 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A973021A4755D00C30A75 /* BalanceModel.swift */; };
+		3C517FD8223C52A100FFA4C1 /* AccountNavigationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF79821A0934600ADA892 /* AccountNavigationResult.swift */; };
+		3C517FD9223C52A100FFA4C1 /* CurrencyPairingViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FD32193801B0017BEF9 /* CurrencyPairingViewState.swift */; };
+		3C517FDA223C52A100FFA4C1 /* ReachProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7C21A332020075BD71 /* ReachProgressBar.swift */; };
+		3C517FDB223C52A100FFA4C1 /* BuyRamIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700B821A750DD008F63D2 /* BuyRamIntent.swift */; };
+		3C517FDC223C52A100FFA4C1 /* EosAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB75219B359F00589936 /* EosAccount.swift */; };
+		3C517FDD223C52A100FFA4C1 /* ConfirmBandwidthViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008A21A6FC78008F63D2 /* ConfirmBandwidthViewState.swift */; };
+		3C517FDE223C52A100FFA4C1 /* BlockProducerRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A38C219DA8480002A25F /* BlockProducerRequestImpl.swift */; };
+		3C517FDF223C52A100FFA4C1 /* ActionReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FA1219D61AD00D7C9B9 /* ActionReceipt.swift */; };
+		3C517FE0223C52A100FFA4C1 /* TransferRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FA5219D623300D7C9B9 /* TransferRequestImpl.swift */; };
+		3C517FE1223C52A100FFA4C1 /* ui_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8092192FAD300562A1B /* ui_types.swift */; };
+		3C517FE2223C52A100FFA4C1 /* ProxyVoterListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72221A5BFFF0050BA57 /* ProxyVoterListTableView.swift */; };
+		3C517FE3223C52A100FFA4C1 /* ViewPrivateKeysResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86A021ABF05B00F48302 /* ViewPrivateKeysResult.swift */; };
+		3C517FE4223C52A100FFA4C1 /* CastProxyVoteViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E70121A5A4110050BA57 /* CastProxyVoteViewState.swift */; };
+		3C517FE5223C52A100FFA4C1 /* AllocatedBandwidthTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD25621A6CED900ACFA70 /* AllocatedBandwidthTableView.swift */; };
+		3C517FE6223C52A100FFA4C1 /* CountAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD80219F37B10026649F /* CountAccounts.swift */; };
+		3C517FE7223C52A100FFA4C1 /* TransactionLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07009221A71A7C008F63D2 /* TransactionLogViewController.swift */; };
+		3C517FE8223C52A100FFA4C1 /* AccountNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF79421A0934600ADA892 /* AccountNavigationViewController.swift */; };
+		3C517FE9223C52A100FFA4C1 /* AccountsForPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBB8219B5DA500589936 /* AccountsForPublicKey.swift */; };
+		3C517FEA223C52A100FFA4C1 /* ViewActionIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70421A8296C00C87EC9 /* ViewActionIntent.swift */; };
+		3C517FEB223C52A100FFA4C1 /* RegisteredBlockProducersViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE12194A17000E72DD1 /* RegisteredBlockProducersViewState.swift */; };
+		3C517FEC223C52A100FFA4C1 /* ReachApiModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DBA5E21F4F8450020CA1F /* ReachApiModule.swift */; };
+		3C517FED223C52A100FFA4C1 /* CustomTokensRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A39E219DAEFD0002A25F /* CustomTokensRequest.swift */; };
+		3C517FEE223C52A100FFA4C1 /* CurrencyPairingIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FD12193801B0017BEF9 /* CurrencyPairingIntent.swift */; };
+		3C517FEF223C52A100FFA4C1 /* DelegateBandwidthIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24121A6C2FA00ACFA70 /* DelegateBandwidthIntent.swift */; };
+		3C517FF0223C52A100FFA4C1 /* ActionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F9521A35A870075BD71 /* ActionsTableView.swift */; };
+		3C517FF1223C52A100FFA4C1 /* TransferConfirmViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71021A85B5000C87EC9 /* TransferConfirmViewState.swift */; };
+		3C517FF2223C52A100FFA4C1 /* AccountCardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75821A05C7E00ADA892 /* AccountCardTableView.swift */; };
+		3C517FF3223C52A100FFA4C1 /* EosPriceCurrencyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C43219443D5003663EF /* EosPriceCurrencyPair.swift */; };
+		3C517FF4223C52A100FFA4C1 /* BandwidthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592F97219D605E00D7C9B9 /* BandwidthRequest.swift */; };
+		3C517FF5223C52A100FFA4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */; };
+		3C517FF6223C52A100FFA4C1 /* VoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF78121A08D8700ADA892 /* VoteViewModel.swift */; };
+		3C517FF7223C52A100FFA4C1 /* StoreKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979522174D8F001DC2D5 /* StoreKitRequest.swift */; };
+		3C517FF8223C52A100FFA4C1 /* EosPriceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3AC219DB2E90002A25F /* EosPriceRequest.swift */; };
+		3C517FF9223C52A100FFA4C1 /* VoteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FCB219D6B1B00D7C9B9 /* VoteRequest.swift */; };
+		3C517FFA223C52A100FFA4C1 /* TransactionHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7821AEF63B00C219C4 /* TransactionHistoryModel.swift */; };
+		3C517FFB223C52A100FFA4C1 /* UndelegateBandwidthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24D21A6C3B300ACFA70 /* UndelegateBandwidthResult.swift */; };
+		3C517FFC223C52A100FFA4C1 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D8219DF6120002A25F /* SimpleTableViewCell.swift */; };
+		3C517FFD223C52A100FFA4C1 /* Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D9B2192D58E00FC1A0D /* Copy.swift */; };
+		3C517FFE223C52A100FFA4C1 /* ViewActionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D70A21A82D8900C87EC9 /* ViewActionBundle.swift */; };
+		3C517FFF223C52A100FFA4C1 /* CastProducersVoteViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E70A21A5A4170050BA57 /* CastProducersVoteViewState.swift */; };
+		3C518000223C52A100FFA4C1 /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF78321A08D8700ADA892 /* VoteViewController.swift */; };
+		3C518001223C52A100FFA4C1 /* RegisteredBlockProducersTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D2219DF14D0002A25F /* RegisteredBlockProducersTableView.swift */; };
+		3C518002223C52A100FFA4C1 /* BalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4406AA21A1EDBC003BBFA9 /* BalanceCell.swift */; };
+		3C518003223C52A100FFA4C1 /* CastProducersVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04B821A8AE3100F5F7A7 /* CastProducersVote.swift */; };
+		3C518004223C52A100FFA4C1 /* HistoryApiModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3BE219DC0F90002A25F /* HistoryApiModule.swift */; };
+		3C518005223C52A100FFA4C1 /* RamPriceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3B8219DBBFA0002A25F /* RamPriceRequest.swift */; };
+		3C518006223C52A100FFA4C1 /* EosPriceRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA4321A0A31A00B8255F /* EosPriceRequestImpl.swift */; };
+		3C518007223C52A100FFA4C1 /* ViewBlockProducerViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C321A52A1800716AA2 /* ViewBlockProducerViewState.swift */; };
+		3C518008223C52A100FFA4C1 /* ConfirmRamIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700D921A751BA008F63D2 /* ConfirmRamIntent.swift */; };
+		3C518009223C52A100FFA4C1 /* ReachBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33CC21A52EE900716AA2 /* ReachBorderView.swift */; };
+		3C51800A223C52A100FFA4C1 /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C108D702204F3F40011F07B /* Rx.swift */; };
+		3C51800B223C52A100FFA4C1 /* AccountBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF77221A0833600ADA892 /* AccountBundle.swift */; };
+		3C51800C223C52A100FFA4C1 /* CurrencySymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291BA4219D597900562448 /* CurrencySymbol.swift */; };
+		3C51800D223C52A100FFA4C1 /* ErrorOnFirstStubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2EF21EFE15000A0720B /* ErrorOnFirstStubRequest.swift */; };
+		3C51800E223C52A100FFA4C1 /* VoteProducerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */; };
+		3C51800F223C52A100FFA4C1 /* BuyRamViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700BB21A750DE008F63D2 /* BuyRamViewState.swift */; };
+		3C518010223C52A100FFA4C1 /* EosEndpointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3221938C71003663EF /* EosEndpointViewController.swift */; };
+		3C518011223C52A100FFA4C1 /* DataTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFB21AADC2100D81458 /* DataTableView.swift */; };
+		3C518012223C52A100FFA4C1 /* AccountNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33BE21A513CB00716AA2 /* AccountNavigationDelegate.swift */; };
+		3C518013223C52A100FFA4C1 /* EosEndpointUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A971C21A3C5F100C30A75 /* EosEndpointUseCase.swift */; };
+		3C518014223C52A100FFA4C1 /* StubConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DBC2821F506E00020CA1F /* StubConnection.swift */; };
+		3C518015223C52A100FFA4C1 /* ViewKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86A721ABF0BD00F48302 /* ViewKeyPair.swift */; };
+		3C518016223C52A100FFA4C1 /* ViewProxyVoterBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6EB21A56AAE0050BA57 /* ViewProxyVoterBundle.swift */; };
+		3C518017223C52A100FFA4C1 /* EosEndpointIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3021938C71003663EF /* EosEndpointIntent.swift */; };
+		3C518018223C52A100FFA4C1 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DD12194A0D400E72DD1 /* SearchResult.swift */; };
+		3C518019223C52A100FFA4C1 /* SettingsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FC42193612A0017BEF9 /* SettingsResult.swift */; };
+		3C51801A223C52A100FFA4C1 /* BalanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7D219F378C0026649F /* BalanceEntity.swift */; };
+		3C51801B223C52A100FFA4C1 /* CastProducersVoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E70B21A5A4180050BA57 /* CastProducersVoteViewController.swift */; };
+		3C51801C223C52A100FFA4C1 /* ConfirmRamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700DA21A751BA008F63D2 /* ConfirmRamViewController.swift */; };
+		3C51801D223C52A100FFA4C1 /* ActiveBlockProducersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A972021A3D03100C30A75 /* ActiveBlockProducersCell.swift */; };
+		3C51801E223C52A100FFA4C1 /* ViewProxyVoterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6F021A56AAE0050BA57 /* ViewProxyVoterViewModel.swift */; };
+		3C51801F223C52A100FFA4C1 /* CastProducersVoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72C21A5CFD80050BA57 /* CastProducersVoteCell.swift */; };
+		3C518020223C52A100FFA4C1 /* AccountBalanceRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB8D219B368700589936 /* AccountBalanceRequestImpl.swift */; };
+		3C518021223C52A100FFA4C1 /* RamBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700E221A7726A008F63D2 /* RamBundle.swift */; };
+		3C518022223C52A100FFA4C1 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF76921A082AC00ADA892 /* AccountViewModel.swift */; };
+		3C518023223C52A100FFA4C1 /* AccountActionRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBC5219C21E000589936 /* AccountActionRequestImpl.swift */; };
+		3C518024223C52A100FFA4C1 /* EosKeyManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */; };
+		3C518025223C52A100FFA4C1 /* EosCreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A8219DB2640002A25F /* EosCreateAccountRequest.swift */; };
+		3C518026223C52A100FFA4C1 /* RamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3B4219DB8290002A25F /* RamRequest.swift */; };
+		3C518027223C52A100FFA4C1 /* SettingsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FC32193612A0017BEF9 /* SettingsViewState.swift */; };
+		3C518028223C52A100FFA4C1 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B721A507E700716AA2 /* CreateAccountViewModel.swift */; };
+		3C518029223C52A100FFA4C1 /* AllocatedBandwidthIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD23921A6C22900ACFA70 /* AllocatedBandwidthIntent.swift */; };
+		3C51802A223C52A100FFA4C1 /* TransferFormBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D72021A8619F00C87EC9 /* TransferFormBundle.swift */; };
+		3C51802B223C52A100FFA4C1 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DF22194A23900E72DD1 /* ExploreViewController.swift */; };
+		3C51802C223C52A100FFA4C1 /* AccountNameSystemBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBB6219B5D7C00589936 /* AccountNameSystemBalance.swift */; };
+		3C51802D223C52A100FFA4C1 /* AccountResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF76621A082AC00ADA892 /* AccountResult.swift */; };
+		3C51802E223C52A100FFA4C1 /* TransactionReceiptDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A821A72DCF008F63D2 /* TransactionReceiptDelegate.swift */; };
+		3C51802F223C52A100FFA4C1 /* AllocatedBandwidthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD25821A6CEE600ACFA70 /* AllocatedBandwidthCell.swift */; };
+		3C518030223C52A100FFA4C1 /* TransactionLogEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD96219F3AAF0026649F /* TransactionLogEntity.swift */; };
+		3C518031223C52A100FFA4C1 /* EosAccountVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB95219B39E700589936 /* EosAccountVote.swift */; };
+		3C518032223C52A100FFA4C1 /* EosAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB99219B3A4000589936 /* EosAccountRequest.swift */; };
+		3C518033223C52A100FFA4C1 /* TransferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FA3219D61CC00D7C9B9 /* TransferRequest.swift */; };
+		3C518034223C52A100FFA4C1 /* BalanceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF77A21A08B5100ADA892 /* BalanceResult.swift */; };
+		3C518035223C52A100FFA4C1 /* ViewBlockProducerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C221A52A1800716AA2 /* ViewBlockProducerViewController.swift */; };
+		3C518036223C52A100FFA4C1 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF76421A082AC00ADA892 /* AccountViewController.swift */; };
+		3C518037223C52A100FFA4C1 /* CurrencyPairFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291BA2219D58B800562448 /* CurrencyPairFormatter.swift */; };
+		3C518038223C52A100FFA4C1 /* TransactionHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E6D21AEF52A00C219C4 /* TransactionHistoryViewModel.swift */; };
+		3C518039223C52A100FFA4C1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC81821933D4F00562A1B /* SplashViewController.swift */; };
+		3C51803A223C52A100FFA4C1 /* ActiveBlockProducersDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFD21AADCE600D81458 /* ActiveBlockProducersDelegate.swift */; };
+		3C51803B223C52A100FFA4C1 /* AccountAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBBE219C21BC00589936 /* AccountAction.swift */; };
+		3C51803C223C52A100FFA4C1 /* StubUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2DC21EFAE8800A0720B /* StubUrlSession.swift */; };
+		3C51803D223C52A100FFA4C1 /* RegisteredBlockProducersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE32194A17000E72DD1 /* RegisteredBlockProducersViewController.swift */; };
+		3C51803E223C52A100FFA4C1 /* ConfirmRamViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700D821A751BA008F63D2 /* ConfirmRamViewState.swift */; };
+		3C51803F223C52A100FFA4C1 /* TransferConfirmIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71421A85B5100C87EC9 /* TransferConfirmIntent.swift */; };
+		3C518040223C52A100FFA4C1 /* CreateAccountViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B521A507E700716AA2 /* CreateAccountViewState.swift */; };
+		3C518041223C52A100FFA4C1 /* StubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2ED21EFE02400A0720B /* StubResponse.swift */; };
+		3C518042223C52A100FFA4C1 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF78A21A090F300ADA892 /* ResourcesViewController.swift */; };
+		3C518043223C52A100FFA4C1 /* SplashResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC81A21933D4F00562A1B /* SplashResult.swift */; };
+		3C518044223C52A100FFA4C1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C7219DCEEB0002A25F /* ErrorView.swift */; };
+		3C518045223C52A100FFA4C1 /* StubMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E421EFDC8000A0720B /* StubMatcher.swift */; };
+		3C518046223C52A100FFA4C1 /* UndelegateBandwidthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24B21A6C3B300ACFA70 /* UndelegateBandwidthViewController.swift */; };
+		3C518048223C52A100FFA4C1 /* Pods_stub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AF008691BE8085E838A527 /* Pods_stub.framework */; };
+		3C51804A223C52A100FFA4C1 /* happy_path_get_table_rows_customtoken.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30021EFE71D00A0720B /* happy_path_get_table_rows_customtoken.json */; };
+		3C51804B223C52A100FFA4C1 /* WelcomeStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C340FBE219354E70017BEF9 /* WelcomeStrings.strings */; };
+		3C51804C223C52A100FFA4C1 /* TransactionHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7E21AEFC9300C219C4 /* TransactionHistoryCell.xib */; };
+		3C51804D223C52A100FFA4C1 /* VoteStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E6FA21A5A35D0050BA57 /* VoteStrings.strings */; };
+		3C51804E223C52A100FFA4C1 /* happy_path_get_table_rows_regproxyinfo_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30421EFE71D00A0720B /* happy_path_get_table_rows_regproxyinfo_single.json */; };
+		3C51804F223C52A100FFA4C1 /* request_get_table_rows_customtoken.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33521EFE7A600A0720B /* request_get_table_rows_customtoken.json */; };
+		3C518050223C52A100FFA4C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CD2191D27E00B9A3D7 /* LaunchScreen.storyboard */; };
+		3C518051223C52A100FFA4C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
+		3C518052223C52A100FFA4C1 /* AllocatedBandwidthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BD25A21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib */; };
+		3C518053223C52A100FFA4C1 /* error_path_get_key_accounts_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F32C21EFE7A000A0720B /* error_path_get_key_accounts_empty.json */; };
+		3C518054223C52A100FFA4C1 /* happy_path_get_account_without_core_liquid_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F721EFE66300A0720B /* happy_path_get_account_without_core_liquid_balance.json */; };
+		3C518055223C52A100FFA4C1 /* CastProducersVoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */; };
+		3C518056223C52A100FFA4C1 /* RamStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C0700AC21A74862008F63D2 /* RamStrings.strings */; };
+		3C518057223C52A100FFA4C1 /* AccountStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C6DF76821A082AC00ADA892 /* AccountStrings.strings */; };
+		3C518058223C52A100FFA4C1 /* happy_path_get_table_rows_regproxyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30521EFE71D00A0720B /* happy_path_get_table_rows_regproxyinfo.json */; };
+		3C518059223C52A100FFA4C1 /* request_get_table_rows_regproxyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F32F21EFE7A600A0720B /* request_get_table_rows_regproxyinfo.json */; };
+		3C51805A223C52A100FFA4C1 /* AccountCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0ADD69219F24380026649F /* AccountCardCell.xib */; };
+		3C51805B223C52A100FFA4C1 /* happy_path_get_actions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30B21EFE71E00A0720B /* happy_path_get_actions.json */; };
+		3C51805C223C52A100FFA4C1 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C9219DCF900002A25F /* ErrorView.xib */; };
+		3C51805D223C52A100FFA4C1 /* ActionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F1F9921A35B090075BD71 /* ActionsCell.xib */; };
+		3C51805E223C52A100FFA4C1 /* BandwidthStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BD23421A6C16F00ACFA70 /* BandwidthStrings.strings */; };
+		3C51805F223C52A100FFA4C1 /* request_get_table_rows_producerjson.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33021EFE7A600A0720B /* request_get_table_rows_producerjson.json */; };
+		3C518060223C52A100FFA4C1 /* TransactionLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C07009421A71AA5008F63D2 /* TransactionLogViewController.xib */; };
+		3C518061223C52A100FFA4C1 /* happy_path_get_table_rows_delegated_bandwidth.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30221EFE71D00A0720B /* happy_path_get_table_rows_delegated_bandwidth.json */; };
+		3C518062223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30C21EFE71E00A0720B /* happy_path_get_table_rows_producerjson_single.json */; };
+		3C518063223C52A100FFA4C1 /* request_get_table_rows_rammarket.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C517EBA223C3BD700FFA4C1 /* request_get_table_rows_rammarket.json */; };
+		3C518064223C52A100FFA4C1 /* happy_path_get_producers.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30121EFE71D00A0720B /* happy_path_get_producers.json */; };
+		3C518065223C52A100FFA4C1 /* happy_path_get_key_accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30F21EFE71E00A0720B /* happy_path_get_key_accounts.json */; };
+		3C518066223C52A100FFA4C1 /* KeyPairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0A86AD21ABFD5D00F48302 /* KeyPairCell.xib */; };
+		3C518067223C52A100FFA4C1 /* TransactionReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C07009A21A72217008F63D2 /* TransactionReceiptViewController.xib */; };
+		3C518068223C52A100FFA4C1 /* happy_path_get_edna_currency_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F31221EFE71F00A0720B /* happy_path_get_edna_currency_balance.json */; };
+		3C518069223C52A100FFA4C1 /* TransferStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CB1D72621A86B9100C87EC9 /* TransferStrings.strings */; };
+		3C51806A223C52A100FFA4C1 /* happy_path_price.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30321EFE71D00A0720B /* happy_path_price.json */; };
+		3C51806B223C52A100FFA4C1 /* happy_path_get_account_voter_info_no_vote.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30D21EFE71E00A0720B /* happy_path_get_account_voter_info_no_vote.json */; };
+		3C51806C223C52A100FFA4C1 /* happy_path_get_table_rows_delegated_bandwidth_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F31021EFE71E00A0720B /* happy_path_get_table_rows_delegated_bandwidth_empty.json */; };
+		3C51806D223C52A100FFA4C1 /* happy_path_get_account_staked.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2FB21EFE6A000A0720B /* happy_path_get_account_staked.json */; };
+		3C51806E223C52A100FFA4C1 /* ActiveBlockProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A972421A3D13E00C30A75 /* ActiveBlockProducerCell.xib */; };
+		3C51806F223C52A100FFA4C1 /* happy_path_push_transaction_log.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F31121EFE71F00A0720B /* happy_path_push_transaction_log.json */; };
+		3C518070223C52A100FFA4C1 /* happy_path_get_account_voter_info_producer_vote.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F31321EFE71F00A0720B /* happy_path_get_account_voter_info_producer_vote.json */; };
+		3C518071223C52A100FFA4C1 /* happy_path_get_account_voter_info_proxy_vote.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30721EFE71E00A0720B /* happy_path_get_account_voter_info_proxy_vote.json */; };
+		3C518072223C52A100FFA4C1 /* BalanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4406AC21A1EED2003BBFA9 /* BalanceCell.xib */; };
+		3C518073223C52A100FFA4C1 /* ProxyVoterListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72621A5C1010050BA57 /* ProxyVoterListCell.xib */; };
+		3C518074223C52A100FFA4C1 /* AppStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C964C4121944367003663EF /* AppStrings.strings */; };
+		3C518075223C52A100FFA4C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799C82191D27D00B9A3D7 /* Main.storyboard */; };
+		3C518076223C52A100FFA4C1 /* happy_path_get_key_accounts_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30A21EFE71E00A0720B /* happy_path_get_key_accounts_empty.json */; };
+		3C518077223C52A100FFA4C1 /* RegisteredBlockProducersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D6219DF2B90002A25F /* RegisteredBlockProducersCell.xib */; };
+		3C518078223C52A100FFA4C1 /* request_get_table_rows_regproxyinfo_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33421EFE7A600A0720B /* request_get_table_rows_regproxyinfo_single.json */; };
+		3C518079223C52A100FFA4C1 /* happy_path_get_account_unstaked.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2FD21EFE6BE00A0720B /* happy_path_get_account_unstaked.json */; };
+		3C51807A223C52A100FFA4C1 /* BlockProducerStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A972621A3DABD00C30A75 /* BlockProducerStrings.strings */; };
+		3C51807B223C52A100FFA4C1 /* request_get_table_rows_producerjson_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33221EFE7A600A0720B /* request_get_table_rows_producerjson_single.json */; };
+		3C51807C223C52A100FFA4C1 /* error_push_transaction_log.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F32B21EFE7A000A0720B /* error_push_transaction_log.json */; };
+		3C51807D223C52A100FFA4C1 /* happy_path_get_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F321EFE60100A0720B /* happy_path_get_info.json */; };
+		3C51807E223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30E21EFE71E00A0720B /* happy_path_get_table_rows_producerjson.json */; };
+		3C51807F223C52A100FFA4C1 /* ReachNetCpuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0C04B421A8878000F5F7A7 /* ReachNetCpuView.xib */; };
+		3C518080223C52A100FFA4C1 /* SettingsStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C340FCB219368C30017BEF9 /* SettingsStrings.strings */; };
+		3C518081223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2FF21EFE71D00A0720B /* happy_path_get_table_rows_producerjson_empty.json */; };
+		3C518082223C52A100FFA4C1 /* happy_path_get_key_accounts_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30821EFE71E00A0720B /* happy_path_get_key_accounts_single.json */; };
+		3C518083223C52A100FFA4C1 /* happy_path_get_empty_currency_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30621EFE71D00A0720B /* happy_path_get_empty_currency_balance.json */; };
+		3C518084223C52A100FFA4C1 /* ProxyStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72821A5C7520050BA57 /* ProxyStrings.strings */; };
+		3C518085223C52A100FFA4C1 /* happy_path_create_account.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F521EFE63D00A0720B /* happy_path_create_account.json */; };
+		3C518086223C52A100FFA4C1 /* happy_path_get_sys_currency_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30921EFE71E00A0720B /* happy_path_get_sys_currency_balance.json */; };
+		3C518087223C52A100FFA4C1 /* request_get_table_rows_delegated_bandwidth.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33321EFE7A600A0720B /* request_get_table_rows_delegated_bandwidth.json */; };
+		3C518088223C52A100FFA4C1 /* ExploreStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C7F0DFD2194AC2A00E72DD1 /* ExploreStrings.strings */; };
+		3C518089223C52A100FFA4C1 /* ResourceGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2D21A2C38E0050910D /* ResourceGraphView.xib */; };
+		3C51808A223C52A100FFA4C1 /* TransactionStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C07009621A71BC8008F63D2 /* TransactionStrings.strings */; };
+		3C51808B223C52A100FFA4C1 /* happy_path_get_table_rows_rammarket.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C517EBD223C3D8800FFA4C1 /* happy_path_get_table_rows_rammarket.json */; };
+		3C51808C223C52A100FFA4C1 /* request_get_currency_balance_edna.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33121EFE7A600A0720B /* request_get_currency_balance_edna.json */; };
+		3C51808D223C52A100FFA4C1 /* VoteProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */; };
+		3C51808E223C52A100FFA4C1 /* happy_path_get_account_refund.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F921EFE68000A0720B /* happy_path_get_account_refund.json */; };
+		3C518098223C540500FFA4C1 /* ApiStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C518096223C532E00FFA4C1 /* ApiStrings.strings */; };
+		3C518099223C540F00FFA4C1 /* ApiStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C518096223C532E00FFA4C1 /* ApiStrings.strings */; };
+		3C51809A223C540F00FFA4C1 /* ApiStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C518096223C532E00FFA4C1 /* ApiStrings.strings */; };
+		3C5180E4223C56B100FFA4C1 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C4DF4FE9AF77299AE53124 /* EarlGrey.framework */; };
+		3C5180E5223C56B100FFA4C1 /* Pods_eosreachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE90BA3A5BF0A06DE5903360 /* Pods_eosreachTests.framework */; };
+		3C5180E9223C56B100FFA4C1 /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = 83C4DF4FE9AF77299AE53124 /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3C5180F1223C572B00FFA4C1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51809E223C55AD00FFA4C1 /* Config.swift */; };
+		3C5180F3223C577A00FFA4C1 /* Orchestra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805121FB9BF700B715C2 /* Orchestra.swift */; };
+		3C5180F4223C577C00FFA4C1 /* ImportKeyOrchestra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804F21FB9BD700B715C2 /* ImportKeyOrchestra.swift */; };
+		3C5180F5223C578000FFA4C1 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805321FB9C4A00B715C2 /* Robot.swift */; };
+		3C5180F6223C578000FFA4C1 /* BlockProducerRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF90328220B8D8200ABDB58 /* BlockProducerRobot.swift */; };
+		3C5180F7223C578000FFA4C1 /* ProxyRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AED22116B9100EF4560 /* ProxyRobot.swift */; };
+		3C5180F8223C578000FFA4C1 /* SplashRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804121FB86AE00B715C2 /* SplashRobot.swift */; };
+		3C5180F9223C578000FFA4C1 /* CommonRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805521FB9C6900B715C2 /* CommonRobot.swift */; };
+		3C5180FA223C578000FFA4C1 /* ImportKeyRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805721FB9C8100B715C2 /* ImportKeyRobot.swift */; };
+		3C5180FB223C578000FFA4C1 /* CreateAccountRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805921FB9C9500B715C2 /* CreateAccountRobot.swift */; };
+		3C5180FC223C578000FFA4C1 /* AccountNavigationRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805B21FB9CA400B715C2 /* AccountNavigationRobot.swift */; };
+		3C5180FD223C578000FFA4C1 /* AccountRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805D21FB9CB300B715C2 /* AccountRobot.swift */; };
+		3C5180FE223C578000FFA4C1 /* BalanceRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805F21FB9CC400B715C2 /* BalanceRobot.swift */; };
+		3C5180FF223C578000FFA4C1 /* VoteRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806121FB9CD100B715C2 /* VoteRobot.swift */; };
+		3C518100223C578000FFA4C1 /* ResourcesRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806321FB9CDF00B715C2 /* ResourcesRobot.swift */; };
+		3C518101223C578000FFA4C1 /* BandwidthRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807622223DBD800B5F169 /* BandwidthRobot.swift */; };
+		3C518102223C578000FFA4C1 /* RamRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C517EB8223C38F800FFA4C1 /* RamRobot.swift */; };
+		3C518103223C578000FFA4C1 /* ActionsRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806521FB9CEE00B715C2 /* ActionsRobot.swift */; };
+		3C518104223C578000FFA4C1 /* TransferRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806721FB9CFC00B715C2 /* TransferRobot.swift */; };
+		3C518105223C578000FFA4C1 /* TransactionRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806921FB9D0E00B715C2 /* TransactionRobot.swift */; };
+		3C518106223C578000FFA4C1 /* SettingsRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806B21FB9D2000B715C2 /* SettingsRobot.swift */; };
+		3C518107223C578000FFA4C1 /* SearchRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2978622173872001DC2D5 /* SearchRobot.swift */; };
+		3C518108223C578700FFA4C1 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0F5558D8100EC99A44F586 /* EarlGrey.swift */; };
+		3C518109223C578700FFA4C1 /* Espresso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804321FB877A00B715C2 /* Espresso.swift */; };
+		3C51810A223C578700FFA4C1 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804821FB929100B715C2 /* TestCase.swift */; };
+		3C51810B223C57B100FFA4C1 /* ProxyVoteTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5180A0223C55E300FFA4C1 /* ProxyVoteTestCase.swift */; };
+		3C518111223C581400FFA4C1 /* ResourcesRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806321FB9CDF00B715C2 /* ResourcesRobot.swift */; };
+		3C518112223C581400FFA4C1 /* CreateAccountRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805921FB9C9500B715C2 /* CreateAccountRobot.swift */; };
+		3C518114223C581400FFA4C1 /* ActionsRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806521FB9CEE00B715C2 /* ActionsRobot.swift */; };
+		3C518115223C581400FFA4C1 /* BalanceRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805F21FB9CC400B715C2 /* BalanceRobot.swift */; };
+		3C518116223C581400FFA4C1 /* TransactionRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806921FB9D0E00B715C2 /* TransactionRobot.swift */; };
+		3C518117223C581400FFA4C1 /* BandwidthRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807622223DBD800B5F169 /* BandwidthRobot.swift */; };
+		3C518118223C581400FFA4C1 /* TransferRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806721FB9CFC00B715C2 /* TransferRobot.swift */; };
+		3C518119223C581400FFA4C1 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805321FB9C4A00B715C2 /* Robot.swift */; };
+		3C51811B223C581400FFA4C1 /* BlockProducerRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF90328220B8D8200ABDB58 /* BlockProducerRobot.swift */; };
+		3C51811C223C581400FFA4C1 /* ImportKeyRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805721FB9C8100B715C2 /* ImportKeyRobot.swift */; };
+		3C51811D223C581400FFA4C1 /* ImportKeyOrchestra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804F21FB9BD700B715C2 /* ImportKeyOrchestra.swift */; };
+		3C51811E223C581400FFA4C1 /* SearchRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2978622173872001DC2D5 /* SearchRobot.swift */; };
+		3C51811F223C581400FFA4C1 /* VoteRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806121FB9CD100B715C2 /* VoteRobot.swift */; };
+		3C518120223C581400FFA4C1 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804821FB929100B715C2 /* TestCase.swift */; };
+		3C518121223C581400FFA4C1 /* SplashRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804121FB86AE00B715C2 /* SplashRobot.swift */; };
+		3C518122223C581400FFA4C1 /* AccountRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805D21FB9CB300B715C2 /* AccountRobot.swift */; };
+		3C518123223C581400FFA4C1 /* CommonRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805521FB9C6900B715C2 /* CommonRobot.swift */; };
+		3C518124223C581400FFA4C1 /* Orchestra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805121FB9BF700B715C2 /* Orchestra.swift */; };
+		3C518125223C581400FFA4C1 /* AccountNavigationRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805B21FB9CA400B715C2 /* AccountNavigationRobot.swift */; };
+		3C518126223C581400FFA4C1 /* Espresso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804321FB877A00B715C2 /* Espresso.swift */; };
+		3C518127223C581400FFA4C1 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0F5558D8100EC99A44F586 /* EarlGrey.swift */; };
+		3C518128223C581400FFA4C1 /* ProxyRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AED22116B9100EF4560 /* ProxyRobot.swift */; };
+		3C518129223C581400FFA4C1 /* RamRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C517EB8223C38F800FFA4C1 /* RamRobot.swift */; };
+		3C51812A223C581400FFA4C1 /* SettingsRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806B21FB9D2000B715C2 /* SettingsRobot.swift */; };
+		3C51812C223C581400FFA4C1 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C4DF4FE9AF77299AE53124 /* EarlGrey.framework */; };
+		3C51812D223C581400FFA4C1 /* Pods_eosreachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE90BA3A5BF0A06DE5903360 /* Pods_eosreachTests.framework */; };
+		3C518131223C581400FFA4C1 /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = 83C4DF4FE9AF77299AE53124 /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3C51813A223C587100FFA4C1 /* AccountStakedWithCoreBalanceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807821FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift */; };
+		3C51813B223C587100FFA4C1 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */; };
+		3C51813C223C587100FFA4C1 /* AccountWithErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807C21FEF99D00B715C2 /* AccountWithErrorTestCase.swift */; };
+		3C51813D223C587100FFA4C1 /* GetAccountPriceErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C108D732204F6860011F07B /* GetAccountPriceErrorTestCase.swift */; };
+		3C51813E223C587800FFA4C1 /* VoteForUsErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9031D2208201700ABDB58 /* VoteForUsErrorTestCase.swift */; };
+		3C51813F223C587800FFA4C1 /* BlockProducerVoteTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF903202208336C00ABDB58 /* BlockProducerVoteTestCase.swift */; };
+		3C518140223C587800FFA4C1 /* BlockProducerInformationVoteTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF90326220A374000ABDB58 /* BlockProducerInformationVoteTestCase.swift */; };
+		3C518141223C587800FFA4C1 /* ProxyVoteTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9032222083FDA00ABDB58 /* ProxyVoteTestCase.swift */; };
+		3C518142223C587800FFA4C1 /* ProxyVoteInformationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AEF221172A400EF4560 /* ProxyVoteInformationTestCase.swift */; };
+		3C518143223C587800FFA4C1 /* NotVotedTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF90324220841C500ABDB58 /* NotVotedTestCase.swift */; };
+		3C518144223C587800FFA4C1 /* VoteForProxyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AE4221152C600EF4560 /* VoteForProxyTestCase.swift */; };
+		3C518145223C587800FFA4C1 /* VoteForProducerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AEB22115D6F00EF4560 /* VoteForProducerTestCase.swift */; };
+		3C518146223C587F00FFA4C1 /* DelegateBandwidthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807602223DA2400B5F169 /* DelegateBandwidthTestCase.swift */; };
+		3C518147223C587F00FFA4C1 /* UnDelegateBandwidthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807642223E76E00B5F169 /* UnDelegateBandwidthTestCase.swift */; };
+		3C518148223C588200FFA4C1 /* BuyRamTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C517EB6223C388D00FFA4C1 /* BuyRamTestCase.swift */; };
+		3C518149223C588200FFA4C1 /* SellRamTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C517EC0223C470600FFA4C1 /* SellRamTestCase.swift */; };
+		3C51814A223C589000FFA4C1 /* BillingFlowAccountLengthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807582223BB3100B5F169 /* BillingFlowAccountLengthTestCase.swift */; };
+		3C51814B223C589000FFA4C1 /* BillingFlowAccountNumericStartTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807562223B9E300B5F169 /* BillingFlowAccountNumericStartTestCase.swift */; };
+		3C51814C223C589000FFA4C1 /* BillingFlowStoreKitErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68074E2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift */; };
+		3C51814D223C589000FFA4C1 /* BillingFlowSuccessTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2978B221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift */; };
+		3C51814E223C589000FFA4C1 /* BillingFlowFailedCreateAccountSuccessNoAccountsForPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68075A2223BC9600B5F169 /* BillingFlowFailedCreateAccountSuccessNoAccountsForPublicKeyTestCase.swift */; };
+		3C51814F223C589000FFA4C1 /* BillingFlowFailedCreateAccountSuccessErrorImportingPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68075C2223C7B800B5F169 /* BillingFlowFailedCreateAccountSuccessErrorImportingPublicKeyTestCase.swift */; };
+		3C518150223C589000FFA4C1 /* BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE7AF5C221AA58B00FB9D39 /* BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase.swift */; };
+		3C518151223C589000FFA4C1 /* BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807502220B6E600B5F169 /* BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift */; };
+		3C518152223C589000FFA4C1 /* BillingFlowLimboEndWithAccountsReceivedTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C680742222074E600B5F169 /* BillingFlowLimboEndWithAccountsReceivedTestCase.swift */; };
+		3C518153223C589000FFA4C1 /* BillingFlowLimboEndWithNoAccountsTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68074422209BFA00B5F169 /* BillingFlowLimboEndWithNoAccountsTestCase.swift */; };
+		3C518154223C589000FFA4C1 /* BillingFlowCannotMakePaymentErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807522220B91B00B5F169 /* BillingFlowCannotMakePaymentErrorTestCase.swift */; };
+		3C518155223C589000FFA4C1 /* BillingFlowPaymentFailedErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807542222C25D00B5F169 /* BillingFlowPaymentFailedErrorTestCase.swift */; };
+		3C518156223C589600FFA4C1 /* ClearDataAndLogoutTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807672223EDF800B5F169 /* ClearDataAndLogoutTestCase.swift */; };
 		3C5799C52191D27D00B9A3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */; };
 		3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799C82191D27D00B9A3D7 /* Main.storyboard */; };
 		3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
@@ -625,22 +1162,9 @@
 		3C592FCA219D6B0700D7C9B9 /* VoteReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FC9219D6B0700D7C9B9 /* VoteReceipt.swift */; };
 		3C592FCC219D6B1B00D7C9B9 /* VoteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FCB219D6B1B00D7C9B9 /* VoteRequest.swift */; };
 		3C592FCE219D6B8B00D7C9B9 /* VoteRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FCD219D6B8B00D7C9B9 /* VoteRequestImpl.swift */; };
-		3C680743222074E600B5F169 /* BillingFlowLimboEndWithAccountsReceivedTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C680742222074E600B5F169 /* BillingFlowLimboEndWithAccountsReceivedTestCase.swift */; };
-		3C68074522209BFA00B5F169 /* BillingFlowLimboEndWithNoAccountsTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68074422209BFA00B5F169 /* BillingFlowLimboEndWithNoAccountsTestCase.swift */; };
 		3C68074A2220A2DD00B5F169 /* PendingAccountNameInLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807462220A00100B5F169 /* PendingAccountNameInLimbo.swift */; };
 		3C68074B2220A2DD00B5F169 /* PendingAccountNameInLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807462220A00100B5F169 /* PendingAccountNameInLimbo.swift */; };
-		3C68074F2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68074E2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift */; };
-		3C6807512220B6E600B5F169 /* BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807502220B6E600B5F169 /* BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift */; };
-		3C6807532220B91B00B5F169 /* BillingFlowCannotMakePaymentErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807522220B91B00B5F169 /* BillingFlowCannotMakePaymentErrorTestCase.swift */; };
-		3C6807552222C25D00B5F169 /* BillingFlowPaymentFailedErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807542222C25D00B5F169 /* BillingFlowPaymentFailedErrorTestCase.swift */; };
-		3C6807572223B9E300B5F169 /* BillingFlowAccountNumericStartTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807562223B9E300B5F169 /* BillingFlowAccountNumericStartTestCase.swift */; };
-		3C6807592223BB3100B5F169 /* BillingFlowAccountLengthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807582223BB3100B5F169 /* BillingFlowAccountLengthTestCase.swift */; };
-		3C68075B2223BC9600B5F169 /* BillingFlowFailedCreateAccountSuccessNoAccountsForPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68075A2223BC9600B5F169 /* BillingFlowFailedCreateAccountSuccessNoAccountsForPublicKeyTestCase.swift */; };
-		3C68075D2223C7B800B5F169 /* BillingFlowFailedCreateAccountSuccessErrorImportingPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68075C2223C7B800B5F169 /* BillingFlowFailedCreateAccountSuccessErrorImportingPublicKeyTestCase.swift */; };
-		3C6807612223DA2400B5F169 /* DelegateBandwidthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807602223DA2400B5F169 /* DelegateBandwidthTestCase.swift */; };
 		3C6807632223DBD800B5F169 /* BandwidthRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807622223DBD800B5F169 /* BandwidthRobot.swift */; };
-		3C6807652223E76E00B5F169 /* UnDelegateBandwidthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807642223E76E00B5F169 /* UnDelegateBandwidthTestCase.swift */; };
-		3C6807682223EDF800B5F169 /* ClearDataAndLogoutTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807672223EDF800B5F169 /* ClearDataAndLogoutTestCase.swift */; };
 		3C6DF75921A05C7E00ADA892 /* AccountCardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75821A05C7E00ADA892 /* AccountCardTableView.swift */; };
 		3C6DF75B21A05CF600ADA892 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75A21A05CF600ADA892 /* AccountModel.swift */; };
 		3C6DF75D21A05DCA00ADA892 /* AccountCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF75C21A05DCA00ADA892 /* AccountCardCell.swift */; };
@@ -771,7 +1295,6 @@
 		3C9BFBC8219C29B000589936 /* types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBC7219C29B000589936 /* types.swift */; };
 		3C9C665D21A97C1800612CD8 /* StoreKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C665C21A97C1800612CD8 /* StoreKitHandler.swift */; };
 		3CA2978722173872001DC2D5 /* SearchRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2978622173872001DC2D5 /* SearchRobot.swift */; };
-		3CA2978C221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2978B221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift */; };
 		3CA29792221746FD001DC2D5 /* ReceiptDataRequestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979022174670001DC2D5 /* ReceiptDataRequestStub.swift */; };
 		3CA29797221750C6001DC2D5 /* StoreKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979522174D8F001DC2D5 /* StoreKitRequest.swift */; };
 		3CA29798221750C8001DC2D5 /* StoreKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979522174D8F001DC2D5 /* StoreKitRequest.swift */; };
@@ -866,7 +1389,6 @@
 		3CCC804221FB86AE00B715C2 /* SplashRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804121FB86AE00B715C2 /* SplashRobot.swift */; };
 		3CCC804421FB877A00B715C2 /* Espresso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804321FB877A00B715C2 /* Espresso.swift */; };
 		3CCC804921FB929100B715C2 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804821FB929100B715C2 /* TestCase.swift */; };
-		3CCC804D21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */; };
 		3CCC805021FB9BD700B715C2 /* ImportKeyOrchestra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804F21FB9BD700B715C2 /* ImportKeyOrchestra.swift */; };
 		3CCC805221FB9BF700B715C2 /* Orchestra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805121FB9BF700B715C2 /* Orchestra.swift */; };
 		3CCC805421FB9C4A00B715C2 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805321FB9C4A00B715C2 /* Robot.swift */; };
@@ -884,8 +1406,6 @@
 		3CCC806C21FB9D2000B715C2 /* SettingsRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806B21FB9D2000B715C2 /* SettingsRobot.swift */; };
 		3CCC807121FBB1E500B715C2 /* EosKeyManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */; };
 		3CCC807221FBB1F000B715C2 /* EosKeyManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */; };
-		3CCC807921FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807821FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift */; };
-		3CCC807D21FEF99D00B715C2 /* AccountWithErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807C21FEF99D00B715C2 /* AccountWithErrorTestCase.swift */; };
 		3CCC808121FEFB4900B715C2 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807F21FEFAE600B715C2 /* LinkedList.swift */; };
 		3CCC808221FEFB4900B715C2 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807F21FEFAE600B715C2 /* LinkedList.swift */; };
 		3CCE0EF821AAA84300D81458 /* DropDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EF721AAA84300D81458 /* DropDb.swift */; };
@@ -896,7 +1416,6 @@
 		3CCE9C2621A2B1350050910D /* AccountViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */; };
 		3CCE9C2C21A2C3810050910D /* ResourceGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2B21A2C3810050910D /* ResourceGraphView.swift */; };
 		3CCE9C2E21A2C38E0050910D /* ResourceGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2D21A2C38E0050910D /* ResourceGraphView.xib */; };
-		3CE7AF5D221AA58B00FB9D39 /* BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE7AF5C221AA58B00FB9D39 /* BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase.swift */; };
 		3CEF33B921A507E700716AA2 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B421A507E700716AA2 /* CreateAccountViewController.swift */; };
 		3CEF33BA21A507E700716AA2 /* CreateAccountViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B521A507E700716AA2 /* CreateAccountViewState.swift */; };
 		3CEF33BB21A507E700716AA2 /* CreateAccountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B621A507E700716AA2 /* CreateAccountIntent.swift */; };
@@ -911,11 +1430,6 @@
 		3CEF33CB21A52A1900716AA2 /* ViewBlockProducerIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33C621A52A1900716AA2 /* ViewBlockProducerIntent.swift */; };
 		3CEF33CD21A52EE900716AA2 /* ReachBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33CC21A52EE900716AA2 /* ReachBorderView.swift */; };
 		3CEF33CF21A53E7E00716AA2 /* ViewBlockProducerBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33CE21A53E7E00716AA2 /* ViewBlockProducerBundle.swift */; };
-		3CF9031E2208201700ABDB58 /* VoteForUsErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9031D2208201700ABDB58 /* VoteForUsErrorTestCase.swift */; };
-		3CF903212208336C00ABDB58 /* BlockProducerVoteTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF903202208336C00ABDB58 /* BlockProducerVoteTestCase.swift */; };
-		3CF9032322083FDA00ABDB58 /* ProxyVoteTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9032222083FDA00ABDB58 /* ProxyVoteTestCase.swift */; };
-		3CF90325220841C500ABDB58 /* NotVotedTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF90324220841C500ABDB58 /* NotVotedTestCase.swift */; };
-		3CF90327220A374000ABDB58 /* BlockProducerInformationVoteTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF90326220A374000ABDB58 /* BlockProducerInformationVoteTestCase.swift */; };
 		3CF90329220B8D8200ABDB58 /* BlockProducerRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF90328220B8D8200ABDB58 /* BlockProducerRobot.swift */; };
 		5459E12781E4B0E892AC7BD0 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0F5558D8100EC99A44F586 /* EarlGrey.swift */; };
 		64D127582CBE758855AE4A51 /* Pods_stub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AF008691BE8085E838A527 /* Pods_stub.framework */; };
@@ -925,6 +1439,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3C5180EF223C56BE00FFA4C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C5799B92191D27D00B9A3D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C517EC2223C52A100FFA4C1;
+			remoteInfo = dev;
+		};
+		3C51810E223C581400FFA4C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C5799B92191D27D00B9A3D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C517EC2223C52A100FFA4C1;
+			remoteInfo = dev;
+		};
+		3C518137223C582100FFA4C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C5799B92191D27D00B9A3D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C0DBA6021F501430020CA1F;
+			remoteInfo = stub;
+		};
 		3CD66C5421FA6B3C003E2A49 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3C5799B92191D27D00B9A3D7 /* Project object */;
@@ -942,6 +1477,28 @@
 			dstSubfolderSpec = 0;
 			files = (
 				2B9B1F458E9A990DCF40D407 /* EarlGrey.framework in EarlGrey Copy Files */,
+			);
+			name = "EarlGrey Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C5180E8223C56B100FFA4C1 /* EarlGrey Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(TEST_HOST)/../";
+			dstSubfolderSpec = 0;
+			files = (
+				3C5180E9223C56B100FFA4C1 /* EarlGrey.framework in EarlGrey Copy Files */,
+			);
+			name = "EarlGrey Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C518130223C581400FFA4C1 /* EarlGrey Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(TEST_HOST)/../";
+			dstSubfolderSpec = 0;
+			files = (
+				3C518131223C581400FFA4C1 /* EarlGrey.framework in EarlGrey Copy Files */,
 			);
 			name = "EarlGrey Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1157,6 +1714,15 @@
 		3C517EBA223C3BD700FFA4C1 /* request_get_table_rows_rammarket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = request_get_table_rows_rammarket.json; sourceTree = "<group>"; };
 		3C517EBD223C3D8800FFA4C1 /* happy_path_get_table_rows_rammarket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_table_rows_rammarket.json; sourceTree = "<group>"; };
 		3C517EC0223C470600FFA4C1 /* SellRamTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellRamTestCase.swift; sourceTree = "<group>"; };
+		3C518093223C52A100FFA4C1 /* dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C518094223C52A200FFA4C1 /* stub copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "stub copy-Info.plist"; path = "/Users/samkirton/Documents/repos/eosreach-swift/stub copy-Info.plist"; sourceTree = "<absolute>"; };
+		3C518096223C532E00FFA4C1 /* ApiStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ApiStrings.strings; sourceTree = "<group>"; };
+		3C51809E223C55AD00FFA4C1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		3C5180A0223C55E300FFA4C1 /* ProxyVoteTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyVoteTestCase.swift; sourceTree = "<group>"; };
+		3C5180ED223C56B100FFA4C1 /* eosreachDevTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eosreachDevTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C5180EE223C56B100FFA4C1 /* eosreachTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "eosreachTests copy-Info.plist"; path = "/Users/samkirton/Documents/repos/eosreach-swift/eosreachTests copy-Info.plist"; sourceTree = "<absolute>"; };
+		3C518135223C581400FFA4C1 /* eosreachStubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eosreachStubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C518136223C581500FFA4C1 /* eosreachDevTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "eosreachDevTests copy-Info.plist"; path = "/Users/samkirton/Documents/repos/eosreach-swift/eosreachDevTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		3C5799C12191D27D00B9A3D7 /* prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5799C92191D27D00B9A3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -1488,6 +2054,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C518047223C52A100FFA4C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C518048223C52A100FFA4C1 /* Pods_stub.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C5180E3223C56B100FFA4C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C5180E4223C56B100FFA4C1 /* EarlGrey.framework in Frameworks */,
+				3C5180E5223C56B100FFA4C1 /* Pods_eosreachTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C51812B223C581400FFA4C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C51812C223C581400FFA4C1 /* EarlGrey.framework in Frameworks */,
+				3C51812D223C581400FFA4C1 /* Pods_eosreachTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C5799BE2191D27D00B9A3D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1792,15 +2384,45 @@
 			path = request;
 			sourceTree = "<group>";
 		};
+		3C51809D223C553800FFA4C1 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				3C51809E223C55AD00FFA4C1 /* Config.swift */,
+				3C5180A0223C55E300FFA4C1 /* ProxyVoteTestCase.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		3C5180A6223C568F00FFA4C1 /* eosreachDevTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C51809D223C553800FFA4C1 /* app */,
+			);
+			path = eosreachDevTests;
+			sourceTree = "<group>";
+		};
+		3C518139223C584500FFA4C1 /* eosreachStubTests */ = {
+			isa = PBXGroup;
+			children = (
+				3CCC804A21FB972200B715C2 /* app */,
+			);
+			path = eosreachStubTests;
+			sourceTree = "<group>";
+		};
 		3C5799B82191D27D00B9A3D7 = {
 			isa = PBXGroup;
 			children = (
 				3C5799C32191D27D00B9A3D7 /* eosreach */,
 				3C5799D82191D27E00B9A3D7 /* eosreachTests */,
+				3C518139223C584500FFA4C1 /* eosreachStubTests */,
+				3C5180A6223C568F00FFA4C1 /* eosreachDevTests */,
 				3C5799C22191D27D00B9A3D7 /* Products */,
 				3C5799E42191D39A00B9A3D7 /* Frameworks */,
 				4A8C8B683B63E7118BDE78A2 /* Pods */,
 				3C7F0DB62194665D00E72DD1 /* Recovered References */,
+				3C518094223C52A200FFA4C1 /* stub copy-Info.plist */,
+				3C5180EE223C56B100FFA4C1 /* eosreachTests copy-Info.plist */,
+				3C518136223C581500FFA4C1 /* eosreachDevTests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1810,6 +2432,9 @@
 				3C5799C12191D27D00B9A3D7 /* prod.app */,
 				3C5799D52191D27E00B9A3D7 /* eosreachTests.xctest */,
 				3C0DBC2421F501430020CA1F /* stub.app */,
+				3C518093223C52A100FFA4C1 /* dev.app */,
+				3C5180ED223C56B100FFA4C1 /* eosreachDevTests.xctest */,
+				3C518135223C581400FFA4C1 /* eosreachStubTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1845,7 +2470,6 @@
 			children = (
 				3CCC804E21FB9BB900B715C2 /* orchestra */,
 				3CCC804021FB865400B715C2 /* robot */,
-				3CCC804A21FB972200B715C2 /* app */,
 				3C5799DB2191D27E00B9A3D7 /* Info.plist */,
 				DC0F5558D8100EC99A44F586 /* EarlGrey.swift */,
 				3CCC804321FB877A00B715C2 /* Espresso.swift */,
@@ -2196,6 +2820,7 @@
 				3CC9A3BC219DC06C0002A25F /* ChainApiModule.swift */,
 				3CC9A3BE219DC0F90002A25F /* HistoryApiModule.swift */,
 				3C0DBA5E21F4F8450020CA1F /* ReachApiModule.swift */,
+				3C518096223C532E00FFA4C1 /* ApiStrings.strings */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -2769,6 +3394,69 @@
 			productReference = 3C0DBC2421F501430020CA1F /* stub.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3C517EC2223C52A100FFA4C1 /* dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C518090223C52A100FFA4C1 /* Build configuration list for PBXNativeTarget "dev" */;
+			buildPhases = (
+				3C517EC3223C52A100FFA4C1 /* [CP] Check Pods Manifest.lock */,
+				3C517EC4223C52A100FFA4C1 /* ShellScript */,
+				3C517EC5223C52A100FFA4C1 /* Sources */,
+				3C518047223C52A100FFA4C1 /* Frameworks */,
+				3C518049223C52A100FFA4C1 /* Resources */,
+				3C51808F223C52A100FFA4C1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dev;
+			productName = eosreach;
+			productReference = 3C518093223C52A100FFA4C1 /* dev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3C5180A7223C56B100FFA4C1 /* eosreachDevTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C5180EA223C56B100FFA4C1 /* Build configuration list for PBXNativeTarget "eosreachDevTests" */;
+			buildPhases = (
+				3C5180AA223C56B100FFA4C1 /* [CP] Check Pods Manifest.lock */,
+				3C5180AB223C56B100FFA4C1 /* Sources */,
+				3C5180E3223C56B100FFA4C1 /* Frameworks */,
+				3C5180E6223C56B100FFA4C1 /* Resources */,
+				3C5180E7223C56B100FFA4C1 /* [CP] Embed Pods Frameworks */,
+				3C5180E8223C56B100FFA4C1 /* EarlGrey Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C5180F0223C56BE00FFA4C1 /* PBXTargetDependency */,
+			);
+			name = eosreachDevTests;
+			productName = eosreachTests;
+			productReference = 3C5180ED223C56B100FFA4C1 /* eosreachDevTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3C51810C223C581400FFA4C1 /* eosreachStubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C518132223C581400FFA4C1 /* Build configuration list for PBXNativeTarget "eosreachStubTests" */;
+			buildPhases = (
+				3C51810F223C581400FFA4C1 /* [CP] Check Pods Manifest.lock */,
+				3C518110223C581400FFA4C1 /* Sources */,
+				3C51812B223C581400FFA4C1 /* Frameworks */,
+				3C51812E223C581400FFA4C1 /* Resources */,
+				3C51812F223C581400FFA4C1 /* [CP] Embed Pods Frameworks */,
+				3C518130223C581400FFA4C1 /* EarlGrey Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C51810D223C581400FFA4C1 /* PBXTargetDependency */,
+				3C518138223C582100FFA4C1 /* PBXTargetDependency */,
+			);
+			name = eosreachStubTests;
+			productName = eosreachTests;
+			productReference = 3C518135223C581400FFA4C1 /* eosreachStubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3C5799C02191D27D00B9A3D7 /* prod */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C5799DE2191D27E00B9A3D7 /* Build configuration list for PBXNativeTarget "prod" */;
@@ -2820,12 +3508,17 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = memtrip;
 				TargetAttributes = {
+					3C5180A7223C56B100FFA4C1 = {
+						TestTargetID = 3C517EC2223C52A100FFA4C1;
+					};
+					3C51810C223C581400FFA4C1 = {
+						TestTargetID = 3C0DBA6021F501430020CA1F;
+					};
 					3C5799C02191D27D00B9A3D7 = {
 						CreatedOnToolsVersion = 10.0;
 					};
 					3C5799D42191D27E00B9A3D7 = {
 						CreatedOnToolsVersion = 10.0;
-						TestTargetID = 3C0DBA6021F501430020CA1F;
 					};
 				};
 			};
@@ -2844,7 +3537,10 @@
 			targets = (
 				3C5799C02191D27D00B9A3D7 /* prod */,
 				3C0DBA6021F501430020CA1F /* stub */,
+				3C517EC2223C52A100FFA4C1 /* dev */,
 				3C5799D42191D27E00B9A3D7 /* eosreachTests */,
+				3C5180A7223C56B100FFA4C1 /* eosreachDevTests */,
+				3C51810C223C581400FFA4C1 /* eosreachStubTests */,
 			);
 		};
 /* End PBXProject section */
@@ -2860,6 +3556,7 @@
 				3C0DBBE021F501430020CA1F /* VoteStrings.strings in Resources */,
 				3C0DBBE121F501430020CA1F /* happy_path_get_table_rows_regproxyinfo_single.json in Resources */,
 				3C0DBBE221F501430020CA1F /* request_get_table_rows_customtoken.json in Resources */,
+				3C518099223C540F00FFA4C1 /* ApiStrings.strings in Resources */,
 				3C0DBBE321F501430020CA1F /* LaunchScreen.storyboard in Resources */,
 				3C0DBBE421F501430020CA1F /* Assets.xcassets in Resources */,
 				3C0DBBE521F501430020CA1F /* AllocatedBandwidthCell.xib in Resources */,
@@ -2926,6 +3623,97 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C518049223C52A100FFA4C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C51804A223C52A100FFA4C1 /* happy_path_get_table_rows_customtoken.json in Resources */,
+				3C51804B223C52A100FFA4C1 /* WelcomeStrings.strings in Resources */,
+				3C51804C223C52A100FFA4C1 /* TransactionHistoryCell.xib in Resources */,
+				3C51804D223C52A100FFA4C1 /* VoteStrings.strings in Resources */,
+				3C51804E223C52A100FFA4C1 /* happy_path_get_table_rows_regproxyinfo_single.json in Resources */,
+				3C51804F223C52A100FFA4C1 /* request_get_table_rows_customtoken.json in Resources */,
+				3C518098223C540500FFA4C1 /* ApiStrings.strings in Resources */,
+				3C518050223C52A100FFA4C1 /* LaunchScreen.storyboard in Resources */,
+				3C518051223C52A100FFA4C1 /* Assets.xcassets in Resources */,
+				3C518052223C52A100FFA4C1 /* AllocatedBandwidthCell.xib in Resources */,
+				3C518053223C52A100FFA4C1 /* error_path_get_key_accounts_empty.json in Resources */,
+				3C518054223C52A100FFA4C1 /* happy_path_get_account_without_core_liquid_balance.json in Resources */,
+				3C518055223C52A100FFA4C1 /* CastProducersVoteCell.xib in Resources */,
+				3C518056223C52A100FFA4C1 /* RamStrings.strings in Resources */,
+				3C518057223C52A100FFA4C1 /* AccountStrings.strings in Resources */,
+				3C518058223C52A100FFA4C1 /* happy_path_get_table_rows_regproxyinfo.json in Resources */,
+				3C518059223C52A100FFA4C1 /* request_get_table_rows_regproxyinfo.json in Resources */,
+				3C51805A223C52A100FFA4C1 /* AccountCardCell.xib in Resources */,
+				3C51805B223C52A100FFA4C1 /* happy_path_get_actions.json in Resources */,
+				3C51805C223C52A100FFA4C1 /* ErrorView.xib in Resources */,
+				3C51805D223C52A100FFA4C1 /* ActionsCell.xib in Resources */,
+				3C51805E223C52A100FFA4C1 /* BandwidthStrings.strings in Resources */,
+				3C51805F223C52A100FFA4C1 /* request_get_table_rows_producerjson.json in Resources */,
+				3C518060223C52A100FFA4C1 /* TransactionLogViewController.xib in Resources */,
+				3C518061223C52A100FFA4C1 /* happy_path_get_table_rows_delegated_bandwidth.json in Resources */,
+				3C518062223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson_single.json in Resources */,
+				3C518063223C52A100FFA4C1 /* request_get_table_rows_rammarket.json in Resources */,
+				3C518064223C52A100FFA4C1 /* happy_path_get_producers.json in Resources */,
+				3C518065223C52A100FFA4C1 /* happy_path_get_key_accounts.json in Resources */,
+				3C518066223C52A100FFA4C1 /* KeyPairCell.xib in Resources */,
+				3C518067223C52A100FFA4C1 /* TransactionReceiptViewController.xib in Resources */,
+				3C518068223C52A100FFA4C1 /* happy_path_get_edna_currency_balance.json in Resources */,
+				3C518069223C52A100FFA4C1 /* TransferStrings.strings in Resources */,
+				3C51806A223C52A100FFA4C1 /* happy_path_price.json in Resources */,
+				3C51806B223C52A100FFA4C1 /* happy_path_get_account_voter_info_no_vote.json in Resources */,
+				3C51806C223C52A100FFA4C1 /* happy_path_get_table_rows_delegated_bandwidth_empty.json in Resources */,
+				3C51806D223C52A100FFA4C1 /* happy_path_get_account_staked.json in Resources */,
+				3C51806E223C52A100FFA4C1 /* ActiveBlockProducerCell.xib in Resources */,
+				3C51806F223C52A100FFA4C1 /* happy_path_push_transaction_log.json in Resources */,
+				3C518070223C52A100FFA4C1 /* happy_path_get_account_voter_info_producer_vote.json in Resources */,
+				3C518071223C52A100FFA4C1 /* happy_path_get_account_voter_info_proxy_vote.json in Resources */,
+				3C518072223C52A100FFA4C1 /* BalanceCell.xib in Resources */,
+				3C518073223C52A100FFA4C1 /* ProxyVoterListCell.xib in Resources */,
+				3C518074223C52A100FFA4C1 /* AppStrings.strings in Resources */,
+				3C518075223C52A100FFA4C1 /* Main.storyboard in Resources */,
+				3C518076223C52A100FFA4C1 /* happy_path_get_key_accounts_empty.json in Resources */,
+				3C518077223C52A100FFA4C1 /* RegisteredBlockProducersCell.xib in Resources */,
+				3C518078223C52A100FFA4C1 /* request_get_table_rows_regproxyinfo_single.json in Resources */,
+				3C518079223C52A100FFA4C1 /* happy_path_get_account_unstaked.json in Resources */,
+				3C51807A223C52A100FFA4C1 /* BlockProducerStrings.strings in Resources */,
+				3C51807B223C52A100FFA4C1 /* request_get_table_rows_producerjson_single.json in Resources */,
+				3C51807C223C52A100FFA4C1 /* error_push_transaction_log.json in Resources */,
+				3C51807D223C52A100FFA4C1 /* happy_path_get_info.json in Resources */,
+				3C51807E223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson.json in Resources */,
+				3C51807F223C52A100FFA4C1 /* ReachNetCpuView.xib in Resources */,
+				3C518080223C52A100FFA4C1 /* SettingsStrings.strings in Resources */,
+				3C518081223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson_empty.json in Resources */,
+				3C518082223C52A100FFA4C1 /* happy_path_get_key_accounts_single.json in Resources */,
+				3C518083223C52A100FFA4C1 /* happy_path_get_empty_currency_balance.json in Resources */,
+				3C518084223C52A100FFA4C1 /* ProxyStrings.strings in Resources */,
+				3C518085223C52A100FFA4C1 /* happy_path_create_account.json in Resources */,
+				3C518086223C52A100FFA4C1 /* happy_path_get_sys_currency_balance.json in Resources */,
+				3C518087223C52A100FFA4C1 /* request_get_table_rows_delegated_bandwidth.json in Resources */,
+				3C518088223C52A100FFA4C1 /* ExploreStrings.strings in Resources */,
+				3C518089223C52A100FFA4C1 /* ResourceGraphView.xib in Resources */,
+				3C51808A223C52A100FFA4C1 /* TransactionStrings.strings in Resources */,
+				3C51808B223C52A100FFA4C1 /* happy_path_get_table_rows_rammarket.json in Resources */,
+				3C51808C223C52A100FFA4C1 /* request_get_currency_balance_edna.json in Resources */,
+				3C51808D223C52A100FFA4C1 /* VoteProducerCell.xib in Resources */,
+				3C51808E223C52A100FFA4C1 /* happy_path_get_account_refund.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C5180E6223C56B100FFA4C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C51812E223C581400FFA4C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C5799BF2191D27D00B9A3D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2944,6 +3732,7 @@
 				3C1F1F9A21A35B090075BD71 /* ActionsCell.xib in Resources */,
 				3C8BD23521A6C16F00ACFA70 /* BandwidthStrings.strings in Resources */,
 				3C07009521A71AA5008F63D2 /* TransactionLogViewController.xib in Resources */,
+				3C51809A223C540F00FFA4C1 /* ApiStrings.strings in Resources */,
 				3C0A86AE21ABFD5D00F48302 /* KeyPairCell.xib in Resources */,
 				3C07009B21A72217008F63D2 /* TransactionReceiptViewController.xib in Resources */,
 				3CB1D72721A86B9100C87EC9 /* TransferStrings.strings in Resources */,
@@ -3121,6 +3910,245 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n";
+		};
+		3C517EC3223C52A100FFA4C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-stub-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C517EC4223C52A100FFA4C1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n";
+		};
+		3C51808F223C52A100FFA4C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-stub/Pods-stub-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/EllipticCurveKeyPair/EllipticCurveKeyPair.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/eosswift/eosswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EllipticCurveKeyPair.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/eosswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stub/Pods-stub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C5180AA223C56B100FFA4C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eosreachTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C5180E7223C56B100FFA4C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/EllipticCurveKeyPair/EllipticCurveKeyPair.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/eosswift/eosswift.framework",
+				"${PODS_ROOT}/EarlGrey/EarlGrey/EarlGrey.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EllipticCurveKeyPair.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/eosswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EarlGrey.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C51810F223C581400FFA4C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eosreachTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C51812F223C581400FFA4C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/EllipticCurveKeyPair/EllipticCurveKeyPair.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/eosswift/eosswift.framework",
+				"${PODS_ROOT}/EarlGrey/EarlGrey/EarlGrey.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EllipticCurveKeyPair.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/eosswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EarlGrey.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		3C9A79F28537B841CE99E8DF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3619,6 +4647,491 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C517EC5223C52A100FFA4C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C517EC6223C52A100FFA4C1 /* DeleteTransactionLog.swift in Sources */,
+				3C517EC7223C52A100FFA4C1 /* RegisteredBlockProducersViewModel.swift in Sources */,
+				3C517EC8223C52A100FFA4C1 /* SegueBundle.swift in Sources */,
+				3C517EC9223C52A100FFA4C1 /* ViewProxyVoterViewController.swift in Sources */,
+				3C517ECA223C52A100FFA4C1 /* RamPriceRequestImpl.swift in Sources */,
+				3C517ECB223C52A100FFA4C1 /* EosKeyManager.swift in Sources */,
+				3C517ECC223C52A100FFA4C1 /* AllocatedBandwidthViewModel.swift in Sources */,
+				3C517ECD223C52A100FFA4C1 /* TargetSwitch.swift in Sources */,
+				3C517ECE223C52A100FFA4C1 /* EosPrice.swift in Sources */,
+				3C517ECF223C52A100FFA4C1 /* PendingAccountNameInLimbo.swift in Sources */,
+				3C517ED0223C52A100FFA4C1 /* CastProducersVoteResult.swift in Sources */,
+				3C517ED1223C52A100FFA4C1 /* CastTab.swift in Sources */,
+				3C517ED2223C52A100FFA4C1 /* SellRamViewState.swift in Sources */,
+				3C517ED3223C52A100FFA4C1 /* GetAccountByName.swift in Sources */,
+				3C517ED4223C52A100FFA4C1 /* MxIntent.swift in Sources */,
+				3C517ED5223C52A100FFA4C1 /* AccountView.swift in Sources */,
+				3C517ED6223C52A100FFA4C1 /* ManageRamBundle.swift in Sources */,
+				3C517ED7223C52A100FFA4C1 /* GetBalances.swift in Sources */,
+				3C517ED8223C52A100FFA4C1 /* RegisteredBlockProducersCell.swift in Sources */,
+				3C517ED9223C52A100FFA4C1 /* StoreKitRequestStub.swift in Sources */,
+				3C517EDA223C52A100FFA4C1 /* CastProducersVoteTableView.swift in Sources */,
+				3C517EDB223C52A100FFA4C1 /* ViewProxyVoterViewState.swift in Sources */,
+				3C517EDC223C52A100FFA4C1 /* BalanceFormatter.swift in Sources */,
+				3C517EDD223C52A100FFA4C1 /* ImportKeyViewState.swift in Sources */,
+				3C517EDE223C52A100FFA4C1 /* EosEndpointResult.swift in Sources */,
+				3C517EDF223C52A100FFA4C1 /* EosEndpoint.swift in Sources */,
+				3C517EE0223C52A100FFA4C1 /* AccountNavigationUseCase.swift in Sources */,
+				3C517EE1223C52A100FFA4C1 /* RegisteredBlockProducersDelegate.swift in Sources */,
+				3C517EE2223C52A100FFA4C1 /* TransferConfirmViewController.swift in Sources */,
+				3C517EE3223C52A100FFA4C1 /* UndelegateBandwidthViewState.swift in Sources */,
+				3C517EE4223C52A100FFA4C1 /* ConfirmBandwidthResult.swift in Sources */,
+				3C517EE5223C52A100FFA4C1 /* ManageRamViewModel.swift in Sources */,
+				3C517EE6223C52A100FFA4C1 /* KeyPairTableView.swift in Sources */,
+				3C517EE7223C52A100FFA4C1 /* RsaEncryptionVerified.swift in Sources */,
+				3C517EE8223C52A100FFA4C1 /* Stub.swift in Sources */,
+				3C517EE9223C52A100FFA4C1 /* AccountNavigationViewState.swift in Sources */,
+				3C517EEA223C52A100FFA4C1 /* CastProxyVoteViewModel.swift in Sources */,
+				3C517EEB223C52A100FFA4C1 /* VoteResult.swift in Sources */,
+				3C517EEC223C52A100FFA4C1 /* SellRamViewModel.swift in Sources */,
+				3C517EED223C52A100FFA4C1 /* ExtraTapDelegate.swift in Sources */,
+				3C517EEE223C52A100FFA4C1 /* EosRefundRequest.swift in Sources */,
+				3C517EEF223C52A100FFA4C1 /* StoreKitHandler.swift in Sources */,
+				3C517EF0223C52A100FFA4C1 /* ImportKeyIntent.swift in Sources */,
+				3C517EF1223C52A100FFA4C1 /* ViewBlockProducerBundle.swift in Sources */,
+				3C517EF2223C52A100FFA4C1 /* ProxyVoterRequest.swift in Sources */,
+				3C517EF3223C52A100FFA4C1 /* BalanceViewState.swift in Sources */,
+				3C517EF4223C52A100FFA4C1 /* SplashViewState.swift in Sources */,
+				3C517EF5223C52A100FFA4C1 /* AllocatedBandwidthResult.swift in Sources */,
+				3C517EF6223C52A100FFA4C1 /* ProxyVoterListCell.swift in Sources */,
+				3C517EF7223C52A100FFA4C1 /* GetAccounts.swift in Sources */,
+				3C517EF8223C52A100FFA4C1 /* AllocatedBandwidthDelegate.swift in Sources */,
+				3C517EF9223C52A100FFA4C1 /* AccountsForPublicKeyRequestImpl.swift in Sources */,
+				3C517EFA223C52A100FFA4C1 /* ActionsIntent.swift in Sources */,
+				3C517EFB223C52A100FFA4C1 /* RegisteredBlockProducersIntent.swift in Sources */,
+				3C517EFC223C52A100FFA4C1 /* TransactionReceiptBundle.swift in Sources */,
+				3C517EFD223C52A100FFA4C1 /* EosAccountRequestImpl.swift in Sources */,
+				3C517EFE223C52A100FFA4C1 /* UnusedAccountInLimbo.swift in Sources */,
+				3C517EFF223C52A100FFA4C1 /* AccountListSelection.swift in Sources */,
+				3C517F00223C52A100FFA4C1 /* CastProxyVoteIntent.swift in Sources */,
+				3C517F01223C52A100FFA4C1 /* CreateAccountViewController.swift in Sources */,
+				3C517F02223C52A100FFA4C1 /* EosPriceApi.swift in Sources */,
+				3C517F03223C52A100FFA4C1 /* TransferViewController.swift in Sources */,
+				3C517F04223C52A100FFA4C1 /* CutomTokensRequestImpl.swift in Sources */,
+				3C517F05223C52A100FFA4C1 /* ViewActionViewState.swift in Sources */,
+				3C517F06223C52A100FFA4C1 /* TransactionHistoryIntent.swift in Sources */,
+				3C517F07223C52A100FFA4C1 /* ProxyVoterRequestImpl.swift in Sources */,
+				3C517F08223C52A100FFA4C1 /* ViewPrivateKeysViewController.swift in Sources */,
+				3C517F09223C52A100FFA4C1 /* TransactionHistoryViewController.swift in Sources */,
+				3C517F0A223C52A100FFA4C1 /* AccountViewState.swift in Sources */,
+				3C517F0B223C52A100FFA4C1 /* BalanceIntent.swift in Sources */,
+				3C517F0C223C52A100FFA4C1 /* AccountActionRequest.swift in Sources */,
+				3C517F0D223C52A100FFA4C1 /* MxViewState.swift in Sources */,
+				3C517F0E223C52A100FFA4C1 /* CreateAccountResult.swift in Sources */,
+				3C517F0F223C52A100FFA4C1 /* MxResult.swift in Sources */,
+				3C517F10223C52A100FFA4C1 /* CastProducersVoteIntent.swift in Sources */,
+				3C517F11223C52A100FFA4C1 /* QueuedStubResponse.swift in Sources */,
+				3C517F12223C52A100FFA4C1 /* UnusedTransactionIdentifier.swift in Sources */,
+				3C517F13223C52A100FFA4C1 /* EosPriceValue.swift in Sources */,
+				3C517F14223C52A100FFA4C1 /* ProxyVoterListViewModel.swift in Sources */,
+				3C517F15223C52A100FFA4C1 /* GetTransactionHistory.swift in Sources */,
+				3C517F16223C52A100FFA4C1 /* EntryViewController.swift in Sources */,
+				3C517F17223C52A100FFA4C1 /* InsertBalances.swift in Sources */,
+				3C517F18223C52A100FFA4C1 /* ProxyVoterListViewController.swift in Sources */,
+				3C517F19223C52A100FFA4C1 /* TransactionReceiptIntent.swift in Sources */,
+				3C517F1A223C52A100FFA4C1 /* TransferConfirmViewModel.swift in Sources */,
+				3C517F1B223C52A100FFA4C1 /* AccountsForPublicKeyRequest.swift in Sources */,
+				3C517F1C223C52A100FFA4C1 /* TransactionHistoryResult.swift in Sources */,
+				3C517F1D223C52A100FFA4C1 /* Balance.swift in Sources */,
+				3C517F1E223C52A100FFA4C1 /* VoteViewState.swift in Sources */,
+				3C517F1F223C52A100FFA4C1 /* VoteIntent.swift in Sources */,
+				3C517F20223C52A100FFA4C1 /* ConfirmBandwidthViewController.swift in Sources */,
+				3C517F21223C52A100FFA4C1 /* UndelegateBandwidthIntent.swift in Sources */,
+				3C517F22223C52A100FFA4C1 /* CreateAccountIntent.swift in Sources */,
+				3C517F23223C52A100FFA4C1 /* LinkedList.swift in Sources */,
+				3C517F24223C52A100FFA4C1 /* ViewActionViewController.swift in Sources */,
+				3C517F25223C52A100FFA4C1 /* DelegateBandwidthResult.swift in Sources */,
+				3C517F26223C52A100FFA4C1 /* AccountCardCell.swift in Sources */,
+				3C517F27223C52A100FFA4C1 /* DelegateBandwidthViewController.swift in Sources */,
+				3C517F28223C52A100FFA4C1 /* ActionsResult.swift in Sources */,
+				3C517F29223C52A100FFA4C1 /* AccountEntity.swift in Sources */,
+				3C517F2A223C52A100FFA4C1 /* DropDb.swift in Sources */,
+				3C517F2B223C52A100FFA4C1 /* SearchViewController.swift in Sources */,
+				3C517F2C223C52A100FFA4C1 /* ResourcesIntent.swift in Sources */,
+				3C517F2D223C52A100FFA4C1 /* ViewProxyVoterResult.swift in Sources */,
+				3C517F2E223C52A100FFA4C1 /* ViewBlockProducerIntent.swift in Sources */,
+				3C517F2F223C52A100FFA4C1 /* CastViewController.swift in Sources */,
+				3C517F30223C52A100FFA4C1 /* ManageRamIntent.swift in Sources */,
+				3C517F31223C52A100FFA4C1 /* RegisteredBlockProducerRequest.swift in Sources */,
+				3C517F32223C52A100FFA4C1 /* TransferResult.swift in Sources */,
+				3C517F33223C52A100FFA4C1 /* SettingsDelegate.swift in Sources */,
+				3C517F34223C52A100FFA4C1 /* AccountBalanceRequest.swift in Sources */,
+				3C517F35223C52A100FFA4C1 /* ReachActivityIndicator.swift in Sources */,
+				3C517F36223C52A100FFA4C1 /* SellRamViewController.swift in Sources */,
+				3C517F37223C52A100FFA4C1 /* TokenParent.swift in Sources */,
+				3C517F38223C52A100FFA4C1 /* StubApi.swift in Sources */,
+				3C517F39223C52A100FFA4C1 /* AccountViewLayout.swift in Sources */,
+				3C517F3A223C52A100FFA4C1 /* ReachSwitch.swift in Sources */,
+				3C517F3B223C52A100FFA4C1 /* ReceiptDataRequest.swift in Sources */,
+				3C517F3C223C52A100FFA4C1 /* types.swift in Sources */,
+				3C517F3D223C52A100FFA4C1 /* TransactionReceiptResult.swift in Sources */,
+				3C517F3E223C52A100FFA4C1 /* BasicStubResponse.swift in Sources */,
+				3C517F3F223C52A100FFA4C1 /* RegisteredBlockProducersResult.swift in Sources */,
+				3C517F40223C52A100FFA4C1 /* date_types.swift in Sources */,
+				3C517F41223C52A100FFA4C1 /* TransferBundle.swift in Sources */,
+				3C517F42223C52A100FFA4C1 /* BandwidthFormBundle.swift in Sources */,
+				3C517F43223C52A100FFA4C1 /* EntryViewState.swift in Sources */,
+				3C517F44223C52A100FFA4C1 /* ReachTabBar.swift in Sources */,
+				3C517F45223C52A100FFA4C1 /* ImportKeyViewController.swift in Sources */,
+				3C517F46223C52A100FFA4C1 /* AccountIntent.swift in Sources */,
+				3C517F47223C52A100FFA4C1 /* ReachButton.swift in Sources */,
+				3C517F48223C52A100FFA4C1 /* SimpleTableView.swift in Sources */,
+				3C517F49223C52A100FFA4C1 /* EosPriceLastUpdated.swift in Sources */,
+				3C517F4A223C52A100FFA4C1 /* ActionsCell.swift in Sources */,
+				3C517F4B223C52A100FFA4C1 /* RegisteredBlockProducerRequestImpl.swift in Sources */,
+				3C517F4C223C52A100FFA4C1 /* ResourcesViewModel.swift in Sources */,
+				3C517F4D223C52A100FFA4C1 /* ProxyVoterListViewState.swift in Sources */,
+				3C517F4E223C52A100FFA4C1 /* AccountDelegate.swift in Sources */,
+				3C517F4F223C52A100FFA4C1 /* ViewActionViewModel.swift in Sources */,
+				3C517F50223C52A100FFA4C1 /* AccountActionList.swift in Sources */,
+				3C517F51223C52A100FFA4C1 /* EntryViewModel.swift in Sources */,
+				3C517F52223C52A100FFA4C1 /* UnusedPublicKey.swift in Sources */,
+				3C517F53223C52A100FFA4C1 /* SearchIntent.swift in Sources */,
+				3C517F54223C52A100FFA4C1 /* VoteReceipt.swift in Sources */,
+				3C517F55223C52A100FFA4C1 /* ManageBandwidthViewController.swift in Sources */,
+				3C517F56223C52A100FFA4C1 /* ChainApiModule.swift in Sources */,
+				3C517F57223C52A100FFA4C1 /* SellRamIntent.swift in Sources */,
+				3C517F58223C52A100FFA4C1 /* SearchViewState.swift in Sources */,
+				3C517F59223C52A100FFA4C1 /* AllocatedBandwidthViewController.swift in Sources */,
+				3C517F5A223C52A100FFA4C1 /* BalanceViewModel.swift in Sources */,
+				3C517F5B223C52A100FFA4C1 /* ManageBandwidthBundle.swift in Sources */,
+				3C517F5C223C52A100FFA4C1 /* EosEndpointViewState.swift in Sources */,
+				3C517F5D223C52A100FFA4C1 /* EosPriceUseCase.swift in Sources */,
+				3C517F5E223C52A100FFA4C1 /* ProxyVoterListIntent.swift in Sources */,
+				3C517F5F223C52A100FFA4C1 /* InsertTransactionLog.swift in Sources */,
+				3C517F60223C52A100FFA4C1 /* DeleteBalances.swift in Sources */,
+				3C517F61223C52A100FFA4C1 /* ViewPrivateKeysIntent.swift in Sources */,
+				3C517F62223C52A100FFA4C1 /* EntryResult.swift in Sources */,
+				3C517F63223C52A100FFA4C1 /* AccountNavigationSelected.swift in Sources */,
+				3C517F64223C52A100FFA4C1 /* ResourcesViewLayout.swift in Sources */,
+				3C517F65223C52A100FFA4C1 /* Token.swift in Sources */,
+				3C517F66223C52A100FFA4C1 /* ResourcesViewState.swift in Sources */,
+				3C517F67223C52A100FFA4C1 /* ActiveBlockProducersViewState.swift in Sources */,
+				3C517F68223C52A100FFA4C1 /* TransactionHistoryViewState.swift in Sources */,
+				3C517F69223C52A100FFA4C1 /* AllocatedBandwidthViewState.swift in Sources */,
+				3C517F6A223C52A100FFA4C1 /* ActionsViewController.swift in Sources */,
+				3C517F6B223C52A100FFA4C1 /* ActiveBlockProducersViewModel.swift in Sources */,
+				3C517F6C223C52A100FFA4C1 /* BandwidthRequestImpl.swift in Sources */,
+				3C517F6D223C52A100FFA4C1 /* ActiveBlockProducersViewController.swift in Sources */,
+				3C517F6E223C52A100FFA4C1 /* AccountNavigationViewModel.swift in Sources */,
+				3C517F6F223C52A100FFA4C1 /* BuyRamViewModel.swift in Sources */,
+				3C517F70223C52A100FFA4C1 /* ActionsBundle.swift in Sources */,
+				3C517F71223C52A100FFA4C1 /* BuyRamViewController.swift in Sources */,
+				3C517F72223C52A100FFA4C1 /* UnusedPublicKeyNoAccountsSynced.swift in Sources */,
+				3C517F73223C52A100FFA4C1 /* CastBundle.swift in Sources */,
+				3C517F74223C52A100FFA4C1 /* TransactionReceiptViewController.swift in Sources */,
+				3C517F75223C52A100FFA4C1 /* ViewActionResult.swift in Sources */,
+				3C517F76223C52A100FFA4C1 /* Logger.swift in Sources */,
+				3C517F77223C52A100FFA4C1 /* RamRequestImpl.swift in Sources */,
+				3C517F78223C52A100FFA4C1 /* SettingsIntent.swift in Sources */,
+				3C517F79223C52A100FFA4C1 /* InsertAccountsForPublicKey.swift in Sources */,
+				3C517F7A223C52A100FFA4C1 /* TransferConfirmResult.swift in Sources */,
+				3C517F7B223C52A100FFA4C1 /* DelegateBandwidthViewState.swift in Sources */,
+				3C517F7C223C52A100FFA4C1 /* TransferIntent.swift in Sources */,
+				3C517F7D223C52A100FFA4C1 /* SettingsViewModel.swift in Sources */,
+				3C517F7E223C52A100FFA4C1 /* BalanceTableView.swift in Sources */,
+				3C517F7F223C52A100FFA4C1 /* MxViewModel.swift in Sources */,
+				3C517F80223C52A100FFA4C1 /* EosCreateAccountRequestImpl.swift in Sources */,
+				3C517F81223C52A100FFA4C1 /* PurgeUserDefaults.swift in Sources */,
+				3C517F82223C52A100FFA4C1 /* StubSkPrice.swift in Sources */,
+				3C517F83223C52A100FFA4C1 /* AccountBalanceList.swift in Sources */,
+				3C517F84223C52A100FFA4C1 /* CastProxyVoteViewController.swift in Sources */,
+				3C517F85223C52A100FFA4C1 /* ResourcesRenderer.swift in Sources */,
+				3C517F86223C52A100FFA4C1 /* ConfirmRamResult.swift in Sources */,
+				3C517F87223C52A100FFA4C1 /* TransactionHistoryCell.swift in Sources */,
+				3C517F88223C52A100FFA4C1 /* ImportKeyResult.swift in Sources */,
+				3C517F89223C52A100FFA4C1 /* AccountRenderer.swift in Sources */,
+				3C517F8A223C52A100FFA4C1 /* EosEndpointViewModel.swift in Sources */,
+				3C517F8B223C52A100FFA4C1 /* ReachBorderLabel.swift in Sources */,
+				3C517F8C223C52A100FFA4C1 /* AccountUseCase.swift in Sources */,
+				3C517F8D223C52A100FFA4C1 /* ReceiptDataRequestStub.swift in Sources */,
+				3C517F8E223C52A100FFA4C1 /* ActiveBlockProducersResult.swift in Sources */,
+				3C517F8F223C52A100FFA4C1 /* ViewProxyVoterIntent.swift in Sources */,
+				3C517F90223C52A100FFA4C1 /* ManageRamViewState.swift in Sources */,
+				3C517F91223C52A100FFA4C1 /* ConfirmRamViewModel.swift in Sources */,
+				3C517F92223C52A100FFA4C1 /* ViewPrivateKeysViewModel.swift in Sources */,
+				3C517F93223C52A100FFA4C1 /* ResourceGraphView.swift in Sources */,
+				3C517F94223C52A100FFA4C1 /* ReachTabsController.swift in Sources */,
+				3C517F95223C52A100FFA4C1 /* DelegatedBandwidth.swift in Sources */,
+				3C517F96223C52A100FFA4C1 /* VoteRequestImpl.swift in Sources */,
+				3C517F97223C52A100FFA4C1 /* TransferViewState.swift in Sources */,
+				3C517F98223C52A100FFA4C1 /* EncryptedKeyPairData.swift in Sources */,
+				3C517F99223C52A100FFA4C1 /* R.generated.swift in Sources */,
+				3C517F9A223C52A100FFA4C1 /* ConfirmBandwidthViewModel.swift in Sources */,
+				3C517F9B223C52A100FFA4C1 /* StubRequest.swift in Sources */,
+				3C517F9C223C52A100FFA4C1 /* ViewPrivateKeysViewState.swift in Sources */,
+				3C517F9D223C52A100FFA4C1 /* DeleteAccounts.swift in Sources */,
+				3C517F9E223C52A100FFA4C1 /* BuyRamResult.swift in Sources */,
+				3C517F9F223C52A100FFA4C1 /* CurrencyPairingViewModel.swift in Sources */,
+				3C517FA0223C52A100FFA4C1 /* MxViewController.swift in Sources */,
+				3C517FA1223C52A100FFA4C1 /* EntryIntent.swift in Sources */,
+				3C517FA2223C52A100FFA4C1 /* SettingsViewController.swift in Sources */,
+				3C517FA3223C52A100FFA4C1 /* SellRamResult.swift in Sources */,
+				3C517FA4223C52A100FFA4C1 /* RegisteredBlockProducer.swift in Sources */,
+				3C517FA5223C52A100FFA4C1 /* ActiveBlockProducersIntent.swift in Sources */,
+				3C517FA6223C52A100FFA4C1 /* TransactionReceiptViewModel.swift in Sources */,
+				3C517FA7223C52A100FFA4C1 /* CreateAccountReceipt.swift in Sources */,
+				3C517FA8223C52A100FFA4C1 /* GetBandwidthRequest.swift in Sources */,
+				3C517FA9223C52A100FFA4C1 /* GetAccountsNamesForPublicKey.swift in Sources */,
+				3C517FAA223C52A100FFA4C1 /* Connection.swift in Sources */,
+				3C517FAB223C52A100FFA4C1 /* SplashIntent.swift in Sources */,
+				3C517FAC223C52A100FFA4C1 /* AccountPage.swift in Sources */,
+				3C517FAD223C52A100FFA4C1 /* ViewBlockProducerViewModel.swift in Sources */,
+				3C517FAE223C52A100FFA4C1 /* ManageRamResult.swift in Sources */,
+				3C517FAF223C52A100FFA4C1 /* ReachToolbar.swift in Sources */,
+				3C517FB0223C52A100FFA4C1 /* Result.swift in Sources */,
+				3C517FB1223C52A100FFA4C1 /* ReachTextField.swift in Sources */,
+				3C517FB2223C52A100FFA4C1 /* scope_types.swift in Sources */,
+				3C517FB3223C52A100FFA4C1 /* CurrencyPairingViewController.swift in Sources */,
+				3C517FB4223C52A100FFA4C1 /* BlockProducerDetails.swift in Sources */,
+				3C517FB5223C52A100FFA4C1 /* SplashViewModel.swift in Sources */,
+				3C517FB6223C52A100FFA4C1 /* TransactionReceiptViewState.swift in Sources */,
+				3C517FB7223C52A100FFA4C1 /* CurrencyPairingResult.swift in Sources */,
+				3C517FB8223C52A100FFA4C1 /* ActiveBlockProducersTableView.swift in Sources */,
+				3C517FB9223C52A100FFA4C1 /* ProxyVoterListResult.swift in Sources */,
+				3C517FBA223C52A100FFA4C1 /* CastProducersVoteViewModel.swift in Sources */,
+				3C517FBB223C52A100FFA4C1 /* TransactionHistoryTableView.swift in Sources */,
+				3C517FBC223C52A100FFA4C1 /* EosAccountResource.swift in Sources */,
+				3C517FBD223C52A100FFA4C1 /* TransactionReceiptRoute.swift in Sources */,
+				3C517FBE223C52A100FFA4C1 /* ProxyVoterDetails.swift in Sources */,
+				3C517FBF223C52A100FFA4C1 /* AccountModel.swift in Sources */,
+				3C517FC0223C52A100FFA4C1 /* GetBandwidthRequestImpl.swift in Sources */,
+				3C517FC1223C52A100FFA4C1 /* ConfirmBandwidthIntent.swift in Sources */,
+				3C517FC2223C52A100FFA4C1 /* BalanceViewController.swift in Sources */,
+				3C517FC3223C52A100FFA4C1 /* UndelegateBandwidthViewModel.swift in Sources */,
+				3C517FC4223C52A100FFA4C1 /* ViewBlockProducerResult.swift in Sources */,
+				3C517FC5223C52A100FFA4C1 /* ActionsViewState.swift in Sources */,
+				3C517FC6223C52A100FFA4C1 /* CastProxyVoteResult.swift in Sources */,
+				3C517FC7223C52A100FFA4C1 /* ActionsViewModel.swift in Sources */,
+				3C517FC8223C52A100FFA4C1 /* VoteProducerTableView.swift in Sources */,
+				3C517FC9223C52A100FFA4C1 /* ImportKeyViewModel.swift in Sources */,
+				3C517FCA223C52A100FFA4C1 /* BlockProducerRequest.swift in Sources */,
+				3C517FCB223C52A100FFA4C1 /* TransferViewModel.swift in Sources */,
+				3C517FCC223C52A100FFA4C1 /* DelegateBandwidthViewModel.swift in Sources */,
+				3C517FCD223C52A100FFA4C1 /* StoreKitRequestFactory.swift in Sources */,
+				3C517FCE223C52A100FFA4C1 /* EosCreateAccountApi.swift in Sources */,
+				3C517FCF223C52A100FFA4C1 /* KeyPairCell.swift in Sources */,
+				3C517FD0223C52A100FFA4C1 /* ReachNetCpuView.swift in Sources */,
+				3C517FD1223C52A100FFA4C1 /* ContractAccountBalance.swift in Sources */,
+				3C517FD2223C52A100FFA4C1 /* ResourcesResult.swift in Sources */,
+				3C517FD3223C52A100FFA4C1 /* AccountNavigationIntent.swift in Sources */,
+				3C517FD4223C52A100FFA4C1 /* ReachTextView.swift in Sources */,
+				3C517FD5223C52A100FFA4C1 /* ManageRamViewController.swift in Sources */,
+				3C517FD6223C52A100FFA4C1 /* SearchViewModel.swift in Sources */,
+				3C517FD7223C52A100FFA4C1 /* BalanceModel.swift in Sources */,
+				3C517FD8223C52A100FFA4C1 /* AccountNavigationResult.swift in Sources */,
+				3C517FD9223C52A100FFA4C1 /* CurrencyPairingViewState.swift in Sources */,
+				3C517FDA223C52A100FFA4C1 /* ReachProgressBar.swift in Sources */,
+				3C517FDB223C52A100FFA4C1 /* BuyRamIntent.swift in Sources */,
+				3C517FDC223C52A100FFA4C1 /* EosAccount.swift in Sources */,
+				3C517FDD223C52A100FFA4C1 /* ConfirmBandwidthViewState.swift in Sources */,
+				3C517FDE223C52A100FFA4C1 /* BlockProducerRequestImpl.swift in Sources */,
+				3C517FDF223C52A100FFA4C1 /* ActionReceipt.swift in Sources */,
+				3C517FE0223C52A100FFA4C1 /* TransferRequestImpl.swift in Sources */,
+				3C517FE1223C52A100FFA4C1 /* ui_types.swift in Sources */,
+				3C517FE2223C52A100FFA4C1 /* ProxyVoterListTableView.swift in Sources */,
+				3C517FE3223C52A100FFA4C1 /* ViewPrivateKeysResult.swift in Sources */,
+				3C517FE4223C52A100FFA4C1 /* CastProxyVoteViewState.swift in Sources */,
+				3C517FE5223C52A100FFA4C1 /* AllocatedBandwidthTableView.swift in Sources */,
+				3C517FE6223C52A100FFA4C1 /* CountAccounts.swift in Sources */,
+				3C517FE7223C52A100FFA4C1 /* TransactionLogViewController.swift in Sources */,
+				3C517FE8223C52A100FFA4C1 /* AccountNavigationViewController.swift in Sources */,
+				3C517FE9223C52A100FFA4C1 /* AccountsForPublicKey.swift in Sources */,
+				3C517FEA223C52A100FFA4C1 /* ViewActionIntent.swift in Sources */,
+				3C517FEB223C52A100FFA4C1 /* RegisteredBlockProducersViewState.swift in Sources */,
+				3C517FEC223C52A100FFA4C1 /* ReachApiModule.swift in Sources */,
+				3C517FED223C52A100FFA4C1 /* CustomTokensRequest.swift in Sources */,
+				3C517FEE223C52A100FFA4C1 /* CurrencyPairingIntent.swift in Sources */,
+				3C517FEF223C52A100FFA4C1 /* DelegateBandwidthIntent.swift in Sources */,
+				3C517FF0223C52A100FFA4C1 /* ActionsTableView.swift in Sources */,
+				3C517FF1223C52A100FFA4C1 /* TransferConfirmViewState.swift in Sources */,
+				3C517FF2223C52A100FFA4C1 /* AccountCardTableView.swift in Sources */,
+				3C517FF3223C52A100FFA4C1 /* EosPriceCurrencyPair.swift in Sources */,
+				3C517FF4223C52A100FFA4C1 /* BandwidthRequest.swift in Sources */,
+				3C517FF5223C52A100FFA4C1 /* AppDelegate.swift in Sources */,
+				3C517FF6223C52A100FFA4C1 /* VoteViewModel.swift in Sources */,
+				3C517FF7223C52A100FFA4C1 /* StoreKitRequest.swift in Sources */,
+				3C517FF8223C52A100FFA4C1 /* EosPriceRequest.swift in Sources */,
+				3C517FF9223C52A100FFA4C1 /* VoteRequest.swift in Sources */,
+				3C517FFA223C52A100FFA4C1 /* TransactionHistoryModel.swift in Sources */,
+				3C517FFB223C52A100FFA4C1 /* UndelegateBandwidthResult.swift in Sources */,
+				3C517FFC223C52A100FFA4C1 /* SimpleTableViewCell.swift in Sources */,
+				3C517FFD223C52A100FFA4C1 /* Copy.swift in Sources */,
+				3C517FFE223C52A100FFA4C1 /* ViewActionBundle.swift in Sources */,
+				3C517FFF223C52A100FFA4C1 /* CastProducersVoteViewState.swift in Sources */,
+				3C518000223C52A100FFA4C1 /* VoteViewController.swift in Sources */,
+				3C518001223C52A100FFA4C1 /* RegisteredBlockProducersTableView.swift in Sources */,
+				3C518002223C52A100FFA4C1 /* BalanceCell.swift in Sources */,
+				3C518003223C52A100FFA4C1 /* CastProducersVote.swift in Sources */,
+				3C518004223C52A100FFA4C1 /* HistoryApiModule.swift in Sources */,
+				3C518005223C52A100FFA4C1 /* RamPriceRequest.swift in Sources */,
+				3C518006223C52A100FFA4C1 /* EosPriceRequestImpl.swift in Sources */,
+				3C518007223C52A100FFA4C1 /* ViewBlockProducerViewState.swift in Sources */,
+				3C518008223C52A100FFA4C1 /* ConfirmRamIntent.swift in Sources */,
+				3C518009223C52A100FFA4C1 /* ReachBorderView.swift in Sources */,
+				3C51800A223C52A100FFA4C1 /* Rx.swift in Sources */,
+				3C51800B223C52A100FFA4C1 /* AccountBundle.swift in Sources */,
+				3C51800C223C52A100FFA4C1 /* CurrencySymbol.swift in Sources */,
+				3C51800D223C52A100FFA4C1 /* ErrorOnFirstStubRequest.swift in Sources */,
+				3C51800E223C52A100FFA4C1 /* VoteProducerCell.swift in Sources */,
+				3C51800F223C52A100FFA4C1 /* BuyRamViewState.swift in Sources */,
+				3C518010223C52A100FFA4C1 /* EosEndpointViewController.swift in Sources */,
+				3C518011223C52A100FFA4C1 /* DataTableView.swift in Sources */,
+				3C518012223C52A100FFA4C1 /* AccountNavigationDelegate.swift in Sources */,
+				3C518013223C52A100FFA4C1 /* EosEndpointUseCase.swift in Sources */,
+				3C518014223C52A100FFA4C1 /* StubConnection.swift in Sources */,
+				3C518015223C52A100FFA4C1 /* ViewKeyPair.swift in Sources */,
+				3C518016223C52A100FFA4C1 /* ViewProxyVoterBundle.swift in Sources */,
+				3C518017223C52A100FFA4C1 /* EosEndpointIntent.swift in Sources */,
+				3C518018223C52A100FFA4C1 /* SearchResult.swift in Sources */,
+				3C518019223C52A100FFA4C1 /* SettingsResult.swift in Sources */,
+				3C51801A223C52A100FFA4C1 /* BalanceEntity.swift in Sources */,
+				3C51801B223C52A100FFA4C1 /* CastProducersVoteViewController.swift in Sources */,
+				3C51801C223C52A100FFA4C1 /* ConfirmRamViewController.swift in Sources */,
+				3C51801D223C52A100FFA4C1 /* ActiveBlockProducersCell.swift in Sources */,
+				3C51801E223C52A100FFA4C1 /* ViewProxyVoterViewModel.swift in Sources */,
+				3C51801F223C52A100FFA4C1 /* CastProducersVoteCell.swift in Sources */,
+				3C518020223C52A100FFA4C1 /* AccountBalanceRequestImpl.swift in Sources */,
+				3C518021223C52A100FFA4C1 /* RamBundle.swift in Sources */,
+				3C518022223C52A100FFA4C1 /* AccountViewModel.swift in Sources */,
+				3C518023223C52A100FFA4C1 /* AccountActionRequestImpl.swift in Sources */,
+				3C518024223C52A100FFA4C1 /* EosKeyManagerStub.swift in Sources */,
+				3C518025223C52A100FFA4C1 /* EosCreateAccountRequest.swift in Sources */,
+				3C518026223C52A100FFA4C1 /* RamRequest.swift in Sources */,
+				3C518027223C52A100FFA4C1 /* SettingsViewState.swift in Sources */,
+				3C518028223C52A100FFA4C1 /* CreateAccountViewModel.swift in Sources */,
+				3C518029223C52A100FFA4C1 /* AllocatedBandwidthIntent.swift in Sources */,
+				3C51802A223C52A100FFA4C1 /* TransferFormBundle.swift in Sources */,
+				3C51802B223C52A100FFA4C1 /* ExploreViewController.swift in Sources */,
+				3C51802C223C52A100FFA4C1 /* AccountNameSystemBalance.swift in Sources */,
+				3C51802D223C52A100FFA4C1 /* AccountResult.swift in Sources */,
+				3C51802E223C52A100FFA4C1 /* TransactionReceiptDelegate.swift in Sources */,
+				3C51802F223C52A100FFA4C1 /* AllocatedBandwidthCell.swift in Sources */,
+				3C518030223C52A100FFA4C1 /* TransactionLogEntity.swift in Sources */,
+				3C518031223C52A100FFA4C1 /* EosAccountVote.swift in Sources */,
+				3C518032223C52A100FFA4C1 /* EosAccountRequest.swift in Sources */,
+				3C518033223C52A100FFA4C1 /* TransferRequest.swift in Sources */,
+				3C518034223C52A100FFA4C1 /* BalanceResult.swift in Sources */,
+				3C518035223C52A100FFA4C1 /* ViewBlockProducerViewController.swift in Sources */,
+				3C518036223C52A100FFA4C1 /* AccountViewController.swift in Sources */,
+				3C518037223C52A100FFA4C1 /* CurrencyPairFormatter.swift in Sources */,
+				3C518038223C52A100FFA4C1 /* TransactionHistoryViewModel.swift in Sources */,
+				3C518039223C52A100FFA4C1 /* SplashViewController.swift in Sources */,
+				3C51803A223C52A100FFA4C1 /* ActiveBlockProducersDelegate.swift in Sources */,
+				3C51803B223C52A100FFA4C1 /* AccountAction.swift in Sources */,
+				3C51803C223C52A100FFA4C1 /* StubUrlSession.swift in Sources */,
+				3C51803D223C52A100FFA4C1 /* RegisteredBlockProducersViewController.swift in Sources */,
+				3C51803E223C52A100FFA4C1 /* ConfirmRamViewState.swift in Sources */,
+				3C51803F223C52A100FFA4C1 /* TransferConfirmIntent.swift in Sources */,
+				3C518040223C52A100FFA4C1 /* CreateAccountViewState.swift in Sources */,
+				3C518041223C52A100FFA4C1 /* StubResponse.swift in Sources */,
+				3C518042223C52A100FFA4C1 /* ResourcesViewController.swift in Sources */,
+				3C518043223C52A100FFA4C1 /* SplashResult.swift in Sources */,
+				3C518044223C52A100FFA4C1 /* ErrorView.swift in Sources */,
+				3C518045223C52A100FFA4C1 /* StubMatcher.swift in Sources */,
+				3C518046223C52A100FFA4C1 /* UndelegateBandwidthViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C5180AB223C56B100FFA4C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C518100223C578000FFA4C1 /* ResourcesRobot.swift in Sources */,
+				3C5180FB223C578000FFA4C1 /* CreateAccountRobot.swift in Sources */,
+				3C51810B223C57B100FFA4C1 /* ProxyVoteTestCase.swift in Sources */,
+				3C518103223C578000FFA4C1 /* ActionsRobot.swift in Sources */,
+				3C5180FE223C578000FFA4C1 /* BalanceRobot.swift in Sources */,
+				3C518105223C578000FFA4C1 /* TransactionRobot.swift in Sources */,
+				3C518101223C578000FFA4C1 /* BandwidthRobot.swift in Sources */,
+				3C518104223C578000FFA4C1 /* TransferRobot.swift in Sources */,
+				3C5180F5223C578000FFA4C1 /* Robot.swift in Sources */,
+				3C5180F1223C572B00FFA4C1 /* Config.swift in Sources */,
+				3C5180F6223C578000FFA4C1 /* BlockProducerRobot.swift in Sources */,
+				3C5180FA223C578000FFA4C1 /* ImportKeyRobot.swift in Sources */,
+				3C5180F4223C577C00FFA4C1 /* ImportKeyOrchestra.swift in Sources */,
+				3C518107223C578000FFA4C1 /* SearchRobot.swift in Sources */,
+				3C5180FF223C578000FFA4C1 /* VoteRobot.swift in Sources */,
+				3C51810A223C578700FFA4C1 /* TestCase.swift in Sources */,
+				3C5180F8223C578000FFA4C1 /* SplashRobot.swift in Sources */,
+				3C5180FD223C578000FFA4C1 /* AccountRobot.swift in Sources */,
+				3C5180F9223C578000FFA4C1 /* CommonRobot.swift in Sources */,
+				3C5180F3223C577A00FFA4C1 /* Orchestra.swift in Sources */,
+				3C5180FC223C578000FFA4C1 /* AccountNavigationRobot.swift in Sources */,
+				3C518109223C578700FFA4C1 /* Espresso.swift in Sources */,
+				3C518108223C578700FFA4C1 /* EarlGrey.swift in Sources */,
+				3C5180F7223C578000FFA4C1 /* ProxyRobot.swift in Sources */,
+				3C518102223C578000FFA4C1 /* RamRobot.swift in Sources */,
+				3C518106223C578000FFA4C1 /* SettingsRobot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C518110223C581400FFA4C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C518141223C587800FFA4C1 /* ProxyVoteTestCase.swift in Sources */,
+				3C518111223C581400FFA4C1 /* ResourcesRobot.swift in Sources */,
+				3C518153223C589000FFA4C1 /* BillingFlowLimboEndWithNoAccountsTestCase.swift in Sources */,
+				3C518112223C581400FFA4C1 /* CreateAccountRobot.swift in Sources */,
+				3C51814C223C589000FFA4C1 /* BillingFlowStoreKitErrorTestCase.swift in Sources */,
+				3C51813F223C587800FFA4C1 /* BlockProducerVoteTestCase.swift in Sources */,
+				3C518146223C587F00FFA4C1 /* DelegateBandwidthTestCase.swift in Sources */,
+				3C51814B223C589000FFA4C1 /* BillingFlowAccountNumericStartTestCase.swift in Sources */,
+				3C518114223C581400FFA4C1 /* ActionsRobot.swift in Sources */,
+				3C518115223C581400FFA4C1 /* BalanceRobot.swift in Sources */,
+				3C51814E223C589000FFA4C1 /* BillingFlowFailedCreateAccountSuccessNoAccountsForPublicKeyTestCase.swift in Sources */,
+				3C518156223C589600FFA4C1 /* ClearDataAndLogoutTestCase.swift in Sources */,
+				3C518116223C581400FFA4C1 /* TransactionRobot.swift in Sources */,
+				3C518140223C587800FFA4C1 /* BlockProducerInformationVoteTestCase.swift in Sources */,
+				3C518117223C581400FFA4C1 /* BandwidthRobot.swift in Sources */,
+				3C518118223C581400FFA4C1 /* TransferRobot.swift in Sources */,
+				3C51813B223C587100FFA4C1 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */,
+				3C518144223C587800FFA4C1 /* VoteForProxyTestCase.swift in Sources */,
+				3C518143223C587800FFA4C1 /* NotVotedTestCase.swift in Sources */,
+				3C51813A223C587100FFA4C1 /* AccountStakedWithCoreBalanceTestCase.swift in Sources */,
+				3C518119223C581400FFA4C1 /* Robot.swift in Sources */,
+				3C518154223C589000FFA4C1 /* BillingFlowCannotMakePaymentErrorTestCase.swift in Sources */,
+				3C51814F223C589000FFA4C1 /* BillingFlowFailedCreateAccountSuccessErrorImportingPublicKeyTestCase.swift in Sources */,
+				3C51813D223C587100FFA4C1 /* GetAccountPriceErrorTestCase.swift in Sources */,
+				3C51813E223C587800FFA4C1 /* VoteForUsErrorTestCase.swift in Sources */,
+				3C51811B223C581400FFA4C1 /* BlockProducerRobot.swift in Sources */,
+				3C51811C223C581400FFA4C1 /* ImportKeyRobot.swift in Sources */,
+				3C518149223C588200FFA4C1 /* SellRamTestCase.swift in Sources */,
+				3C51813C223C587100FFA4C1 /* AccountWithErrorTestCase.swift in Sources */,
+				3C518142223C587800FFA4C1 /* ProxyVoteInformationTestCase.swift in Sources */,
+				3C51811D223C581400FFA4C1 /* ImportKeyOrchestra.swift in Sources */,
+				3C518147223C587F00FFA4C1 /* UnDelegateBandwidthTestCase.swift in Sources */,
+				3C51811E223C581400FFA4C1 /* SearchRobot.swift in Sources */,
+				3C518155223C589000FFA4C1 /* BillingFlowPaymentFailedErrorTestCase.swift in Sources */,
+				3C51811F223C581400FFA4C1 /* VoteRobot.swift in Sources */,
+				3C518120223C581400FFA4C1 /* TestCase.swift in Sources */,
+				3C51814D223C589000FFA4C1 /* BillingFlowSuccessTestCase.swift in Sources */,
+				3C51814A223C589000FFA4C1 /* BillingFlowAccountLengthTestCase.swift in Sources */,
+				3C518121223C581400FFA4C1 /* SplashRobot.swift in Sources */,
+				3C518151223C589000FFA4C1 /* BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift in Sources */,
+				3C518122223C581400FFA4C1 /* AccountRobot.swift in Sources */,
+				3C518123223C581400FFA4C1 /* CommonRobot.swift in Sources */,
+				3C518148223C588200FFA4C1 /* BuyRamTestCase.swift in Sources */,
+				3C518150223C589000FFA4C1 /* BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase.swift in Sources */,
+				3C518124223C581400FFA4C1 /* Orchestra.swift in Sources */,
+				3C518152223C589000FFA4C1 /* BillingFlowLimboEndWithAccountsReceivedTestCase.swift in Sources */,
+				3C518145223C587800FFA4C1 /* VoteForProducerTestCase.swift in Sources */,
+				3C518125223C581400FFA4C1 /* AccountNavigationRobot.swift in Sources */,
+				3C518126223C581400FFA4C1 /* Espresso.swift in Sources */,
+				3C518127223C581400FFA4C1 /* EarlGrey.swift in Sources */,
+				3C518128223C581400FFA4C1 /* ProxyRobot.swift in Sources */,
+				3C518129223C581400FFA4C1 /* RamRobot.swift in Sources */,
+				3C51812A223C581400FFA4C1 /* SettingsRobot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C5799BD2191D27D00B9A3D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -4003,33 +5516,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CCC805821FB9C8100B715C2 /* ImportKeyRobot.swift in Sources */,
-				3C1D1AF0221172A400EF4560 /* ProxyVoteInformationTestCase.swift in Sources */,
-				3C6807682223EDF800B5F169 /* ClearDataAndLogoutTestCase.swift in Sources */,
-				3C68074F2220B39100B5F169 /* BillingFlowStoreKitErrorTestCase.swift in Sources */,
-				3CA2978C221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift in Sources */,
 				3CCC804921FB929100B715C2 /* TestCase.swift in Sources */,
-				3C6807552222C25D00B5F169 /* BillingFlowPaymentFailedErrorTestCase.swift in Sources */,
 				3C517EB9223C38F800FFA4C1 /* RamRobot.swift in Sources */,
-				3C68074522209BFA00B5F169 /* BillingFlowLimboEndWithNoAccountsTestCase.swift in Sources */,
-				3CF9032322083FDA00ABDB58 /* ProxyVoteTestCase.swift in Sources */,
-				3CF9031E2208201700ABDB58 /* VoteForUsErrorTestCase.swift in Sources */,
-				3CCC804D21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */,
 				3CA2978722173872001DC2D5 /* SearchRobot.swift in Sources */,
-				3C680743222074E600B5F169 /* BillingFlowLimboEndWithAccountsReceivedTestCase.swift in Sources */,
-				3C6807572223B9E300B5F169 /* BillingFlowAccountNumericStartTestCase.swift in Sources */,
-				3C6807512220B6E600B5F169 /* BillingFlowSuccessCreateAccountFailedAccountsForPublicKeyTestCase.swift in Sources */,
-				3C6807652223E76E00B5F169 /* UnDelegateBandwidthTestCase.swift in Sources */,
 				3C6807632223DBD800B5F169 /* BandwidthRobot.swift in Sources */,
 				3CCC804221FB86AE00B715C2 /* SplashRobot.swift in Sources */,
-				3C1D1AEC22115D6F00EF4560 /* VoteForProducerTestCase.swift in Sources */,
-				3C6807532220B91B00B5F169 /* BillingFlowCannotMakePaymentErrorTestCase.swift in Sources */,
 				5459E12781E4B0E892AC7BD0 /* EarlGrey.swift in Sources */,
-				3CCC807921FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift in Sources */,
 				3CCC805E21FB9CB300B715C2 /* AccountRobot.swift in Sources */,
 				3CCC806421FB9CDF00B715C2 /* ResourcesRobot.swift in Sources */,
 				3CCC806C21FB9D2000B715C2 /* SettingsRobot.swift in Sources */,
 				3CCC806821FB9CFC00B715C2 /* TransferRobot.swift in Sources */,
-				3C517EB7223C388D00FFA4C1 /* BuyRamTestCase.swift in Sources */,
 				3CCC805A21FB9C9500B715C2 /* CreateAccountRobot.swift in Sources */,
 				3CCC805C21FB9CA400B715C2 /* AccountNavigationRobot.swift in Sources */,
 				3CCC806621FB9CEE00B715C2 /* ActionsRobot.swift in Sources */,
@@ -4037,21 +5533,9 @@
 				3CCC806A21FB9D0E00B715C2 /* TransactionRobot.swift in Sources */,
 				3CCC806021FB9CC400B715C2 /* BalanceRobot.swift in Sources */,
 				3C1D1AEE22116B9100EF4560 /* ProxyRobot.swift in Sources */,
-				3CCC807D21FEF99D00B715C2 /* AccountWithErrorTestCase.swift in Sources */,
-				3CF903212208336C00ABDB58 /* BlockProducerVoteTestCase.swift in Sources */,
 				3CF90329220B8D8200ABDB58 /* BlockProducerRobot.swift in Sources */,
-				3C68075B2223BC9600B5F169 /* BillingFlowFailedCreateAccountSuccessNoAccountsForPublicKeyTestCase.swift in Sources */,
-				3C517EC1223C470600FFA4C1 /* SellRamTestCase.swift in Sources */,
-				3C108D742204F6860011F07B /* GetAccountPriceErrorTestCase.swift in Sources */,
-				3CF90325220841C500ABDB58 /* NotVotedTestCase.swift in Sources */,
-				3CF90327220A374000ABDB58 /* BlockProducerInformationVoteTestCase.swift in Sources */,
-				3C6807612223DA2400B5F169 /* DelegateBandwidthTestCase.swift in Sources */,
-				3C1D1AEA22115BEF00EF4560 /* VoteForProxyTestCase.swift in Sources */,
 				3CCC805021FB9BD700B715C2 /* ImportKeyOrchestra.swift in Sources */,
 				3CCC805421FB9C4A00B715C2 /* Robot.swift in Sources */,
-				3C68075D2223C7B800B5F169 /* BillingFlowFailedCreateAccountSuccessErrorImportingPublicKeyTestCase.swift in Sources */,
-				3C6807592223BB3100B5F169 /* BillingFlowAccountLengthTestCase.swift in Sources */,
-				3CE7AF5D221AA58B00FB9D39 /* BillingFlowFailedCreateAccountFailedNoAccountsForPublicKeyTestCase.swift in Sources */,
 				3CCC804421FB877A00B715C2 /* Espresso.swift in Sources */,
 				3CCC806221FB9CD100B715C2 /* VoteRobot.swift in Sources */,
 				3CCC805621FB9C6900B715C2 /* CommonRobot.swift in Sources */,
@@ -4061,6 +5545,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3C5180F0223C56BE00FFA4C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C517EC2223C52A100FFA4C1 /* dev */;
+			targetProxy = 3C5180EF223C56BE00FFA4C1 /* PBXContainerItemProxy */;
+		};
+		3C51810D223C581400FFA4C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C517EC2223C52A100FFA4C1 /* dev */;
+			targetProxy = 3C51810E223C581400FFA4C1 /* PBXContainerItemProxy */;
+		};
+		3C518138223C582100FFA4C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C0DBA6021F501430020CA1F /* stub */;
+			targetProxy = 3C518137223C582100FFA4C1 /* PBXContainerItemProxy */;
+		};
 		3CD66C5521FA6B3C003E2A49 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3C0DBA6021F501430020CA1F /* stub */;
@@ -4134,6 +5633,135 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3C518091223C52A100FFA4C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 301ACDB21C846A6FFD22CD20 /* Pods-stub.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8F4QT3VHG;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "stub copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.memtrip.eosreach.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = DEV;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3C518092223C52A100FFA4C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9088267F08954877C73A0D9 /* Pods-stub.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8F4QT3VHG;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "stub copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.memtrip.eosreach.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3C5180EB223C56B100FFA4C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7027EF510FA54A38C246E66C /* Pods-eosreachTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "eosreachTests copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = memtrip.eosreachDevTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dev.app/dev";
+			};
+			name = Debug;
+		};
+		3C5180EC223C56B100FFA4C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A893BF02F108ECF21F829265 /* Pods-eosreachTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "eosreachTests copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = memtrip.eosreachDevTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dev.app/dev";
+			};
+			name = Release;
+		};
+		3C518133223C581400FFA4C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7027EF510FA54A38C246E66C /* Pods-eosreachTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "eosreachTests copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = memtrip.eosreachStubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stub.app/stub";
+			};
+			name = Debug;
+		};
+		3C518134223C581400FFA4C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A893BF02F108ECF21F829265 /* Pods-eosreachTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "eosreachTests copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = memtrip.eosreachStubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stub.app/stub";
 			};
 			name = Release;
 		};
@@ -4307,7 +5935,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7027EF510FA54A38C246E66C /* Pods-eosreachTests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = eosreachTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4319,7 +5946,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stub.app/stub";
 			};
 			name = Debug;
 		};
@@ -4327,7 +5953,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A893BF02F108ECF21F829265 /* Pods-eosreachTests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = eosreachTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4339,7 +5964,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stub.app/stub";
 			};
 			name = Release;
 		};
@@ -4351,6 +5975,33 @@
 			buildConfigurations = (
 				3C0DBC2221F501430020CA1F /* Debug */,
 				3C0DBC2321F501430020CA1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C518090223C52A100FFA4C1 /* Build configuration list for PBXNativeTarget "dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C518091223C52A100FFA4C1 /* Debug */,
+				3C518092223C52A100FFA4C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C5180EA223C56B100FFA4C1 /* Build configuration list for PBXNativeTarget "eosreachDevTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C5180EB223C56B100FFA4C1 /* Debug */,
+				3C5180EC223C56B100FFA4C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C518132223C581400FFA4C1 /* Build configuration list for PBXNativeTarget "eosreachStubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C518133223C581400FFA4C1 /* Debug */,
+				3C518134223C581400FFA4C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

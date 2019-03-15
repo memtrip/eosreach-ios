@@ -5,6 +5,8 @@ class TargetSwitch {
     static func api() -> Target {
         #if STUB
         return Target.stub
+        #elseif DEV
+        return Target.dev
         #elseif PROD
         return Target.prod
         #else
@@ -15,5 +17,6 @@ class TargetSwitch {
 
 enum Target {
     case stub
+    case dev
     case prod
 }
