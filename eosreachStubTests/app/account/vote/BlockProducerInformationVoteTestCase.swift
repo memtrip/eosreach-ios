@@ -1,6 +1,6 @@
 import Foundation
 
-class BlockProducerInformationVoteTestCase : TestCase {
+class BlockProducerInformationVoteTestCase : StubTestCase {
     
     func testBlockProducerInformationVote() {
         importKeyOrchestra

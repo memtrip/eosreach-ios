@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class VoteForUsErrorTestCase : TestCase {
+class VoteForUsErrorTestCase : StubTestCase {
     
     func testVoteForUsError() {
         importKeyOrchestra

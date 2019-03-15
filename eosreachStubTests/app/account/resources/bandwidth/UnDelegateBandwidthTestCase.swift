@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class UnDelegateBandwidthTestCase : TestCase {
+class UnDelegateBandwidthTestCase : StubTestCase {
     
     func testUnDelegateBandwidthError() {
         importKeyOrchestra

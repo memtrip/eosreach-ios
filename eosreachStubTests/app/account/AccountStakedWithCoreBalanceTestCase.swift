@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class AccountStakedWithCoreBalanceTestCase : TestCase {
+class AccountStakedWithCoreBalanceTestCase : StubTestCase {
     
     func testAccountWithCoreBalance() {
         importKeyOrchestra

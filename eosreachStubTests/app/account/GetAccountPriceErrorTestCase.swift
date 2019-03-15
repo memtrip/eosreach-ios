@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class GetAccountPriceErrorTestCase : TestCase {
+class GetAccountPriceErrorTestCase : StubTestCase {
     
     func testAccountWithError() {
         importKeyOrchestra

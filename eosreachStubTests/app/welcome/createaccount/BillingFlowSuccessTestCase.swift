@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class BillingFlowSuccessTestCase : TestCase {
+class BillingFlowSuccessTestCase : StubTestCase {
 
     func testBillingFlowSuccess() {
         splashRobot.selectCreateAccount()

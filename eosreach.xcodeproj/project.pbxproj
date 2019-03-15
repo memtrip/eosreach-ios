@@ -1146,6 +1146,8 @@
 		3C518154223C589000FFA4C1 /* BillingFlowCannotMakePaymentErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807522220B91B00B5F169 /* BillingFlowCannotMakePaymentErrorTestCase.swift */; };
 		3C518155223C589000FFA4C1 /* BillingFlowPaymentFailedErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807542222C25D00B5F169 /* BillingFlowPaymentFailedErrorTestCase.swift */; };
 		3C518156223C589600FFA4C1 /* ClearDataAndLogoutTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6807672223EDF800B5F169 /* ClearDataAndLogoutTestCase.swift */; };
+		3C518158223C5A3800FFA4C1 /* StubTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C518157223C5A3800FFA4C1 /* StubTestCase.swift */; };
+		3C51815B223C5B8800FFA4C1 /* DevTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51815A223C5B8800FFA4C1 /* DevTestCase.swift */; };
 		3C5799C52191D27D00B9A3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */; };
 		3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799C82191D27D00B9A3D7 /* Main.storyboard */; };
 		3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
@@ -1723,6 +1725,8 @@
 		3C5180EE223C56B100FFA4C1 /* eosreachTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "eosreachTests copy-Info.plist"; path = "/Users/samkirton/Documents/repos/eosreach-swift/eosreachTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		3C518135223C581400FFA4C1 /* eosreachStubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eosreachStubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C518136223C581500FFA4C1 /* eosreachDevTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "eosreachDevTests copy-Info.plist"; path = "/Users/samkirton/Documents/repos/eosreach-swift/eosreachDevTests copy-Info.plist"; sourceTree = "<absolute>"; };
+		3C518157223C5A3800FFA4C1 /* StubTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubTestCase.swift; sourceTree = "<group>"; };
+		3C51815A223C5B8800FFA4C1 /* DevTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevTestCase.swift; sourceTree = "<group>"; };
 		3C5799C12191D27D00B9A3D7 /* prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5799C92191D27D00B9A3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -2397,6 +2401,7 @@
 			isa = PBXGroup;
 			children = (
 				3C51809D223C553800FFA4C1 /* app */,
+				3C51815A223C5B8800FFA4C1 /* DevTestCase.swift */,
 			);
 			path = eosreachDevTests;
 			sourceTree = "<group>";
@@ -2405,6 +2410,7 @@
 			isa = PBXGroup;
 			children = (
 				3CCC804A21FB972200B715C2 /* app */,
+				3C518157223C5A3800FFA4C1 /* StubTestCase.swift */,
 			);
 			path = eosreachStubTests;
 			sourceTree = "<group>";
@@ -5064,6 +5070,7 @@
 				3C5180F9223C578000FFA4C1 /* CommonRobot.swift in Sources */,
 				3C5180F3223C577A00FFA4C1 /* Orchestra.swift in Sources */,
 				3C5180FC223C578000FFA4C1 /* AccountNavigationRobot.swift in Sources */,
+				3C51815B223C5B8800FFA4C1 /* DevTestCase.swift in Sources */,
 				3C518109223C578700FFA4C1 /* Espresso.swift in Sources */,
 				3C518108223C578700FFA4C1 /* EarlGrey.swift in Sources */,
 				3C5180F7223C578000FFA4C1 /* ProxyRobot.swift in Sources */,
@@ -5125,6 +5132,7 @@
 				3C518145223C587800FFA4C1 /* VoteForProducerTestCase.swift in Sources */,
 				3C518125223C581400FFA4C1 /* AccountNavigationRobot.swift in Sources */,
 				3C518126223C581400FFA4C1 /* Espresso.swift in Sources */,
+				3C518158223C5A3800FFA4C1 /* StubTestCase.swift in Sources */,
 				3C518127223C581400FFA4C1 /* EarlGrey.swift in Sources */,
 				3C518128223C581400FFA4C1 /* ProxyRobot.swift in Sources */,
 				3C518129223C581400FFA4C1 /* RamRobot.swift in Sources */,

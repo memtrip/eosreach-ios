@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class ClearDataAndLogoutTestCase : TestCase {
+class ClearDataAndLogoutTestCase : StubTestCase {
     
     func testClearDataAndLogout() {
         

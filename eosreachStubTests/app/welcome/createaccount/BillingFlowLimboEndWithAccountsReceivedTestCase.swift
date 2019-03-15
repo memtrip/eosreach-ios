@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class BillingFlowLimboEndWithAccountsReceivedTestCase : TestCase {
+class BillingFlowLimboEndWithAccountsReceivedTestCase : StubTestCase {
 
     func testBillingFlowLimboEndWithAccountsReceivedTestCase() {
         splashRobot.selectCreateAccount()

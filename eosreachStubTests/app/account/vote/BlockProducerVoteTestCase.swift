@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class BlockProducerVoteTestCase : TestCase {
+class BlockProducerVoteTestCase : StubTestCase {
     
     func testBlockProducerVote() {
         importKeyOrchestra

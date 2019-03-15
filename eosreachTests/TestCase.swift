@@ -1,10 +1,5 @@
 import Foundation
 import XCTest
-import RxSwift
-import RxTest
-import RxBlocking
-
-@testable import stub
 
 class TestCase : XCTestCase {
 
@@ -82,15 +77,4 @@ class TestCase : XCTestCase {
     lazy var settingsRobot: SettingsRobot = {
         return orchestra.settingsRobot
     }()
-    
-    override func setUp() {
-        StoreKitStubStateHolder.shared.state = StoreKitStubState.success
-        StubUrlSession.shared.stubApi = configure(stubApi: StubApi())
-        (UIApplication.shared.delegate as! AppDelegate).clearData()
-        (UIApplication.shared.delegate as! AppDelegate).resetApplicationState()
-    }
-    
-    func configure(stubApi: StubApi) -> StubApi {
-        return stubApi
-    }
 }

@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class ProxyVoteInformationTestCase : TestCase {
+class ProxyVoteInformationTestCase : StubTestCase {
 
     func testProxyVoteInformation() {
         

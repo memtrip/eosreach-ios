@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class ProxyVoteTestCase : TestCase {
+class ProxyVoteTestCase : StubTestCase {
     
     func testProxyVote() {
         importKeyOrchestra

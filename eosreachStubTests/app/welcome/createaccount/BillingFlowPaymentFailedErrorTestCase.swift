@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class BillingFlowPaymentFailedErrorTestCase : TestCase {
+class BillingFlowPaymentFailedErrorTestCase : StubTestCase {
     
     func testBillingFlowPaymentFailedTestCase() {
         splashRobot.selectCreateAccount()

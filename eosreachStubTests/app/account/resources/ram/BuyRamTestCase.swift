@@ -1,7 +1,7 @@
 import Foundation
 @testable import stub
 
-class BuyRamTestCase : TestCase {
+class BuyRamTestCase : StubTestCase {
     
     func testBuyRam() {
         
