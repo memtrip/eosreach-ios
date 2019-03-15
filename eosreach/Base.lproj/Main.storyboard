@@ -1687,6 +1687,7 @@
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQB-zK-Dmn" userLabel="Reach TabBar" customClass="ReachTabBar" customModule="prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="164" width="375" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="manage_ram_tabs"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="vj3-M0-qY7"/>
                                 </constraints>
@@ -3668,7 +3669,7 @@
         <segue reference="Eks-sF-JJe"/>
         <segue reference="adL-2Q-ujF"/>
         <segue reference="EYu-xR-n4I"/>
-        <segue reference="wQx-Tz-eH5"/>
+        <segue reference="bAw-Fj-z4u"/>
         <segue reference="p9U-mn-UT8"/>
         <segue reference="1Wt-0h-Agf"/>
         <segue reference="ctq-NB-9iI"/>

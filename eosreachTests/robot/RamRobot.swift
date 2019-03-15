@@ -89,4 +89,20 @@ class RamRobot : Robot {
             .matchesNext(isDisplayed())
             .perform(click())
     }
+    
+    func verifyConfirmSellRamScreen() {
+        onView(withId("confirm_buy_ram_toolbar"))
+            .matches(isDisplayed())
+        
+        onView(withId("confirm_buy_ram_kb_value"))
+            .matchesNext(isDisplayed())
+            .matches(withText("10"))
+        
+        onView(withId("confirm_buy_ram_price_value"))
+            .matchesNext(isDisplayed())
+            .matches(withText("0.5084 SYS"))
+        
+        onView(withId("confirm_buy_ram_cta"))
+            .matches(isDisplayed())
+    }
 }

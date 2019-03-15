@@ -608,6 +608,7 @@
 		3C517EB9223C38F800FFA4C1 /* RamRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C517EB8223C38F800FFA4C1 /* RamRobot.swift */; };
 		3C517EBC223C3C6A00FFA4C1 /* request_get_table_rows_rammarket.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C517EBA223C3BD700FFA4C1 /* request_get_table_rows_rammarket.json */; };
 		3C517EBF223C3DC500FFA4C1 /* happy_path_get_table_rows_rammarket.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C517EBD223C3D8800FFA4C1 /* happy_path_get_table_rows_rammarket.json */; };
+		3C517EC1223C470600FFA4C1 /* SellRamTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C517EC0223C470600FFA4C1 /* SellRamTestCase.swift */; };
 		3C5799C52191D27D00B9A3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */; };
 		3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799C82191D27D00B9A3D7 /* Main.storyboard */; };
 		3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
@@ -1155,6 +1156,7 @@
 		3C517EB8223C38F800FFA4C1 /* RamRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamRobot.swift; sourceTree = "<group>"; };
 		3C517EBA223C3BD700FFA4C1 /* request_get_table_rows_rammarket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = request_get_table_rows_rammarket.json; sourceTree = "<group>"; };
 		3C517EBD223C3D8800FFA4C1 /* happy_path_get_table_rows_rammarket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_table_rows_rammarket.json; sourceTree = "<group>"; };
+		3C517EC0223C470600FFA4C1 /* SellRamTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellRamTestCase.swift; sourceTree = "<group>"; };
 		3C5799C12191D27D00B9A3D7 /* prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5799C92191D27D00B9A3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -1657,6 +1659,7 @@
 			isa = PBXGroup;
 			children = (
 				3C517EB6223C388D00FFA4C1 /* BuyRamTestCase.swift */,
+				3C517EC0223C470600FFA4C1 /* SellRamTestCase.swift */,
 			);
 			path = ram;
 			sourceTree = "<group>";
@@ -4038,6 +4041,7 @@
 				3CF903212208336C00ABDB58 /* BlockProducerVoteTestCase.swift in Sources */,
 				3CF90329220B8D8200ABDB58 /* BlockProducerRobot.swift in Sources */,
 				3C68075B2223BC9600B5F169 /* BillingFlowFailedCreateAccountSuccessNoAccountsForPublicKeyTestCase.swift in Sources */,
+				3C517EC1223C470600FFA4C1 /* SellRamTestCase.swift in Sources */,
 				3C108D742204F6860011F07B /* GetAccountPriceErrorTestCase.swift in Sources */,
 				3CF90325220841C500ABDB58 /* NotVotedTestCase.swift in Sources */,
 				3CF90327220A374000ABDB58 /* BlockProducerInformationVoteTestCase.swift in Sources */,
