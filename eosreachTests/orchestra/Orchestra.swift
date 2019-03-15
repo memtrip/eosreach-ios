@@ -47,7 +47,11 @@ extension Orchestra {
     var bandwidthRobot: BandwidthRobot {
         return BandwidthRobot()
     }
-
+    
+    var ramRobot: RamRobot {
+        return RamRobot()
+    }
+    
     var actionsRobot: ActionsRobot {
         return ActionsRobot()
     }

@@ -19,6 +19,12 @@ class ResourcesRobot : Robot {
             .perform(click())
     }
     
+    func selectRamButton() {
+        onView(withId("resources_ram_button"))
+            .matchesNext(isDisplayed())
+            .perform(click())
+    }
+    
     func verifyStakedResources(cpu: String, net: String) {
         onView(withId("resources_scroll_container"))
             .matchesNext(isDisplayed())

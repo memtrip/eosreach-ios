@@ -604,6 +604,10 @@
 		3C4C5E7B21AEFBA700C219C4 /* TransactionHistoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7A21AEFBA700C219C4 /* TransactionHistoryTableView.swift */; };
 		3C4C5E7D21AEFBB300C219C4 /* TransactionHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7C21AEFBB300C219C4 /* TransactionHistoryCell.swift */; };
 		3C4C5E7F21AEFC9300C219C4 /* TransactionHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7E21AEFC9300C219C4 /* TransactionHistoryCell.xib */; };
+		3C517EB7223C388D00FFA4C1 /* BuyRamTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C517EB6223C388D00FFA4C1 /* BuyRamTestCase.swift */; };
+		3C517EB9223C38F800FFA4C1 /* RamRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C517EB8223C38F800FFA4C1 /* RamRobot.swift */; };
+		3C517EBC223C3C6A00FFA4C1 /* request_get_table_rows_rammarket.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C517EBA223C3BD700FFA4C1 /* request_get_table_rows_rammarket.json */; };
+		3C517EBF223C3DC500FFA4C1 /* happy_path_get_table_rows_rammarket.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C517EBD223C3D8800FFA4C1 /* happy_path_get_table_rows_rammarket.json */; };
 		3C5799C52191D27D00B9A3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */; };
 		3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799C82191D27D00B9A3D7 /* Main.storyboard */; };
 		3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
@@ -1147,6 +1151,10 @@
 		3C4C5E7A21AEFBA700C219C4 /* TransactionHistoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryTableView.swift; sourceTree = "<group>"; };
 		3C4C5E7C21AEFBB300C219C4 /* TransactionHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryCell.swift; sourceTree = "<group>"; };
 		3C4C5E7E21AEFC9300C219C4 /* TransactionHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHistoryCell.xib; sourceTree = "<group>"; };
+		3C517EB6223C388D00FFA4C1 /* BuyRamTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyRamTestCase.swift; sourceTree = "<group>"; };
+		3C517EB8223C38F800FFA4C1 /* RamRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamRobot.swift; sourceTree = "<group>"; };
+		3C517EBA223C3BD700FFA4C1 /* request_get_table_rows_rammarket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = request_get_table_rows_rammarket.json; sourceTree = "<group>"; };
+		3C517EBD223C3D8800FFA4C1 /* happy_path_get_table_rows_rammarket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_table_rows_rammarket.json; sourceTree = "<group>"; };
 		3C5799C12191D27D00B9A3D7 /* prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5799C92191D27D00B9A3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -1648,6 +1656,7 @@
 		3C1D1AFA22117CD000EF4560 /* ram */ = {
 			isa = PBXGroup;
 			children = (
+				3C517EB6223C388D00FFA4C1 /* BuyRamTestCase.swift */,
 			);
 			path = ram;
 			sourceTree = "<group>";
@@ -1743,6 +1752,7 @@
 				3C44F30E21EFE71E00A0720B /* happy_path_get_table_rows_producerjson.json */,
 				3C44F30421EFE71D00A0720B /* happy_path_get_table_rows_regproxyinfo_single.json */,
 				3C44F30521EFE71D00A0720B /* happy_path_get_table_rows_regproxyinfo.json */,
+				3C517EBD223C3D8800FFA4C1 /* happy_path_get_table_rows_rammarket.json */,
 				3C44F30321EFE71D00A0720B /* happy_path_price.json */,
 				3C44F31121EFE71F00A0720B /* happy_path_push_transaction_log.json */,
 				3C44F2F321EFE60100A0720B /* happy_path_get_info.json */,
@@ -1774,6 +1784,7 @@
 				3C44F33021EFE7A600A0720B /* request_get_table_rows_producerjson.json */,
 				3C44F33421EFE7A600A0720B /* request_get_table_rows_regproxyinfo_single.json */,
 				3C44F32F21EFE7A600A0720B /* request_get_table_rows_regproxyinfo.json */,
+				3C517EBA223C3BD700FFA4C1 /* request_get_table_rows_rammarket.json */,
 			);
 			path = request;
 			sourceTree = "<group>";
@@ -2615,6 +2626,7 @@
 				3CCC806121FB9CD100B715C2 /* VoteRobot.swift */,
 				3CCC806321FB9CDF00B715C2 /* ResourcesRobot.swift */,
 				3C6807622223DBD800B5F169 /* BandwidthRobot.swift */,
+				3C517EB8223C38F800FFA4C1 /* RamRobot.swift */,
 				3CCC806521FB9CEE00B715C2 /* ActionsRobot.swift */,
 				3CCC806721FB9CFC00B715C2 /* TransferRobot.swift */,
 				3CCC806921FB9D0E00B715C2 /* TransactionRobot.swift */,
@@ -2864,6 +2876,7 @@
 				3C0DBBF321F501430020CA1F /* TransactionLogViewController.xib in Resources */,
 				3C0DBBF421F501430020CA1F /* happy_path_get_table_rows_delegated_bandwidth.json in Resources */,
 				3C0DBBF521F501430020CA1F /* happy_path_get_table_rows_producerjson_single.json in Resources */,
+				3C517EBC223C3C6A00FFA4C1 /* request_get_table_rows_rammarket.json in Resources */,
 				3C0DBBF621F501430020CA1F /* happy_path_get_producers.json in Resources */,
 				3C0DBBF721F501430020CA1F /* happy_path_get_key_accounts.json in Resources */,
 				3C0DBBF821F501430020CA1F /* KeyPairCell.xib in Resources */,
@@ -2903,6 +2916,7 @@
 				3C0DBC1A21F501430020CA1F /* ExploreStrings.strings in Resources */,
 				3C0DBC1B21F501430020CA1F /* ResourceGraphView.xib in Resources */,
 				3C0DBC1C21F501430020CA1F /* TransactionStrings.strings in Resources */,
+				3C517EBF223C3DC500FFA4C1 /* happy_path_get_table_rows_rammarket.json in Resources */,
 				3C0DBC1D21F501430020CA1F /* request_get_currency_balance_edna.json in Resources */,
 				3C0DBC1E21F501430020CA1F /* VoteProducerCell.xib in Resources */,
 				3C0DBC1F21F501430020CA1F /* happy_path_get_account_refund.json in Resources */,
@@ -3992,6 +4006,7 @@
 				3CA2978C221744DA001DC2D5 /* BillingFlowSuccessTestCase.swift in Sources */,
 				3CCC804921FB929100B715C2 /* TestCase.swift in Sources */,
 				3C6807552222C25D00B5F169 /* BillingFlowPaymentFailedErrorTestCase.swift in Sources */,
+				3C517EB9223C38F800FFA4C1 /* RamRobot.swift in Sources */,
 				3C68074522209BFA00B5F169 /* BillingFlowLimboEndWithNoAccountsTestCase.swift in Sources */,
 				3CF9032322083FDA00ABDB58 /* ProxyVoteTestCase.swift in Sources */,
 				3CF9031E2208201700ABDB58 /* VoteForUsErrorTestCase.swift in Sources */,
@@ -4011,6 +4026,7 @@
 				3CCC806421FB9CDF00B715C2 /* ResourcesRobot.swift in Sources */,
 				3CCC806C21FB9D2000B715C2 /* SettingsRobot.swift in Sources */,
 				3CCC806821FB9CFC00B715C2 /* TransferRobot.swift in Sources */,
+				3C517EB7223C388D00FFA4C1 /* BuyRamTestCase.swift in Sources */,
 				3CCC805A21FB9C9500B715C2 /* CreateAccountRobot.swift in Sources */,
 				3CCC805C21FB9CA400B715C2 /* AccountNavigationRobot.swift in Sources */,
 				3CCC806621FB9CEE00B715C2 /* ActionsRobot.swift in Sources */,

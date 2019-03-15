@@ -6,7 +6,7 @@ class ConfirmRamViewModel: MxViewModel<ConfirmRamIntent, ConfirmRamResult, Confi
     
     private let ramRequest = RamRequestImpl()
     private let getAccountByName = GetAccountByName()
-    private let eosKeyManager = EosKeyManagerImpl()
+    private let eosKeyManager = EosKeyManagerFactory.create()
     private let insertTransactionLog = InsertTransactionLog()
     
     override func dispatcher(intent: ConfirmRamIntent) -> Observable<ConfirmRamResult> {

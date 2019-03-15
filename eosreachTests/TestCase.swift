@@ -51,6 +51,10 @@ class TestCase : XCTestCase {
         return orchestra.bandwidthRobot
     }()
     
+    lazy var ramRobot: RamRobot = {
+        return orchestra.ramRobot
+    }()
+    
     lazy var actionsRobot: ActionsRobot = {
         return orchestra.actionsRobot
     }()

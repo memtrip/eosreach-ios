@@ -111,6 +111,17 @@ class StubApi {
             readJson(R.file.happy_path_get_table_rows_delegated_bandwidthJson())
         })
     )
+    
+    var getTableRowsRamMarket: Stub = Stub(
+        matcher: StubMatcher(
+            rootUrl: R.string.appStrings.app_endpoint_url(),
+            urlMatcher: regex("v1/chain/get_table_rows$"),
+            bodyMatcher: jsonString(R.file.request_get_table_rows_rammarketJson())
+        ),
+        request: BasicStubRequest(code: 200, body: {
+            readJson(R.file.happy_path_get_table_rows_rammarketJson())
+        })
+    )
 
     var getActions: Stub = Stub(
         matcher: StubMatcher(
@@ -174,6 +185,7 @@ class StubApi {
             getTableRowsProxyVoter,
             getTableRowsSingleProxyVoter,
             getTableRowsAllocatedBandwidth,
+            getTableRowsRamMarket,
             getActions,
             getBlockProducers,
             pushTransaction,
