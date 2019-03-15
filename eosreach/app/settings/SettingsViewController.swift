@@ -89,7 +89,7 @@ class SettingsViewController: MxViewController<SettingsIntent, SettingsResult, S
             alert.addAction(UIAlertAction(title: R.string.appStrings.app_dialog_cancel(), style: .default, handler: nil))
             self.present(alert, animated: true)
         case .navigateToEntry:
-            performSegue(withIdentifier: R.segue.settingsViewController.settingsToEntry, sender: self)
+            performSegue(withIdentifier: R.segue.settingsViewController.unwindToEntry, sender: self)
         case .navigateToAuthor:
             if let url = URL(string: R.string.settingsStrings.settings_author_website()) {
                 UIApplication.shared.open(url, options: [:])

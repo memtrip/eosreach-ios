@@ -174,9 +174,11 @@
                         <segue destination="BLF-jA-WCe" kind="show" identifier="settingsToEosEndpoint" id="X0C-WJ-xId"/>
                         <segue destination="96N-le-3DO" kind="show" identifier="settingsToViewPrivateKeys" id="SPJ-VD-wSi"/>
                         <segue destination="zGh-3c-R08" kind="show" identifier="settingsToTransactionHistory" id="dg6-A7-A6G"/>
+                        <segue destination="8eg-aZ-Uu8" kind="unwind" identifier="unwindToEntry" unwindAction="unwindToEntryViewControllerWithSegue:" id="NBb-kf-krJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldj-Ns-Ajb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8eg-aZ-Uu8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="537" y="-674"/>
         </scene>
