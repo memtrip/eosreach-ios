@@ -88,13 +88,13 @@ class ConfirmBandwidthViewController
     
     func transactionConfirmed() {
         setDestinationBundle(bundle: SegueBundle(
-            identifier: R.segue.confirmBandwidthViewController.confirmBandwidthToAccounts.identifier,
+            identifier: R.segue.confirmBandwidthViewController.unwindToAccount.identifier,
             model: AccountBundle(
                 accountName: bandwidthFormBundle.contractAccountBalance.accountName,
                 readOnly: false,
                 accountPage: AccountPage.resources
             )
         ))
-        performSegue(withIdentifier: R.segue.confirmBandwidthViewController.confirmBandwidthToAccounts, sender: self)
+        performSegue(withIdentifier: R.segue.confirmBandwidthViewController.unwindToAccount, sender: self)
     }
 }

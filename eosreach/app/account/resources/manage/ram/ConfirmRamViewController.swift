@@ -84,13 +84,13 @@ class ConfirmRamViewController : MxViewController<ConfirmRamIntent, ConfirmRamRe
     
     func transactionConfirmed() {
         setDestinationBundle(bundle: SegueBundle(
-            identifier: R.segue.confirmRamViewController.confirmRamToAccounts.identifier,
+            identifier: R.segue.confirmRamViewController.unwindToAccount.identifier,
             model: AccountBundle(
                 accountName: ramBundle.contractAccountBalance.accountName,
                 readOnly: false,
                 accountPage: AccountPage.resources
             )
         ))
-        performSegue(withIdentifier: R.segue.confirmRamViewController.confirmRamToAccounts, sender: self)
+        performSegue(withIdentifier: R.segue.confirmRamViewController.unwindToAccount, sender: self)
     }
 }
