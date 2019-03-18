@@ -117,7 +117,9 @@ class AccountViewModel: MxViewModel<AccountIntent, AccountResult, AccountViewSta
             } else {
                 return self.onError(error: accountView.error!)
             }
-        }.asObservable().startWith(AccountResult.onProgress(accountName: accountName))
+        }.asObservable().catchError { error in
+            return self.just(self.onError(error: AccountViewError.fetchingAccount))
+        }
     }
     
     private func onError(error: AccountViewError) -> AccountResult {

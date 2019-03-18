@@ -52,6 +52,14 @@ class CastProxyVoteViewController: MxViewController<CastProxyVoteIntent, CastPro
             voteButton.visible()
             showOKDialog(message: R.string.voteStrings.cast_proxy_vote_error_body())
         case .onSuccess:
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.castProxyVoteViewController.unwindToAccount.identifier,
+                model: AccountBundle(
+                    accountName: eosAccount!.accountName,
+                    readOnly: false,
+                    accountPage: AccountPage.vote
+                )
+            ))
             performSegue(withIdentifier: R.segue.castProxyVoteViewController.unwindToAccount, sender: self)
         case .viewLog(let log):
             self.activityIndicator.stop()

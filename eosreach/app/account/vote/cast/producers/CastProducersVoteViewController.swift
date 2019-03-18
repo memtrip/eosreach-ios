@@ -73,6 +73,14 @@ class CastProducersVoteViewController: MxViewController<CastProducersVoteIntent,
             voteButton.visible()
             showOKDialog(message: R.string.voteStrings.cast_producers_vote_error_body())
         case .onSuccess:
+            setDestinationBundle(bundle: SegueBundle(
+                identifier: R.segue.castProducersVoteViewController.unwindToAccount.identifier,
+                model: AccountBundle(
+                    accountName: eosAccount!.accountName,
+                    readOnly: false,
+                    accountPage: AccountPage.vote
+                )
+            ))
             performSegue(withIdentifier: R.segue.castProducersVoteViewController.unwindToAccount, sender: self)
         case .viewLog(let log):
             self.activityIndicator.stop()

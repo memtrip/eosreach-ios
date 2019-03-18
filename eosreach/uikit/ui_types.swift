@@ -83,6 +83,14 @@ extension UIViewController {
     }
     
     func replaceChildViewController(viewController: UIViewController, containerView: UIView) {
+        
+        if let existingViewControllerId = children.firstIndex(where: { vc in
+            vc.nibName == viewController.nibName
+        }) {
+            children[existingViewControllerId].removeFromParent()
+            containerView.subviews.forEach({ $0.removeFromSuperview() })
+        }
+        
         addChild(viewController)
         containerView.addSubview(viewController.view)
         

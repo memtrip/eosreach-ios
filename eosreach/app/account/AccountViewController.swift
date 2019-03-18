@@ -271,6 +271,10 @@ class AccountViewController: MxViewController<AccountIntent, AccountResult, Acco
     }
     
     @IBAction func unwindToAccountViewController(segue: UIStoryboardSegue) {
-        
+        if (segue.identifier == R.segue.castProducersVoteViewController.unwindToAccount.identifier &&
+            segue.identifier == R.segue.castProxyVoteViewController.unwindToAccount.identifier) {
+            let newAccountBundle = self.getDestinationBundle()!.model as! AccountBundle
+            viewModel.publish(intent: AccountIntent.start(accountBundle: newAccountBundle))
+        }
     }
 }
