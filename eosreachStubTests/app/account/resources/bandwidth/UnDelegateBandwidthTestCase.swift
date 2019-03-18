@@ -3,7 +3,7 @@ import Foundation
 
 class UnDelegateBandwidthTestCase : StubTestCase {
     
-    func testUnDelegateBandwidthError() {
+    func testUnDelegateBandwidth() {
         importKeyOrchestra
             .go(privateKey: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
         

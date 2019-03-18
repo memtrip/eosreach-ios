@@ -12,30 +12,32 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="tB0-ei-feJ" customClass="BalanceCell" customModule="prod" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="tB0-ei-feJ" customClass="BalanceCell" customModule="dev" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tB0-ei-feJ" id="goX-I0-nfR">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJW-rJ-mLj" customClass="ReachButton" customModule="prod" customModuleProvider="target">
+                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJW-rJ-mLj" customClass="ReachButton" customModule="dev" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="359" height="61.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_account_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Av-ha-pDg" userLabel="Symbol">
                                 <rect key="frame" x="8" y="8" width="351" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="balance_card_symbol"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.0000 EOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thS-T0-KeI" userLabel="Amount">
                                 <rect key="frame" x="8" y="32.5" width="351" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="balance_card_amount"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <accessibility key="accessibilityConfiguration" identifier="account_card_border_view"/>
+                        <accessibility key="accessibilityConfiguration" identifier="balance_card_border_view"/>
                         <constraints>
                             <constraint firstItem="thS-T0-KeI" firstAttribute="top" secondItem="3Av-ha-pDg" secondAttribute="bottom" constant="4" id="7Es-w4-gkS"/>
                             <constraint firstItem="3Av-ha-pDg" firstAttribute="top" secondItem="hJW-rJ-mLj" secondAttribute="top" constant="8" id="IaE-3a-vdd"/>

@@ -974,10 +974,12 @@
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-MK-JoW" customClass="ReachButton" customModule="dev" customModuleProvider="target">
                                 <rect key="frame" x="16" y="36" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="account_balance_scan_for_airdrops"/>
                                 <state key="normal" title="_scan_for_airdrops"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_tokens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-Lj-Z87">
                                 <rect key="frame" x="16" y="82" width="343" height="24"/>
+                                <accessibility key="accessibilityConfiguration" identifier="account_balance_tokens_label"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <color key="textColor" name="typographyColorPrimary"/>
                                 <nil key="highlightedColor"/>
@@ -991,6 +993,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ThX-Aa-b2Q" customClass="BalanceTableView" customModule="dev" customModuleProvider="target">
                                 <rect key="frame" x="8" y="106" width="359" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="account_balance_tableview"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <constraints>
@@ -1054,6 +1059,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKr-WJ-GIK" customClass="ReachPrimaryButton" customModule="dev" customModuleProvider="target">
                                 <rect key="frame" x="16" y="76" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="actions_transfer_button"/>
                                 <state key="normal" title="_transfer"/>
                             </button>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L14-9D-piY" customClass="ActionsTableView" customModule="dev" customModuleProvider="target">
@@ -1369,30 +1375,35 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eke-Gb-fU4" customClass="ReachToolbar" customModule="dev" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="transfer_toolbar"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="BJh-0u-Wlh"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-Oh-Jw8" customClass="ReachUsernameTextField" customModule="dev" customModuleProvider="target">
                                 <rect key="frame" x="16" y="100" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="transfer_to_input"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4B-s9-tVv" customClass="ReachBalanceTextField" customModule="dev" customModuleProvider="target">
                                 <rect key="frame" x="16" y="162" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="transfer_amount_input"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-fP-UhZ" customClass="ReachTextField" customModule="dev" customModuleProvider="target">
                                 <rect key="frame" x="16" y="224" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="transfer_memo_input"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSc-z5-ekr" customClass="ReachPrimaryButton" customModule="dev" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="transfer_next_button"/>
                                 <state key="normal" title="_next"/>
                             </button>
                         </subviews>
@@ -1438,6 +1449,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oG1-un-Lx1" customClass="ReachToolbar" customModule="dev" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="transfer_confirm_toolbar"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="kkc-d9-0bT"/>
                                 </constraints>
@@ -1459,6 +1471,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000.0000 EOS ($1000000000)" textAlignment="right" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VN-cK-O5E">
                                                 <rect key="frame" x="102" y="3" width="225" height="42.5"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="transfer_confirm_amount_value"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" name="typographyColorPrimary"/>
                                                 <nil key="highlightedColor"/>
@@ -1499,6 +1512,7 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBP-sV-f0f">
                                                 <rect key="frame" x="110" y="7.5" width="217" height="33"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="transfer_confirm_to_value"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="_to_value">
                                                     <color key="titleColor" name="typographyColorPrimary"/>
@@ -1540,6 +1554,7 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBC-ce-uil">
                                                 <rect key="frame" x="102" y="7.5" width="225" height="33"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="transfer_confirm_from_value"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="_from_value">
                                                     <color key="titleColor" name="typographyColorPrimary"/>
@@ -1582,6 +1597,7 @@
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="fqm-nI-Puq">
                                                 <rect key="frame" x="102" y="0.0" width="233" height="128"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="transfer_confirm_memo_value"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" name="typographyColorPrimary"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -1602,6 +1618,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBB-Dv-vKL" customClass="ReachPrimaryButton" customModule="dev" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="transfer_confirm_cta_button"/>
                                 <state key="normal" title="_primary_button"/>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="9Qg-v8-h1Z" customClass="ReachActivityIndicator" customModule="dev" customModuleProvider="target">
@@ -3669,12 +3686,12 @@
     <inferredMetricsTieBreakers>
         <segue reference="SIU-CS-KrR"/>
         <segue reference="dMo-xo-wz4"/>
-        <segue reference="Jnr-cb-LO9"/>
+        <segue reference="Yir-oe-XsA"/>
         <segue reference="Eks-sF-JJe"/>
-        <segue reference="adL-2Q-ujF"/>
+        <segue reference="8th-cq-vMG"/>
         <segue reference="EYu-xR-n4I"/>
         <segue reference="bAw-Fj-z4u"/>
-        <segue reference="nRe-Ud-1BW"/>
+        <segue reference="JiS-fD-Jqz"/>
         <segue reference="1Wt-0h-Agf"/>
         <segue reference="ctq-NB-9iI"/>
         <segue reference="8Yp-E9-EYq"/>
