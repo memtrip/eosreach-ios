@@ -195,7 +195,7 @@ class CreateAccountRobot : Robot {
         onView(allOf(withText("Sorry"), isDisplayed()))
             .matches(isDisplayed())
         
-        onView(allOf(withText("Please enter an account name that is 12 characters in length."), isDisplayed()))
+        onView(allOf(withText("Please use a-z for the first character of your account name."), isDisplayed()))
             .matches(isDisplayed())
         
         onView(allOf(withText("OK"), isDisplayed()))
@@ -207,7 +207,7 @@ class CreateAccountRobot : Robot {
         onView(allOf(withText("Sorry"), isDisplayed()))
             .matches(isDisplayed())
         
-        onView(allOf(withText("Please use a-z for the first character of your account name."), isDisplayed()))
+        onView(allOf(withText("Please enter an account name that is 12 characters in length."), isDisplayed()))
             .matches(isDisplayed())
         
         onView(allOf(withText("OK"), isDisplayed()))

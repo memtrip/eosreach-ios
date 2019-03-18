@@ -9,7 +9,7 @@ class BillingFlowAccountLengthTestCase : StubTestCase {
         createAccountRobot.begin { it in
             it.verifyEnterAccountNameScreen()
             it.typeAccountName(accountName: "hello")
-            it.verifyAccountMustStartWithLetterError()
+            it.verifyAccountMustBe12CharactersError()
         }
     }
 }
