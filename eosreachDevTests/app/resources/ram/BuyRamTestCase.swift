@@ -20,9 +20,9 @@ class BuyRamTestCase : DevTestCase {
         
         ramRobot.begin { it in
             it.verifyBuyRamScreen()
-            it.enterBuyRamAmount(amount: "10")
+            it.enterBuyRamAmount(amount: "100")
             it.pressBuyButton()
-            it.verifyConfirmBuyRamScreen(ramValue: "10")
+            it.verifyConfirmBuyRamScreen(ramValue: "100")
             it.selectConfirmRamCta()
         }
         

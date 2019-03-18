@@ -1150,6 +1150,8 @@
 		3C51815D223C5DB400FFA4C1 /* CastProxyVoteThenCastProducerVoteTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51815C223C5DB400FFA4C1 /* CastProxyVoteThenCastProducerVoteTestCase.swift */; };
 		3C51815F223F76CE00FFA4C1 /* BuyRamTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51815E223F76CE00FFA4C1 /* BuyRamTestCase.swift */; };
 		3C518161223F782700FFA4C1 /* SellRamTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C518160223F782700FFA4C1 /* SellRamTestCase.swift */; };
+		3C518167223F857E00FFA4C1 /* DelegateBandwidthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C518166223F857E00FFA4C1 /* DelegateBandwidthTestCase.swift */; };
+		3C518169223F88EF00FFA4C1 /* UndelegateBandwidthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C518168223F88EF00FFA4C1 /* UndelegateBandwidthTestCase.swift */; };
 		3C5799C52191D27D00B9A3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */; };
 		3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799C82191D27D00B9A3D7 /* Main.storyboard */; };
 		3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
@@ -1731,6 +1733,8 @@
 		3C51815C223C5DB400FFA4C1 /* CastProxyVoteThenCastProducerVoteTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastProxyVoteThenCastProducerVoteTestCase.swift; sourceTree = "<group>"; };
 		3C51815E223F76CE00FFA4C1 /* BuyRamTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyRamTestCase.swift; sourceTree = "<group>"; };
 		3C518160223F782700FFA4C1 /* SellRamTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellRamTestCase.swift; sourceTree = "<group>"; };
+		3C518166223F857E00FFA4C1 /* DelegateBandwidthTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateBandwidthTestCase.swift; sourceTree = "<group>"; };
+		3C518168223F88EF00FFA4C1 /* UndelegateBandwidthTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndelegateBandwidthTestCase.swift; sourceTree = "<group>"; };
 		3C5799C12191D27D00B9A3D7 /* prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5799C92191D27D00B9A3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -2395,10 +2399,9 @@
 		3C51809D223C553800FFA4C1 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				3C518163223F84BB00FFA4C1 /* resources */,
+				3C518162223F84AA00FFA4C1 /* vote */,
 				3C51809E223C55AD00FFA4C1 /* Config.swift */,
-				3C51815C223C5DB400FFA4C1 /* CastProxyVoteThenCastProducerVoteTestCase.swift */,
-				3C51815E223F76CE00FFA4C1 /* BuyRamTestCase.swift */,
-				3C518160223F782700FFA4C1 /* SellRamTestCase.swift */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -2419,6 +2422,41 @@
 				3C518157223C5A3800FFA4C1 /* StubTestCase.swift */,
 			);
 			path = eosreachStubTests;
+			sourceTree = "<group>";
+		};
+		3C518162223F84AA00FFA4C1 /* vote */ = {
+			isa = PBXGroup;
+			children = (
+				3C51815C223C5DB400FFA4C1 /* CastProxyVoteThenCastProducerVoteTestCase.swift */,
+			);
+			path = vote;
+			sourceTree = "<group>";
+		};
+		3C518163223F84BB00FFA4C1 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				3C518165223F856900FFA4C1 /* bandwidth */,
+				3C518164223F852800FFA4C1 /* ram */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		3C518164223F852800FFA4C1 /* ram */ = {
+			isa = PBXGroup;
+			children = (
+				3C51815E223F76CE00FFA4C1 /* BuyRamTestCase.swift */,
+				3C518160223F782700FFA4C1 /* SellRamTestCase.swift */,
+			);
+			path = ram;
+			sourceTree = "<group>";
+		};
+		3C518165223F856900FFA4C1 /* bandwidth */ = {
+			isa = PBXGroup;
+			children = (
+				3C518166223F857E00FFA4C1 /* DelegateBandwidthTestCase.swift */,
+				3C518168223F88EF00FFA4C1 /* UndelegateBandwidthTestCase.swift */,
+			);
+			path = bandwidth;
 			sourceTree = "<group>";
 		};
 		3C5799B82191D27D00B9A3D7 = {
@@ -5070,11 +5108,13 @@
 				3C5180F4223C577C00FFA4C1 /* ImportKeyOrchestra.swift in Sources */,
 				3C518107223C578000FFA4C1 /* SearchRobot.swift in Sources */,
 				3C5180FF223C578000FFA4C1 /* VoteRobot.swift in Sources */,
+				3C518169223F88EF00FFA4C1 /* UndelegateBandwidthTestCase.swift in Sources */,
 				3C51810A223C578700FFA4C1 /* TestCase.swift in Sources */,
 				3C5180F8223C578000FFA4C1 /* SplashRobot.swift in Sources */,
 				3C518161223F782700FFA4C1 /* SellRamTestCase.swift in Sources */,
 				3C5180FD223C578000FFA4C1 /* AccountRobot.swift in Sources */,
 				3C5180F9223C578000FFA4C1 /* CommonRobot.swift in Sources */,
+				3C518167223F857E00FFA4C1 /* DelegateBandwidthTestCase.swift in Sources */,
 				3C5180F3223C577A00FFA4C1 /* Orchestra.swift in Sources */,
 				3C5180FC223C578000FFA4C1 /* AccountNavigationRobot.swift in Sources */,
 				3C51815B223C5B8800FFA4C1 /* DevTestCase.swift in Sources */,
