@@ -35,17 +35,22 @@ class RamRobot : Robot {
             .perform(click())
     }
     
-    func verifyConfirmBuyRamScreen() {
+    func verifyConfirmBuyRamScreen(ramValue: String, ramPriceValue: String? = nil) {
         onView(withId("confirm_buy_ram_toolbar"))
             .matches(isDisplayed())
         
         onView(withId("confirm_buy_ram_kb_value"))
             .matchesNext(isDisplayed())
-            .matches(withText("10"))
+            .matches(withText(ramValue))
         
-        onView(withId("confirm_buy_ram_price_value"))
-            .matchesNext(isDisplayed())
-            .matches(withText("0.5084 SYS"))
+        if let value = ramPriceValue {
+            onView(withId("confirm_buy_ram_price_value"))
+                .matchesNext(isDisplayed())
+                .matches(withText(value))
+        } else {
+            onView(withId("confirm_buy_ram_price_value"))
+                .matches(isDisplayed())
+        }
         
         onView(withId("confirm_buy_ram_cta"))
             .matches(isDisplayed())
@@ -90,17 +95,22 @@ class RamRobot : Robot {
             .perform(click())
     }
     
-    func verifyConfirmSellRamScreen() {
+    func verifyConfirmSellRamScreen(ramValue: String, ramPriceValue: String? = nil) {
         onView(withId("confirm_buy_ram_toolbar"))
             .matches(isDisplayed())
         
         onView(withId("confirm_buy_ram_kb_value"))
             .matchesNext(isDisplayed())
-            .matches(withText("10"))
+            .matches(withText(ramValue))
         
-        onView(withId("confirm_buy_ram_price_value"))
-            .matchesNext(isDisplayed())
-            .matches(withText("0.5084 SYS"))
+        if let value = ramPriceValue {
+            onView(withId("confirm_buy_ram_price_value"))
+                .matchesNext(isDisplayed())
+                .matches(withText(value))
+        } else {
+            onView(withId("confirm_buy_ram_price_value"))
+                .matches(isDisplayed())
+        }
         
         onView(withId("confirm_buy_ram_cta"))
             .matches(isDisplayed())

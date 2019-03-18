@@ -24,7 +24,7 @@ class BuyRamTestCase : StubTestCase {
             it.enterBuyRamAmount(amount: "10")
             it.verifyBuyRamEstimatedCost(value: "0.5084 SYS")
             it.pressBuyButton()
-            it.verifyConfirmBuyRamScreen()
+            it.verifyConfirmBuyRamScreen(ramValue: "10", ramPriceValue: "0.5084 SYS")
             it.selectConfirmRamCta()
         }
         
