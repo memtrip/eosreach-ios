@@ -1653,9 +1653,11 @@
                         <outlet property="toValueLabel" destination="aBP-sV-f0f" id="f3J-Dn-PHF"/>
                         <outlet property="toolBar" destination="oG1-un-Lx1" id="9H3-8c-3Kd"/>
                         <segue destination="tgP-tV-kRI" kind="show" identifier="transferConfirmationToAccounts" id="JiS-fD-Jqz"/>
+                        <segue destination="0UC-TO-Ph7" kind="unwind" identifier="unwindToAccount" unwindAction="unwindToAccountViewControllerWithSegue:" id="AeG-z6-b69"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeK-ai-uon" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0UC-TO-Ph7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5678" y="2211"/>
         </scene>
