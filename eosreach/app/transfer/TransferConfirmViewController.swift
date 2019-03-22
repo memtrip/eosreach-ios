@@ -76,9 +76,7 @@ class TransferConfirmViewController : MxViewController<TransferConfirmIntent, Tr
         case .errorWithLog(let log):
             activityIndicator.stop()
             confirmButton.visible()
-            showViewLog(viewLogHandler: { _ in
-                self.showTransactionLog(log: log)
-            })
+            self.showTransactionLog(log: log)
         }
     }
 

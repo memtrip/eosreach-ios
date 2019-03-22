@@ -5,7 +5,7 @@ import eosswift
 class TransferConfirmViewModel: MxViewModel<TransferConfirmIntent, TransferConfirmResult, TransferConfirmViewState> {
 
     private let getAccountByName = GetAccountByName()
-    private let eosKeyManager = EosKeyManagerImpl()
+    private let eosKeyManager = EosKeyManagerFactory.create()
     private let transferRequest = TransferRequestImpl()
     private let insertTransactionLog = InsertTransactionLog()
     

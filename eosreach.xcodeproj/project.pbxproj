@@ -1153,6 +1153,7 @@
 		3C518167223F857E00FFA4C1 /* DelegateBandwidthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C518166223F857E00FFA4C1 /* DelegateBandwidthTestCase.swift */; };
 		3C518169223F88EF00FFA4C1 /* UndelegateBandwidthTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C518168223F88EF00FFA4C1 /* UndelegateBandwidthTestCase.swift */; };
 		3C51816D223F989F00FFA4C1 /* TransferFundsTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51816C223F989F00FFA4C1 /* TransferFundsTestCase.swift */; };
+		3C518170223FA16F00FFA4C1 /* TransferFundsTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51816F223FA16F00FFA4C1 /* TransferFundsTestCase.swift */; };
 		3C5799C52191D27D00B9A3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */; };
 		3C5799CA2191D27D00B9A3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799C82191D27D00B9A3D7 /* Main.storyboard */; };
 		3C5799CC2191D27E00B9A3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
@@ -1737,6 +1738,7 @@
 		3C518166223F857E00FFA4C1 /* DelegateBandwidthTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateBandwidthTestCase.swift; sourceTree = "<group>"; };
 		3C518168223F88EF00FFA4C1 /* UndelegateBandwidthTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndelegateBandwidthTestCase.swift; sourceTree = "<group>"; };
 		3C51816C223F989F00FFA4C1 /* TransferFundsTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFundsTestCase.swift; sourceTree = "<group>"; };
+		3C51816F223FA16F00FFA4C1 /* TransferFundsTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFundsTestCase.swift; sourceTree = "<group>"; };
 		3C5799C12191D27D00B9A3D7 /* prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5799C42191D27D00B9A3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5799C92191D27D00B9A3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -2474,6 +2476,14 @@
 			isa = PBXGroup;
 			children = (
 				3C51816C223F989F00FFA4C1 /* TransferFundsTestCase.swift */,
+			);
+			path = transfer;
+			sourceTree = "<group>";
+		};
+		3C51816E223FA15E00FFA4C1 /* transfer */ = {
+			isa = PBXGroup;
+			children = (
+				3C51816F223FA16F00FFA4C1 /* TransferFundsTestCase.swift */,
 			);
 			path = transfer;
 			sourceTree = "<group>";
@@ -3346,6 +3356,7 @@
 		3CCC804B21FB972C00B715C2 /* account */ = {
 			isa = PBXGroup;
 			children = (
+				3C51816E223FA15E00FFA4C1 /* transfer */,
 				3C1D1AFB22117CD900EF4560 /* balance */,
 				3C1D1AF822117CC600EF4560 /* resources */,
 				3CF9031C22081FFC00ABDB58 /* vote */,
@@ -5199,6 +5210,7 @@
 				3C518152223C589000FFA4C1 /* BillingFlowLimboEndWithAccountsReceivedTestCase.swift in Sources */,
 				3C518145223C587800FFA4C1 /* VoteForProducerTestCase.swift in Sources */,
 				3C518125223C581400FFA4C1 /* AccountNavigationRobot.swift in Sources */,
+				3C518170223FA16F00FFA4C1 /* TransferFundsTestCase.swift in Sources */,
 				3C518126223C581400FFA4C1 /* Espresso.swift in Sources */,
 				3C518158223C5A3800FFA4C1 /* StubTestCase.swift in Sources */,
 				3C518127223C581400FFA4C1 /* EarlGrey.swift in Sources */,
