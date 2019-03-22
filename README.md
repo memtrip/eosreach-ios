@@ -16,7 +16,16 @@ Rx PublishSubject.
 
 ## Key management
 ### Import private key
+When an EOS private key is imported, the EOS public key counterpart is resolved and a new EllipticCurveKeyPair is generated in
+SecureEnclave. The EOS private key bytes are encrypted by this SecureEnclave backed keypair, the base58 EOS public key and the encrypted bytes are stored as a key/value pair.
+- [Read more about SecureEnclave.](https://developer.apple.com/documentation/security/certificate_key_and_trust_services/keys/storing_keys_in_the_secure_enclave)
+- See [EosKeyManager](http://github.com/memtrip/) for implementation details.
 
+### Create account
+The memtripissue service is used to create an account on behalf of the user, in this scenario a new EOS key pair is generated on the device and the private key is encrypted using the aforementioned mechanism. The EOS public key counterpart as base58 is sent to the memtripissue service to be assigned as both the owner and active authority of the new account. Your private key NEVER leaves your device during this process.
+
+### Transaction signing
+When an EOS private key is required to sign a transaction, the base58 EOS public key counterpart is used to fetch the EllipticCurveKeyPair encrypted private key bytes. To decrypt the private key bytes, the user must enter a pin or verify a biometric. The decrypted private key bytes are used to sign the pending transaction, the private key bytes will only remain in memory during the transaction signing process.
 
 ## Tests
 The EarlGrey tests in `eosreachTests` run against the offline stubs defined in `eosreach/_stub`, these
@@ -27,6 +36,7 @@ If you find this app useful, please consider voting for [memtripblock](https://w
 as a block producer. We are committed to open sourcing all the software we develop, let’s build the future of EOS on mobile together!
 
 ## TODO
+- Allow an EOS `active` key to be generated in SecureEnclave, this hardware backed key would ensure that private key bytes never have to enter the apps memory to perform signing.
 - Refactor Main.storyboard into small storyboards
 - The stub target should stub out the KingFisher requeests
 
