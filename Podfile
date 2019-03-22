@@ -22,10 +22,26 @@ target 'stub' do
   pods
 end
 
-target 'eosreachTests' do
-  pods
-  inherit! :search_paths
+def testPods
   pod 'RxBlocking', '~> 4.0'
   pod 'RxTest',     '~> 4.0'
   pod 'EarlGrey'
+end
+
+target 'eosreachTests' do
+  pods
+  inherit! :search_paths
+  testPods
+end
+
+target 'eosreachDevTests' do
+  pods
+  inherit! :search_paths
+  testPods
+end
+
+target 'eosreachStubTests' do
+  pods
+  inherit! :search_paths
+  testPods
 end

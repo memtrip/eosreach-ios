@@ -988,7 +988,6 @@
 		3C518044223C52A100FFA4C1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C7219DCEEB0002A25F /* ErrorView.swift */; };
 		3C518045223C52A100FFA4C1 /* StubMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E421EFDC8000A0720B /* StubMatcher.swift */; };
 		3C518046223C52A100FFA4C1 /* UndelegateBandwidthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24B21A6C3B300ACFA70 /* UndelegateBandwidthViewController.swift */; };
-		3C518048223C52A100FFA4C1 /* Pods_stub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AF008691BE8085E838A527 /* Pods_stub.framework */; };
 		3C51804A223C52A100FFA4C1 /* happy_path_get_table_rows_customtoken.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30021EFE71D00A0720B /* happy_path_get_table_rows_customtoken.json */; };
 		3C51804B223C52A100FFA4C1 /* WelcomeStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C340FBE219354E70017BEF9 /* WelcomeStrings.strings */; };
 		3C51804C223C52A100FFA4C1 /* TransactionHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7E21AEFC9300C219C4 /* TransactionHistoryCell.xib */; };
@@ -1114,7 +1113,6 @@
 		3C518129223C581400FFA4C1 /* RamRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C517EB8223C38F800FFA4C1 /* RamRobot.swift */; };
 		3C51812A223C581400FFA4C1 /* SettingsRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806B21FB9D2000B715C2 /* SettingsRobot.swift */; };
 		3C51812C223C581400FFA4C1 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C4DF4FE9AF77299AE53124 /* EarlGrey.framework */; };
-		3C51812D223C581400FFA4C1 /* Pods_eosreachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE90BA3A5BF0A06DE5903360 /* Pods_eosreachTests.framework */; };
 		3C518131223C581400FFA4C1 /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = 83C4DF4FE9AF77299AE53124 /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3C51813A223C587100FFA4C1 /* AccountStakedWithCoreBalanceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807821FEF6D400B715C2 /* AccountStakedWithCoreBalanceTestCase.swift */; };
 		3C51813B223C587100FFA4C1 /* AccountStakedWithoutCoreBalanceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC804C21FB973700B715C2 /* AccountStakedWithoutCoreBalanceTestCase.swift */; };
@@ -1441,9 +1439,13 @@
 		3CF90329220B8D8200ABDB58 /* BlockProducerRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF90328220B8D8200ABDB58 /* BlockProducerRobot.swift */; };
 		5459E12781E4B0E892AC7BD0 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0F5558D8100EC99A44F586 /* EarlGrey.swift */; };
 		64D127582CBE758855AE4A51 /* Pods_stub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AF008691BE8085E838A527 /* Pods_stub.framework */; };
+		A125C023B96912AE859B80E2 /* Pods_stub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AF008691BE8085E838A527 /* Pods_stub.framework */; };
+		A683A0631389342CD5DFE39D /* Pods_eosreachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE90BA3A5BF0A06DE5903360 /* Pods_eosreachTests.framework */; };
+		BFBCDE499E536A66D15B4772 /* Pods_eosreachDevTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0347A29505CAC9BA563F2BB8 /* Pods_eosreachDevTests.framework */; };
 		C1E5A46CDDED48FC645D7A7D /* Pods_prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5440B07D6A2278ADEAB5EF2 /* Pods_prod.framework */; };
 		E12F1349EAA622EB19BEDC62 /* Pods_eosreachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE90BA3A5BF0A06DE5903360 /* Pods_eosreachTests.framework */; };
 		EC63AF45906E62D7711FD12F /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C4DF4FE9AF77299AE53124 /* EarlGrey.framework */; };
+		FABDB7A42003DD843ADB82DB /* Pods_eosreachStubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1792C60C099DD4836D3C1750 /* Pods_eosreachStubTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1454,21 +1456,7 @@
 			remoteGlobalIDString = 3C517EC2223C52A100FFA4C1;
 			remoteInfo = dev;
 		};
-		3C51810E223C581400FFA4C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C5799B92191D27D00B9A3D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3C517EC2223C52A100FFA4C1;
-			remoteInfo = dev;
-		};
 		3C518137223C582100FFA4C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C5799B92191D27D00B9A3D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3C0DBA6021F501430020CA1F;
-			remoteInfo = stub;
-		};
-		3CD66C5421FA6B3C003E2A49 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3C5799B92191D27D00B9A3D7 /* Project object */;
 			proxyType = 1;
@@ -1514,9 +1502,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0347A29505CAC9BA563F2BB8 /* Pods_eosreachDevTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreachDevTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09932DAB4418DECD66B6892D /* Pods-stub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stub/Pods-stub.debug.xcconfig"; sourceTree = "<group>"; };
 		09BD5052D50873672358AF8D /* Pods-eosreach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.release.xcconfig"; sourceTree = "<group>"; };
+		1792C60C099DD4836D3C1750 /* Pods_eosreachStubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreachStubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB0764187BBA8A4D23CF7FF /* Pods-stub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stub.release.xcconfig"; path = "Pods/Target Support Files/Pods-stub/Pods-stub.release.xcconfig"; sourceTree = "<group>"; };
+		2502C7480E13426436BBC77F /* Pods-eosreachStubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreachStubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreachStubTests/Pods-eosreachStubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F0B150FC2A8716ABF0BCCA9 /* Pods-prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prod.release.xcconfig"; path = "Pods/Target Support Files/Pods-prod/Pods-prod.release.xcconfig"; sourceTree = "<group>"; };
-		301ACDB21C846A6FFD22CD20 /* Pods-stub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stub/Pods-stub.debug.xcconfig"; sourceTree = "<group>"; };
 		3C07008421A6EDF2008F63D2 /* BandwidthFormBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandwidthFormBundle.swift; sourceTree = "<group>"; };
 		3C07008621A6FA49008F63D2 /* ReachSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachSwitch.swift; sourceTree = "<group>"; };
 		3C07008821A6FC78008F63D2 /* ConfirmBandwidthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmBandwidthViewController.swift; sourceTree = "<group>"; };
@@ -2047,10 +2039,13 @@
 		3CF90326220A374000ABDB58 /* BlockProducerInformationVoteTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerInformationVoteTestCase.swift; sourceTree = "<group>"; };
 		3CF90328220B8D8200ABDB58 /* BlockProducerRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducerRobot.swift; sourceTree = "<group>"; };
 		48ECDAAEF6BB465B8887CE03 /* Pods-eosreach-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
-		7027EF510FA54A38C246E66C /* Pods-eosreachTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreachTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests.debug.xcconfig"; sourceTree = "<group>"; };
+		67F84E0B987F75E2F33BEDA2 /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
+		68A9BC8FBCFFE0BD9B9B6BDF /* Pods-eosreachDevTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreachDevTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreachDevTests/Pods-eosreachDevTests.release.xcconfig"; sourceTree = "<group>"; };
 		83C4DF4FE9AF77299AE53124 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = Pods/EarlGrey/EarlGrey/EarlGrey.framework; sourceTree = SOURCE_ROOT; };
+		8848F2DC929B55AE39B869D1 /* Pods-eosreachStubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreachStubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreachStubTests/Pods-eosreachStubTests.release.xcconfig"; sourceTree = "<group>"; };
+		A112C7181E44951CD606FCEC /* Pods-eosreachTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreachTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5440B07D6A2278ADEAB5EF2 /* Pods_prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_prod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A893BF02F108ECF21F829265 /* Pods-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
+		A55071258E995AD7682095D5 /* Pods-eosreachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreachTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests.release.xcconfig"; sourceTree = "<group>"; };
 		B52C445483AA480525DB9233 /* Pods-eosreach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.debug.xcconfig"; sourceTree = "<group>"; };
 		B747F913CEFFA4BFF47AA857 /* Pods_eosreach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE90BA3A5BF0A06DE5903360 /* Pods_eosreachTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreachTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2058,7 +2053,8 @@
 		DC0F5558D8100EC99A44F586 /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		E9E310DAF7D23490A6D97398 /* Pods-prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-prod/Pods-prod.debug.xcconfig"; sourceTree = "<group>"; };
 		F1AF008691BE8085E838A527 /* Pods_stub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9088267F08954877C73A0D9 /* Pods-stub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stub.release.xcconfig"; path = "Pods/Target Support Files/Pods-stub/Pods-stub.release.xcconfig"; sourceTree = "<group>"; };
+		F4873856B07EDBAA6631101F /* Pods-eosreachDevTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreachDevTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreachDevTests/Pods-eosreachDevTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F641C98F4538D5DD68BBDD67 /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2067,6 +2063,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D127582CBE758855AE4A51 /* Pods_stub.framework in Frameworks */,
+				A125C023B96912AE859B80E2 /* Pods_stub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2074,7 +2071,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C518048223C52A100FFA4C1 /* Pods_stub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2084,6 +2080,7 @@
 			files = (
 				3C5180E4223C56B100FFA4C1 /* EarlGrey.framework in Frameworks */,
 				3C5180E5223C56B100FFA4C1 /* Pods_eosreachTests.framework in Frameworks */,
+				BFBCDE499E536A66D15B4772 /* Pods_eosreachDevTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2092,7 +2089,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C51812C223C581400FFA4C1 /* EarlGrey.framework in Frameworks */,
-				3C51812D223C581400FFA4C1 /* Pods_eosreachTests.framework in Frameworks */,
+				FABDB7A42003DD843ADB82DB /* Pods_eosreachStubTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2110,6 +2107,7 @@
 			files = (
 				EC63AF45906E62D7711FD12F /* EarlGrey.framework in Frameworks */,
 				E12F1349EAA622EB19BEDC62 /* Pods_eosreachTests.framework in Frameworks */,
+				A683A0631389342CD5DFE39D /* Pods_eosreachTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2414,6 +2412,7 @@
 			children = (
 				3C51809D223C553800FFA4C1 /* app */,
 				3C51815A223C5B8800FFA4C1 /* DevTestCase.swift */,
+				F641C98F4538D5DD68BBDD67 /* EarlGrey.swift */,
 			);
 			path = eosreachDevTests;
 			sourceTree = "<group>";
@@ -2423,6 +2422,7 @@
 			children = (
 				3CCC804A21FB972200B715C2 /* app */,
 				3C518157223C5A3800FFA4C1 /* StubTestCase.swift */,
+				67F84E0B987F75E2F33BEDA2 /* EarlGrey.swift */,
 			);
 			path = eosreachStubTests;
 			sourceTree = "<group>";
@@ -2566,6 +2566,8 @@
 				BE90BA3A5BF0A06DE5903360 /* Pods_eosreachTests.framework */,
 				A5440B07D6A2278ADEAB5EF2 /* Pods_prod.framework */,
 				F1AF008691BE8085E838A527 /* Pods_stub.framework */,
+				0347A29505CAC9BA563F2BB8 /* Pods_eosreachDevTests.framework */,
+				1792C60C099DD4836D3C1750 /* Pods_eosreachStubTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -3441,12 +3443,16 @@
 				09BD5052D50873672358AF8D /* Pods-eosreach.release.xcconfig */,
 				CB611D4B0C1236BD507AB4A2 /* Pods-eosreach-eosreachTests.debug.xcconfig */,
 				48ECDAAEF6BB465B8887CE03 /* Pods-eosreach-eosreachTests.release.xcconfig */,
-				7027EF510FA54A38C246E66C /* Pods-eosreachTests.debug.xcconfig */,
-				A893BF02F108ECF21F829265 /* Pods-eosreachTests.release.xcconfig */,
 				E9E310DAF7D23490A6D97398 /* Pods-prod.debug.xcconfig */,
 				2F0B150FC2A8716ABF0BCCA9 /* Pods-prod.release.xcconfig */,
-				301ACDB21C846A6FFD22CD20 /* Pods-stub.debug.xcconfig */,
-				F9088267F08954877C73A0D9 /* Pods-stub.release.xcconfig */,
+				F4873856B07EDBAA6631101F /* Pods-eosreachDevTests.debug.xcconfig */,
+				68A9BC8FBCFFE0BD9B9B6BDF /* Pods-eosreachDevTests.release.xcconfig */,
+				A112C7181E44951CD606FCEC /* Pods-eosreachTests.debug.xcconfig */,
+				A55071258E995AD7682095D5 /* Pods-eosreachTests.release.xcconfig */,
+				09932DAB4418DECD66B6892D /* Pods-stub.debug.xcconfig */,
+				1FB0764187BBA8A4D23CF7FF /* Pods-stub.release.xcconfig */,
+				2502C7480E13426436BBC77F /* Pods-eosreachStubTests.debug.xcconfig */,
+				8848F2DC929B55AE39B869D1 /* Pods-eosreachStubTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -3478,12 +3484,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C518090223C52A100FFA4C1 /* Build configuration list for PBXNativeTarget "dev" */;
 			buildPhases = (
-				3C517EC3223C52A100FFA4C1 /* [CP] Check Pods Manifest.lock */,
 				3C517EC4223C52A100FFA4C1 /* ShellScript */,
 				3C517EC5223C52A100FFA4C1 /* Sources */,
 				3C518047223C52A100FFA4C1 /* Frameworks */,
 				3C518049223C52A100FFA4C1 /* Resources */,
-				3C51808F223C52A100FFA4C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3519,17 +3523,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C518132223C581400FFA4C1 /* Build configuration list for PBXNativeTarget "eosreachStubTests" */;
 			buildPhases = (
-				3C51810F223C581400FFA4C1 /* [CP] Check Pods Manifest.lock */,
+				8A91DCB2269C112A63B67466 /* [CP] Check Pods Manifest.lock */,
 				3C518110223C581400FFA4C1 /* Sources */,
 				3C51812B223C581400FFA4C1 /* Frameworks */,
 				3C51812E223C581400FFA4C1 /* Resources */,
-				3C51812F223C581400FFA4C1 /* [CP] Embed Pods Frameworks */,
 				3C518130223C581400FFA4C1 /* EarlGrey Copy Files */,
+				B7DA033B77D1FD4D9F834CB2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3C51810D223C581400FFA4C1 /* PBXTargetDependency */,
 				3C518138223C582100FFA4C1 /* PBXTargetDependency */,
 			);
 			name = eosreachStubTests;
@@ -3571,7 +3574,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3CD66C5521FA6B3C003E2A49 /* PBXTargetDependency */,
 			);
 			name = eosreachTests;
 			productName = eosreachTests;
@@ -3991,28 +3993,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n";
 		};
-		3C517EC3223C52A100FFA4C1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-stub-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3C517EC4223C52A100FFA4C1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4030,54 +4010,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n";
 		};
-		3C51808F223C52A100FFA4C1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-stub/Pods-stub-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
-				"${BUILT_PRODUCTS_DIR}/EllipticCurveKeyPair/EllipticCurveKeyPair.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
-				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
-				"${BUILT_PRODUCTS_DIR}/eosswift/eosswift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EllipticCurveKeyPair.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/eosswift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stub/Pods-stub-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3C5180AA223C56B100FFA4C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4093,7 +4025,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-eosreachTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-eosreachDevTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -4108,7 +4040,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-eosreachDevTests/Pods-eosreachDevTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
 				"${BUILT_PRODUCTS_DIR}/EllipticCurveKeyPair/EllipticCurveKeyPair.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -4151,83 +4083,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3C51810F223C581400FFA4C1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-eosreachTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3C51812F223C581400FFA4C1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
-				"${BUILT_PRODUCTS_DIR}/EllipticCurveKeyPair/EllipticCurveKeyPair.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
-				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
-				"${BUILT_PRODUCTS_DIR}/eosswift/eosswift.framework",
-				"${PODS_ROOT}/EarlGrey/EarlGrey/EarlGrey.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EllipticCurveKeyPair.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/eosswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EarlGrey.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eosreachDevTests/Pods-eosreachDevTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3C9A79F28537B841CE99E8DF /* [CP] Embed Pods Frameworks */ = {
@@ -4330,6 +4186,82 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-prod/Pods-prod-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A91DCB2269C112A63B67466 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eosreachStubTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7DA033B77D1FD4D9F834CB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-eosreachStubTests/Pods-eosreachStubTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/EllipticCurveKeyPair/EllipticCurveKeyPair.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/eosswift/eosswift.framework",
+				"${PODS_ROOT}/EarlGrey/EarlGrey/EarlGrey.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EllipticCurveKeyPair.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/eosswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EarlGrey.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eosreachStubTests/Pods-eosreachStubTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -5638,20 +5570,10 @@
 			target = 3C517EC2223C52A100FFA4C1 /* dev */;
 			targetProxy = 3C5180EF223C56BE00FFA4C1 /* PBXContainerItemProxy */;
 		};
-		3C51810D223C581400FFA4C1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3C517EC2223C52A100FFA4C1 /* dev */;
-			targetProxy = 3C51810E223C581400FFA4C1 /* PBXContainerItemProxy */;
-		};
 		3C518138223C582100FFA4C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3C0DBA6021F501430020CA1F /* stub */;
 			targetProxy = 3C518137223C582100FFA4C1 /* PBXContainerItemProxy */;
-		};
-		3CD66C5521FA6B3C003E2A49 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3C0DBA6021F501430020CA1F /* stub */;
-			targetProxy = 3CD66C5421FA6B3C003E2A49 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -5677,7 +5599,7 @@
 /* Begin XCBuildConfiguration section */
 		3C0DBC2221F501430020CA1F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 301ACDB21C846A6FFD22CD20 /* Pods-stub.debug.xcconfig */;
+			baseConfigurationReference = 09932DAB4418DECD66B6892D /* Pods-stub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -5702,7 +5624,7 @@
 		};
 		3C0DBC2321F501430020CA1F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9088267F08954877C73A0D9 /* Pods-stub.release.xcconfig */;
+			baseConfigurationReference = 1FB0764187BBA8A4D23CF7FF /* Pods-stub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -5726,7 +5648,6 @@
 		};
 		3C518091223C52A100FFA4C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 301ACDB21C846A6FFD22CD20 /* Pods-stub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -5751,7 +5672,6 @@
 		};
 		3C518092223C52A100FFA4C1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9088267F08954877C73A0D9 /* Pods-stub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -5775,7 +5695,7 @@
 		};
 		3C5180EB223C56B100FFA4C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7027EF510FA54A38C246E66C /* Pods-eosreachTests.debug.xcconfig */;
+			baseConfigurationReference = F4873856B07EDBAA6631101F /* Pods-eosreachDevTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -5795,7 +5715,7 @@
 		};
 		3C5180EC223C56B100FFA4C1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A893BF02F108ECF21F829265 /* Pods-eosreachTests.release.xcconfig */;
+			baseConfigurationReference = 68A9BC8FBCFFE0BD9B9B6BDF /* Pods-eosreachDevTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -5815,10 +5735,11 @@
 		};
 		3C518133223C581400FFA4C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7027EF510FA54A38C246E66C /* Pods-eosreachTests.debug.xcconfig */;
+			baseConfigurationReference = 2502C7480E13426436BBC77F /* Pods-eosreachStubTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8F4QT3VHG;
 				INFOPLIST_FILE = "eosreachTests copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5835,10 +5756,11 @@
 		};
 		3C518134223C581400FFA4C1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A893BF02F108ECF21F829265 /* Pods-eosreachTests.release.xcconfig */;
+			baseConfigurationReference = 8848F2DC929B55AE39B869D1 /* Pods-eosreachStubTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8F4QT3VHG;
 				INFOPLIST_FILE = "eosreachTests copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6021,7 +5943,7 @@
 		};
 		3C5799E22191D27E00B9A3D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7027EF510FA54A38C246E66C /* Pods-eosreachTests.debug.xcconfig */;
+			baseConfigurationReference = A112C7181E44951CD606FCEC /* Pods-eosreachTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = eosreachTests/Info.plist;
@@ -6039,7 +5961,7 @@
 		};
 		3C5799E32191D27E00B9A3D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A893BF02F108ECF21F829265 /* Pods-eosreachTests.release.xcconfig */;
+			baseConfigurationReference = A55071258E995AD7682095D5 /* Pods-eosreachTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = eosreachTests/Info.plist;
