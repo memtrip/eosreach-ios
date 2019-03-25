@@ -122,9 +122,17 @@ class EosKeyManagerFactory {
     static func create() -> EosKeyManager {
         switch TargetSwitch.api() {
         case .stub:
+            #if STUB
             return EosKeyManagerStub()
+            #else
+            fatalError("TargetSwitch implementation error.")
+            #endif
         case .dev:
+            #if DEV
             return EosKeyManagerStub()
+            #else
+            fatalError("TargetSwitch implementation error.")
+            #endif
         case .prod:
             return EosKeyManagerImpl()
         }
