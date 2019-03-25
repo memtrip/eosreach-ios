@@ -98,7 +98,7 @@ func replaceText(_ text: String) -> GREYAction {
     return grey_replaceText(text)
 }
 
-func scrollToBottomn() -> GREYAction {
+func scrollToBottom() -> GREYAction {
     return grey_scrollToContentEdge(GREYContentEdge.bottom)
 }
 

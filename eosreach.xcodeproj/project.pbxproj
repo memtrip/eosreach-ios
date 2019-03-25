@@ -574,6 +574,7 @@
 		3C1F1F9C21A36FCA0075BD71 /* ActionsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F9B21A36FCA0075BD71 /* ActionsBundle.swift */; };
 		3C291BA3219D58B800562448 /* CurrencyPairFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291BA2219D58B800562448 /* CurrencyPairFormatter.swift */; };
 		3C291BA5219D597900562448 /* CurrencySymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291BA4219D597900562448 /* CurrencySymbol.swift */; };
+		3C2F85C52248BDED00C0075E /* request_get_table_rows_rammarket.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C517EBA223C3BD700FFA4C1 /* request_get_table_rows_rammarket.json */; };
 		3C340FBD219353D20017BEF9 /* ReachToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FBC219353D20017BEF9 /* ReachToolbar.swift */; };
 		3C340FBF219354E70017BEF9 /* WelcomeStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C340FBE219354E70017BEF9 /* WelcomeStrings.strings */; };
 		3C340FC62193612A0017BEF9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FC12193612A0017BEF9 /* SettingsViewController.swift */; };
@@ -1013,7 +1014,6 @@
 		3C518060223C52A100FFA4C1 /* TransactionLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C07009421A71AA5008F63D2 /* TransactionLogViewController.xib */; };
 		3C518061223C52A100FFA4C1 /* happy_path_get_table_rows_delegated_bandwidth.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30221EFE71D00A0720B /* happy_path_get_table_rows_delegated_bandwidth.json */; };
 		3C518062223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30C21EFE71E00A0720B /* happy_path_get_table_rows_producerjson_single.json */; };
-		3C518063223C52A100FFA4C1 /* request_get_table_rows_rammarket.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C517EBA223C3BD700FFA4C1 /* request_get_table_rows_rammarket.json */; };
 		3C518064223C52A100FFA4C1 /* happy_path_get_producers.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30121EFE71D00A0720B /* happy_path_get_producers.json */; };
 		3C518065223C52A100FFA4C1 /* happy_path_get_key_accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30F21EFE71E00A0720B /* happy_path_get_key_accounts.json */; };
 		3C518066223C52A100FFA4C1 /* KeyPairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0A86AD21ABFD5D00F48302 /* KeyPairCell.xib */; };
@@ -3735,7 +3735,6 @@
 				3C518060223C52A100FFA4C1 /* TransactionLogViewController.xib in Resources */,
 				3C518061223C52A100FFA4C1 /* happy_path_get_table_rows_delegated_bandwidth.json in Resources */,
 				3C518062223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson_single.json in Resources */,
-				3C518063223C52A100FFA4C1 /* request_get_table_rows_rammarket.json in Resources */,
 				3C518064223C52A100FFA4C1 /* happy_path_get_producers.json in Resources */,
 				3C518065223C52A100FFA4C1 /* happy_path_get_key_accounts.json in Resources */,
 				3C518066223C52A100FFA4C1 /* KeyPairCell.xib in Resources */,
@@ -3767,6 +3766,7 @@
 				3C518080223C52A100FFA4C1 /* SettingsStrings.strings in Resources */,
 				3C518081223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson_empty.json in Resources */,
 				3C518082223C52A100FFA4C1 /* happy_path_get_key_accounts_single.json in Resources */,
+				3C2F85C52248BDED00C0075E /* request_get_table_rows_rammarket.json in Resources */,
 				3C518083223C52A100FFA4C1 /* happy_path_get_empty_currency_balance.json in Resources */,
 				3C518084223C52A100FFA4C1 /* ProxyStrings.strings in Resources */,
 				3C518085223C52A100FFA4C1 /* happy_path_create_account.json in Resources */,

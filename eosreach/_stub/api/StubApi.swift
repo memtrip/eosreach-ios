@@ -94,7 +94,7 @@ class StubApi {
         matcher: StubMatcher(
             rootUrl: R.string.appStrings.app_endpoint_url(),
             urlMatcher: regex("v1/chain/get_table_rows$"),
-            bodyMatcher: jsonString(R.file.request_get_table_rows_regproxyinfoJson())
+            bodyMatcher: jsonString(R.file.request_get_table_rows_regproxyinfo_singleJson())
         ),
         request: BasicStubRequest(code: 200, body: {
             readJson(R.file.happy_path_get_table_rows_regproxyinfo_singleJson())
