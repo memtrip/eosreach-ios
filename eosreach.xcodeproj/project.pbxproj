@@ -458,7 +458,6 @@
 		3C0DBBD721F501430020CA1F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C7219DCEEB0002A25F /* ErrorView.swift */; };
 		3C0DBBD821F501430020CA1F /* StubMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E421EFDC8000A0720B /* StubMatcher.swift */; };
 		3C0DBBD921F501430020CA1F /* UndelegateBandwidthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24B21A6C3B300ACFA70 /* UndelegateBandwidthViewController.swift */; };
-		3C0DBBDD21F501430020CA1F /* happy_path_get_table_rows_customtoken.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30021EFE71D00A0720B /* happy_path_get_table_rows_customtoken.json */; };
 		3C0DBBDE21F501430020CA1F /* WelcomeStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C340FBE219354E70017BEF9 /* WelcomeStrings.strings */; };
 		3C0DBBDF21F501430020CA1F /* TransactionHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7E21AEFC9300C219C4 /* TransactionHistoryCell.xib */; };
 		3C0DBBE021F501430020CA1F /* VoteStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E6FA21A5A35D0050BA57 /* VoteStrings.strings */; };
@@ -574,7 +573,8 @@
 		3C1F1F9C21A36FCA0075BD71 /* ActionsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F9B21A36FCA0075BD71 /* ActionsBundle.swift */; };
 		3C291BA3219D58B800562448 /* CurrencyPairFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291BA2219D58B800562448 /* CurrencyPairFormatter.swift */; };
 		3C291BA5219D597900562448 /* CurrencySymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291BA4219D597900562448 /* CurrencySymbol.swift */; };
-		3C2F85C52248BDED00C0075E /* request_get_table_rows_rammarket.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C517EBA223C3BD700FFA4C1 /* request_get_table_rows_rammarket.json */; };
+		3C2F85C72248CCB400C0075E /* EosKeyManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */; };
+		3C2F85CC2248CEDC00C0075E /* happy_path_get_table_rows_customtoken.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F85CA2248CEAE00C0075E /* happy_path_get_table_rows_customtoken.json */; };
 		3C340FBD219353D20017BEF9 /* ReachToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FBC219353D20017BEF9 /* ReachToolbar.swift */; };
 		3C340FBF219354E70017BEF9 /* WelcomeStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C340FBE219354E70017BEF9 /* WelcomeStrings.strings */; };
 		3C340FC62193612A0017BEF9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FC12193612A0017BEF9 /* SettingsViewController.swift */; };
@@ -623,7 +623,6 @@
 		3C517ED6223C52A100FFA4C1 /* ManageRamBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700E021A75245008F63D2 /* ManageRamBundle.swift */; };
 		3C517ED7223C52A100FFA4C1 /* GetBalances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD8F219F38160026649F /* GetBalances.swift */; };
 		3C517ED8223C52A100FFA4C1 /* RegisteredBlockProducersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D4219DF1B00002A25F /* RegisteredBlockProducersCell.swift */; };
-		3C517ED9223C52A100FFA4C1 /* StoreKitRequestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979B22175450001DC2D5 /* StoreKitRequestStub.swift */; };
 		3C517EDA223C52A100FFA4C1 /* CastProducersVoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E72A21A5CFCA0050BA57 /* CastProducersVoteTableView.swift */; };
 		3C517EDB223C52A100FFA4C1 /* ViewProxyVoterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6EC21A56AAE0050BA57 /* ViewProxyVoterViewState.swift */; };
 		3C517EDC223C52A100FFA4C1 /* BalanceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBA6219B51A700589936 /* BalanceFormatter.swift */; };
@@ -638,7 +637,6 @@
 		3C517EE5223C52A100FFA4C1 /* ManageRamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700B021A74FE8008F63D2 /* ManageRamViewModel.swift */; };
 		3C517EE6223C52A100FFA4C1 /* KeyPairTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86AB21ABFC8100F48302 /* KeyPairTableView.swift */; };
 		3C517EE7223C52A100FFA4C1 /* RsaEncryptionVerified.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C49219444DB003663EF /* RsaEncryptionVerified.swift */; };
-		3C517EE8223C52A100FFA4C1 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E621EFDCE100A0720B /* Stub.swift */; };
 		3C517EE9223C52A100FFA4C1 /* AccountNavigationViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF79721A0934600ADA892 /* AccountNavigationViewState.swift */; };
 		3C517EEA223C52A100FFA4C1 /* CastProxyVoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E70021A5A4110050BA57 /* CastProxyVoteViewModel.swift */; };
 		3C517EEB223C52A100FFA4C1 /* VoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF78221A08D8700ADA892 /* VoteResult.swift */; };
@@ -679,7 +677,6 @@
 		3C517F0E223C52A100FFA4C1 /* CreateAccountResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B821A507E700716AA2 /* CreateAccountResult.swift */; };
 		3C517F0F223C52A100FFA4C1 /* MxResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D932192D50700FC1A0D /* MxResult.swift */; };
 		3C517F10223C52A100FFA4C1 /* CastProducersVoteIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E70C21A5A4180050BA57 /* CastProducersVoteIntent.swift */; };
-		3C517F11223C52A100FFA4C1 /* QueuedStubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D1AE622115A7F00EF4560 /* QueuedStubResponse.swift */; };
 		3C517F12223C52A100FFA4C1 /* UnusedTransactionIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C99821AC69BE001398F4 /* UnusedTransactionIdentifier.swift */; };
 		3C517F13223C52A100FFA4C1 /* EosPriceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C47219444A2003663EF /* EosPriceValue.swift */; };
 		3C517F14223C52A100FFA4C1 /* ProxyVoterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E71721A5BE970050BA57 /* ProxyVoterListViewModel.swift */; };
@@ -718,13 +715,11 @@
 		3C517F35223C52A100FFA4C1 /* ReachActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC81321933B6F00562A1B /* ReachActivityIndicator.swift */; };
 		3C517F36223C52A100FFA4C1 /* SellRamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700C421A75138008F63D2 /* SellRamViewController.swift */; };
 		3C517F37223C52A100FFA4C1 /* TokenParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A4219DAF110002A25F /* TokenParent.swift */; };
-		3C517F38223C52A100FFA4C1 /* StubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E221EFDC5200A0720B /* StubApi.swift */; };
 		3C517F39223C52A100FFA4C1 /* AccountViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2521A2B1350050910D /* AccountViewLayout.swift */; };
 		3C517F3A223C52A100FFA4C1 /* ReachSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008621A6FA49008F63D2 /* ReachSwitch.swift */; };
 		3C517F3B223C52A100FFA4C1 /* ReceiptDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91C9A021AC9BDC001398F4 /* ReceiptDataRequest.swift */; };
 		3C517F3C223C52A100FFA4C1 /* types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBC7219C29B000589936 /* types.swift */; };
 		3C517F3D223C52A100FFA4C1 /* TransactionReceiptResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700A321A72643008F63D2 /* TransactionReceiptResult.swift */; };
-		3C517F3E223C52A100FFA4C1 /* BasicStubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2EB21EFDD7D00A0720B /* BasicStubResponse.swift */; };
 		3C517F3F223C52A100FFA4C1 /* RegisteredBlockProducersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DDE2194A17000E72DD1 /* RegisteredBlockProducersResult.swift */; };
 		3C517F40223C52A100FFA4C1 /* date_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592F95219D5C5200D7C9B9 /* date_types.swift */; };
 		3C517F41223C52A100FFA4C1 /* TransferBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D72421A869D600C87EC9 /* TransferBundle.swift */; };
@@ -792,7 +787,6 @@
 		3C517F7F223C52A100FFA4C1 /* MxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C6D952192D52500FC1A0D /* MxViewModel.swift */; };
 		3C517F80223C52A100FFA4C1 /* EosCreateAccountRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3AA219DB2BA0002A25F /* EosCreateAccountRequestImpl.swift */; };
 		3C517F81223C52A100FFA4C1 /* PurgeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C4B2194469B003663EF /* PurgeUserDefaults.swift */; };
-		3C517F82223C52A100FFA4C1 /* StubSkPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA297A022176154001DC2D5 /* StubSkPrice.swift */; };
 		3C517F83223C52A100FFA4C1 /* AccountBalanceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFB87219B365C00589936 /* AccountBalanceList.swift */; };
 		3C517F84223C52A100FFA4C1 /* CastProxyVoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E70221A5A4110050BA57 /* CastProxyVoteViewController.swift */; };
 		3C517F85223C52A100FFA4C1 /* ResourcesRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7821A31CBB0075BD71 /* ResourcesRenderer.swift */; };
@@ -803,7 +797,6 @@
 		3C517F8A223C52A100FFA4C1 /* EosEndpointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3421938C71003663EF /* EosEndpointViewModel.swift */; };
 		3C517F8B223C52A100FFA4C1 /* ReachBorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C04B621A8881700F5F7A7 /* ReachBorderLabel.swift */; };
 		3C517F8C223C52A100FFA4C1 /* AccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14FA3E21A0A1C600B8255F /* AccountUseCase.swift */; };
-		3C517F8D223C52A100FFA4C1 /* ReceiptDataRequestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2979022174670001DC2D5 /* ReceiptDataRequestStub.swift */; };
 		3C517F8E223C52A100FFA4C1 /* ActiveBlockProducersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE22194A17000E72DD1 /* ActiveBlockProducersResult.swift */; };
 		3C517F8F223C52A100FFA4C1 /* ViewProxyVoterIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6ED21A56AAE0050BA57 /* ViewProxyVoterIntent.swift */; };
 		3C517F90223C52A100FFA4C1 /* ManageRamViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700AF21A74FE8008F63D2 /* ManageRamViewState.swift */; };
@@ -817,7 +810,6 @@
 		3C517F98223C52A100FFA4C1 /* EncryptedKeyPairData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C50219459D3003663EF /* EncryptedKeyPairData.swift */; };
 		3C517F99223C52A100FFA4C1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC8112193086800562A1B /* R.generated.swift */; };
 		3C517F9A223C52A100FFA4C1 /* ConfirmBandwidthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07008B21A6FC78008F63D2 /* ConfirmBandwidthViewModel.swift */; };
-		3C517F9B223C52A100FFA4C1 /* StubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E821EFDCF100A0720B /* StubRequest.swift */; };
 		3C517F9C223C52A100FFA4C1 /* ViewPrivateKeysViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86A121ABF05B00F48302 /* ViewPrivateKeysViewState.swift */; };
 		3C517F9D223C52A100FFA4C1 /* DeleteAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ADD7F219F37B00026649F /* DeleteAccounts.swift */; };
 		3C517F9E223C52A100FFA4C1 /* BuyRamResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700BA21A750DE008F63D2 /* BuyRamResult.swift */; };
@@ -931,14 +923,12 @@
 		3C51800A223C52A100FFA4C1 /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C108D702204F3F40011F07B /* Rx.swift */; };
 		3C51800B223C52A100FFA4C1 /* AccountBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF77221A0833600ADA892 /* AccountBundle.swift */; };
 		3C51800C223C52A100FFA4C1 /* CurrencySymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291BA4219D597900562448 /* CurrencySymbol.swift */; };
-		3C51800D223C52A100FFA4C1 /* ErrorOnFirstStubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2EF21EFE15000A0720B /* ErrorOnFirstStubRequest.swift */; };
 		3C51800E223C52A100FFA4C1 /* VoteProducerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7621A306A00075BD71 /* VoteProducerCell.swift */; };
 		3C51800F223C52A100FFA4C1 /* BuyRamViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700BB21A750DE008F63D2 /* BuyRamViewState.swift */; };
 		3C518010223C52A100FFA4C1 /* EosEndpointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3221938C71003663EF /* EosEndpointViewController.swift */; };
 		3C518011223C52A100FFA4C1 /* DataTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFB21AADC2100D81458 /* DataTableView.swift */; };
 		3C518012223C52A100FFA4C1 /* AccountNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33BE21A513CB00716AA2 /* AccountNavigationDelegate.swift */; };
 		3C518013223C52A100FFA4C1 /* EosEndpointUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A971C21A3C5F100C30A75 /* EosEndpointUseCase.swift */; };
-		3C518014223C52A100FFA4C1 /* StubConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0DBC2821F506E00020CA1F /* StubConnection.swift */; };
 		3C518015223C52A100FFA4C1 /* ViewKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A86A721ABF0BD00F48302 /* ViewKeyPair.swift */; };
 		3C518016223C52A100FFA4C1 /* ViewProxyVoterBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E6EB21A56AAE0050BA57 /* ViewProxyVoterBundle.swift */; };
 		3C518017223C52A100FFA4C1 /* EosEndpointIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C964C3021938C71003663EF /* EosEndpointIntent.swift */; };
@@ -954,7 +944,6 @@
 		3C518021223C52A100FFA4C1 /* RamBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700E221A7726A008F63D2 /* RamBundle.swift */; };
 		3C518022223C52A100FFA4C1 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF76921A082AC00ADA892 /* AccountViewModel.swift */; };
 		3C518023223C52A100FFA4C1 /* AccountActionRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBC5219C21E000589936 /* AccountActionRequestImpl.swift */; };
-		3C518024223C52A100FFA4C1 /* EosKeyManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */; };
 		3C518025223C52A100FFA4C1 /* EosCreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3A8219DB2640002A25F /* EosCreateAccountRequest.swift */; };
 		3C518026223C52A100FFA4C1 /* RamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3B4219DB8290002A25F /* RamRequest.swift */; };
 		3C518027223C52A100FFA4C1 /* SettingsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C340FC32193612A0017BEF9 /* SettingsViewState.swift */; };
@@ -978,85 +967,45 @@
 		3C518039223C52A100FFA4C1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC81821933D4F00562A1B /* SplashViewController.swift */; };
 		3C51803A223C52A100FFA4C1 /* ActiveBlockProducersDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EFD21AADCE600D81458 /* ActiveBlockProducersDelegate.swift */; };
 		3C51803B223C52A100FFA4C1 /* AccountAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBBE219C21BC00589936 /* AccountAction.swift */; };
-		3C51803C223C52A100FFA4C1 /* StubUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2DC21EFAE8800A0720B /* StubUrlSession.swift */; };
 		3C51803D223C52A100FFA4C1 /* RegisteredBlockProducersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F0DE32194A17000E72DD1 /* RegisteredBlockProducersViewController.swift */; };
 		3C51803E223C52A100FFA4C1 /* ConfirmRamViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0700D821A751BA008F63D2 /* ConfirmRamViewState.swift */; };
 		3C51803F223C52A100FFA4C1 /* TransferConfirmIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1D71421A85B5100C87EC9 /* TransferConfirmIntent.swift */; };
 		3C518040223C52A100FFA4C1 /* CreateAccountViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF33B521A507E700716AA2 /* CreateAccountViewState.swift */; };
-		3C518041223C52A100FFA4C1 /* StubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2ED21EFE02400A0720B /* StubResponse.swift */; };
 		3C518042223C52A100FFA4C1 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DF78A21A090F300ADA892 /* ResourcesViewController.swift */; };
 		3C518043223C52A100FFA4C1 /* SplashResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EC81A21933D4F00562A1B /* SplashResult.swift */; };
 		3C518044223C52A100FFA4C1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C7219DCEEB0002A25F /* ErrorView.swift */; };
-		3C518045223C52A100FFA4C1 /* StubMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F2E421EFDC8000A0720B /* StubMatcher.swift */; };
 		3C518046223C52A100FFA4C1 /* UndelegateBandwidthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BD24B21A6C3B300ACFA70 /* UndelegateBandwidthViewController.swift */; };
-		3C51804A223C52A100FFA4C1 /* happy_path_get_table_rows_customtoken.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30021EFE71D00A0720B /* happy_path_get_table_rows_customtoken.json */; };
 		3C51804B223C52A100FFA4C1 /* WelcomeStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C340FBE219354E70017BEF9 /* WelcomeStrings.strings */; };
 		3C51804C223C52A100FFA4C1 /* TransactionHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4C5E7E21AEFC9300C219C4 /* TransactionHistoryCell.xib */; };
 		3C51804D223C52A100FFA4C1 /* VoteStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E6FA21A5A35D0050BA57 /* VoteStrings.strings */; };
-		3C51804E223C52A100FFA4C1 /* happy_path_get_table_rows_regproxyinfo_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30421EFE71D00A0720B /* happy_path_get_table_rows_regproxyinfo_single.json */; };
-		3C51804F223C52A100FFA4C1 /* request_get_table_rows_customtoken.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33521EFE7A600A0720B /* request_get_table_rows_customtoken.json */; };
 		3C518050223C52A100FFA4C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CD2191D27E00B9A3D7 /* LaunchScreen.storyboard */; };
 		3C518051223C52A100FFA4C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799CB2191D27E00B9A3D7 /* Assets.xcassets */; };
 		3C518052223C52A100FFA4C1 /* AllocatedBandwidthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BD25A21A6CF2C00ACFA70 /* AllocatedBandwidthCell.xib */; };
-		3C518053223C52A100FFA4C1 /* error_path_get_key_accounts_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F32C21EFE7A000A0720B /* error_path_get_key_accounts_empty.json */; };
-		3C518054223C52A100FFA4C1 /* happy_path_get_account_without_core_liquid_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F721EFE66300A0720B /* happy_path_get_account_without_core_liquid_balance.json */; };
 		3C518055223C52A100FFA4C1 /* CastProducersVoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72E21A5D03E0050BA57 /* CastProducersVoteCell.xib */; };
 		3C518056223C52A100FFA4C1 /* RamStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C0700AC21A74862008F63D2 /* RamStrings.strings */; };
 		3C518057223C52A100FFA4C1 /* AccountStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C6DF76821A082AC00ADA892 /* AccountStrings.strings */; };
-		3C518058223C52A100FFA4C1 /* happy_path_get_table_rows_regproxyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30521EFE71D00A0720B /* happy_path_get_table_rows_regproxyinfo.json */; };
-		3C518059223C52A100FFA4C1 /* request_get_table_rows_regproxyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F32F21EFE7A600A0720B /* request_get_table_rows_regproxyinfo.json */; };
 		3C51805A223C52A100FFA4C1 /* AccountCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0ADD69219F24380026649F /* AccountCardCell.xib */; };
-		3C51805B223C52A100FFA4C1 /* happy_path_get_actions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30B21EFE71E00A0720B /* happy_path_get_actions.json */; };
 		3C51805C223C52A100FFA4C1 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9A3C9219DCF900002A25F /* ErrorView.xib */; };
 		3C51805D223C52A100FFA4C1 /* ActionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F1F9921A35B090075BD71 /* ActionsCell.xib */; };
 		3C51805E223C52A100FFA4C1 /* BandwidthStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BD23421A6C16F00ACFA70 /* BandwidthStrings.strings */; };
-		3C51805F223C52A100FFA4C1 /* request_get_table_rows_producerjson.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33021EFE7A600A0720B /* request_get_table_rows_producerjson.json */; };
 		3C518060223C52A100FFA4C1 /* TransactionLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C07009421A71AA5008F63D2 /* TransactionLogViewController.xib */; };
-		3C518061223C52A100FFA4C1 /* happy_path_get_table_rows_delegated_bandwidth.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30221EFE71D00A0720B /* happy_path_get_table_rows_delegated_bandwidth.json */; };
-		3C518062223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30C21EFE71E00A0720B /* happy_path_get_table_rows_producerjson_single.json */; };
-		3C518064223C52A100FFA4C1 /* happy_path_get_producers.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30121EFE71D00A0720B /* happy_path_get_producers.json */; };
-		3C518065223C52A100FFA4C1 /* happy_path_get_key_accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30F21EFE71E00A0720B /* happy_path_get_key_accounts.json */; };
 		3C518066223C52A100FFA4C1 /* KeyPairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0A86AD21ABFD5D00F48302 /* KeyPairCell.xib */; };
 		3C518067223C52A100FFA4C1 /* TransactionReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C07009A21A72217008F63D2 /* TransactionReceiptViewController.xib */; };
-		3C518068223C52A100FFA4C1 /* happy_path_get_edna_currency_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F31221EFE71F00A0720B /* happy_path_get_edna_currency_balance.json */; };
 		3C518069223C52A100FFA4C1 /* TransferStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CB1D72621A86B9100C87EC9 /* TransferStrings.strings */; };
-		3C51806A223C52A100FFA4C1 /* happy_path_price.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30321EFE71D00A0720B /* happy_path_price.json */; };
-		3C51806B223C52A100FFA4C1 /* happy_path_get_account_voter_info_no_vote.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30D21EFE71E00A0720B /* happy_path_get_account_voter_info_no_vote.json */; };
-		3C51806C223C52A100FFA4C1 /* happy_path_get_table_rows_delegated_bandwidth_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F31021EFE71E00A0720B /* happy_path_get_table_rows_delegated_bandwidth_empty.json */; };
-		3C51806D223C52A100FFA4C1 /* happy_path_get_account_staked.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2FB21EFE6A000A0720B /* happy_path_get_account_staked.json */; };
 		3C51806E223C52A100FFA4C1 /* ActiveBlockProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A972421A3D13E00C30A75 /* ActiveBlockProducerCell.xib */; };
-		3C51806F223C52A100FFA4C1 /* happy_path_push_transaction_log.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F31121EFE71F00A0720B /* happy_path_push_transaction_log.json */; };
-		3C518070223C52A100FFA4C1 /* happy_path_get_account_voter_info_producer_vote.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F31321EFE71F00A0720B /* happy_path_get_account_voter_info_producer_vote.json */; };
-		3C518071223C52A100FFA4C1 /* happy_path_get_account_voter_info_proxy_vote.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30721EFE71E00A0720B /* happy_path_get_account_voter_info_proxy_vote.json */; };
 		3C518072223C52A100FFA4C1 /* BalanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4406AC21A1EED2003BBFA9 /* BalanceCell.xib */; };
 		3C518073223C52A100FFA4C1 /* ProxyVoterListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72621A5C1010050BA57 /* ProxyVoterListCell.xib */; };
 		3C518074223C52A100FFA4C1 /* AppStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C964C4121944367003663EF /* AppStrings.strings */; };
 		3C518075223C52A100FFA4C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5799C82191D27D00B9A3D7 /* Main.storyboard */; };
-		3C518076223C52A100FFA4C1 /* happy_path_get_key_accounts_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30A21EFE71E00A0720B /* happy_path_get_key_accounts_empty.json */; };
 		3C518077223C52A100FFA4C1 /* RegisteredBlockProducersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9A3D6219DF2B90002A25F /* RegisteredBlockProducersCell.xib */; };
-		3C518078223C52A100FFA4C1 /* request_get_table_rows_regproxyinfo_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33421EFE7A600A0720B /* request_get_table_rows_regproxyinfo_single.json */; };
-		3C518079223C52A100FFA4C1 /* happy_path_get_account_unstaked.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2FD21EFE6BE00A0720B /* happy_path_get_account_unstaked.json */; };
 		3C51807A223C52A100FFA4C1 /* BlockProducerStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A972621A3DABD00C30A75 /* BlockProducerStrings.strings */; };
-		3C51807B223C52A100FFA4C1 /* request_get_table_rows_producerjson_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33221EFE7A600A0720B /* request_get_table_rows_producerjson_single.json */; };
-		3C51807C223C52A100FFA4C1 /* error_push_transaction_log.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F32B21EFE7A000A0720B /* error_push_transaction_log.json */; };
-		3C51807D223C52A100FFA4C1 /* happy_path_get_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F321EFE60100A0720B /* happy_path_get_info.json */; };
-		3C51807E223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30E21EFE71E00A0720B /* happy_path_get_table_rows_producerjson.json */; };
 		3C51807F223C52A100FFA4C1 /* ReachNetCpuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0C04B421A8878000F5F7A7 /* ReachNetCpuView.xib */; };
 		3C518080223C52A100FFA4C1 /* SettingsStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C340FCB219368C30017BEF9 /* SettingsStrings.strings */; };
-		3C518081223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2FF21EFE71D00A0720B /* happy_path_get_table_rows_producerjson_empty.json */; };
-		3C518082223C52A100FFA4C1 /* happy_path_get_key_accounts_single.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30821EFE71E00A0720B /* happy_path_get_key_accounts_single.json */; };
-		3C518083223C52A100FFA4C1 /* happy_path_get_empty_currency_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30621EFE71D00A0720B /* happy_path_get_empty_currency_balance.json */; };
 		3C518084223C52A100FFA4C1 /* ProxyStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9E72821A5C7520050BA57 /* ProxyStrings.strings */; };
-		3C518085223C52A100FFA4C1 /* happy_path_create_account.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F521EFE63D00A0720B /* happy_path_create_account.json */; };
-		3C518086223C52A100FFA4C1 /* happy_path_get_sys_currency_balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F30921EFE71E00A0720B /* happy_path_get_sys_currency_balance.json */; };
-		3C518087223C52A100FFA4C1 /* request_get_table_rows_delegated_bandwidth.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33321EFE7A600A0720B /* request_get_table_rows_delegated_bandwidth.json */; };
 		3C518088223C52A100FFA4C1 /* ExploreStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C7F0DFD2194AC2A00E72DD1 /* ExploreStrings.strings */; };
 		3C518089223C52A100FFA4C1 /* ResourceGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CCE9C2D21A2C38E0050910D /* ResourceGraphView.xib */; };
 		3C51808A223C52A100FFA4C1 /* TransactionStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C07009621A71BC8008F63D2 /* TransactionStrings.strings */; };
-		3C51808B223C52A100FFA4C1 /* happy_path_get_table_rows_rammarket.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C517EBD223C3D8800FFA4C1 /* happy_path_get_table_rows_rammarket.json */; };
-		3C51808C223C52A100FFA4C1 /* request_get_currency_balance_edna.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F33121EFE7A600A0720B /* request_get_currency_balance_edna.json */; };
 		3C51808D223C52A100FFA4C1 /* VoteProducerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7421A306800075BD71 /* VoteProducerCell.xib */; };
-		3C51808E223C52A100FFA4C1 /* happy_path_get_account_refund.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C44F2F921EFE68000A0720B /* happy_path_get_account_refund.json */; };
 		3C518098223C540500FFA4C1 /* ApiStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C518096223C532E00FFA4C1 /* ApiStrings.strings */; };
 		3C518099223C540F00FFA4C1 /* ApiStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C518096223C532E00FFA4C1 /* ApiStrings.strings */; };
 		3C51809A223C540F00FFA4C1 /* ApiStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C518096223C532E00FFA4C1 /* ApiStrings.strings */; };
@@ -1410,7 +1359,6 @@
 		3CCC806A21FB9D0E00B715C2 /* TransactionRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806921FB9D0E00B715C2 /* TransactionRobot.swift */; };
 		3CCC806C21FB9D2000B715C2 /* SettingsRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806B21FB9D2000B715C2 /* SettingsRobot.swift */; };
 		3CCC807121FBB1E500B715C2 /* EosKeyManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */; };
-		3CCC807221FBB1F000B715C2 /* EosKeyManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC806F21FBB18200B715C2 /* EosKeyManagerStub.swift */; };
 		3CCC808121FEFB4900B715C2 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807F21FEFAE600B715C2 /* LinkedList.swift */; };
 		3CCC808221FEFB4900B715C2 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC807F21FEFAE600B715C2 /* LinkedList.swift */; };
 		3CCE0EF821AAA84300D81458 /* DropDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EF721AAA84300D81458 /* DropDb.swift */; };
@@ -1641,6 +1589,7 @@
 		3C291BA0219D572F00562448 /* Pods_eosreach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_eosreach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C291BA2219D58B800562448 /* CurrencyPairFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairFormatter.swift; sourceTree = "<group>"; };
 		3C291BA4219D597900562448 /* CurrencySymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbol.swift; sourceTree = "<group>"; };
+		3C2F85CA2248CEAE00C0075E /* happy_path_get_table_rows_customtoken.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_customtoken.json; sourceTree = "<group>"; };
 		3C340FBC219353D20017BEF9 /* ReachToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachToolbar.swift; sourceTree = "<group>"; };
 		3C340FBE219354E70017BEF9 /* WelcomeStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = WelcomeStrings.strings; sourceTree = "<group>"; };
 		3C340FC12193612A0017BEF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -1673,7 +1622,6 @@
 		3C44F2FB21EFE6A000A0720B /* happy_path_get_account_staked.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_staked.json; sourceTree = "<group>"; };
 		3C44F2FD21EFE6BE00A0720B /* happy_path_get_account_unstaked.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happy_path_get_account_unstaked.json; sourceTree = "<group>"; };
 		3C44F2FF21EFE71D00A0720B /* happy_path_get_table_rows_producerjson_empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_producerjson_empty.json; sourceTree = "<group>"; };
-		3C44F30021EFE71D00A0720B /* happy_path_get_table_rows_customtoken.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = happy_path_get_table_rows_customtoken.json; path = eosreach/_stub/json/happypath/happy_path_get_table_rows_customtoken.json; sourceTree = SOURCE_ROOT; };
 		3C44F30121EFE71D00A0720B /* happy_path_get_producers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_producers.json; sourceTree = "<group>"; };
 		3C44F30221EFE71D00A0720B /* happy_path_get_table_rows_delegated_bandwidth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_get_table_rows_delegated_bandwidth.json; sourceTree = "<group>"; };
 		3C44F30321EFE71D00A0720B /* happy_path_price.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_path_price.json; sourceTree = "<group>"; };
@@ -2280,6 +2228,17 @@
 			path = balance;
 			sourceTree = "<group>";
 		};
+		3C2F85C92248CE2700C0075E /* eosreachStub */ = {
+			isa = PBXGroup;
+			children = (
+				3C44F2F121EFE5D700A0720B /* json */,
+				3CCC806E21FBB15E00B715C2 /* api */,
+				3CA2978F2217465F001DC2D5 /* appstore */,
+				3CCC806D21FBB15400B715C2 /* wallet */,
+			);
+			path = eosreachStub;
+			sourceTree = "<group>";
+		};
 		3C340FC0219360C60017BEF9 /* settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -2309,17 +2268,6 @@
 			path = currencypairing;
 			sourceTree = "<group>";
 		};
-		3C44F2DB21EFAE7300A0720B /* _stub */ = {
-			isa = PBXGroup;
-			children = (
-				3C44F2F121EFE5D700A0720B /* json */,
-				3CCC806E21FBB15E00B715C2 /* api */,
-				3CA2978F2217465F001DC2D5 /* appstore */,
-				3CCC806D21FBB15400B715C2 /* wallet */,
-			);
-			path = _stub;
-			sourceTree = "<group>";
-		};
 		3C44F2EA21EFDCFF00A0720B /* request */ = {
 			isa = PBXGroup;
 			children = (
@@ -2345,6 +2293,7 @@
 		3C44F2F221EFE5EE00A0720B /* happypath */ = {
 			isa = PBXGroup;
 			children = (
+				3C2F85CA2248CEAE00C0075E /* happy_path_get_table_rows_customtoken.json */,
 				3C44F30D21EFE71E00A0720B /* happy_path_get_account_voter_info_no_vote.json */,
 				3C44F31321EFE71F00A0720B /* happy_path_get_account_voter_info_producer_vote.json */,
 				3C44F30721EFE71E00A0720B /* happy_path_get_account_voter_info_proxy_vote.json */,
@@ -2356,7 +2305,6 @@
 				3C44F30F21EFE71E00A0720B /* happy_path_get_key_accounts.json */,
 				3C44F30121EFE71D00A0720B /* happy_path_get_producers.json */,
 				3C44F30921EFE71E00A0720B /* happy_path_get_sys_currency_balance.json */,
-				3C44F30021EFE71D00A0720B /* happy_path_get_table_rows_customtoken.json */,
 				3C44F31021EFE71E00A0720B /* happy_path_get_table_rows_delegated_bandwidth_empty.json */,
 				3C44F30221EFE71D00A0720B /* happy_path_get_table_rows_delegated_bandwidth.json */,
 				3C44F2FF21EFE71D00A0720B /* happy_path_get_table_rows_producerjson_empty.json */,
@@ -2495,6 +2443,7 @@
 			isa = PBXGroup;
 			children = (
 				3C5799C32191D27D00B9A3D7 /* eosreach */,
+				3C2F85C92248CE2700C0075E /* eosreachStub */,
 				3C5799D82191D27E00B9A3D7 /* eosreachTests */,
 				3C518139223C584500FFA4C1 /* eosreachStubTests */,
 				3C5180A6223C568F00FFA4C1 /* eosreachDevTests */,
@@ -2524,7 +2473,6 @@
 		3C5799C32191D27D00B9A3D7 /* eosreach */ = {
 			isa = PBXGroup;
 			children = (
-				3C44F2DB21EFAE7300A0720B /* _stub */,
 				3C9BFB73219B306A00589936 /* api */,
 				3C8C6D9F2192D6AD00FC1A0D /* app */,
 				3C964C3A219441C8003663EF /* db */,
@@ -3640,7 +3588,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C0DBBDD21F501430020CA1F /* happy_path_get_table_rows_customtoken.json in Resources */,
 				3C0DBBDE21F501430020CA1F /* WelcomeStrings.strings in Resources */,
 				3C0DBBDF21F501430020CA1F /* TransactionHistoryCell.xib in Resources */,
 				3C0DBBE021F501430020CA1F /* VoteStrings.strings in Resources */,
@@ -3706,6 +3653,7 @@
 				3C0DBC1A21F501430020CA1F /* ExploreStrings.strings in Resources */,
 				3C0DBC1B21F501430020CA1F /* ResourceGraphView.xib in Resources */,
 				3C0DBC1C21F501430020CA1F /* TransactionStrings.strings in Resources */,
+				3C2F85CC2248CEDC00C0075E /* happy_path_get_table_rows_customtoken.json in Resources */,
 				3C517EBF223C3DC500FFA4C1 /* happy_path_get_table_rows_rammarket.json in Resources */,
 				3C0DBC1D21F501430020CA1F /* request_get_currency_balance_edna.json in Resources */,
 				3C0DBC1E21F501430020CA1F /* VoteProducerCell.xib in Resources */,
@@ -3717,76 +3665,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C51804A223C52A100FFA4C1 /* happy_path_get_table_rows_customtoken.json in Resources */,
 				3C51804B223C52A100FFA4C1 /* WelcomeStrings.strings in Resources */,
 				3C51804C223C52A100FFA4C1 /* TransactionHistoryCell.xib in Resources */,
 				3C51804D223C52A100FFA4C1 /* VoteStrings.strings in Resources */,
-				3C51804E223C52A100FFA4C1 /* happy_path_get_table_rows_regproxyinfo_single.json in Resources */,
-				3C51804F223C52A100FFA4C1 /* request_get_table_rows_customtoken.json in Resources */,
 				3C518098223C540500FFA4C1 /* ApiStrings.strings in Resources */,
 				3C518050223C52A100FFA4C1 /* LaunchScreen.storyboard in Resources */,
 				3C518051223C52A100FFA4C1 /* Assets.xcassets in Resources */,
 				3C518052223C52A100FFA4C1 /* AllocatedBandwidthCell.xib in Resources */,
-				3C518053223C52A100FFA4C1 /* error_path_get_key_accounts_empty.json in Resources */,
-				3C518054223C52A100FFA4C1 /* happy_path_get_account_without_core_liquid_balance.json in Resources */,
 				3C518055223C52A100FFA4C1 /* CastProducersVoteCell.xib in Resources */,
 				3C518056223C52A100FFA4C1 /* RamStrings.strings in Resources */,
 				3C518057223C52A100FFA4C1 /* AccountStrings.strings in Resources */,
-				3C518058223C52A100FFA4C1 /* happy_path_get_table_rows_regproxyinfo.json in Resources */,
-				3C518059223C52A100FFA4C1 /* request_get_table_rows_regproxyinfo.json in Resources */,
 				3C51805A223C52A100FFA4C1 /* AccountCardCell.xib in Resources */,
-				3C51805B223C52A100FFA4C1 /* happy_path_get_actions.json in Resources */,
 				3C51805C223C52A100FFA4C1 /* ErrorView.xib in Resources */,
 				3C51805D223C52A100FFA4C1 /* ActionsCell.xib in Resources */,
 				3C51805E223C52A100FFA4C1 /* BandwidthStrings.strings in Resources */,
-				3C51805F223C52A100FFA4C1 /* request_get_table_rows_producerjson.json in Resources */,
 				3C518060223C52A100FFA4C1 /* TransactionLogViewController.xib in Resources */,
-				3C518061223C52A100FFA4C1 /* happy_path_get_table_rows_delegated_bandwidth.json in Resources */,
-				3C518062223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson_single.json in Resources */,
-				3C518064223C52A100FFA4C1 /* happy_path_get_producers.json in Resources */,
-				3C518065223C52A100FFA4C1 /* happy_path_get_key_accounts.json in Resources */,
 				3C518066223C52A100FFA4C1 /* KeyPairCell.xib in Resources */,
 				3C518067223C52A100FFA4C1 /* TransactionReceiptViewController.xib in Resources */,
-				3C518068223C52A100FFA4C1 /* happy_path_get_edna_currency_balance.json in Resources */,
 				3C518069223C52A100FFA4C1 /* TransferStrings.strings in Resources */,
-				3C51806A223C52A100FFA4C1 /* happy_path_price.json in Resources */,
-				3C51806B223C52A100FFA4C1 /* happy_path_get_account_voter_info_no_vote.json in Resources */,
-				3C51806C223C52A100FFA4C1 /* happy_path_get_table_rows_delegated_bandwidth_empty.json in Resources */,
-				3C51806D223C52A100FFA4C1 /* happy_path_get_account_staked.json in Resources */,
 				3C51806E223C52A100FFA4C1 /* ActiveBlockProducerCell.xib in Resources */,
-				3C51806F223C52A100FFA4C1 /* happy_path_push_transaction_log.json in Resources */,
-				3C518070223C52A100FFA4C1 /* happy_path_get_account_voter_info_producer_vote.json in Resources */,
-				3C518071223C52A100FFA4C1 /* happy_path_get_account_voter_info_proxy_vote.json in Resources */,
 				3C518072223C52A100FFA4C1 /* BalanceCell.xib in Resources */,
 				3C518073223C52A100FFA4C1 /* ProxyVoterListCell.xib in Resources */,
 				3C518074223C52A100FFA4C1 /* AppStrings.strings in Resources */,
 				3C518075223C52A100FFA4C1 /* Main.storyboard in Resources */,
-				3C518076223C52A100FFA4C1 /* happy_path_get_key_accounts_empty.json in Resources */,
 				3C518077223C52A100FFA4C1 /* RegisteredBlockProducersCell.xib in Resources */,
-				3C518078223C52A100FFA4C1 /* request_get_table_rows_regproxyinfo_single.json in Resources */,
-				3C518079223C52A100FFA4C1 /* happy_path_get_account_unstaked.json in Resources */,
 				3C51807A223C52A100FFA4C1 /* BlockProducerStrings.strings in Resources */,
-				3C51807B223C52A100FFA4C1 /* request_get_table_rows_producerjson_single.json in Resources */,
-				3C51807C223C52A100FFA4C1 /* error_push_transaction_log.json in Resources */,
-				3C51807D223C52A100FFA4C1 /* happy_path_get_info.json in Resources */,
-				3C51807E223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson.json in Resources */,
 				3C51807F223C52A100FFA4C1 /* ReachNetCpuView.xib in Resources */,
 				3C518080223C52A100FFA4C1 /* SettingsStrings.strings in Resources */,
-				3C518081223C52A100FFA4C1 /* happy_path_get_table_rows_producerjson_empty.json in Resources */,
-				3C518082223C52A100FFA4C1 /* happy_path_get_key_accounts_single.json in Resources */,
-				3C2F85C52248BDED00C0075E /* request_get_table_rows_rammarket.json in Resources */,
-				3C518083223C52A100FFA4C1 /* happy_path_get_empty_currency_balance.json in Resources */,
 				3C518084223C52A100FFA4C1 /* ProxyStrings.strings in Resources */,
-				3C518085223C52A100FFA4C1 /* happy_path_create_account.json in Resources */,
-				3C518086223C52A100FFA4C1 /* happy_path_get_sys_currency_balance.json in Resources */,
-				3C518087223C52A100FFA4C1 /* request_get_table_rows_delegated_bandwidth.json in Resources */,
 				3C518088223C52A100FFA4C1 /* ExploreStrings.strings in Resources */,
 				3C518089223C52A100FFA4C1 /* ResourceGraphView.xib in Resources */,
 				3C51808A223C52A100FFA4C1 /* TransactionStrings.strings in Resources */,
-				3C51808B223C52A100FFA4C1 /* happy_path_get_table_rows_rammarket.json in Resources */,
-				3C51808C223C52A100FFA4C1 /* request_get_currency_balance_edna.json in Resources */,
 				3C51808D223C52A100FFA4C1 /* VoteProducerCell.xib in Resources */,
-				3C51808E223C52A100FFA4C1 /* happy_path_get_account_refund.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4760,7 +4670,6 @@
 				3C517ED6223C52A100FFA4C1 /* ManageRamBundle.swift in Sources */,
 				3C517ED7223C52A100FFA4C1 /* GetBalances.swift in Sources */,
 				3C517ED8223C52A100FFA4C1 /* RegisteredBlockProducersCell.swift in Sources */,
-				3C517ED9223C52A100FFA4C1 /* StoreKitRequestStub.swift in Sources */,
 				3C517EDA223C52A100FFA4C1 /* CastProducersVoteTableView.swift in Sources */,
 				3C517EDB223C52A100FFA4C1 /* ViewProxyVoterViewState.swift in Sources */,
 				3C517EDC223C52A100FFA4C1 /* BalanceFormatter.swift in Sources */,
@@ -4775,7 +4684,6 @@
 				3C517EE5223C52A100FFA4C1 /* ManageRamViewModel.swift in Sources */,
 				3C517EE6223C52A100FFA4C1 /* KeyPairTableView.swift in Sources */,
 				3C517EE7223C52A100FFA4C1 /* RsaEncryptionVerified.swift in Sources */,
-				3C517EE8223C52A100FFA4C1 /* Stub.swift in Sources */,
 				3C517EE9223C52A100FFA4C1 /* AccountNavigationViewState.swift in Sources */,
 				3C517EEA223C52A100FFA4C1 /* CastProxyVoteViewModel.swift in Sources */,
 				3C517EEB223C52A100FFA4C1 /* VoteResult.swift in Sources */,
@@ -4816,7 +4724,6 @@
 				3C517F0E223C52A100FFA4C1 /* CreateAccountResult.swift in Sources */,
 				3C517F0F223C52A100FFA4C1 /* MxResult.swift in Sources */,
 				3C517F10223C52A100FFA4C1 /* CastProducersVoteIntent.swift in Sources */,
-				3C517F11223C52A100FFA4C1 /* QueuedStubResponse.swift in Sources */,
 				3C517F12223C52A100FFA4C1 /* UnusedTransactionIdentifier.swift in Sources */,
 				3C517F13223C52A100FFA4C1 /* EosPriceValue.swift in Sources */,
 				3C517F14223C52A100FFA4C1 /* ProxyVoterListViewModel.swift in Sources */,
@@ -4855,15 +4762,14 @@
 				3C517F35223C52A100FFA4C1 /* ReachActivityIndicator.swift in Sources */,
 				3C517F36223C52A100FFA4C1 /* SellRamViewController.swift in Sources */,
 				3C517F37223C52A100FFA4C1 /* TokenParent.swift in Sources */,
-				3C517F38223C52A100FFA4C1 /* StubApi.swift in Sources */,
 				3C517F39223C52A100FFA4C1 /* AccountViewLayout.swift in Sources */,
 				3C517F3A223C52A100FFA4C1 /* ReachSwitch.swift in Sources */,
 				3C517F3B223C52A100FFA4C1 /* ReceiptDataRequest.swift in Sources */,
 				3C517F3C223C52A100FFA4C1 /* types.swift in Sources */,
 				3C517F3D223C52A100FFA4C1 /* TransactionReceiptResult.swift in Sources */,
-				3C517F3E223C52A100FFA4C1 /* BasicStubResponse.swift in Sources */,
 				3C517F3F223C52A100FFA4C1 /* RegisteredBlockProducersResult.swift in Sources */,
 				3C517F40223C52A100FFA4C1 /* date_types.swift in Sources */,
+				3C2F85C72248CCB400C0075E /* EosKeyManagerStub.swift in Sources */,
 				3C517F41223C52A100FFA4C1 /* TransferBundle.swift in Sources */,
 				3C517F42223C52A100FFA4C1 /* BandwidthFormBundle.swift in Sources */,
 				3C517F43223C52A100FFA4C1 /* EntryViewState.swift in Sources */,
@@ -4929,7 +4835,6 @@
 				3C517F7F223C52A100FFA4C1 /* MxViewModel.swift in Sources */,
 				3C517F80223C52A100FFA4C1 /* EosCreateAccountRequestImpl.swift in Sources */,
 				3C517F81223C52A100FFA4C1 /* PurgeUserDefaults.swift in Sources */,
-				3C517F82223C52A100FFA4C1 /* StubSkPrice.swift in Sources */,
 				3C517F83223C52A100FFA4C1 /* AccountBalanceList.swift in Sources */,
 				3C517F84223C52A100FFA4C1 /* CastProxyVoteViewController.swift in Sources */,
 				3C517F85223C52A100FFA4C1 /* ResourcesRenderer.swift in Sources */,
@@ -4940,7 +4845,6 @@
 				3C517F8A223C52A100FFA4C1 /* EosEndpointViewModel.swift in Sources */,
 				3C517F8B223C52A100FFA4C1 /* ReachBorderLabel.swift in Sources */,
 				3C517F8C223C52A100FFA4C1 /* AccountUseCase.swift in Sources */,
-				3C517F8D223C52A100FFA4C1 /* ReceiptDataRequestStub.swift in Sources */,
 				3C517F8E223C52A100FFA4C1 /* ActiveBlockProducersResult.swift in Sources */,
 				3C517F8F223C52A100FFA4C1 /* ViewProxyVoterIntent.swift in Sources */,
 				3C517F90223C52A100FFA4C1 /* ManageRamViewState.swift in Sources */,
@@ -4954,7 +4858,6 @@
 				3C517F98223C52A100FFA4C1 /* EncryptedKeyPairData.swift in Sources */,
 				3C517F99223C52A100FFA4C1 /* R.generated.swift in Sources */,
 				3C517F9A223C52A100FFA4C1 /* ConfirmBandwidthViewModel.swift in Sources */,
-				3C517F9B223C52A100FFA4C1 /* StubRequest.swift in Sources */,
 				3C517F9C223C52A100FFA4C1 /* ViewPrivateKeysViewState.swift in Sources */,
 				3C517F9D223C52A100FFA4C1 /* DeleteAccounts.swift in Sources */,
 				3C517F9E223C52A100FFA4C1 /* BuyRamResult.swift in Sources */,
@@ -5068,14 +4971,12 @@
 				3C51800A223C52A100FFA4C1 /* Rx.swift in Sources */,
 				3C51800B223C52A100FFA4C1 /* AccountBundle.swift in Sources */,
 				3C51800C223C52A100FFA4C1 /* CurrencySymbol.swift in Sources */,
-				3C51800D223C52A100FFA4C1 /* ErrorOnFirstStubRequest.swift in Sources */,
 				3C51800E223C52A100FFA4C1 /* VoteProducerCell.swift in Sources */,
 				3C51800F223C52A100FFA4C1 /* BuyRamViewState.swift in Sources */,
 				3C518010223C52A100FFA4C1 /* EosEndpointViewController.swift in Sources */,
 				3C518011223C52A100FFA4C1 /* DataTableView.swift in Sources */,
 				3C518012223C52A100FFA4C1 /* AccountNavigationDelegate.swift in Sources */,
 				3C518013223C52A100FFA4C1 /* EosEndpointUseCase.swift in Sources */,
-				3C518014223C52A100FFA4C1 /* StubConnection.swift in Sources */,
 				3C518015223C52A100FFA4C1 /* ViewKeyPair.swift in Sources */,
 				3C518016223C52A100FFA4C1 /* ViewProxyVoterBundle.swift in Sources */,
 				3C518017223C52A100FFA4C1 /* EosEndpointIntent.swift in Sources */,
@@ -5091,7 +4992,6 @@
 				3C518021223C52A100FFA4C1 /* RamBundle.swift in Sources */,
 				3C518022223C52A100FFA4C1 /* AccountViewModel.swift in Sources */,
 				3C518023223C52A100FFA4C1 /* AccountActionRequestImpl.swift in Sources */,
-				3C518024223C52A100FFA4C1 /* EosKeyManagerStub.swift in Sources */,
 				3C518025223C52A100FFA4C1 /* EosCreateAccountRequest.swift in Sources */,
 				3C518026223C52A100FFA4C1 /* RamRequest.swift in Sources */,
 				3C518027223C52A100FFA4C1 /* SettingsViewState.swift in Sources */,
@@ -5115,16 +5015,13 @@
 				3C518039223C52A100FFA4C1 /* SplashViewController.swift in Sources */,
 				3C51803A223C52A100FFA4C1 /* ActiveBlockProducersDelegate.swift in Sources */,
 				3C51803B223C52A100FFA4C1 /* AccountAction.swift in Sources */,
-				3C51803C223C52A100FFA4C1 /* StubUrlSession.swift in Sources */,
 				3C51803D223C52A100FFA4C1 /* RegisteredBlockProducersViewController.swift in Sources */,
 				3C51803E223C52A100FFA4C1 /* ConfirmRamViewState.swift in Sources */,
 				3C51803F223C52A100FFA4C1 /* TransferConfirmIntent.swift in Sources */,
 				3C518040223C52A100FFA4C1 /* CreateAccountViewState.swift in Sources */,
-				3C518041223C52A100FFA4C1 /* StubResponse.swift in Sources */,
 				3C518042223C52A100FFA4C1 /* ResourcesViewController.swift in Sources */,
 				3C518043223C52A100FFA4C1 /* SplashResult.swift in Sources */,
 				3C518044223C52A100FFA4C1 /* ErrorView.swift in Sources */,
-				3C518045223C52A100FFA4C1 /* StubMatcher.swift in Sources */,
 				3C518046223C52A100FFA4C1 /* UndelegateBandwidthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5407,7 +5304,6 @@
 				3CB1D70521A8296C00C87EC9 /* ViewActionResult.swift in Sources */,
 				3C8C6D9A2192D56000FC1A0D /* Logger.swift in Sources */,
 				3CC9A3B7219DB8890002A25F /* RamRequestImpl.swift in Sources */,
-				3CCC807221FBB1F000B715C2 /* EosKeyManagerStub.swift in Sources */,
 				3CA2979F221754F0001DC2D5 /* StoreKitRequestFactory.swift in Sources */,
 				3C340FCA2193612A0017BEF9 /* SettingsIntent.swift in Sources */,
 				3C0ADD8A219F37B10026649F /* InsertAccountsForPublicKey.swift in Sources */,

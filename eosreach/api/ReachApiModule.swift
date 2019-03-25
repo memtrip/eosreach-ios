@@ -11,11 +11,7 @@ class ReachApiModule {
             fatalError("TargetSwitch implementation error.")
             #endif
         case .dev:
-            #if DEV
-            return EosPriceApi(StubUrlSession.shared.urlSession)
-            #else
-            fatalError("TargetSwitch implementation error.")
-            #endif
+            return EosPriceApi(URLSession.shared)
         case .prod:
             return EosPriceApi(URLSession.shared)
         }
