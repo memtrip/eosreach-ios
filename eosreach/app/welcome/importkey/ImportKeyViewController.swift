@@ -38,7 +38,7 @@ class ImportKeyViewController: MxViewController<ImportKeyIntent, ImportKeyResult
                 importKeyButton.rx.tap.asObservable(),
                 privateKeyTextField.rx.controlEvent(.editingDidEndOnExit).asObservable()
             ).map {
-                ImportKeyIntent.importKey(privateKey: self.privateKeyTextField.text!)
+                ImportKeyIntent.importKey(privateKey: self.privateKeyTextField.text!.trim())
             }
         )
     }
