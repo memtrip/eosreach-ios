@@ -27,7 +27,16 @@ struct CurrencyPairFormatter {
 
     static func getSymbol(forCurrencyCode code: String) -> String? {
         let locale = NSLocale(localeIdentifier: code)
-        return locale.displayName(forKey: NSLocale.Key.currencySymbol, value: code)
+        let symbol = locale.displayName(forKey: NSLocale.Key.currencySymbol, value: code)
+        if let symbol = symbol {
+            if (symbol.count > 1) {
+                return String(symbol.sorted(by: >)[symbol.count - 1])
+            } else {
+                return symbol
+            }
+        } else {
+            return symbol
+        }
     }
 
     static func formatBalanceString(price: Double, isCrypto: Bool) -> String {

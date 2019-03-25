@@ -35,7 +35,12 @@ class ResourcesRobot : Robot {
     func verifyStakedResources(cpu: String, net: String) {
         onView(withId("resources_scroll_container"))
             .matchesNext(isDisplayed())
-            .perform(scrollToBottomn())
+            
+        if #available(OSX 12, *) {
+        } else {
+            onView(withId("resources_scroll_container"))
+                .perform(scrollToBottom())
+        }
         
         onView(allOf(
             withId("cpu_value"),
