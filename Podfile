@@ -11,7 +11,7 @@ def pods
     pod 'EllipticCurveKeyPair', '2.0-beta1'
     pod 'SideMenu'
     pod 'Kingfisher', '~> 4.0'
-    pod 'eosswift', '1.3'
+    pod 'eosswift', '1.5'
 end
 
 target 'prod' do
