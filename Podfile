@@ -22,6 +22,10 @@ target 'stub' do
   pods
 end
 
+target 'dev' do
+  pods
+end
+
 def testPods
   pod 'RxBlocking', '~> 4.0'
   pod 'RxTest',     '~> 4.0'

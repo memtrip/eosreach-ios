@@ -1,5 +1,4 @@
 import Foundation
-@testable import stub
 
 class SplashRobot: Robot {
 

@@ -1061,7 +1061,6 @@
 		3C518099223C540F00FFA4C1 /* ApiStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C518096223C532E00FFA4C1 /* ApiStrings.strings */; };
 		3C51809A223C540F00FFA4C1 /* ApiStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C518096223C532E00FFA4C1 /* ApiStrings.strings */; };
 		3C5180E4223C56B100FFA4C1 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C4DF4FE9AF77299AE53124 /* EarlGrey.framework */; };
-		3C5180E5223C56B100FFA4C1 /* Pods_eosreachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE90BA3A5BF0A06DE5903360 /* Pods_eosreachTests.framework */; };
 		3C5180E9223C56B100FFA4C1 /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = 83C4DF4FE9AF77299AE53124 /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3C5180F1223C572B00FFA4C1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51809E223C55AD00FFA4C1 /* Config.swift */; };
 		3C5180F3223C577A00FFA4C1 /* Orchestra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC805121FB9BF700B715C2 /* Orchestra.swift */; };
@@ -1443,6 +1442,7 @@
 		A683A0631389342CD5DFE39D /* Pods_eosreachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE90BA3A5BF0A06DE5903360 /* Pods_eosreachTests.framework */; };
 		BFBCDE499E536A66D15B4772 /* Pods_eosreachDevTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0347A29505CAC9BA563F2BB8 /* Pods_eosreachDevTests.framework */; };
 		C1E5A46CDDED48FC645D7A7D /* Pods_prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5440B07D6A2278ADEAB5EF2 /* Pods_prod.framework */; };
+		E125F2CA33251042C3EC5F86 /* Pods_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F107CC3E6BA6F761019DD391 /* Pods_dev.framework */; };
 		E12F1349EAA622EB19BEDC62 /* Pods_eosreachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE90BA3A5BF0A06DE5903360 /* Pods_eosreachTests.framework */; };
 		EC63AF45906E62D7711FD12F /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C4DF4FE9AF77299AE53124 /* EarlGrey.framework */; };
 		FABDB7A42003DD843ADB82DB /* Pods_eosreachStubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1792C60C099DD4836D3C1750 /* Pods_eosreachStubTests.framework */; };
@@ -1505,7 +1505,9 @@
 		0347A29505CAC9BA563F2BB8 /* Pods_eosreachDevTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreachDevTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09932DAB4418DECD66B6892D /* Pods-stub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stub/Pods-stub.debug.xcconfig"; sourceTree = "<group>"; };
 		09BD5052D50873672358AF8D /* Pods-eosreach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach/Pods-eosreach.release.xcconfig"; sourceTree = "<group>"; };
+		0E561CCCD65245F2C3A823EA /* Pods-dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dev/Pods-dev.debug.xcconfig"; sourceTree = "<group>"; };
 		1792C60C099DD4836D3C1750 /* Pods_eosreachStubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosreachStubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A84D983CE8B8C8E7C74214E /* Pods-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-dev/Pods-dev.release.xcconfig"; sourceTree = "<group>"; };
 		1FB0764187BBA8A4D23CF7FF /* Pods-stub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stub.release.xcconfig"; path = "Pods/Target Support Files/Pods-stub/Pods-stub.release.xcconfig"; sourceTree = "<group>"; };
 		2502C7480E13426436BBC77F /* Pods-eosreachStubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreachStubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreachStubTests/Pods-eosreachStubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F0B150FC2A8716ABF0BCCA9 /* Pods-prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prod.release.xcconfig"; path = "Pods/Target Support Files/Pods-prod/Pods-prod.release.xcconfig"; sourceTree = "<group>"; };
@@ -2052,6 +2054,7 @@
 		CB611D4B0C1236BD507AB4A2 /* Pods-eosreach-eosreachTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreach-eosreachTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreach-eosreachTests/Pods-eosreach-eosreachTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC0F5558D8100EC99A44F586 /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		E9E310DAF7D23490A6D97398 /* Pods-prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-prod/Pods-prod.debug.xcconfig"; sourceTree = "<group>"; };
+		F107CC3E6BA6F761019DD391 /* Pods_dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AF008691BE8085E838A527 /* Pods_stub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4873856B07EDBAA6631101F /* Pods-eosreachDevTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosreachDevTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosreachDevTests/Pods-eosreachDevTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F641C98F4538D5DD68BBDD67 /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
@@ -2071,6 +2074,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E125F2CA33251042C3EC5F86 /* Pods_dev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2079,7 +2083,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C5180E4223C56B100FFA4C1 /* EarlGrey.framework in Frameworks */,
-				3C5180E5223C56B100FFA4C1 /* Pods_eosreachTests.framework in Frameworks */,
 				BFBCDE499E536A66D15B4772 /* Pods_eosreachDevTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2568,6 +2571,7 @@
 				F1AF008691BE8085E838A527 /* Pods_stub.framework */,
 				0347A29505CAC9BA563F2BB8 /* Pods_eosreachDevTests.framework */,
 				1792C60C099DD4836D3C1750 /* Pods_eosreachStubTests.framework */,
+				F107CC3E6BA6F761019DD391 /* Pods_dev.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -3453,6 +3457,8 @@
 				1FB0764187BBA8A4D23CF7FF /* Pods-stub.release.xcconfig */,
 				2502C7480E13426436BBC77F /* Pods-eosreachStubTests.debug.xcconfig */,
 				8848F2DC929B55AE39B869D1 /* Pods-eosreachStubTests.release.xcconfig */,
+				0E561CCCD65245F2C3A823EA /* Pods-dev.debug.xcconfig */,
+				1A84D983CE8B8C8E7C74214E /* Pods-dev.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -3484,10 +3490,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C518090223C52A100FFA4C1 /* Build configuration list for PBXNativeTarget "dev" */;
 			buildPhases = (
+				7C55922437F5039994BB0DA3 /* [CP] Check Pods Manifest.lock */,
 				3C517EC4223C52A100FFA4C1 /* ShellScript */,
 				3C517EC5223C52A100FFA4C1 /* Sources */,
 				3C518047223C52A100FFA4C1 /* Frameworks */,
 				3C518049223C52A100FFA4C1 /* Resources */,
+				4288BE882DDEE076B712FB04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3506,8 +3514,8 @@
 				3C5180AB223C56B100FFA4C1 /* Sources */,
 				3C5180E3223C56B100FFA4C1 /* Frameworks */,
 				3C5180E6223C56B100FFA4C1 /* Resources */,
-				3C5180E7223C56B100FFA4C1 /* [CP] Embed Pods Frameworks */,
 				3C5180E8223C56B100FFA4C1 /* EarlGrey Copy Files */,
+				3C5180E7223C56B100FFA4C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -4140,6 +4148,54 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eosreachTests/Pods-eosreachTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4288BE882DDEE076B712FB04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-dev/Pods-dev-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/EllipticCurveKeyPair/EllipticCurveKeyPair.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/eosswift/eosswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EllipticCurveKeyPair.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/eosswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dev/Pods-dev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7987F6C0DAB8057748606720 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4186,6 +4242,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-prod/Pods-prod-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C55922437F5039994BB0DA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8A91DCB2269C112A63B67466 /* [CP] Check Pods Manifest.lock */ = {
@@ -5648,6 +5726,7 @@
 		};
 		3C518091223C52A100FFA4C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E561CCCD65245F2C3A823EA /* Pods-dev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -5672,6 +5751,7 @@
 		};
 		3C518092223C52A100FFA4C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A84D983CE8B8C8E7C74214E /* Pods-dev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -5699,6 +5779,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8F4QT3VHG;
 				INFOPLIST_FILE = "eosreachTests copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5719,6 +5800,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8F4QT3VHG;
 				INFOPLIST_FILE = "eosreachTests copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
