@@ -1,5 +1,5 @@
 # EOSREACH
-An open source EOS wallet developed in Swift using the [eos-swift](https://github.com/memtrip/eos-swift) SDK.
+An EOS wallet developed in Swift using the [eos-swift](https://github.com/memtrip/eos-swift) SDK.
 
 ## Foreword
 The current generation of browser plugin dependant DApps are not fit for mass market consumption,
@@ -28,8 +28,9 @@ The memtripissue service is used to create an account on behalf of the user, in 
 When an EOS private key is required to sign a transaction, the base58 EOS public key counterpart is used to fetch the EllipticCurveKeyPair encrypted private key bytes. To decrypt the private key bytes, the user must enter a pin or verify a biometric. The decrypted private key bytes are used to sign the pending transaction, the private key bytes will only remain in memory during the transaction signing process.
 
 ## Tests
-The EarlGrey tests in `eosreachTests` run against the offline stubs defined in `eosreach/_stub`, these
-tests are the quickest way to verify the core functionality.
+The EarlGrey tests in `eosreachStubTests` run against the offline stubs defined in `eosreachStub`, these
+tests are the quickest way to verify the core functionality. The tests in `eosreachDevTests` run against the
+jungle testnet and confirm nodeos integration.
 
 ## Vote for memtripblock
 If you find this app useful, please consider voting for [memtripblock](https://www.memtrip.com/code_of_conduct.html)
