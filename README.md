@@ -8,7 +8,6 @@ of a blockchain technology. We do not see a future for generic wallet apps as a 
 in comparison to native mobile experiences, the UX is slow and cumbersome.
 
 This wallet serves as a blueprint for how other developers might want to utilise [eos-swift](https://github.com/memtrip/eos-swift) to develop native iOS apps that consume the EOS blockchain.
-[App on Appstore](https://itunes.apple.com/us/app/eos-reach-eos-wallet/id1444511797)
 
 ## Design pattern
 The app uses the model view intent (MVI) design pattern, a unidirectional data flow driven by a single
